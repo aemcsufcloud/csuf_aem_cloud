@@ -122,7 +122,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         hidden_userID.value = userValue;
                         workflow_initiator.value = userValue;
                         // 	hidden_employeeEmail.value = userValue +"@FULLERTON.EDU";  chrs
-                        hidden_employeeEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                        hidden_employeeEmail.value = "ecmconsultant1@sparient.com";
                         //console.log("workflow_initiator.value= " + workflow_initiator.value);
 
                         $.ajax({
@@ -306,7 +306,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         if (myresponse.length === 1) {
                             manager_userID.value = myresponse[0].MANAGER_USERID;
                             //  manager_email.value = myresponse[0].MANAGER_EMAIL_ID; chrs  
-                            manager_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            manager_email.value = "ecmconsultant1@sparient.com";
                             manager_name.value = myresponse[0].SupervisorName;
                         }
 
@@ -334,7 +334,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         if (myresponse.length === 1) {
                             time_keeper_name.value = myresponse[0].NAME;
                             //time_keeper_email.value = myresponse[0].EMAILID;
-                            time_keeper_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            time_keeper_email.value = "ecmconsultant1@sparient.com";
                             time_keeper_userID.value = myresponse[0].USERID;
                         }
 
@@ -355,7 +355,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         RequestorName.value = userValue;
                         RequestorUserId.value = myresopnse[0].EMPUSERID;
                         //RequestorEmail.value = myresopnse[0].EMAILID; 
-                        RequestorEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                        RequestorEmail.value = "ecmconsultant1@sparient.com";
                         //InitiatorUserName.value = userValue;
                     },
                     error: function(error) {
@@ -423,7 +423,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
 						//alert("hidden_userID="+hidden_userID.value);
                         workflow_initiator.value = userValue;
 						//alert("workflow_initiator="+workflow_initiator.value);
-                        hidden_employeeEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                        hidden_employeeEmail.value = "ecmconsultant1@sparient.com";
                         //alert("workflow_initiator.value= " + workflow_initiator.value);
 						var urrl11 = window.location.origin + "/bin/fullertonProxy";
 						//alert("urrl11="+urrl11);
@@ -623,7 +623,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         if (myresponse.length === 1) {
                             manager_userID.value = myresponse[0].MANAGER_USERID;
                             //  manager_email.value = myresponse[0].MANAGER_EMAIL_ID; chrs  
-                            manager_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            manager_email.value = "ecmconsultant1@sparient.com";
                             manager_name.value = myresponse[0].SupervisorName;
                         }
 
@@ -651,7 +651,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         if (myresponse.length === 1) {
                             time_keeper_name.value = myresponse[0].NAME;
                             //time_keeper_email.value = myresponse[0].EMAILID;
-                            time_keeper_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            time_keeper_email.value = "ecmconsultant1@sparient.com";
                             time_keeper_userID.value = myresponse[0].USERID;
                         }
 
@@ -675,7 +675,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
 	                        RequestorName.value = userValue;
 	                        RequestorUserId.value = myresopnse[0].EMPUSERID;
 	                        //RequestorEmail.value = myresopnse[0].EMAILID; 
-	                        RequestorEmail.value = "pushpa.kawadi@thoughtfocus.com";
+	                        RequestorEmail.value = "ecmconsultant1@sparient.com";
 	                        //InitiatorUserName.value = userValue;
 	                    },
 	                    error: function(error) {
@@ -697,7 +697,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                         RequestorName.value = userValue;
                         RequestorUserId.value = myresopnse[0].EMPUSERID;
                         //RequestorEmail.value = myresopnse[0].EMAILID; 
-                        RequestorEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                        RequestorEmail.value = "ecmconsultant1@sparient.com";
                         //InitiatorUserName.value = userValue;
                     },
                     error: function(error) {
@@ -768,7 +768,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_chrsId_value
                 //console.log("userId= " + hidden_userID.value); 
                 workflow_initiator.value = userId;
                 //hidden_employeeEmail.value = userId +"@FULLERTON.EDU"; 
-                hidden_employeeEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                hidden_employeeEmail.value = "ecmconsultant1@sparient.com";
                 debugger;
                 if (hidden_cwid.value !== empl_Id.value) {
 
@@ -960,7 +960,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_chrsId_value
                         if (myresponse.length === 1) {
                             manager_userID.value = myresponse[0].MANAGER_USERID;
                             //manager_email.value = myresponse[0].MANAGER_EMAIL_ID;   
-                            manager_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            manager_email.value = "ecmconsultant1@sparient.com";
                             manager_name.value = myresponse[0].SupervisorName;
                         }
 
@@ -988,7 +988,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_chrsId_value
                         if (myresponse.length === 1) {
                             time_keeper_name.value = myresponse[0].NAME;
                             // time_keeper_email.value = myresponse[0].EMAILID;
-                            time_keeper_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            time_keeper_email.value = "ecmconsultant1@sparient.com";
                             time_keeper_userID.value = myresponse[0].USERID;
                         }
 
@@ -1045,7 +1045,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_empl_Id_valu
                 //console.log("userId= " + hidden_userID.value); 
                 workflow_initiator.value = userId;
                 //hidden_employeeEmail.value = userId +"@FULLERTON.EDU"; 
-                hidden_employeeEmail.value = "pushpa.kawadi@thoughtfocus.com";
+                hidden_employeeEmail.value = "ecmconsultant1@sparient.com";
                 debugger;
                 if (hidden_cwid.value !== empl_Id.value) {
 
@@ -1236,7 +1236,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_empl_Id_valu
                         if (myresponse.length === 1) {
                             manager_userID.value = myresponse[0].MANAGER_USERID;
                             //manager_email.value = myresponse[0].MANAGER_EMAIL_ID;   
-                            manager_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            manager_email.value = "ecmconsultant1@sparient.com";
                             manager_name.value = myresponse[0].SupervisorName;
                         }
 
@@ -1264,7 +1264,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_empl_Id_valu
                         if (myresponse.length === 1) {
                             time_keeper_name.value = myresponse[0].NAME;
                             // time_keeper_email.value = myresponse[0].EMAILID;
-                            time_keeper_email.value = "pushpa.kawadi@thoughtfocus.com";
+                            time_keeper_email.value = "ecmconsultant1@sparient.com";
                             time_keeper_userID.value = myresponse[0].USERID;
                         }
 
@@ -1859,7 +1859,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_submit158989
             hidden_employeeEmail.value = testEmail;
             RequestorEmail.value = testEmail;*/
 
-            var testEmail = "pushpa.kawadi@thoughtfocus.com";
+            var testEmail = "ecmconsultant1@sparient.com";
             approver_email.value = testEmail;
             time_keeper_email.value = testEmail;
             manager_email.value = testEmail;
