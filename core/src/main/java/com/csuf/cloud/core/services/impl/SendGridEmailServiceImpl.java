@@ -1,9 +1,11 @@
 package com.csuf.cloud.core.services.impl;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.Duration;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -22,6 +24,12 @@ import com.csuf.cloud.core.services.SendGridEmailService;
 )
 public class SendGridEmailServiceImpl
         implements SendGridEmailService {
+
+    private static final HttpClient HTTP_CLIENT =
+            HttpClient.newBuilder()
+                    .connectTimeout(
+                            Duration.ofSeconds(30))
+                    .build();
 
     private String apiKey;
     private String fromEmail;
@@ -59,13 +67,13 @@ public class SendGridEmailServiceImpl
                         + "}]"
                         + "}";
 
-        HttpClient client =
-                HttpClient.newHttpClient();
-
         HttpRequest request =
                 HttpRequest.newBuilder()
-                        .uri(URI.create(
-                                "https://api.sendgrid.com/v3/mail/send"))
+                        .uri(
+                                URI.create(
+                                        "https://api.sendgrid.com/v3/mail/send"))
+                        .timeout(
+                                Duration.ofSeconds(60))
                         .header(
                                 "Authorization",
                                 "Bearer " + apiKey)
@@ -77,26 +85,49 @@ public class SendGridEmailServiceImpl
                                         .ofString(requestBody))
                         .build();
 
-        HttpResponse<String> response =
-                client.send(
-                        request,
-                        HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response;
 
-        int statusCode = response.statusCode();
+        try {
+
+            response =
+                    HTTP_CLIENT.send(
+                            request,
+                            HttpResponse.BodyHandlers.ofString());
+
+        } catch (IOException e) {
+
+            throw new RuntimeException(
+                    "IO Exception while calling SendGrid API",
+                    e);
+
+        } catch (InterruptedException e) {
+
+            Thread.currentThread().interrupt();
+
+            throw new RuntimeException(
+                    "Thread interrupted while calling SendGrid API",
+                    e);
+        }
+
+        int statusCode =
+                response.statusCode();
 
         if (statusCode >= 400) {
 
             throw new RuntimeException(
-                    "SendGrid API failed: "
+                    "SendGrid API failed. "
+                            + "Status Code: "
                             + statusCode
-                            + " "
+                            + ", Response: "
                             + response.body());
         }
     }
 
-    private String escapeJson(String value) {
+    private String escapeJson(
+            String value) {
 
         if (value == null) {
+
             return "";
         }
 
