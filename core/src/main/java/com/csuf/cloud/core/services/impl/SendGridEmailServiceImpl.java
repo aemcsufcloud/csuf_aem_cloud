@@ -11,6 +11,8 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.metatype.annotations.Designate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.csuf.cloud.core.config.SendGridConfiguration;
 import com.csuf.cloud.core.services.SendGridEmailService;
@@ -24,6 +26,8 @@ import com.csuf.cloud.core.services.SendGridEmailService;
 )
 public class SendGridEmailServiceImpl
         implements SendGridEmailService {
+	private static final Logger log = LoggerFactory.getLogger(AssetServiceImpl.class);
+
 
     private static final HttpClient HTTP_CLIENT =
             HttpClient.newBuilder()
@@ -40,7 +44,9 @@ public class SendGridEmailServiceImpl
             SendGridConfiguration config) {
 
         this.apiKey = config.api_key();
+        log.error("Ramya="+this.apiKey);
         this.fromEmail = config.from_email();
+        log.error("Ramya="+this.fromEmail);
     }
 
     @Override
