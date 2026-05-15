@@ -1,10 +1,9 @@
 {
-  "smtp.host": "$[env:AEM_HOST;default=proxy.tunnel]",
-  "smtp.port": "30465",
-  "smtp.user": "$[env:SMTP_USER]",
-  "smtp.password": "$[secret:SMTP_PASSWORD]",
-  "from.address": "erpimaging@fullerton.edu",
-  "smtp.starttls": false,
+  "smtp.host": "smtp.sendgrid.net",
+  "smtp.port": 587,
+  "smtp.user": "apikey",
+  "smtp.password": "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",
   "smtp.ssl": false,
-  "debug.email": false
+  "smtp.starttls": true,
+  "from.address": "ecmconsultant1@sparient.com"
 }
