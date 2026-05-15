@@ -41,8 +41,8 @@ public class STDHourlyManagerServlet extends SlingAllMethodsServlet {
         JSONObject emp1 = new JSONObject();
         emp1.put("SupervisorTitle", "VP, Admin & Finance/CFO");
         emp1.put("MANAGER_USERID", "yjayaram");
-        emp1.put("MANAGER_EMAIL_ID", "pushpa.kawadi@thoughtfocus.com");
-        emp1.put("SupervisorName", "Pushpa Kawadi");
+        emp1.put("MANAGER_EMAIL_ID", "ecmconsultant1@sparient.com");
+        emp1.put("SupervisorName", "Consultant");
 
         employees.put(emp1);
 

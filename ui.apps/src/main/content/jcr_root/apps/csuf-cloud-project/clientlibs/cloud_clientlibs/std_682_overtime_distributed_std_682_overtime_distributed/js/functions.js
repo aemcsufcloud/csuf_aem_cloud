@@ -332,7 +332,8 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                     dataType: 'json',
                     success: function(myresponse) {
                         if (myresponse.length === 1) {
-                            time_keeper_name.value = myresponse[0].NAME;
+                            //time_keeper_name.value = myresponse[0].NAME;
+							time_keeper_name.value = "ecmconsultant1";
                             //time_keeper_email.value = myresponse[0].EMAILID;
                             time_keeper_email.value = "ecmconsultant1@sparient.com";
                             time_keeper_userID.value = myresponse[0].USERID;
@@ -624,7 +625,8 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
                             manager_userID.value = myresponse[0].MANAGER_USERID;
                             //  manager_email.value = myresponse[0].MANAGER_EMAIL_ID; chrs  
                             manager_email.value = "ecmconsultant1@sparient.com";
-                            manager_name.value = myresponse[0].SupervisorName;
+                            //manager_name.value = myresponse[0].SupervisorName;
+							manager_name.value = "ecmconsultant1";
                         }
 
                     }

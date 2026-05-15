@@ -44,9 +44,9 @@ public class SendGridEmailServiceImpl
             SendGridConfiguration config) {
 
         this.apiKey = config.api_key();
-        log.error("Ramya="+this.apiKey);
+        log.error("Ramya1="+this.apiKey);
         this.fromEmail = config.from_email();
-        log.error("Ramya="+this.fromEmail);
+        log.error("Ramya2="+this.fromEmail);
     }
 
     @Override

@@ -40,8 +40,8 @@ public class STDTimekeeperServlet extends SlingAllMethodsServlet {
         JSONObject emp1 = new JSONObject();
 
         emp1.put("USERID", "yjayaram");
-        emp1.put("EMAILID", "pushpa.kawadi@thoughtfocus.com");
-        emp1.put("NAME", "Pushpa Kawadi");
+        emp1.put("EMAILID", "ecmconsultant1@sparient.com");
+        emp1.put("NAME", "Consultant");
 
         employees.put(emp1);
 

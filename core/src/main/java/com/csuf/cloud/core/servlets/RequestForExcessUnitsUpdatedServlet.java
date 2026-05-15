@@ -32,7 +32,7 @@ public class RequestForExcessUnitsUpdatedServlet extends SlingSafeMethodsServlet
         JSONObject student = new JSONObject();
         student.put("ACAD_CAREER", "PBAC");
         student.put("LOA_FLAG", "Y");
-        student.put("CHAIR_EMAIL", "pushpa.kawadi@thoughtfocus.com");
+        student.put("CHAIR_EMAIL", "ecmconsultant1@sparient.com");
         student.put("POSTAL", "92831");
         student.put("CHAIR_USERID", "ragoldberg");
         student.put("STATE", "CA");
@@ -49,7 +49,7 @@ public class RequestForExcessUnitsUpdatedServlet extends SlingSafeMethodsServlet
         student.put("STUDENT_ID", "885197947");
         student.put("TERM_DESCR", "Fall 2024");
         student.put("NAME", "Tang,Jieming");
-        student.put("PREF_EMAIL", "pushpa.kawadi@thoughtfocus.com");
+        student.put("PREF_EMAIL", "ecmconsultant1@sparient.com");
         student.put("CELL_PHONE", "216/849-5233");
         student.put("CHAIR_EMPLID", "885130245");
         student.put("CHAIR_NAME", "Randall Goldberg");

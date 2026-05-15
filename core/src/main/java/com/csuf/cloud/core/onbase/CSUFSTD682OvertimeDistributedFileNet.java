@@ -129,15 +129,15 @@ public class CSUFSTD682OvertimeDistributedFileNet implements WorkflowProcess {
 					//dorDocument = formService.getDoR(xml, FORM_PATH, DOR_FILE_NAME);
 					dorDocument = formService.getDoROnBase(xml, FORM_PATH, DOR_FILE_NAME,resolver);
 					
-					log.info("Pushpa Executing STD WF="+dorDocument);
+					log.info("Executing STD WF="+dorDocument);
 					byte[] bytes = CSUFUtils.toByteArrayFromInputStream(dorDocument.getInputStream());
-					log.info("Pushpa bytes="+bytes);
+					log.info("bytes="+bytes);
 					Base64.Encoder encoder = Base64.getEncoder();
-					log.info("Pushpa encoder="+encoder);
+					log.info("encoder="+encoder);
 					String encodedDoc = encoder.encodeToString(bytes);
 					
 					String first200 = encodedDoc.substring(0, Math.min(200, encodedDoc.length()));
-					log.info("Pushpa EncodedDoc start = " + first200);
+					log.info(" EncodedDoc start = " + first200);
 					log.info("Encoded length = " + encodedDoc.length());
 					//log.info("Pushpa encodedDoc="+encodedDoc);
 					
@@ -160,19 +160,19 @@ public class CSUFSTD682OvertimeDistributedFileNet implements WorkflowProcess {
 				FilenetUtil fUtil = new FilenetUtil();
 				if (null != dorDocument) {
 					
-					log.info("Bengaluru Inside dorDocument=" + dorDocument);
+					log.info("Inside dorDocument=" + dorDocument);
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 					if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
 						Element element = XMLUtils.getChildNode(afBoundDataElement, "STD682Overtime");
 						json = prepareOnbaseJson(element, params, dorDocument, fUtil);
 					
-						log.info("Bengaluru Onbase json=" + json.toString());
+						log.info("Onbase json=" + json.toString());
 						
 						
 						//String resultVal = sendToOnBase(json.toString());
 						String resultVal = "";
-						log.info("Bengaluru Result Value returned from onbase in STD682OvertsimeDistributedOnbase : {}",
+						log.info("Result Value returned from onbase in STD682OvertsimeDistributedOnbase : {}",
 								resultVal);
 					} else {
 						log.error("afbound elements not found in STD682OvertsimeDistributedOnbase");
@@ -258,7 +258,7 @@ public class CSUFSTD682OvertimeDistributedFileNet implements WorkflowProcess {
 				XMLUtils.getChildNodeContent(eElement, "organization_unit"),
 				XMLUtils.getChildNodeContent(eElement, "pay_period_year") };
 		
-		log.info("Bengaluru KeyValueArray = " +KeyValueArray.length);
+		log.info("KeyValueArray = " +KeyValueArray.length);
 
 		JsonObject json = new JsonObject();
 		json.add("keywordTypes", oUtil.getKeywords(keyArray, KeyValueArray));
