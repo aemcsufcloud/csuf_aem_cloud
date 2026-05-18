@@ -22,6 +22,7 @@ import com.csuf.cloud.core.services.SendGridEmailService;
         service = SendGridEmailService.class,
         immediate = true
 )
+
 @Designate(
         ocd = SendGridConfiguration.class
 )
