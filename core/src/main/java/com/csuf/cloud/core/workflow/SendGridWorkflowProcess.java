@@ -33,7 +33,7 @@ public class SendGridWorkflowProcess
         try {
 
             sendGridEmailService.sendEmail(
-                    "yourmail@gmail.com",
+                    "ecmconsultant1@sparient.com",
                     "AEM Cloud Test",
                     "<h1>Email from AEM Cloud</h1>");
 
