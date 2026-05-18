@@ -1,6 +1,7 @@
 package com.csuf.cloud.core.config;
 
 import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 @ObjectClassDefinition(
@@ -9,7 +10,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 public @interface SendGridConfiguration {
 
     @AttributeDefinition(
-            name = "SendGrid API Key")
+            name = "SendGrid API Key", type = AttributeType.PASSWORD)
     String api_key();
 
     @AttributeDefinition(
