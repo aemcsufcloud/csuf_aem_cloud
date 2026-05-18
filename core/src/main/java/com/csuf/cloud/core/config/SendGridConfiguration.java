@@ -10,7 +10,8 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 public @interface SendGridConfiguration {
 
     @AttributeDefinition(
-            name = "SendGrid API Key", type = AttributeType.PASSWORD)
+            name = "SendGrid API Key",
+            type = AttributeType.PASSWORD)
     String api_key();
 
     @AttributeDefinition(

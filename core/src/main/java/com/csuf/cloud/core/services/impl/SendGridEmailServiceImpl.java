@@ -6,6 +6,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.Map;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -24,15 +25,14 @@ import com.csuf.cloud.core.services.SendGridEmailService;
 @Designate(
         ocd = SendGridConfiguration.class
 )
-public class SendGridEmailServiceImpl
-        implements SendGridEmailService {
-	private static final Logger log = LoggerFactory.getLogger(AssetServiceImpl.class);
+public class SendGridEmailServiceImpl implements SendGridEmailService {
 
+    private static final Logger log = 
+            LoggerFactory.getLogger(SendGridEmailServiceImpl.class);
 
     private static final HttpClient HTTP_CLIENT =
             HttpClient.newBuilder()
-                    .connectTimeout(
-                            Duration.ofSeconds(30))
+                    .connectTimeout(Duration.ofSeconds(30))
                     .build();
 
     private String apiKey;
@@ -41,20 +41,39 @@ public class SendGridEmailServiceImpl
     @Activate
     @Modified
     protected void activate(
-            SendGridConfiguration config) {
+            SendGridConfiguration config,
+            Map<String, Object> properties) {
 
         this.apiKey = config.api_key();
-        log.error("Testingabc1="+config.api_key());
         this.fromEmail = config.from_email();
-        log.error("Testingabc1="+config.from_email());
+
+        log.info("=== SendGrid Service Activated ===");
+        log.info("API Key is null: {}", (apiKey == null));
+        log.info("API Key is empty: {}", 
+                (apiKey != null && apiKey.isEmpty()));
+        log.info("API Key starts with SG.: {}", 
+                (apiKey != null && apiKey.startsWith("SG.")));
+        log.info("From Email: {}", fromEmail);
     }
 
     @Override
     public void sendEmail(
             String to,
             String subject,
-            String htmlBody)
-            throws Exception {
+            String htmlBody) throws Exception {
+
+        // Null checks
+        if (apiKey == null || apiKey.isEmpty()) {
+            throw new RuntimeException(
+                    "SendGrid API key is null or empty. "
+                    + "Check OSGi config and Cloud Manager secret.");
+        }
+
+        if (fromEmail == null || fromEmail.isEmpty()) {
+            throw new RuntimeException(
+                    "From email is null or empty. "
+                    + "Check OSGi config.");
+        }
 
         String requestBody =
                 "{"
@@ -73,70 +92,54 @@ public class SendGridEmailServiceImpl
                         + "}]"
                         + "}";
 
+        log.info("Sending email to: {}", to);
+
         HttpRequest request =
                 HttpRequest.newBuilder()
-                        .uri(
-                                URI.create(
-                                        "https://api.sendgrid.com/v3/mail/send"))
-                        .timeout(
-                                Duration.ofSeconds(60))
-                        .header(
-                                "Authorization",
-                                "Bearer " + apiKey)
-                        .header(
-                                "Content-Type",
-                                "application/json")
-                        .POST(
-                                HttpRequest.BodyPublishers
-                                        .ofString(requestBody))
+                        .uri(URI.create(
+                                "https://api.sendgrid.com/v3/mail/send"))
+                        .timeout(Duration.ofSeconds(60))
+                        .header("Authorization", "Bearer " + apiKey)
+                        .header("Content-Type", "application/json")
+                        .POST(HttpRequest.BodyPublishers
+                                .ofString(requestBody))
                         .build();
 
         HttpResponse<String> response;
 
         try {
-
-            response =
-                    HTTP_CLIENT.send(
-                            request,
-                            HttpResponse.BodyHandlers.ofString());
+            response = HTTP_CLIENT.send(
+                    request,
+                    HttpResponse.BodyHandlers.ofString());
 
         } catch (IOException e) {
-
             throw new RuntimeException(
-                    "IO Exception while calling SendGrid API",
-                    e);
+                    "IO Exception while calling SendGrid API", e);
 
         } catch (InterruptedException e) {
-
             Thread.currentThread().interrupt();
-
             throw new RuntimeException(
-                    "Thread interrupted while calling SendGrid API",
-                    e);
+                    "Thread interrupted while calling SendGrid API", e);
         }
 
-        int statusCode =
-                response.statusCode();
+        int statusCode = response.statusCode();
+        log.info("SendGrid response status: {}", statusCode);
+        log.info("SendGrid response body: {}", response.body());
 
         if (statusCode >= 400) {
-
             throw new RuntimeException(
                     "SendGrid API failed. "
-                            + "Status Code: "
-                            + statusCode
-                            + ", Response: "
-                            + response.body());
+                            + "Status Code: " + statusCode
+                            + ", Response: " + response.body());
         }
+
+        log.info("Email sent successfully to: {}", to);
     }
 
-    private String escapeJson(
-            String value) {
-
+    private String escapeJson(String value) {
         if (value == null) {
-
             return "";
         }
-
         return value
                 .replace("\\", "\\\\")
                 .replace("\"", "\\\"")
