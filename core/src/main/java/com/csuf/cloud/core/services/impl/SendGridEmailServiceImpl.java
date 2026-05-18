@@ -47,9 +47,12 @@ public class SendGridEmailServiceImpl
         this.apiKey = config.api_key();
         this.fromEmail = config.from_email();
 
-        log.info("=== SendGrid Service Activated ===");
-        log.info("API Key null: {}", apiKey == null);
-        log.info("From Email: {}", fromEmail);
+        log.info("========= SENDGRID DEBUG =========");
+        log.info("API KEY RAW = {}", apiKey);
+        log.info("API KEY NULL = {}", apiKey == null);
+        log.info("API KEY EMPTY = {}", apiKey != null && apiKey.isEmpty());
+        log.info("FROM EMAIL = {}", fromEmail);
+        log.info("=================================");
     }
 
     @Override
