@@ -47,10 +47,7 @@ public class SendGridEmailServiceImpl
         this.apiKey = config.api_key();
         this.fromEmail = config.from_email();
         
-        /*this.apiKey="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";
-        this.fromEmail="ecmconsultant1@sparient.com";*/
         
-
         log.info("========= SENDGRID DEBUG =========");
         log.info("API KEY RAW = {}", apiKey);
         log.info("API KEY NULL = {}", apiKey == null);
