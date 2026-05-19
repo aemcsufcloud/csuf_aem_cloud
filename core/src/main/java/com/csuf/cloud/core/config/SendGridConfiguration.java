@@ -11,7 +11,7 @@ public @interface SendGridConfiguration {
     @AttributeDefinition(
             name = "SendGrid API Key"
     )
-    String api_key();
+    String apicloud();
 
     @AttributeDefinition(
             name = "From Email Address"
