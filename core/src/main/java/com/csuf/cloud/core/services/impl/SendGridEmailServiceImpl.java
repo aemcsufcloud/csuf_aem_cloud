@@ -44,7 +44,7 @@ public class SendGridEmailServiceImpl
     protected void activate(
             SendGridConfiguration config) {
 
-        this.apiKey = config.api_cloud();
+        this.apiKey = config.apicloud();
         this.fromEmail = config.from_email();
         
         
