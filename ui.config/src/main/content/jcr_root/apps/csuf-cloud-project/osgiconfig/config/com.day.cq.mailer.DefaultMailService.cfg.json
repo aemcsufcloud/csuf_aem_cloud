@@ -1,9 +1,12 @@
 {
-"smtp.host":"smtp.sendgrid.com",
-"smtp.port":"465",
+"smtp.host":"$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
+"smtp.port":"30465",
 "smtp.user":"apicloud",
 "smtp.password":"$[secret:SENDGRID_API_KEY]",
-"smtp.ssl":false,
-"smtp.starttls":true,
-"from.address":"ecmconsultant1@sparient.com"
+"from.address":"ecmconsultant1@sparient.com",
+"smtp.ssl":true,
+"smtp.starttls":false,
+"smtp.requiretls":false,
+"debug.email":false,
+"oauth.flow":false
 }
