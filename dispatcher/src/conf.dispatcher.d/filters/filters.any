@@ -14,3 +14,6 @@ $include "./default_filters.any"
 
 
 /0100 { /type "allow" /url "/bin/fullertonProxy" }
+
+# Allow SAML HTTP POST to ../saml_login end points
+/0190 { /type "allow" /method "POST" /url "*/saml_login" }
