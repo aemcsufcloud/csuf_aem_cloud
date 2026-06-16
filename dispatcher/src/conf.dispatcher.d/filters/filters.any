@@ -15,5 +15,12 @@ $include "./default_filters.any"
 
 /0100 { /type "allow" /url "/bin/fullertonProxy" }
 
+
+# Allow GET-based SAML login initiation
+/0191 { /type "allow" /method "GET" /url "/system/sling/login" /query "*" }
+
+# Allow POST-based SAML login initiation
+/0192 { /type "allow" /method "POST" /url "/system/sling/login" }
+
 # Allow SAML HTTP POST to ../saml_login end points
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
