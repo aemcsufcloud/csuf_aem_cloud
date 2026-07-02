@@ -6,12 +6,12 @@
     "serviceProviderEntityId": "https://publish-p161404-e1713869.adobeaemcloud.com/",
     "useEncryption": false,
     "createUser": true,
-	"userIDAttribute" : "emailaddress",
+	"userIDAttribute": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
     "userIntermediatePath": "csu/saml",
     "synchronizeAttributes":[
-        "firstName=profile/givenName",
-		"lastName=profile/familyName",
-		"emailaddress=profile/email"
+		"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname=profile/givenName", 
+		"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname=profile/familyName",
+		"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress=profile/email"
     ],
     "addGroupMemberships": true
 }
