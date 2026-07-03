@@ -31,10 +31,12 @@ public class UserManager extends SlingSafeMethodsServlet {
     @Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse response)
             throws ServletException, IOException {
-        JSONObject userValues = null;
+    	JSONObject userValues = null;
+        logger.info("Happy entered");
        
         try {
             userValues = getCurrentUserId(req);
+            logger.info("Happy entered userValues="+userValues);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,13 +47,20 @@ public class UserManager extends SlingSafeMethodsServlet {
     }
 
     public JSONObject getCurrentUserId(SlingHttpServletRequest request) throws Exception {
+    	logger.info("Happy entered getCurrentUserId=");
         JSONObject userDetails = new JSONObject();
         ResourceResolver resolver = request.getResourceResolver();
+        logger.info("Happy resolver="+resolver);
+        
         Session session = resolver.adaptTo(Session.class);
-        LocalDate serverDate = LocalDate.now();  
+        logger.info("Happy session="+session);
+        
+        LocalDate serverDate = LocalDate.now();
+        logger.info("Happy serverDate="+serverDate);
+        
         //Session session = globalService.getAdminSession();
         String userId = session.getUserID();
-        //logger.info("userDetails=" + userId);
+        logger.info("userDetails=" + userId);
         
         if (userId != null && userId.endsWith("@fullerton.edu")) {
             userId.substring(0, userId.indexOf("@"));
@@ -60,6 +69,8 @@ public class UserManager extends SlingSafeMethodsServlet {
         userDetails.put("Status", "Success");
         userDetails.put("SERVER_DATE", serverDate);
         userDetails.put("email", session.getUserID());
+        
+        logger.info("userDetails=" + userDetails.length());
         
         if(session != null){
             session.logout();
