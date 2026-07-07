@@ -271,13 +271,18 @@ public class InboxItemServiceImpl implements InboxItemService {
 
 	@Override
 	public boolean isViewTaskDetailsAllowed(Session currentUserSession, String assignee) throws Exception {
+		log.error("Workspace Method isViewTaskDetailsAllowed");
 		try {
 			String currentUserId = currentUserSession.getUserID();
-			// log.debug(" currentUserId : - " + currentUserId);
+			log.error("Workspace currentUserId : - " + currentUserId);
 			if ((currentUserSession instanceof JackrabbitSession)) {
+				log.error("Inside Workspace if condition");
 				UserManager userManager = ((JackrabbitSession) currentUserSession).getUserManager();
+				log.error("Inside Workspace userManager= "+userManager);
 				Authorizable workItemAssignee = userManager.getAuthorizable(assignee);
+				log.error("Inside Workspace workItemAssignee="+workItemAssignee);
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
+				log.error("Inside Workspace currentUser="+currentUser);
 				if (currentUserId.equals(assignee)) {
 					return true;
 				}
