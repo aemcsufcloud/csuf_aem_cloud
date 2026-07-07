@@ -287,6 +287,7 @@ public class InboxItemServiceImpl implements InboxItemService {
 				log.error("Vista currentUserId="+currentUserId);
 				log.error("Vista assignee="+assignee);
 				if (currentUserId.equals(assignee)) {
+					log.error("Vista Inside Loop");
 					return true;
 				}
 				if (null != workItemAssignee && workItemAssignee.isGroup()) {
@@ -299,6 +300,7 @@ public class InboxItemServiceImpl implements InboxItemService {
 				}
 			}
 			// this.log.debug("Not a valid User" + currentUserId);
+			log.error("Vista Outside Loop");
 			return false;
 		} catch (RepositoryException e) {
 			throw new Exception("Access Denied - User is not a task assignee", e);
