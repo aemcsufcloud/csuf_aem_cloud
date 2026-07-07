@@ -283,6 +283,9 @@ public class InboxItemServiceImpl implements InboxItemService {
 				log.error("Inside Workspace workItemAssignee="+workItemAssignee);
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
 				log.error("Inside Workspace currentUser="+currentUser);
+				
+				log.error("Vista currentUserId="+currentUserId);
+				log.error("Vista assignee="+assignee);
 				if (currentUserId.equals(assignee)) {
 					return true;
 				}
