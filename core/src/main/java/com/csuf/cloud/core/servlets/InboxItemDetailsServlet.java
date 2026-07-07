@@ -225,6 +225,7 @@ public class InboxItemDetailsServlet extends SlingSafeMethodsServlet {
 					&& action.equalsIgnoreCase(ActionType.VIEW_TASK_DETAILS_ALLOWED.name())) {
 				boolean isAllowed = inboxService
 						.isViewTaskDetailsAllowed(request.getResourceResolver().adaptTo(Session.class), taskAssignee);
+				log.error("Homestead="+isAllowed);
 				out.print(isAllowed);
 			} else if (StringUtils.isNotBlank(adobeSignedDocument) && StringUtils.isNotBlank(workflowInstanceId)
 					&& StringUtils.isNotBlank(workItemId)

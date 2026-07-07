@@ -175,8 +175,8 @@ function getLastActionAndCommentDetails() {
 }
 
 function isViewTaskDetailsAllowed() {
-	/*alert("VIEW_TASK_DETAILS_ALLOWED");
-	alert(taskAssignee);*/
+	/*alert("VIEW_TASK_DETAILS_ALLOWED");*/
+	alert("AAA taskAssignee="+taskAssignee);
     var requestURL = '/bin/getInboxItemDetails?action=VIEW_TASK_DETAILS_ALLOWED&assignee=' + taskAssignee;
     $.ajax({
         type: "GET",
