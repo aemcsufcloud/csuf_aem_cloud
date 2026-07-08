@@ -273,8 +273,8 @@ $(document).ready(function() {
         } else {
 			alert("else Cond");
 			alert(isViewTaskDetailsAllowed);
-
-            window.location = '/content/csu/us/en/task-details.html?wcmmode=disabled';
+            //window.location = '/content/csu/us/en/task-details.html?wcmmode=disabled';
+			window.location = '/content/csu/us/en/task-details.html';
         }
     });
     var selectedDelegatee = null;
