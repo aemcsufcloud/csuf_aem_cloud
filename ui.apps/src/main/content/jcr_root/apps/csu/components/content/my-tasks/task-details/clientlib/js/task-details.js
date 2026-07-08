@@ -212,20 +212,27 @@ $(document).ready(function () {
         //$("#modal-error-access-denied-action").modal("show");
         location.href = document.referrer;
     }
-	alert("currentUserId1="+currentUserId1);
-	alert("taskAssignee="+taskAssignee);
-	alert("isAssigneeAGroup1="+isAssigneeAGroup1);
+	
     // if current user is not task assignee, show access denied page
-    if (currentUserId1 && taskAssignee && isAssigneeAGroup1 != 'true') {
-		alert("TESTING="+currentUserId1);
+    /*if (currentUserId1 && taskAssignee && isAssigneeAGroup1 != 'true') {
         if (currentUserId1 !== taskAssignee) {
-			alert("TESTING123 inside");
             $("#modal-self-assign-action").modal("hide");
             alert("You do not have the permission to access this task.");
             //$("#modal-error-access-denied-action").modal("show");
             location.href = document.referrer;
         }
-    }
+    }*/
+	
+	
+	if (currentUserId1 && taskAssignee && isAssigneeAGroup1 !== 'true') {
+		alert("TESTING="+currentUserId1);
+	    if (currentUserId1.trim().toLowerCase() !== taskAssignee.trim().toLowerCase()) {
+			alert("TESTING123 inside");
+	        $("#modal-self-assign-action").modal("hide");
+	        alert("You do not have the permission to access this task.");
+	        location.href = document.referrer;
+	    }
+	}
 
     // hide Navigation Menu links on Task Details page
     //$("#navbarTogglerDemo02").css('display', 'none');
