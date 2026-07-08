@@ -298,10 +298,9 @@ public class InboxItemServiceImpl implements InboxItemService {
 				    return true;
 				}
 
-				if (currentUserId.equalsIgnoreCase(assignee)) {
-					log.error("Vista Inside Loop");
+				/*if (currentUserId.equalsIgnoreCase(assignee)) {
 					return true;
-				}
+				}*/
 				if (null != workItemAssignee && workItemAssignee.isGroup()) {
 					Group group = (Group) workItemAssignee;
 					// log.debug("work Item is assigned to group " + group.getID());
