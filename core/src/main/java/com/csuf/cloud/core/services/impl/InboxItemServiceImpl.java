@@ -286,7 +286,7 @@ public class InboxItemServiceImpl implements InboxItemService {
 				
 				log.error("Vista currentUserId="+currentUserId);
 				log.error("Vista assignee="+assignee);
-				if (currentUserId.equals(assignee)) {
+				if (currentUserId.equalsIgnoreCase(assignee)) {
 					log.error("Vista Inside Loop");
 					return true;
 				}
