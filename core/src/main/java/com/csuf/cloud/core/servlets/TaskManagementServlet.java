@@ -41,6 +41,7 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 
 	@Reference
 	private InboxItemService inboxService;
+	
 
 	public enum ActionType {
 		TASK_URL, UPDATE_TASK_DATA, UPDATE_TASK_STATUS, FETCH_WORKFLOW_HISTORY, SAVE_ACTION, SAVE_COMMENT,
@@ -127,6 +128,8 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 			throws ServletException, IOException {
 		String dataXml = StringUtils.EMPTY;
 		String taskId = StringUtils.EMPTY;
+		boolean isAuthor = request.getServerName().contains("author");
+		log.error("Flower="+isAuthor);
 		try (PrintWriter out = response.getWriter()) {
 			final Map<String, RequestParameter[]> params = request.getRequestParameterMap();
 			if (params.containsKey("data"))
@@ -147,6 +150,8 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 		log.debug("historyWorkItemId inside getTaskURL method : {}", historyWorkItemId);
 		log.debug("isInitialSubmission inside getTaskURL method : {}", isInitialSubmission);
 		log.debug("isHistorySubmission inside getTaskURL method : {}", isHistorySubmission);
+		
+		
 		if (StringUtils.isNotBlank(workItemId)) {
 			String xml = taskService.getTaskData(workItemId);
 			String afPath = taskService.getAfPath(workItemId);
