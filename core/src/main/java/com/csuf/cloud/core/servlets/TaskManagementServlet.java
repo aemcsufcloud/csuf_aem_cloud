@@ -42,6 +42,8 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 	@Reference
 	private InboxItemService inboxService;
 	
+	boolean isAuthor = false;
+	
 
 	public enum ActionType {
 		TASK_URL, UPDATE_TASK_DATA, UPDATE_TASK_STATUS, FETCH_WORKFLOW_HISTORY, SAVE_ACTION, SAVE_COMMENT,
@@ -55,6 +57,11 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
 		log.debug("entered TaskManagementServlet doGet method");
+		
+		isAuthor = request.getServerName().contains("author");
+		log.error("Flower Testing="+isAuthor);
+		
+		
 		WorkflowSession wfSession = null;
 		Session session = null;
 		ResourceResolver resolver = null;
@@ -128,8 +135,7 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 			throws ServletException, IOException {
 		String dataXml = StringUtils.EMPTY;
 		String taskId = StringUtils.EMPTY;
-		boolean isAuthor = request.getServerName().contains("author");
-		log.error("Flower="+isAuthor);
+		
 		try (PrintWriter out = response.getWriter()) {
 			final Map<String, RequestParameter[]> params = request.getRequestParameterMap();
 			if (params.containsKey("data"))
@@ -146,10 +152,10 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 
 	private String getTaskURL(String workItemId, String historyWorkItemId, boolean isInitialSubmission,
 			boolean isHistorySubmission) throws Exception {
-		log.debug("workItemId inside getTaskURL method : {}", workItemId);
-		log.debug("historyWorkItemId inside getTaskURL method : {}", historyWorkItemId);
-		log.debug("isInitialSubmission inside getTaskURL method : {}", isInitialSubmission);
-		log.debug("isHistorySubmission inside getTaskURL method : {}", isHistorySubmission);
+		log.error("workItemId inside getTaskURL method : {}", workItemId);
+		log.error("historyWorkItemId inside getTaskURL method : {}", historyWorkItemId);
+		log.error("isInitialSubmission inside getTaskURL method : {}", isInitialSubmission);
+		log.error("isHistorySubmission inside getTaskURL method : {}", isHistorySubmission);
 		
 		
 		if (StringUtils.isNotBlank(workItemId)) {
