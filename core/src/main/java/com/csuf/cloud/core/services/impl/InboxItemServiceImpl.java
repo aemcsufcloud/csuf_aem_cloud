@@ -286,6 +286,18 @@ public class InboxItemServiceImpl implements InboxItemService {
 				
 				log.error("Vista currentUserId="+currentUserId);
 				log.error("Vista assignee="+assignee);
+				
+				String user = currentUserId == null ? "" : currentUserId.trim();
+				String taskAssignee = assignee == null ? "" : assignee.trim();
+				
+				log.error("Rancho currentUserId='{}' length={}", user, user.length());
+				log.error("Rancho assignee='{}' length={}", taskAssignee, taskAssignee.length());
+				
+				if (user.equalsIgnoreCase(taskAssignee)) {
+				    log.error("Rancho Inside Loop");
+				    return true;
+				}
+
 				if (currentUserId.equalsIgnoreCase(assignee)) {
 					log.error("Vista Inside Loop");
 					return true;
