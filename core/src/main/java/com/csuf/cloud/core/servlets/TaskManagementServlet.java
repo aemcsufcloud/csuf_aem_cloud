@@ -41,9 +41,8 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 
 	@Reference
 	private InboxItemService inboxService;
-	
+
 	boolean isAuthor = false;
-	
 
 	public enum ActionType {
 		TASK_URL, UPDATE_TASK_DATA, UPDATE_TASK_STATUS, FETCH_WORKFLOW_HISTORY, SAVE_ACTION, SAVE_COMMENT,
@@ -57,11 +56,10 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
 		log.debug("entered TaskManagementServlet doGet method");
-		
+
 		isAuthor = request.getServerName().contains("author");
-		log.error("Flower Testing="+isAuthor);
-		
-		
+		log.error("Flower Testing=" + isAuthor);
+
 		WorkflowSession wfSession = null;
 		Session session = null;
 		ResourceResolver resolver = null;
@@ -135,7 +133,7 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 			throws ServletException, IOException {
 		String dataXml = StringUtils.EMPTY;
 		String taskId = StringUtils.EMPTY;
-		
+
 		try (PrintWriter out = response.getWriter()) {
 			final Map<String, RequestParameter[]> params = request.getRequestParameterMap();
 			if (params.containsKey("data"))
@@ -156,8 +154,7 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 		log.error("historyWorkItemId inside getTaskURL method : {}", historyWorkItemId);
 		log.error("isInitialSubmission inside getTaskURL method : {}", isInitialSubmission);
 		log.error("isHistorySubmission inside getTaskURL method : {}", isHistorySubmission);
-		
-		
+
 		if (StringUtils.isNotBlank(workItemId)) {
 			String xml = taskService.getTaskData(workItemId);
 			String afPath = taskService.getAfPath(workItemId);
@@ -173,14 +170,27 @@ public class TaskManagementServlet extends SlingAllMethodsServlet {
 					}
 				}
 			}
-			if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && !isHistorySubmission) {
-				return afPath.concat(".prefill.html?wcmmode=disabled&taskId=").concat(workItemId);
-			} else if (StringUtils.isNotBlank(afPath) && isInitialSubmission && !isHistorySubmission) {
-				return afPath.concat(".prefillinitialsubmission.html?wcmmode=disabled&taskId=").concat(workItemId);
-			} else if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && isHistorySubmission
-					&& StringUtils.isNotBlank(historyWorkItemId)) {
-				return afPath.concat(".prefillhistorysubmission.html?wcmmode=disabled&taskId=").concat(workItemId)
-						.concat("&historyWorkItemId=").concat(historyWorkItemId);
+			//Added to make author to run on wcmmode
+			if (isAuthor) {
+				if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && !isHistorySubmission) {
+					return afPath.concat(".prefill.html?wcmmode=disabled&taskId=").concat(workItemId);
+				} else if (StringUtils.isNotBlank(afPath) && isInitialSubmission && !isHistorySubmission) {
+					return afPath.concat(".prefillinitialsubmission.html?wcmmode=disabled&taskId=").concat(workItemId);
+				} else if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && isHistorySubmission
+						&& StringUtils.isNotBlank(historyWorkItemId)) {
+					return afPath.concat(".prefillhistorysubmission.html?wcmmode=disabled&taskId=").concat(workItemId)
+							.concat("&historyWorkItemId=").concat(historyWorkItemId);
+				}
+			} else {
+				if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && !isHistorySubmission) {
+					return afPath.concat(".prefill.html?taskId=").concat(workItemId);
+				} else if (StringUtils.isNotBlank(afPath) && isInitialSubmission && !isHistorySubmission) {
+					return afPath.concat(".prefillinitialsubmission.html?taskId=").concat(workItemId);
+				} else if (StringUtils.isNotBlank(afPath) && !isInitialSubmission && isHistorySubmission
+						&& StringUtils.isNotBlank(historyWorkItemId)) {
+					return afPath.concat(".prefillhistorysubmission.html?taskId=").concat(workItemId)
+							.concat("&historyWorkItemId=").concat(historyWorkItemId);
+				}
 			}
 		}
 		return null;
