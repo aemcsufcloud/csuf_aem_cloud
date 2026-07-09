@@ -45,9 +45,17 @@ $(document).ready(function() {
     });
 
     $(".btn-submit-success-ok").click(function() {
-		alert("Submit Clicked");
+		/*alert("Submit Clicked");
 		alert("window.location="+window.location);
-        window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+        window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';*/
+		
+		var targetUrl = "/content/csu/us/en/my-tasks.html";
+		   // If running on author instance, append wcmmode=disabled
+		   if (window.location.hostname.indexOf("author") !== -1) {
+			alert("author Clicked");
+		       targetUrl += "?wcmmode=disabled";
+		   }
+		   window.location.href = targetUrl;
     });
 
     $(".btn-close-task-details").click(function() {
