@@ -45,6 +45,8 @@ $(document).ready(function() {
     });
 
     $(".btn-submit-success-ok").click(function() {
+		alert("Submit Clicked");
+		alert("window.location="+window.location);
         window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
     });
 
