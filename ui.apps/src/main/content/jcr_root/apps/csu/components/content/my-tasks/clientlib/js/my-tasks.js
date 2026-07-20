@@ -52,8 +52,7 @@ $(document).ready(function() {
 		var targetUrl = "/content/csu/us/en/my-tasks.html";
 		   // If running on author instance, append wcmmode=disabled
 		   if (window.location.hostname.indexOf("author") !== -1) {
-			alert("author Clicked");
-		       targetUrl += "?wcmmode=disabled";
+		    targetUrl += "?wcmmode=disabled";
 		   }
 		   window.location.href = targetUrl;
     });
