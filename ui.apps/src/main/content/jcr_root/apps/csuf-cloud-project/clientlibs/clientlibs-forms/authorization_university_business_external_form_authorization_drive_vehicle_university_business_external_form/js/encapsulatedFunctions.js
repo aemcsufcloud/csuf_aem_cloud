@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var authorization_university_business_external_form_authorization_drive_vehicle_university_business_external_form = window.authorization_university_business_external_form_authorization_drive_vehicle_university_business_external_form = window.authorization_university_business_external_form_authorization_drive_vehicle_university_business_external_form || {};

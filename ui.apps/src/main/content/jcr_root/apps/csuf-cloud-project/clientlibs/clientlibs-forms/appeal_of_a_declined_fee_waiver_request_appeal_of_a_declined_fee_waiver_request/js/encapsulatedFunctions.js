@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var appeal_of_a_declined_fee_waiver_request_appeal_of_a_declined_fee_waiver_request = window.appeal_of_a_declined_fee_waiver_request_appeal_of_a_declined_fee_waiver_request = window.appeal_of_a_declined_fee_waiver_request_appeal_of_a_declined_fee_waiver_request || {};
