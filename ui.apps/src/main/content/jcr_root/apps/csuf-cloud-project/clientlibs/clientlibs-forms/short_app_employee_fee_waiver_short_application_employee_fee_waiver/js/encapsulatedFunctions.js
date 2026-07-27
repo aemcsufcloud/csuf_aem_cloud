@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var short_app_employee_fee_waiver_short_application_employee_fee_waiver = window.short_app_employee_fee_waiver_short_application_employee_fee_waiver = window.short_app_employee_fee_waiver_short_application_employee_fee_waiver || {};

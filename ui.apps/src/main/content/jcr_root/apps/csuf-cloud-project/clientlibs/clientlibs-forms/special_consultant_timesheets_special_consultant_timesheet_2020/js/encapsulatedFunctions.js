@@ -1,0 +1,17 @@
+
+//Do not change this file.
+var special_consultant_timesheets_special_consultant_timesheet_2020 = window.special_consultant_timesheets_special_consultant_timesheet_2020 = window.special_consultant_timesheets_special_consultant_timesheet_2020 || {};
+/**
+ * @function special_consultant_timesheets_special_consultant_timesheet_2020.generated_TotalWorkHours_calc0
+ * @this currentComponent
+ * @param {scope} scope in which code inside function will be executed.
+ * @returns {string}
+ */
+special_consultant_timesheets_special_consultant_timesheet_2020.generated_TotalWorkHours_calc0 = function (scope) {
+    with(this) {
+        with(scope) {
+            var code = "if(StageIndicator.value === null  || StageIndicator.value == \"ToEmployee\"){\nvar w1 = WorkHours1.value;\nif(w1 === null){\nw1 = \"0\";\n}\nvar w2 = WorkHours2.value;\nif(w2 === null){\nw2 = \"0\";\n}\nvar w3 = WorkHours3.value;\nif(w3 === null){\nw3 = \"0\";\n}\nvar w4 = WorkHours4.value;\nif(w4 === null){\nw4 = \"0\";\n}\nvar w5 = WorkHours5.value;\nif(w5 === null){\nw5 = \"0\";\n}\nvar w6 = WorkHours6.value;\nif(w6 === null){\nw6 = \"0\";\n}\nvar w7 = WorkHours7.value;\nif(w7 === null){\nw7 = \"0\";\n}\nvar w8 = WorkHours8.value;\nif(w8 === null){\nw8 = \"0\";\n}\nvar w9 = WorkHours9.value;\nif(w9 === null){\nw9 = \"0\";\n}\nvar w10 = WorkHours10.value;\nif(w10 === null){\nw10 = \"0\";\n}\nvar w11 = WorkHours11.value;\nif(w11 === null){\nw11 = \"0\";\n}\nvar w12 = WorkHours12.value;\nif(w12 === null){\nw12 = \"0\";\n}\nvar w13 = WorkHours13.value;\nif(w13 === null){\nw13 = \"0\";\n}\nvar w14 = WorkHours14.value;\nif(w14 === null){\nw14 = \"0\";\n}\nvar w15 = WorkHours15.value;\nif(w15 === null){\nw15 = \"0\";\n}\nvar w16 = WorkHours16.value;\nif(w16 === null){\nw16 = \"0\";\n}\nvar w17 = WorkHours17.value;\nif(w17 === null){\nw17 = \"0\";\n}\nvar w18 = WorkHours18.value;\nif(w18 === null){\nw18 = \"0\";\n}\nvar w19 = WorkHours19.value;\nif(w19 === null){\nw19 = \"0\";\n}\nvar w20 = WorkHours20.value;\nif(w20 === null){\nw20 = \"0\";\n}\nvar w21 = WorkHours21.value;\nif(w21 === null){\nw21 = \"0\";\n}\nvar w22 = WorkHours22.value;\nif(w22 === null){\nw22 = \"0\";\n}\nvar w23 = WorkHours23.value;\nif(w23 === null){\nw23 = \"0\";\n}\nvar w24 = WorkHours24.value;\nif(w24 === null){\nw24 = \"0\";\n}\nvar w25 = WorkHours25.value;\nif(w25 === null){\nw25 = \"0\";\n}\nvar w26 = WorkHours26.value;\nif(w26 === null){\nw26 = \"0\";\n}\nvar w27 = WorkHours27.value;\nif(w27 === null){\nw27 = \"0\";\n}\nvar w28 = WorkHours28.value;\nif(w28 === null){\nw28 = \"0\";\n}\nvar w29 = WorkHours29.value;\nif(w29 === null){\nw29 = \"0\";\n}\nvar w30 = WorkHours30.value;\nif(w30 === null){\nw30 = \"0\";\n}\nvar w31 = WorkHours31.value;\nif(w31 === null){\nw31 = \"0\";\n}\nvar w32 = WorkHours32.value;\nif(w32 === null){\nw32 = \"0\";\n}\nvar w33 = WorkHours33.value;\nif(w33 === null){\nw33 = \"0\";\n}\n\nvar totlwHrs=parseInt(w1)+parseInt(w2)+parseInt(w3)+parseInt(w4)+parseInt(w5)+parseInt(w6)+parseInt(w7)+parseInt(w8)+parseInt(w9)+parseInt(w10)+parseInt(w11)+parseInt(w12)+parseInt(w13)+parseInt(w14)+parseInt(w15)+parseInt(w16)+parseInt(w17)+parseInt(w18)+parseInt(w19)+parseInt(w20)+parseInt(w21)+parseInt(w22)+parseInt(w23)+parseInt(w24)+parseInt(w25)+parseInt(w26)+parseInt(w27)+parseInt(w28)+parseInt(w29)+parseInt(w30)+parseInt(w31)+parseInt(w32)+parseInt(w33);\nthis.value = totlwHrs;\n}\n";
+            return eval(code);
+        }
+	}
+}

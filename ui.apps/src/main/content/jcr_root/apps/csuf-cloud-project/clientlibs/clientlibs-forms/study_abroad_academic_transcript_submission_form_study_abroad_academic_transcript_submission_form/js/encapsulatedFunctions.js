@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var study_abroad_academic_transcript_submission_form_study_abroad_academic_transcript_submission_form = window.study_abroad_academic_transcript_submission_form_study_abroad_academic_transcript_submission_form = window.study_abroad_academic_transcript_submission_form_study_abroad_academic_transcript_submission_form || {};

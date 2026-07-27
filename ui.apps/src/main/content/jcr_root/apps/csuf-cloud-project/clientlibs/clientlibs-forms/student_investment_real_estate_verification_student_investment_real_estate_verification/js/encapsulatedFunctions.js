@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var student_investment_real_estate_verification_student_investment_real_estate_verification = window.student_investment_real_estate_verification_student_investment_real_estate_verification = window.student_investment_real_estate_verification_student_investment_real_estate_verification || {};

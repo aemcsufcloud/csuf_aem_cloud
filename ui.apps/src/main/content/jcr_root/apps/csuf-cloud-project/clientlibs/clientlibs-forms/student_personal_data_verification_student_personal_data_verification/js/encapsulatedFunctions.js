@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var student_personal_data_verification_student_personal_data_verification = window.student_personal_data_verification_student_personal_data_verification = window.student_personal_data_verification_student_personal_data_verification || {};
