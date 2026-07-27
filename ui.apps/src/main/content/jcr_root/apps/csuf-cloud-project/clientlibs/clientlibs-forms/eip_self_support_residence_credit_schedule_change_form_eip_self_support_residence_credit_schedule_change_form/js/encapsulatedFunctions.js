@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var eip_self_support_residence_credit_schedule_change_form_eip_self_support_residence_credit_schedule_change_form = window.eip_self_support_residence_credit_schedule_change_form_eip_self_support_residence_credit_schedule_change_form = window.eip_self_support_residence_credit_schedule_change_form_eip_self_support_residence_credit_schedule_change_form || {};

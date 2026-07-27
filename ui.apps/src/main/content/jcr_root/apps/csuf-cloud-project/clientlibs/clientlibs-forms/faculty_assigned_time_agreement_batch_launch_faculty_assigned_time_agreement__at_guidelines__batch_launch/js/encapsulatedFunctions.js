@@ -1,0 +1,3 @@
+
+//Do not change this file.
+var faculty_assigned_time_agreement_batch_launch_faculty_assigned_time_agreement__at_guidelines__batch_launch = window.faculty_assigned_time_agreement_batch_launch_faculty_assigned_time_agreement__at_guidelines__batch_launch = window.faculty_assigned_time_agreement_batch_launch_faculty_assigned_time_agreement__at_guidelines__batch_launch || {};
