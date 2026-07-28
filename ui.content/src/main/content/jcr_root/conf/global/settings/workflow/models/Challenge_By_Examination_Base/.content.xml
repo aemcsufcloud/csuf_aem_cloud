@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2025-09-24T05:38:23.064-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2025-09-24T05:38:25.576-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Challenge By Examination Base"
+        jcr:uuid="e5e9c723-15d7-4d94-acd4-f184246326b8"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_copy_copy
+                jcr:created="{Date}2025-08-08T01:43:09.219-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-09-23T21:45:52.738-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History - Start"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy>
+        </flow>
+    </jcr:content>
+</jcr:root>

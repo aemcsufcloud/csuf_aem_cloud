@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2026-06-12T00:15:39.207-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2026-06-12T00:15:44.906-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="MPP Self Performance"
+        jcr:uuid="a41d8868-95b5-469d-b407-e9b5f9068cbf"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_663502658
+                jcr:created="{Date}2020-03-17T21:25:29.919-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-17T21:26:28.477-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value of Generate Pdf Step"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/form1/GeneratePdfStep,Final"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_663502658>
+            <process_1419172747
+                jcr:created="{Date}2023-03-30T23:36:22.961-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2026-06-10T23:00:55.417-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Metadata"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="fromAddress=hrevaluations@fullerton.edu,bccAddress=yjayaram@fullerton.edu"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1419172747>
+            <process
+                jcr:created="{Date}2019-11-26T21:35:19.938-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-05-05T05:38:19.781-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save to  DB (AEM_MPP_SELF_EVAL)"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.MPPSelfEvalDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <aftodorstep
+                jcr:created="{Date}2019-11-26T22:59:25.844-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2019-11-26T23:00:56.537-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/mpp-employee-self-evaluation/mpp-employee-self-evaluation"
+                    DOR_PATH="RELATIVE_PLOAD:MPP_Employee_Self_Evaluation.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <process_623776543
+                jcr:created="{Date}2025-02-28T06:49:10.201-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-02-28T06:49:42.644-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Process - OnBase"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.MppSelfEvalOnbase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_623776543>
+            <process_1346718131
+                jcr:created="{Date}2026-06-11T22:35:16.812-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2026-06-11T22:36:40.926-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="OnBase Attachments Save"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.ReadMPPEmpSelfEvalSupDocOnBase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1346718131>
+            <process_107624212
+                jcr:created="{Date}2020-03-03T22:38:07.204-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-30T23:39:24.219-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get Value and Set Metadata"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="empName=afData/afUnboundData/data/empFullName,empEmailID=afData/afBoundData/form1/EmpEmailID,evaluatorName=afData/afBoundData/form1/EmployeeSupervisor,supervisorEmail=afData/afBoundData/form1/SupervisorEmailID,toName=afData/afBoundData/form1/EmployeeSupervisor"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_107624212>
+            <process_655347205
+                jcr:created="{Date}2023-03-30T23:37:38.186-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-02-28T00:00:27.114-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Metadata for Email"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="path=/etc/notification/email/csuf/MPP_Employee_Self_Evaluation/MPP_Employee_Self_Evaluation.html,tlsRequired=false,toEmail=supervisorEmail,bccEmail=bccAddress,ccEmail=empEmailID,fromEmail=hrevaluations@fullerton.edu,fromName=hrevaluations@fullerton.edu,subject=MPP Employee Self Evaluation,dorRequired=true,dorFileName=MPP_Employee_Self_Evaluation.pdf,formPath=/content/forms/af/mpp-employee-self-evaluation/mpp-employee-self-evaluation"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_655347205>
+        </flow>
+    </jcr:content>
+</jcr:root>

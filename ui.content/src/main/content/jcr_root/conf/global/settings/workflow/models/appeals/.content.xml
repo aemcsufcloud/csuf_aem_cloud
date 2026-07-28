@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2026-07-13T09:41:37.577-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2026-07-13T09:42:56.347-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Admissions Appeal"
+        jcr:uuid="da0d13f6-bc86-4359-82c2-aca6137ee130"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2020-12-03T01:43:09.703-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-04-03T20:19:39.857-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <process_1947783232_c
+                jcr:created="{Date}2020-12-11T04:11:15.302-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-11-01T22:42:01.842-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFAppealDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1947783232_c>
+            <process_263866000
+                jcr:created="{Date}2020-12-03T01:44:23.270-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2026-07-13T08:57:04.961-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Metadata(emails)"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="FromAddress=appeals@fullerton.edu,BccAddress=yjayaram@fullerton.edu,AppealsEmail=csufaemform@gmail.com"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_263866000>
+            <process_953570717
+                jcr:created="{Date}2020-12-03T01:43:41.907-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-09-27T04:03:06.993-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="StudentEmail=afData/afBoundData/Appeals/CSUStudentEmail,EmailRef=afData/afBoundData/Appeals/EmailRef,EmailSubject=afData/afBoundData/Appeals/EmailSubject,ApplicantName=afData/afBoundData/Appeals/ApplicantName,Term=afData/afBoundData/Appeals/Term,StudentPersonalEmail=afData/afBoundData/Appeals/PersonalStudentEmail,ExtenuationCircumstanceTB=afData/afBoundData/Appeals/ExtenuationCircumstanceTB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_953570717>
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-12-14T03:11:31.179-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2021-03-08T19:55:21.413-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/appeals-form/appeals"
+                    DOR_PATH="RELATIVE_PLOAD:Admissions Appeal Confirmation.pdf"
+                    FORM_RESOLUTION="PATH"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <process_281555000_co
+                jcr:created="{Date}2020-12-11T04:10:50.256-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-10-27T13:13:17.649-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFAppealStudentDORFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_281555000_co>
+            <process_1323671678_c
+                jcr:created="{Date}2020-12-11T04:09:55.131-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-12-11T04:10:41.982-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Sup Doc in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFAppealSupportingDocFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1323671678_c>
+            <sendemail_994678710
+                jcr:created="{Date}2020-12-03T03:12:11.282-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2026-07-13T07:00:28.657-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email to Student"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentName="Admissions Appeal Confirmation.pdf"
+                    attachmentPath="Admissions Appeal Confirmation.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Admissions Appeal Confirmation.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="[Metadata,Metadata]"
+                    bccAddressValue="[BccAddress,AppealsEmail]"
+                    ccAddressType="Metadata"
+                    ccAddressValue="StudentPersonalEmail"
+                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Received"
+                    fromAddressType="Metadata"
+                    fromAddressValue="FromAddress"
+                    hiddenCheckbox="[false,false]"
+                    hiddenIsFormsAsset="[false,false]"
+                    Key="[EmailRef,Term]"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatemetadatatype="[Metadata,Metadata]"
+                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Student_Acknowledgement.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="StudentEmail"
+                    urlPath="[,]"
+                    Value="[EmailRef,Term]"/>
+            </sendemail_994678710>
+            <process_1770005675
+                jcr:created="{Date}2020-12-03T01:44:01.319-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-12-03T01:55:41.865-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value in xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/Appeals/StageIndicator,ToAppeals"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1770005675>
+            <process_80348020
+                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-12-03T01:56:28.469-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="stage=afData/afBoundData/Appeals/StageIndicator"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_80348020>
+            <sendemail
+                jcr:created="{Date}2020-12-03T01:57:41.850-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2021-02-09T01:08:45.466-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    bccAddressType="Metadata"
+                    bccAddressValue="BccAddress"
+                    ccAddressType="Literal"
+                    emailSubject="EmailSubject"
+                    fromAddressType="Metadata"
+                    fromAddressValue="FromAddress"
+                    hiddenCheckbox="false"
+                    hiddenIsFormsAsset="false"
+                    Key="ApplicantName"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Metadata"
+                    templatemetadatatype="Metadata"
+                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Form_Appeal_Team.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="AppealsEmail"
+                    Value="ApplicantName"/>
+            </sendemail>
+            <process_1668996722
+                jcr:created="{Date}2021-01-26T21:32:18.510-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-26T21:37:24.059-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Workflow History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFAppealsWFHistoryDB"
+                    PROCESS_ARGS="Before Assign Task"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1668996722>
+            <afparticipantstep
+                jcr:created="{Date}2020-12-03T01:45:10.906-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Student Details : "
+                jcr:lastModified="{Date}2021-02-08T19:40:37.010-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Appeals Team Review"
+                sling:resourceType="fd/workflow/components/dashboard/afParticipantStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/appeals-form/appeals"
+                    ALLOW_OUT_OF_OFFICE="false"
+                    allowExplicitSharing="false"
+                    allowInboxSharing="false"
+                    DELEGATE_TO="assignee"
+                    DUEDATE_UNIT="OFF"
+                    DUEDATE_VALUE="[,]"
+                    DYNAMIC_ASSIGNEE="[,]"
+                    FORM_RESOLUTION="PATH"
+                    FORM_TYPE="AF"
+                    HISTORY_DOR="READONLY_AF"
+                    icDataSourceType="PROVIDEDATADOCUMENT"
+                    INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="Data.xml"
+                    INPUT_FORM_ATTACHMENTS="Attachments"
+                    IS_ATTACHMENT_ALLOWED="true"
+                    IS_COMMENT_ALLOWED="true"
+                    IS_NEXT_STEP_DATA_ALLOWED="true"
+                    IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                    OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                    OUTPUT_DATAXML="Data.xml"
+                    OUTPUT_FORM_ATTACHMENTS="Attachments"
+                    PARTICIPANT="Admissions Appeal Committee"
+                    PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PARTICIPANT_TYPE="static"
+                    PROVIDE_METADATA="true"
+                    ROUTE_PROPERTYNAME="actionTaken"
+                    SHOW_ACTION="true"
+                    SHOW_ASSIGNEE="true"
+                    SHOW_COMMENT="true"
+                    SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                    SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                    SHOW_RESET="false"
+                    SHOW_SAVE="false"
+                    SHOW_SUBMIT="true"
+                    STATIC_ASSIGNEE="Admissions Appeal Committee"
+                    SUBTYPE="forms:assigntask"
+                    TASK_PRIORITY="MEDIUM"
+                    TIMEOUT_HANDLER="[,]"
+                    USER_METADATA_RESOURCE="[,]"
+                    WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                    workflowStage="[,]"/>
+            </afparticipantstep>
+            <process_953191182
+                jcr:created="{Date}2021-01-26T21:32:26.344-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-26T21:38:41.553-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Workflow History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFAppealsWFHistoryDB"
+                    PROCESS_ARGS="After Assign Task"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_953191182>
+            <process_506660040
+                jcr:created="{Date}2020-12-03T03:04:44.928-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-11-15T21:52:42.857-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value of approval/denial action from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="AppealsRecommend=afData/afBoundData/Appeals/AppealsRecommend,ApproveAction=afData/afBoundData/Appeals/ApproveAction,DenyAction=afData/afBoundData/Appeals/DenyAction,DepositByDate=afData/afBoundData/Appeals/DepositByDate,ExtenuationCircumstanceTB=afData/afBoundData/Appeals/ExtenuationCircumstanceTB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_506660040>
+            <or
+                jcr:created="{Date}2020-12-03T03:07:07.026-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-12-03T03:08:58.946-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                orSplit="true"
+                script1="function check() {&#xd;&#xa;    var AppealsRecommend = workflowData.getMetaDataMap().get(&quot;AppealsRecommend&quot;);&#xd;&#xa;    log.info(&quot;AppealsRecommend:&quot; + AppealsRecommend);&#xd;&#xa;     if (AppealsRecommend == &quot;1&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                script2="function check() {&#xd;&#xa;    var AppealsRecommend = workflowData.getMetaDataMap().get(&quot;AppealsRecommend&quot;);&#xd;&#xa;    log.info(&quot;AppealsRecommend:&quot; + AppealsRecommend);&#xd;&#xa;     if (AppealsRecommend == &quot;2&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process
+                        jcr:created="{Date}2020-12-14T02:57:11.682-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-14T03:56:45.661-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Set metadata value"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS_ARGS="decision=Approved"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process>
+                    <aftodorstep_copy
+                        jcr:created="{Date}2020-12-14T03:11:31.179-08:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Generate Document of Record"
+                        jcr:lastModified="{Date}2021-03-11T22:38:02.461-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate Document of Record"
+                        sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            AF_PATH="/content/dam/formsanddocuments/appeals-form/appeals"
+                            DOR_PATH="RELATIVE_PLOAD:Appeal_Confirmation.pdf"
+                            INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                            INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                            LOCALE="en_US"
+                            PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                            PROCESS_AUTO_ADVANCE="true"
+                            WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+                    </aftodorstep_copy>
+                    <or
+                        jcr:created="{Date}2020-12-03T03:09:11.995-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-07-13T06:38:51.518-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/or"
+                        branches="4"
+                        branchName1="Branch 1"
+                        branchName2="Branch 2"
+                        branchName3="Branch 3"
+                        branchName4="Branch 4"
+                        branchOrder="[0,1,2,3]"
+                        orSplit="true"
+                        script1="function check() {&#xd;&#xa;    var ApproveAction = workflowData.getMetaDataMap().get(&quot;ApproveAction&quot;);&#xd;&#xa;    log.info(&quot;ApproveAction:&quot; + ApproveAction);&#xd;&#xa;     if (ApproveAction == &quot;1&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                        script2="function check() {&#xd;&#xa;    var ApproveAction = workflowData.getMetaDataMap().get(&quot;ApproveAction&quot;);&#xd;&#xa;    log.info(&quot;ApproveAction:&quot; + ApproveAction);&#xd;&#xa;     if (ApproveAction == &quot;2&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                        script3="function check() {&#xd;&#xa;    var ApproveAction = workflowData.getMetaDataMap().get(&quot;ApproveAction&quot;);&#xd;&#xa;    log.info(&quot;ApproveAction:&quot; + ApproveAction);&#xd;&#xa;     if (ApproveAction == &quot;3&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}"
+                        script4="function check() {&#xd;&#xa;    var ApproveAction = workflowData.getMetaDataMap().get(&quot;ApproveAction&quot;);&#xd;&#xa;    log.info(&quot;ApproveAction:&quot; + ApproveAction);&#xd;&#xa;     if (ApproveAction == &quot;4&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <sendemail
+                                jcr:created="{Date}2020-12-03T03:10:02.193-08:00"
+                                jcr:createdBy="admin"
+                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                jcr:lastModified="{Date}2026-07-13T07:15:31.269-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Send Email to Student (RECONSIDERATION ENROLLMENT DEPOSIT (waiver) for WAPP/DENY)"
+                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    bccAddressType="[Metadata,Metadata]"
+                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                    ccAddressType="Metadata"
+                                    ccAddressValue="StudentPersonalEmail"
+                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Approved"
+                                    fromAddressType="Metadata"
+                                    fromAddressValue="FromAddress"
+                                    hiddenCheckbox="[false,false,false]"
+                                    hiddenIsFormsAsset="[false,false,false]"
+                                    Key="[EmailRef,Term,DepositByDate]"
+                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                    PROCESS_AUTO_ADVANCE="true"
+                                    subjectType="Literal"
+                                    templatemetadatatype="[Metadata,Metadata,Metadata]"
+                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Approve_Acknowledgement1.txt"
+                                    toAddressType="Metadata"
+                                    toAddressValue="StudentEmail"
+                                    urlPath="[,,]"
+                                    Value="[EmailRef,Term,DepositByDate]"/>
+                            </sendemail>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <sendemail
+                                jcr:created="{Date}2020-12-03T03:10:08.499-08:00"
+                                jcr:createdBy="admin"
+                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                jcr:lastModified="{Date}2026-07-13T07:08:25.637-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Send Email to Student (RECONSIDERATION FOR DENY/WAPP )"
+                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    bccAddressType="[Metadata,Metadata]"
+                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                    ccAddressType="Metadata"
+                                    ccAddressValue="StudentPersonalEmail"
+                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Approved"
+                                    fromAddressType="Metadata"
+                                    fromAddressValue="FromAddress"
+                                    hiddenCheckbox="[false,false]"
+                                    hiddenIsFormsAsset="[false,false]"
+                                    Key="[EmailRef,Term]"
+                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                    PROCESS_AUTO_ADVANCE="true"
+                                    subjectType="Literal"
+                                    templatemetadatatype="[Metadata,Metadata]"
+                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Approve_Acknowledgement2.txt"
+                                    toAddressType="Metadata"
+                                    toAddressValue="StudentEmail"
+                                    urlPath="[,]"
+                                    Value="[EmailRef,Term]"/>
+                            </sendemail>
+                        </_x0032_>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <sendemail_copy
+                                jcr:created="{Date}2020-12-03T03:10:08.499-08:00"
+                                jcr:createdBy="admin"
+                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                jcr:lastModified="{Date}2026-07-13T07:25:04.004-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Send Email to Student (RECONSIDERATION FOR DENY/RESC )"
+                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    bccAddressType="[Metadata,Metadata]"
+                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                    ccAddressType="Metadata"
+                                    ccAddressValue="StudentPersonalEmail"
+                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Approved"
+                                    fromAddressType="Metadata"
+                                    fromAddressValue="FromAddress"
+                                    hiddenCheckbox="[false,false]"
+                                    hiddenIsFormsAsset="[false,false]"
+                                    Key="[EmailRef,Term]"
+                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                    PROCESS_AUTO_ADVANCE="true"
+                                    subjectType="Literal"
+                                    templatemetadatatype="[Metadata,Metadata]"
+                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Reconsideration_for_DenyRESC.txt"
+                                    toAddressType="Metadata"
+                                    toAddressValue="StudentEmail"
+                                    urlPath="[,]"
+                                    Value="[EmailRef,Term]"/>
+                            </sendemail_copy>
+                        </_x0033_>
+                        <_x0034_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <sendemail
+                                jcr:created="{Date}2026-07-13T06:40:02.722-07:00"
+                                jcr:createdBy="admin"
+                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                jcr:lastModified="{Date}2026-07-13T07:16:46.821-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Send Email to Student (Special Populations)"
+                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    bccAddressType="[Metadata,Metadata]"
+                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                    ccAddressType="Metadata"
+                                    ccAddressValue="StudentPersonalEmail"
+                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Approved"
+                                    fromAddressType="Metadata"
+                                    fromAddressValue="FromAddress"
+                                    hiddenCheckbox="[false,false]"
+                                    hiddenIsFormsAsset="[false,false]"
+                                    Key="[EmailRef,Term]"
+                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                    PROCESS_AUTO_ADVANCE="true"
+                                    subjectType="Literal"
+                                    templatemetadatatype="[Metadata,Metadata]"
+                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Approve_Acknowledgement4.txt"
+                                    toAddressType="Metadata"
+                                    toAddressValue="StudentEmail"
+                                    urlPath="[,]"
+                                    Value="[EmailRef,Term]"/>
+                            </sendemail>
+                        </_x0034_>
+                    </or>
+                    <process_281555000_co
+                        jcr:created="{Date}2020-12-11T04:10:50.256-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-14T03:18:51.082-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save DOR in filenet"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFAppealFinalDORFilenet"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_281555000_co>
+                    <process_1947783232_c
+                        jcr:created="{Date}2020-12-11T04:11:15.302-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-11T04:11:35.066-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save data in DB"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFAppealDB"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_1947783232_c>
+                    <process_copy_1666211
+                        jcr:created="{Date}2020-12-03T01:43:09.703-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-07-21T23:03:31.694-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save Workflow Instance History"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                            PROCESS_ARGS="End of the Workflow Instance"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_copy_1666211>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process_copy
+                        jcr:created="{Date}2020-12-14T02:57:11.682-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-14T03:57:06.759-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Set metadata value"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS_ARGS="decision=Denied"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_copy>
+                    <aftodorstep_copy
+                        jcr:created="{Date}2020-12-14T03:11:31.179-08:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Generate Document of Record"
+                        jcr:lastModified="{Date}2021-03-11T22:38:15.467-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate Document of Record"
+                        sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            AF_PATH="/content/dam/formsanddocuments/appeals-form/appeals"
+                            DOR_PATH="RELATIVE_PLOAD:Appeal_Confirmation.pdf"
+                            INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                            INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                            LOCALE="en_US"
+                            PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                            PROCESS_AUTO_ADVANCE="true"
+                            WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+                    </aftodorstep_copy>
+                    <and
+                        jcr:created="{Date}2020-12-04T01:37:49.796-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-01-09T21:12:43.556-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/and"
+                        branches="3"
+                        branchName1="Branch 1"
+                        branchName2="Branch 2"
+                        branchName3="Branch 3"
+                        branchOrder="[0,1,2]">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <and
+                                jcr:created="{Date}2020-12-10T00:43:19.675-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-03-03T21:20:59.305-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/workflow/components/model/and"
+                                branches="4"
+                                branchName1="Branch 1"
+                                branchName2="Branch 2"
+                                branchName3="Branch 3"
+                                branchName4="Branch 4"
+                                branchOrder="[0,1,2,3]">
+                                <_x0031_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or
+                                        jcr:created="{Date}2020-12-10T00:43:52.583-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:44:41.255-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction1:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;1&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-04T02:27:47.005-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T07:33:48.669-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email to Students - MISSED INTENT DEADLINE"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement1.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:44:07.126-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:44:07.126-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or>
+                                </_x0031_>
+                                <_x0032_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:45:06.391-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction2:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;2&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-04T03:25:57.557-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:05:19.862-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement2.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or>
+                                </_x0032_>
+                                <_x0033_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:47:02.297-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction3:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;3&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <process_80348020_cop
+                                                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-12-09T02:30:45.322-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Get value from xml"
+                                                sling:resourceType="cq/workflow/components/model/process">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS_ARGS="DeficientAGCourseList=afData/afBoundData/Appeals/DeficientAGCourseList"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </process_80348020_cop>
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-07T22:36:20.264-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:16:16.154-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - MISSING A-G COURSE "
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false,false]"
+                                                    hiddenIsFormsAsset="[false,false,false]"
+                                                    Key="[EmailRef,Term,DeficientAGCourseList]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeal_Deny_Acknowledgement3.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,,]"
+                                                    Value="[EmailRef,Term,DeficientAGCourseList]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy>
+                                </_x0033_>
+                                <_x0034_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:47:13.386-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction4:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;4&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <process_80348020_cop
+                                                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-12-09T02:31:36.355-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Get value from xml"
+                                                sling:resourceType="cq/workflow/components/model/process">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS_ARGS="StudentGPA=afData/afBoundData/Appeals/StudentGPA"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </process_80348020_cop>
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T21:38:38.363-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:20:15.032-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - LOW GPA "
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement4.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy>
+                                </_x0034_>
+                            </and>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <and
+                                jcr:created="{Date}2020-12-10T00:43:39.463-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2021-09-27T06:01:46.561-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/workflow/components/model/and"
+                                branches="5"
+                                branchName1="Branch 1"
+                                branchName2="Branch 2"
+                                branchName3="Branch 3"
+                                branchName4="Branch 4"
+                                branchName5="Branch 5"
+                                branchOrder="[0,1,2,3,4]">
+                                <_x0031_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:47:27.735-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction5:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;5&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <process_80348020_cop
+                                                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-12-09T02:32:50.896-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Get value from xml"
+                                                sling:resourceType="cq/workflow/components/model/process">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS_ARGS="Units=afData/afBoundData/Appeals/Units,PendingUnits=afData/afBoundData/Appeals/PendingUnits"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </process_80348020_cop>
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T21:50:20.432-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:24:34.529-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - LESS THAN 60 UNITS"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your appeal to Cal State Fullerton has been denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false,false]"
+                                                    hiddenIsFormsAsset="[false,false,false]"
+                                                    Key="[EmailRef,Term,Units]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement5.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,,]"
+                                                    Value="[EmailRef,Term,Units]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy>
+                                </_x0031_>
+                                <_x0032_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-10T00:47:42.377-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction6:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;6&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <process_80348020_cop
+                                                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-12-10T01:28:41.319-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Get value from xml"
+                                                sling:resourceType="cq/workflow/components/model/process">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS_ARGS="GoldenDeficientIn=afData/afBoundData/Appeals/GoldenDeficientInList"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </process_80348020_cop>
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T22:03:05.103-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:27:21.214-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - MISSING GOLDEN 4 "
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false,false]"
+                                                    hiddenIsFormsAsset="[false,false,false]"
+                                                    Key="[EmailRef,Term,GoldenDeficientIn]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement6.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,,]"
+                                                    Value="[EmailRef,Term,GoldenDeficientIn]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy>
+                                </_x0032_>
+                                <_x0033_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-09-27T06:06:57.670-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction6:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;7&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T22:03:05.103-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:30:02.280-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - MISSED WAITLIST DEADLINE"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your appeal to Cal State Fullerton has been denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement8.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy_copy>
+                                </_x0033_>
+                                <_x0034_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-09-27T06:06:48.346-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction6:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;8&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <process_80348020_cop
+                                                jcr:created="{Date}2020-12-03T01:44:41.966-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2021-09-27T06:06:15.627-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Get value from xml"
+                                                sling:resourceType="cq/workflow/components/model/process">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS_ARGS="IncompleteAppealReason=afData/afBoundData/Appeals/IncompleteAppealReason"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </process_80348020_cop>
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T22:03:05.103-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:33:17.932-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - Incomplete Appeal"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false,false]"
+                                                    hiddenIsFormsAsset="[false,false,false]"
+                                                    Key="[EmailRef,Term,IncompleteAppealReason]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement9.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,,]"
+                                                    Value="[EmailRef,Term,IncompleteAppealReason]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy_copy>
+                                </_x0034_>
+                                <_x0035_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or_copy_copy_copy
+                                        jcr:created="{Date}2020-12-10T00:44:49.880-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-03-03T21:21:35.431-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction9:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;9&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2020-12-08T22:03:05.103-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:39:07.378-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - Incomplete Appeal"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement10.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2020-12-10T00:45:14.055-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or_copy_copy_copy>
+                                </_x0035_>
+                            </and>
+                        </_x0032_>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <and
+                                jcr:created="{Date}2025-01-09T21:13:01.388-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2026-03-12T23:27:50.428-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/workflow/components/model/and"
+                                branches="3"
+                                branchName1="Branch 1"
+                                branchName2="Branch 2"
+                                branchName3="Branch 3"
+                                branchOrder="[0,1,2]">
+                                <_x0031_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or
+                                        jcr:created="{Date}2025-01-09T21:13:18.705-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2025-01-09T21:15:10.814-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction10:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;10&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2025-01-09T21:13:52.385-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2025-01-09T21:18:58.963-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - Academic Standing Program Action"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your appeal to Cal State Fullerton has been denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Academic_Standing_Program_Action_Deny.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2025-01-09T21:14:00.100-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2025-01-09T21:14:00.100-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or>
+                                </_x0031_>
+                                <_x0032_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or
+                                        jcr:created="{Date}2025-01-09T21:13:28.080-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2025-01-09T21:15:49.445-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        default1="true"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction11:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;11&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2025-01-09T21:14:08.485-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2025-01-09T21:21:57.445-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - CSUF Academic Standing Program Action"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your appeal to Cal State Fullerton has been denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/CSUF_Academic_Standing_Program_Action_Deny.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2025-01-09T21:14:16.587-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2025-01-09T21:14:16.587-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or>
+                                </_x0032_>
+                                <_x0033_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <or
+                                        jcr:created="{Date}2026-03-12T23:28:00.491-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2026-03-12T23:28:48.867-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/workflow/components/model/or"
+                                        branches="2"
+                                        branchName1="Branch 1"
+                                        branchName2="Branch 2"
+                                        branchOrder="[0,1]"
+                                        orSplit="true"
+                                        script1="function check() {&#xd;&#xa;    var DenyAction = workflowData.getMetaDataMap().get(&quot;DenyAction&quot;);&#xd;&#xa;    log.info(&quot;DenyAction12:&quot; + DenyAction);&#xd;&#xa;     if (DenyAction  == &quot;12&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;return false;&#xd;&#xa;}&#xd;&#xa;}">
+                                        <_x0031_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <sendemail
+                                                jcr:created="{Date}2026-03-12T23:28:06.673-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                                                jcr:lastModified="{Date}2026-07-13T09:41:37.531-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Send Email - Does not meet Nursing Major Requirement"
+                                                sling:resourceType="fd/workflow/components/email/sendemail">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    bccAddressType="[Metadata,Metadata]"
+                                                    bccAddressValue="[BccAddress,AppealsEmail]"
+                                                    ccAddressType="Metadata"
+                                                    ccAddressValue="StudentPersonalEmail"
+                                                    emailSubject="Your Cal State Fullerton Admission Decision Appeal has been Denied"
+                                                    fromAddressType="Metadata"
+                                                    fromAddressValue="FromAddress"
+                                                    hiddenCheckbox="[false,false]"
+                                                    hiddenIsFormsAsset="[false,false]"
+                                                    Key="[EmailRef,Term]"
+                                                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                                                    PROCESS_AUTO_ADVANCE="true"
+                                                    subjectType="Literal"
+                                                    templatemetadatatype="[Metadata,Metadata]"
+                                                    templatePath="/etc/notification/email/csuf/Appeals_Form/Appeals_Deny_Acknowledgement12.txt"
+                                                    toAddressType="Metadata"
+                                                    toAddressValue="StudentEmail"
+                                                    urlPath="[,]"
+                                                    Value="[EmailRef,Term]"/>
+                                            </sendemail>
+                                        </_x0031_>
+                                        <_x0032_
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/flow/components/parsys">
+                                            <noopprocess
+                                                jcr:created="{Date}2026-03-12T23:28:14.482-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:description="A no operation process"
+                                                jcr:lastModified="{Date}2026-03-12T23:28:14.482-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="No Operation"
+                                                sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                                                <metaData
+                                                    jcr:primaryType="nt:unstructured"
+                                                    PROCESS="/libs/workflow/scripts/noop.ecma"
+                                                    PROCESS_AUTO_ADVANCE="true"/>
+                                            </noopprocess>
+                                        </_x0032_>
+                                    </or>
+                                </_x0033_>
+                            </and>
+                        </_x0033_>
+                    </and>
+                    <process_1947783232_c
+                        jcr:created="{Date}2020-12-11T04:11:15.302-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-11T04:11:35.066-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save data in DB"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFAppealDB"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_1947783232_c>
+                    <set_variable
+                        jcr:created="{Date}2022-03-03T21:26:57.809-08:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Set value of variables"
+                        jcr:lastModified="{Date}2022-03-03T21:27:18.323-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Set Variable - DenialReasonFlag"
+                        sling:resourceType="cq/workflow/components/model/set_variable"
+                        defaultValue="true">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                            PROCESS_AUTO_ADVANCE="true"
+                            variableMappings="\{&quot;variableName&quot;:&quot;DenialReasonFlag&quot;,&quot;mappingType&quot;:&quot;LITERAL&quot;,&quot;mappingValue&quot;:&quot;true&quot;}"/>
+                    </set_variable>
+                    <process_281555000_co
+                        jcr:created="{Date}2020-12-11T04:10:50.256-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-14T03:18:51.082-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save DOR in filenet"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFAppealFinalDORFilenet"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_281555000_co>
+                    <process_copy_1666211396
+                        jcr:created="{Date}2020-12-03T01:43:09.703-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-07-21T23:03:47.778-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save Workflow Instance History"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                            PROCESS_ARGS="End of the Workflow Instance"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_copy_1666211396>
+                </_x0032_>
+            </or>
+        </flow>
+        <variables jcr:primaryType="nt:unstructured">
+            <DenialReasonFlag
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                name="DenialReasonFlag"
+                type="java.lang.String"/>
+        </variables>
+    </jcr:content>
+</jcr:root>

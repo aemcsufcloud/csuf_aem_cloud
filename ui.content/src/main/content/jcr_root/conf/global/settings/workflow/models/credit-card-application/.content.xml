@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2022-08-10T05:58:08.517-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2022-08-10T05:58:10.547-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Credit Card Application"
+        jcr:uuid="9a9b8789-22da-4ce6-b6de-bd24bd4c3f88"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-03-22T09:57:46.759-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2022-08-10T05:53:42.059-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/credit-card-application/credit-card-application"
+                    DOR_PATH="RELATIVE_PLOAD:My_Application.pdf"
+                    FORM_RESOLUTION="PATH"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <agreement_copy_copy_
+                jcr:created="{Date}2020-07-03T03:47:11.859-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Sign Document"
+                jcr:lastModified="{Date}2022-08-10T05:58:08.502-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sign Document"
+                sling:resourceType="fd/workflow/components/forms/Agreement">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    FORM_WORK_ITEM_TYPE="ADOBESIGN_STEP"
+                    inputpath="FOLDER_PAYLOAD:My_Application.pdf"
+                    locale="en_US"
+                    name="MyApplicationDocument"
+                    output="RELATIVE_PLOAD:My_Application_Approved.pdf"
+                    PROCESS="com.adobe.fd.workflow.adobesign.impl.AgreementCreation"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"
+                    reminderFrequency="DAILY_UNTIL_SIGNED"
+                    signatureFlow="SEQUENTIAL"
+                    signConfig="/conf/global/settings/cloudconfigs/echosign/erpaempr65tst01_adobe_sign"
+                    signerDetails="Static"
+                    signersListScript="/apps/fd/workflow/scripts/adobesign/VSP_Cobra.ecma"
+                    staticSigners="\{&quot;email&quot;:&quot;swathi.kumari@thoughtfocus.com&quot;,&quot;authenticationType&quot;:&quot;None&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;phoneNumber&quot;:&quot;&quot;}"
+                    statusVariableField="SignatureStatus"
+                    variableForStatus="VARIABLE:SignatureStatus"/>
+            </agreement_copy_copy_>
+        </flow>
+    </jcr:content>
+</jcr:root>

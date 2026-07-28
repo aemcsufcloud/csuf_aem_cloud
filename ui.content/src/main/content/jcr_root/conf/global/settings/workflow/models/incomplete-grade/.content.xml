@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-09-08T21:55:37.365-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-09-08T21:55:39.712-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Incomplete Grade"
+        jcr:uuid="50939795-4edb-458f-8609-4fc0fbb3301d"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1017756224_c
+                jcr:created="{Date}2020-07-31T03:26:08.298-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-07-21T23:06:49.811-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1017756224_c>
+            <process_copy_copy_co
+                jcr:created="{Date}2020-01-27T21:21:02.150-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-07-12T05:58:23.219-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml for Student"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="StudentFullName=afData/afBoundData/IncompleteGrade/StudentName,cwidVal=afData/afBoundData/IncompleteGrade/CWID,chairName=afData/afBoundData/IncompleteGrade/ChairName,caseId=afData/afBoundData/IncompleteGrade/CaseID,EmailSubject=afData/afBoundData/IncompleteGrade/EmailSubject,studentEmail=shreyas.manjunatha@thoughtfocus.com,chairEmail=shreyas.manjunatha@thoughtfocus.com,instructorEmail=shreyas.manjunatha@thoughtfocus.com"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy_co>
+            <process_5570255
+                jcr:created="{Date}2020-10-13T23:36:45.428-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-10-13T23:38:02.509-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value of Stage Indicator to StudentDOR"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/IncompleteGrade/StageIndicator,StudentDOR"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_5570255>
+            <process
+                jcr:created="{Date}2020-09-11T23:20:22.682-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-11T23:20:55.792-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Form data save"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFIncompleteGradeDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-03-22T09:57:46.759-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-09-11T05:28:25.339-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/incomplete-grade/incomplete-grades"
+                    DOR_PATH="RELATIVE_PLOAD:Incomplete(I)_Grade.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <process_1957572207_c
+                jcr:created="{Date}2020-09-12T01:52:47.626-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-17T01:43:07.528-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Student DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFIncompleteGradeStudentDORFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1957572207_c>
+            <process_1957572207
+                jcr:created="{Date}2020-09-12T01:52:47.626-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-17T01:43:27.314-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Final DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFIncompleteGradeFinalDORFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1957572207>
+            <process_copy
+                jcr:created="{Date}2020-10-06T20:54:33.938-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-03-21T21:48:53.854-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Supporting Doc 1 to Filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFIGradeReadSupDoc1Filenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy>
+            <process_copy_copy
+                jcr:created="{Date}2020-10-06T20:54:33.938-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-03-21T21:49:22.401-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Supporting Doc 2 to Filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFIGradeReadSupDoc2Filenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy>
+            <process_1561099877
+                jcr:created="{Date}2020-10-13T23:38:32.246-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-10-13T23:39:33.338-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Value of Stage Indicator to FinalDOR"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/IncompleteGrade/StageIndicator,FinalDOR"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1561099877>
+            <aftodorstep_copy_cop_851684960
+                jcr:created="{Date}2020-03-22T09:57:46.759-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-09-11T05:28:25.339-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/incomplete-grade/incomplete-grades"
+                    DOR_PATH="RELATIVE_PLOAD:Incomplete(I)_Grade.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop_851684960>
+            <agreement_copy
+                jcr:created="{Date}2020-10-07T00:01:39.583-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Sign Document"
+                jcr:lastModified="{Date}2024-03-21T21:47:53.564-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sign Document"
+                sling:resourceType="fd/workflow/components/forms/Agreement">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    FORM_WORK_ITEM_TYPE="ADOBESIGN_STEP"
+                    inputpath="FOLDER_PAYLOAD:Incomplete(I)_Grade.pdf"
+                    locale="en_US"
+                    name="Incomplete(I) Grade"
+                    output="RELATIVE_PLOAD:Incomplete(I)_Grade_Signed.pdf"
+                    PROCESS="com.adobe.fd.workflow.adobesign.impl.AgreementCreation"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"
+                    reminderFrequency="DAILY_UNTIL_SIGNED"
+                    signatureFlow="SEQUENTIAL"
+                    signConfig="/conf/global/settings/cloudconfigs/echosign/erpaempr65tst01_adobe_sign"
+                    signerDetails="Static"
+                    signersListScript="/apps/fd/workflow/scripts/adobesign/VSP_Cobra.ecma"
+                    staticSigners="\{&quot;email&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;,&quot;authenticationType&quot;:&quot;None&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;phoneNumber&quot;:&quot;&quot;}"
+                    variableForStatus="Incomplete(I)_Grade_Status"/>
+            </agreement_copy>
+            <process_1957572207_c_1968250105
+                jcr:created="{Date}2020-09-12T01:52:47.626-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-17T01:43:27.314-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Final DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFIncompleteGradeFinalDORFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1957572207_c_1968250105>
+            <process_1497834091_c
+                jcr:created="{Date}2020-02-22T23:11:20.141-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-07-21T23:07:09.637-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="End of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1497834091_c>
+            <sendemail_copy
+                jcr:created="{Date}2020-09-11T00:04:02.566-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2024-07-12T06:00:11.531-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email to Chair and Instructor"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentName="Incomplete(I)_Grade_Signed.pdf"
+                    attachmentPath="Incomplete(I)_Grade_Signed.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Incomplete(I)_Grade_Signed.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    ccAddressValue="shreyas.manjunatha@thoughtfocus.com"
+                    emailSubject="EmailSubject"
+                    fromAddressType="Literal"
+                    fromAddressValue="arscworkflow@fullerton.edu"
+                    hiddenCheckbox="[false,false,false,false]"
+                    hiddenIsFormsAsset="[false,false,false,false]"
+                    Key="[chairName,StudentFullName,cwidVal,caseId]"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Metadata"
+                    templatemetadatatype="[Metadata,Metadata,Metadata,Metadata]"
+                    templatePath="/etc/notification/email/csuf/Incomplete_Grade/Incomplete_Grade.txt"
+                    toAddressType="Literal"
+                    toAddressValue="shreyas.manjunatha@thoughtfocus.com"
+                    urlPath="[,,,]"
+                    Value="[chairName,StudentFullName,cwidVal,caseId]"/>
+            </sendemail_copy>
+        </flow>
+    </jcr:content>
+</jcr:root>

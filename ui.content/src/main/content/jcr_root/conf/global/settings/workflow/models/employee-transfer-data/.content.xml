@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-03-18T00:36:27.473-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-03-18T00:36:29.235-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Employee Transfer Data"
+        jcr:uuid="5e64e621-d437-466b-9674-06fdd4c01e0b"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <aftodorstep
+                jcr:created="{Date}2020-09-18T03:58:23.349-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-09-18T03:58:50.768-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/employee-transfer-data/employee-transfer-data"
+                    DOR_PATH="RELATIVE_PLOAD:Employee_transfer_Data.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <process_476620955
+                jcr:created="{Date}2020-09-18T03:59:08.356-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-18T04:04:10.074-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFEmpTransferDataFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_476620955>
+            <process_476620955_co
+                jcr:created="{Date}2020-09-18T03:59:08.356-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-03-18T00:36:27.455-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in Onbase"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.onbase.EmpTransferDataOnbase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_476620955_co>
+            <process
+                jcr:created="{Date}2020-09-17T23:47:12.044-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-18T01:23:53.812-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save form data"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFEmpTransferDataDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+        </flow>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-07-29T02:52:42.806-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Direct Pay Dental"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1269823456_c
+                jcr:created="{Date}2020-07-28T22:20:03.817-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-29T02:27:28.080-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="employeeEmail=afData/afBoundData/DirectPayDental/employeeEmail"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1269823456_c>
+            <process_1310197849_c
+                jcr:created="{Date}2020-07-28T22:47:23.921-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-29T02:28:03.180-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value in xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/DirectPayDental/generatePDFStep,Final"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1310197849_c>
+            <aftodorstep_copy
+                jcr:created="{Date}2020-04-20T03:44:38.626-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-07-29T02:28:42.107-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/direct_pay_dental/direct-pay-dental"
+                    DOR_PATH="RELATIVE_PLOAD:Direct_Pay_Dental.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy>
+            <process_1569074621_c
+                jcr:created="{Date}2020-04-20T03:44:58.949-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-29T02:28:53.703-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.filenet.CSUFDirectPayDentalFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1569074621_c>
+            <process_copy
+                jcr:created="{Date}2020-04-20T03:44:47.739-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-29T02:29:05.329-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.CSUFDirectPayDentalDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy>
+            <sendemail_copy
+                jcr:created="{Date}2020-04-20T03:45:07.489-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2020-07-29T02:52:42.789-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentPath="Direct_Pay_Dental.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Direct_Pay_Dental.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Direct Pay Dental"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatePath="/etc/notification/email/csuf/Direct_Pay_Dental/Direct_Pay_Dental.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="employeeEmail"/>
+            </sendemail_copy>
+        </flow>
+    </jcr:content>
+</jcr:root>

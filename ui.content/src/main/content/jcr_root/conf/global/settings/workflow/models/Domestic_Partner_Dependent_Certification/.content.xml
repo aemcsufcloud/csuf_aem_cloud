@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-06-13T22:23:41.936-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-06-13T22:23:43.981-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Domestic Partner Certification"
+        jcr:uuid="26d18f81-9149-4029-a5a9-6351a67f68cc"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1017756224_c
+                jcr:created="{Date}2020-07-31T03:26:08.298-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-21T23:33:18.202-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1017756224_c>
+            <process_186065388_co
+                jcr:created="{Date}2020-08-27T04:44:07.017-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-03-06T23:31:58.088-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Email Address"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="HREmail=shreyas.manjunatha@thoughtfocus.com,BCCEmail=shreyas.manjunatha@thoughtfocus.com,SBSEmail=shreyas.manjunatha@thoughtfocus.com,BenefitEmail1=shreyas.manjunatha@thoughtfocus.com,BenefitEmail2=shreyas.manjunatha@thoughtfocus.com,BenefitEmail3=shreyas.manjunatha@thoughtfocus.com,BenefitEmail4=shreyas.manjunatha@thoughtfocus.com,FromEmail=DL-TotalWellness@FULLERTON.EDU"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_186065388_co>
+            <process_1269823456_c
+                jcr:created="{Date}2020-07-28T22:20:03.817-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-10T23:48:12.299-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="employeeEmail=afData/afBoundData/DomesticPartner/employeeEmail,StaffFirstName=afData/afBoundData/DomesticPartner/First_Name,StaffLastName=afData/afBoundData/DomesticPartner/Last_Name,EmailSubject=afData/afBoundData/DomesticPartner/EmailSubject"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1269823456_c>
+            <sendemail_copy_copy__850728698
+                jcr:created="{Date}2020-04-20T03:45:07.489-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2021-03-25T11:51:37.854-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email to Employee"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    bccAddressType="Metadata"
+                    bccAddressValue="BCCEmail"
+                    ccAddressType="Literal"
+                    emailSubject="EmailSubject"
+                    fromAddressType="Literal"
+                    fromAddressValue="DL-TotalWellness@Exchange.FULLERTON.EDU"
+                    hiddenCheckbox="[false,false]"
+                    hiddenIsFormsAsset="[false,false]"
+                    Key="[StaffFirstName,StaffLastName]"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Metadata"
+                    templatemetadatatype="[Metadata,Metadata]"
+                    templatePath="/etc/notification/email/csuf/Domestic_Partner_Dependent_Certification/Domestic_Partner_Dependent_Certification_Benefits.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="BenefitEmail1"
+                    urlPath="[,]"
+                    Value="[StaffFirstName,StaffLastName]"/>
+            </sendemail_copy_copy__850728698>
+            <process_copy_copy_co
+                jcr:created="{Date}2020-08-27T02:16:15.090-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-21T00:49:27.287-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value of Stage Indicator to HR"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/DomesticPartner/StageIndicator,ToHR"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy_co>
+            <process_667600248_co
+                jcr:created="{Date}2020-01-27T23:10:44.125-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-21T00:49:53.677-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml and set Metadata"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="stage=afData/afBoundData/DomesticPartner/StageIndicator"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_667600248_co>
+            <sendemail_copy_copy_
+                jcr:created="{Date}2020-08-27T04:45:15.890-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2021-03-25T11:51:45.561-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email to HR"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    bccAddressType="Metadata"
+                    bccAddressValue="BCCEmail"
+                    ccAddressType="Literal"
+                    emailSubject="EmailSubject"
+                    fromAddressType="Literal"
+                    fromAddressValue="DL-TotalWellness@Exchange.FULLERTON.EDU"
+                    hiddenCheckbox="[false,false]"
+                    hiddenIsFormsAsset="[false,false]"
+                    Key="[StaffFirstName,StaffLastName]"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Metadata"
+                    templatemetadatatype="[Metadata,Metadata]"
+                    templatePath="/etc/notification/email/csuf/Domestic_Partner_Dependent_Certification/Domestic_Partner_Dependent_Certification.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="BenefitEmail1"
+                    urlPath="[,]"
+                    Value="[StaffFirstName,StaffLastName]"/>
+            </sendemail_copy_copy_>
+            <process_1697703493_c
+                jcr:created="{Date}2020-07-14T06:06:39.470-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-31T22:22:44.630-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Before Records Review WF History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFDomesticPartnerTaxCertificationWFHistoryDB"
+                    PROCESS_ARGS="Before Assign Task"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1697703493_c>
+            <afparticipantstep_co
+                jcr:created="{Date}2020-08-26T21:57:58.012-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Employee Info:"
+                jcr:lastModified="{Date}2021-03-10T23:44:37.218-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="HRDI/Total Wellness Review"
+                sling:resourceType="fd/workflow/components/dashboard/afParticipantStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/domestic-partner-dependent-certification/domestic_partner_domestic_certification"
+                    ALLOW_OUT_OF_OFFICE="false"
+                    allowExplicitSharing="false"
+                    allowInboxSharing="false"
+                    DELEGATE_TO="assignee"
+                    DUEDATE_UNIT="OFF"
+                    DUEDATE_VALUE="[,]"
+                    DYNAMIC_ASSIGNEE="[,]"
+                    FORM_RESOLUTION="PATH"
+                    FORM_TYPE="AF"
+                    HISTORY_DOR="READONLY_AF"
+                    icDataSourceType="PROVIDEDATADOCUMENT"
+                    INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                    IS_ATTACHMENT_ALLOWED="true"
+                    IS_COMMENT_ALLOWED="true"
+                    IS_NEXT_STEP_DATA_ALLOWED="true"
+                    IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                    OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                    PARTICIPANT="HRDI/Total Wellness Reviewers"
+                    PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PARTICIPANT_TYPE="static"
+                    PROVIDE_METADATA="true"
+                    ROUTE_PROPERTYNAME="actionTaken"
+                    SHOW_ACTION="true"
+                    SHOW_ASSIGNEE="true"
+                    SHOW_COMMENT="true"
+                    SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                    SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                    SHOW_RESET="false"
+                    SHOW_SAVE="false"
+                    SHOW_SUBMIT="true"
+                    STATIC_ASSIGNEE="HRDI/Total Wellness Reviewers"
+                    SUBTYPE="forms:assigntask"
+                    TASK_PRIORITY="MEDIUM"
+                    TIMEOUT_HANDLER="[,]"
+                    USER_METADATA_RESOURCE="[,]"
+                    WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                    workflowStage="[,]"/>
+            </afparticipantstep_co>
+            <process_1697703493_c_745615025
+                jcr:created="{Date}2020-07-14T06:06:39.470-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-31T22:22:59.636-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="After Records Review WF History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFDomesticPartnerTaxCertificationWFHistoryDB"
+                    PROCESS_ARGS="After Assign Task"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1697703493_c_745615025>
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-04-20T03:44:38.626-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-07-29T04:27:46.858-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/domestic-partner-dependent-certification/domestic_partner_domestic_certification"
+                    DOR_PATH="RELATIVE_PLOAD:Domestic_Partner_Dependent_Certification.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <process_1569074621_c
+                jcr:created="{Date}2020-04-20T03:44:58.949-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-12T02:32:02.513-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFDomesticPartnerFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1569074621_c>
+            <process_copy_copy
+                jcr:created="{Date}2020-04-20T03:44:47.739-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-12T02:31:53.628-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFDomesticPartnerDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy>
+            <process_942584511_co
+                jcr:created="{Date}2020-07-16T04:14:21.655-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-01-21T23:33:53.238-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="End of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_942584511_co>
+        </flow>
+    </jcr:content>
+</jcr:root>

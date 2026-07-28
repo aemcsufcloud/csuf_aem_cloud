@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-10-09T02:53:32.598-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="CFN WF"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_copy_copy_co
+                jcr:created="{Date}2020-01-27T21:21:02.150-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-08-26T23:05:11.870-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml for Employee"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="empEmail=afData/afBoundData/CobraFinal/EmailAddress"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy_co>
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-03-22T09:57:46.759-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-08-26T23:13:40.347-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/adobe-sign/cobra-final-notice-test"
+                    DOR_PATH="RELATIVE_PLOAD:Cobra_Final_Notice.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <sendemail_copy
+                jcr:created="{Date}2020-09-11T00:04:02.566-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2020-09-30T02:20:46.748-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentName="Cobra_Final_Notice.pdf"
+                    attachmentPath="Cobra_Final_Notice.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Cobra_Final_Notice.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Cobra Email"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatePath="/etc/notification/email/csuf/10_12_11_12_PayPlan_Templates/10_12_11_12_PayPlan.txt"
+                    toAddressType="Literal"
+                    toAddressValue="pushpa.kawadi@thoughtfocus.com"/>
+            </sendemail_copy>
+            <aftodorstep_copy
+                jcr:created="{Date}2020-03-22T09:57:46.759-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-08-26T23:13:40.347-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/adobe-sign/cobra-final-notice-test"
+                    DOR_PATH="RELATIVE_PLOAD:Cobra_Final_Notice.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy>
+            <agreement_copy
+                jcr:created="{Date}2020-07-03T03:47:11.859-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Sign Document"
+                jcr:lastModified="{Date}2020-09-10T21:17:02.920-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sign Document"
+                sling:resourceType="fd/workflow/components/forms/Agreement">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    FORM_WORK_ITEM_TYPE="ADOBESIGN_STEP"
+                    inputpath="FOLDER_PAYLOAD:Cobra_Final_Notice.pdf"
+                    locale="en_US"
+                    name="Cobra Final Notice"
+                    output="RELATIVE_PLOAD:Cobra_Final_Notice_Signed.pdf"
+                    PROCESS="com.adobe.fd.workflow.adobesign.impl.AgreementCreation"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"
+                    reminderFrequency="DAILY_UNTIL_SIGNED"
+                    signatureFlow="SEQUENTIAL"
+                    signConfig="/conf/AdobeSignConfiguration-NV/settings/cloudconfigs/echosign/adobesignaemnv"
+                    signerDetails="Dynamic"
+                    signersListScript="/apps/fd/workflow/scripts/adobesign/Cobra_Final_Notice.ecma"
+                    variableForStatus="CFN_Status"/>
+            </agreement_copy>
+            <process_copy_copy
+                jcr:created="{Date}2020-01-27T21:21:02.150-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-08-26T23:05:11.870-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml for Employee"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="empEmail=afData/afBoundData/CobraFinal/EmailAddress"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy_copy>
+            <sendemail
+                jcr:created="{Date}2020-09-11T00:04:02.566-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2020-09-11T00:05:35.431-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentName="Cobra_Final_Notice_Signed.pdf"
+                    attachmentPath="Cobra_Final_Notice_Signed.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Cobra_Final_Notice_Signed.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Test Adobe Sign"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatePath="/etc/notification/email/csuf/10_12_11_12_PayPlan_Templates/10_12_11_12_PayPlan.txt"
+                    toAddressType="Literal"
+                    toAddressValue="pushpa.kawadi@thoughtfocus.com"/>
+            </sendemail>
+        </flow>
+    </jcr:content>
+</jcr:root>

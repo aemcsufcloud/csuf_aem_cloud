@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2025-03-26T01:15:33.299-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2025-03-28T00:22:57.650-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Appeals External Form"
+        jcr:uuid="883d3420-a1ee-4e27-8ac6-88e6373e193a"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_copy
+                jcr:created="{Date}2020-12-03T01:43:09.703-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-02-05T22:56:23.867-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History - Start"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy>
+            <process_1947783232_c
+                jcr:created="{Date}2020-12-11T04:11:15.302-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-03-26T01:15:33.289-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.AppealsExternalFormDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1947783232_c>
+            <process_281555000_co
+                jcr:created="{Date}2020-12-11T04:10:50.256-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-03-25T21:13:47.569-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Final DOR and Attachments OnBase Save"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.AppealsExternalFormOnBase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_281555000_co>
+            <process_1756878756_c
+                jcr:created="{Date}2024-12-05T22:04:49.962-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-12-05T22:09:46.588-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History - End"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS_ARGS="End of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1756878756_c>
+        </flow>
+        <variables jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

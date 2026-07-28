@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-03-21T21:43:03.452-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-03-21T21:43:05.478-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Letter of Recommendation"
+        jcr:uuid="8db5c103-08f8-427e-bf8b-fe99f2096403"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <set_variable
+                jcr:created="{Date}2020-11-10T22:19:59.380-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Set value of variables"
+                jcr:lastModified="{Date}2020-11-11T01:01:49.931-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Variable"
+                sling:resourceType="cq/workflow/components/model/set_variable"
+                defaultValue="[,true,,]">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                    PROCESS_AUTO_ADVANCE="true"
+                    variableMappings="\{&quot;variableName&quot;:&quot;supportDoc1&quot;,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;,&quot;mappingValue&quot;:&quot;attachments/SupportingDoc1/Testing_Doc__2.pdf&quot;}"/>
+            </set_variable>
+            <sendemail
+                jcr:created="{Date}2020-11-10T22:17:31.566-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2024-03-21T21:43:03.428-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Metadata"
+                    attachmentName="sup_doc1"
+                    attachmentPathHiddenField="VARIABLE:supportDoc1"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Test - Letter of Recommendation"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    hiddenCheckbox="false"
+                    hiddenIsFormsAsset="false"
+                    Key="ApplicantName"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatemetadatatype="Metadata"
+                    templatePath="/etc/notification/email/csuf/Letter_of_Recommendation/Letter_of_Recommendation.txt"
+                    toAddressType="Literal"
+                    toAddressValue="shreyas.manjunatha@thoughtfocus.com"
+                    Value="ApplicantName"/>
+            </sendemail>
+            <process
+                jcr:created="{Date}2020-11-23T10:00:22.566-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-11-23T10:00:22.566-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Process"
+                sling:resourceType="cq/workflow/components/model/process"/>
+        </flow>
+        <variables jcr:primaryType="nt:unstructured">
+            <ApplicantName
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                name="ApplicantName"
+                type="java.lang.String"/>
+            <supportDoc1
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                name="supportDoc1"
+                type="com.adobe.aemfd.docmanager.Document"/>
+        </variables>
+    </jcr:content>
+</jcr:root>

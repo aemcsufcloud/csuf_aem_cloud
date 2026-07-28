@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-07-06T20:22:36.053-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Test Adobe Sign"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_copy
+                jcr:created="{Date}2020-01-27T21:21:02.150-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-03T03:45:46.659-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml for Manager/Reviewer"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="managerEmail=afData/afBoundData/form1/ManagerEmailID,empEmail=afData/afBoundData/form1/EmpEmailID,adminEmail=afData/afBoundData/form1/AdminEmailID"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy>
+            <aftodorstep
+                jcr:created="{Date}2020-07-03T03:45:57.519-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-07-03T03:55:53.374-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/adobe-sign/spe_adobe_sign"
+                    DOR_PATH="RELATIVE_PLOAD:Staff_Perf_Eval_2579.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <agreement
+                jcr:created="{Date}2020-07-03T03:47:11.859-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Sign Document"
+                jcr:lastModified="{Date}2020-07-06T20:22:36.040-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sign Document"
+                sling:resourceType="fd/workflow/components/forms/Agreement">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    FORM_WORK_ITEM_TYPE="ADOBESIGN_STEP"
+                    inputpath="FOLDER_PAYLOAD:Staff_Perf_Eval_2579.pdf"
+                    locale="en_US"
+                    name="SPE_2579"
+                    output="RELATIVE_PLOAD:Staff_Perf_Eval_2579_Signed.pdf"
+                    PROCESS="com.adobe.fd.workflow.adobesign.impl.AgreementCreation"
+                    PROCESS_AUTO_ADVANCE="false"
+                    PROCESS_PERSIST_ANONYMOUS_WORKITEM="true"
+                    reminderFrequency="DAILY_UNTIL_SIGNED"
+                    signatureFlow="SEQUENTIAL"
+                    signConfig="/conf/ERPOBIDMO_Sign_Config/settings/cloudconfigs/echosign/erpobidmo_sign"
+                    signerDetails="Dynamic"
+                    signersListScript="/apps/fd/workflow/scripts/adobesign/Test2579.ecma"
+                    variableForStatus="SPE_2579_Status"/>
+            </agreement>
+        </flow>
+    </jcr:content>
+</jcr:root>

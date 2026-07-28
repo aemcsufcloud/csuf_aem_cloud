@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-06-12T22:53:44.568-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-06-12T22:53:46.688-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="LayOffChecklist"
+        jcr:uuid="23ecaa10-ac9c-42b0-93a8-d0132c33d230"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1497834091_c
+                jcr:created="{Date}2020-02-22T23:11:20.141-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-02-22T23:21:56.889-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.SaveInstanceHistory"
+                    PROCESS_ARGS="Start of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1497834091_c>
+            <process
+                jcr:created="{Date}2020-08-19T01:32:20.604-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-02-11T05:57:34.593-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFLayoffChecklistDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <aftodorstep
+                jcr:created="{Date}2020-08-19T01:32:35.953-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-08-19T02:40:26.700-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/layoff-reassignment-checklist/layoff-reassignment-checklist"
+                    DOR_PATH="RELATIVE_PLOAD:Layoff_Checklist.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <process_1497834091_c_431541919
+                jcr:created="{Date}2020-02-22T23:11:20.141-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-02-16T21:41:29.912-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Workflow Instance History"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.SaveInstanceHistory"
+                    PROCESS_ARGS="End of the Workflow Instance"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1497834091_c_431541919>
+            <process_1661682583_c
+                jcr:created="{Date}2020-09-17T23:12:48.238-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-09-17T23:13:08.283-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save to filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFLayoffCheckListFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1661682583_c>
+        </flow>
+    </jcr:content>
+</jcr:root>

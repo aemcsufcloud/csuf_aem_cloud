@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2014-05-17T01:43:01.497+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="E-Mail on AF submission"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <sendemailprocess
+                jcr:created="{Date}2014-05-17T01:30:29.875+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Sends an email based on an email template"
+                jcr:lastModified="{Date}2014-05-17T01:43:01.484+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="sendemailprocess"
+                PROCESS="com.adobe.aemds.aemworkflow.MailWorkflow"
+                PROCESS_AUTO_ADVANCE="true">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.adobe.aemds.aemworkflow.MailWorkflow"
+                    PROCESS_AUTO_ADVANCE="true"
+                    templatePath="/apps/mytemplate/en.txt"/>
+            </sendemailprocess>
+        </flow>
+        <model/>
+    </jcr:content>
+</jcr:root>

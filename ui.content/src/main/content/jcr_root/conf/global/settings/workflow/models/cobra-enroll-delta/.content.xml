@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-08-05T03:49:40.948-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Cobra Enroll Delta"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <aftodorstep
+                jcr:created="{Date}2020-05-13T06:29:32.690-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-05-13T22:58:22.909-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/cobra-enroll---delta/cobra-enroll-delta"
+                    DOR_PATH="RELATIVE_PLOAD:Cobra_Enroll_Delta.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <process_285488810
+                jcr:created="{Date}2020-05-13T22:57:03.063-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-13T22:57:20.430-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save FileNet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.filenet.CSUFCobraEnrollDeltaFileNet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_285488810>
+            <process
+                jcr:created="{Date}2020-05-13T06:28:58.262-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-13T23:04:44.404-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.CSUFCobraEnrollDeltaDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <sendemail
+                jcr:created="{Date}2020-05-13T06:30:27.528-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2020-05-13T22:58:32.735-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentPath="Cobra_Enroll_Delta.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Cobra_Enroll_Delta.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Cobra Enroll Delta Form"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatePath="/etc/notification/email/csuf/Cobra_Enroll_Delta_Templates/Cobra_Enroll_Delta.txt"
+                    toAddressType="Literal"
+                    toAddressValue="ajeet.chhonkar@thoughtfocus.com"/>
+            </sendemail>
+        </flow>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2024-02-18T22:17:31.313-08:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-02-18T22:17:33.378-08:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pre Performance Evaluation-onbase Demo"
+        jcr:uuid="955c84aa-4db7-4edc-9edc-856999b327fd"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <set_variable_copy
+                jcr:created="{Date}2024-01-22T06:53:58.589-08:00"
+                jcr:createdBy="admin"
+                jcr:description="Set value of variables"
+                jcr:lastModified="{Date}2024-02-18T22:09:21.854-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Variable"
+                sling:resourceType="cq/workflow/components/model/set_variable"
+                defaultValue="[,true,,]">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                    PROCESS_AUTO_ADVANCE="true"
+                    variableMappings="\{&quot;variableName&quot;:&quot;FormSubmittedData&quot;,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;,&quot;mappingValue&quot;:&quot;Data.xml&quot;}"/>
+            </set_variable_copy>
+            <aftodorstep_copy_cop
+                jcr:created="{Date}2020-03-29T23:31:09.437-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-03-29T23:32:28.016-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/pre-performance-evaluation/pre-performance-evaluation"
+                    DOR_PATH="RELATIVE_PLOAD:Pre_Performance_Evaluation.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy_cop>
+            <process_533487429_co
+                jcr:created="{Date}2020-03-29T23:32:54.820-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-22T02:01:25.227-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in Onbase"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.onbase.PrePerfEvalOnbase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_533487429_co>
+            <process_533487429_co_1093482439
+                jcr:created="{Date}2020-03-29T23:32:54.820-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-22T06:48:48.230-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save supporting doc  DOR in Onbase"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.onbase.PrePerfEvalSupDocOnbase"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_533487429_co_1093482439>
+            <process_copy
+                jcr:created="{Date}2020-03-29T23:29:20.863-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-03-29T23:57:43.511-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value of Generate Pdf Step"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/form1/generatePDFStep,Final"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_copy>
+            <process_1629372915_c
+                jcr:created="{Date}2020-05-12T00:59:28.501-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-02-18T22:10:22.904-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Metadata"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="fromAddress=hrdievaluations@fullerton.edu,bccAddress=soumya.ravindra@thoughtfocus.com"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1629372915_c>
+            <process_65654458_cop
+                jcr:created="{Date}2020-03-29T23:30:22.910-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-02-18T22:17:31.297-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Form Data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.CSUFPrePerfEvalDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_65654458_cop>
+            <aftodorstep_copy
+                jcr:created="{Date}2020-03-29T23:31:09.437-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-03-29T23:32:28.016-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/pre-performance-evaluation/pre-performance-evaluation"
+                    DOR_PATH="RELATIVE_PLOAD:Pre_Performance_Evaluation.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep_copy>
+            <process_533487429_co_672146624
+                jcr:created="{Date}2020-03-29T23:32:54.820-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-22T07:02:18.644-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in Filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.PrePerfEvalFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_533487429_co_672146624>
+            <process_912867449_co
+                jcr:created="{Date}2020-03-29T23:33:28.003-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-22T07:02:37.294-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save Sup Docs in Filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.PrePerfEvalSupDocFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_912867449_co>
+            <process_484321100_co
+                jcr:created="{Date}2020-03-29T23:34:19.939-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-29T05:13:11.657-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml and set meta data"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="empName=afData/afBoundData/form1/empFullName,empEmailID=afData/afBoundData/form1/empEmailId,evaluatorName=afData/afBoundData/form1/Supervisor,supervisorEmail=afData/afBoundData/form1/ManagerEmailID,toName=afData/afBoundData/form1/Supervisor"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_484321100_co>
+            <process_1917938327_c
+                jcr:created="{Date}2023-03-29T02:21:22.856-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-29T05:12:28.269-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Metadata for Email"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="path=/etc/notification/email/csuf/Pre_Performance_Evaluation/Pre_Performance_Eval.html,tlsRequired=false,toEmail=supervisorEmail,bccEmail=bccAddress,ccEmail=empEmailID,fromEmail=hrdievaluations@fullerton.edu,fromName=hrdievaluations@fullerton.edu,subject=Test - Pre Performance Evaluation,dorRequired=true,dorFileName=Pre_Performance_Evaluation.pdf,formPath=/content/forms/af/pre-performance-evaluation/pre-performance-evaluation"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1917938327_c>
+        </flow>
+        <variables jcr:primaryType="nt:unstructured">
+            <TestEmail1
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                defaultValue="soumya.ravindra@thoughtfocus.com"
+                name="TestEmail1"
+                type="java.lang.String"/>
+            <TestEmail2
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                defaultValue="soumya.ravindra@thoughtfocus.com"
+                name="TestEmail2"
+                type="java.lang.String"/>
+            <FormSubmittedData
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                name="FormSubmittedData"
+                type="org.w3c.dom.Document"/>
+            <SignatureStatus
+                jcr:primaryType="nt:unstructured"
+                additionalProperties="\{}"
+                name="SignatureStatus"
+                type="java.lang.String"/>
+        </variables>
+    </jcr:content>
+</jcr:root>

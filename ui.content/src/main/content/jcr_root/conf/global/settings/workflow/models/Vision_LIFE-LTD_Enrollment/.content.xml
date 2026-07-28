@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2021-03-08T10:07:57.067-08:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-03-08T10:07:59.084-08:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Vision LIFE-LTD Enrollment"
+        jcr:uuid="42d8e7a8-7170-4259-957d-ae8c0ffe70db"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1269823456
+                jcr:created="{Date}2020-07-28T22:20:03.817-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-04T02:31:02.748-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Get value from xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS_ARGS="employeeEmail=afData/afBoundData/VisionLifeLtdEnrollment/employeeEmail,StaffFirstName=afData/afBoundData/VisionLifeLtdEnrollment/first_Name,StaffLastName=afData/afBoundData/VisionLifeLtdEnrollment/last_Name,EmailSubject=afData/afBoundData/VisionLifeLtdEnrollment/EmailSubject"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1269823456>
+            <process_186065388_co
+                jcr:created="{Date}2020-08-27T04:44:07.017-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-08T10:07:57.057-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set Email Address"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS_ARGS="FromEmail=DL-TotalWellness@fullerton.edu,BCCEmail=yjayaram@fullerton.edu"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_186065388_co>
+            <process_1310197849
+                jcr:created="{Date}2020-07-28T22:47:23.921-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-07-28T22:48:17.624-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Set value in xml"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                    PROCESS_ARGS="afData/afBoundData/VisionLifeLtdEnrollment/GeneratePdfStep,Final"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1310197849>
+            <aftodorstep
+                jcr:created="{Date}2020-04-20T03:44:38.626-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-04-20T03:45:59.327-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/vision-life-ltd-enrollment/vision-life-ltd-enrollment"
+                    DOR_PATH="RELATIVE_PLOAD:Vision_LIFE-LTD_Enrollment.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <process_1569074621
+                jcr:created="{Date}2020-04-20T03:44:58.949-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-03T02:08:57.064-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DOR in filenet"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.filenet.CSUFVisionLifeLtdFilenet"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1569074621>
+            <process
+                jcr:created="{Date}2020-04-20T03:44:47.739-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-03-03T02:09:07.594-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save data in DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFVisionLifeLtdEnrollmentDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <sendemail
+                jcr:created="{Date}2020-04-20T03:45:07.489-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2021-03-08T10:07:49.958-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentName="Vision_LIFE-LTD_Enrollment.pdf"
+                    attachmentPath="Vision_LIFE-LTD_Enrollment.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Vision_LIFE-LTD_Enrollment.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Metadata"
+                    bccAddressValue="BCCEmail"
+                    ccAddressType="Literal"
+                    emailSubject="EmailSubject"
+                    fromAddressType="Metadata"
+                    fromAddressValue="FromEmail"
+                    hiddenCheckbox="[false,false]"
+                    hiddenIsFormsAsset="[false,false]"
+                    Key="[StaffFirstName,StaffLastName]"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Metadata"
+                    templatemetadatatype="[Metadata,Metadata]"
+                    templatePath="/etc/notification/email/csuf/Vision_LIFE-LTD_Enrollment/Vision_LIFE-LTD_Enrollment.txt"
+                    toAddressType="Metadata"
+                    toAddressValue="BCCEmail"
+                    urlPath="[,]"
+                    Value="[StaffFirstName,StaffLastName]"/>
+            </sendemail>
+        </flow>
+    </jcr:content>
+</jcr:root>

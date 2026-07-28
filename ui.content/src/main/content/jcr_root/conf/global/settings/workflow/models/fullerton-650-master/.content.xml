@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-11-11T03:58:40.920-08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Fullerton 650 Master"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2020-04-21T04:01:43.804-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-04-21T04:02:35.990-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Save DB"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.aem.csuf.database.Fullerton650MasterDB"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <aftodorstep
+                jcr:created="{Date}2020-04-21T04:01:57.453-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Generate Document of Record"
+                jcr:lastModified="{Date}2020-04-21T04:03:22.125-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Generate Document of Record"
+                sling:resourceType="fd/workflow/components/dorGeneration/afToDorStep">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    AF_PATH="/content/dam/formsanddocuments/fullerton-650/fullerton-650"
+                    DOR_PATH="RELATIVE_PLOAD:Fullert_650_Master.pdf"
+                    INPUT_ATTACHMENT="FOLDER_PAYLOAD:attachments"
+                    INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                    LOCALE="en_US"
+                    PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+            </aftodorstep>
+            <sendemail
+                jcr:created="{Date}2020-04-21T04:02:08.141-07:00"
+                jcr:createdBy="admin"
+                jcr:description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+                jcr:lastModified="{Date}2020-11-11T03:58:40.903-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Send Email"
+                sling:resourceType="fd/workflow/components/email/sendemail">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    attachmentFileNameType="Literal"
+                    attachmentPath="Fullert_650_Master.pdf"
+                    attachmentPathHiddenField="FOLDER_PAYLOAD:Fullert_650_Master.pdf"
+                    attachmentPathType="FOLDER_PAYLOAD"
+                    bccAddressType="Literal"
+                    ccAddressType="Literal"
+                    emailSubject="Fullerton 650 Master"
+                    fromAddressType="Literal"
+                    fromAddressValue="csuf@fullerton.edu"
+                    PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                    PROCESS_AUTO_ADVANCE="true"
+                    subjectType="Literal"
+                    templatePath="/etc/notification/email/csuf/Fullerton_650_Master_Templates/Fullerton_650_Master.txt"
+                    toAddressType="Literal"
+                    toAddressValue="pushpa.kawadi@thoughtfocus.com"/>
+            </sendemail>
+        </flow>
+    </jcr:content>
+</jcr:root>
