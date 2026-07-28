@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-07-20T07:21:25Z" uuid="41480190-7989-439e-ba13-388a37d25964">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1ENRL" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <subform name="Subform1" w="203.321mm" h="111.76mm">
+            <draw name="logo" w="63.5mm" h="25.4mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+            </draw>
+            <field name="cwid" y="12.7mm" x="117.475mm" w="63.5mm" h="0.505139in">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="27.972mm">
+                  <font size="11pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Enter Student’s CWID Here:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="formCode" y="15.875mm" x="180.975mm" w="22.225mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw x="22.225mm" y="31.75mm" w="123.825mm" h="6.35mm">
+               <value>
+                  <text>FAMILY MEMBER COLLEGE ENROLLMENT VERIFICATION </text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Myriad Pro" size="14pt" weight="bold" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 348166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 46 FAMILY MEMBER COLLEGE ENROLLMENT VERIFICATION  0 1417 11917 0 0 0 "Myriad Pro" 1 0 14000 ISO-8859-1?></draw>
+            <field name="TextField1" y="29.972mm" x="146.05mm" w="41.275mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="14pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="AidYear" x="136.525mm" w="22.225mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">this.presence = "hidden";
+
+</script>
+               </event>
+            </field>
+            <draw x="3.175mm" y="44.45mm" h="1.75in" w="196.85mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS<span style="font-weight:normal;text-decoration:none">: We need to confirm that a member of your family will be enrolled in college at least half-time during<br/>the<span style="xfa-spacerun:yes">          </span>academic year. The family member must be working towards a degree or certificate leading to<br/>a recognized educational credential at a college that is eligible to participate in federal student aid programs.<br/>Please have that person complete Section 2 and submit this form to his/her financial aid office for completion of Section 3.<br/>If you have more than one family member in college, make a submission of this form for each person. If your family<br/>member will not be enrolled in college at least half-time during the<span style="xfa-spacerun:yes">                  </span>academic year, please check the box in<br/>Section 1, sign the certification at the bottom of this form and return it to the Office of Financial Aid at California State<br/>University, Fullerton. Incomplete documents will not be returned.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic;text-decoration:none">They will be disposed of in a secure manner, per<br/>university policy. This will delay processing.</span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw x="6.35mm" y="88.9mm" w="193.675mm" h="9.537mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>1.<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold"><span style="xfa-spacerun:yes">   </span>TO BE COMPLETED BY THE APPLICANT IF NO OTHER FAMILY MEMBER WILL ATTEND COLLEGE AT LEAST HALF<span style="xfa-spacerun:yes"> </span></span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>TIME IN<span style="xfa-spacerun:yes"> </span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="TextField2" y="49.022mm" x="9.652mm" w="20.828mm" h="5.588mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="TextField2" y="93.091mm" x="27.178mm" w="20.574mm" h="5.588mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" weight="bold" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="ApplicantIn1CB" y="98.425mm" x="6.35mm" w="7mm" h="6mm">
+               <ui>
+                  <checkButton size="3.8806mm" mark="check">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw x="13.462mm" y="99.619mm">
+               <value>
+                  <text> I will not have another family member enrolled in college during the                         academic year.</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw x="6.35mm" y="104.775mm" w="193.675mm" h="6.35mm">
+               <value>
+                  <text>2.     TO BE COMPLETED BY THE FAMILY MEMBER OF A CSU, FULLERTON STUDENT</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 71 2.     TO BE COMPLETED BY THE FAMILY MEMBER OF A CSU, FULLERTON STUDENT 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <?templateDesigner expand 0?>
+            <field name="TextField2" y="67.056mm" x="114.046mm" w="20.828mm" h="5.588mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="TextField2" y="99.187mm" x="112.776mm" w="18.796mm" h="5.588mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+         </subform>
+         <draw name="Text1" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="FamilyMemName" w="73.025mm" minH="12.7mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="4.7873mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               <value>
+                  <text>Print Name of Family Member</text>
+               </value>
+            </caption>
+         </field>
+         <draw>
+            <value>
+               <text>is attending at least half-time</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="InstitutionName" w="48.072mm" minH="12.7mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="4.4931mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               <value>
+                  <text>Name of Institution</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text2" w="4.572mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>in</text>
+            </value>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 10126 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 2 in 0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+         <field name="TextField4" w="19.05mm" h="5.588mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = Subform1.AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+            </event>
+            <keep intact="contentArea"/>
+         </field>
+         <draw name="Text1" w="6.35mm" h="2.693mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 4800 0 0 1417 1417 0 0?></draw>
+         <field name="Relationship" w="193.675mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="63.1862mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Relationship to CSU, Fullerton student:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text3" w="200.025mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:justify;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>I grant permission to release information to California State University, Fullerton in regards to my enrollment status</p></body>
+               </exData>
+            </value>
+            <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text1" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="FamilyMemSignature" w="63.5mm" minH="17.907mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="4.4931mm" placement="top">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Family Member’s Signature</text>
+               </value>
+            </caption>
+            <value>
+               <text>{{SignFamilyMem_es_:signer1:signature}}</text>
+            </value>
+         </field>
+         <field name="FamilyMemDOB" w="57.15mm" minH="17.907mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="4.7442mm" placement="top">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Family Member’s Date of Birth </text>
+               </value>
+            </caption>
+            <validate>
+               <picture>date{MM/DD/YYYY}</picture>
+            </validate>
+         </field>
+         <field name="SSN" h="17.907mm" w="37mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="top" reserve="5.3427mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Last 4 Digits of SSN</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{zzzzzzzzzzzz9}</picture>
+            </format>
+         </field>
+         <field name="FMDate_2" w="38.654mm" h="17.907mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <value>
+               <date>{{Date_es_:signer1:date}}</date>
+            </value>
+            <caption reserve="5.6458mm" placement="top">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date</text>
+               </value>
+            </caption>
+            <validate>
+               <picture>date{MM/DD/YYYY}</picture>
+            </validate>
+         </field>
+         <draw name="Text1" w="6.35mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 6166 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform3" w="203.318mm" h="57.726mm">
+            <draw w="193.675mm" h="6.35mm">
+               <value>
+                  <text>       3.    TO BE COMPLETED BY THE FINANCIAL AID OFFICE LISTED IN SECTION 2&#xD;</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 77        3.    TO BE COMPLETED BY THE FINANCIAL AID OFFICE LISTED IN SECTION 2  0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <draw x="6.35mm" y="6.858mm" w="146.05mm" h="6.985mm">
+               <value>
+                  <text>Is the above-mentioned student enrolled in 6 or more units during the                          academic year? </text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 411166 16966 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 110 Is the above-mentioned student enrolled in 6 or more units during the                          academic year?  0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Yes3CB" y="13.208mm" x="12.7mm" w="2.765111in" h="5.237mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <calculate>
+                  <message>
+                     <text name="override"/>
+                  </message>
+               </calculate>
+               <value>
+                  <text>{{(Yes)Color_es_:signer2:label(“Yes”):required}}</text>
+               </value>
+            </field>
+            <field name="No3CB" y="19.558mm" x="12.7mm" w="2.693986in" h="5.237mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>{{(No)Color_es_:signer2:label(“No”):required}}</text>
+               </value>
+            </field>
+            <draw name="Text4" w="193.675mm" h="5.334mm" y="26.035mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>      Dependency status for                       school year:</text>
+               </value>
+               <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 12286 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 62       Dependency status for                       school year: 0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+            <field name="FederallyIndependentCB2" y="38.735mm" x="12.7mm" w="4.042306in" h="6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>{{()S_es_:signer2:label(Federally independent):style(check):required}}</text>
+               </value>
+            </field>
+            <field name="FederallyFundsCB3" y="45.085mm" x="12.7mm" w="6.896153in" h="6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>{{()S_es_:signer2:label(Federally independent but considered dependent for institutional funds):style(check):required}}</text>
+               </value>
+            </field>
+            <field name="StudentDidntCB4" y="51.435mm" x="12.7mm" w="3.992167in" h="6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>{{()S_es_:signer2:label(Student did not apply):style(check):required}}</text>
+               </value>
+            </field>
+            <field name="TextField2" w="20.066mm" h="5.588mm" x="107.95mm" y="6.858mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform1.AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="TextField2" w="20.828mm" h="5.588mm" x="45.212mm" y="25.654mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform1.AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="FederallyDependentCB1" y="32.258mm" x="12.7mm" w="3.932722in" h="6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>{{()S_es_:signer2:label(Federally dependent):style(check):required}}</text>
+               </value>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <field name="FinAidAdminSignature" w="101.6mm" minH="19.109mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="4.7478mm" placement="bottom">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature Of Financial Aid Adminstartor</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            </caption>
+            <value>
+               <text>{{SignFinancialAidAdmin_es_:signer2:signature}}</text>
+            </value>
+         </field>
+         <field name="NameOfInstitutionInSec3" w="101.6mm" minH="19.109mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="4.7478mm" placement="bottom">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name of Institution </text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            </caption>
+            <value>
+               <text>{{*CNameoftheinstitution1_es_:signer2:multiline(2)}}</text>
+            </value>
+         </field>
+         <field name="NameTitleOfFinAidAdmin" w="101.6mm" h="19.685mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="6.2406mm" placement="bottom">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               <value>
+                  <text>      Name &amp; Title of Financial Aid Administrator  </text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            </caption>
+            <value>
+               <text>{{*AName1nameandtitle_es_:signer2:multiline(2)}}</text>
+            </value>
+         </field>
+         <field name="PhoneNumber" w="60.325mm" minH="19.685mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="6.5325mm" placement="bottom">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Phone Number</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            </caption>
+            <value>
+               <text>{{*Mobile_es_:signer2:phone}}</text>
+            </value>
+         </field>
+         <field name="DateInSec3" w="38.654mm" h="19.685mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date>{{Date_es_:signer2:date}}</date>
+            </value>
+            <caption reserve="6.8355mm" placement="bottom">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date</text>
+               </value>
+            </caption>
+            <validate>
+               <picture>date{MM/DD/YYYY}</picture>
+            </validate>
+         </field>
+         <subform name="Subform2" w="200.025mm" h="47.625mm">
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <draw y="0mm" w="28.835mm" h="5.283mm">
+               <value>
+                  <text>CERTIFICATION:</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="12pt" weight="bold" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 78903 12141 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 14 CERTIFICATION: 0 1417 10417 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+            <draw x="3.175mm" y="5.715mm" w="193.675mm" h="17.399mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I agree to provide proof of the information I have reported, if requested to do so. I also certify that I have read the Terms and Conditions section of the CSU Fullerton, Financial Aid website (<a href="https://www.fullerton.edu/financialaid/info/terms.php" style="font-family:Calibri">http://www.fullerton.edu/financialaid/info/Terms.php</a>)*<br/>Signature is required.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="StudentSign" y="22.225mm" x="3.175mm" w="136.525mm" h="9mm">
+               <ui>
+                  <imageEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </imageEdit>
+               </ui>
+               <caption reserve="32.1263mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student’s Signature:</text>
+                  </value>
+               </caption>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="InitiatedDate" y="22.225mm" x="142.875mm" w="53.975mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="11.7322mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="StudentName" y="31.75mm" x="3.175mm" w="136.525mm" h="8.382mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="37.0644mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student’s Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="SCWID" y="31.75mm" x="142.875mm" w="53.975mm" h="8.382mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="11.7322mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>CWID:</text>
+                  </value>
+               </caption>
+            </field>
+            <draw y="41.275mm" w="200.025mm" h="0.229333in">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Warning<span style="font-weight:normal">: If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="9pt" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 004F?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 260 71 000300040011001200180026002F003E00440045004B0057005A005E006400680074007A0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC034D035503570358035B035E035F036C0372037A037E037F03820383038E039803ED03EE03EF03F003F2 ABCDFILMNOPRSTUWYabcdefghijklmnopqrstuvwxyz?,:.’“”/-_(){}*&12346?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 124 31 00030004001100120018001C00260027002C002F003E00440045004B0057005A005E006400680074007A01020150015D0176018C03550357035803EE03EF ABCDEFGHILMNOPRSTUWYaginr,:.23?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 100 25 000300640102010F0110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C703550358 Tabcdefghilmnoprstuvwy,.?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 57 00010009000A000B0011001200130014001500160017001B00220023002400250027002A002E002F003300340038003A003C003E004000420043004400450046004700480049004A004C004D004E004F00500051005200530054005500560059005A005C005E00690077 ()*0123456:ABCDFIMNRSWY[]_abcdefghiklmnopqrstuxy{}“”?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 116 31 00010008001B00220023002400250026002700280029002A002D002E002F003000330034003500370038003A00450046004F0053005400550056 ’:ABCDEFGHILMNORSTVWYdenrstu?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\Family Member College Enrollment Verification.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 85?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-07-20T07:21:25Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:41480190-7989-439e-ba13-388a37d25964</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

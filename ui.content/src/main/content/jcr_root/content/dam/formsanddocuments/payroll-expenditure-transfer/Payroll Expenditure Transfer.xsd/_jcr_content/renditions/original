@@ -1,0 +1,89 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="form1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Main">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="TextField1"/>
+              <xs:element name="Table">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="HeaderRow" maxOccurs="unbounded" minOccurs="0"/>
+                    <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Emp-No"/>
+                          <xs:element type="xs:string" name="Emp-ID"/>
+                          <xs:element type="xs:string" name="Emp-Record"/>
+                          <xs:element type="xs:string" name="PositionNo"/>
+                          <xs:element type="xs:string" name="ChangePeriod"/>
+                          <xs:element type="xs:string" name="HRDeptID"/>
+                          <xs:element type="xs:string" name="TotalAmtChanged"/>
+                          <xs:element type="xs:string" name="TransferPercentage"/>
+                          <xs:element type="xs:string" name="TransferAmt"/>
+                          <xs:element type="xs:string" name="C-Dept"/>
+                          <xs:element type="xs:string" name="C-Funds"/>
+                          <xs:element type="xs:string" name="C-Class"/>
+                          <xs:element type="xs:string" name="C-Project"/>
+                          <xs:element type="xs:string" name="C-Program"/>
+                          <xs:element type="xs:string" name="C-Account"/>
+                          <xs:element type="xs:string" name="D-Dept"/>
+                          <xs:element type="xs:string" name="D-Funds"/>
+                          <xs:element type="xs:string" name="D-Class"/>
+                          <xs:element type="xs:string" name="D-Project"/>
+                          <xs:element type="xs:string" name="D-Program"/>
+                          <xs:element type="xs:string" name="D-Account"/>
+                          <xs:element type="xs:string" name="PermanentFundChange"/>
+                          <xs:element type="xs:string" name="Comments"/>
+                          <xs:element type="xs:string" name="PayTapePeriod"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Subform1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ToDeptApproval"/>
+                    <xs:element type="xs:string" name="FromDeptApproval"/>
+                    <xs:element type="xs:string" name="Date1"/>
+                    <xs:element type="xs:string" name="SubmittedBy"/>
+                    <xs:element type="xs:string" name="ApproverName2"/>
+                    <xs:element type="xs:string" name="ApproverName1"/>
+                    <xs:element type="xs:string" name="Date2"/>
+                    <xs:element type="xs:string" name="Date3"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Subform2">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ProcessedBy"/>
+                    <xs:element type="xs:string" name="Date4"/>
+                    <xs:element type="xs:string" name="JournalID"/>
+                    <xs:element type="xs:string" name="Date5"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		 <xs:element type="xs:string" name="StageIndicator"/>
+		 <xs:element type="xs:string" name="ApproverEmail"/>
+		 <xs:element type="xs:string" name="ApproverUserID"/>
+		 <xs:element type="xs:string" name="EmailSubject"/>
+		 <xs:element type="xs:string" name="SenderEmail"/>
+		 <xs:element type="xs:string" name="BCCEmailAddress"/>
+		 
+		 <xs:element type="xs:string" name="StageIndicator_ToDept"/>
+		 <xs:element type="xs:string" name="ApproverEmail_ToDept"/>
+		 <xs:element type="xs:string" name="ApproverUserID_ToDept"/>
+		 <xs:element type="xs:string" name="EmailSubject_ToDept"/>
+		 <xs:element type="xs:string" name="SenderEmail_ToDept"/>
+		 <xs:element type="xs:string" name="BCCEmailAddress_ToDept"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

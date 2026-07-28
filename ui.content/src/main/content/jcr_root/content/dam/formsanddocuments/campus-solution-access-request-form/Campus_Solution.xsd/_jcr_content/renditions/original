@@ -1,0 +1,835 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CampusSolARF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="CampusEmail"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="DeptName"/>
+        <xs:element type="xs:string" name="DeptID"/>
+        <xs:element type="xs:string" name="Title"/>
+        <xs:element type="xs:string" name="CampusExt"/>
+        <xs:element type="xs:string" name="Divison"/>
+        <xs:element type="xs:string" name="ApprAdmin"/>
+        <xs:element type="xs:byte" name="EmploymentType"/>
+        <xs:element type="xs:string" name="TempEndDate"/>
+        <xs:element type="xs:byte" name="EmploymentCatagory"/>
+        <xs:element type="xs:string" name="OthersValue"/>
+        <xs:element type="xs:byte" name="AccountActionRequest"/>
+        <xs:element type="xs:string" name="Comments"/>
+        <xs:element type="xs:string" name="ApprovalStatus"/>
+        <xs:element type="xs:string" name="CISOSignature"/>
+        <xs:element type="xs:string" name="NameVal1"/>
+        <xs:element type="xs:byte" name="DepartmentRB"/>
+		<xs:element type="xs:string" name="Other"/>
+        <xs:element type="xs:string" name="OtherText"/>
+        <xs:element type="xs:byte" name="ClassSchAdd"/>
+        <xs:element type="xs:byte" name="ClassSchRemove"/>
+        <xs:element type="xs:byte" name="UpdateEnrollAdd"/>
+        <xs:element type="xs:byte" name="UpdateEnrollRemove"/>
+        <xs:element type="xs:byte" name="ViewAdd"/>
+        <xs:element type="xs:byte" name="ViewRemove"/>
+        <xs:element type="xs:byte" name="OtherAdd"/>
+        <xs:element type="xs:byte" name="OtherRemove"/>
+        <xs:element type="xs:string" name="OtherTextSecurity"/>
+        <xs:element type="xs:byte" name="PlaceRegAdd"/>
+        <xs:element type="xs:byte" name="PlaceRegRemove"/>
+        <xs:element type="xs:byte" name="ViewServiceIndicatorsAdd"/>
+        <xs:element type="xs:byte" name="ViewServiceIndicatorsRemove"/>
+        <xs:element type="xs:byte" name="TitanNetAdd"/>
+        <xs:element type="xs:byte" name="TitanNetRemove"/>
+        <xs:element type="xs:byte" name="UpdateServiceIndicatorAdd"/>
+        <xs:element type="xs:byte" name="UpdateServiceIndicatorRemove"/>
+        <xs:element type="xs:byte" name="ViewCSUFUnofficialAdd"/>
+        <xs:element type="xs:byte" name="ViewCSUFUnofficialRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordRemove"/>
+        <xs:element type="xs:string" name="OtherRecordText"/>
+        <xs:element type="xs:byte" name="ViewEthnicityAdd"/>
+        <xs:element type="xs:byte" name="ViewEthnicityRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditRemove"/>
+        <xs:element type="xs:byte" name="ViewStudentCenterAdd"/>
+        <xs:element type="xs:byte" name="ViewStudentCenterRemove"/>
+        <xs:element type="xs:byte" name="CurriculogAdd"/>
+        <xs:element type="xs:byte" name="CurriculogRemove"/>
+        <xs:element type="xs:byte" name="ViewNameHistoryAdd"/>
+        <xs:element type="xs:byte" name="ViewNameHistoryRemove"/>
+        <xs:element type="xs:byte" name="ViewUndergradAdd"/>
+        <xs:element type="xs:byte" name="ViewUndergradRemove"/>
+        <xs:element type="xs:byte" name="FilenetAdmissionAdd"/>
+        <xs:element type="xs:byte" name="FilenetAdmissionRemove"/>
+        <xs:element type="xs:byte" name="ViewResidencyAdd"/>
+        <xs:element type="xs:byte" name="ViewResidencyRemove"/>
+        <xs:element type="xs:byte" name="ViewVisaStatusAdd"/>
+        <xs:element type="xs:byte" name="ViewVisaStatusRemove"/>
+        <xs:element type="xs:byte" name="OtherAdmissionAdd"/>
+        <xs:element type="xs:byte" name="OtherAdmissionRemove"/>
+        <xs:element type="xs:string" name="OtherAdmissionText"/>
+        <xs:element type="xs:byte" name="GraduateAdd"/>
+        <xs:element type="xs:byte" name="GraduateRemove"/>
+        <xs:element type="xs:byte" name="EndofTermAdd"/>
+        <xs:element type="xs:byte" name="EndofTermRemove"/>
+        <xs:element type="xs:byte" name="DegreeCheckoutAdd"/>
+        <xs:element type="xs:byte" name="DegreeCheckoutRemove"/>
+        <xs:element type="xs:byte" name="CommencementAdd"/>
+        <xs:element type="xs:byte" name="CommencementRemove"/>
+        <xs:element type="xs:byte" name="EnrollmentAdd"/>
+        <xs:element type="xs:byte" name="EnrollmentRemove"/>
+        <xs:element type="xs:byte" name="OtherMyQueryAdd"/>
+        <xs:element type="xs:byte" name="OtherMyQueryRemove"/>
+        <xs:element type="xs:string" name="OtherMyQueryText"/>
+        <xs:element type="xs:byte" name="FAStatusAdd"/>
+        <xs:element type="xs:byte" name="FAStatusRemove"/>
+        <xs:element type="xs:byte" name="AwardTermAdd"/>
+        <xs:element type="xs:byte" name="AwardTermRemove"/>
+        <xs:element type="xs:byte" name="ScholarshipAdd"/>
+        <xs:element type="xs:byte" name="ScholarshipRemove"/>
+        <xs:element type="xs:byte" name="BudgetAdd"/>
+        <xs:element type="xs:byte" name="BudgetRemove"/>
+        <xs:element type="xs:byte" name="NeedSummaryPageAdd"/>
+        <xs:element type="xs:byte" name="NeedSummaryPageRemove"/>
+        <xs:element type="xs:byte" name="OtherFinancialAidAdd"/>
+        <xs:element type="xs:byte" name="OtherFinancialAidRemove"/>
+        <xs:element type="xs:string" name="OtherFinancialAidText"/>
+        <xs:element type="xs:byte" name="ViewCustAccAdd"/>
+        <xs:element type="xs:byte" name="ViewCustAccRemove"/>
+        <xs:element type="xs:byte" name="OtherStudentFinancialAdd"/>
+        <xs:element type="xs:byte" name="OtherStudentFinancialRemove"/>
+        <xs:element type="xs:string" name="OtherStudentFinancialText"/>
+        <xs:element type="xs:byte" name="AdmissionsAdd"/>
+        <xs:element type="xs:byte" name="AdmissionsRemove"/>
+        <xs:element type="xs:byte" name="DegreesAdd"/>
+        <xs:element type="xs:byte" name="DegreesRemove"/>
+        <xs:element type="xs:byte" name="StudentSuccessAdd"/>
+        <xs:element type="xs:byte" name="StudentSuccessRemove"/>
+        <xs:element type="xs:byte" name="OtherDatawareAdd"/>
+        <xs:element type="xs:byte" name="OtherDatawareRemove"/>
+        <xs:element type="xs:string" name="OtherDatawareText"/>
+        <xs:element type="xs:string" name="BusinessJustificationComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystComments"/>
+        <xs:element type="xs:string" name="NameVal2"/>
+        <xs:element type="xs:byte" name="AdmissionOfficeRB"/>
+        <xs:element type="xs:byte" name="ExternalOrgAdd"/>
+        <xs:element type="xs:byte" name="ExternalOrgRemove"/>
+        <xs:element type="xs:byte" name="ResidencyUpdateAdd"/>
+        <xs:element type="xs:byte" name="ResidencyUpdateRemove"/>
+        <xs:element type="xs:byte" name="FilenetAdminSecurityAdd"/>
+        <xs:element type="xs:byte" name="FilenetAdminSecurityRemove"/>
+        <xs:element type="xs:byte" name="TitanDegAuditAdd"/>
+        <xs:element type="xs:byte" name="TitanDegAuditRemove"/>
+        <xs:element type="xs:byte" name="OtherAdminSecurityAdd"/>
+        <xs:element type="xs:byte" name="OtherAdminSecurityRemove"/>
+        <xs:element type="xs:string" name="OtherAdminSecurityText"/>
+        <xs:element type="xs:byte" name="ViewClassAdd"/>
+        <xs:element type="xs:byte" name="ViewClassRemove"/>
+        <xs:element type="xs:byte" name="OtherAdminCurriculumAdd"/>
+        <xs:element type="xs:byte" name="OtherAdminCurriculumRemove"/>
+        <xs:element type="xs:string" name="OtherAdminCurriculumText"/>
+        <xs:element type="xs:byte" name="StudyAgreementAdd"/>
+        <xs:element type="xs:byte" name="StudyAgreementRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordsAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsText"/>
+        <xs:element type="xs:byte" name="ViewCustAdd"/>
+        <xs:element type="xs:byte" name="ViewCustRemove"/>
+        <xs:element type="xs:byte" name="OtherStudFinSecurityAdd"/>
+        <xs:element type="xs:byte" name="OtherStudFinSecurityRemove"/>
+        <xs:element type="xs:string" name="OtherStudFinSecurityText"/>
+        <xs:element type="xs:string" name="BusinessJustAdminComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystJustAdminComments"/>
+        <xs:element type="xs:string" name="NameVal3"/>
+        <xs:element type="xs:byte" name="RecordsOfficeRB"/>
+        <xs:element type="xs:byte" name="OtherRecordsSecurityAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsSecurityRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsSecurityText"/>
+        <xs:element type="xs:byte" name="ViewClassRecordsAdd"/>
+        <xs:element type="xs:byte" name="ViewClassRecordsRemove"/>
+        <xs:element type="xs:byte" name="OtherCurrRecordsAdd"/>
+        <xs:element type="xs:byte" name="OtherCurrRecordsRemove"/>
+        <xs:element type="xs:string" name="OtherCurrRecordsText"/>
+        <xs:element type="xs:byte" name="UpdateEduPageAdd"/>
+        <xs:element type="xs:byte" name="UpdateEduPageRemove"/>
+        <xs:element type="xs:byte" name="ViewPinAdd"/>
+        <xs:element type="xs:byte" name="ViewPinRemove"/>
+        <xs:element type="xs:byte" name="UpdateERSSPageAdd"/>
+        <xs:element type="xs:byte" name="UpdateERSSPageRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditRecAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditRecRemove"/>
+        <xs:element type="xs:byte" name="FilenetRecAdd"/>
+        <xs:element type="xs:byte" name="FilenetRecRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordsAdminAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsAdminRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsAdminText"/>
+        <xs:element type="xs:byte" name="ViewCustRecordsAdd"/>
+        <xs:element type="xs:byte" name="ViewCustRecordsRemove"/>
+        <xs:element type="xs:byte" name="OtherStudRecordsAdd"/>
+        <xs:element type="xs:byte" name="OtherStudRecordsRemove"/>
+        <xs:element type="xs:string" name="OtherStudRecordsText"/>
+        <xs:element type="xs:byte" name="AddressesAdd"/>
+        <xs:element type="xs:byte" name="AddressesRemove"/>
+        <xs:element type="xs:byte" name="EndofTermRecAdd"/>
+        <xs:element type="xs:byte" name="EndofTermRecRemove"/>
+        <xs:element type="xs:byte" name="GraduateRecAdd"/>
+        <xs:element type="xs:byte" name="GraduateRecRemove"/>
+        <xs:element type="xs:byte" name="EnrollmentRecAdd"/>
+        <xs:element type="xs:byte" name="EnrollmentRecRemove"/>
+        <xs:element type="xs:byte" name="CommencementRecAdd"/>
+        <xs:element type="xs:byte" name="CommencementRecRemove"/>
+        <xs:element type="xs:byte" name="GraduationUnitAdd"/>
+        <xs:element type="xs:byte" name="GraduationUnitRemove"/>
+        <xs:element type="xs:byte" name="DegreeCheckoutRecAdd"/>
+        <xs:element type="xs:byte" name="DegreeCheckoutRecRemove"/>
+        <xs:element type="xs:byte" name="OtherRecMyQueryAdd"/>
+        <xs:element type="xs:byte" name="OtherRecMyQueryRemove"/>
+        <xs:element type="xs:string" name="OtherRecMyQueryText"/>
+        <xs:element type="xs:string" name="BusinessJustRecComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystRecComments"/>
+        <xs:element type="xs:string" name="NameVal4"/>
+        <xs:element type="xs:byte" name="SchedulingOfficeRB"/>
+        <xs:element type="xs:byte" name="UpdateSecAdd"/>
+        <xs:element type="xs:byte" name="UpdateSecRemove"/>
+        <xs:element type="xs:byte" name="ViewClassSchedulingAdd"/>
+        <xs:element type="xs:byte" name="ViewClassSchedulingRemove"/>
+        <xs:element type="xs:byte" name="UpdateScheduleClassesAdd"/>
+        <xs:element type="xs:byte" name="UpdateScheduleClassesRemove"/>
+        <xs:element type="xs:byte" name="SchedulingSecurityAdd"/>
+        <xs:element type="xs:byte" name="SchedulingSecurityRemove"/>
+        <xs:element type="xs:string" name="SchedulingSecurityText"/>
+        <xs:element type="xs:byte" name="SchedulingGraduateAdd"/>
+        <xs:element type="xs:byte" name="SchedulingGraduateRemove"/>
+        <xs:element type="xs:byte" name="SchedulingOtherAdd"/>
+        <xs:element type="xs:byte" name="SchedulingOtherRemove"/>
+        <xs:element type="xs:string" name="SchedulingOtherText"/>
+        <xs:element type="xs:byte" name="FilenetSchedulingAdd"/>
+        <xs:element type="xs:byte" name="FilenetSchedulingRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditSchedulingAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditSchedulingRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordsSchedulingAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsSchedulingRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsSchedulingText"/>
+        <xs:element type="xs:string" name="BusinessJustSchedulingComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystSchedulingComments"/>
+        <xs:element type="xs:string" name="NameVal5"/>
+        <xs:element type="xs:byte" name="FinancialAidRB"/>
+        <xs:element type="xs:byte" name="OtherFinAidAdd"/>
+        <xs:element type="xs:byte" name="OtherFinAidRemove"/>
+        <xs:element type="xs:string" name="OtherFinAidText"/>
+        <xs:element type="xs:byte" name="CollPreGEBreadthAdd"/>
+        <xs:element type="xs:byte" name="CollPreGEBreadthemove"/>
+        <xs:element type="xs:byte" name="ViewApplicationFeeAdd"/>
+        <xs:element type="xs:byte" name="ViewApplicationFeeRemove"/>
+        <xs:element type="xs:byte" name="SearchMatchAdd"/>
+        <xs:element type="xs:byte" name="SearchMatchRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditFinAidAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditFinAidRemove"/>
+        <xs:element type="xs:byte" name="FilenetFinAidAdd"/>
+        <xs:element type="xs:byte" name="FilenetFinAidRemove"/>
+        <xs:element type="xs:byte" name="FinAidAdminOtherAdd"/>
+        <xs:element type="xs:byte" name="FinAidAdminOtherRemove"/>
+        <xs:element type="xs:string" name="FinAidAdminOtherText"/>
+        <xs:element type="xs:byte" name="ViewEnrollmentbyTermAdd"/>
+        <xs:element type="xs:byte" name="ViewEnrollmentbyTermRemove"/>
+        <xs:element type="xs:byte" name="ViewStudentProgramAdd"/>
+        <xs:element type="xs:byte" name="ViewStudentProgramRemove"/>
+        <xs:element type="xs:byte" name="ViewEnrollFirstLastAdd"/>
+        <xs:element type="xs:byte" name="ViewEnrollFirstLastRemove"/>
+        <xs:element type="xs:byte" name="ViewTermSessionTableAdd"/>
+        <xs:element type="xs:byte" name="ViewTermSessionTableRemove"/>
+        <xs:element type="xs:byte" name="ViewEnrollSummaryAdd"/>
+        <xs:element type="xs:byte" name="ViewEnrollSummaryRemove"/>
+        <xs:element type="xs:byte" name="ViewTranscriptAdd"/>
+        <xs:element type="xs:byte" name="ViewTranscriptRemove"/>
+        <xs:element type="xs:byte" name="ViewStudentGroupsAdd"/>
+        <xs:element type="xs:byte" name="ViewStudentGroupsRemove"/>
+        <xs:element type="xs:byte" name="ViewTransferCourseCreditAdd"/>
+        <xs:element type="xs:byte" name="ViewTransferCourseCreditRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordsFinAidAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsFinAidRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsFinAidText"/>
+        <xs:element type="xs:byte" name="ViewClassFinancialAdd"/>
+        <xs:element type="xs:byte" name="ViewClassFinancialRemove"/>
+        <xs:element type="xs:byte" name="OtherFinancialAdd"/>
+        <xs:element type="xs:byte" name="OtherFinancialRemove"/>
+        <xs:element type="xs:byte" name="ViewCustAccFinancialAdd"/>
+        <xs:element type="xs:byte" name="ViewCustAccFinancialRemove"/>
+        <xs:element type="xs:byte" name="SFQueriesAdd"/>
+        <xs:element type="xs:byte" name="SFQueriesRemove"/>
+        <xs:element type="xs:byte" name="OtherStuFinAidAdd"/>
+        <xs:element type="xs:byte" name="OtherStuFinAidRemove"/>
+        <xs:element type="xs:string" name="OtherStuFinAidText"/>
+		<xs:element type="xs:string" name="listWhichAemForms"/>
+		<xs:element type="xs:string" name="RegRecUpdateCB"/>
+		<xs:element type="xs:string" name="RegistrationRecordsUpdateData"/>
+        <xs:element type="xs:byte" name="CallCenterAdd"/>
+        <xs:element type="xs:byte" name="CallCenterRemove"/>
+        <xs:element type="xs:byte" name="OtherFinMyQueryAdd"/>
+        <xs:element type="xs:byte" name="OtherFinMyQueryRemove"/>
+        <xs:element type="xs:string" name="OtherFinMyQueryText"/>
+        <xs:element type="xs:string" name="BusinessJustFinAidComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystFinAidComments"/>
+        <xs:element type="xs:string" name="NameVal6"/>
+        <xs:element type="xs:byte" name="StudentFinancialRB"/>
+        <xs:element type="xs:byte" name="OtherStudentFinAidAdd"/>
+        <xs:element type="xs:byte" name="OtherStudentFinAidRemove"/>
+        <xs:element type="xs:string" name="OtherStudentFinAidText"/>
+        <xs:element type="xs:byte" name="BioDemUpdateStudentFinAdd"/>
+        <xs:element type="xs:byte" name="BioDemUpdateStudentFinRemove"/>
+        <xs:element type="xs:byte" name="ViewVisaStatusAdminssionStudentFinAdd"/>
+        <xs:element type="xs:byte" name="ViewVisaStatusAdminssionStudentFinRemove"/>
+        <xs:element type="xs:byte" name="SearchMatchAdminssionStuFinAdd"/>
+        <xs:element type="xs:byte" name="SearchMatchAdminssionStuFinRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditAdminssionStuFinAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditAdminssionStuFinRemove"/>
+        <xs:element type="xs:byte" name="FilenetAdminssionFinStudAdd"/>
+        <xs:element type="xs:byte" name="FilenetAdminssionFinStudRemove"/>
+        <xs:element type="xs:byte" name="OtherAdminssionStudFinAdd"/>
+        <xs:element type="xs:byte" name="OtherAdminssionStudFinRemove"/>
+        <xs:element type="xs:string" name="OtherAdminssionStudFinText"/>
+        <xs:element type="xs:byte" name="ViewEnrollmentbyTermFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewEnrollmentbyTermFinStudRemove"/>
+        <xs:element type="xs:byte" name="ViewStudentProgramFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewStudentProgramFinStudRemove"/>
+        <xs:element type="xs:byte" name="ViewEnrollSummaryFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewEnrollSummaryFinStudRemove"/>
+        <xs:element type="xs:byte" name="ViewTermSessionTableFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewTermSessionTableFinStudRemove"/>
+        <xs:element type="xs:byte" name="ViewStudentGroupsFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewStudentGroupsFinStudRemove"/>
+        <xs:element type="xs:byte" name="ViewTranscriptFinStudAdd"/>
+        <xs:element type="xs:byte" name="ViewTranscriptFinStudRemove"/>
+        <xs:element type="xs:byte" name="OtherRecordsFinStudAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsFinStudRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsFinStudText"/>
+        <xs:element type="xs:byte" name="FinancialStudDisbAdd"/>
+        <xs:element type="xs:byte" name="FinancialStudDisbRemove"/>
+        <xs:element type="xs:byte" name="OtherFinancialStudAdd"/>
+        <xs:element type="xs:byte" name="OtherFinancialStudRemove"/>
+        <xs:element type="xs:string" name="OtherFinancialStudText"/>
+        <xs:element type="xs:byte" name="ViewClassScheduleStudFinAdd"/>
+        <xs:element type="xs:byte" name="ViewClassScheduleStudFinRemove"/>
+        <xs:element type="xs:byte" name="OtherStudFinCurriculumSecAdd"/>
+        <xs:element type="xs:byte" name="OtherStudFinCurriculumSecRemove"/>
+        <xs:element type="xs:string" name="OtherStudFinCurriculumSecText"/>
+        <xs:element type="xs:string" name="BusinessJustStudAidComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystStudAidComments"/>
+        <xs:element type="xs:string" name="NameVal7"/>
+        <xs:element type="xs:byte" name="ApplicationFeeViewAdd"/>
+        <xs:element type="xs:byte" name="ApplicationFeeViewRemove"/>
+        <xs:element type="xs:byte" name="CommentsUpdateAdd"/>
+        <xs:element type="xs:byte" name="CommentUpdateRemove"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditExtEdAdd"/>
+        <xs:element type="xs:byte" name="TitanDegreeAuditExtEdRemove"/>
+        <xs:element type="xs:byte" name="BioDemUpdateExtEdAdd"/>
+        <xs:element type="xs:byte" name="BioDemUpdateExtEdRemove"/>
+        <xs:element type="xs:byte" name="CommentsViewExtEdAdd"/>
+        <xs:element type="xs:byte" name="CommentsViewExtEdRemove"/>
+        <xs:element type="xs:byte" name="AdmisApplInquiryAdd"/>
+        <xs:element type="xs:byte" name="AdmisApplInquiryRemove"/>
+        <xs:element type="xs:byte" name="BioDemViewAdd"/>
+        <xs:element type="xs:byte" name="BioDemViewRemove"/>
+        <xs:element type="xs:byte" name="SearchMatchExtEdAdd"/>
+        <xs:element type="xs:byte" name="SearchMatchExtEdRemove"/>
+        <xs:element type="xs:byte" name="FilenetViewExtEdAdd"/>
+        <xs:element type="xs:byte" name="FilenetViewExtEdRemove"/>
+        <xs:element type="xs:byte" name="OtherExtEdAdd"/>
+        <xs:element type="xs:byte" name="OtherExtEdRemove"/>
+        <xs:element type="xs:string" name="OtherExtEdText"/>
+        <xs:element type="xs:byte" name="UpdateSectionAdd"/>
+        <xs:element type="xs:byte" name="UpdateSectionRemove"/>
+        <xs:element type="xs:byte" name="ViewClassExtEdAdd"/>
+        <xs:element type="xs:byte" name="ViewClassExtEdRemove"/>
+        <xs:element type="xs:byte" name="UpdateSchClassAdd"/>
+        <xs:element type="xs:byte" name="UpdateSchClassRemove"/>
+        <xs:element type="xs:byte" name="OtherValExtEdAdd"/>
+        <xs:element type="xs:byte" name="OtherValExtEdRemove"/>
+        <xs:element type="xs:string" name="OtherValExtEdText"/>
+        <xs:element type="xs:byte" name="TermActivateExtEdAdd"/>
+        <xs:element type="xs:byte" name="TermActivateExtEdRemove"/>
+        <xs:element type="xs:byte" name="ViewTermActivateExtEdAdd"/>
+        <xs:element type="xs:byte" name="ViewTermActivateExtEdRemove"/>
+        <xs:element type="xs:byte" name="RegFuncQucikWithoutAdmitExtEdAdd"/>
+        <xs:element type="xs:byte" name="RegFuncQucikWithoutAdmitExtEdRemove"/>
+        <xs:element type="xs:byte" name="UEECertificateExtEdAdd"/>
+        <xs:element type="xs:byte" name="UEECertificateRemove"/>
+        <xs:element type="xs:byte" name="ViewCSUFUnofficialTranscriptExtEdAdd"/>
+        <xs:element type="xs:byte" name="ViewCSUFUnofficialTranscriptExtEdRemove"/>
+        <xs:element type="xs:byte" name="RegFuncQucikAdmitExtEdAdd"/>
+        <xs:element type="xs:byte" name="RegFuncQucikAdmitExtEdRemove"/>
+        <xs:element type="xs:byte" name="UEEGradesExtEdAdd"/>
+        <xs:element type="xs:byte" name="UEEGradesExtEdRemove"/>
+        <xs:element type="xs:byte" name="PlaceRegPermitsExtEdAdd"/>
+        <xs:element type="xs:byte" name="PlaceRegPermitsExtEdRemove"/>
+        <xs:element type="xs:byte" name="UEEFullAccessExtEdAdd"/>
+        <xs:element type="xs:byte" name="UEEFullAccessExtEdRemove"/>
+        <xs:element type="xs:byte" name="UEEViewAccessExtEdAdd"/>
+        <xs:element type="xs:byte" name="UEEViewAccessExtEdRemove"/>
+        <xs:element type="xs:byte" name="StudProgramExtEdAdd"/>
+        <xs:element type="xs:byte" name="StudProgramExtEdRemove"/>
+		<xs:element type="xs:byte" name="OtherRecordsExtEdAdd"/>
+        <xs:element type="xs:byte" name="OtherRecordsExtEdRemove"/>
+        <xs:element type="xs:string" name="OtherRecordsExtEdText"/>
+        <xs:element type="xs:byte" name="SEVISBatcherExtEdAdd"/>
+        <xs:element type="xs:byte" name="SEVISBatcherExtEdRemove"/>
+        <xs:element type="xs:byte" name="SEVISI20EditorExtEdAdd"/>
+        <xs:element type="xs:byte" name="SEVISI20EditorExtEdRemove"/>
+        <xs:element type="xs:byte" name="SEVISTesterExtEdAdd"/>
+        <xs:element type="xs:byte" name="SEVISTesterExtEdRemove"/>
+        <xs:element type="xs:byte" name="SEVISCorrectionExtEdAdd"/>
+        <xs:element type="xs:byte" name="SEVISCorrectionExtEdRemove"/>
+        <xs:element type="xs:byte" name="SEVISEditor2019ExtEdAdd"/>
+        <xs:element type="xs:byte" name="SEVISEditor2019ExtEdRemove"/>
+        <xs:element type="xs:byte" name="OtherValSEVISExtEdAdd"/>
+        <xs:element type="xs:byte" name="OtherValSEVISExtEdRemove"/>
+        <xs:element type="xs:string" name="OtherValSEVISExtEdText"/>
+        <xs:element type="xs:byte" name="StudFinViewCustAccountExtEdAdd"/>
+        <xs:element type="xs:byte" name="StudFinViewCustAccountExtEdRemove"/>
+        <xs:element type="xs:byte" name="StudFinUEECashierExtEdAdd"/>
+        <xs:element type="xs:byte" name="StudFinUEECashierExtEdRemove"/>
+        <xs:element type="xs:byte" name="StudFinUEEAccountExtEdAdd"/>
+        <xs:element type="xs:byte" name="StudFinUEEAccountExtEdRemove"/>
+        <xs:element type="xs:byte" name="OtherExtEdStudFinAdd"/>
+        <xs:element type="xs:byte" name="OtherExtEdStudFinRemove"/>
+        <xs:element type="xs:string" name="OtherExtEdStudFinText"/>
+        <xs:element type="xs:byte" name="OtherStudFinancialAdd"/>
+        <xs:element type="xs:byte" name="OtherStudFinancialRemove"/>
+        <xs:element type="xs:string" name="OtherStudFinancialText"/>
+        <xs:element type="xs:byte" name="GraduateExtEdAdd"/>
+        <xs:element type="xs:byte" name="GraduateExtEdRemove"/>
+        <xs:element type="xs:byte" name="EnrollmentExtEdAdd"/>
+        <xs:element type="xs:byte" name="EnrollmentExtEdRemove"/>
+        <xs:element type="xs:byte" name="EndofTermExtEdAdd"/>
+        <xs:element type="xs:byte" name="EndofTermExtEdRemove"/>
+        <xs:element type="xs:byte" name="OtherExtEdMyQueryAdd"/>
+        <xs:element type="xs:byte" name="OtherExtEdMyQueryRemove"/>
+        <xs:element type="xs:string" name="OtherExtEdMyQueryText"/>
+        <xs:element type="xs:string" name="BusinessJustExtEdComments"/>
+        <xs:element type="xs:string" name="BusinessAnalystExtEdComments"/>
+        <xs:element type="xs:string" name="NameVal8"/>
+        <xs:element type="xs:byte" name="InternationalProgRB"/>
+		<xs:element type="xs:string" name="OtherIPSEVIS"/>
+        <xs:element type="xs:string" name="OtherIPSEVISText"/>
+        <xs:element type="xs:byte" name="OtherIPSecurityReqAdd"/>
+        <xs:element type="xs:byte" name="OtherIPSecurityReqRemove"/>
+        <xs:element type="xs:string" name="OtherIPSecurityReqText"/>
+        <xs:element type="xs:byte" name="IPBioDemUpdateAdd"/>
+        <xs:element type="xs:byte" name="IPBioDemUpdateRemove"/>
+        <xs:element type="xs:byte" name="IPUpdateCitizenshipAdd"/>
+        <xs:element type="xs:byte" name="IPUpdateCitizenshipRemove"/>
+        <xs:element type="xs:byte" name="IPBioDemViewAdd"/>
+        <xs:element type="xs:byte" name="IPBioDemViewRemove"/>
+        <xs:element type="xs:byte" name="IPUpdateVisaAdd"/>
+        <xs:element type="xs:byte" name="IPUpdateVisaRemove"/>
+        <xs:element type="xs:byte" name="IPServiceIndicatorAdd"/>
+        <xs:element type="xs:byte" name="IPServiceIndicatorRemove"/>
+        <xs:element type="xs:byte" name="IPTitanDegAuditAdd"/>
+        <xs:element type="xs:byte" name="IPTitanDegAuditRemove"/>
+        <xs:element type="xs:byte" name="IPFilenetImagedDocAdd"/>
+        <xs:element type="xs:byte" name="IPFilenetImagedDocRemove"/>
+        <xs:element type="xs:byte" name="IPUpdateSEVISAdd"/>
+        <xs:element type="xs:byte" name="IPUpdateSEVISRemove"/>
+        <xs:element type="xs:byte" name="IPViewSEVISAdd"/>
+        <xs:element type="xs:byte" name="IPViewSEVISRemove"/>
+        <xs:element type="xs:byte" name="IPOtherAdmissionSecAdd"/>
+        <xs:element type="xs:byte" name="IPOtherAdmissionSecRemove"/>
+        <xs:element type="xs:string" name="IPOtherAdmissionSecText"/>
+        <xs:element type="xs:byte" name="IPStudFinaViewCustomerAdd"/>
+        <xs:element type="xs:byte" name="IPStudFinaViewCustomerRemove"/>
+        <xs:element type="xs:byte" name="IPOtherStudFinAdd"/>
+        <xs:element type="xs:byte" name="IPOtherStudFinRemove"/>
+        <xs:element type="xs:string" name="IPOtherStudFinText"/>
+        <xs:element type="xs:byte" name="IPRecordsSecUpdateServiceAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecUpdateServiceRemove"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewStudyAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewStudyRemove"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewCSUFTranscriptAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewCSUFTranscriptRemove"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewStudCareerAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewStudCareerRemove"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewServiceIndicatorAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecViewServiceIndicatorRemove"/>
+        <xs:element type="xs:byte" name="IPRecordsSecOtherAdd"/>
+        <xs:element type="xs:byte" name="IPRecordsSecOtherRemove"/>
+        <xs:element type="xs:string" name="IPRecordsSecOtherText"/>
+        <xs:element type="xs:string" name="BusinessJustificationInternationalProgram"/>
+        <xs:element type="xs:string" name="BusinessAnalystCommentsInternationalProgram"/>
+        <xs:element type="xs:string" name="NameVal9"/>
+        <xs:element type="xs:byte" name="EmployeeCB"/>
+        <xs:element type="xs:string" name="EmployeeName"/>
+        <xs:element type="xs:string" name="EmployeeDate"/>
+        <xs:element type="xs:byte" name="AccessCB"/>
+        <xs:element type="xs:string" name="AdminName"/>
+        <xs:element type="xs:string" name="AdminDate"/>
+        <xs:element type="xs:string" name="InitiatorName"/>
+        <xs:element type="xs:string" name="BASchedulingOfficerDate"/>
+        <xs:element type="xs:string" name="BAAdmissionName"/>
+        <xs:element type="xs:string" name="BAAdmissionDate"/>
+        <xs:element type="xs:string" name="BusinessAnalystRecordsName"/>
+        <xs:element type="xs:string" name="BusinessAnalystRecordsDate"/>
+        <xs:element type="xs:string" name="BASchedulingOfficerName"/>
+        <xs:element type="xs:string" name="InitiatorDate"/>
+        <xs:element type="xs:string" name="BAFinancialAIDName"/>
+        <xs:element type="xs:string" name="BAFinancialAIDDate"/>
+        <xs:element type="xs:string" name="BAStudFinancialAIDName"/>
+        <xs:element type="xs:string" name="BAStudFinancialAIDDate"/>
+        <xs:element type="xs:string" name="BAExtEdName"/>
+        <xs:element type="xs:string" name="BAExtEdDate"/>
+        <xs:element type="xs:string" name="BAInternationalProgrammerName"/>
+        <xs:element type="xs:string" name="BAInternationalProgrammerDate"/>
+        <xs:element type="xs:string" name="TrainerName"/>
+        <xs:element type="xs:string" name="TrainerDate"/>
+		<xs:element type="xs:byte" name="TrainerCB"/>
+        <xs:element type="xs:string" name="ISOAdminName"/>
+        <xs:element type="xs:string" name="ISOAdminDate"/>
+        <xs:element type="xs:string" name="SecurityAdminName"/>
+        <xs:element type="xs:string" name="SecurityAdminDate"/>
+        <xs:element type="xs:string" name="CISOName"/>
+		<xs:element type="xs:string" name="FormSavedStatus"/>
+		<xs:element type="xs:string" name="WorkflowInitiator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="CustomTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="DivisionID"/>
+		<xs:element type="xs:string" name="ManagerUserID"/>
+		<xs:element type="xs:string" name="ManagerName"/>
+		<xs:element type="xs:string" name="ManagerEmail"/>
+		<xs:element type="xs:string" name="EmployeeUserID"/>
+		<xs:element type="xs:string" name="EmployeeEmail"/>
+		<xs:element type="xs:string" name="AccessTypeFlag"/>
+		<xs:element type="xs:string" name="BudgetOfficeFlag"/>
+		<xs:element type="xs:string" name="DepartmentFlag"/>	
+		<xs:element type="xs:string" name="InitiatorUseId"/>
+		<xs:element type="xs:string" name="RequestorName"/>
+		<xs:element type="xs:string" name="InitiatorEmail"/>
+		<xs:element type="xs:string" name="InitiatorComments"/>
+		<xs:element type="xs:string" name="AdminComments"/>
+		<xs:element type="xs:string" name="EmployeeComments"/>
+		<xs:element type="xs:string" name="SecurityAdminComments"/>
+		<xs:element type="xs:string" name="ISOAdminComments"/>
+		<xs:element type="xs:string" name="CISOAdminComments"/>
+		<xs:element type="xs:string" name="BAAdmissionOfficeComments"/>
+		<xs:element type="xs:string" name="BARecordsOfficeComments"/>
+		<xs:element type="xs:string" name="BAScheduligOfficeComments"/>
+		<xs:element type="xs:string" name="BAFinancialAidComments"/>
+		<xs:element type="xs:string" name="BAStudFinancialComments"/>
+		<xs:element type="xs:string" name="BAExtEdComments"/>
+		<xs:element type="xs:string" name="BAInternationalProgramsComments"/>
+		<xs:element type="xs:string" name="TrainerComments"/>
+		<xs:element type="xs:string" name="BAName"/>
+		<xs:element type="xs:string" name="BADate"/>
+		<xs:element type="xs:string" name="BAComments"/>
+		<xs:element type="xs:string" name="CISODate"/>
+		<xs:element type="xs:string" name="InitiatorUserName"/>
+		<xs:element type="xs:string" name="DepartmentRole"/>
+		<xs:element type="xs:string" name="AdmissionOfficeRole"/>
+		<xs:element type="xs:string" name="RecordsOfficeRole"/>
+		<xs:element type="xs:string" name="SchedulingOfficeRole"/>
+		<xs:element type="xs:string" name="FinancialAidRole"/>
+		<xs:element type="xs:string" name="StudentFinancialsRole"/>
+		<xs:element type="xs:string" name="InternationalProgramsRole"/>
+		<xs:element type="xs:string" name="ExpiryFlag"/>
+		<xs:element type="xs:string" name="CaseID"/>	
+		<xs:element type="xs:string" name="FormStatus"/>
+		<xs:element type="xs:string" name="EmployeeFullName"/>
+		<xs:element type="xs:string" name="RejectEmailSubject"/>		
+		<xs:element type="xs:string" name="ISORejectSubject"/>
+		<xs:element type="xs:string" name="FinalEmailSubject"/>	
+		<xs:element type="xs:string" name="DeptRecordsSecurityUpdateData"/>	
+		<xs:element type="xs:string" name="AdmissionRecordsSecurityUpdateData"/>	
+		<xs:element type="xs:string" name="IPRecordsSecurityUpdateData"/>
+		<xs:element maxOccurs="unbounded" name="AdmissionOfficeASTable">
+		<xs:element type="xs:string" name="SpecialReview"/>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="AdmissionOfficeASOption"/>
+                            <xs:element type="xs:string" name="AdmissionOfficeASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+	    <xs:element maxOccurs="unbounded" name="AdmissionOfficeCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="AdmissionOfficeCSOption"/>
+                            <xs:element type="xs:string" name="AdmissionOfficeCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+        <xs:element maxOccurs="unbounded" name="AdmissionOfficeRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="AdmissionOfficeRSOption"/>
+                            <xs:element type="xs:string" name="AdmissionOfficeRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+        <xs:element maxOccurs="unbounded" name="AdmissionOfficeSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="AdmissionOfficeSFSOption"/>
+                            <xs:element type="xs:string" name="AdmissionOfficeSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+        <xs:element maxOccurs="unbounded" name="RecordsOfficeCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="RecordsOfficeCSOption"/>
+                            <xs:element type="xs:string" name="RecordsOfficeCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+        <xs:element maxOccurs="unbounded" name="RecordsOfficeASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="RecordsOfficeASOption"/>
+                            <xs:element type="xs:string" name="RecordsOfficeASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+        <xs:element maxOccurs="unbounded" name="RecordsOfficeSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="RecordsOfficeSFSOption"/>
+                            <xs:element type="xs:string" name="RecordsOfficeSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+        <xs:element maxOccurs="unbounded" name="RecordsOfficeMQTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="RecordsOfficeMQOption"/>
+                            <xs:element type="xs:string" name="RecordsOfficeMQRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+     <xs:element maxOccurs="unbounded" name="SchedulingOfficeSSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="SchedulingOfficeSSOption"/>
+                            <xs:element type="xs:string" name="SchedulingOfficeSSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+     <xs:element maxOccurs="unbounded" name="SchedulingOfficeMQTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="SchedulingOfficeMQOption"/>
+                            <xs:element type="xs:string" name="SchedulingOfficeMQRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+     <xs:element maxOccurs="unbounded" name="SchedulingOfficeASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="SchedulingOfficeASOption"/>
+                            <xs:element type="xs:string" name="SchedulingOfficeASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>		
+         <xs:element maxOccurs="unbounded" name="DepartmentsCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsCSOption"/>
+                            <xs:element type="xs:string" name="DepartmentsCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+        <xs:element maxOccurs="unbounded" name="DepartmentsRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsRSOption"/>
+                            <xs:element type="xs:string" name="DepartmentsRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+        <xs:element maxOccurs="unbounded" name="DepartmentsASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsASOption"/>
+                            <xs:element type="xs:string" name="DepartmentsASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+        <xs:element maxOccurs="unbounded" name="DepartmentsMQTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsMQOption"/>
+                            <xs:element type="xs:string" name="DepartmentsMQRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+     <xs:element maxOccurs="unbounded" name="DepartmentsFASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsFASOption"/>
+                            <xs:element type="xs:string" name="DepartmentsFASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+     <xs:element maxOccurs="unbounded" name="DepartmentsSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsSFSOption"/>
+                            <xs:element type="xs:string" name="DepartmentsSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+     <xs:element maxOccurs="unbounded" name="DepartmentsDWTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="DepartmentsDWOption"/>
+                            <xs:element type="xs:string" name="DepartmentsDWRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+	<xs:element maxOccurs="unbounded" name="FinancialAidASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FinancialAidASOption"/>
+                            <xs:element type="xs:string" name="FinancialAidASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+    <xs:element maxOccurs="unbounded" name="FinancialAidRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FinancialAidRSOption"/>
+                            <xs:element type="xs:string" name="FinancialAidRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+     <xs:element maxOccurs="unbounded" name="FinancialAidCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FinancialAidCSOption"/>
+                            <xs:element type="xs:string" name="FinancialAidCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+	<xs:element maxOccurs="unbounded" name="FinancialAidSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FinancialAidSFSOption"/>
+                            <xs:element type="xs:string" name="FinancialAidSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>			
+    <xs:element maxOccurs="unbounded" name="FinancialAidMQTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FinancialAidMQOption"/>
+                            <xs:element type="xs:string" name="FinancialAidMQRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    <xs:element maxOccurs="unbounded" name="StudentFinancialASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="StudentFinancialASOption"/>
+                            <xs:element type="xs:string" name="StudentFinancialASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+     <xs:element maxOccurs="unbounded" name="StudentFinancialRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="StudentFinancialRSOption"/>
+                            <xs:element type="xs:string" name="StudentFinancialRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+	<xs:element maxOccurs="unbounded" name="StudentFinancialFASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="StudentFinancialFASOption"/>
+                            <xs:element type="xs:string" name="StudentFinancialFASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>			
+     <xs:element maxOccurs="unbounded" name="StudentFinancialCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="StudentFinancialCSOption"/>
+                            <xs:element type="xs:string" name="StudentFinancialCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>			
+	<xs:element maxOccurs="unbounded" name="ExdASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdASOption"/>
+                            <xs:element type="xs:string" name="ExdASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    <xs:element maxOccurs="unbounded" name="ExdCSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdCSOption"/>
+                            <xs:element type="xs:string" name="ExdCSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+    <xs:element maxOccurs="unbounded" name="ExdRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdRSOption"/>
+                            <xs:element type="xs:string" name="ExdRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+	<xs:element maxOccurs="unbounded" name="ExdSevisTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdSevisOption"/>
+                            <xs:element type="xs:string" name="ExdSevisRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>			
+    <xs:element maxOccurs="unbounded" name="ExdSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdSFSOption"/>
+                            <xs:element type="xs:string" name="ExdSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>				
+	<xs:element maxOccurs="unbounded" name="ExdMQTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ExdMQOption"/>
+                            <xs:element type="xs:string" name="ExdMQRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>	
+    <xs:element maxOccurs="unbounded" name="InternationalASTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="InternationalASOption"/>
+                            <xs:element type="xs:string" name="InternationalASRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>			
+    <xs:element maxOccurs="unbounded" name="InternationalSFSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="InternationalSFSOption"/>
+                            <xs:element type="xs:string" name="InternationalSFSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>				
+	<xs:element maxOccurs="unbounded" name="InternationalRSTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="InternationalRSOption"/>
+                            <xs:element type="xs:string" name="InternationalRSRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>				
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

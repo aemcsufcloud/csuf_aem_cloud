@@ -1,0 +1,2160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-01-15T06:15:02Z" uuid="25e75cb7-71ce-4f62-83cb-34115be846db">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="StudentTimesheet" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="tb" w="576pt">
+         <breakBefore/>
+         <subform name="header" w="203.2mm" h="25.288mm">
+            <draw name="Text1" y="3.175mm" x="133.35mm" w="34.925mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>CWID</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 96166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 4 CWID 0 36170 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text1" y="3.175mm" x="168.275mm" w="34.925mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>EMPLOYEE REC#</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 96166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 13 EMPLOYEE REC# 0 7264 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <field name="EmployeeRec" y="9.525mm" x="168.275mm" w="34.925mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="EmployeeId" y="9.525mm" x="133.35mm" w="34.925mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Rectangle1" y="3.175mm" x="133.35mm" w="69.85mm" h="12.7mm">
+               <value>
+                  <rectangle>
+                     <edge/>
+                     <corner radius="5.08mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <draw name="Line1" y="9.525mm" x="133.35mm" w="69.85mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line1" y="3.175mm" x="168.275mm" w="0in" h="12.7mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="Month" y="19.05mm" x="63.5mm" w="34.925mm" h="6.35mm">
+               <ui>
+                  <choiceList>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </choiceList>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <items>
+                  <text>January</text>
+                  <text>February</text>
+                  <text>March</text>
+                  <text>April</text>
+                  <text>May</text>
+                  <text>June</text>
+                  <text>July</text>
+                  <text>August</text>
+                  <text>September</text>
+                  <text>October</text>
+                  <text>November</text>
+                  <text>December</text>
+               </items>
+               <items save="1" presence="hidden">
+                  <text>1</text>
+                  <text>2</text>
+                  <text>3</text>
+                  <text>4</text>
+                  <text>5</text>
+                  <text>6</text>
+                  <text>7</text>
+                  <text>8</text>
+                  <text>9</text>
+                  <text>10</text>
+                  <text>11</text>
+                  <text>12</text>
+               </items>
+            </field>
+            <field name="Year" y="19.05mm" x="101.6mm" w="34.925mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?>
+            <draw name="Image1" y="3.175mm" x="3.175mm" w="50.8mm" h="12.7mm">
+               <value>
+                  <image href=".\HRDI-rgb.jpg" contentType="image/jpeg"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <field name="Form_Title" y="3.175mm" w="69.85mm" x="60.325mm" minH="12.7mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="14pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="CHRSID" y="15.875mm" x="139.7mm" w="63.5mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="27.52mm">
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>            EMPL ID</text>
+                  </value>
+               </caption>
+            </field>
+         </subform>
+         <subform w="576pt" layout="lr-tb" name="timesheet">
+            <subform name="timesheet_panel" w="203.273mm" h="184.262mm">
+               <draw name="Line1" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="6.35mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="15.875mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="22.225mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="31.75mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="57.15mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="69.85mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="82.55mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="95.25mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="107.95mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="120.65mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="133.35mm" w="203.2mm" h="0in">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" x="66.675mm" w="0in" h="31.75mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" x="165.1mm" w="0in" h="15.763mm" y="15.987mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" x="152.4mm" w="0in" h="15.875mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="15.875mm" x="31.75mm" w="0in" h="15.875mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="15.875mm" x="117.475mm" w="0in" h="15.875mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Text1" w="66.675mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Last Name </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 186166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 10 Last Name  0 70323 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" w="66.675mm" h="6.35mm" x="79.375mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>First Name </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 186166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 11 First Name  0 70054 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="15.875mm" w="38.1mm" h="6.35mm" x="165.1mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Rate of Pay</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 11 Rate of Pay 0 27875 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="15.875mm" w="41.275mm" h="6.35mm" x="120.65mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Task Profile Value</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 18 Task Profile Value 0 17926 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="15.875mm" w="38.1mm" h="6.35mm" x="73.025mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>CMS Dept ID </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 12 CMS Dept ID  0 24549 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="15.875mm" w="34.925mm" h="6.35mm" x="31.75mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Class</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 96166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 5 Class 0 36998 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="15.875mm" w="31.75mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Unit </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 87166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 5 Unit  0 36108 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw x="174.625mm" hAlign="center">
+                  <value>
+                     <text>MI</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               </draw>
+               <field name="LastName" y="6.35mm" w="66.675mm" h="9.525mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FirstName" y="6.35mm" w="85.725mm" h="9.525mm" x="66.675mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="Unit" y="22.225mm" w="31.75mm" h="9.525mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ClassTaken" y="22.225mm" w="34.925mm" h="9.525mm" x="31.75mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="CmsDept" y="22.225mm" w="50.8mm" h="9.525mm" x="66.675mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TaskProfile" y="22.225mm" w="47.625mm" h="9.525mm" x="117.475mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="RateOfPay" y="22.225mm" x="165.1mm" w="38.1mm" h="9.525mm">
+                  <ui>
+                     <numericEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <format>
+                     <picture>num{($zzzz9.99)}</picture>
+                  </format>
+               </field>
+               <field name="MiddleInitial" y="6.35mm" w="50.8mm" h="9.525mm" x="152.4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <draw y="34.925mm" w="127.86mm" h="15.875mm">
+                  <value>
+                     <text>TIME WORKED INSTRUCTIONS:
+Enter time as Hours: Minutes. Use the Tab Key to move from one cell to the next.
+For example, 5 and 1/2 hours should be entered as 5 (tab) 30, not 5.5.
+To skip cells, move the mouse and click in the desired cell.</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Arial" size="9pt" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 359604 42166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 26 TIME WORKED INSTRUCTIONS:  0 1417 8523 0 0 0 "Arial" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 81 Enter time as Hours: Minutes. Use the Tab Key to move from one cell to the next.  0 1417 19323 0 0 0 "Arial" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 71 For example, 5 and 1/2 hours should be entered as 5 (tab) 30, not 5.5.  0 1417 30123 0 0 0 "Arial" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 60 To skip cells, move the mouse and click in the desired cell. 0 1417 40923 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
+               <draw name="Line1" y="50.8mm" x="114.3mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" x="28.575mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" x="57.15mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" x="85.725mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" x="142.875mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Line1" y="50.8mm" x="171.45mm" w="0in" h="82.55mm">
+                  <value>
+                     <line slope="/"/>
+                  </value>
+               </draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>SUN </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 4 SUN  0 29943 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>MON </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 4 MON  0 28835 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>TUES </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 5 TUES  0 27165 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>WED </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 4 WED  0 28835 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>THUR </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 5 THUR  0 26613 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>FRI </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 4 FRI  0 32446 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" y="50.8mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>SAT </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 87166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 4 SAT  0 35276 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <field name="SunHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins1" y="63.5mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins1" y="63.5mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins2" y="76.2mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunHrsMins2" y="76.2mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins3" y="88.9mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunHrsMins3" y="88.9mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins4" y="101.6mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunHrsMins4" y="101.6mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins5" y="114.3mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunHrsMins5" y="114.3mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatHrsMins6" y="127mm" w="31.75mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FriHrsMins6" y="127mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThuHrsMins6" y="127mm" w="28.575mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedHrsMins6" y="127mm" w="28.575mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TueHrsMins6" y="127mm" w="28.575mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonHrsMins6" y="127mm" w="28.575mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunHrsMins6" y="127mm" w="28.575mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate1" y="57.15mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate1" y="57.15mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate2" y="69.85mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate2" y="69.85mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate3" y="82.55mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate3" y="82.55mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate4" y="95.25mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate4" y="95.25mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate5" y="107.95mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate5" y="107.95mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SatDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="FridayDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="ThurDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="114.3mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="WedDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="85.725mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TuesDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="57.15mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonDate6" y="120.65mm" w="12.7mm" h="6.35mm" x="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="SunDate6" y="120.65mm" w="12.7mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="MonthYear" y="136.637mm" w="53.975mm" h="6.35mm" x="82.55mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <draw name="Text1" y="133.35mm" w="28.575mm" h="8.761mm" x="142.875mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Total Decimal 	Hours:</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="right" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 22000 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 14 Total Decimal  0 18455 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 1   0 14130 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 6 Hours: 0 50130 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <field name="TotalHours" y="133.35mm" w="31.75mm" h="9.525mm" x="171.45mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <draw name="Text1" y="146.05mm" w="28.575mm" h="6.35mm" x="142.875mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Gross Pay:</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="right" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 10 Gross Pay: 0 30125 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <field name="GrossPay" y="146.05mm" x="171.45mm" w="31.75mm" h="6.35mm">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <format>
+                     <picture>num{($zzzz9.99)}</picture>
+                  </format>
+               </field>
+               <draw x="3.175mm" y="149.225mm" w="3.629319in" h="17.228mm">
+                  <value>
+                     <text>NOTE: Pay may or may not be subject to 7.5% retirement
+deduction and 1.45% Medicare tax. Hours worked in
+excess of 40 hours/week must be submitted on a separate
+form (Authorization for Extra Hours).</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 258477 46001 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 55 NOTE: Pay may or may not be subject to 7.5% retirement  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 50 deduction and 1.45% Medicare tax. Hours worked in  0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 56 excess of 40 hours/week must be submitted on a separate  0 1417 33313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 37 form (Authorization for Extra Hours). 0 1417 45313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw x="3.175mm" y="168.275mm" h="0.511583in" w="90.023mm">
+                  <value>
+                     <text>I certify that I worked the hours recorded on this voucher.
+I understand that falsification will result in immediate
+collection by the State of California of all funds paid.</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 252349 34000 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 60 I certify that I worked the hours recorded on this voucher.  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 57 I understand that falsification will result in immediate  0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 56 collection by the State of California of all funds paid. 0 1417 33313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <draw x="98.425mm" y="167.981mm" w="3.875in" h="0.511583in">
+                  <value>
+                     <text>I certify that this student worked the hours reported on this
+voucher and that I have verified that he/she is enrolled in at least 6.1 units for this pay period</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 276166 34000 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 62 I certify that this student worked the hours reported on this  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 63 voucher and that I have verified that he/she is enrolled in at  0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 35 least 6.1 units for this pay period 0 1417 33313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+               <?templateDesigner expand 1?></subform>
+            <draw h="6.35mm" w="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 6166 15166 0 0 1417 1417 0 0?></draw>
+            <field name="StudentSignature" w="53.975mm" minH="10.231mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption placement="bottom" reserve="4.3078mm">
+                  <value>
+                     <text>Student's Signature </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+            </field>
+            <field name="StudentSignDate" w="28.575mm" minH="10.231mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <value>
+                  <date/>
+               </value>
+               <caption placement="bottom" reserve="4.3078mm">
+                  <value>
+                     <text>Date</text>
+                  </value>
+                  <font typeface="Myriad Pro" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YY}</picture>
+               </format>
+            </field>
+            <draw h="6.35mm" w="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 15166 15166 0 0 1417 1417 0 0?></draw>
+            <field name="SupervisorSignature" w="41.275mm" minH="10.231mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption placement="bottom" reserve="4.883mm">
+                  <value>
+                     <text>Supervisor's Signature</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+            </field>
+            <field name="SupSignDate" w="19.05mm" minH="10.231mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <value>
+                  <date/>
+               </value>
+               <caption placement="bottom" reserve="4.3078mm">
+                  <value>
+                     <text>Date</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YY}</picture>
+               </format>
+            </field>
+            <field name="SupEmail" w="47.625mm" minH="10.231mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption placement="bottom" reserve="4.2021mm">
+                  <value>
+                     <text>Email</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+            </field>
+            <draw h="6.35mm" w="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 6166 15166 0 0 1417 1417 0 0?></draw>
+            <draw h="6.35mm" w="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 6166 15166 0 0 1417 1417 0 0?></draw>
+            <draw w="200.025mm" h="0.358806in">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;letter-spacing:0in"><br/></p><p style="font-family:Arial;font-size:11pt;color:#ff0000;font-weight:bold;letter-spacing:0in">NOTE: The below fields are for Federal Work Study students only. (1151, 1871, 1872, 1875, 1876)</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <draw h="6.35mm" w="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 6166 15166 0 0 1417 1417 0 0?></draw>
+            <draw w="200.025mm" h="9.583mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">Please enter the previous month's<span style="font-style:italic"> FWS Balance to be Earned</span> as the<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Authorized FWS Amount</span> for this month.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Line2" w="3.219mm" h="0in">
+               <value>
+                  <line slope="/">
+                     <edge>
+                        <color value="255,255,255"/>
+                     </edge>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Line1" w="196.807mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line2" w="0.532mm" h="0in">
+               <value>
+                  <line>
+                     <edge>
+                        <color value="255,255,255"/>
+                     </edge>
+                  </line>
+               </value>
+            </draw>
+            <draw h="6.35mm" w="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 6166 15166 0 0 1417 1417 0 0?></draw>
+            <draw name="Line1" w="0in" h="13.815mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="AuthFWSAmount" w="69.85mm" minH="13.816mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption placement="top" reserve="5.7402mm">
+                  <value>
+                     <text>Authorized FWS Amount</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.175mm" presence="hidden"/>
+               </border>
+               <format>
+                  <picture>num{($zzzz9.99)}</picture>
+               </format>
+            </field>
+            <draw name="Line1" w="0in" h="13.815mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="LessFWSEarned" w="66.675mm" minH="13.816mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption placement="top" reserve="5.7404mm">
+                  <value>
+                     <text>Less FWS Earned </text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.175mm" presence="hidden"/>
+               </border>
+               <format>
+                  <picture>num{($zzzz9.99)}</picture>
+               </format>
+            </field>
+            <draw name="Line1" w="0in" h="13.815mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="FWSBalToBeEarned" w="60.325mm" minH="13.816mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption placement="top" reserve="5.7402mm">
+                  <value>
+                     <text>FWS Balance to be Earned</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.175mm" presence="hidden"/>
+               </border>
+               <format>
+                  <picture>num{($zzzz9.99)}</picture>
+               </format>
+            </field>
+            <draw name="Line1" w="0in" h="13.815mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text1" w="203.2mm" h="7.985mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Note: It is the department's responsibility to monitor FWS funds.</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" size="9pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 19801 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 288000 8523 0 0 0 "Arial" 0 0 9000 ISO-8859-1?>
+               <?renderCache.textRun 65 Note: It is the department's responsibility to monitor FWS funds. 0 161088 19323 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
+            <border>
+               <edge thickness="0.508mm"/>
+               <corner thickness="0.508mm"/>
+            </border>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 260 65 000300060008000A000B000C000F001100120013001400150016001700180019001A001D002400250026002700280029002A002B002C002E002F003000310032003300350036003700380039003A003C004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005D #%'(),./01234567:ABCDEFGHIKLMNOPRSTUVWYabcdefghijklmnoprstuvwxyz?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 144 36 0003000B000C000F00110014001500180019001A001B001D002800290031003200360037003A00440045004700480049004B004C004E004F005100520055005600570058005A005C (),.125678:EFNOSTWabdefhiklnorstuwy?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 88 22 000300240025002800290036003A00440045004600470048004B004C004F005000510052005500570058005D ABEFSWabcdehilmnortuz?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 16 4 0025004200460055Daet?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 19?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 118?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-01-15T06:15:02Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:25e75cb7-71ce-4f62-83cb-34115be846db</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

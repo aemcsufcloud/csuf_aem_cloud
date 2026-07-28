@@ -1,0 +1,73 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DeclarationForm">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:byte" name="conditionalCHK"/>
+		<xs:element type="xs:byte" name="ethicsRB"/>  
+		<xs:element type="xs:byte" name="caseId"/> 
+		<xs:element type="xs:string" name="cwid"/>
+		<xs:element type="xs:string" name="FName"/>
+		<xs:element type="xs:string" name="MName"/>
+        <xs:element type="xs:string" name="LName"/>
+        <xs:element type="xs:byte" name="formerMajorRB"/>
+		<xs:element type="xs:byte" name="currentMajor"/>		
+		<xs:element type="xs:string" name="CurrentMajor"/>
+        <xs:element type="xs:string" name="CurrentMajorAcadPlan"/>
+        <xs:element type="xs:byte" name="NewMajor"/>
+		<xs:element type="xs:byte" name="NewMajorAcadPlanCode"/>		
+        <xs:element type="xs:byte" name="accountCHK"/>
+        <xs:element type="xs:byte" name="informationSystemsCHK"/>
+        <xs:element type="xs:byte" name="businessEconomicsCHK"/>
+        <xs:element type="xs:byte" name="entertainmentCHK"/>
+        <xs:element type="xs:byte" name="entrepreneurshipCHK"/>
+        <xs:element type="xs:byte" name="financeCHK"/>
+        <xs:element type="xs:byte" name="generalManagementCHK"/>
+        <xs:element type="xs:byte" name="humanResourceCHK"/>
+        <xs:element type="xs:byte" name="businessAnalyticsCHK"/>
+        <xs:element type="xs:byte" name="decisionSciencesCHK"/>
+        <xs:element type="xs:byte" name="legalStudiesCHK"/>
+        <xs:element type="xs:byte" name="marketingCHK"/>
+        <xs:element type="xs:byte" name="supplyChainCHK"/>
+        <xs:element type="xs:byte" name="riskManagementCHK"/>
+        <xs:element type="xs:byte" name="economicsCHK"/>
+        <xs:element type="xs:byte" name="globalTradeCHK"/>
+        <xs:element type="xs:byte" name="interculturalManagementCHK"/>
+        <xs:element type="xs:byte" name="accountingAnalyticsCHK"/>
+        <xs:element type="xs:byte" name="jointConcentrationCHK"/>       
+        <xs:element type="xs:string" name="AdmitTerm"/>
+        <xs:element type="xs:byte" name="Ethics"/>
+		<xs:element type="xs:string" name="AdvisorSign"/>
+        <xs:element type="xs:string" name="AdvisorSignDate"/>
+		<xs:element type="xs:string" name="AdvisorComment"/>
+        <xs:element type="xs:string" name="Authorization"/>
+		<xs:element type="xs:string" name="RecordsSign"/>
+		<xs:element type="xs:string" name="RecordsSignDate"/>
+		<xs:element type="xs:string" name="RecordsComment"/>
+		<xs:element type="xs:string" name="RecordsRecommends"/>             
+        <xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/> 
+        <xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="HiddenAdvisorName"/> 
+        <xs:element type="xs:string" name="HiddenAdvisorEmail"/>
+		<xs:element type="xs:string" name="HiddentStudentEmailID"/>
+		<xs:element type="xs:string" name="ARSCSign"/>
+        <xs:element type="xs:string" name="ARSCSignDate"/>
+		<xs:element type="xs:string" name="ARSCComment"/>
+		<xs:element type="xs:string" name="ARSCRecommend"/>
+		<xs:element type="xs:string" name="DropCourseFlag"/>
+		<xs:element name="CourseRow">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="SelectCB" />
+                     <xs:element type="xs:string" name="CourseNo" />
+                     <xs:element type="xs:string" name="ScheduleNo" />
+                     <xs:element type="xs:string" name="NumberOfUnits" />
+                     <xs:element type="xs:string" name="NameOfInstructor" />
+                     <xs:element type="xs:string" name="SectionNo" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-05-17T05:27:29Z" uuid="7a443d72-27ea-4eed-9f55-13ba23e240d5">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F0CHSS" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="8in" h="10.5in"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 0?></pageSet>
+      <subform w="203.232mm">
+         <subform w="203.2mm" layout="tb" name="MainPanel">
+            <subform w="203.2mm" h="31.75mm" name="HeadingPanel">
+               <subform x="69.85mm" y="19.05mm" w="66.675mm" h="9.525mm" name="CDAHeadingText">
+                  <draw name="CADreamActTitle" w="66.675mm" h="6.35mm" y="3.175mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>CA Dream Act Application</text>
+                     </value>
+                     <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.formType.rawValue == "CDA"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+</script>
+                  </event>
+                  <?templateDesigner expand 0?></subform>
+               <field name="formCode" w="19.177mm" h="9.525mm" x="184.023mm" y="22.225mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" size="14pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="aidYear" y="22.225mm" w="31.75mm" h="9.525mm" presence="invisible">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="formType" y="22.225mm" w="31.75mm" h="9.525mm" x="31.75mm" presence="invisible">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <?templateDesigner expand 0?>
+               <field name="ImageField1" w="60.325mm" h="22.225mm">
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <value>
+                     <image href=".\CSUF Financial Aid Logo.png" contentType="image/png"/>
+                  </value>
+               </field>
+            </subform>
+            <subform w="203.2mm" h="12.7mm" name="StudentDetailsPanel">
+               <field name="cwid" w="69.85mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1.5088mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="26.5347mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Enter Student’s CWID Here:<span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span></p></body>
+                        </exData>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="HiddenStudentName" x="69.85mm" w="62mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1.5088mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="17.952mm">
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Student's 
+Name</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="financialAidYear" x="171.45mm" w="31.75mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1.5088mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="caseId" x="133.35mm" w="38.1mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1.5088mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.57mm">
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Case ID</text>
+                     </value>
+                  </caption>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <draw name="Text2" w="29.2864mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 80183 12000 0 0 1417 1417 0 0?></draw>
+            <subform w="203.2mm" h="84.149mm" name="CertificationInstructionPanel">
+               <draw w="203.2mm" h="3.312931in" name="StudentFamilySizeCertification">
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                                                  </span><span style="font-size:12pt"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:14pt">STUDENT FAMILY SIZE CERTIFICATION<span style="xfa-spacerun:yes">  </span>(<span style="xfa-spacerun:yes">                      </span>)</span><br/><span style="xfa-spacerun:yes">                                                                            </span><span style="font-weight:normal"><br/></span><span style="text-decoration:underline">INSTRUCTIONS:</span><span style="font-weight:normal"><br/>Fill in the information about the people that you (and your spouse) will support between July 1,<span style="xfa-spacerun:yes">             </span>and June 30,<span style="xfa-spacerun:yes">           </span><br/><span style="xfa-spacerun:yes">           </span>.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy.<br/>This will delay processing.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">             </span><span style="font-weight:bold">INCLUDE:</span><br/><span style="xfa-spacerun:yes">              </span>-<span style="xfa-spacerun:yes">   </span>yourself (list yourself on the first line),<br/><span style="xfa-spacerun:yes">              </span>-<span style="xfa-spacerun:yes">   </span>your spouse (if you are married), and<br/><span style="xfa-spacerun:yes">              </span>-<span style="xfa-spacerun:yes">   </span>your dependent children (if they receive more than half of their support from you or your spouse).<br/><br/><span style="xfa-spacerun:yes">             </span><span style="font-weight:bold">OTHER PEOPLE MAY BE INCLUDED ONLY IF THEY:</span><br/><span style="xfa-spacerun:yes">              </span>-<span style="xfa-spacerun:yes">  </span><span style="text-decoration:underline">lived with and received more than half of their support from you or your spouse at the time you completed your<br/></span><span style="xfa-tab-count:1">         </span><br/><span style="xfa-spacerun:yes">                 </span>AND<br/><span style="xfa-spacerun:yes">              </span>-<span style="xfa-spacerun:yes"> </span><span style="text-decoration:underline">will continue to receive this support between July 1,<span style="xfa-spacerun:yes">             </span>and June 30,<span style="xfa-spacerun:yes">           </span>.</span><br/><br/></p><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">TELL US ABOUT YOUR FAMILY SIZE<span style="font-weight:normal;text-decoration:none"><br/>List all family members that meet the definition listed above.</span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="2.2274mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro"/>
+               </draw>
+               <field name="TextField2" x="136.525mm" w="22.225mm" h="6.35mm" y="1.27mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" size="12pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">this.rawValue=MainPanel.StudentDetailsPanel.financialAidYear.rawValue;
+
+</script>
+                  </event>
+               </field>
+               <field name="TextField5" y="66.547mm" x="88.9mm" w="10.668mm" h="5.527mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "2021";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "2022";
+}else {
+    var aidYearVal = MainPanel.HeadingPanel.aidYear.rawValue;
+    this.rawValue = aidYearVal-1;
+}
+</script>
+                  </event>
+               </field>
+               <field name="TextField6" y="66.547mm" x="117.475mm" w="10.668mm" h="5.527mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "2022";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "2023";
+}else{
+this.rawValue = MainPanel.HeadingPanel.aidYear.rawValue;
+}
+</script>
+                  </event>
+               </field>
+               <field name="TextField4" y="19.913mm" w="10.668mm" h="5.527mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "2022";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "2023";
+}else{
+    this.rawValue = MainPanel.HeadingPanel.aidYear.rawValue;
+}
+
+</script>
+                  </event>
+               </field>
+               <field name="TextField3" y="15.849mm" x="139.7mm" w="10.668mm" h="5.527mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "2021";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "2022";
+}else {
+    var aidYearVal = MainPanel.HeadingPanel.aidYear.rawValue;
+    this.rawValue = aidYearVal-1;
+}
+</script>
+                  </event>
+               </field>
+               <keep intact="none"/>
+               <field name="TextField7" y="57.911mm" x="12.7mm" w="62mm" h="5.588mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" underline="1"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0.01in">
+                     <para vAlign="middle"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.formType.rawValue == "CDA"){
+	this.rawValue = "California Dream Act Application";
+}
+else if(MainPanel.HeadingPanel.formType.rawValue == "FAFSA"){
+	this.rawValue = "Free Application for Federal Student Aid";
+}
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Subform1" w="196.85mm" layout="lr-tb">
+               <draw w="196.85mm" h="8.761mm">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <text>In addition, check yes for each family member listed who is enrolled in six (6) or more units that can be applied toward a college                   degree or certificate program. </text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <?renderCache.bounds 555166 22000 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 143 In addition, check yes for each family member listed who is enrolled in six (6) or more units that can be applied toward a college              0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 31 degree or certificate program.  0 1417 20917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else {
+    this.presence = "visible";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <subform w="203.2mm" name="CDAFamilyDetailsPanel" layout="tb">
+               <subform name="Table1" layout="table" columnWidths="58.401mm 21.623mm 32.86mm 46.31mm 19.0729mm 19.073mm">
+                  <border>
+                     <edge/>
+                  </border>
+                  <subform layout="row" name="HeaderRow" id="HeaderRow_ID">
+                     <assist role="TH"/>
+                     <draw h="10mm" name="Cell1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Full Name</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <draw h="10mm" name="Cell2">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Date of 
+Birth</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <draw h="10mm" name="Cell3">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Relationship (i.e., son, niece, etc. )</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <field name="Cell4" h="10mm" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text>List College</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="Cell5" w="40.02mm" h="10mm" colSpan="2" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text>Enrolled in 6 or 
+more units</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <occur max="-1"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row1">
+                     <assist role="TR"/>
+                     <draw h="10mm" name="Cell1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Example
+Son Smith</text>
+                        </value>
+                     </draw>
+                     <draw h="10mm" name="Cell2">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>02/02/2000 </text>
+                        </value>
+                     </draw>
+                     <draw name="Cell2" w="32.86mm" minH="13.968mm">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text> Son</text>
+                        </value>
+                     </draw>
+                     <field name="Cell2" w="46.31mm" minH="13.968mm" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text> N/A</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="CheckBox1" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>1</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.2986mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <field name="CheckBox2" y="2.2mm" x="6.687mm" w="28mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.1468mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row2">
+                     <assist role="TR"/>
+                     <field name="cdaStudentName" y="7.282mm" x="18.55mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaStudentDob" w="21.623mm" minH="13.968mm">
+                        <ui>
+                           <dateTimeEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </dateTimeEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <date/>
+                        </value>
+                        <format>
+                           <picture>date{MM/DD/YYYY}</picture>
+                        </format>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaStudentRelationship" y="7.282mm" x="17.901mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaStudentCollege" y="7.282mm" x="19.966mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+
+</script>
+                        </event>
+                     </field>
+                     <field name="cdaStudentUnitsYes" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.2986mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="cdaStudentUnitsNo" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>0</text>
+                        </value>
+                        <caption placement="bottom" reserve="6.147mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <text>0</text>
+                           <text>1</text>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 0?></subform>
+                  <subform layout="row" name="cdaRow3">
+                     <assist role="TR"/>
+                     <field name="cdaFullName" y="4.107mm" x="24.9mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaDob" y="4.107mm" x="10.949mm" w="62mm" minH="9mm">
+                        <ui>
+                           <dateTimeEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </dateTimeEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <date/>
+                        </value>
+                        <format>
+                           <picture>date{MM/DD/YYYY}</picture>
+                        </format>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaRelationship" y="4.107mm" x="11.551mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="cdaCollege" y="4.107mm" x="19.966mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="cdaUnitsYes" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.2992mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <field name="cdaUnitsNo" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.299mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+
+</script>
+                        </event>
+                     </field>
+                     <keep intact="none"/>
+                     <occur max="-1"/>
+                     <?templateDesigner expand 0?></subform>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+                  <overflow leader="HeaderRow"/>
+                  <?templateDesigner expand 0?></subform>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if(MainPanel.HeadingPanel.formType.rawValue == "CDA"){
+	this.presence = "visible";
+}else{
+this.presence = "hidden";
+}
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <draw name="Text1" w="29.2864mm" h="4.926mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 80183 11129 0 0 1417 1417 0 0?></draw>
+            <subform w="203.2mm" name="FAFSAFamilyDetailsPanel" layout="tb">
+               <subform name="Table1" layout="table" columnWidths="58.401mm 21.623mm 32.86mm 46.31mm 19.0729mm 19.073mm">
+                  <border>
+                     <edge/>
+                  </border>
+                  <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy1" y="0mm">
+                     <assist role="TH"/>
+                     <draw h="10mm" name="Cell1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Full Name</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <draw h="10mm" name="Cell2">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Date of 
+Birth</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <draw h="10mm" name="Cell3">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Relationship (i.e., son, niece, etc. )</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <field name="Cell4" h="10mm" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text>List College if enrolled 
+in 6 or more units</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="Cell5" w="40.02mm" h="10mm" colSpan="2" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro" baselineShift="0pt" weight="bold">
+                           <fill>
+                              <color value="255,255,255"/>
+                           </fill>
+                        </font>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="0,0,0"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text>Enrolled in 6 or 
+more units?</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <occur max="-1"/>
+                     <?templateDesigner expand 0?></subform>
+                  <subform layout="row" name="Row1" y="0mm">
+                     <assist role="TR"/>
+                     <draw h="10mm" name="Cell1" y="0mm">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Example
+Son Smith</text>
+                        </value>
+                     </draw>
+                     <draw h="10mm" name="Cell2" y="0mm">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>02/02/2000 </text>
+                        </value>
+                     </draw>
+                     <draw name="Cell2" w="32.86mm" minH="13.968mm" y="0mm">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text> Son</text>
+                        </value>
+                     </draw>
+                     <field name="Cell2" y="0mm" w="46.31mm" minH="13.968mm" access="readOnly">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <value>
+                           <text> N/A</text>
+                        </value>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="CheckBox1" y="5.875mm" x="12.258mm" w="28mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1.0008mm" rightInset="0.2388mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>1</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.1468mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <field name="CheckBox2" y="2.2mm" x="6.687mm" w="28mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="5.7826mm">
+                           <para vAlign="middle"/>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                           <fill>
+                              <color value="192,192,192"/>
+                           </fill>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 0?></subform>
+                  <subform layout="row" name="Row2" y="0mm">
+                     <assist role="TR"/>
+                     <field name="fafsaStudentName" y="7.603mm" x="37.6mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaStudentDob" w="21.623mm" minH="13.968mm">
+                        <ui>
+                           <dateTimeEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </dateTimeEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <date/>
+                        </value>
+                        <format>
+                           <picture>date{MM/DD/YYYY}</picture>
+                        </format>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaStudentRelationship" y="4.428mm" x="21.076mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaStudentCollege" y="4.428mm" x="19.966mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="fafsaStudentUnitsYes" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1.0008mm" rightInset="0.2388mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.147mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <field name="fafsaStudentUnitsNo" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>1</text>
+                        </value>
+                        <caption placement="bottom" reserve="6.147mm">
+                           <para vAlign="middle"/>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <text>0</text>
+                           <text>1</text>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="fafsaRow3" y="0mm">
+                     <assist role="TR"/>
+                     <field name="fafsaFullName" y="5.696mm" x="18.55mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaDob" y="8.871mm" x="7.774mm" w="62mm" minH="9mm">
+                        <ui>
+                           <dateTimeEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </dateTimeEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <date/>
+                        </value>
+                        <format>
+                           <picture>date{MM/DD/YYYY}</picture>
+                        </format>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaRelationship" y="2.521mm" x="14.726mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="fafsaCollege" y="2.521mm" x="23.141mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+
+</script>
+                        </event>
+                     </field>
+                     <field name="fafsaUnitsYes" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1.0008mm" rightInset="0.2388mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.147mm">
+                           <para vAlign="middle"/>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                           <value>
+                              <text>Yes</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <field name="fafsaUnitsNo" w="19.073mm" h="13.968mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1.0008mm" rightInset="0.2388mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <caption placement="bottom" reserve="6.147mm">
+                           <para vAlign="middle"/>
+                           <font typeface="Myriad Pro" size="8pt"/>
+                           <value>
+                              <text>No</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2025"){
+	this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+                        </event>
+                     </field>
+                     <keep intact="none"/>
+                     <occur max="-1"/>
+                     <?templateDesigner expand 0?></subform>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+                  <overflow leader="HeaderRow"/>
+                  <?templateDesigner expand 0?></subform>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.formType.rawValue == "FAFSA"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <draw name="Text1" w="29.2864mm" h="4.925mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 80183 11127 0 0 1417 1417 0 0?></draw>
+            <subform w="203.2mm" h="115.404mm" name="StudentSignaturePanel">
+               <draw w="203.2mm" h="22.225mm" name="Certification" y="46.936mm">
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:<span style="font-weight:normal"><br/>By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I (we) agree to provide additional proof of the information I (we) have reported, if requested to do so. I (we) also certify that I (we) have read the terms and conditions section of the CSU Fullerton, Financial Aid website (</span><a href="http://www.fullerton.edu/financialaid/info/Terms.php" style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt">http://www.fullerton.edu/financialaid/info/Terms.php</a><span style="font-weight:normal">)<span style="xfa-spacerun:yes"> </span></span>Signatures are required.</p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro"/>
+               </draw>
+               <field name="studentIDNumber" y="78.686mm" x="152.4mm" w="50.8mm" h="8.999mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11.64mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>CWID</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  </caption>
+               </field>
+               <draw y="91.386mm" w="8in" h="0.384486in" name="Warning">
+                  <font typeface="Myriad Pro" baselineShift="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:0.85pt;margin-left:5.35pt;line-height:12pt;font-weight:bold;letter-spacing:0in">*Warning:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <field name="studentSignature" y="78.686mm" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="37.2017mm">
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Student’s Name:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="studentScribbleSignature" w="133.35mm" h="9mm" y="69.161mm">
+                  <ui>
+                     <imageEdit data="embed"/>
+                     <extras name="x-scribble-add-on">
+                        <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                     </extras>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <caption reserve="37.2017mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Student E-signature</span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <desc>
+                     <text name="embeddedHref"/>
+                  </desc>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner/>
+                     <corner presence="hidden"/>
+                     <corner/>
+                  </border>
+               </field>
+               <field name="ipAddress" y="69.161mm" x="133.35mm" w="69.85mm" h="8.999mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="18.2076mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> IP Address</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  </caption>
+               </field>
+               <draw name="Line1" w="203.2mm" h="0in" y="46.936mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.4293mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line1" w="203.2mm" h="0in" y="110.436mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.4293mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line1" w="0in" h="63.5mm" y="46.936mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.4293mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line1" w="0in" h="63.5mm" x="203.2mm" y="46.936mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.4293mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <field name="studentSignDate" y="78.686mm" x="101.6mm" w="50.8mm" h="8.999mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <caption reserve="11.9647mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Date</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  </caption>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
+         <keep intact="none"/>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010009000A000D000E000F00100011001200130014001500160017002200230024002500260027002A002B002D002F003000340036003A00420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A (),-./0123456ABCDEFIJLNOSUYabcdefghijklmnopqrstuvwxy?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 208 54 000100080009000A000B000D000E000F00100017001B00200022002300240025002600270029002A002D002E002F0030003100330034003500360038003A003B0042004400450046004700480049004A004D004E004F005000510052005300540055005600580068 ’()*,-./6:?ABCDEFHILMNOPRSTUWYZacdefghilmnopqrstuw'?>
+      <?renderCache.subset "Myriad Pro" 0 1 ISO-8859-1 4 104 26 0001000D000F002A003500420043004400450046004700480049004A004D004E004F00500051005300540055005600570058005A ,.ITabcdefghilmnoprstuvwy?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 77?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <common/>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-05-17T05:27:29Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:7a443d72-27ea-4eed-9f55-13ba23e240d5</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:dc3dd9b5-ac9d-44ef-bcee-05027964cff0</xmpMM:InstanceID>
+         <dc:format>application/pdf</dc:format>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-09-19T09:59:17.258-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-09-19T09:59:19.291-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/type-a-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Letter of Recommendation"
+        jcr:uuid="1b87512a-e74b-493a-961d-5a79e97ac4cd"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2020-12-22T23:08:11.874-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="Attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.letter_of_recommendation_lor_letter_of_recommendation"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/letter-of-recommendation-lor/Letter_of_Recommendation.xdp"
+            dorType="select"
+            enableLayoutLayer="false"
+            from="csuf@fullerton.edu"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            includeAttachments="true"
+            mailto="[pushpa.kawadi@thoughtfocus.com]"
+            name="guide1"
+            redirect="/content/formsPortal/request-for-a-letter-of-recommendation--lor-"
+            schemaType="xmlschema"
+            subject="Test - Letter of Recommendation"
+            template="Dear President's Office,&#xd;&#xa;&#xd;&#xa;Letter of Recommendation is requested by ${ApplicantName}.&#xd;&#xa;&#xd;&#xa;Regards,&#xd;&#xa;Administrator"
+            textIsRich="true"
+            thankYouMessage="&lt;p style=&quot;text-align: center;&quot;>Thank you for submitting the Request for a Letter of Recommendation.&lt;/p>&#xd;&#xa;"
+            thankYouOption="page"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/request-for-the-letter-for-recommendation"
+            xsdRef="/content/dam/formsanddocuments/letter-of-recommendation-lor/Letter_of_Recommendation.xsd"
+            xsdRootElement="LOR">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:lastModified="{Date}2019-05-15T22:58:06.904-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExpReq="{Boolean}false"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/rootPanel">
+                    <basicinformation
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic Information"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="basicInformation">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextdraw_394345963
+                                jcr:created="{Date}2020-11-09T23:29:14.760-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-11-09T23:30:50.980-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_3943459631604993354836"
+                                textIsRich="true"/>
+                            <guidetextdraw
+                                jcr:created="{Date}2020-11-17T00:23:44.725-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-11-17T00:24:45.452-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Please complete the form to request a letter of recommendation from the President. Please note: Requests for Letters of Recommendation must be submitted at least 30 days prior to the deadline.&lt;/p>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1605601424897"
+                                textIsRich="true"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                    </basicinformation>
+                    <qualityquantityoralc
+                        cq:cssClass="guide-1604987764537"
+                        jcr:lastModified="{Date}2020-11-09T22:00:29.211-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="LOR Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        completionExpReq="{Boolean}false"
+                        cssStyle=".guide-1604987764537 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon:hover{&#xa;background:#084B8A;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1604987764537 .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon,.guide-1604987764537  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon,.guide-1604987764537 .guideVerticalTabbedPanelLayout .tab-navigators > li.stepped.active > a.guideTopNavIcon,.guide-1604987764537  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.stepped.active > a.guideTopNavIcon,.guide-1604987764537  .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon:hover,.guide-1604987764537  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#084B8A;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1604987764537 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon{&#xa;background:#00274c;&#xa;color:#ffffff;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1604987764537 .guideVerticalTabbedPanelLayout .tab-navigators{&#xa;background:#ffffff;&#xa;text-align: center;&#xa;}&#xa;.guide-1604987764537 .afTabTopPanel{&#xa;padding-right:5px;&#xa;padding-bottom:5px;&#xa;padding-left:5px;&#xa;padding-top:5px;&#xa;border-color:AAAAAA;&#xa;border-style:solid;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="LORPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <items jcr:primaryType="nt:unstructured">
+                            <quality
+                                cq:cssClass="guide-1604992335297"
+                                fd:bindRefType="SCHEMA"
+                                jcr:lastModified="{Date}2020-11-09T22:01:15.108-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Basic Information"
+                                sling:resourceType="fd/af/components/panel"
+                                bindRef="/LOR/FirstName"
+                                cssStyle=".guide-1604992335297 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="studentInformation"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_587647217
+                                        jcr:created="{Date}2020-11-18T22:28:21.024-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-02-11T20:52:32.706-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;text-align: center;&quot;>To get the Campus Wide ID: &lt;a href=&quot;https://my.fullerton.edu/Accounts/CWID/&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-11&quot;>Click Here&lt;/a>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_5876472171605767301119"
+                                        textIsRich="true"/>
+                                    <FName1605952094610
+                                        cq:cssClass="guide-1613099606023"
+                                        jcr:lastModified="{Date}2020-11-21T01:48:29.292-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* First Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/FName"
+                                        cssStyle=".guide-1613099606023 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="FName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </FName1605952094610>
+                                    <LastName1605766944959
+                                        cq:cssClass="guide-1605767072100"
+                                        jcr:lastModified="{Date}2020-11-18T22:23:45.983-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Last Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/LastName"
+                                        cssStyle=".guide-1605767072100 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="LastName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </LastName1605766944959>
+                                    <CWID1604987418641
+                                        cq:cssClass="guide-1604994030671"
+                                        jcr:lastModified="{Date}2021-02-11T21:43:53.020-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Campus Wide ID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/CWID"
+                                        cssStyle=".guide-1604994030671 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^\\d{9}$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="CWID"
+                                        textIsRich="[true,true,true]"
+                                        validatePictureClauseMessage="Please enter a valid CWID, should be of 9 digits.">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.studentInformation.CWID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;CWID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_CWID_valueCommit0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_CWID_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CWID1604987418641>
+                                    <PhoneNumber1604987420857
+                                        cq:cssClass="guide-1604994033082"
+                                        jcr:lastModified="{Date}2021-02-11T20:40:16.415-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Phone Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/PhoneNumber"
+                                        cssStyle=".guide-1604994033082 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^[^a-zA-Z^\\$^&amp;^*^@^!^%^{^}^\\?^;]+$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="PhoneNumber"
+                                        textIsRich="[true,true,true]"
+                                        validatePictureClauseMessage="Invalid Phone Number format.">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </PhoneNumber1604987420857>
+                                    <EmailAddress1604987424360
+                                        cq:cssClass="guide-1604994035613"
+                                        jcr:lastModified="{Date}2020-11-09T22:43:50.625-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Email Address"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/EmailAddress"
+                                        cssStyle=".guide-1604994035613 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^(([^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+(\\.[^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+)*)|(&quot;.+&quot;))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="EmailAddress"
+                                        textIsRich="[true,true,true]"
+                                        validatePictureClauseMessage="Invalid Email format.">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </EmailAddress1604987424360>
+                                    <Major1604987426705
+                                        cq:cssClass="guide-1604994041129"
+                                        jcr:lastModified="{Date}2020-11-09T22:45:35.646-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Major"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/LOR/Major"
+                                        cssStyle=".guide-1604994041129 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="Major">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </Major1604987426705>
+                                    <GraduationYear1604987432192
+                                        cq:cssClass="guide-1604994038979"
+                                        jcr:lastModified="{Date}2020-11-19T04:45:03.125-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Graduation Year"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/GraduationYear"
+                                        cssStyle=".guide-1604994038979 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^\\d{4}$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="GraduationYear"
+                                        textIsRich="[true,true,true]"
+                                        validatePictureClauseMessage="Invalid Year format.">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </GraduationYear1604987432192>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2020-11-16T15:56:16.162-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-11-16T15:57:42.124-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Please complete the form to request a letter of recommendation from the President.&amp;nbsp; Please note: Requests for Letters of Recommendation must be submitted at least 30 days prior to the deadline.&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1605570976303"
+                                        textIsRich="true">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.studentInformation.textdraw1605570976303&quot;\,&quot;type&quot;:&quot;STATIC TEXT|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;textdraw1605570976303&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_textdraw1605570976303_init0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_textdraw1605570976303_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidetextdraw>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[]"
+                                        default_x0023_default_x0023_ui="[paddingPopover:Set,borderWidthPopover:Set]"/>
+                                </style>
+                            </quality>
+                            <panel
+                                cq:cssClass="guide-1604993093144"
+                                jcr:created="{Date}2020-11-09T22:00:49.401-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-11-09T23:44:15.045-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="LOR Details"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1604993093144 .afTabTopPanel{&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="LORInformation"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <lorduedate1604987435
+                                        cq:cssClass="guide-1604993984732"
+                                        jcr:lastModified="{Date}2020-12-22T23:55:53.562-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* LOR Due Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        bindRef="/LOR/LORDueDate"
+                                        cssStyle=".guide-1604993984732 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDatePicker"
+                                        mandatory="true"
+                                        name="LORDueDate"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.LORInformation.LORDueDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;LORDueDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_LORDueDate_init0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_LORDueDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </lorduedate1604987435>
+                                    <reasonforlor16049874
+                                        cq:cssClass="guide-1604994045626"
+                                        jcr:lastModified="{Date}2020-11-09T22:46:28.635-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Reason Letter of Recommendation is being requested (grad school, internship, etc.)"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/ReasonForLOR"
+                                        colspan="4"
+                                        cssStyle=".guide-1604994045626 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        multiLine="true"
+                                        name="ReasonForLOR"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </reasonforlor16049874>
+                                    <contactinfo160498744
+                                        cq:cssClass="guide-1604994047129"
+                                        jcr:lastModified="{Date}2020-11-09T22:46:32.653-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Where LOR needs to be sent (institution and contact info)"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/ContactInfo"
+                                        colspan="4"
+                                        cssStyle=".guide-1604994047129 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        multiLine="true"
+                                        name="ContactInfo"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </contactinfo160498744>
+                                    <shortbio160498744553
+                                        cq:cssClass="guide-1604994048584"
+                                        jcr:lastModified="{Date}2020-11-09T22:46:41.668-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Short Bio/Extracurricular activities"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/ShortBio"
+                                        colspan="4"
+                                        cssStyle=".guide-1604994048584 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        multiLine="true"
+                                        name="ShortBio"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </shortbio160498744553>
+                                </items>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_tabsontopcontentarea
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[]"
+                                        default_x0023_default_x0023_ui="[]"/>
+                                </style>
+                            </panel>
+                            <supportingDocuments
+                                jcr:lastModified="{Date}2020-11-09T21:49:58.042-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supporting Documents"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="supportingDocuments"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw
+                                        jcr:created="{Date}2020-11-09T23:41:26.213-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-11-22T15:04:14.807-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;i>&lt;b>Note&lt;/b> : Please upload Unofficial transcripts and Resume&lt;/i>&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1604994086275"
+                                        textIsRich="true"/>
+                                    <SupportingDoc11604987403047
+                                        cq:cssClass="guide-1604994002422"
+                                        jcr:lastModified="{Date}2020-11-23T05:38:09.705-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 1"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        bindRef="/LOR/SupportingDoc1"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1604994002422 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        fileSizeLimit="2"
+                                        guideNodeClass="guideFileUpload"
+                                        mandatory="true"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="SupportingDoc1"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                mandatory="true"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.supportingDocuments.SupportingDoc1&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;SupportingDoc1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </SupportingDoc11604987403047>
+                                    <SupportingDoc21604987405192
+                                        cq:cssClass="guide-1604994010193"
+                                        jcr:lastModified="{Date}2020-11-23T05:38:20.576-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 2"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        bindRef="/LOR/SupportingDoc2"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1604994010193 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        fileSizeLimit="2"
+                                        guideNodeClass="guideFileUpload"
+                                        mandatory="true"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="SupportingDoc2"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                mandatory="true"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.supportingDocuments.SupportingDoc2&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;SupportingDoc2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </SupportingDoc21604987405192>
+                                    <SupportingDoc31604987407288
+                                        cq:cssClass="guide-1604994011681"
+                                        jcr:lastModified="{Date}2020-11-23T05:38:29.624-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 3"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        bindRef="/LOR/SupportingDoc3"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1604994011681 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        fileSizeLimit="2"
+                                        guideNodeClass="guideFileUpload"
+                                        mandatory="true"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="SupportingDoc3"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.supportingDocuments.SupportingDoc3&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;SupportingDoc3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc3_valueCommit0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc3_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </SupportingDoc31604987407288>
+                                    <SupportingDoc41604987409898
+                                        cq:cssClass="guide-1604994013087"
+                                        jcr:lastModified="{Date}2020-11-23T05:38:38.346-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 4"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        bindRef="/LOR/SupportingDoc4"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1604994013087 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        fileSizeLimit="2"
+                                        guideNodeClass="guideFileUpload"
+                                        mandatory="true"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="SupportingDoc4"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LORPanel.supportingDocuments.SupportingDoc4&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;SupportingDoc4&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc4_valueCommit0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_SupportingDoc4_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </SupportingDoc41604987409898>
+                                    <doc11606136238846
+                                        jcr:lastModified="{Date}2024-04-12T04:55:12.662-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Doc 1"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/doc1"
+                                        guideNodeClass="guideTextBox"
+                                        name="doc1"
+                                        textIsRich="[true,true,true]"
+                                        visible="{Boolean}true"/>
+                                    <doc21606136242571
+                                        jcr:lastModified="{Date}2024-04-12T04:55:21.962-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Doc 2"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/doc2"
+                                        guideNodeClass="guideTextBox"
+                                        name="doc2"
+                                        textIsRich="[true,true,true]"
+                                        visible="{Boolean}true"/>
+                                    <doc31606136245154
+                                        jcr:lastModified="{Date}2024-04-12T04:55:28.365-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Doc 3"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/doc3"
+                                        guideNodeClass="guideTextBox"
+                                        name="doc3"
+                                        textIsRich="[true,true,true]"
+                                        visible="{Boolean}true"/>
+                                    <doc41606136247746
+                                        jcr:lastModified="{Date}2024-04-12T04:55:34.350-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Doc 4"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LOR/doc4"
+                                        guideNodeClass="guideTextBox"
+                                        name="doc4"
+                                        textIsRich="[true,true,true]"
+                                        visible="{Boolean}true"/>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                            </supportingDocuments>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/verticalTabbedPanelLayout"
+                            columns="1"
+                            enableLayoutOptimization="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[color:#ffffff,background:#084B8A,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px]"
+                                default_x0023_active_x0023_ui="[backgroundColor:#084B8A]"
+                                default_x0023_default="[cssOverride:border-top-right-radius: 50px 20px,background:#00274c,color:#ffffff]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_hover="[cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#084B8A]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#084B8A]"/>
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[background:#ffffff,cssOverride:text-align: center;]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#ffffff]"
+                                default_x0023_hover="[cssOverride:background:none;]"/>
+                            <af_tabsontopcontentarea
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[padding-right:5px,padding-bottom:5px,padding-left:5px,padding-top:5px,border-color:AAAAAA,border-style:solid,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px]"
+                                default_x0023_default_x0023_ui="[paddingPopover:5px,borderWidthPopover:1px]"/>
+                        </style>
+                    </qualityquantityoralc>
+                </items>
+                <toolbar
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Toolbar"
+                    sling:resourceType="fd/af/components/toolbar"
+                    css=""
+                    guideNodeClass="guideToolbar"
+                    name="toolbar">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                        <submit
+                            jcr:created="{Date}2020-11-09T21:46:32.752-08:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-11-09T21:46:32.752-08:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Submit"
+                            sling:resourceType="fd/af/components/actions/submit"
+                            dorExclusion="true"
+                            guideNodeClass="guideButton"
+                            name="submit1604987192821"
+                            type="submit">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.submit1604987192821&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1604987192821&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_submit1604987192821_click0&quot;\,&quot;displayName&quot;:&quot;letter_of_recommendation_lor_letter_of_recommendation.generated_submit1604987192821_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </submit>
+                    </items>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+                </toolbar>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+            <globalMetaInfo jcr:primaryType="nt:unstructured"/>
+        </guideContainer>
+        <parsys1
+            jcr:lastModified="{Date}2019-03-11T01:19:10.761-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1604987658198"
+                jcr:created="{Date}2019-03-10T22:37:16.000-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:46:24.448-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1604987658198 .afHeader{&#xa;background:#00274c;&#xa;height: 65px;&#xa;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1727970527192">
+                <guideimage
+                    cq:cssClass="guide-1604987693844"
+                    jcr:lastModified="{Date}2020-11-09T21:45:44.570-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1604987693844 .guideImage img{&#xa;margin-top:0;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/CSUF Assets/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="CSUF_logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top:0;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2024-09-19T09:59:17.226-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;LORHeader&quot; style=&quot;padding-left: 130px;&quot;>&lt;p>&lt;b>Request for a Letter of Recommendation (LOR)&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 65px;&#xa;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+        <parsys2
+            jcr:lastModified="{Date}2019-03-11T01:19:22.529-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1604987725171"
+                jcr:created="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1604987725171 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;"
+                name="footer1727970528465">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2023-02-14T01:33:57.019-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p id=&quot;FooterText&quot;>© 2021 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

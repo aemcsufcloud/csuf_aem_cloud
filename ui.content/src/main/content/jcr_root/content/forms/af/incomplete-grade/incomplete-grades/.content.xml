@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-09-17T10:04:49.617-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-09-17T10:04:51.522-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/type-b-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Incomplete Grades (Student Form)"
+        jcr:uuid="cdf99c72-58cb-4311-ac3e-130ea00de68a"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2020-10-22T05:13:23.305-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.incomplete_grade_incomplete_grades"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/incomplete-grade/Statement_of_Requirements_for_Incomplete_Grades.xdp"
+            dorType="select"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            redirect="/content/formsPortal/Incomplete_Grade_Submission_Page/jcr:content"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="&lt;p style=&quot;text-align: center;&quot;>Thank you for submitting the Incomplete(I) Grade&lt;/p>&#xd;&#xa;"
+            thankYouOption="message"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/incomplete-grade"
+            xsdRef="/content/dam/formsanddocuments/incomplete-grade/Statement_of_Requirements_for_Incomplete_Grades.xsd"
+            xsdRootElement="IncompleteGrade">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:lastModified="{Date}2020-09-11T02:45:57.492-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExpReq="{Boolean}false"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    columns="4"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/rootPanel">
+                    <guidetextdraw
+                        jcr:created="{Date}2020-09-10T02:35:09.895-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-23T03:47:51.858-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p style=&quot;text-align: center;&quot;>To know about the procedures and guidance -&amp;nbsp;&lt;a href=&quot;/content/formsPortal/incomplete-grade-instruction.html&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-23&quot;>Click here&lt;/a>&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>Link to UPS - &lt;a href=&quot;https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.017.pdf&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-48&quot;>link&lt;/a>&lt;/p>&#xa;"
+                        colspan="4"
+                        guideNodeClass="guideTextDraw"
+                        name="instructionText"
+                        textIsRich="true"/>
+                    <guidetextdraw_50429927
+                        jcr:created="{Date}2020-09-11T02:45:31.048-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-11T02:46:26.850-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        colspan="3"
+                        guideNodeClass="guideTextDraw"
+                        name="textdraw_504299271599817531245"
+                        textIsRich="true"/>
+                    <CaseID1599817508768
+                        jcr:lastModified="{Date}2020-09-11T02:46:43.949-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Case ID"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/IncompleteGrade/CaseID"
+                        guideNodeClass="guideTextBox"
+                        name="CaseID"
+                        textIsRich="[true,true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.CaseID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;CaseID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_CaseID_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_CaseID_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </CaseID1599817508768>
+                    <panel
+                        cq:cssClass="guide-1599731082855"
+                        jcr:created="{Date}2020-09-10T02:33:27.131-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-11T02:46:07.905-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/panel"
+                        colspan="4"
+                        completionExpReq="{Boolean}false"
+                        cssStyle=".guide-1599731082855 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#084B8A;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1599731082855 .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon,.guide-1599731082855  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon,.guide-1599731082855 .guideVerticalTabbedPanelLayout .tab-navigators > li.stepped.active > a.guideTopNavIcon,.guide-1599731082855  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.stepped.active > a.guideTopNavIcon,.guide-1599731082855  .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon:hover,.guide-1599731082855  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon:hover{&#xa;background:#084B8A;&#xa;color:#ffffff;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1599731082855 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon{&#xa;background:#00274c;&#xa;color:#ffffff;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1599731082855 .afTabTopPanel{&#xa;border-color:#AAAAAA;&#xa;border-style:solid;&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;padding-right:5px;&#xa;padding-bottom:5px;&#xa;padding-left:5px;&#xa;padding-top:5px;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="mainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/verticalTabbedPanelLayout"
+                            columns="1"
+                            enableLayoutOptimization="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <basicinformation
+                                cq:cssClass="guide-1599739295029"
+                                jcr:lastModified="{Date}2020-09-10T02:49:57.810-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Basic Information"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1599739295029 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="basicInformation"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_999302312
+                                        jcr:created="{Date}2020-09-10T03:10:18.832-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:10:38.290-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Course Information&lt;/b>&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_9993023121599732618914"
+                                        textIsRich="true"/>
+                                    <TermAndYear1599731369410
+                                        cq:cssClass="guide-1599828410692"
+                                        jcr:lastModified="{Date}2023-05-11T09:14:56.443-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Term &amp; Year"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        _value="Fall 2022"
+                                        bindRef="/IncompleteGrade/TermAndYear"
+                                        cssStyle=".guide-1599828410692 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDropDownList"
+                                        mandatory="true"
+                                        name="TermAndYear"
+                                        options="[Spring 2018,Summer 2018,Fall 2018,Winter 2019,Spring 2019,Summer 2019,Fall 2019,Winter 2020,Spring 2020,Summer 2020,Fall 2020,Spring 2021,Summer 2021,Fall 2021,Spring 2022,Summer 2022,Fall 2022,Spring 2023]"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.TermAndYear&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;TermAndYear&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_TermAndYear_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_TermAndYear_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </TermAndYear1599731369410>
+                                    <classnumberandname16
+                                        jcr:lastModified="{Date}2020-09-15T20:38:26.507-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Class &amp; Course Name"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        bindRef="/IncompleteGrade/ClassNumberAndName"
+                                        guideNodeClass="guideDropDownList"
+                                        name="ClassNumberAndName"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.ClassNumberAndName&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ClassNumberAndName&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_ClassNumberAndName_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_ClassNumberAndName_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </classnumberandname16>
+                                    <ScheduleNo1599731362862
+                                        cq:cssClass="guide-1599828308100"
+                                        jcr:lastModified="{Date}2020-09-15T20:38:19.613-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Schedule Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/ScheduleNo"
+                                        cssStyle=".guide-1599828308100 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="ScheduleNo"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.ScheduleNo&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ScheduleNo&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_ScheduleNo_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_ScheduleNo_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </ScheduleNo1599731362862>
+                                    <Units1599731373467
+                                        cq:cssClass="guide-1599828323989"
+                                        jcr:lastModified="{Date}2020-09-15T20:38:12.463-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Units"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/Units"
+                                        cssStyle=".guide-1599828323989 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="Units"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.Units&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Units&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_Units_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_Units_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </Units1599731373467>
+                                    <ClassNumber1599823338190
+                                        cq:cssClass="guide-1599828402136"
+                                        jcr:lastModified="{Date}2020-09-15T20:38:08.055-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Class Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/ClassNumber"
+                                        cssStyle=".guide-1599828402136 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="ClassNumber"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.ClassNumber&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ClassNumber&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_ClassNumber_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_ClassNumber_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </ClassNumber1599823338190>
+                                    <DeptOrCourseNo1599731359564
+                                        cq:cssClass="guide-1599828321741"
+                                        jcr:lastModified="{Date}2020-09-15T20:38:00.992-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Department/Course Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/DeptOrCourseNo"
+                                        cssStyle=".guide-1599828321741 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="DeptOrCourseNo"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.DeptOrCourseNo&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;DeptOrCourseNo&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_DeptOrCourseNo_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_DeptOrCourseNo_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </DeptOrCourseNo1599731359564>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2020-09-10T03:09:15.531-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:09:37.323-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Student Information&lt;/b>&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1599732555703"
+                                        textIsRich="true"/>
+                                    <CWID1599731325746
+                                        cq:cssClass="guide-1599828326199"
+                                        jcr:lastModified="{Date}2020-09-15T20:37:53.953-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Campus Wide ID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/CWID"
+                                        cssStyle=".guide-1599828326199 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="CWID"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.CWID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;CWID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_CWID_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_CWID_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CWID1599731325746>
+                                    <StudentName1599731317375
+                                        cq:cssClass="guide-1599828328307"
+                                        jcr:lastModified="{Date}2020-09-15T20:37:47.631-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Student Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/StudentName"
+                                        cssStyle=".guide-1599828328307 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="StudentName"
+                                        textIsRich="[true,true,true]">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.StudentName&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;StudentName&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_StudentName_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_StudentName_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </StudentName1599731317375>
+                                    <Address11599731337729
+                                        cq:cssClass="guide-1599828329708"
+                                        jcr:lastModified="{Date}2020-09-23T03:34:20.161-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Address"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/Address1"
+                                        colspan="1"
+                                        cssStyle=".guide-1599828329708 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="Address1"
+                                        textIsRich="[true,true,true]">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.Address1&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Address1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_Address1_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_Address1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </Address11599731337729>
+                                    <studentemail15998212
+                                        cq:cssClass="guide-1600857295776"
+                                        jcr:lastModified="{Date}2020-09-23T03:34:42.361-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Student Email"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/StudentEmail"
+                                        cssStyle=".guide-1600857295776 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="StudentEmail"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </studentemail15998212>
+                                    <panel
+                                        jcr:created="{Date}2020-09-14T03:09:13.882-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-14T03:10:11.200-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Email Address Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="4"
+                                        guideNodeClass="guidePanel"
+                                        name="emailAddressPanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <deptchairemail159982
+                                                jcr:lastModified="{Date}2020-09-16T03:29:44.236-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Dept Chair Email"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/IncompleteGrade/DeptChairEmail"
+                                                guideNodeClass="guideTextBox"
+                                                name="DeptChairEmail"
+                                                textIsRich="[true,true,true]"/>
+                                            <instructoremail15999
+                                                jcr:lastModified="{Date}2020-09-16T03:29:58.644-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Instructor Email"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/IncompleteGrade/InstructorEmail"
+                                                guideNodeClass="guideTextBox"
+                                                name="InstructorEmail"
+                                                textIsRich="[true,true,true]"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.basicInformation.emailAddressPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;emailAddressPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_emailAddressPanel_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_emailAddressPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[]"
+                                        default_x0023_default_x0023_ui="[borderWidthPopover:Set,paddingPopover:Set]"/>
+                                </style>
+                            </basicinformation>
+                            <additionalcriteria
+                                cq:cssClass="guide-1599734197468"
+                                jcr:lastModified="{Date}2020-09-10T03:15:37.340-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Grade Information"
+                                sling:resourceType="fd/af/components/panel"
+                                cssStyle=".guide-1599734197468 .guideGridFluidLayout{&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guidePanel"
+                                name="requirementsPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw
+                                        jcr:created="{Date}2020-09-10T03:17:53.029-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:18:30.619-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Student work to date is of the following quality:&lt;/p>&#xa;"
+                                        colspan="2"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1599733073268"
+                                        textIsRich="true"/>
+                                    <Quality1599731471565
+                                        cq:cssClass="guide-1599828640693"
+                                        jcr:lastModified="{Date}2020-09-10T03:17:44.799-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Student work to date is of the following quality"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        bindRef="/IncompleteGrade/Quality"
+                                        cssStyle=".guide-1599828640693 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDropDownList"
+                                        hideTitle="true"
+                                        mandatory="true"
+                                        name="Quality"
+                                        options="[A,A+,A-,B,B+,B-,C,C+,C-,D,D+,D-,F,CR,NC,No basis for evaluation]"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </Quality1599731471565>
+                                    <guidetextdraw_2077731490
+                                        jcr:created="{Date}2020-09-10T03:22:25.241-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:22:48.399-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Work is Incomplete because:&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_20777314901599733345375"
+                                        textIsRich="true"/>
+                                    <MissingExamCB1599731473770
+                                        jcr:lastModified="{Date}2020-09-11T05:40:23.316-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Missing Exam CB"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/IncompleteGrade/MissingExamCB"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="MissingExamCB"
+                                        options="[1=Missing exam]"
+                                        textIsRich="[true,true]"/>
+                                    <MissingPaperCB1599731478017
+                                        jcr:lastModified="{Date}2020-09-11T05:40:27.856-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Missing Paper CB"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/IncompleteGrade/MissingPaperCB"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="MissingPaperCB"
+                                        options="[1=Missing paper]"
+                                        textIsRich="[true,true]"/>
+                                    <MissingLabCB1599731481342
+                                        jcr:lastModified="{Date}2020-09-11T05:40:32.635-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Missing Lab CB"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/IncompleteGrade/MissingLabCB"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="MissingLabCB"
+                                        options="[1=Missing lab work]"
+                                        textIsRich="[true,true]"/>
+                                    <OtherReasonForIncompletion1599731485025
+                                        cq:cssClass="guide-1599828335450"
+                                        jcr:lastModified="{Date}2020-10-21T21:26:52.895-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Explain specific requirements. The requirements may not include retaking or attending a major portion of the course"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/OtherReasonForIncompletion"
+                                        colspan="4"
+                                        cssStyle=".guide-1599828335450 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        multiLine="true"
+                                        name="OtherReasonForIncompletion"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </OtherReasonForIncompletion1599731485025>
+                                    <guidetextdraw_1225981044
+                                        jcr:created="{Date}2020-09-10T03:25:54.661-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:26:03.085-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Date work must be completed:&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_12259810441599733554731"
+                                        textIsRich="true"/>
+                                    <WorkCompletionDate1599731526816
+                                        cq:cssClass="guide-1599828383903"
+                                        jcr:lastModified="{Date}2020-09-10T03:25:41.456-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Work Completion Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/WorkCompletionDate"
+                                        cssStyle=".guide-1599828383903 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDatePicker"
+                                        hideTitle="true"
+                                        mandatory="true"
+                                        name="WorkCompletionDate"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.requirementsPanel.WorkCompletionDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;WorkCompletionDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_WorkCompletionDate_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_WorkCompletionDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.requirementsPanel.WorkCompletionDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;WorkCompletionDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_WorkCompletionDate_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_WorkCompletionDate_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </WorkCompletionDate1599731526816>
+                                    <guidetextdraw_1066397280
+                                        jcr:created="{Date}2020-09-10T03:26:31.984-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-10-21T21:27:18.376-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>An Incomplete must be made up within one year following the end of the term&amp;nbsp;during which it was assigned.&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10663972801599733592108"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_452753453
+                                        jcr:created="{Date}2020-09-10T03:31:03.984-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-10T03:31:51.997-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>I grades not removed within the time limit will automatically be changed to an IC (which is equivalent to an F for grade point purposes) or a NC grade.&lt;/p>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_4527534531599733864059"
+                                        textIsRich="true"/>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_responsivepanel
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[]"
+                                        default_x0023_default_x0023_ui="[paddingPopover:Set,borderWidthPopover:Set]"/>
+                                </style>
+                            </additionalcriteria>
+                            <panel
+                                jcr:created="{Date}2020-09-25T05:13:24.770-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-09-25T05:14:01.171-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supporting Documents"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="supportingDocs"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_copy_c
+                                        jcr:created="{Date}2020-01-07T22:16:28.000-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-27T20:57:39.359-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;color: rgb(255, 0, 0);&quot;>&lt;b>Please Note:&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Attachment does not support following special characters / \\ : * ? &amp;amp; { } ; [ ]&lt;/li>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Only PDF, JPEG, PNG, JPG, TIF, TIFF files are allowed&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="supDocGuide"
+                                        text="The text will appear here"
+                                        textIsRich="true"/>
+                                    <guidefileupload
+                                        jcr:created="{Date}2020-09-25T05:15:11.929-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-25T05:16:42.303-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 1"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="supportDoc1"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.supportingDocs.supportDoc1&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_supportDoc1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_supportDoc1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload>
+                                    <guidefileupload_2088715663
+                                        jcr:created="{Date}2020-09-25T05:16:49.354-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-09-25T05:17:14.239-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 2"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[audio/*, video/*, image/*, text/*, application/pdf]"
+                                        name="supportDoc2"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.supportingDocs.supportDoc2&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_supportDoc2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_supportDoc2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload_2088715663>
+                                </items>
+                            </panel>
+                            <signature
+                                jcr:lastModified="{Date}2020-09-10T03:33:43.128-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Signature and Acknowledgement"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="signature"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <InstructorCB1599731728992
+                                        cq:cssClass="guide-1599828353935"
+                                        jcr:lastModified="{Date}2020-09-25T05:10:00.854-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Instructor CB"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/IncompleteGrade/InstructorCB"
+                                        colspan="4"
+                                        cssStyle=".guide-1599828353935 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        mandatory="true"
+                                        name="InstructorCB"
+                                        options="[1=An Incomplete may be given only when\, in the opinion of the instructor\, a student cannot complete a course during the term of enrollment for reasons beyond the student’s control. Such reasons include: illness of the student or of members of the student’s immediate family\, extraordinary financial problems\, loss of outside position\, and other exigencies.]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.signature.InstructorCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;InstructorCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </InstructorCB1599731728992>
+                                    <InstructorSignature1599731731214
+                                        cq:cssClass="guide-1599828344140"
+                                        jcr:lastModified="{Date}2020-10-22T04:45:41.851-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Instructor's Signature"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/IncompleteGrade/InstructorSignature"
+                                        cssStyle=".guide-1599828344140 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="InstructorSignature">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.signature.InstructorSignature&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;InstructorSignature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorSignature_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorSignature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </InstructorSignature1599731731214>
+                                    <InstructorSignDate1599731734510
+                                        cq:cssClass="guide-1599828365188"
+                                        jcr:lastModified="{Date}2020-09-11T05:49:09.040-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        bindRef="/IncompleteGrade/InstructorSignDate"
+                                        cssStyle=".guide-1599828365188 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDatePicker"
+                                        mandatory="true"
+                                        name="InstructorSignDate">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.mainPanel.signature.InstructorSignDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;InstructorSignDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorSignDate_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_InstructorSignDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </InstructorSignDate1599731734510>
+                                    <InstructorComments1599731737510
+                                        jcr:lastModified="{Date}2020-09-11T05:49:05.052-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Comments"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/IncompleteGrade/InstructorComments"
+                                        colspan="4"
+                                        guideNodeClass="guideTextBox"
+                                        multiLine="true"
+                                        name="InstructorComments"
+                                        textIsRich="[true,true,true]"/>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                            </signature>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[background:#084B8A,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,color:#ffffff]"
+                                default_x0023_active_x0023_ui="[backgroundColor:#084B8A]"
+                                default_x0023_default="[cssOverride:border-top-right-radius: 50px 20px,background:#00274c,color:#ffffff]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_hover="[color:#ffffff,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#084B8A]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#084B8A]"/>
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_hover="[cssOverride:background: none;]"/>
+                            <af_tabsontopcontentarea
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[border-color:#AAAAAA,border-style:solid,border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,padding-right:5px,padding-bottom:5px,padding-left:5px,padding-top:5px]"
+                                default_x0023_default_x0023_ui="[borderWidthPopover:1px,paddingPopover:5px]"/>
+                        </style>
+                    </panel>
+                    <panel_868198458
+                        jcr:created="{Date}2020-09-11T03:48:01.709-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-10-29T03:37:07.711-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hidden Fields Section"
+                        sling:resourceType="fd/af/components/panel"
+                        colspan="4"
+                        guideNodeClass="guidePanel"
+                        name="hiddenPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}true">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <stageindicator159982
+                                jcr:lastModified="{Date}2020-09-11T03:48:31.730-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Stage Indicator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/StageIndicator"
+                                guideNodeClass="guideTextBox"
+                                name="StageIndicator"
+                                textIsRich="[true,true,true]"/>
+                            <loguser1599821306659
+                                jcr:lastModified="{Date}2020-09-11T03:48:43.217-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Log User"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/LogUser"
+                                guideNodeClass="guideTextBox"
+                                name="LogUser"
+                                textIsRich="[true,true,true]"/>
+                            <StudentUserId1599901979072
+                                jcr:lastModified="{Date}2020-09-12T02:14:37.127-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student User Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/StudentUserId"
+                                guideNodeClass="guideTextBox"
+                                name="StudentUserId"
+                                textIsRich="[true,true,true]"/>
+                            <InstructorUserId1599916325466
+                                jcr:lastModified="{Date}2020-09-12T06:12:11.159-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Instructor User Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/InstructorUserId"
+                                guideNodeClass="guideTextBox"
+                                name="InstructorUserId"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextbox
+                                jcr:created="{Date}2020-09-14T00:09:09.769-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-09-14T00:09:33.614-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Lookup Status"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideTextBox"
+                                name="InitialAjaxCallStatus"
+                                textIsRich="[true,true,true]"/>
+                            <InstructorCWID1601266774678
+                                jcr:lastModified="{Date}2020-09-27T21:21:39.221-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Instructor CWID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/InstructorCWID"
+                                guideNodeClass="guideTextBox"
+                                name="InstructorCWID"
+                                textIsRich="[true,true,true]"/>
+                            <DeptId1602654408777
+                                jcr:lastModified="{Date}2020-10-13T22:46:54.874-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dept Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/DeptId"
+                                guideNodeClass="guideTextBox"
+                                name="DeptId"
+                                textIsRich="[true,true,true]"/>
+                            <DepartmentName1602654410754
+                                jcr:lastModified="{Date}2020-10-13T22:46:59.002-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Department Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/DepartmentName"
+                                guideNodeClass="guideTextBox"
+                                name="DepartmentName"
+                                textIsRich="[true,true,true]"/>
+                            <ChairUserId1602827936107
+                                jcr:lastModified="{Date}2020-10-15T22:59:02.174-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Chair User Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/ChairUserId"
+                                guideNodeClass="guideTextBox"
+                                name="ChairUserId"
+                                textIsRich="[true,true,true]"/>
+                            <Term1603084259382
+                                jcr:lastModified="{Date}2020-10-18T22:11:04.633-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Term"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/Term"
+                                guideNodeClass="guideTextBox"
+                                name="Term"
+                                textIsRich="[true,true,true]"/>
+                            <ChairName1603967561599
+                                jcr:lastModified="{Date}2020-10-29T03:32:51.562-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Chair Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/ChairName"
+                                guideNodeClass="guideTextBox"
+                                name="ChairName"
+                                textIsRich="[true,true,true]"/>
+                            <EmailSubject1604019980020
+                                jcr:lastModified="{Date}2020-10-29T18:06:26.949-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email Subject"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/IncompleteGrade/EmailSubject"
+                                guideNodeClass="guideTextBox"
+                                name="EmailSubject"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextbox_199194342
+                                jcr:created="{Date}2021-07-21T23:16:54.229-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2021-07-21T23:17:05.391-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Workflow Initiator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideTextBox"
+                                name="workflow_initiator"
+                                textIsRich="[true,true,true]"/>
+                        </items>
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.hiddenPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;hiddenPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_hiddenPanel_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_hiddenPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </panel_868198458>
+                </items>
+                <toolbar
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Toolbar"
+                    sling:resourceType="fd/af/components/toolbar"
+                    css=""
+                    guideNodeClass="guideToolbar"
+                    name="toolbar">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                        <submit
+                            jcr:created="{Date}2020-09-10T02:32:51.301-07:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-10T02:32:51.301-07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Submit"
+                            sling:resourceType="fd/af/components/actions/submit"
+                            dorExclusion="true"
+                            guideNodeClass="guideButton"
+                            name="submit1599730371564"
+                            type="submit">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.submit1599730371564&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1599730371564&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_submit1599730371564_click0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_submit1599730371564_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </submit>
+                    </items>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+                </toolbar>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;incomplete_grade_incomplete_grades.generated_guideRootPanel_init1&quot;\,&quot;displayName&quot;:&quot;incomplete_grade_incomplete_grades.generated_guideRootPanel_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+        </guideContainer>
+        <parsys1
+            jcr:lastModified="{Date}2019-03-11T01:19:10.761-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1599731007738"
+                jcr:created="{Date}2019-03-10T22:37:16.000-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:46:24.448-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1599731007738 .afHeader{&#xa;background:#00274c;&#xa;height: 65px;&#xa;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1727964307343">
+                <guideimage
+                    cq:cssClass="guide-1599731053179"
+                    jcr:lastModified="{Date}2024-09-17T10:04:49.397-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1599731053179 .guideImage img{&#xa;margin-top:0;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="CSUF-orange-R.png"
+                    fileReference="/content/dam/CSUF-orange-R.png"
+                    guideNodeClass="guideImage"
+                    name="CSUF_logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top:0;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2021-07-22T05:52:00.681-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;igradeHeaderText&quot;>&lt;p style=&quot;padding-left: 332px;&quot;>&lt;b>INCOMPLETE (I) GRADE&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modalText&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot;>Error Body&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 65px;&#xa;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+        <parsys2
+            jcr:lastModified="{Date}2019-03-11T01:19:22.529-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1599739894583"
+                jcr:created="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1599739894583 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;"
+                name="footer1727964309282">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2021-07-15T02:14:00.885-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>© 2021 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

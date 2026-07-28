@@ -1,0 +1,147 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LateAdds">
+    <xs:complexType>
+      <xs:sequence> 
+			<xs:element type="xs:string" name="caseId"/>
+			<xs:element type="xs:string" name="StudentCWID"/>
+			<xs:element type="xs:string" name="StudentFirstName"/>
+			<xs:element type="xs:string" name="StudentLastName"/>
+			<xs:element type="xs:string" name="StudentAddress"/>
+			<xs:element type="xs:string" name="StudentCity"/>
+			<xs:element type="xs:string" name="StudentHomePhone"/>
+			<xs:element type="xs:string" name="WorkOtherTelephone"/>
+			<xs:element type="xs:string" name="ZipCode"/>
+			<xs:element type="xs:string" name="StudentState"/>
+			<xs:element type="xs:string" name="StudentEmail"/>
+			<xs:element type="xs:string" name="StudentCellPhone"/>
+            <xs:element type="xs:string" name="ExpectedDateOfGraduation"/>
+			<xs:element type="xs:string" name="InitiatedDate"/>
+			<xs:element type="xs:string" name="Term"/>
+			<xs:element type="xs:string" name="DegreeObjective"/>
+			<xs:element type="xs:string" name="Major"/>            
+			<xs:element name="Row1">	
+				<xs:complexType>
+					<xs:sequence>						
+                        <xs:element type="xs:string" name="ClassNumber"/>
+                        <xs:element type="xs:string" name="SemesterTaken"/>
+                        <xs:element type="xs:string" name="DepartmentCourse"/>
+                        <xs:element type="xs:string" name="ScheduleNumber"/>
+                        <xs:element type="xs:string" name="NumberOfUnits"/>
+						<xs:element type="xs:string" name="ReasonForFailure"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>	
+			<xs:element name="NonEIPQuestions">	
+				<xs:complexType>
+					<xs:sequence>						
+                        <xs:element type="xs:string" name="QuestionsForClassNumber"/> 
+                        <xs:element type="xs:string" name="AttendedCourseContinuously"/>
+						 <xs:element type="xs:string" name="CourseStartDate"/>
+                        <xs:element type="xs:string" name="MiniOrShortCourseDate"/>
+                        <xs:element type="xs:string" name="MiniOrShortCourse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>			
+			<xs:element type="xs:string" name="ReasonOfAddCourse"/>			
+			<xs:element type="xs:string" name="EIPStudentFirstName"/>
+			<xs:element type="xs:string" name="EIPStudentLastName"/>
+			<xs:element type="xs:string" name="EIPStudentMiddleName"/>
+			<xs:element type="xs:string" name="EIPStudentID"/>
+			<xs:element type="xs:string" name="ReEntryToCSUFCHK"/>
+			<xs:element type="xs:string" name="DQFromCSUFCHK"/>
+			<xs:element type="xs:string" name="PrerequisiteForGradProgramCHK"/>
+			<xs:element type="xs:string" name="GraduateLevelCourseCHK"/>
+			<xs:element type="xs:string" name="UndergradTransferCHK"/>
+			<xs:element type="xs:string" name="UndergradTransferCollege"/>
+			<xs:element type="xs:string" name="GuestOtherCollege"/>
+			<xs:element type="xs:string" name="GuestOtherCollegeCHK"/>
+			<xs:element type="xs:string" name="PrerequisiteForCredentialCHK"/>
+			<xs:element type="xs:string" name="CredentialCourseCHK"/>
+			<xs:element type="xs:string" name="OthersCHK"/>
+			<xs:element type="xs:string" name="AuthorizationForEnrollmentRB"/>
+			<xs:element type="xs:string" name="HighSchoolOrCollegeInEnglishRB"/>
+			<xs:element type="xs:string" name="ToeflScoreRB"/>
+			<xs:element type="xs:string" name="LivedInUSThreeYearsRB"/>
+			<xs:element type="xs:string" name="TuberculosisTestVerificationRB"/>
+			<xs:element type="xs:string" name="BornAfterRB"/>
+			<xs:element type="xs:string" name="ImmunizedStatusRB"/>
+			<xs:element type="xs:string" name="USCitizenCHK"/>
+			<xs:element type="xs:string" name="NonUSCitizenCHK"/>
+			<xs:element type="xs:string" name="ImmigrantStatus"/>
+			<xs:element type="xs:string" name="RefugeeAsylumApplicantStatus"/>			
+			<xs:element type="xs:string" name="OtherNonImmigrantStatus"/>
+			<xs:element type="xs:string" name="AdmissionNumber"/>
+			<xs:element type="xs:string" name="PassportNumber"/>
+			<xs:element type="xs:string" name="StatudentStatus"/>
+			<xs:element type="xs:string" name="J1Visa"/>			
+			<xs:element type="xs:string" name="PassportNumber2"/>
+			<xs:element type="xs:string" name="UniversityOrCollegeEnrollment"/>
+			<xs:element type="xs:string" name="NumberOfUnits2"/>
+			<xs:element type="xs:string" name="EIPStudentCHK"/>	
+			<xs:element type="xs:string" name="EIPStudentSignature"/>	
+			<xs:element type="xs:string" name="EIPStudentSignatureFirstName"/>
+			<xs:element type="xs:string" name="EIPStudentSignatureLastName"/>
+			<xs:element type="xs:string" name="EIPStudentDate"/>
+			<xs:element type="xs:string" name="EIPStudentComment"/>
+			<xs:element type="xs:string" name="StudentSignatureCHK"/>	
+			<xs:element type="xs:string" name="StudentSignature"/>	
+			<xs:element type="xs:string" name="StudentSignatureFirstName"/>
+			<xs:element type="xs:string" name="StudentSignatureLastName"/>
+			<xs:element type="xs:string" name="StudentSignatureDate"/>
+			<xs:element type="xs:string" name="StudentSignatureComment"/>
+			<xs:element type="xs:string" name="InstructorSignatureCHK"/>
+			<xs:element type="xs:string" name="InstructorAction"/>
+            <xs:element type="xs:string" name="InstructorSignature"/>
+            <xs:element type="xs:string" name="InstructorSignatureDate"/>
+            <xs:element type="xs:string" name="InstructorSignatureComment"/>
+			<xs:element type="xs:string" name="DeptChairCHK"/>
+			<xs:element type="xs:string" name="DeptChairAction"/>
+            <xs:element type="xs:string" name="DeptChairSignature"/>
+			<xs:element type="xs:string" name="DeptChairSignatureFirstName"/>
+			<xs:element type="xs:string" name="DeptChairSignatureLastName"/>
+            <xs:element type="xs:string" name="DeptChairDate"/>
+            <xs:element type="xs:string" name="DeptChairComment"/>
+			<xs:element type="xs:string" name="AssociateDeanCHK"/>
+			<xs:element type="xs:string" name="AssociateDeanAction"/>
+            <xs:element type="xs:string" name="AssociateDeanSignature"/>
+			<xs:element type="xs:string" name="AssociateDeanSignatureFirstName"/>
+			<xs:element type="xs:string" name="AssociateDeanSignatureLastName"/>
+            <xs:element type="xs:string" name="AssociateDeanSignatureDate"/>
+            <xs:element type="xs:string" name="AssociateDeanComment"/>
+			<xs:element type="xs:string" name="EIPGroupSignatureCHK"/>
+			<xs:element type="xs:string" name="EIPGroupAction"/>
+            <xs:element type="xs:string" name="EIPGroupSignature"/>
+			<xs:element type="xs:string" name="EIPGroupSignatureFirstName"/>
+			<xs:element type="xs:string" name="EIPGroupSignatureLastName"/>
+            <xs:element type="xs:string" name="EIPGroupSignatureDate"/>
+            <xs:element type="xs:string" name="EIPGroupComment"/>
+			<xs:element type="xs:string" name="RecordsSignatureCHK"/>
+			<xs:element type="xs:string" name="RecordsAction"/>
+            <xs:element type="xs:string" name="RecordsSignature"/>
+            <xs:element type="xs:string" name="RecordsSignatureDate"/>
+            <xs:element type="xs:string" name="RecordsComments"/>
+			<xs:element type="xs:string" name="DSOAuthorizationAction"/>
+            <xs:element type="xs:string" name="DSOAuthorizationSignature"/>
+            <xs:element type="xs:string" name="DSOAuthorizationDate"/>
+            <xs:element type="xs:string" name="DSOAuthorizationName"/>
+            <xs:element type="xs:string" name="DSOAuthorizationEmail"/>
+            <xs:element type="xs:string" name="DSOAuthorizationPhone"/>
+            <xs:element type="xs:string" name="DSOAuthorizationComment"/>
+			<xs:element type="xs:string" name="TermDescription"/>
+			<xs:element type="xs:string" name="LateAddsDecision"/>
+			<xs:element type="xs:string" name="EIPFlag"/>
+			<xs:element type="xs:string" name="LogUser"/>
+			<xs:element type="xs:string" name="HiddenEmailSubject"/>
+            <xs:element type="xs:string" name="aftiaDescCWID"/>
+			<xs:element type="xs:string" name="StageIndicator"/>
+			<xs:element type="xs:string" name="HiddenFirstRowCHK"/>
+			<xs:element type="xs:string" name="HiddenClassNumber"/>
+            <xs:element type="xs:string" name="HiddenSemesterTaken"/> 
+			<xs:element type="xs:string" name="HiddenDepartmentCourse"/>
+			<xs:element type="xs:string" name="HiddenScheduleNumber"/>
+			<xs:element type="xs:string" name="HiddenNumberOfUnits"/>
+			<xs:element type="xs:string" name="HiddenReasonForFailure"/>           
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+</xs:schema>

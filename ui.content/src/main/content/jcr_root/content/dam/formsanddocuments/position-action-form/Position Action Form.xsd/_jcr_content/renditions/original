@@ -1,0 +1,135 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PAF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="InitiatedDate"/>
+        <xs:element type="xs:string" name="Ext"/>
+        <xs:element type="xs:string" name="Division"/>
+        <xs:element type="xs:string" name="CollegeAndDepartment"/>
+        <xs:element type="xs:string" name="RequestType"/>
+        <xs:element type="xs:string" name="EffectiveDate"/>
+		<xs:element type="xs:string" name="Justification"/>
+        <xs:element type="xs:string" name="TOnePositionNumberCurrent"/>
+        <xs:element type="xs:string" name="TOnePositionNumberNew"/>
+		<xs:element type="xs:string" name="TOneIncumbentNameCurrent"/>
+        <xs:element type="xs:string" name="TOneIncumbentNameNew"/>
+		<xs:element type="xs:string" name="TOneDeptIdCurrent"/>
+		<xs:element type="xs:string" name="TOneDeptIdNew"/>
+		<xs:element type="xs:string" name="TOneReportingUnitCurrent"/>
+		<xs:element type="xs:string" name="TOneReportingUnitNew"/>
+		<xs:element type="xs:string" name="TOneJobCodeCurrent"/>
+		<xs:element type="xs:string" name="TOneJobCodeNew"/>
+		<xs:element type="xs:string" name="TOnePositionTitleCurrent"/>
+		<xs:element type="xs:string" name="TOnePositionTitleNew"/>
+		<xs:element type="xs:string" name="TOneRegTempCurrent"/>
+        <xs:element type="xs:string" name="TOneRegTempNew"/>
+		<xs:element type="xs:string" name="TOneFullPartTimeCurrent"/>
+		<xs:element type="xs:string" name="TOneFullPartTimeNew"/>
+		<xs:element type="xs:string" name="TOneGradeRangeCurrent"/>
+		<xs:element type="xs:string" name="TOneGradeRangeNew"/>
+		<xs:element type="xs:string" name="TOneFTECurrent"/>
+		<xs:element type="xs:string" name="TOneFTENew"/>
+		<xs:element type="xs:string" name="TOneExemptStatusCurrent"/>
+		<xs:element type="xs:string" name="TOneExemptStatusNew"/>
+		<xs:element type="xs:string" name="TOneSupervisorNameCurrent"/>
+        <xs:element type="xs:string" name="TOneSupervisorNameNew"/>
+		<xs:element type="xs:string" name="TOneSupervisorPositionCurrent"/>
+		<xs:element type="xs:string" name="TOneSupervisorPositionNew"/>
+		<xs:element type="xs:string" name="TOneMPPNameCurrent"/>
+		<xs:element type="xs:string" name="TOneMPPNameNew"/>
+		<xs:element type="xs:string" name="TOneMPPPositionCurrent"/>
+		<xs:element type="xs:string" name="TOneMPPPositionNew"/>
+		<xs:element type="xs:string" name="TOneMPPCodeCurrent"/>
+		<xs:element type="xs:string" name="TOneMPPCodeNew"/>
+		<xs:element type="xs:string" name="TOneCOICurrent"/>
+		<xs:element type="xs:string" name="TOneCOINew"/>
+		<xs:element type="xs:byte" name="FundingUpdateStatus"/>
+            <xs:element name="TTwoROne">
+               <xs:complexType>
+                  <xs:sequence>		
+						<xs:element type="xs:string" name="TTwoROneFundingDeptId"/>
+						<xs:element type="xs:string" name="TTwoROneFund"/>
+						<xs:element type="xs:string" name="TTwoROneProgramCode"/>
+						<xs:element type="xs:string" name="TTwoROneClassCode"/>
+						<xs:element type="xs:string" name="TTwoROneProject"/>
+						<xs:element type="xs:string" name="TTwoROneAccount"/>
+						<xs:element type="xs:string" name="TTwoROneDist"/>
+		           </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			<xs:element name="TThreeROne">
+               <xs:complexType>
+                  <xs:sequence>		
+						<xs:element type="xs:string" name="TThreeROneCurrentFundingDeptId"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentFund"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentProgramCode"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentClassCode"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentProject"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentAccount"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentDist"/>
+						<xs:element type="xs:string" name="TThreeROneCurrentPoolID"/>
+		           </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+		<xs:element type="xs:string" name="AppropriateApproverPrintName"/>
+		<xs:element type="xs:string" name="AppropriateApproverSignature"/>
+		<xs:element type="xs:string" name="AppropriateApproverSignatureDate"/>
+		<xs:element type="xs:string" name="AppropriateApproverComment"/>
+		<xs:element type="xs:string" name="AcademicAffairsPrintName"/>
+		<xs:element type="xs:string" name="AcademicAffairsSignature"/>
+		<xs:element type="xs:string" name="AcademicAffairsSignatureDate"/>
+		<xs:element type="xs:string" name="AcademicAffairsComment"/>
+		<xs:element type="xs:string" name="PositionManagementPrintName"/>
+		<xs:element type="xs:string" name="PositionManagementSignature"/>
+		<xs:element type="xs:string" name="PositionManagementSignatureDate"/>
+		<xs:element type="xs:string" name="PositionManagementComment"/>
+		<xs:element type="xs:string" name="AppropriateReviewerPrintName"/>
+		<xs:element type="xs:string" name="AppropriateReviewerSignature"/>
+		<xs:element type="xs:string" name="AppropriateReviewerSignatureDate"/>
+		<xs:element type="xs:string" name="AppropriateReviewerComment"/>
+		<xs:element type="xs:string" name="CompensationServicesPrintName"/>
+		<xs:element type="xs:string" name="CompensationServicesSignature"/>
+		<xs:element type="xs:string" name="CompensationServicesSignatureDate"/>
+		<xs:element type="xs:string" name="CompensationServicesComment"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="FinalEmailSubject"/>
+		<xs:element type="xs:string" name="PositionManagementEmailSubject"/>
+		<xs:element type="xs:string" name="AppropriateApproverEmailSubject"/>
+		<xs:element type="xs:string" name="AppropriateRequestorEmailSubject"/>
+		<xs:element type="xs:string" name="AppropriateReviewerEmailSubject"/>
+		<xs:element type="xs:string" name="CompensationServicesEmailSubject"/>
+		<xs:element type="xs:string" name="AppropriateRequestorName"/>
+		<xs:element type="xs:string" name="AppropriateRequestorFirstName"/>
+		<xs:element type="xs:string" name="AppropriateRequestorLastName"/>
+		<xs:element type="xs:string" name="AppropriateRequestorCWID"/>
+		<xs:element type="xs:string" name="AppropriateRequestorUserId"/>
+		<xs:element type="xs:string" name="AppropriateRequestorEmailId"/>
+		<xs:element type="xs:string" name="AppropriateRequestorSignature"/>
+		<xs:element type="xs:string" name="AppropriateRequestorSignatureName"/>
+		<xs:element type="xs:string" name="AppropriateRequestorSignatureDate"/>
+		<xs:element type="xs:string" name="AppropriateRequestorComments"/>
+		<xs:element type="xs:string" name="AppropriateApproverName"/>
+		<xs:element type="xs:string" name="AppropriateApproverUserId"/>
+		<xs:element type="xs:string" name="AppropriateApproverEmailId"/>
+		<xs:element type="xs:string" name="AppropriateReviewerName"/>
+		<xs:element type="xs:string" name="AppropriateReviewerUserId"/>
+		<xs:element type="xs:string" name="AppropriateReviewerEmailId"/>
+		<xs:element type="xs:string" name="DepartmentName"/>
+		<xs:element type="xs:string" name="DepartmentId"/>
+		<xs:element type="xs:string" name="CollegeName"/>
+		<xs:element type="xs:string" name="CollegeId"/>
+		<xs:element type="xs:string" name="DivisionName"/>
+		<xs:element type="xs:string" name="DivisionId"/>
+		<xs:element type="xs:string" name="MPPorStaffFlag"/>
+		<xs:element type="xs:string" name="RoutingFlag"/>
+		<xs:element type="xs:string" name="AppropriateReviewerFlag"/>
+		<xs:element type="xs:string" name="AppropriateApproverFlag"/>
+		<xs:element type="xs:string" name="PositionManagementReviewStepFlag"/>
+		<xs:element type="xs:string" name="MPPSectionDisplay"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

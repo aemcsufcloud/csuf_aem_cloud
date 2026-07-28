@@ -1,0 +1,1821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-11-22T04:32:47Z" uuid="5c666163-73d2-4fc1-9bf2-0a4f2d98430e">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="TDAException" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <draw name="Text12" w="29.2864mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 80183 12000 0 0 1417 1417 0 0?></draw>
+         <subform name="HeadingPanel" w="203.2mm" h="22.225mm">
+            <draw name="Image1" w="60.325mm" h="22.225mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <value>
+                  <image href=".\Logo.png" contentType="image/png"/>
+               </value>
+            </draw>
+            <draw name="Text1" w="136.525mm" h="9.525mm" x="60.325mm" y="12.7mm">
+               <ui>
+                  <textEdit>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>                    TDA Exception Form</text>
+               </value>
+               <font size="18pt" typeface="Calibri" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="0,51,102"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 384166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 38                     TDA Exception Form 0 1417 14917 0 51 102 "Calibri" 1 0 18000 ISO-8859-1?></draw>
+            <field name="ExceptionFlag" x="142.875mm" w="37mm" h="9mm" presence="invisible">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="DORExceptionFlag" x="69.85mm" w="37mm" h="9mm" presence="invisible">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="StudentInfoText" w="203.2mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>STUDENT INFORMATION</text>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" posture="italic" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 19 STUDENT INFORMATION 0 1417 10417 0 0 0 "Calibri" 1 1 12000 ISO-8859-1?></draw>
+         <field name="StudentName" w="79.375mm" h="14.412mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="4.9451mm" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Student Name</text>
+               </value>
+            </caption>
+         </field>
+         <field name="CWID" w="60.325mm" h="14.757mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.205972in" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CWID</text>
+               </value>
+            </caption>
+         </field>
+         <field name="RequestID" w="60.325mm" h="14.757mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="5.6854mm" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Request ID</text>
+               </value>
+            </caption>
+         </field>
+         <field name="AcademicPlan" w="79.375mm" h="14.412mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="4.9451mm" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Academic Plan(s):</text>
+               </value>
+            </caption>
+         </field>
+         <field name="CatalogYear" w="60.325mm" h="14.757mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.205972in" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Catalog Year</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Term" w="60.325mm" h="14.757mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.205972in" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Expected Graduation Term:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ExceptionType" w="200.025mm" h="14.412mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="5.4662mm" placement="top">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Exception Type:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="ExceptionProcessTypeText" w="38.1mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Exception Process Type:</text>
+            </value>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 23 Exception Process Type: 0 1417 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+         <exclGroup name="ExceptionProcessType" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="22.225mm" h="6mm" name="Submitted">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.8869mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <value>
+                     <text>Submitted</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+            </field>
+            <field w="19.05mm" h="6mm" name="Pending">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="13.05mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="P" baselineShift="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Myriad Pro';letter-spacing:0in">Pending</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <items>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field w="22.225mm" h="6mm" name="Processed">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="16.225mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <value>
+                     <text>Processed</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>3</integer>
+               </items>
+            </field>
+            <field w="19.05mm" h="6mm" name="Denied">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="13.05mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Denied</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>4</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></exclGroup>
+         <draw name="Text2" w="88.9mm" h="5.166mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 11810 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" w="203.2mm" h="6.988mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>I. Adjustment for General Education</text>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" posture="italic" baselineShift="0pt" underline="1"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 16975 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 35 I. Adjustment for General Education 0 1417 10417 0 0 0 "Calibri" 1 1 12000 ISO-8859-1?>
+            <?renderCache.line 1417 11737 179759 11737 0 0 0 480?></draw>
+         <subform name="GeneralEducationTDAPanel" w="203.2mm" layout="lr-tb">
+            <subform name="GeneralEducationTDATable" layout="table" columnWidths="74.9778mm 62.5236mm 62.5236mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy1" y="0mm">
+                  <assist role="TH"/>
+                  <draw h="10mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>CSUF Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>GE Area to fulfill</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <draw h="10mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text>GE Area to fulfill - Other</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="GeneralEducationTDA" y="0mm">
+                  <assist role="TR"/>
+                  <field name="GeneralEducationTDA_CSUFCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="GeneralEducationTDA_GEArea" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="5"/>
+                  <field h="10mm" name="GeneralEducationTDA_GEAreaOther">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="6.039mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 14284 0 0 1417 1417 0 0?></draw>
+         <subform name="GeneralEducationATCEPanel" w="203.2mm" layout="lr-tb">
+            <subform name="GeneralEducationATCETable" layout="table" columnWidths="53.1882mm 48.9458mm 48.9458mm 48.9458mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID">
+                  <assist role="TH"/>
+                  <draw h="10mm" name="Cell2">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>External Institution Name</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Transfer Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>GE Area to fulfill</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <draw h="10mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text>GE Area to fulfill - Other</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="GeneralEducationATCE">
+                  <assist role="TR"/>
+                  <field name="GeneralEducationATCE_InstitutionName" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="GeneralEducationATCE_TransferCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="GeneralEducationATCE_GEArea" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="5"/>
+                  <field h="10mm" name="GeneralEducationATCE_GEAreaOther">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="0.17825in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 10000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" w="203.2mm" h="7.222mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>II. Adjustment for Major Requirement</text>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" posture="italic" baselineShift="0pt" underline="1"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 17638 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 36 II. Adjustment for Major Requirement 0 1417 10417 0 0 0 "Calibri" 1 1 12000 ISO-8859-1?>
+            <?renderCache.line 1417 11737 188981 11737 0 0 0 480?></draw>
+         <subform name="MajorReqTDAPanel" w="203.2mm" layout="lr-tb">
+            <subform name="MajorReqTDATable" layout="table" columnWidths="70.33mm 64.7203mm 64.9748mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy3" y="0mm">
+                  <assist role="TH"/>
+                  <draw h="10mm" name="Cell2">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>CSUF Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>To substitue this course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>To satisfy this requirement</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="MajorReqTDA" y="0mm">
+                  <assist role="TR"/>
+                  <field name="MajorReqTDA_CSUFCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="MajorReqTDA_SubstitueCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="MajorReqTDA_SatisfyReq" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="5"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (HeadingPanel.DORExceptionFlag.rawValue == "TDA"){ 
+this.presence = "visible"; 
+}
+else if (HeadingPanel.DORExceptionFlag.rawValue == "ATCE"){
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="6.273mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 14948 0 0 1417 1417 0 0?></draw>
+         <subform name="MajorReqATCEPanel" w="203.2mm" layout="lr-tb">
+            <subform name="MajorReqATCETable" layout="table" columnWidths="60.5663mm 46.2783mm 43.485mm 49.695mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy2" y="0mm">
+                  <assist role="TH"/>
+                  <draw h="9.9999mm" name="Cell2">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>External Institution Name</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="9.9999mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Transfer Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="9.9999mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>To substitue this course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <draw h="9.9999mm" name="Cell5">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text>To satisfy this requirement</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="MajorReqATCE" y="0mm">
+                  <assist role="TR"/>
+                  <field name="MajorReqATCE_InstitutionName" h="9.9999mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="MajorReqATCE_TransferCourse" h="9.9999mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="MajorReqATCE_SubstitueCourse" h="9.9999mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <field h="9.9999mm" name="MajorReqATCE_SatisfyReq">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <occur max="5"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (HeadingPanel.DORExceptionFlag.rawValue == "ATCE"){ 
+this.presence = "visible"; 
+}
+else if (HeadingPanel.DORExceptionFlag.rawValue == "TDA"){
+this.presence = "hidden";
+} 
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="0.17825in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 10000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" w="203.2mm" h="7.222mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>III. Other Modifications:</text>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" posture="italic" baselineShift="0pt" underline="1"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 17638 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 25 III. Other Modifications: 0 1417 10417 0 0 0 "Calibri" 1 1 12000 ISO-8859-1?>
+            <?renderCache.line 1417 11737 120192 11737 0 0 0 480?></draw>
+         <subform name="OtherTDAPanel" w="203.2mm" layout="lr-tb">
+            <subform name="OtherTDATable" layout="table" columnWidths="109.0712mm 90.9539mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy1_copy1">
+                  <assist role="TH"/>
+                  <draw h="10mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>CSUF Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>GE Area to fulfill</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="OtherTDA">
+                  <assist role="TR"/>
+                  <field name="OtherTDA_CSUFCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="OtherTDA_Request" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="5"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (HeadingPanel.DORExceptionFlag.rawValue == "TDA"){ 
+this.presence = "visible"; 
+}
+else if (HeadingPanel.DORExceptionFlag.rawValue == "ATCE"){
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="6.273mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 14948 0 0 1417 1417 0 0?></draw>
+         <subform name="OtherATCEPanel" w="203.2mm" layout="lr-tb">
+            <subform name="OtherATCETable" layout="table" columnWidths="70.4196mm 64.8028mm 64.8028mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="HeaderRow" id="HeaderRow_ID_copy4" y="0mm">
+                  <assist role="TH"/>
+                  <draw h="10mm" name="Cell2">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>External Institution Name</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Transfer Course</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <draw h="10mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Request</text>
+                     </value>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="OtherATCE" y="0mm">
+                  <assist role="TR"/>
+                  <field name="OtherATCE_InstitutionName" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="OtherATCE_TransferCourse" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="OtherATCE_Request" h="10mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <occur max="5"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (HeadingPanel.DORExceptionFlag.rawValue == "ATCE"){ 
+this.presence = "visible"; 
+}
+else if (HeadingPanel.DORExceptionFlag.rawValue == "TDA"){
+this.presence = "hidden";
+} 
+
+</script>
+            </event>
+         </subform>
+         <draw name="Text2" w="88.9mm" h="5.554mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 12910 0 0 1417 1417 0 0?></draw>
+         <draw name="Text11" w="8in" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;font-style:italic;letter-spacing:0in">ACKNOWLEDGMENTS<span style="font-weight:normal;font-style:normal"><span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font size="12pt" typeface="Myriad Pro" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <subform name="InitiatorSignaturePanel" w="196.85mm" layout="lr-tb">
+            <draw name="Text4" w="196.85mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Initiator Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 20 Initiator Signature: 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="InitiatorSignature" w="63.5mm" h="9mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="18.9377mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Initiated By:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <border>
+               <edge thickness="0.1753mm" presence="hidden"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+            </border>
+            <field name="InitiatorDept" w="82.55mm" minH="10.114mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="31.1164mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Initiator's associated Department:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="InitiatorDate" w="50.8mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="25.431mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Submitted Date:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="InitiatorComments" w="196.85mm" minH="19.159mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.0564mm" placement="top">
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="3.818mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 7989 0 0 1417 1417 0 0?></draw>
+         <subform name="GradStudiesSignaturePanel" w="203.2mm" layout="lr-tb">
+            <draw name="Text4" w="196.85mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Graduate Studies Reviewer Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 36 Graduate Studies Reviewer Signature: 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="OfficeGradSignature" w="76.2mm" h="9mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.4756mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="OfficeGradSignDate" w="34.75mm" h="9mm">
+               <ui>
+                  <dateTimeEdit hScrollPolicy="off">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.3628mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="OfficeGradComment" w="196.85mm" minH="19.159mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.0564mm" placement="top">
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="3.818mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 7989 0 0 1417 1417 0 0?></draw>
+         <subform name="DeanSignaturePanel" w="203.2mm" layout="lr-tb">
+            <draw name="Text4" w="196.85mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Associate Dean/Faculty Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 33 Associate Dean/Faculty Signature: 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="DeanSignature" w="76.2mm" h="9mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.4756mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="DeanSignDate" w="34.75mm" h="9mm">
+               <ui>
+                  <dateTimeEdit hScrollPolicy="off">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.3628mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="DeanComment" w="196.85mm" minH="19.159mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.0564mm" placement="top">
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="3.818mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 7989 0 0 1417 1417 0 0?></draw>
+         <subform name="ATCESignaturePanel" w="203.2mm" layout="lr-tb">
+            <draw name="Text4" w="196.85mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>ATCE Reviewer Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 24 ATCE Reviewer Signature: 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="ATCESignature" w="76.2mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.4756mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="ATCESignDate" w="34.75mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.3628mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="ATCEComment" w="196.85mm" minH="19.159mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.3254mm" placement="top">
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text2" w="88.9mm" h="3.818mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 249166 7989 0 0 1417 1417 0 0?></draw>
+         <subform name="TDASignaturePanel" w="203.2mm" layout="lr-tb">
+            <draw name="Text4" w="196.85mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>TDA Reviewer Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 23 TDA Reviewer Signature: 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="TDASignature" w="76.2mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.4756mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="TDASignDate" w="34.75mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.3628mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="TDAComment" w="196.85mm" minH="19.159mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.0564mm" placement="top">
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 100 25 0003001100120018002F0057005E0102010F0110011A011E0150015D01750176017D0189018C0190019A01B501C703570396 BCDIPSabcdegimnoprstuy:'?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 292 73 00030004001100120018001C00260027002C002F003A003E00440045004B00570059005A005E00640068007300740079007A007F0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC034D03570358036C0372037A037E037F039803EC03ED03EE03EF03F003F103F203F303F403F504390441 ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz?:./-_()&0123456789%=?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 132 33 000300040018001C00260027002F00440045004B005A005E0064006801020110011A011E0128015A015D0169016F01750176017D018B018C0190019A01B503570358 ADEFGIMNORSTUacdefhijlmnoqrstu:.?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 32 8 000100250031004500460048004A004F DPdegin?>
+      <?renderCache.subset "Myriad Pro" 1 1 ISO-8859-1 4 52 13 00220024002500260028002C002D002E002F0030003400350038ACDEGKLMNOSTW?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\TDAException.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 88?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-11-22T04:32:47Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:5c666163-73d2-4fc1-9bf2-0a4f2d98430e</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

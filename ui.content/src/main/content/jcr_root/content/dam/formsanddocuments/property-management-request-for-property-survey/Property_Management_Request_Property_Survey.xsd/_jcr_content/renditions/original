@@ -1,0 +1,106 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PropertyManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="caseId"/>
+        <xs:element type="xs:string" name="lastName"/>
+        <xs:element type="xs:string" name="firstName"/>
+		
+                    <xs:element type="xs:string" name="DisposalNo"/>
+                    <xs:element type="xs:string" name="DeptName"/>
+					<xs:element type="xs:string" name="DeptID"/>
+                    <xs:element type="xs:string" name="SchoolDivision"/>
+                    <xs:element type="xs:string" name="RequestorName"/>
+                    <xs:element type="xs:string" name="Date_1"/>
+					<xs:element type="xs:string" name="DatePurchased"/>
+					<xs:element type="xs:string" name="Division"/>
+                  
+          
+                    <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Description"/>
+                          <xs:element type="xs:string" name="TagNo"/>                          
+                          <xs:element type="xs:string" name="CurrentValue"/>						  
+                          <xs:element type="xs:string" name="Location"/>
+                          <xs:element type="xs:string" name="Condition"/>
+						  <xs:element type="xs:byte" name="SanitizedRB"/>
+                          <xs:element type="xs:byte" name="UnlockedRB"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					
+                    <xs:element type="xs:string" name="AdditionalComments"/>           
+                    <xs:element type="xs:byte" name="AckCB"/>
+                    <xs:element type="xs:string" name="DeptHeadName"/>
+                    <xs:element type="xs:string" name="DeptHeadSign"/>
+                    <xs:element type="xs:string" name="DeptHeadSignDate"/>
+					<xs:element type="xs:string" name="DeptHeadComments"/>
+					<xs:element type="xs:string" name="DeptHeadDecision" />
+                  
+                    <xs:element type="xs:string" name="Recommendation"/>
+                    <xs:element type="xs:string" name="AssetName"/>
+                    <xs:element type="xs:string" name="AssetSignature"/>
+                    <xs:element type="xs:string" name="AssetDate"/>
+					<xs:element type="xs:string" name="AssetDecision" />
+
+                    <xs:element type="xs:string" name="SurveyRecommendation"/>
+                    <xs:element type="xs:string" name="Name_1"/>
+                    <xs:element type="xs:string" name="Sign_1"/>
+                    <xs:element type="xs:string" name="Date_1"/>
+                    <xs:element type="xs:string" name="Name_2"/>
+                    <xs:element type="xs:string" name="Sign_2"/>
+                    <xs:element type="xs:string" name="Date_2"/>
+					
+					<xs:element type="xs:string" name="InitiatorSignature"/>
+                    <xs:element type="xs:string" name="InitiatorSignDate"/>
+					<xs:element type="xs:string" name="InitiatorComments"/>
+					
+					<xs:element type="xs:string" name="RequestorSignature"/>
+                    <xs:element type="xs:string" name="RequestorSignDate"/>
+					<xs:element type="xs:string" name="RequestorComments"/>
+					
+					<xs:element type="xs:string" name="DeptAssetRecordKeeperSignature"/>
+                    <xs:element type="xs:string" name="DeptAssetRecordKeeperSignDate"/>
+					<xs:element type="xs:string" name="DeptAssetRecordKeeperComments"/>
+					<xs:element type="xs:string" name="AssetRecordDecision"/>
+					
+					<xs:element type="xs:string" name="DeptAdminApproverSignature"/>
+                    <xs:element type="xs:string" name="DeptAdminApproverSignDate"/>
+					<xs:element type="xs:string" name="DeptAdminApproverComments"/>
+					
+					<xs:element type="xs:string" name="aftiaDescCWID"/>
+                    <xs:element type="xs:string" name="EmailSubject"/>
+                    <xs:element type="xs:string" name="StageIndicator"/>
+					
+					<xs:element type="xs:string" name="cwid_requestor"/>
+					<xs:element type="xs:string" name="deptID_requestor"/>
+					
+					<xs:element type="xs:string" name="cwid_initiator"/>
+					<xs:element type="xs:string" name="deptID_initiator"/>
+					
+					<xs:element type="xs:string" name="InitiatorName"/>
+                    <xs:element type="xs:string" name="InitiatorUserID"/>
+                    <xs:element type="xs:string" name="InitiatorEmail"/>
+					
+                    <xs:element type="xs:string" name="RequestorUserID"/>
+                    <xs:element type="xs:string" name="RequestorEmail"/>
+					
+					<xs:element type="xs:string" name="DeptHeadUserID"/>
+					<xs:element type="xs:string" name="DeptHeadEmail"/>
+					
+					<xs:element type="xs:string" name="DeptAssetRecordKeeperUserID"/>
+					<xs:element type="xs:string" name="DeptAssetRecordKeeperEmail"/>
+					<xs:element type="xs:string" name="DeptAssetRecordKeeperName"/>
+					
+					<xs:element type="xs:string" name="DeptAdminApproverUserID"/>
+					<xs:element type="xs:string" name="DeptAdminApproverEmail"/>
+					<xs:element type="xs:string" name="DeptAdminApproverName"/>
+					 
+					<xs:element type="xs:string" name="InitiatorFlag"/>
+					<xs:element type="xs:string" name="propertySurveyDetailsJSON"/>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

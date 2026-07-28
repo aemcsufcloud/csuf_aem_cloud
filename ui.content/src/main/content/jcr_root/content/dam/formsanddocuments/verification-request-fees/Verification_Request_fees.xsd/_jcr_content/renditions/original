@@ -1,0 +1,111 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="VerificationRequest">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="CWID_SSN"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="MiddleName"/>
+        <xs:element type="xs:string" name="StreetAddress"/>
+        <xs:element type="xs:string" name="AptUnit"/>
+        <xs:element type="xs:string" name="City"/>
+        <xs:element type="xs:string" name="State"/>
+        <xs:element type="xs:string" name="ZipCode"/>
+        <xs:element type="xs:string" name="PhoneNo"/>
+        <xs:element type="xs:string" name="DOB"/>
+        <xs:element type="xs:string" name="StudentSignX"/>
+		<xs:element type="xs:byte" name="MailtoRB"/>
+        <xs:element type="xs:byte" name="RegRB"/>
+        <xs:element type="xs:byte" name="RecRB"/>
+        <xs:element type="xs:byte" name="AddressCB"/>
+        <xs:element type="xs:byte" name="PickupCB"/>
+        <xs:element type="xs:byte" name="EmailCB"/>
+        <xs:element type="xs:string" name="EmailTF"/>
+        <xs:element type="xs:string" name="CompanyName"/>
+        <xs:element type="xs:string" name="StreetAddressT"/>
+        <xs:element type="xs:string" name="Apt"/>
+        <xs:element type="xs:string" name="CityT"/>
+        <xs:element type="xs:string" name="StateT"/>
+        <xs:element type="xs:string" name="ZipCodeT"/>
+        <xs:element type="xs:byte" name="S2506CB1"/>
+        <xs:element type="xs:string" name="PreRegTFO"/>
+        <xs:element type="xs:string" name="PreRegTFT"/>
+        <xs:element type="xs:byte" name="S2506CB2"/>
+        <xs:element type="xs:string" name="EnrollmemtTFO"/>
+        <xs:element type="xs:string" name="EnrollmentTFT"/>
+        <xs:element type="xs:byte" name="S2504CB1"/>
+        <xs:element type="xs:string" name="DegreeVerTFO"/>
+        <xs:element type="xs:string" name="DegreeVerTFT"/>
+        <xs:element type="xs:byte" name="S2506CB3"/>
+        <xs:element type="xs:string" name="GoodStudentTFO"/>
+        <xs:element type="xs:string" name="GoodStudentTFT"/>
+        <xs:element type="xs:byte" name="S2506CB4"/>
+        <xs:element type="xs:byte" name="DesignatedCB"/>
+        <xs:element type="xs:string" name="SpecifyTerm"/>
+        <xs:element type="xs:string" name="DesignatedTFO"/>
+        <xs:element type="xs:string" name="DesignatedTFT"/>
+        <xs:element type="xs:byte" name="TotalHistoryCB"/>
+        <xs:element type="xs:string" name="TotalHisTFO"/>
+        <xs:element type="xs:string" name="TotalHisTFT"/>
+        <xs:element type="xs:byte" name="HistoryCB"/>
+        <xs:element type="xs:string" name="HistoryTFO"/>
+        <xs:element type="xs:string" name="HistoryTFT"/>
+        <xs:element type="xs:byte" name="VOECB"/>
+        <xs:element type="xs:string" name="VOETFO"/>
+        <xs:element type="xs:string" name="VOETFT"/>
+
+        <xs:element type="xs:byte" name="MilitoryIDCB"/>
+        <xs:element type="xs:string" name="MilitoryIDTFO"/>
+        <xs:element type="xs:string" name="MilitoryIDTFT"/>
+        <xs:element type="xs:string" name="MilitoryID"/>
+        <xs:element type="xs:byte" name="NeverCB"/>
+        <xs:element type="xs:string" name="NeverTFO"/>
+        <xs:element type="xs:string" name="NeverTFT"/>
+        <xs:element type="xs:byte" name="OtherCB"/>
+        <xs:element type="xs:string" name="OtherTF"/>
+        <xs:element type="xs:string" name="OtherTFT"/>
+		
+		<xs:element type="xs:byte" name="VNTCB"/>
+        <xs:element type="xs:string" name="VNTTFO"/>
+        <xs:element type="xs:string" name="VNTTFT"/>
+		
+		<xs:element type="xs:byte" name="EarlyDegCB"/>
+        <xs:element type="xs:string" name="EarlyDegTFO"/>
+        <xs:element type="xs:string" name="EarlyDegTFT"/>
+		
+		<xs:element type="xs:byte" name="ScheduleCB"/>
+        <xs:element type="xs:string" name="ScheduleTFO"/>
+        <xs:element type="xs:string" name="ScheduleTFT"/>
+		
+		<xs:element type="xs:byte" name="LoanCB"/>
+        <xs:element type="xs:string" name="LoanTFO"/>
+        <xs:element type="xs:string" name="LoanTFT"/>
+		
+		<xs:element type="xs:string" name="TotalAmount"/>
+		
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="Date_1"/>
+
+		<xs:element type="xs:string" name="StudentFullName"/>
+		<xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="StudentEmailId"/>
+		<xs:element type="xs:string" name="StudentComments"/>
+		<xs:element type="xs:string" name="StudentSignatureDate"/>
+		
+		<xs:element type="xs:string" name="VerficationName"/>
+		<xs:element type="xs:string" name="VerficationDecision"/>
+		<xs:element type="xs:string" name="VerificationComments"/>
+		<xs:element type="xs:string" name="VerificationSignatureDate"/>
+		<xs:element type="xs:string" name="AttachmentYesNo"/>
+		<xs:element type="xs:string" name="DeliveredRB"/>
+		
+
+		
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

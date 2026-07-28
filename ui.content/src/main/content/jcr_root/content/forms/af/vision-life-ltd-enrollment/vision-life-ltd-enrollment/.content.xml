@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2021-03-08T10:09:34.118-08:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-03-08T10:09:36.168-08:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/vision-life-ltd-enrollment"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Vision LIFE-LTD Enrollment"
+        jcr:uuid="7e25f621-b58e-4f87-9075-18efe8a51aef"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2020-07-28T23:45:33.018-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.vision_life_ltd_enrollment_vision_life_ltd_enrollment"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/vision-life-ltd-enrollment/Vision_LIFE_LTD_Enrollment.xdp"
+            dorType="select"
+            enablePortalSubmit="true"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            redirect="/content/formsPortal/the-california-state-university--miscellaneous-benefits-enrollme"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="&lt;p style=&quot;text-align: center;&quot;>Thank you for submitting the form.&lt;/p>&#xd;&#xa;"
+            thankYouOption="message"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/Vision_LIFE-LTD_Enrollment"
+            xsdRef="/content/dam/formsanddocuments/vision-life-ltd-enrollment/Vision_LIFE_LTD_Enrollment.xsd"
+            xsdRootElement="VisionLifeLtdEnrollment">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:lastModified="{Date}2019-05-15T22:58:06.904-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExpReq="{Boolean}false"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/rootPanel">
+                    <guidetextdraw
+                        jcr:created="{Date}2019-12-25T20:58:05.874-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-14T00:56:09.788-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>&lt;b>Instructions:&lt;/b>&lt;/p>&#xa;&lt;p>Completion of this form enrolls or deletes coverage for employees appointed at least half-time for 6 months and 1 day, and part-time Lecturers and Coaches (qualified under AB 211 and CB Agreement) that are eligible for Vision, Life Insurance and/or Long-Term Disability (LTD) benefits. Upon separation or loss of eligibility due to reduction of time base below 0.5 (for general eligibility) or 0.4 (for AB 211) enrollments, deletion of coverage MUST be submitted to the State Controller’s Office (SCO) immediately.&lt;/p>&#xa;&lt;p>If enrolling the employee in a specific benefit, or if the employee is ineligible for a particular benefit, place horizontal lines through the Deduction Code (section 4) and Organization Code (section 5). The effective date of enrollment is the pay period the employee is hired or becomes eligible (section 7).&lt;/p>&#xa;"
+                        css="visionGuideText"
+                        guideNodeClass="guideTextDraw"
+                        name="textdraw1577336285926"
+                        textIsRich="true"/>
+                    <qualityquantityoralc
+                        cq:cssClass="guide-1577422393635"
+                        jcr:lastModified="{Date}2020-04-19T22:41:25.310-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Content"
+                        sling:resourceType="fd/af/components/panel"
+                        completionExpReq="{Boolean}false"
+                        cssStyle=".guide-1577422393635 .guideVerticalTabbedPanelLayout .tab-navigators{&#xa;&#xa;&#xa;background: none;&#xa;}&#xa;.guide-1577422393635 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#00274c;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1577422393635 .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon,.guide-1577422393635  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon,.guide-1577422393635 .guideVerticalTabbedPanelLayout .tab-navigators > li.stepped.active > a.guideTopNavIcon,.guide-1577422393635  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.stepped.active > a.guideTopNavIcon,.guide-1577422393635  .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon:hover,.guide-1577422393635  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#00274c;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1577422393635 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon{&#xa;color:#ffffff;&#xa;background:#00274c;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1577422393635 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon:hover,.guide-1577422393635  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.stepped > a.guideLeftNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#ff6800;&#xa;&#xa;}&#xa;.guide-1577422393635 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon,.guide-1577422393635  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active.stepped > a.guideLeftNavIcon,.guide-1577422393635  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#ff6800;&#xa;&#xa;}&#xa;.guide-1577422393635 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon{&#xa;background:#00274c;&#xa;color:#ffffff;&#xa;border-bottom: 0;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="formBody"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <items jcr:primaryType="nt:unstructured">
+                            <quality
+                                jcr:lastModified="{Date}2020-09-08T04:46:30.121-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Enrollment Details"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="enrollmentDetails"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw
+                                        jcr:created="{Date}2019-12-25T21:25:56.239-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-25T22:37:55.442-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;font-size: 18px;&quot;>&lt;b>Employee Details&lt;/b>&lt;/p>&#xa;"
+                                        colspan="5"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1577337956293"
+                                        textIsRich="true"/>
+                                    <ssn1577338047750
+                                        cq:cssClass="guide-1578305116638"
+                                        jcr:lastModified="{Date}2020-09-08T04:46:47.903-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Social Security Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/VisionLifeLtdEnrollment/ssn"
+                                        cssStyle=".guide-1578305116638 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="ssn">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.ssn&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ssn&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_ssn_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_ssn_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </ssn1577338047750>
+                                    <first_Name1577338065296
+                                        cq:cssClass="guide-1578305135025"
+                                        jcr:lastModified="{Date}2020-08-04T04:14:41.527-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* First  Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/first_Name"
+                                        cssStyle=".guide-1578305135025 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        enabled="{Boolean}true"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="first_Name"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.first_Name&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;first_Name&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_first_Name_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_first_Name_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </first_Name1577338065296>
+                                    <middle_name157733807
+                                        cq:cssClass="guide-1578305137104"
+                                        jcr:lastModified="{Date}2020-04-20T00:22:18.070-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Middle  Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/middle_Name"
+                                        cssStyle=""
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="middle_Name"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.middle_Name&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;middle_Name&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_middle_Name_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_middle_Name_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </middle_name157733807>
+                                    <last_name15773380744
+                                        cq:cssClass="guide-1578305138681"
+                                        jcr:lastModified="{Date}2020-08-04T04:14:53.219-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Last Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/last_Name"
+                                        cssStyle=".guide-1578305138681 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        enabled="{Boolean}true"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="last_Name"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.last_Name&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;last_Name&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_last_Name_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_last_Name_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </last_name15773380744>
+                                    <cbid1577338082184
+                                        cq:cssClass="guide-1578305140214"
+                                        jcr:lastModified="{Date}2020-08-04T04:14:20.000-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Employee CBID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/cbid"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="cbid"
+                                        textIsRich="[true,true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.cbid&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;cbid&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_cbid_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_cbid_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.cbid&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;cbid&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_cbid_valueCommit1&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_cbid_valueCommit1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </cbid1577338082184>
+                                    <panel
+                                        jcr:created="{Date}2019-12-25T21:41:16.253-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-25T21:42:20.376-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="panel1577338876315"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextdraw_101271
+                                                jcr:created="{Date}2019-12-25T22:31:05.178-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-09-08T04:41:10.820-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p style=&quot;font-size: 18px;&quot;>&lt;b>Position Number&lt;/b>&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw_10127137861577341865225"
+                                                textIsRich="true"/>
+                                            <agency1577338092977
+                                                cq:cssClass="guide-1578305146124"
+                                                jcr:lastModified="{Date}2020-04-20T00:23:02.258-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Agency"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/agency"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="agency"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </agency1577338092977>
+                                            <unit1577338096610
+                                                cq:cssClass="guide-1578305144498"
+                                                jcr:lastModified="{Date}2020-04-20T00:23:14.398-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Unit"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/unit"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="unit"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </unit1577338096610>
+                                            <classCode1577427273306
+                                                cq:cssClass="guide-1578305143233"
+                                                jcr:lastModified="{Date}2020-08-04T04:16:16.817-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Class Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/classCode"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="classCode"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </classCode1577427273306>
+                                            <serial1577338102801
+                                                cq:cssClass="guide-1578305141810"
+                                                jcr:lastModified="{Date}2020-04-20T00:23:44.080-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Serial"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/serial"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="serial"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </serial1577338102801>
+                                        </items>
+                                    </panel>
+                                    <panel_1330083140
+                                        jcr:created="{Date}2019-12-26T21:47:27.824-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T21:48:06.797-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="panel_13300831401577425647896"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="5"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextbox
+                                                jcr:created="{Date}2019-12-26T21:47:50.482-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-07-28T21:18:09.202-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Log User"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/loggedInUser"
+                                                guideNodeClass="guideTextBox"
+                                                name="loggedInUser"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.panel_13300831401577425647896.loggedInUser&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;loggedInUser&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_loggedInUser_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_loggedInUser_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidetextbox>
+                                            <guidetextbox_1512104290
+                                                jcr:created="{Date}2020-04-20T00:58:02.400-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-04-20T00:58:02.400-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Last name Hidden"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="lnameHidden"
+                                                textIsRich="[true,true,true]"/>
+                                            <guidetextbox_1754937649
+                                                jcr:created="{Date}2020-04-20T00:58:01.783-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-04-20T00:58:01.783-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Middle Name Hidden"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="mnameHidden"
+                                                textIsRich="[true,true,true]"/>
+                                            <guidetextbox_462319081
+                                                jcr:created="{Date}2020-04-20T00:58:01.281-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-04-20T00:58:01.281-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Agency Hidden"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="agencyHidden"
+                                                textIsRich="[true,true,true]"/>
+                                            <guidetextbox_699293030
+                                                jcr:created="{Date}2020-04-20T00:58:01.095-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-04-20T00:58:01.095-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Unit Hidden"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="unitHidden"
+                                                textIsRich="[true,true,true]"/>
+                                            <new11577430922474
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="New 1"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/new1"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="new1"/>
+                                            <delete11577430925175
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Delete 1"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/delete1"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="delete1">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.panel_13300831401577425647896.delete1&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;delete1&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_delete1_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_delete1_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </delete11577430925175>
+                                            <new21577430931014
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="New 2"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/new2"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="new2"/>
+                                            <delete21577430934191
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Delete 2"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/delete2"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="delete2"/>
+                                            <new31577430939966
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="New 3"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/new3"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="new3"/>
+                                            <delete31577430943246
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Delete 3"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/delete3"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="delete3"/>
+                                            <new41577430947554
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="New 4"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/new4"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="new4"/>
+                                            <delete41577430950568
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Delete 4"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/delete4"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="delete4"/>
+                                            <employeeEmail1595997805383
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Employee Email"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/employeeEmail"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="employeeEmail"/>
+                                            <empUserId1596000658275
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Emp User Id"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/empUserId"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="empUserId"/>
+                                            <GeneratePdfStep1596000662161
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Generate Pdf Step"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/GeneratePdfStep"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="GeneratePdfStep"/>
+                                            <guidetextbox_1553212045
+                                                jcr:created="{Date}2020-09-21T07:19:35.740-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-09-21T07:19:51.034-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Form Saved Status"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="formSavedStatus"
+                                                textIsRich="[true,true,true]"/>
+                                            <guidetextbox_1594167
+                                                jcr:created="{Date}2020-09-21T07:39:11.255-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-09-21T07:39:41.149-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Lookup Status"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="EmpIdResult"
+                                                textIsRich="[true,true,true]"/>
+                                            <aftiaDescCWID1609331157456
+                                                jcr:lastModified="{Date}2020-12-30T04:26:10.088-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Aftia Desc CWID"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/aftiaDescCWID"
+                                                guideNodeClass="guideTextBox"
+                                                name="aftiaDescCWID"
+                                                textIsRich="[true,true,true]"/>
+                                            <customTitle1609331179221
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Custom Title"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/customTitle"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="customTitle"/>
+                                            <guidetextbox_1995572194
+                                                jcr:created="{Date}2020-12-30T05:31:00.707-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2020-12-30T05:31:09.682-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="workflow_initiator"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                guideNodeClass="guideTextBox"
+                                                name="workflow_initiator"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.panel_13300831401577425647896.workflow_initiator&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;workflow_initiator&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_workflow_initiator_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_workflow_initiator_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidetextbox_1995572194>
+                                            <EmailSubject1614853666378
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Email Subject"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                bindRef="/VisionLifeLtdEnrollment/EmailSubject"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="EmailSubject"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.panel_13300831401577425647896&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;panel_13300831401577425647896&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_panel_13300831401577425647896_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_panel_13300831401577425647896_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel_1330083140>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                            </quality>
+                            <panel_2555308
+                                jcr:created="{Date}2019-12-27T00:04:17.407-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-12-27T00:22:09.787-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Benefit Plan"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="benifitPlan"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_509915_2129101793
+                                        jcr:created="{Date}2019-12-25T23:10:45.817-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-04-19T23:51:50.269-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;font-weight: 550;&quot;>Plan No 1 : VISION All Employees exc. FERP (Monthly Deduction)&lt;/p>&#xa;"
+                                        colspan="3"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_5099154301577344245869"
+                                        textIsRich="true"/>
+                                    <guidebutton
+                                        cq:cssClass="guide-1578305243404"
+                                        jcr:created="{Date}2019-12-25T23:18:34.026-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-27T00:22:27.657-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Change Type(Check one)"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        colspan="1"
+                                        cssStyle=""
+                                        dorExclusion="true"
+                                        guideNodeClass="guideRadioButton"
+                                        name="changeTypePlan1"
+                                        options="[1=New,2=Delete]"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.changeTypePlan1&quot;\,&quot;type&quot;:&quot;RADIO BUTTON|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;changeTypePlan1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton>
+                                    <panel_423587740
+                                        jcr:created="{Date}2019-12-25T23:34:05.000-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T03:11:23.944-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="plan1"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="5"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextbox
+                                                cq:cssClass="guide-1578305153610"
+                                                jcr:created="{Date}2019-12-26T00:47:14.936-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:33:02.556-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Deduction Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="450"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="deductionCode1"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextbox>
+                                            <guidetextdraw
+                                                cq:cssClass="guide-1578305155006"
+                                                jcr:created="{Date}2019-12-26T00:47:21.797-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:33:08.354-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Organization Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="004"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="orgCode1"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextdraw>
+                                            <month11577349973112
+                                                cq:cssClass="guide-1578305156377"
+                                                jcr:lastModified="{Date}2020-09-14T01:09:34.853-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Month"
+                                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/month1"
+                                                cssStyle=".guide-1578305156377 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;.guide-1578305156377 .dropDownList  select{&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDropDownList"
+                                                name="month1"
+                                                options="[January,February,March,April,May,June,July,August,September,October,November,December]"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan1.month1&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;month1&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month1_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month1_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                    <af_dropdownlistwidgetandtext
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[]"/>
+                                                </style>
+                                            </month11577349973112>
+                                            <year11577349976430
+                                                cq:cssClass="guide-1578305157979"
+                                                jcr:lastModified="{Date}2020-09-14T01:09:43.973-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Year"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/year1"
+                                                cssStyle=".guide-1578305157979 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                displayIsSameAsValidate="true"
+                                                displayPatternType="custom"
+                                                displayPictureClause="^\\d{4}$"
+                                                guideNodeClass="guideTextBox"
+                                                name="year1"
+                                                textIsRich="[true,true,true]"
+                                                validatePictureClauseMessage="Invalid year format">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan1.year1&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;year1&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year1_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year1_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </year11577349976430>
+                                            <guidetextbox_1993227707
+                                                cq:cssClass="guide-1578305159615"
+                                                jcr:created="{Date}2019-12-26T02:52:00.747-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T02:52:33.887-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Party Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="3"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="partyCode"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextbox_1993227707>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.plan1&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;plan1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan1_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel_423587740>
+                                    <guideseparator_10013
+                                        jcr:created="{Date}2019-12-26T03:30:03.903-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T03:30:17.614-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Separator"
+                                        sling:resourceType="fd/af/components/guideseparator"
+                                        colspan="5"
+                                        guideNodeClass="guideSeparator"
+                                        name="separator_10013111141577359803966"
+                                        thickness="2"/>
+                                    <guidetextdraw_509915
+                                        jcr:created="{Date}2019-12-25T23:10:45.817-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-04-19T23:51:41.103-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Plan No 2 : VISION FERP Employee Only (Annual Deduction)&lt;/p>&#xa;"
+                                        colspan="3"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_5099154301577344245869"
+                                        textIsRich="true"/>
+                                    <guidebutton_copy
+                                        cq:cssClass="guide-1578305258490"
+                                        jcr:created="{Date}2019-12-25T23:18:34.026-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-27T00:22:38.516-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Change Type(Check one)"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        colspan="1"
+                                        cssStyle=""
+                                        dorExclusion="true"
+                                        guideNodeClass="guideRadioButton"
+                                        name="changeTypePlan2"
+                                        options="[1=New,2=Delete]"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.changeTypePlan2&quot;\,&quot;type&quot;:&quot;RADIO BUTTON|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;changeTypePlan2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_copy>
+                                    <panel_1550922497
+                                        jcr:created="{Date}2019-12-26T00:12:51.727-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T07:19:54.779-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="plan2"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="5"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextbox_copy
+                                                cq:cssClass="guide-1578305162705"
+                                                jcr:created="{Date}2019-12-26T00:47:14.936-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:32:56.796-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Deduction Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="450"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="deductionCode2"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextbox_copy>
+                                            <guidetextdraw_copy
+                                                cq:cssClass="guide-1578305164418"
+                                                jcr:created="{Date}2019-12-26T00:47:21.797-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:32:48.312-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Organization Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="996"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="orgCode2"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextdraw_copy>
+                                            <month21577372920294
+                                                cq:cssClass="guide-1578305165729"
+                                                jcr:lastModified="{Date}2020-09-14T01:09:56.569-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Month"
+                                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/month2"
+                                                cssStyle=".guide-1578305165729 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;.guide-1578305165729 .dropDownList  select{&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDropDownList"
+                                                name="month2"
+                                                options="[January,February,March,April,May,June,July,August,September,October,November,December]"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan2.month2&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;month2&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month2_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month2_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                    <af_dropdownlistwidgetandtext
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[]"/>
+                                                </style>
+                                            </month21577372920294>
+                                            <year21577372926191
+                                                cq:cssClass="guide-1578305167283"
+                                                jcr:lastModified="{Date}2020-09-14T01:10:04.217-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Year"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/year2"
+                                                cssStyle=".guide-1578305167283 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                displayIsSameAsValidate="true"
+                                                displayPatternType="custom"
+                                                displayPictureClause="^\\d{4}$"
+                                                guideNodeClass="guideTextBox"
+                                                name="year2"
+                                                textIsRich="[true,true,true]"
+                                                validatePictureClauseMessage="Invalid year format">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan2.year2&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;year2&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year2_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year2_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </year21577372926191>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.plan2&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;plan2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan2_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan2_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel_1550922497>
+                                    <guideseparator_copy
+                                        jcr:created="{Date}2019-12-25T23:31:04.371-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-25T23:31:31.177-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Separator"
+                                        sling:resourceType="fd/af/components/guideseparator"
+                                        colspan="5"
+                                        guideNodeClass="guideSeparator"
+                                        name="separator1577345464434"
+                                        thickness="2"/>
+                                    <guidetextdraw_509915_2097161613
+                                        jcr:created="{Date}2019-12-25T23:10:45.817-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-04-19T23:52:01.293-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Plan No 3 :&amp;nbsp;LIFE INSURANCE&lt;/p>&#xa;"
+                                        colspan="3"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_5099154301577344245869_copy_1"
+                                        textIsRich="true"/>
+                                    <guidebutton_copy_cop
+                                        cq:cssClass="guide-1578305260817"
+                                        jcr:created="{Date}2019-12-25T23:18:34.026-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-27T00:22:51.392-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Change Type(Check one)"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        colspan="1"
+                                        cssStyle=""
+                                        dorExclusion="true"
+                                        guideNodeClass="guideRadioButton"
+                                        name="changeTypePlan3"
+                                        options="[1=New,2=Delete]"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.changeTypePlan3&quot;\,&quot;type&quot;:&quot;RADIO BUTTON|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;changeTypePlan3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan3_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan3_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_copy_cop>
+                                    <panel_1550922497_cop
+                                        jcr:created="{Date}2019-12-26T00:12:51.727-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T07:33:30.471-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="plan3"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="5"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextbox_copy
+                                                cq:cssClass="guide-1578305173948"
+                                                jcr:created="{Date}2019-12-26T00:47:14.936-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:36:16.919-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Deduction Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="250"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="deductionCode"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextbox_copy>
+                                            <lifeCode1577374616016
+                                                cq:cssClass="guide-1578305171881"
+                                                jcr:lastModified="{Date}2019-12-27T01:10:05.825-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="LIFE Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/lifeCode"
+                                                cssStyle=".guide-1578305171881 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                name="lifeCode"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan3.lifeCode&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;lifeCode&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_lifeCode_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_lifeCode_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </lifeCode1577374616016>
+                                            <month31577374103535
+                                                cq:cssClass="guide-1578305170450"
+                                                jcr:lastModified="{Date}2020-09-14T01:10:18.995-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Month"
+                                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/month3"
+                                                cssStyle=".guide-1578305170450 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;.guide-1578305170450 .dropDownList  select{&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDropDownList"
+                                                name="month3"
+                                                options="[January,February,March,April,May,June,July,August,September,October,November,December]"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan3.month3&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;month3&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month3_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month3_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                    <af_dropdownlistwidgetandtext
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[]"/>
+                                                </style>
+                                            </month31577374103535>
+                                            <year31577374108535
+                                                cq:cssClass="guide-1578305168792"
+                                                jcr:lastModified="{Date}2020-09-14T01:10:27.005-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Year"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/year3"
+                                                cssStyle=".guide-1578305168792 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                displayIsSameAsValidate="true"
+                                                displayPatternType="custom"
+                                                displayPictureClause="^\\d{4}$"
+                                                guideNodeClass="guideTextBox"
+                                                name="year3"
+                                                textIsRich="[true,true,true]"
+                                                validatePictureClauseMessage="Invalid year format">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan3.year3&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;year3&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year3_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year3_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </year31577374108535>
+                                            <guidetextdraw_509915_1611201108
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                name="textdraw_509915_16112011081577434403157"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.plan3&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;plan3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan3_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan3_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel_1550922497_cop>
+                                    <guideseparator_10013_4202782
+                                        jcr:created="{Date}2019-12-26T03:30:03.903-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T03:30:17.614-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Separator"
+                                        sling:resourceType="fd/af/components/guideseparator"
+                                        colspan="5"
+                                        guideNodeClass="guideSeparator"
+                                        name="separator_10013111141577359803966"
+                                        thickness="2"/>
+                                    <guidetextdraw_509915_1887935363
+                                        jcr:created="{Date}2019-12-25T23:10:45.817-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-04-19T23:52:12.924-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;font-weight: 550;&quot;>Plan No 4 : LTD&lt;/p>&#xa;"
+                                        colspan="3"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_5099154301577344245869_copy_2"
+                                        textIsRich="true"/>
+                                    <guidebutton_copy_351
+                                        cq:cssClass="guide-1578305262874"
+                                        jcr:created="{Date}2019-12-25T23:18:34.000-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-27T01:01:05.946-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Change Type(Check one)"
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        colspan="1"
+                                        cssStyle=""
+                                        dorExclusion="true"
+                                        guideNodeClass="guideRadioButton"
+                                        name="changeTypePlan4"
+                                        options="[1=New,2=Delete]"
+                                        textIsRich="[true,true]"
+                                        type="Button">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.changeTypePlan4&quot;\,&quot;type&quot;:&quot;RADIO BUTTON|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;changeTypePlan4&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan4_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_changeTypePlan4_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidebutton_copy_351>
+                                    <panel_423587740_copy
+                                        jcr:created="{Date}2019-12-25T23:34:05.000-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T07:40:42.126-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        colspan="5"
+                                        guideNodeClass="guidePanel"
+                                        name="plan4"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="5"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextbox
+                                                cq:cssClass="guide-1578305178064"
+                                                jcr:created="{Date}2019-12-26T00:47:14.936-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2019-12-26T07:38:36.885-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Deduction Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                _value="250"
+                                                autofillFieldKeyword="name"
+                                                cssStyle=""
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="deductionCode4"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"/>
+                                                </style>
+                                            </guidetextbox>
+                                            <ltdCode1577374735370
+                                                cq:cssClass="guide-1578305179513"
+                                                jcr:lastModified="{Date}2020-04-20T01:32:50.494-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="LTD Code"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/ltdCode"
+                                                cssStyle=".guide-1578305179513 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                name="ltdCode"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan4.ltdCode&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ltdCode&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_ltdCode_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_ltdCode_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </ltdCode1577374735370>
+                                            <month41577374790922
+                                                cq:cssClass="guide-1578305181217"
+                                                jcr:lastModified="{Date}2020-09-14T01:10:39.379-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Month"
+                                                sling:resourceType="fd/af/components/guidedropdownlist"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/month4"
+                                                cssStyle=".guide-1578305181217 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;.guide-1578305181217 .dropDownList  select{&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDropDownList"
+                                                name="month4"
+                                                options="[January,February,March,April,May,June,July,August,September,October,November,December]"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan4.month4&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;month4&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month4_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_month4_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                    <af_dropdownlistwidgetandtext
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[]"/>
+                                                </style>
+                                            </month41577374790922>
+                                            <year41577374794580
+                                                cq:cssClass="guide-1578305182884"
+                                                jcr:lastModified="{Date}2020-09-14T01:10:48.659-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Year"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/VisionLifeLtdEnrollment/year4"
+                                                cssStyle=".guide-1578305182884 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                displayIsSameAsValidate="true"
+                                                displayPatternType="custom"
+                                                displayPictureClause="^\\d{4}$"
+                                                guideNodeClass="guideTextBox"
+                                                name="year4"
+                                                textIsRich="[true,true,true]"
+                                                validatePictureClauseMessage="Invalid year format">
+                                                <fd:rules
+                                                    fd:calc="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CALC_EXPRESSION&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;VALUE_FIELD&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.benifitPlan.plan4.year4&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;year4&quot;}}\,{&quot;nodeName&quot;:&quot;to&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year4_calc0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_year4_calc0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}\,{&quot;nodeName&quot;:&quot;When&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;CONDITIONORALWAYS&quot;\,&quot;choice&quot;:null}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Calculate&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_active="[color:#FF4136]"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </year41577374794580>
+                                        </items>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.enrollmentDetails.plan4&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;plan4&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan4_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_plan4_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </panel_423587740_copy>
+                                </items>
+                            </panel_2555308>
+                            <panel
+                                jcr:created="{Date}2019-12-25T21:35:43.234-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-12-26T07:46:29.724-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Signature"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="signatureSection"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="3"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <remarks1577375023769
+                                        cq:cssClass="guide-1578305193290"
+                                        jcr:lastModified="{Date}2020-09-08T04:26:22.255-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Remarks"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/remarks"
+                                        colspan="4"
+                                        cssStyle=".guide-1578305193290 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        multiLine="true"
+                                        name="remarks"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </remarks1577375023769>
+                                    <form_Completed_By1577375027066
+                                        cq:cssClass="guide-1578305292155"
+                                        jcr:lastModified="{Date}2020-09-08T04:22:05.248-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Form Completed By"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/form_Completed_By"
+                                        colspan="1"
+                                        cssStyle=".guide-1578305292155 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;.guide-1578305292155 .dropDownList  select{&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDropDownList"
+                                        mandatory="true"
+                                        name="form_Completed_By"
+                                        options="[Gabriela Corvini,Angelica Perez,Alexandra Keyes,Kathy Schnabel,Stephen Kim]"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                            <af_dropdownlistwidgetandtext
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.signatureSection.form_Completed_By&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;form_Completed_By&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_form_Completed_By_valueCommit0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_form_Completed_By_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </form_Completed_By1577375027066>
+                                    <authorized_Sign1577375030040
+                                        cq:cssClass="guide-1578305191444"
+                                        jcr:lastModified="{Date}2020-09-08T04:22:10.312-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Authorized Signature"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/VisionLifeLtdEnrollment/authorized_Sign"
+                                        cssStyle=".guide-1578305191444 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="authorized_Sign">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.signatureSection.authorized_Sign&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;authorized_Sign&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_authorized_Sign_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_authorized_Sign_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </authorized_Sign1577375030040>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2019-12-26T07:47:56.317-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-12-26T07:48:03.174-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1577375276419"
+                                        textIsRich="true"/>
+                                    <campus_Name1577375033645
+                                        cq:cssClass="guide-1578305197017"
+                                        jcr:lastModified="{Date}2019-12-26T23:17:26.075-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Campus  Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        _value="CSU FULLERTON"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/campus_Name"
+                                        cssStyle=""
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="campus_Name"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                    </campus_Name1577375033645>
+                                    <telephone_Number1577375039915
+                                        cq:cssClass="guide-1578305195177"
+                                        jcr:lastModified="{Date}2019-12-26T23:17:50.223-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Telephone  Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        _value="(657) 278-2425"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/VisionLifeLtdEnrollment/telephone_Number"
+                                        cssStyle=""
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="telephone_Number"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"/>
+                                        </style>
+                                    </telephone_Number1577375039915>
+                                    <date_Initiated1577375042955
+                                        cq:cssClass="guide-1578305209232"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Date  Initiated"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        bindRef="/VisionLifeLtdEnrollment/date_Initiated"
+                                        cssStyle=".guide-1578305209232 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDatePicker"
+                                        mandatory="true"
+                                        name="date_Initiated">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_active="[color:#FF4136]"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formBody.signatureSection.date_Initiated&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;date_Initiated&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_date_Initiated_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_date_Initiated_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </date_Initiated1577375042955>
+                                </items>
+                            </panel>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/tabbedPanelLayout"
+                            columns="1"
+                            enableLayoutOptimization="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[cssOverride:&#xa;&#xa;background: none;]"/>
+                            <af_tabsontopnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[color:#ffffff,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#00274c]"
+                                default_x0023_active_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_default="[cssOverride:border-top-right-radius: 50px 20px,color:#ffffff,background:#00274c]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_hover="[color:#ffffff,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#00274c]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#00274c]"/>
+                            <af_tabsonleftnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[color:#ffffff,background:#ff6800]"
+                                default_x0023_active_x0023_ui="[backgroundColor:#ff6800]"
+                                default_x0023_default="[background:#00274c,color:#ffffff,cssOverride:border-bottom: 0;]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_hover="[color:#ffffff,background:#ff6800]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#ff6800]"/>
+                        </style>
+                    </qualityquantityoralc>
+                </items>
+                <volumeofacceptablewo
+                    jcr:lastModified="{Date}2019-12-25T21:24:48.651-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Signature"
+                    sling:resourceType="fd/af/components/panel"
+                    guideNodeClass="guidePanel"
+                    name="signatureSection"
+                    textIsRich="true"
+                    validateOnStepCompletion="{Boolean}false">
+                    <items jcr:primaryType="nt:unstructured"/>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/gridFluidLayout"
+                        columns="1"
+                        nonNavigable="{Boolean}true"
+                        toolbarPosition="Bottom"/>
+                </volumeofacceptablewo>
+                <toolbar
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Toolbar"
+                    sling:resourceType="fd/af/components/toolbar"
+                    css=""
+                    guideNodeClass="guideToolbar"
+                    name="toolbar">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                        <guidebutton_copy
+                            jcr:created="{Date}2020-03-02T20:16:30.398-08:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-03-02T20:16:45.360-08:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generate PDF"
+                            sling:resourceType="fd/af/components/guidebutton"
+                            dorExclusion="true"
+                            guideNodeClass="guideButton"
+                            name="generateDOR"
+                            textIsRich="[true,true]"
+                            type="Button">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_generateDOR_click0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_generateDOR_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_generateDOR_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_generateDOR_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </guidebutton_copy>
+                        <reset
+                            jcr:created="{Date}2019-12-26T21:46:58.280-08:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-12-26T21:46:58.280-08:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Reset"
+                            sling:resourceType="fd/af/components/actions/reset"
+                            dorExclusion="true"
+                            guideNodeClass="guideButton"
+                            name="reset1577425618358"
+                            type="reset">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.reset1577425618358&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;reset1577425618358&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_reset1577425618358_click0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_reset1577425618358_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </reset>
+                        <saveguidedraft
+                            jcr:created="{Date}2019-12-26T21:46:52.297-08:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-12-26T21:46:52.297-08:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Save"
+                            sling:resourceType="fd/fp/components/actions/saveGuideDraft"
+                            buttonType="button-default"
+                            guideNodeClass="guideButton"
+                            name="saveguidedraft1577425612359"
+                            type="save">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.saveguidedraft1577425612359&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;saveguidedraft1577425612359&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_saveguidedraft1577425612359_click0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_saveguidedraft1577425612359_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </saveguidedraft>
+                        <submit
+                            jcr:created="{Date}2019-12-26T21:46:46.477-08:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-12-26T21:46:46.477-08:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Submit"
+                            sling:resourceType="fd/af/components/actions/submit"
+                            dorExclusion="true"
+                            guideNodeClass="guideButton"
+                            name="submit1577425606563"
+                            type="submit">
+                            <fd:rules
+                                fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.toolbar.submit1577425606563&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1577425606563&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_submit1577425606563_click0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_submit1577425606563_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </submit>
+                    </items>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+                </toolbar>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;vision_life_ltd_enrollment_vision_life_ltd_enrollment.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+        </guideContainer>
+        <parsys1
+            jcr:lastModified="{Date}2019-03-11T01:19:10.761-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1577421176691"
+                jcr:created="{Date}2019-03-10T22:37:16.000-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:46:24.448-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1577421176691 .afHeader{&#xa;background:#00274c;&#xa;height: 70px;&#xa;max-height: 70px;&#xa;margin: 0 auto;&#xa;}&#xa;.guide-1577421176691 .guideimage .logoImage img{&#xa;margin :0 auto;&#xa;}&#xa;.guide-1577421176691 .guideTextDraw.headerText{&#xa;font-size: 25px;&#xa;height: 109px;&#xa;}&#xa;">
+                <guideimage
+                    jcr:lastModified="{Date}2019-12-25T21:13:03.257-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="CSUF_logoImage"
+                    visible="{Boolean}true"/>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2020-08-04T04:52:37.259-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;headerTextVisionLife&quot; style=&quot;padding-left: 230px; height: 110px;&quot;>&lt;p style=&quot;text-align: center;&quot;>&lt;b>The California State University&lt;/b>&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Miscellaneous Benefits Enrollment Authorization Form&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select the correct entry&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;showData&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;text-align: center; display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modalText&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot;>Error Body&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    text="&lt;div id=&quot;headerTextVisionLife&quot; style=&quot;padding-left: 230px; height: 110px;&quot;>&lt;p style=&quot;text-align: center;&quot;>&lt;b>The California State University&lt;/b>&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Miscellaneous Benefits Enrollment Authorization Form&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select the department&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;showData&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;text-align: center; display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>ERPOBISTG:4502 says&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p style=&quot;color: black; padding-top: 6px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 70px;&#xa;max-height: 70px;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                    <af_headerlogo
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:margin :0 auto;]"/>
+                    <af_headertext
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:font-size: 25px;&#xa;height: 109px;]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+        <parsys2
+            jcr:lastModified="{Date}2019-03-11T01:19:22.529-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1577424117123"
+                jcr:created="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1577424117123 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2020-12-30T04:57:38.864-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>© 2021 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    text="&lt;p>© 2019 CSUF | All rights reserved&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

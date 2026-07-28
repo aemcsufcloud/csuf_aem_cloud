@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2026-03-28T05:34:44Z" uuid="3f7461d6-36da-45c0-a7e7-0ad9640207fb">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <subform name="Pilot" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="8in" h="10.5in"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="8in" layout="lr-tb">
+         <subform name="Subform1" w="203.31mm" h="69.85mm">
+            <draw name="LOGO" w="107.95mm" h="25.4mm">
+               <value>
+                  <image href=".\CSUF_HRIE_Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <draw y="41.275mm" w="203.2mm" h="6.35mm" name="FirstPara">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-size:12pt;font-weight:bold;letter-spacing:0in">Agreement Details:</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="Name" y="47.625mm" w="57.15mm" h="8.237mm" x="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="EmplId" y="47.625mm" x="57.15mm" w="37mm" h="8.237mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <draw name="Text6" y="55.245mm" x="15.875mm" w="130.175mm" h="3.937mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>(Employee Name)                                                    (Empl ID)                            (Empl Rc#)                   (Unit#)</text>
+               </value>
+               <font size="8pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 366166 8326 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 140 (Employee Name)                                                    (Empl ID)                            (Empl Rc#)                   (Unit#) 0 1417 7417 0 0 0 "Calibri" 0 0 8000 ISO-8859-1?></draw>
+            <field name="EmployeeCbid" y="3.175mm" x="127mm" w="37mm" h="9mm" presence="invisible">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="HeaderTextField" y="31.75mm" w="203.2mm" h="6.939mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="14pt" typeface="Calibri" weight="bold" underline="1"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="AgreementTextFieldOne" y="50.292mm" x="139.7mm" w="63.5mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = "will be on the voluntary summer 9/80";
+</script>
+               </event>
+            </field>
+            <field name="AgreementTextFieldTwo" y="57.531mm" w="142.875mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = "work schedule from May 24, 2026, through August 1, 2026.";
+</script>
+               </event>
+            </field>
+            <field name="EmplRcd" y="47.625mm" x="93.98mm" w="22.225mm" h="8.237mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="Unit" y="47.625mm" x="116.205mm" w="22.225mm" h="8.237mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <field name="Declaration" w="203.2mm" h="9.525mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="196.2mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>I understand that the CSUEU and APC collective bargaining agreements require a 21-day notice of schedule change and since this is solely a voluntary request, I would like to waive the 21-day notice period.</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.EmployeeCbid.rawValue == "R02" || Subform1.EmployeeCbid.rawValue == "R04" || Subform1.EmployeeCbid.rawValue == "R05" || Subform1.EmployeeCbid.rawValue == "R07" || Subform1.EmployeeCbid.rawValue == "R09"){
+this.presence = "visible";
+}else{
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+         </field>
+         <subform name="Subform6" w="203.2mm" h="10.525mm">
+            <draw name="Text8" w="203.2mm" h="7.35mm" y="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Please refer to the<a href="https://hr.fullerton.edu/worklife/titan-flex.html" style="margin-top:7pt;margin-bottom:0pt;font-family:Calibri;font-size:11pt"> Titan Flex Website</a> for additional details on the 9/80 Summer Work Schedule Program.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="7pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform2" w="203.2mm" h="174.625mm">
+            <field name="EmployeeDivision" y="3.175mm" w="101.6mm" h="9.283mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="33.154mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Employee Division:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" size="12pt"/>
+               </caption>
+            </field>
+            <draw name="Text3" y="19.05mm" x="22.225mm" w="161.925mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>All employees must choose one of the following Friday off start options:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 456166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 72 All employees must choose one of the following Friday off start options: 0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+            <exclGroup name="ShiftTime" x="22.225mm" y="88.9mm" presence="invisible">
+               <field w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                     <value>
+                        <text>7:30 am-5:00 pm with 30-minute lunch</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field y="9.167mm" w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                     <value>
+                        <text>8:00 am-5:30 pm with 30-minute lunch</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner itemValuesSpecified 1?>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="ExemptStatus" x="22.225mm" y="53.975mm" presence="invisible">
+               <field w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                     <value>
+                        <text>Employee is Exempt</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                  </value>
+               </field>
+               <field y="9.167mm" w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                     <value>
+                        <text>Employee is non Exempt:</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner itemValuesSpecified 1?>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="NonExemptChoice" x="22.225mm" y="28.575mm">
+               <field w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field y="9.167mm" w="107.95mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="100.5466mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner itemValuesSpecified 1?>
+               <?templateDesigner expand 0?></exclGroup>
+            <draw y="136.525mm" w="203.2mm" h="6.35mm" name="SignatureAcknowledgement">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:13pt">Signature and Acknowledgement:</span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt" size="11pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="ManagerName" y="146.05mm" w="117.475mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="40.5216mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Manager Name and Title:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="ManagerSignature" y="146.05mm" x="117.475mm" w="57.15mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="16.4378mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="ManagerSignDate" y="146.05mm" x="174.625mm" w="28.575mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="8.5026mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="EmployeeName" y="158.75mm" w="117.475mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="42.2135mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Employee Name and Title:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="EmployeeSignature" y="158.75mm" x="117.475mm" w="57.15mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="16.4378mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="EmployeeSignDate" y="158.75mm" x="174.625mm" w="28.575mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="8.5026mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <draw name="Rectangle1" y="134.112mm" w="203.2mm" h="37.338mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.4293mm"/>
+                     <corner radius="5.08mm" thickness="0.429mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <field name="ChoiceOne" y="28.829mm" x="27.813mm" w="53.975mm" h="5.881mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+this.rawValue = "First Friday off starts on May 29";
+</script>
+               </event>
+            </field>
+            <field name="ChoiceTwo" y="38.1mm" x="27.813mm" w="53.975mm" h="5.881mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = "First Friday off starts on June 5";
+</script>
+               </event>
+            </field>
+            <subform name="Subform5" y="79.375mm" w="203.2mm" h="6.35mm" presence="invisible">
+               <draw w="88.9mm" h="4.88mm" name="HourShift" x="22.225mm">
+                  <value>
+                     <text>(9) hour shift start/end times – choose one:</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="8in" layout="lr-tb">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <subform name="Subform3" w="203.2mm" h="260.35mm">
+            <draw w="203.2mm" h="247.65mm" y="12.7mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">The campus is offering the voluntary summer 9/80 work schedule for CSUF full-time 12-month employees. This alternate work schedule is available as long as it is operationally feasible and does not disrupt normal business operations or services.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">A regular workweek is considered to be Monday through Friday. For a 9/80 work schedule, employees work eight 9-hour days, one 8-hour day, and one day off in a 2-week period. This summer 9/80 work schedule provides for alternating Fridays off.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">The manager will complete the Summer 9/80 Work Schedule Request Form in AEM and submit it to the employee for acknowledgment and submittal to Payroll Services.<span style="font-weight:bold"> Fully executed forms must be submitted to Payroll Services through AEM on or before April 30, 2026. For new employees who begin work after May 01, 2026 - May 31, 2026, managers may reach out to Payroll Services at</span><a href="mailto:casgranillo@fullerton.edu"><span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">casgranillo@fullerton.edu</span></a><span style="font-weight:bold">. No AEM forms for new employees will be processed after May 31, 2026.</span></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">The summer 9/80 work schedule will be from May 24, 2026, through August 1, 2026 - (alternate Fridays off)</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">All employees must choose a beginning Friday for absence management updates.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Option 1 May 29 first Friday off.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Option 2 June 5 first Friday off.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Memorial Day, Monday, May 25, 2026 will be (9) hour holiday.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Under the State pay plan, salaries are paid to employees for either 21 days (168 hours) or 22 days (176 hours), depending on the number of days in a pay period. This is based on a standard work schedule of Monday-Friday, 8 hours per day.</p><p style="letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in">Excess Hours</p><p style="letter-spacing:0in">Non-exempt employees on alternate and/or compressed work schedules shall be paid for all hours worked in the pay period in excess of the standard state pay period. Employees will not be paid for excess hours worked in a pay period when an equal or greater deficit balance exists. Excess hours for a standard pay period will be calculated by the Absence Management system based on the employee work schedule. Hours in excess of the standard pay period are paid (all units except Unit 8) each pay period based on the employee’s work schedule (unless applied to deficit balance). Pay for the excess hours should issue from the State Controller’s Office approximately 15 days after the Absence Management calendar for the pay period has been closed.</p><p style="letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in">Deficit Hours</p><p style="letter-spacing:0in">Non-exempt employees who have deficit hours in a given pay period may carry these deficit hours forward. Deficit hours for a standard pay period will be calculated by the Absence Management system based on the employee work schedule. These deficit hours shall be offset by excess numbers of hours (credits) worked in a subsequent pay period.</p><p style="letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in">Annual Reconciliation of Deficit Hours</p><p style="letter-spacing:0in">The campus is required to reconcile employee deficit hours at least once each calendar year in January. When reconciling an employee's deficit hours through December 31st, the affected employee may use available leave credits (Vacation, CTO, Holiday Credit, and/or Personal Holiday) to offset the deficit balance, or the campus must establish an accounts receivable, as appropriate, if no leave credits are available to offset the deficit.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">If an employee cancels their participation in the 9/80 schedule prior to<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">August 1st<span style="xfa-spacerun:yes"> </span></span> they must contact their manager and Payroll Services to determine next steps. Please be aware that due to payroll processing, employees may not be able to immediately go back to their normal working schedule.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">If you have any questions regarding the summer 9/80 work schedule options, please contact Payroll Services at ext. 2521.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw w="203.2mm" h="5.586mm">
+               <value>
+                  <text>Summer 2026 CSUF Voluntary 9/80 Work Schedule</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt" underline="1" size="13pt"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 13000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 45 Summer 2026 CSUF Voluntary 9/80 Work Schedule 0 150897 11167 0 0 0 "Calibri" 1 0 13000 ISO-8859-1?>
+               <?renderCache.line 150897 12597 425103 12597 0 0 0 520?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(xfa.resolveNode("Pilot.#subform[0].Subform2.ExemptStatus").rawValue === null){
+this.presence = "visible";
+}else{
+this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 260 69 0003000400120018001C0026002C002F003A00440045004B0057005A005E00640068007300740102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C601C7035503570358035B036C03720374037E037F0396039B03B703EC03ED03EE03EF03F003F103F203F303F403F5 ACDEFHIJMNOPRSTUVWabcdefghiklmnopqrstuvwxy,:.’/-–()'@#0123456789?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 200 50 0003000400120018001C0026002C004400450057005A005E0068007300740102010F0110011A011E01280150015A015D016C016F01750176017D0189018C0190019A01B501C001C101C601C7035503570358036C037203EC03ED03EE03EF03F203F403F5 ACDEFHMNPRSUVWabcdefghiklmnoprstuvwxy,:./-0123689?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 83?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Vani" psName="Vani" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2026-03-28T05:34:44Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:3f7461d6-36da-45c0-a7e7-0ad9640207fb</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

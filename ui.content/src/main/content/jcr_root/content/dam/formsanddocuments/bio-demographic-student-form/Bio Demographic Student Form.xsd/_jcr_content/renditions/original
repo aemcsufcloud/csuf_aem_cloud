@@ -1,0 +1,30 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BioDemographic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CaseID"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="SSN"/>
+        <xs:element type="xs:string" name="DateofBirth"/>
+		<xs:element type="xs:string" name="CASID"/>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:byte" name="NoIDCB"/>
+        <xs:element type="xs:byte" name="NameCB"/>
+        <xs:element type="xs:byte" name="EmailCB"/>
+		<xs:element type="xs:string" name="EmailCBValue"/>
+        <xs:element type="xs:byte" name="DOBCB"/>
+        <xs:element type="xs:byte" name="GenderCB"/>
+        <xs:element type="xs:byte" name="SSNCB"/>
+        <xs:element type="xs:byte" name="CASSIDCB"/>
+		<xs:element type="xs:string" name="CASSIDCBValue"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

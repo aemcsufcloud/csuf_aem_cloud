@@ -1,0 +1,149 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FinancialARF">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="CampusEmail"/>
+        <xs:element type="xs:string" name="FirstName"/>
+		<xs:element type="xs:string" name="EmployeeFullName"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="DeptName"/>
+        <xs:element type="xs:string" name="DeptID"/>
+        <xs:element type="xs:string" name="Title"/>
+        <xs:element type="xs:string" name="CampusExt"/>
+        <xs:element type="xs:string" name="Divison"/>
+        <xs:element type="xs:string" name="CampusLocation"/>
+        <xs:element type="xs:string" name="AppropAdmin"/>
+        <xs:element type="xs:byte" name="EmploymentType"/>
+        <xs:element type="xs:string" name="TempEndDate"/>
+        <xs:element type="xs:byte" name="EmploymentCatagory"/>
+        <xs:element type="xs:string" name="OthersValue"/>
+        <xs:element type="xs:byte" name="AccountActionRequest"/>
+        <xs:element type="xs:byte" name="EmployeeCB"/>
+        <xs:element type="xs:string" name="EmployeeName"/>
+        <xs:element type="xs:string" name="EmployeeDate"/>
+        <xs:element type="xs:byte" name="AccessCB"/>
+        <xs:element type="xs:string" name="AdminName"/>
+        <xs:element type="xs:string" name="AdminDate"/>
+        <xs:element type="xs:string" name="InitiatorName"/>
+        <xs:element type="xs:string" name="InitiatorDate"/>
+        <xs:element type="xs:string" name="BusinessAnalystName"/>
+        <xs:element type="xs:string" name="BusinessAnalystDate"/>
+        <xs:element type="xs:string" name="TrainerName"/>
+        <xs:element type="xs:string" name="TrainerDate"/>
+        <xs:element type="xs:string" name="ISOAdminAnalystName"/>
+        <xs:element type="xs:string" name="ISOAdminAnalystDate"/>
+        <xs:element type="xs:string" name="SecurityName"/>
+        <xs:element type="xs:string" name="SecurityDate"/>
+        <xs:element type="xs:string" name="Comments"/>
+        <xs:element type="xs:string" name="ApprovalStatus"/>
+        <xs:element type="xs:string" name="CISOSignature"/>
+        <!--<xs:element type="xs:byte" name="DistributedUser"/>
+        <xs:element type="xs:byte" name="CentralUser"/>-->
+		<xs:element type="xs:byte" name="TypeOfAccess"/>
+		<xs:element type="xs:byte" name="EmploymentCatagory"/>
+        <xs:element type="xs:byte" name="PurDataEntryAdd"/>
+        <xs:element type="xs:byte" name="PurDataEntryRemove"/>
+        <xs:element type="xs:byte" name="PurApprovalAdd"/>
+        <xs:element type="xs:byte" name="PurApprovalRemove"/>
+        <xs:element type="xs:byte" name="RevenueAdd"/>
+        <xs:element type="xs:byte" name="RevenueRemove"/>
+        <xs:element type="xs:byte" name="PosBudgetingAdd"/>
+        <xs:element type="xs:byte" name="PosBudgetingRemove"/>
+        <xs:element type="xs:byte" name="OtherCB"/>
+        <xs:element type="xs:string" name="OtherText"/>
+        <xs:element type="xs:string" name="DepReportingAccess"/>
+        <xs:element type="xs:string" name="OtherDivisonDept"/>
+        <xs:element type="xs:string" name="AppDivDatEntry"/>
+        <xs:element type="xs:string" name="AppOtherDivDataEntry"/>
+        <xs:element type="xs:string" name="ReqApproverDivision"/>
+        <xs:element type="xs:string" name="ReqApproverOtherDivision"/>
+        <xs:element type="xs:string" name="DOAEffDate"/>
+        <xs:element type="xs:byte" name="DOAPermanent"/>
+        <xs:element type="xs:byte" name="DOATemporary"/>
+        <xs:element type="xs:string" name="DOATempEndDate"/>
+        <xs:element type="xs:byte" name="AccPayableAdd"/>
+        <xs:element type="xs:byte" name="AccPayableRemove"/>
+        <xs:element type="xs:byte" name="BudgetAdd"/>
+        <xs:element type="xs:byte" name="BudgetRemove"/>
+        <xs:element type="xs:byte" name="AssetManagementAdd"/>
+        <xs:element type="xs:byte" name="AssetManagementRemove"/>
+        <xs:element type="xs:byte" name="GeneralLedgerAdd"/>
+        <xs:element type="xs:byte" name="GeneralLedgerRemove"/>
+        <xs:element type="xs:byte" name="BillingAdd"/>
+        <xs:element type="xs:byte" name="BillingRemove"/>
+        <xs:element type="xs:byte" name="PurchasingAdd"/>
+        <xs:element type="xs:byte" name="PurchasingRemove"/>
+        <xs:element type="xs:byte" name="FinOtherCB"/>
+        <xs:element type="xs:string" name="FinOtherText"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="DivisionID"/>
+		<xs:element type="xs:string" name="DOADept"/>
+		<xs:element type="xs:string" name="DOAOtherDivisonDept"/>
+		<xs:element type="xs:string" name="ManagerUserID"/>
+        <xs:element type="xs:string" name="ManagerName"/>
+        <xs:element type="xs:string" name="ManagerEmail"/>
+        <xs:element type="xs:string" name="EmployeeUserID"/>
+        <xs:element type="xs:string" name="EmployeeSignature"/>
+        <xs:element type="xs:string" name="EmployeeComments"/>
+		<xs:element type="xs:string" name="AdminComments"/>
+		<xs:element type="xs:string" name="InitiatorComments"/>
+		<xs:element type="xs:string" name="BusinessAnalystComments"/>
+		<xs:element type="xs:string" name="TrainerComments"/>
+		<xs:element type="xs:string" name="ISOAdminComments"/>
+		<xs:element type="xs:string" name="SecurityAdminComments"/>
+		<xs:element type="xs:string" name="ISOAdminFlag"/>
+		<xs:element type="xs:string" name="SecurityAdminFlag"/>
+		<xs:element type="xs:string" name="CISOAdminFlag"/>
+		<xs:element type="xs:string" name="SecurityAdminCB"/>
+		<xs:element type="xs:string" name="ISOAdminCB"/>
+		<xs:element type="xs:string" name="CISOCB"/>
+		<xs:element type="xs:string" name="BudgetOfficeFlag"/>
+		<xs:element type="xs:string" name="CISOComments"/>
+		<xs:element type="xs:string" name="CISODate"/>
+		<xs:element type="xs:string" name="BudgetAnalystCB"/>
+		<xs:element type="xs:string" name="BudgetAnalystName"/>
+		<xs:element type="xs:string" name="BudgetAnalystDate"/>
+		<xs:element type="xs:string" name="BudgetAnalystComments"/>
+		<xs:element type="xs:string" name="BudgetContactCB"/>
+		<xs:element type="xs:string" name="BudgetContactSign"/>
+		<xs:element type="xs:string" name="BudgetContactSignDate"/>
+		<xs:element type="xs:string" name="BudgetContactComments"/>
+		<xs:element type="xs:string" name="BudgetManagementRemove"/>
+		<xs:element type="xs:string" name="BudgetManagementAdd"/>
+		<xs:element type="xs:string" name="DOAEmpType"/>
+		<xs:element type="xs:string" name="InitiatorUserName"/>
+		<xs:element type="xs:string" name="RequestorUserId"/>
+		<xs:element type="xs:string" name="RequestorEmail"/>
+		<xs:element type="xs:string" name="RemoveRolesFlag"/>
+		<xs:element type="xs:string" name="ExpiryFlag"/>
+		<xs:element type="xs:string" name="CaseId"/>
+		<xs:element type="xs:string" name="FormStatus"/>
+		<xs:element type="xs:string" name="BudgetContactEmail"/>
+		<xs:element type="xs:string" name="BudgetContactUserID"/>		
+		<xs:element type="xs:string" name="BudgetContactName"/>
+		
+		<xs:element maxOccurs="unbounded" name="FinanceDistRoleTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="Option"/>
+                            <xs:element type="xs:string" name="Role"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+				<xs:element maxOccurs="unbounded" name="FinanceCoreRoleTable">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="CoreOption"/>
+                            <xs:element type="xs:string" name="CoreRole"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

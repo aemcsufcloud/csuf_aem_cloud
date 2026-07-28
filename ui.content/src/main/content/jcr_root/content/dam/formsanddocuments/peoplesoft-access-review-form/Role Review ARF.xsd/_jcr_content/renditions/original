@@ -1,0 +1,84 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="RoleReviewerARF">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="CaseID"/>
+				<xs:element type="xs:string" name="CWID"/>
+				<xs:element type="xs:string" name="CampusEmail"/>
+				<xs:element type="xs:string" name="FirstName"/>
+				<xs:element type="xs:string" name="LastName"/>
+				<xs:element type="xs:string" name="FullName"/>
+				<xs:element type="xs:string" name="DeptName"/>
+				<xs:element type="xs:string" name="DeptID"/>
+				<xs:element type="xs:string" name="Title"/>
+				<xs:element type="xs:string" name="CampusExt"/>
+				<xs:element type="xs:string" name="Divison"/>
+				<xs:element type="xs:string" name="CampusLocation"/>
+				<xs:element type="xs:string" name="ApprAdmin"/>
+				<xs:element type="xs:string" name="EmployeeUserID"/>
+				<xs:element type="xs:byte" name="EmploymentType"/>
+				<xs:element type="xs:string" name="TempEndDate"/>
+				<xs:element type="xs:byte" name="EmploymentCatagory"/>
+				<xs:element type="xs:string" name="OthersValue"/>
+				<xs:element type="xs:string" name="InitiatorSignature"/>
+				<xs:element type="xs:string" name="InitiatorDate"/>
+				<xs:element type="xs:string" name="InitiatorComments"/>
+				<xs:element type="xs:string" name="ManagerSignature"/>
+				<xs:element type="xs:string" name="ManagerDate"/>
+				<xs:element type="xs:string" name="MangerComments"/>
+				<xs:element type="xs:string" name="SecurityAdminSignature"/>
+				<xs:element type="xs:string" name="SecurityAdminDate"/>
+				<xs:element type="xs:string" name="SecurityAdminComments"/>
+				<xs:element type="xs:string" name="Comments"/>
+				<xs:element type="xs:string" name="ApprovalStatus"/>
+				<xs:element name="CSRolesRow" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:byte" name="Remove"/>
+							<xs:element type="xs:string" name="Type"/>
+							<xs:element type="xs:string" name="RoleName"/>
+							<xs:element type="xs:string" name="Description"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CFSRolesRow" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:byte" name="Remove"/>
+							<xs:element type="xs:string" name="Type"/>
+							<xs:element type="xs:string" name="RoleName"/>
+							<xs:element type="xs:string" name="Description"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CHRSRolesRow" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:byte" name="Remove"/>
+							<xs:element type="xs:string" name="Type"/>
+							<xs:element type="xs:string" name="RoleName"/>
+							<xs:element type="xs:string" name="Description"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element type="xs:string" name="aftiaDescCWID"/>
+                <xs:element type="xs:string" name="EmailSubject"/>
+                <xs:element type="xs:string" name="StageIndicator"/>
+				<xs:element type="xs:string" name="InitiatorName"/>
+				<xs:element type="xs:string" name="InitiatorFirstName"/>
+				<xs:element type="xs:string" name="InitiatorLastName"/>
+				<xs:element type="xs:string" name="InitiatorUserId"/>
+				<xs:element type="xs:string" name="InitiatorEmailId"/>
+				<xs:element type="xs:string" name="ManagerName"/>
+				<xs:element type="xs:string" name="ManagerUserId"/>
+				<xs:element type="xs:string" name="ManagerEmailId"/>
+				<xs:element type="xs:string" name="DivisionID"/>
+				<xs:element type="xs:string" name="RolesCount"/>
+				<xs:element type="xs:string" name="RolesJson"/>
+				<xs:element type="xs:string" name="AllRolesInitialSubmission"/>
+				<xs:element type="xs:string" name="AllRolesManagerSubmission"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

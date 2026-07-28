@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-09-18T09:21:39.139-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-09-18T09:21:41.038-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/print_only_form_template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Loan Status Verification"
+        jcr:uuid="ae722a49-8c8c-43d0-951c-79b2cf64c286"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2023-03-06T03:18:30.703-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="Attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.loan_status_verification_loan_status_verification"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/loan-status-verification/Loan_Status_Verification .xdp"
+            dorType="select"
+            enableFocusOnFirstField="{Boolean}true"
+            enableLayoutLayer="false"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            redirect="/content/formsPortal/loan-status-verification/jcr:content"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="Thank you for submitting the form."
+            thankYouOption="page"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/loan-status-verification"
+            xsdRef="/content/dam/formsanddocuments/loan-status-verification/Loan_Status_Verification.xsd"
+            xsdRootElement="LoanStatusVerification">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                    <panel_copy_copy
+                        jcr:created="{Date}2022-02-04T03:50:42.523-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-05-25T04:34:48.067-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Header Section"
+                        sling:resourceType="fd/af/components/panel"
+                        colspan="4"
+                        guideNodeClass="guidePanel"
+                        name="FormHeadText"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <caseid1643975253061
+                                jcr:lastModified="{Date}2022-07-12T05:28:01.371-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Case ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/LoanStatusVerification/caseId"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                name="caseId"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.FormHeadText.caseId&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;caseId&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_caseId_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_caseId_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </caseid1643975253061>
+                            <guidetextdraw_copy_c
+                                jcr:lastModified="{Date}2022-05-25T01:37:12.448-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p id=&quot;f0slsmHeadingText&quot; style=&quot;text-align: center;&quot;>&lt;b>2021 SUMMER LOAN REQUEST FOR CONTINUING STUDENTS&lt;/b>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                            <guidetextdraw_540451_418129369
+                                jcr:created="{Date}2022-05-26T20:44:07.166-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-12T08:29:15.469-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p id=&quot;F0DFLTFormCodeText&quot; style=&quot;text-align: right;&quot;>&lt;b>F1DFLT&lt;/b>&lt;/p>&#xa;"
+                                colspan="6"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_5404516611653623047342_copy_1"
+                                textIsRich="true"/>
+                            <guidetextdraw_copy
+                                jcr:created="{Date}2022-02-01T03:45:36.360-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-07-12T08:24:15.242-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p id=&quot;F0DFLTTitleText&quot; style=&quot;text-align: center;&quot;>&lt;b>LOAN STATUS VERIFICATION&amp;nbsp;(2022-2023)&lt;/b>&lt;/p>&#xa;"
+                                colspan="5"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1643715936628_copy_1"
+                                textIsRich="true"/>
+                            <guidetextdraw_540451
+                                jcr:lastModified="{Date}2022-07-12T08:23:47.539-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p style=&quot;text-align: right;&quot;>&lt;b>F1DFLT&lt;/b>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </items>
+                    </panel_copy_copy>
+                    <panel
+                        cq:cssClass="guide-1608104020427"
+                        jcr:created="{Date}2022-07-12T05:49:17.954-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-07-12T05:49:17.954-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Section"
+                        sling:resourceType="fd/af/components/panel"
+                        completionExpReq="{Boolean}false"
+                        cssStyle=".guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon:hover{&#xa;background:#084B8A;&#xa;color:#ffffff;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon,.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li.stepped.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.stepped.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon:hover,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon:hover{&#xa;background:084B8A;&#xa;color:#ffffff;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon{&#xa;color:#ffffff;&#xa;background:#00274c;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideLayout.guideVerticalTabbedPanelLayout{&#xa;padding-right:5px;&#xa;padding-bottom:5px;&#xa;padding-left:5px;&#xa;padding-top:5px;&#xa;&#xa;}&#xa;.guide-1608104020427 .afTabTopPanel{&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-style:solid;&#xa;border-color:#AAAAAA;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="formContainer"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/verticalTabbedPanelLayout"
+                            columns="1"
+                            enableLayoutOptimization="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <panel
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student Information"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="StudentInformation"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="3"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <CWID1608528569867
+                                        cq:cssClass="guide-1608532614727"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* CWID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/cwid"
+                                        cssStyle=".guide-1608532614727 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^[0-9]*$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="cwid"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.CWID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;cwid&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_cwid_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_cwid_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CWID1608528569867>
+                                    <firstname16518250986
+                                        cq:cssClass="guide-1651835275645"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* First Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/firstName"
+                                        cssStyle=".guide-1651835275645 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="firstName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.firstName&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;firstName&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_firstName_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_firstName_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </firstname16518250986>
+                                    <lastname165182512176
+                                        cq:cssClass="guide-1651835288373"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Last Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/lastName"
+                                        cssStyle=".guide-1651835288373 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="lastName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.lastName&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;lastName&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_lastName_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_lastName_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </lastname165182512176>
+                                    <initiateddate1653484
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/Date_1"
+                                        guideNodeClass="guideDatePicker"
+                                        mandatory="true"
+                                        name="Date_1"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.Date_1&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;Date_1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_Date_1_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_Date_1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </initiateddate1653484>
+                                    <guidedropdownlist_co
+                                        cq:cssClass="guide-1657875679192"
+                                        jcr:lastModified="{Date}2022-08-16T04:31:54.947-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Finance Aid Year"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        bindRef="/LoanStatusVerification/financialAidYear"
+                                        cssStyle=".guide-1657875679192 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDropDownList"
+                                        mandatory="true"
+                                        name="financialAidYear"
+                                        options="[2021-2022,2022-2023]"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.financialAidYear&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;financialAidYear&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_financialAidYear_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_financialAidYear_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidedropdownlist_co>
+                                </items>
+                            </panel>
+                            <panel_1162785294
+                                jcr:lastModified="{Date}2022-07-12T07:49:19.891-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Action To Complete Form"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="ActionToCompleteForm"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="2"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw
+                                        jcr:lastModified="{Date}2022-07-12T05:55:00.055-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>&lt;u>ACTION TO COMPLETE FORM:&lt;/u>&lt;/b>&lt;/p>&#xa;"
+                                        colspan="5"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1657629801194"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_1404623293
+                                        jcr:lastModified="{Date}2022-07-12T05:55:06.599-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Select situation below which is relevant to you and attach a copy of documentation showing that you have resolved your loan status:&lt;/b>&lt;/p>&#xa;"
+                                        colspan="5"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_14046232931657629827718"
+                                        textIsRich="true"/>
+                                    <guidecheckbox
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Check Box"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/LoanStatusVerification/ActionCB1"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        name="ActionCB1"
+                                        options="1="
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.ActionToCompleteForm.ActionCB1&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ActionCB1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidecheckbox>
+                                    <guidetextdraw_1010121353
+                                        jcr:lastModified="{Date}2023-03-06T03:43:31.454-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Defaulted Loans -&lt;/b> If one or more of your federal student loans are defaulted, submit this form only after you can attach documentation that the loans are repaid or rehabilitated&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233"
+                                        textIsRich="true"/>
+                                    <guidecheckbox_copy
+                                        jcr:lastModified="{Date}2022-07-12T05:56:16.742-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Check Box"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/LoanStatusVerification/ActionCB2"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        name="ActionCB2"
+                                        options="[1=]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.ActionToCompleteForm.ActionCB2&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ActionCB2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidecheckbox_copy>
+                                    <guidetextdraw_101012
+                                        jcr:lastModified="{Date}2022-07-12T05:53:45.637-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Active Bankruptcy Claim - &lt;/b>If you have a non-defaulted student loan in an active bankruptcy claim, you will most likely be eligible for aid as long as you do not have any student loans in a default status. Attach your NSLDS loan history to this form to document that all your student loans are in good standing&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233_copy_1"
+                                        textIsRich="true"/>
+                                    <guidecheckbox_copy_1124794236
+                                        jcr:lastModified="{Date}2022-07-12T05:56:35.788-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Check Box"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/LoanStatusVerification/ActionCB3"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        name="ActionCB3"
+                                        options="[1=]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.ActionToCompleteForm.ActionCB3&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ActionCB3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB3_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB3_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidecheckbox_copy_1124794236>
+                                    <guidetextdraw_101012_544471750
+                                        jcr:lastModified="{Date}2022-07-12T05:52:24.076-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Non-Veteran Disability Discharge - &lt;/b>If you wish to take out additional student loans, attach a physician’s certification that you have the ability to engage in substantial gainful activity AND a statement that you signed stating that you are aware the new student loans can’t later be discharged for any present impairment unless your condition deteriorates to the point where you become permanently disabled.&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233_copy_2"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_101012_159407712
+                                        jcr:lastModified="{Date}2022-07-12T05:55:33.986-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;ul>&#xa;&lt;li>If you do not meet the three year conditional disability discharge, you must also include a signed statement that you affirm you will resume responsibility to pay back your previous student loans.&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233_copy_4"
+                                        textIsRich="true"/>
+                                    <guidecheckbox_copy_1913297953
+                                        jcr:lastModified="{Date}2022-07-12T05:56:50.116-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Check Box"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/LoanStatusVerification/ActionCB4"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        name="ActionCB4"
+                                        options="[1=]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.ActionToCompleteForm.ActionCB4&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ActionCB4&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB4_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_ActionCB4_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidecheckbox_copy_1913297953>
+                                    <guidetextdraw_101012_22907722
+                                        jcr:lastModified="{Date}2022-07-12T05:51:46.898-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Veteran Disability Discharge -&lt;/b> If you qualified for a disability discharge based on one of the two standards listed below, submit a copy of the documentation that confirms your eligibility:&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233_copy_3"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_101012_1904982004
+                                        jcr:lastModified="{Date}2022-07-12T05:55:39.498-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;ul>&#xa;&lt;li>Letter from the VA confirming that you have a service connected 100 % disability; OR&lt;/li>&#xa;&lt;li>Letter from the VA confirming that you are totally disabled based on your employability determination; AND&lt;/li>&#xa;&lt;li>A physician’s certification that you have the ability to engage in substantial gainful activity; AND&lt;/li>&#xa;&lt;li>A statement that you signed stating that you are aware the new student loans or TEACH Grant service obligation can’t later be discharged for any present impairment unless your condition deteriorates to the point where you become permanently disabled.&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                        colspan="4"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10101213531657630101233_copy_5"
+                                        textIsRich="true"/>
+                                </items>
+                            </panel_1162785294>
+                            <panel_1581977859
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Instructions"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="InstructionTab"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_609773
+                                        jcr:lastModified="{Date}2023-03-06T03:43:48.157-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>INSTRUCTIONS:&lt;/b>&lt;/p>&#xa;&lt;p style=&quot;text-align: left;&quot;>When you filed your Free Application for Federal Student Aid (FAFSA), the FAFSA processor sent you a response indicating their records showed that a previous loan is in default, discharged, or that you have filed bankruptcy. Based on that response, the federal government requires that we obtain information from you to confirm your continued eligibility to receive federal funds.&lt;i> Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.&lt;/i>&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_6097737761646304849565"
+                                        textIsRich="true"/>
+                                    <guidetextbox
+                                        jcr:created="{Date}2022-09-05T05:36:43.129-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-11T22:40:59.407-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Text Box"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Your loan history from the National Student Loan Data System (&lt;a href=&quot;https://nsldsfap.ed.gov/nslds_FAP/&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-18&quot;>www.nsldsfap.ed.gov&lt;/a>) may show that your loans are defaulted. You may call the U.S. Department of Education at 1.800.621.3115 for assistance or for information regarding your loan.&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textbox1662381403228"
+                                        textIsRich="true"/>
+                                    <guidetextdraw
+                                        jcr:lastModified="{Date}2022-08-30T01:08:34.610-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>We cannot proceed with the review of your financial aid eligibility until you submit a copy of the requested documentation that is appropriate to you situation and it is verified as resolved.&lt;br>&#xa;&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1657101385850"
+                                        textIsRich="true"/>
+                                    <guidecheckbox_copy
+                                        cq:cssClass="guide-1660912207054"
+                                        jcr:created="{Date}2022-08-19T05:15:08.344-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-09-12T23:02:59.109-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Check Box"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        cssStyle=".guide-1660912207054 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        mandatory="true"
+                                        name="checkbox1660911308485"
+                                        options="[0=I have read the instructions]"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                    </guidecheckbox_copy>
+                                </items>
+                            </panel_1581977859>
+                            <supportingdocuments_
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supporting Documents"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="SupportingDocumentsPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false"
+                                visible="{Boolean}true">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_copy_c
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Supporting Documents&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1589948621360"
+                                        textIsRich="true"/>
+                                    <guidetextdraw
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;color: rgb(255, 0, 0);&quot;>&lt;b>Please Note:&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Attachment does not support following special characters / \\ : * ? &amp;amp; { } ; [ ]&lt;/li>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Only PDF files are allowed!&lt;/li>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>At least one supporting document is required.&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="supDocErrorMessage"
+                                        text="&lt;p>The text will appear here&lt;/p>&#xa;"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_1972492335
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;color: rgb(255, 0, 0);&quot;>&lt;b>Please attach supporting document(s)&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="nonMedSupDocMessage"
+                                        textIsRich="true"/>
+                                    <guidefileupload
+                                        cq:cssClass="guide-1647840463996"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 1"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1647840463996 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc1"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.SupportingDocumentsPanel.supportDoc1&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc1_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.SupportingDocumentsPanel.supportDoc1&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload>
+                                    <guidefileupload_375784259
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 2"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc2"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SupportingDocumentsPanel.supportDoc2&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload_375784259>
+                                    <guidefileupload_1478215996
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 3"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc3"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SupportingDocumentsPanel.supportDoc3&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc3_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_supportDoc3_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload_1478215996>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.SupportingDocumentsPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;SupportingDocumentsPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_SupportingDocumentsPanel_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_SupportingDocumentsPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </supportingdocuments_>
+                            <panel_928599710
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Signature and Acknowledgement"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="SignatureSection"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <panel_1313326160
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Student Sign Panel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        name="StudentSignPanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextdraw_26188748
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Signature and Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                                colspan="6"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw_261887481656478743002"
+                                                textIsRich="true"/>
+                                            <guidetextdraw_copy_c_1156861149
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Warning&lt;/b>: If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988_copy_2"
+                                                textIsRich="true"/>
+                                            <guidetextdraw_copy_c
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>CERTIFICATION:&lt;/b>&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988_copy_1"
+                                                textIsRich="true"/>
+                                            <guidecheckbox
+                                                jcr:lastModified="{Date}2022-08-19T05:56:18.685-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Check Box"
+                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                guideNodeClass="guideCheckBox"
+                                                hideTitle="true"
+                                                name="StudentACK"
+                                                options="[1=]"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignPanel.StudentACK&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;StudentACK&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_StudentACK_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_StudentACK_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidecheckbox>
+                                            <guidetextdraw
+                                                jcr:created="{Date}2022-08-19T05:56:26.158-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-09-01T06:22:35.750-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I (we) agree to provide additional proof of the information I (we) have reported, if requested to do so. I (we) also certify that I (we) have read the terms and conditions section of the CSU Fullerton, Financial Aid website (&lt;a href=&quot;http://www.fullerton.edu/financialaid/info/Terms.php&quot; data-clickable-id=&quot;clickable-17&quot; target=&quot;_blank&quot;>http://www.fullerton.edu/financialaid/info/Terms.php&lt;/a>)&lt;/p>&#xa;"
+                                                colspan="3"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1660913786259"
+                                                textIsRich="true"/>
+                                            <guidescribble_copy
+                                                cq:cssClass="guide-1653565725120"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Student E-signature"
+                                                sling:resourceType="fd/af/components/guidescribble"
+                                                aspectRatio="6.8888"
+                                                bindRef="/LoanStatusVerification/studentScribleSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1653565725120 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideScribble"
+                                                mandatory="true"
+                                                name="studentScribleSignature"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="color:#FF4136"/>
+                                                </style>
+                                            </guidescribble_copy>
+                                            <guidetextbox_copy
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="IP Address"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/ipAddress"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="ipAddress"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formPanel.SignaturePanel.StudentSignaturePanel.ipAddress&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ipAddress&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_ipAddress_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_ipAddress_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidetextbox_copy>
+                                            <studentsignature1651
+                                                cq:cssClass="guide-1651665955530"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Student Name"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/studentSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1651665955530 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="studentSignature"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignPanel.StudentSignature&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;studentSignature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_studentSignature_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_studentSignature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentsignature1651>
+                                            <studentsignaturedate
+                                                cq:cssClass="guide-1651753094327"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Date"
+                                                sling:resourceType="fd/af/components/guidedatepicker"
+                                                bindRef="/LoanStatusVerification/studentSignDate"
+                                                cssStyle=".guide-1651753094327 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDatePicker"
+                                                mandatory="true"
+                                                name="studentSignDate"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="color:#FF4136"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignPanel.StudentSignatureDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;studentSignDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_studentSignDate_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_studentSignDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentsignaturedate>
+                                            <guidetextbox
+                                                jcr:lastModified="{Date}2022-08-18T22:21:05.199-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Comments"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/studentComments"
+                                                colspan="6"
+                                                guideNodeClass="guideTextBox"
+                                                multiLine="true"
+                                                name="studentComments"
+                                                textIsRich="[true,true,true]"
+                                                visible="{Boolean}false"/>
+                                        </items>
+                                    </panel_1313326160>
+                                    <panel
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Financial Aid Panel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        name="FinancialAidPanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextdraw
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Financial Aid Signature&lt;/b>&lt;/p>&#xa;"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1652101421973"
+                                                textIsRich="true"/>
+                                            <guidetextdraw_copy_6
+                                                jcr:created="{Date}2022-04-28T19:30:13.188+05:30"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-08-17T04:49:06.435-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;div id=&quot;gridView&quot;>&lt;b>Docs&lt;/b>&lt;/div>&#xa;"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw_5104484771587724123076"
+                                                textIsRich="true"
+                                                visible="{Boolean}false"/>
+                                            <guidecheckbox_copy
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Finance ACK"
+                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                colspan="6"
+                                                guideNodeClass="guideCheckBox"
+                                                hideTitle="true"
+                                                name="FinanceACK"
+                                                options="1=Please check the box to indicate that you have completed the review"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.FinancialAidPanel.FinanceACK&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FinanceACK&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_FinanceACK_valueCommit0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_FinanceACK_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </guidecheckbox_copy>
+                                            <studentname165166302
+                                                cq:cssClass="guide-1651666510208"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Signature"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/staffSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1651666510208 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="staffSignature"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.FinancialAidPanel.FinancialAidSign&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;staffSignature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_staffSignature_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_staffSignature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentname165166302>
+                                            <studentname165166302_1905983996
+                                                cq:cssClass="guide-1651666510208"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Date"
+                                                sling:resourceType="fd/af/components/guidedatepicker"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/staffSignDate"
+                                                cssStyle=".guide-1651666510208 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDatePicker"
+                                                mandatory="true"
+                                                name="staffSignDate"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.FinancialAidPanel.FinancialAidSignDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;staffSignDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_staffSignDate_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_staffSignDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentname165166302_1905983996>
+                                            <guideradiobutton
+                                                cq:cssClass="guide-1657873679961"
+                                                jcr:lastModified="{Date}2022-07-15T00:44:39.128-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Recommend"
+                                                sling:resourceType="fd/af/components/guideradiobutton"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                bindRef="/LoanStatusVerification/staffDecision"
+                                                colspan="6"
+                                                cssStyle=".guide-1657873679961 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideRadioButton"
+                                                mandatory="true"
+                                                name="staffDecision"
+                                                options="[1=Approve,2=Reject]"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </guideradiobutton>
+                                            <guidetextbox_2431706
+                                                jcr:lastModified="{Date}2022-07-15T02:24:03.589-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Comments"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/LoanStatusVerification/staffComment"
+                                                colspan="6"
+                                                guideNodeClass="guideTextBox"
+                                                multiLine="true"
+                                                name="staffComment"
+                                                textIsRich="[true,true,true]"/>
+                                        </items>
+                                    </panel>
+                                </items>
+                            </panel_928599710>
+                            <panel_1211565118
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="HiddenPanel"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="HiddenPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false"
+                                visible="{Boolean}true">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="4"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextbox_739183521
+                                        cq:cssClass="guide-1651753276791"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="workflow_initiator"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        cssStyle=".guide-1651753276791 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="workflow_initiator"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </guidetextbox_739183521>
+                                    <EmailSubject1643957782499
+                                        cq:cssClass="guide-1651753270110"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Email Subject"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/EmailSubject"
+                                        cssStyle=".guide-1651753270110 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="EmailSubject"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </EmailSubject1643957782499>
+                                    <scwid1651663039336
+                                        cq:cssClass="guide-1651753113003"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* CWID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/studentIDNumber"
+                                        cssStyle=".guide-1651753113003 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="studentIDNumber"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </scwid1651663039336>
+                                    <StageIndicator1643957789349
+                                        cq:cssClass="guide-1651753266565"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Stage Indicator"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/StageIndicator"
+                                        cssStyle=".guide-1651753266565 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="StageIndicator"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </StageIndicator1643957789349>
+                                    <aftiaDescCWID1643957798878
+                                        cq:cssClass="guide-1651753217795"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Aftia Desc CWID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/aftiaDescCWID"
+                                        cssStyle=".guide-1651753217795 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="aftiaDescCWID"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </aftiaDescCWID1643957798878>
+                                    <HiddenStudentUserID1643957807267
+                                        cq:cssClass="guide-1651753231674"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Hidden Student User ID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/HiddenStudentUserID"
+                                        cssStyle=".guide-1651753231674 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="HiddenStudentUserID"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </HiddenStudentUserID1643957807267>
+                                    <HiddenStudentEmail1643957819764
+                                        cq:cssClass="guide-1651753234234"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Hidden Student Email"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/HiddenStudentEmail"
+                                        cssStyle=".guide-1651753234234 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="HiddenStudentEmail"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </HiddenStudentEmail1643957819764>
+                                    <HiddenStudentName1643971185502
+                                        cq:cssClass="guide-1651753238409"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Hidden Student Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/HiddenStudentName"
+                                        cssStyle=".guide-1651753238409 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        name="HiddenStudentName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.HiddenStudentName&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;HiddenStudentName&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_HiddenStudentName_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_HiddenStudentName_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </HiddenStudentName1643971185502>
+                                    <workflowinstanceid16
+                                        jcr:lastModified="{Date}2022-08-17T04:48:45.875-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Workflow Instance Id"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        colspan="6"
+                                        guideNodeClass="guideTextBox"
+                                        name="WorkflowInstanceID"
+                                        textIsRich="[true,true,true]"
+                                        visible="{Boolean}false">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.HiddenPanel.WorkflowInstanceID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;WorkflowInstanceID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_WorkflowInstanceID_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_WorkflowInstanceID_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </workflowinstanceid16>
+                                    <aidYear1646318077734
+                                        cq:cssClass="guide-1651753249625"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Aid Year"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/aidYear"
+                                        cssStyle=".guide-1651753249625 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="aidYear"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </aidYear1646318077734>
+                                    <formCode1646390588568
+                                        cq:cssClass="guide-1651753257389"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Form Code"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/formCode"
+                                        cssStyle=".guide-1651753257389 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="formCode"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="color:#FF4136"/>
+                                        </style>
+                                    </formCode1646390588568>
+                                    <financialAidAssignee1662365406227
+                                        jcr:lastModified="{Date}2022-09-05T01:12:43.970-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Financial Aid Assignee"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/financialAidAssignee"
+                                        guideNodeClass="guideTextBox"
+                                        name="financialAidAssignee"
+                                        textIsRich="[true,true,true]"/>
+                                    <TitleYear1678102019643
+                                        jcr:lastModified="{Date}2023-03-06T03:27:04.801-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Title Year"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/LoanStatusVerification/TitleYear"
+                                        guideNodeClass="guideTextBox"
+                                        name="TitleYear"
+                                        textIsRich="[true,true,true]"/>
+                                </items>
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.HiddenPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;HiddenPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_HiddenPanel_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_HiddenPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel_1211565118>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[background:084B8A,color:#ffffff,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px]"
+                                default_x0023_active_x0023_ui="backgroundColor:084B8A"
+                                default_x0023_default="[cssOverride:border-top-right-radius: 50px 20px,color:#ffffff,background:#00274c]"
+                                default_x0023_default_x0023_ui="backgroundColor:#00274c"
+                                default_x0023_hover="[cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#084B8A,color:#ffffff]"
+                                default_x0023_hover_x0023_ui="backgroundColor:#084B8A"/>
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="cssOverride:background:none !important;&#xa;text-align: center !important;&#xa;"/>
+                            <af_tabsontop
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[padding-right:5px,padding-bottom:5px,padding-left:5px,padding-top:5px]"
+                                default_x0023_default_x0023_ui="[paddingPopover:5px,borderWidthPopover:Set]"/>
+                            <af_tabsontopcontentarea
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-style:solid,border-color:#AAAAAA]"
+                                default_x0023_default_x0023_ui="borderWidthPopover:1px"/>
+                        </style>
+                    </panel>
+                </items>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init1&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init2&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_guideRootPanel_init2&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                signConfigPath="/conf/global/settings/cloudconfigs/echosign/adobe-sign-cloud-config"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toolbar"
+                sling:resourceType="fd/af/components/toolbar"
+                css=""
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                    <guidebutton_copy_cop
+                        jcr:created="{Date}2020-04-16T06:37:12.000-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-05-25T23:02:50.762-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate PDF"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="generateDOR"
+                        textIsRich="[true,true]"
+                        type="Button"
+                        visible="{Boolean}true">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_generateDOR_click0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_generateDOR_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_generateDOR_init0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_generateDOR_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton_copy_cop>
+                    <submit
+                        jcr:created="{Date}2020-12-20T21:43:36.043-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-20T21:43:36.043-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceType="fd/af/components/actions/submit"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="submit1608529416101"
+                        type="submit">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.submit1608529416101&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1608529416101&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;loan_status_verification_loan_status_verification.generated_submit1608529416101_click0&quot;\,&quot;displayName&quot;:&quot;loan_status_verification_loan_status_verification.generated_submit1608529416101_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </submit>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+            </toolbar>
+        </guideContainer>
+        <parsys2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1608103985312"
+                jcr:created="{Date}2020-05-26T00:40:44.351-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:41:27.751-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1608103985312 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;"
+                name="footer1677056522582">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2023-01-16T23:57:53.355-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p id=&quot;FooterText&quot;>© 2022 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    text="&lt;p>© 2020 CSUF | All rights reserved&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+        <parsys1
+            jcr:lastModified="{Date}2020-05-26T00:59:33.688-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1608103936290"
+                jcr:created="{Date}2020-05-26T00:40:34.383-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:42:47.208-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1608103936290 .afHeader{&#xa;background:#00274c;&#xa;height: 65px;&#xa;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1677056520667">
+                <guideimage
+                    cq:cssClass="guide-1608104012074"
+                    jcr:lastModified="{Date}2024-09-18T09:21:38.116-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1608104012074 .guideImage img{&#xa;margin-top:0;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top:0;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2022-09-13T00:13:42.042-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;studentNonFilerHeader&quot; style=&quot;padding-left: 350px;&quot;>&lt;p>&lt;b>Loan Status Verification&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;span class=&quot;close&quot;>×&lt;/span>&lt;p style=&quot;font-size: 24px;&quot;>Please select the Financial Aid Year&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;input type=&quot;radio&quot; class=&quot;rb1&quot; value=&quot;type1&quot; id=&quot;button1&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type1&quot; class=&quot;lb1&quot;>&lt;b>2021-2022&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb2&quot; value=&quot;type2&quot; id=&quot;button2&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type2&quot; class=&quot;lb2&quot;>&lt;b>2022-2023&lt;/b>&lt;/label>&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    text="&lt;div id=&quot;petitionHeader&quot;>&lt;p>&lt;b>Petitions&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;span class=&quot;close&quot;>×&lt;/span>&lt;p style=&quot;font-size: 24px;&quot;>Please select the type of petition&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;input type=&quot;radio&quot; class=&quot;rb1&quot; name=&quot;withdrawal&quot; value=&quot;type1&quot; id=&quot;button1&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type1&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN A – RETROACTIVE ADD&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb2&quot; name=&quot;withdrawal&quot; value=&quot;type2&quot; id=&quot;button2&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type2&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN B – RETROACTIVE CHANGE OF GRADING BASIS&lt;/b>&lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb3&quot; name=&quot;withdrawal&quot; value=&quot;type3&quot; id=&quot;button3&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type3&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN C – RETROACTIVE CHANGE OF UNIT VALUE&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb4&quot; name=&quot;withdrawal&quot; value=&quot;type4&quot; id=&quot;button4&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type4&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN D – OTHER&lt;/b>&lt;/label>&lt;br>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 65px;&#xa;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+    </jcr:content>
+</jcr:root>

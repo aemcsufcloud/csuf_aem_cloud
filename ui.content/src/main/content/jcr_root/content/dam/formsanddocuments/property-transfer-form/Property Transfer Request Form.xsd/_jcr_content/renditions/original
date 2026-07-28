@@ -1,0 +1,94 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PropertyTransferRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="TFDepartment"/>
+				<xs:element type="xs:string" name="TFDivision"/>
+				<xs:element type="xs:string" name="Division"/>
+				<xs:element type="xs:string" name="TFCurrentCustodian"/>
+				<xs:element type="xs:string" name="CWID"/>
+				<xs:element type="xs:string" name="DeptID"/>
+				<xs:element type="xs:string" name="cwid_initiator"/>
+				<xs:element type="xs:string" name="InitiatorFlag"/>
+				<xs:element type="xs:string" name="TFDepartmentAssetRecordKeeperName"/>
+				<xs:element type="xs:string" name="TFDepartmentAssetRecordKeeperSIgnature"/>
+				<xs:element type="xs:string" name="TFDepartmentAssetRecordKeeperSignDate"/>
+				
+				<xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="PropertyTagandSerialNumber"/>
+							<xs:element type="xs:string" name="Description"/>
+							<xs:element type="xs:string" name="CurrentLocation"/>
+							<xs:element type="xs:string" name="NewLocation"/>
+							<xs:element type="xs:byte" name="EquipmentSanitized"/>
+				            <xs:element type="xs:byte" name="EquipementUnlocked"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element type="xs:string" name="TFComments"/>
+				<xs:element type="xs:string" name="InitiatorUserID"/>
+				<xs:element type="xs:string" name="InitiatorEmail"/>
+				<xs:element type="xs:string" name="InitiatorName"/>
+				<xs:element type="xs:string" name="TTDepartment"/>
+				<xs:element type="xs:string" name="TTNewDivision"/>
+				<xs:element type="xs:string" name="TTNewCustodian"/>
+				<xs:element type="xs:string" name="TTNewDepartmentAssetRecordKeeperName"/>
+				<xs:element type="xs:string" name="TTNewDepartmentAssetRecordKeeperSIgnature"/>
+				<xs:element type="xs:string" name="TTNewDepartmentAssetRecordKeeperSignDate"/>
+				<xs:element type="xs:string" name="AssetManagementComments"/>
+				<xs:element type="xs:string" name="AssetManagementPeopleSoftChangesRB"/>
+				<xs:element type="xs:string" name="AssetDecision"/>
+				<xs:element type="xs:string" name="AssetManagementSignerName"/>
+				<xs:element type="xs:string" name="AssetManagementSignature"/>
+				<xs:element type="xs:string" name="AssetManagementSignatureDate"/>
+				<xs:element type="xs:string" name="CurrentCustodianComment"/>			
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorSignerName"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorSignature"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorSignatureDate"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorComment"/>	
+				<xs:element type="xs:string" name="AssetCoordinatorDecision"/>	
+				<xs:element type="xs:string" name="DepartmentAdministratorSignerName"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorSignature"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorSignatureDate"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorComment"/>
+				<xs:element type="xs:string" name="DeptAdminDecision"/>
+				<xs:element type="xs:string" name="NewCustodianComment"/>
+				<xs:element type="xs:string" name="StageIndicator"/>
+		        <xs:element type="xs:string" name="aftiaDescCWID"/>
+		        <xs:element type="xs:string" name="caseId"/>
+		        <xs:element type="xs:string" name="EmailSubject"/>
+				<xs:element type="xs:string" name="CurrentCustodianCWID"/>
+				<xs:element type="xs:string" name="CurrentCustodianFullName"/>
+				<xs:element type="xs:string" name="CurrentCustodianFirstName"/>
+				<xs:element type="xs:string" name="CurrentCustodianLastName"/>
+				<xs:element type="xs:string" name="CurrentCustodianEmailId"/>
+				<xs:element type="xs:string" name="CurrentCustodianUserId"/>				
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorFullName"/>
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorSign"/>
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorFirstName"/>
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorLastName"/>
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorEmailId"/>
+				<xs:element type="xs:string" name="CurrentAssetCoordinatorUserId"/>								
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorFullName"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorFirstName"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorLastName"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorEmailId"/>
+				<xs:element type="xs:string" name="DepartmentAssetCoordinatorUserId"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorFullName"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorFirstName"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorLastName"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorEmailId"/>
+				<xs:element type="xs:string" name="DepartmentAdministratorUserId"/>
+				<xs:element type="xs:string" name="NewCustodianCWID"/>
+				<xs:element type="xs:string" name="NewCustodianFullName"/>
+				<xs:element type="xs:string" name="NewCustodianFirstName"/>
+				<xs:element type="xs:string" name="NewCustodianLastName"/>
+				<xs:element type="xs:string" name="NewCustodianEmailId"/>
+				<xs:element type="xs:string" name="NewCustodianUserId"/>
+				<xs:element type="xs:string" name="PropertyTransferRequestDetailsJSON"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

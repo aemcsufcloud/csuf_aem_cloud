@@ -1,0 +1,1872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-06-30T10:19:07Z" uuid="4a4c53bf-1616-446b-a50b-3d410f917c39">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <subform name="F1AUCT" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <subform name="Subform1" w="203.422mm" h="63.612mm">
+            <draw name="Image1" w="66.675mm" h="28.575mm">
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <draw name="Line1" y="50.8mm" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Text9" y="53.975mm" w="203.2mm" h="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">SECTION I: Appeal for Unit Cap Extension<span style="font-weight:normal"> (Student Use Only)<span style="xfa-spacerun:yes"> </span></span></p></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text26" y="36.195mm" w="203.2mm" h="15.875mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:16pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                    </span>UNIT CAP APPEAL FORM</p><p style="font-size:9pt;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                          </span></p><p style="font-size:9pt;text-decoration:none;letter-spacing:0in">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.<span style="xfa-spacerun:yes"> </span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="cwid" y="22.225mm" x="148.971mm" w="34.925mm" h="10.432mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="formCode" y="25.4mm" x="187.325mm" w="15.875mm" h="5.825mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="YearTitle" y="35.687mm" x="59.055mm" w="26.67mm" h="0.300972in">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="16pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var otherAidYearVal = aidYearVal-1;
+this.rawValue = otherAidYearVal+"-"+aidYearVal;
+
+</script>
+               </event>
+            </field>
+            <field name="TextChangerOne" y="42.418mm" w="203.2mm" h="5.175mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="AidYear" y="9.525mm" x="174.625mm" w="27.475mm" h="6.046mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+this.presence="hidden";
+</script>
+               </event>
+            </field>
+            <draw name="Text28" y="22.225mm" x="120.65mm" w="29.2864mm" h="10.313mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Enter Student's        CWID Here:</text>
+               </value>
+               <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <field name="Name" w="107.95mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="14.8114mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name:  </text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="SCwid" w="95.25mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="17.84mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> CWID  </text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="Address" w="107.95mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="14.8114mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Address:</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="Phone" w="95.25mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="18.4457mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Phone #: </text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text10" w="107.95mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 303166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Message" w="95.25mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="18.4457mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Message #</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text11" w="104.775mm" h="7.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:8pt;text-decoration:none;letter-spacing:0in">1) What degree are you currently seeking?</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <exclGroup name="DegreeTypeSection1" x="87.691mm" y="63.806mm" layout="lr-tb">
+            <field w="21.374mm" h="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.374mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Bachelor’s</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <field w="21.374mm" h="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.374mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Master’s</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <field w="15.599mm" minH="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="9.599mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other:</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>3</text>
+               </items>
+            </field>
+            <?templateDesigner itemValuesSpecified 1?>
+            <?templateDesigner expand 1?></exclGroup>
+         <field name="DegreeOtherSection1" w="39.825mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text12" w="155.575mm" h="7.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>2) What is your expected graduation/degree completion date for your current academic program?</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 438166 18001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 93 2) What is your expected graduation/degree completion date for your current academic program? 0 1417 16917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <field name="GraduationMonth" w="23.601mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GraduationYear" w="19.37mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text13" w="110.303mm" h="10.724mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:8pt;letter-spacing:0in">3) How many more units must you complete before the degree is granted?</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="TargetUnits" w="30.145mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text14" w="15.127mm" h="7.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;text-decoration:none;letter-spacing:0in">Units<span style="font-family:'Myriad Pro'"><span style="xfa-spacerun:yes">        </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt"/>
+         </draw>
+         <draw name="Text27" w="47.625mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>         Month             /            Year</text>
+            </value>
+            <font size="9pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 132166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 44          Month             /            Year 0 1417 8167 0 0 0 "Calibri" 0 0 9000 ISO-8859-1?></draw>
+         <field name="StudentComments" w="203.2mm" minH="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text15" w="8in" h="10.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:5pt;font-weight:bold;letter-spacing:0in">CERTIFICATION:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal"> I hereby certify that all information reported in Section I of this form and any attachments hereto is true, complete and accurate. False statements or misrepresentations will be cause for denial, reduction, withdrawal and/or repayment of financial aid</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <subform name="Subform4" w="203.2mm" h="27.927mm">
+            <field name="StudentESignature" w="98.425mm" h="9mm" x="3.175mm" y="2.527mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="30.5764mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Student E-signature:</text>
+                  </value>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+            </field>
+            <field name="IPAddress" y="2.527mm" x="136.525mm" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.1572mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="StudentSignature" w="101.6mm" h="8.999mm" x="3.175mm" y="15.227mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="32.4513mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Print Student's Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="StudentSignatureDate" w="44.45mm" h="8.999mm" x="107.95mm" y="15.227mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.0743mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="TextField26" y="15.227mm" x="155.575mm" w="44.45mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="10.6127mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>CWID:</text>
+                  </value>
+               </caption>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = Subform1.cwid.rawValue;
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform2" w="203.2mm" h="5.906mm">
+            <draw name="Line1" y="2.479mm" w="203.2mm" h="0.252mm">
+               <value>
+                  <line>
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text16" w="162.586mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;font-weight:bold;letter-spacing:0in">SECTION II: Verification of Remaining Major/Minor Courses<span style="font-size:10pt;font-weight:normal"> (Major Advisor Use Only)</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="NameofDegree" w="101.6mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name of degree:</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <exclGroup name="DegreeTypeSection2" x="87.691mm" y="85.874mm" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="21.374mm" h="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.374mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Bachelor’s</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+            </field>
+            <field w="21.374mm" h="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.374mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Master’s</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field w="21.374mm" h="7.993mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="15.374mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>3</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></exclGroup>
+         <field name="DegreeOtherSection2" w="37mm" minH="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text17" w="146.05mm" h="0.289361in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Total # of units remaining (including units in progress) to complete the requirements for the degree:</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 411166 18000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 101 Total # of units remaining (including units in progress) to complete the requirements for the degree: 0 1417 16917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <field name="RemainingUnitsSection2" w="20.815mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text18" w="36.335mm" h="0.289361in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>The following courses</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 100163 18000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 21 The following courses 0 1417 16917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text19" w="203.2mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>(including prerequisites and all remaining required courses for the declared major/minor) must be completed (e.g. ACCT 401/3  units).</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 133 (including prerequisites and all remaining required courses for the declared major/minor) must be completed (e.g. ACCT 401/3  units). 0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course1" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course1Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course2" w="19.05mm" minH="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course2Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course3" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course3Units" w="19.05mm" minH="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course4" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course4Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text22" w="203.2mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">          </span>Course<span style="xfa-spacerun:yes">                 </span>#Units<span style="xfa-spacerun:yes">           </span><span style="text-decoration:none"><span style="xfa-spacerun:yes">               </span>Course<span style="xfa-spacerun:yes">                 </span>#Units<span style="xfa-spacerun:yes">                        </span>Course<span style="xfa-spacerun:yes">                 </span>#Units<span style="xfa-spacerun:yes">                         </span>Course<span style="xfa-spacerun:yes">                 </span>#Units<span style="xfa-spacerun:yes">            </span></span></p></body>
+               </exData>
+            </value>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course5" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course5Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course6" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course6Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course7" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course7Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course8" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Course8Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text22" w="203.2mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <text>          Course                 #Units                          Course                 #Units                        Course                 #Units                         Course                 #Units       </text>
+            </value>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="AcademicDepartmentSignature" w="136.525mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="16.6286mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Signature:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="AcademicDepartmentSignDate" w="66.675mm" h="7.993mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="9.0743mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <subform name="Subform3" w="203.2mm" h="5.906mm">
+            <draw name="Line1" y="2.523mm" w="203.2mm" h="0mm">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text23" w="203.2mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;font-weight:bold;text-decoration:none;letter-spacing:0in">SECTION III: Verification of Remaining G.E. Courses for Undergraduates<span style="font-size:10pt;font-weight:normal"> (Academic Advising Office Use Only)<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text24" w="101.099mm" h="0.289361in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Total # of units remaining to satisfy general education requirements:</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 283746 18000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 69 Total # of units remaining to satisfy general education requirements: 0 1417 16917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <field name="RemainingUnitsSection3" w="16.376mm" minH="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text25" w="85.725mm" h="7.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:8pt;text-decoration:none;letter-spacing:0in">The following categories must be completed:<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="8pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory1" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory1Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory2" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory2Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory3" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory3Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text20" w="9.525mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory4" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text21" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="GECategory4Units" w="19.05mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text22" w="203.2mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <text>      GE Category           #Units                    GE Category           #Units                    GE Category          #Units                      GE Category           #Units             </text>
+            </value>
+            <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 192       GE Category           #Units                    GE Category           #Units                    GE Category          #Units                      GE Category           #Units              0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+         <field name="AcademicAdvisingOfficerName" w="85.725mm" h="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="22.9828mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Printed Name:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="AcademicAdvisingOfficerSignature" w="69.85mm" minH="7.993mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="17.5428mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text> Signature:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text20" w="4.445mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 9766 12000 0 0 1417 1417 0 0?></draw>
+         <field name="AcademicAdvisingOfficerSignDate" w="37.925mm" h="7.993mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="8.7657mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <subform w="576pt" h="756pt">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <draw name="Text1" y="3.175mm" x="57.15mm" w="92.957mm" h="11.865mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>CALIFORNIA STATE UNIVERSITY, FULLERTON  UNIT CAP APPEAL</text>
+            </value>
+            <font size="14pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 260666 30799 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 39 CALIFORNIA STATE UNIVERSITY, FULLERTON  0 3234 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?>
+            <?renderCache.textRun 15 UNIT CAP APPEAL 0 80091 28717 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?></draw>
+         <draw name="Text2" y="19.05mm" x="3.175mm" w="30.389mm" h="5.939mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>POLICY: </text>
+            </value>
+            <font size="14pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 83308 14001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 8 POLICY:  0 1417 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?>
+            <?renderCache.line 1417 13457 46534 13457 0 0 0 560?></draw>
+         <draw name="Text3" y="69.85mm" x="3.175mm" w="35.69mm" h="5.939mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>HOW TO APPEAL</text>
+            </value>
+            <font size="14pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 98335 14001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 13 HOW TO APPEAL 0 1417 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?>
+            <?renderCache.line 1417 13457 99752 13457 0 0 0 560?></draw>
+         <draw name="Text4" y="209.55mm" x="3.175mm" w="37.555mm" h="5.939mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>APPEAL DECISION</text>
+            </value>
+            <font size="14pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 103621 14001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 15 APPEAL DECISION 0 1417 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?>
+            <?renderCache.line 1417 13457 105036 13457 0 0 0 560?></draw>
+         <draw name="Text5" y="25.4mm" x="3.175mm" w="7.875in" h="41.216mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-bottom:8pt;text-decoration:none;letter-spacing:0in">Federal financial aid regulations stipulate that you must complete your degree program within a “reasonable timeframe” which is defined as 150% of the standard timeframe.<span style="xfa-spacerun:yes">  </span>At Cal State Fullerton, we allow up to 180 attempted units for the undergraduate unit cap and 45 attempted units for the graduate or post-baccalaureate unit cap. These regulations require schools to count all units attempted, even those for which you did not receive degree credit (e.g., community college units in excess of 70 units) and even if you did not receive financial aid.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Your financial aid eligibility has been terminated because you have exceeded the maximum timeframe.<span style="xfa-spacerun:yes">  </span>The Unit Cap Appeal process is available for you to request a continuation of financial aid eligibility until you complete your degree.<span style="xfa-spacerun:yes">  </span>In general, the appeal is considered only if (1) you are within 1-2 semesters of completing your program; (2) your academic performance at Cal State Fullerton has been acceptable; and (3) you have extenuating circumstances for attempting excess units.<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+         </draw>
+         <draw name="Text6" y="79.375mm" x="3.175mm" w="7.875in" h="123.825mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">The following reasons may be documented for having attempted excessive units:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                       </span><span style="font-size:12pt;font-weight:bold"> DOUBLE MAJOR/MINOR:</span><span style="xfa-spacerun:yes">  </span>In general, adding a second major or a minor after you have already attempted 120 units is</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                      </span>not an acceptable reason for extending the unit cap.<span style="xfa-spacerun:yes">  </span>If you declared a second major or minor prior to 120</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                      </span>attempted units and you have been making progress toward your degree, you may submit this appeal.<span style="xfa-spacerun:yes">  </span>Be</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                      </span>sure to have each academic department complete Section II of this form. If you are an undergraduate, have</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                      </span>Academic Advising complete Section III of this form.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                        </span><span style="font-size:12pt;font-weight:bold">FIRST CHANGE OF UNDERGRADUATE MAJOR:</span><span style="xfa-spacerun:yes">  </span>In general, making multiple changes of major, particularly after you</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>have already attempted 120 units, is not an acceptable reason for extending the unit cap.<span style="xfa-spacerun:yes">  </span>If you changed</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>your<span style="xfa-spacerun:yes">  </span>undergraduate major for the<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">first time<span style="xfa-spacerun:yes"> </span></span>and you have been making progress toward your degree,</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>provide an explanation and have your academic department complete Section II of this form.<span style="xfa-spacerun:yes">  </span>If you are an</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>undergraduate, have Academic Advising complete Section III of this form.<span style="xfa-spacerun:yes">    </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                        </span><span style="font-size:12pt;font-weight:bold">SECOND BACHELOR’S DEGREE:</span><span style="xfa-spacerun:yes">  </span>If you are enrolled in a second bachelor’s degree program, have your academic</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>department complete Section II of this appeal form to verify the number of additional units remaining to</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>complete your program.<span style="xfa-spacerun:yes">  </span>If you did not complete your first bachelor’s degree at CSUF, have Academic</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>Advising complete Section III of this form.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                        </span><span style="font-size:12pt;font-weight:bold">PREREQUISITES FOR MASTER’S PROGRAM:</span><span style="xfa-spacerun:yes">  </span>If you are pursuing a master’s degree in a field different from your</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>undergraduate<span style="xfa-spacerun:yes">  </span>program,have your academic department complete Section II of this form and obtain a</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>statement from the department indicating the total number of prerequisite units you were required to</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>complete in addition to the program requirements.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                        </span><span style="font-size:12pt;font-weight:bold">OTHER EXTENUATING CIRCUMSTANCES:<span style="xfa-spacerun:yes"> </span></span> If you attempted excessive units before transferring to California State</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>University, Fullerton and a large number of these units do not apply to your degree program, explain the<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>circumstances and have your academic department complete Section II of this form.<span style="xfa-spacerun:yes">  </span>If you are an</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                       </span>undergraduate, have Academic Advising complete Section III of this form.</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text7" y="219.075mm" x="47.625mm" w="152.4mm" h="46.79mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">If your appeal is approved, we will extend your financial aid eligibility to complete your program.<span style="xfa-spacerun:yes">  </span>An individualized “new unit cap” will be established and you will be allowed to receive financial aid until your total attempted units reach your new cap.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Attempt only those courses listed in Sections II and III of your appeal or in your TDA</span>.Attempting non-required courses will be cause for denial of financial aid.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">If your appeal is denied, you will be ineligible for financial aid,<span style="xfa-spacerun:yes"> </span><span style="text-decoration:underline">including loans</span>, until you complete your current academic program.<span style="xfa-spacerun:yes">  </span>However, once you graduate, you will be eligible to apply for financial aid if you are admitted to and enroll in a new degree or credential program.</p></body>
+               </exData>
+            </value>
+            <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text8" y="219.075mm" x="3.175mm" w="41.275mm" h="47.625mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>                       IF APPROVED:                           IF DENIED: </text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 132166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 1   0 1417 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 35                      IF APPROVED:   0 1417 32917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 1   0 1417 44917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 1   0 1417 56917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 1   0 1417 68917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 1   0 1417 80917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 32                      IF DENIED:  0 1417 92917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 252 69 00030004001100120018001C0026002C002F00440045004B0057005A005E0064006800730074007A0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC034D035503570358035B035E035F036C0372037E037F03B703EC03ED03EE03EF03F0 ABCDEFHIMNOPRSTUVWYabcdefghijklmnopqrstuvwxyz?,:.’“”/-()#01234?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 196 51 00030004001100120018001C00260027002C002F003A003E00440045004B00570059005A005E00640068007300740079007A01020110011A011E01280150015D0169016F01750176017D0189018C0190019A01B501C6035503570358035B036C0396 ABCDEFGHIJLMNOPQRSTUVWXYacdefgijlmnoprstux,:.’/'?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 92 23 000300040018002F005E006401020110011A011E0128015A015D016F01750176017D0189018C0190019A01B501C7 ADISTacdefhilmnoprstuy?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 232 62 0001000400060009000A000D000E000F00110012001300140015001600180019001B001C002200240025002600270028002A002F00310034003500360038003A00420043004400450046004700480049004A004D004E004F0050005100520053005400550056005700580059005A006800690077 #%(),-.01234578:;ACDEFGINPSTUWYabcdefghilmnopqrstuvwxy'“”?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 88?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+      <font typeface="Vani" psName="Vani" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-06-30T10:19:07Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:4a4c53bf-1616-446b-a50b-3d410f917c39</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

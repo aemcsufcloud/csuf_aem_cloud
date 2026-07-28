@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-07-05T04:02:49Z" uuid="18a6314d-4014-48f8-9051-2f25633f77a0">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="AwardAdjustmentAppeal" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="203.426mm" layout="lr-tb">
+         <subform name="Subform3" w="203.2mm" h="63.5mm">
+            <draw name="Logo" w="57.15mm" h="22.225mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <value>
+                  <image href=".\CSUF_LOGO1.png" contentType="image/png"/>
+               </value>
+            </draw>
+            <field name="cwid" w="73.025mm" hAlign="center" h="13.111mm" y="12.7mm" x="98.425mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.175mm" presence="hidden"/>
+               </border>
+               <caption reserve="33.3974mm">
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>Enter Student's<br/><span style="xfa-spacerun:yes">          </span>CWID Here:<span style="font-size:10pt;font-weight:normal"><span style="xfa-spacerun:yes"> </span></span></p></body>
+                     </exData>
+                  </value>
+                  <para vAlign="middle"/>
+               </caption>
+            </field>
+            <field name="formCode" w="25.4mm" h="9mm" y="15.875mm" x="177.8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2021"){
+this.rawValue = "F0AWAP";
+}
+else if (aidYear.rawValue == "2022"){
+this.rawValue = "F1AWAP";
+}
+
+</script>
+               </event>
+            </field>
+            <field name="aidYear" w="25.4mm" h="9.525mm" y="28.575mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold" size="14pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+this.presence="hidden";
+</script>
+               </event>
+            </field>
+            <draw name="Text3" w="203.2mm" h="15.875mm" y="28.575mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">CALIFORNIA STATE UNIVERSITY, FULLERTON</p><p style="letter-spacing:0in">AWARD ADJUSTMENT APPEAL FORM (<span style="xfa-spacerun:yes">                  </span>)<span style="font-size:16pt"><span style="xfa-spacerun:yes"> </span></span></p></body>
+                  </exData>
+               </value>
+               <font size="14pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+            </draw>
+            <field name="TitleYear" w="23.876mm" h="9mm" y="33.782mm" x="136.525mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="14pt" typeface="Times New Roman" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+
+</script>
+               </event>
+            </field>
+            <draw name="Text4" w="8in" h="8.761mm" y="44.45mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</text>
+               </value>
+               <font typeface="Arial" posture="italic" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 22000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 127 Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay  0 1417 9342 0 0 0 "Arial" 0 1 10000 ISO-8859-1?>
+               <?renderCache.textRun 11 processing. 0 1417 21342 0 0 0 "Arial" 0 1 10000 ISO-8859-1?></draw>
+            <draw name="Text5" w="203.2mm" h="6.35mm" y="53.975mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Is this the first Award Adjustment Appeal that you are submitting for the                   academic year?</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 106 Is this the first Award Adjustment Appeal that you are submitting for the                   academic year? 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <exclGroup name="FirstAwardYesNo" y="53.34mm" x="168.275mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="17.463mm" h="6mm" name="Yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="7.9727mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>Yes</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field w="16.51mm" h="6mm" name="No" x="17.463mm">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="5.726mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>No</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="Year1" w="19.05mm" h="6.35mm" y="53.34mm" x="121.412mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"/"+otherAidYearVal;
+
+</script>
+               </event>
+            </field>
+            <draw name="Line1" w="203.2mm" h="0.15mm" y="63.35mm">
+               <value>
+                  <line/>
+               </value>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform2" w="203.2mm" h="22.225mm">
+            <draw name="Text6" w="41.275mm" h="9.525mm" y="1.397mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Change in Program: </text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 19 Change in Program:  0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="FallProgramYear" w="12.7mm" h="6.985mm" x="54.331mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform3.aidYear.rawValue;
+this.rawValue = aidYearVal;
+</script>
+               </event>
+            </field>
+            <draw name="Text8" w="47.625mm" h="8.408mm" y="1.397mm" x="47.625mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Fall          grade program:</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 132166 21000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 28 Fall          grade program: 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <draw name="Text8" w="63.5mm" h="8.408mm" y="10.922mm" x="44.45mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Spring           grade program:</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 177166 21000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 31 Spring           grade program: 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="SpringProgramYear" w="10.795mm" h="7.62mm" y="9.652mm" x="55.88mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform3.aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = otherAidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="SpringProgramText" w="69.427mm" h="9.525mm" y="7.747mm" x="92.075mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="FallProgramText" w="70.56mm" h="9.525mm" x="90.424mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (Subform3.aidYear.rawValue == "2024") {
+this.presence = "hidden";
+}
+else {
+this.presence = "visible";
+}
+
+
+</script>
+            </event>
+         </subform>
+         <subform name="Subform5" w="203.2mm" layout="lr-tb">
+            <field name="ClarifyRequest" w="203.2mm" minH="13.707mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.185306in" placement="top">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>REQUIRED - Provide a comment to clarify your request:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (Subform3.aidYear.rawValue == "2024") {
+this.presence = "visible";
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+         </subform>
+         <subform name="Subform4" w="203.2mm" h="180.975mm">
+            <draw name="Line2" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text7" w="41.275mm" h="9.525mm" y="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Adjust my awards:</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 17 Adjust my awards: 0 1417 21313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AdjAwardCB1" w="7mm" h="7.62mm" y="8.128mm" x="44.45mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text9" w="152.4mm" h="7.62mm" y="9.525mm" x="50.8mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Change academic year award to Fall       only (I am graduating/transferring Spring       )</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 429166 18766 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 90 Change academic year award to Fall       only (I am graduating/transferring Spring       ) 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AdjYear1" w="7.112mm" h="6.35mm" y="8.636mm" x="112.522mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjYear2" w="7.112mm" h="6.35mm" y="8.484mm" x="187.325mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjAwardCB2" w="7mm" h="7.62mm" y="16.256mm" x="44.45mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field w="7.112mm" h="6.35mm" name="AdjYear4" y="16.764mm" x="177.038mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjYear3" w="7.112mm" h="6.35mm" y="17.272mm" x="117.475mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Text9" w="152.4mm" h="7.62mm" y="17.78mm" x="50.8mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Change academic year award to Spring       only (I will not attend CSUF Fall       )</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 429166 18766 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 84 Change academic year award to Spring       only (I will not attend CSUF Fall       ) 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AdjAwardCB3" w="7mm" h="7.62mm" y="24.384mm" x="44.45mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text10" w="152.4mm" h="7.62mm" y="26.035mm" x="50.8mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Reinstate my Fall       awards (I will be enrolled at CSUF at least half-time Fall       )</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 429166 18766 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 90 Reinstate my Fall       awards (I will be enrolled at CSUF at least half-time Fall       ) 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AdjYear5" w="7.112mm" h="6.35mm" y="25.4mm" x="80.01mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjYear6" w="7.112mm" h="6.35mm" y="25.4mm" x="179.578mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Text10" w="152.4mm" h="7.62mm" y="34.925mm" x="50.8mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Reinstate my Spring       awards (I will be enrolled at CSUF at least half-time Spring      )</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 429166 18766 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 93 Reinstate my Spring       awards (I will be enrolled at CSUF at least half-time Spring      ) 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AdjYear7" w="7.112mm" h="6.35mm" y="34.29mm" x="85.725mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjYear8" w="7.112mm" h="6.35mm" y="34.29mm" x="189.23mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AdjAwardCB4" w="7mm" h="7.62mm" y="33.02mm" x="44.45mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Line3" w="203.2mm" h="0in" y="41.275mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text11" w="60.325mm" h="9.525mm" y="47.625mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Request to Reduce/Cancel </text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 168166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 25 Request to Reduce/Cancel  0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <draw name="Text11" w="5.5in" h="9.525mm" y="47.625mm" x="60.325mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Decreasing or canceling a previously disbursed loan/grant may cause a balance on your CSUF student account and you are responsible to pay the balance in a timely manner.</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 393166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 86 Decreasing or canceling a previously disbursed loan/grant may cause a balance on your  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 83 CSUF student account and you are responsible to pay the balance in a timely manner. 0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text12" w="44.715mm" h="5.2331mm" y="60.325mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Indicate action requested:</text>
+               </value>
+               <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 123917 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 26 Indicate action requested: 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+            <exclGroup name="LoanRequestReduceCancel" y="59.69mm" x="53.969mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="28.581mm" h="6.261mm" name="Reduce">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="20.64mm" placement="right">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>Reduce</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field w="37.152mm" h="6.261mm" name="Cancel" x="31.756mm">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="28.58mm" placement="right">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>Cancel</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?>
+            </exclGroup>
+            <field name="NewAward1" w="62.4mm" h="9.525mm" y="98.425mm" x="57.15mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text20" w="47.625mm" h="12.7mm" y="73.025mm" x="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Check all that apply</text>
+               </value>
+               <font typeface="Arial"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center"/>
+               <?renderCache.bounds 132166 33166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 67500 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 20 Check all that apply 0 23865 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text20" w="47.625mm" h="5.715mm" y="88.9mm" x="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;font-weight:bold;font-style:italic;letter-spacing:0in">Example</p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center"/>
+            </draw>
+            <exclGroup name="LoanSubsidized" x="9.525mm" y="98.425mm">
+               <field w="47.625mm" h="9.525mm" name="LoanSubsidized">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="41.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt"/>
+                     <value>
+                        <text> Direct Loan Subsidized</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <?templateDesigner itemValuesSpecified 1?>
+               <?templateDesigner expand 1?></exclGroup>
+            <exclGroup name="LoanUnsubsidized" y="107.95mm" x="9.525mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <margin/>
+               <field w="47.625mm" h="9.525mm" name="LoanUnsubsidized">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="41.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt"/>
+                     <value>
+                        <text> Direct Loan Unsubsidized</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="LoanGradPlus" y="117.475mm" x="9.525mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="47.625mm" h="9.525mm" name="LoanGradPlus">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="41.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt"/>
+                     <value>
+                        <text> Direct Loan Grad PLUS</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="PrivateStudentLoan" y="127mm" x="9.525mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="47.625mm" h="9.525mm" name="PrivateStudentLoan">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="41.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt"/>
+                     <value>
+                        <text> Private student loan</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="NewAward2" w="62.4mm" h="9.525mm" y="107.95mm" x="57.15mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="NewAward3" w="62.4mm" h="9.525mm" y="117.475mm" x="57.15mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="NewAward4" w="62.4mm" h="9.525mm" y="127mm" x="57.15mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Line4" w="184.15mm" h="0in" y="83.82mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line4" w="184.15mm" h="0in" y="96.52mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line4" w="184.15mm" h="0in" y="69.85mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line5" w="0in" h="66.675mm" y="69.85mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line5" w="0in" h="66.675mm" y="69.85mm" x="57.15mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line5" w="0in" h="66.675mm" y="69.85mm" x="119.38mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line5" w="0in" h="66.675mm" y="69.85mm" x="157.48mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line5" w="0in" h="66.675mm" y="69.85mm" x="193.675mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="FallAward1" w="35.179mm" h="9.525mm" y="98.425mm" x="120.65mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="FallAward2" w="34.925mm" h="9.525mm" y="107.95mm" x="120.65mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="FallAward3" w="34.925mm" h="9.525mm" y="117.475mm" x="120.65mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="FallAward4" w="34.925mm" h="9.525mm" y="127mm" x="120.65mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="SpringAward1" w="35.56mm" h="9.525mm" y="98.425mm" x="157.48mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="SpringAward2" w="35.56mm" h="9.525mm" y="107.95mm" x="157.48mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="SpringAward3" w="35.56mm" h="9.525mm" y="117.475mm" x="157.48mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="SpringAward4" w="35.56mm" h="9.525mm" y="127mm" x="157.48mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>num{$z,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Line4" w="184.15mm" h="0in" y="136.525mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line4" w="184.15mm" h="0in" y="127mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line4" w="184.15mm" h="0in" y="117.475mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Line4" w="184.15mm" h="0in" y="107.95mm" x="9.525mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text21" w="60.325mm" h="12.7mm" y="73.025mm" x="57.15mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>             New Total for Award                 Year </text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 168166 33166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 33              New Total for Award  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 21                 Year  0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text22" w="60.325mm" h="9.525mm" y="85.725mm" x="57.15mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">$2000<span style="font-weight:normal"> -<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">divide this amount between</span></p><p style="font-style:italic;letter-spacing:0in">Fall<span style="xfa-spacerun:yes">          </span>and Spring<span style="xfa-spacerun:yes">        </span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text23" w="34.925mm" h="9.525mm" y="73.025mm" x="120.65mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>            Fall                        </text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 96166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 33             Fall                  0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text23" w="34.925mm" h="9.525mm" y="73.025mm" x="158.75mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:left;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">      </span>Spring<span style="xfa-spacerun:yes">    </span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text23" w="34.925mm" h="9.525mm" y="85.725mm" x="120.65mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>$ 1000</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold" posture="italic"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 96166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 6 $ 1000 0 34207 9313 0 0 0 "Arial" 1 1 10000 ISO-8859-1?></draw>
+            <draw name="Text23" w="34.925mm" h="9.525mm" y="85.725mm" x="158.75mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>$ 1000</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold" posture="italic"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 96166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 6 $ 1000 0 34207 9313 0 0 0 "Arial" 1 1 10000 ISO-8859-1?></draw>
+            <field name="Year2" w="10.287mm" h="5.528mm" y="72.39mm" x="138.938mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = Subform3.aidYear.rawValue;
+this.rawValue = aidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="Year2" w="11.303mm" h="5.528mm" y="72.898mm" x="176.022mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = Subform3.aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = otherAidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="Year1" w="19.05mm" h="6.35mm" y="76.454mm" x="81.28mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = Subform3.aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+
+</script>
+               </event>
+            </field>
+            <field name="Year2" w="11.938mm" h="5.528mm" y="89.408mm" x="76.962mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" posture="italic"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = Subform3.aidYear.rawValue;
+this.rawValue = aidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="Year2" w="13.081mm" h="5.528mm" y="89.662mm" x="103.124mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" posture="italic"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = Subform3.aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = otherAidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="SpecialReqComment" minH="10.16mm" w="203.2mm" y="139.7mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="52.39mm">
+                  <font typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Special Requests/Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <subform name="Subform1" w="203.2mm" h="31.153mm" y="149.86mm">
+               <draw name="Text24" w="203.2mm" h="12.994mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Student Acknowledgment:<span style="font-weight:normal"> I certify that all information reported on all sections of this form and any attachments hereto are true, complete and accurate. False statements or misrepresentations will be cause for denial, reduction, withdrawal and/or repayment of financial aid.</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <field name="studentScribleSignature" w="95.25mm" h="9mm" y="12.296mm">
+                  <ui>
+                     <imageEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </imageEdit>
+                  </ui>
+                  <caption reserve="36.5828mm">
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Student E-signature : </text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro" size="11pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="StudentSignatureDate" w="44.45mm" h="9mm" x="95.25mm" y="12.296mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <caption reserve="11.1886mm">
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Date:</text>
+                     </value>
+                  </caption>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <field name="ipAddress" w="57.15mm" h="9.525mm" x="139.7mm" y="12.065mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="20.1844mm">
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>IP Address:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="StudentCwid" w="60.325mm" h="9mm" x="136.525mm" y="21.59mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11.7943mm">
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>CWID:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="StudentSignature" w="136.525mm" h="8.596mm" y="21.59mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39.6114mm">
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Print Student's Name: </text>
+                     </value>
+                  </caption>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <draw name="Text25" w="203.2mm" h="8.761mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">COMPLETE SECTION 1 OR SECTION 2</p><p style="text-decoration:none;letter-spacing:0in">SECTION 1:</p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial" weight="bold" underline="1" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw y="41.275mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;font-weight:bold;text-decoration:none;letter-spacing:0in">SECTION 2:</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <field name="Year2" w="16.129mm" h="5.528mm" y="46.99mm" x="44.958mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (Subform3.aidYear.rawValue == "2024") {
+this.rawValue = "Loans:";
+} else {
+this.rawValue = "Award:";
+}
+</script>
+               </event>
+            </field>
+         </subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="203.406mm">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <draw name="Text3" w="203.2mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">CALIFORNIA STATE UNIVERSITY, FULLERTON</p><p style="text-decoration:none;letter-spacing:0in">AWARD ADJUSTMENT APPEAL FORM (<span style="xfa-spacerun:yes">                  </span>)<span style="font-size:16pt"><span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font size="14pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+         </draw>
+         <draw name="Text14" w="203.2mm" h="29.928mm" y="24.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;font-weight:bold;letter-spacing:0in">HOW AWARDS ARE MADE</p><p style="font-family:Arial;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-family:Arial;letter-spacing:0in">The Office of Financial Aid is committed to a fair and equitable awarding policy. We award limited funding to students who demonstrate the highest financial need and who meet the<span style="xfa-spacerun:yes">                   </span>priority application filing date. We rank all students who meet the priority filing deadline according to family contribution (lowest to highest) and award funds accordingly. If funding is available after we have awarded students who meet our awarding criteria, we may consider exceptions to the policy as described below.</p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify"/>
+         </draw>
+         <draw name="Text13" w="8in" h="21.461mm" y="53.975mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">EOP GRANT</p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">If you are an EOP student and were not awarded EOP Grant, visit the EOP office and speak with your counselor to discuss a<span style="xfa-spacerun:yes">  </span>possible exception to the EOP award policy. If an exception is approved, the EOP Office will forward a memo to our office. We will award EOP grant and send you an e-mail notification indicating a change to your financial aid award.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text15" w="203.2mm" h="25.694mm" y="79.375mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">FEDERAL SEOG GRANT (FSEOG) AND STATE UNIVERSITY GRANT (SUG)</p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">We do not accept appeals for FSEOG and SUG. Beginning mid-September and monthly thereafter, we will evaluate our funding levels and, if additional funding is available for new awards, we will rank all eligible students by expected family contribution and application date. Other criteria may be used to ensure funds go to the neediest students. If you are awarded FSEOG or SUG, we will send you an e-mail notification indicating a change to your financial aid award.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text17" w="8in" h="25.694mm" y="107.95mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">FEDERAL WORK STUDY</p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">If you are canceling or requesting a reduction of your accepted Federal Work-Study (FWS) award please note that all earnings will be confirmed by the FWS Coordinator and we will also be in communication with your FWS Employer regarding your request and employment. Federal regulations and California labor laws require that student employees must be paid for hours worked and this may result in a change in your request.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text18" w="8in" h="21.461mm" y="136.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">REDUCING FEDERAL DIRECT LOANS</p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">You may not receive the total amount requested as a loan processing fee is deducted from each loan disbursement you receive. If you require a specific loan amount, please inquire with a financial aid staff member to determine the amount that should be requested.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <?templateDesigner expand 0?>
+         <field name="TitleYear" w="23.876mm" h="9mm" y="4.826mm" x="136.525mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="14pt" typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = Subform3.aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+            </event>
+         </field>
+         <draw name="Text19" w="8in" h="22.225mm" y="161.925mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:justify;font-family:Arial;font-weight:bold;letter-spacing:0in">ADJUSTMENTS TO EXISTING AWARDS</p><p style="text-align:justify;font-family:Arial;font-weight:bold;letter-spacing:0in"><br/></p><p style="text-align:justify;font-family:Arial;letter-spacing:0in">We accept “Award Adjustment Appeal” forms to request a decrease or other adjustments to an existing award. We will review your appeal and make appropriate adjustments according to federal and state regulations and funding availability. We will notify you by mail or e-mail, depending on the nature of the adjustment and the decision reached.</p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+         </draw>
+         <field name="TextField1" y="35.56mm" x="92.075mm" w="37mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (Subform3.aidYear.rawValue == "2024") {
+this.rawValue = "April 2, 2024";
+}
+else {
+this.rawValue = "March 2";
+}
+
+</script>
+            </event>
+         </field>
+      </subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 228 61 0003000B000C000F001000110012001300150017001D002400250026002700280029002A002C002F0030003100320033003600370038003A003C004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B005C005D00B300B4 (),-./024:ABCDEFGILMNOPSTUWYabcdefghijklmnopqrstuvwxyz“”?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 240 60 00030007000A000B000C0010001200130014001500160017001D002200240026002700280029002A002B002C002D002E002F003000310032003300350036003700380039003A003B003C004400450046004700480049004A004B004C004D004E004F005000510052005300540055005600570058005A005C $'()-/01234:?ACDEFGHIJKLMNOPRSTUVWXYabcdefghijklmnopqrstuwy?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 112 28 0003000F00110029002C00360037004400450046004700480049004A004B004C004F005000510052005300550056005700580059005A005C ,.FISTabcdefghilmnoprstuvwy?>
+      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 44 11 0003000700130014002800440048004F00500053005B $01Eaelmpx?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 28 7 0003004600480051005300550056 cenprs?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 120 30 0001000E001B002500260027002A0031003200330035003600420044004500460047004A004D004E004F00500052005300540055005600570059005A -:DEFIPQRTUacdefilmnoqrstuvxy?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 92 23 0003000B000C000F00240026002700280029002C002D002F003000310032003300350036003700380039003A003C (),ACDEFIJLMNOPRSTUVWY?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\abc.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 82?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-07-05T04:02:49Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:18a6314d-4014-48f8-9051-2f25633f77a0</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

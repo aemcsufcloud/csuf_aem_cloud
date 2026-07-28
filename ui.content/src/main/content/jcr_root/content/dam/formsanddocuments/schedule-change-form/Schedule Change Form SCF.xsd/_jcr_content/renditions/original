@@ -1,0 +1,236 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ScheduleChangeFormSCF">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="CaseID"/>
+				<xs:element type="xs:string" name="ChrsID"/>
+				<xs:element type="xs:string" name="CWID"/>
+				<xs:element type="xs:string" name="InitiatedDate"/>
+				<xs:element type="xs:string" name="FirstName"/>
+				<xs:element type="xs:string" name="LastName"/>
+				<xs:element type="xs:string" name="Title"/>
+				<xs:element type="xs:string" name="DeptID"/>
+				<xs:element type="xs:string" name="DeptName"/>
+				<xs:element type="xs:string" name="College"/>
+				<xs:element type="xs:string" name="CollegeName"/>
+				<xs:element type="xs:string" name="DivisionID"/>
+				<xs:element type="xs:string" name="DivisionName"/>
+				<xs:element type="xs:string" name="InitiatorFullName"/>
+				<xs:element type="xs:string" name="InitiatorEmail"/>
+				<xs:element type="xs:string" name="InitiatorUserID"/>
+				<xs:element type="xs:string" name="Semester"/>
+				<xs:element type="xs:string" name="Year"/>
+				<xs:element type="xs:string" name="Career"/>
+				<xs:element type="xs:string" name="FullTerm"/>
+				<xs:element type="xs:string" name="STRM"/>
+				<xs:element type="xs:string" name="AdditionalComments"/>
+				<xs:element type="xs:string" name="ReasonForRequest"/>
+				<xs:element type="xs:string" name="ChairName"/>
+				<xs:element type="xs:string" name="ChairEmailId"/>
+				<xs:element type="xs:string" name="ChairUserId"/>
+				<xs:element type="xs:string" name="DeanName"/>
+				<xs:element type="xs:string" name="DeanEmailId"/>
+				<xs:element type="xs:string" name="DeanUserId"/>
+				<xs:element type="xs:string" name="InitiatorCB"/>
+				<xs:element type="xs:string" name="InitiatorSignature"/>
+				<xs:element type="xs:string" name="InitiatorSignatureDate"/>
+				<xs:element type="xs:string" name="ChairCB"/>
+				<xs:element type="xs:string" name="ChairSignature"/>
+				<xs:element type="xs:string" name="ChairSignatureDate"/>
+				<xs:element type="xs:string" name="ChairDecision"/>
+				<xs:element type="xs:string" name="ChairComments"/>
+				<xs:element type="xs:string" name="DeanCB"/>
+				<xs:element type="xs:string" name="DeanSignature"/>
+				<xs:element type="xs:string" name="DeanSignatureDate"/>
+				<xs:element type="xs:string" name="DeanDecision"/>
+				<xs:element type="xs:string" name="DeanComments"/>
+				<xs:element type="xs:string" name="SchedulingOfficeCB"/>
+				<xs:element type="xs:string" name="SchedulingOfficeSignature"/>
+				<xs:element type="xs:string" name="SchedulingOfficeSignatureDate"/>
+				<xs:element type="xs:string" name="SchedulingOfficeDecision"/>
+				<xs:element type="xs:string" name="SchedulingOfficeComments"/>
+				<xs:element type="xs:string" name="ExtensionOfficeCB"/>
+				<xs:element type="xs:string" name="ExtensionOfficeSignature"/>
+				<xs:element type="xs:string" name="ExtensionOfficeSignatureDate"/>
+				<xs:element type="xs:string" name="ExtensionOfficeDecision"/>
+				<xs:element type="xs:string" name="ExtensionOfficeComments"/>
+				<xs:element type="xs:string" name="StageIndicator"/>
+				<xs:element type="xs:string" name="aftiaDescCWID"/>
+				<xs:element type="xs:string" name="EmailSubject"/>
+				<xs:element type="xs:string" name="ConsolidatedCancel"/>
+				<xs:element type="xs:string" name="ConsolidatedAdd"/>
+				<xs:element type="xs:string" name="ConsolidatedEdit"/>
+				<xs:element type="xs:string" name="ConsolidatedCancelandAdd"/>
+				<xs:element type="xs:string" name="AddNewSectionAdditionalComment"/>
+				<xs:element type="xs:string" name="EditSectionAdditionalComment"/>
+				<xs:element name="CancelSectionMainContentPanel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="CS_ClassNumber"/>
+							<xs:element type="xs:string" name="CS_TableClassNumber"/>
+							<xs:element type="xs:string" name="CS_Subject"/>
+							<xs:element type="xs:string" name="CS_CatalogNumber"/>
+							<xs:element type="xs:string" name="CS_SectionNumber"/>
+							<xs:element type="xs:string" name="CS_CombinedRB"/>
+							<xs:element type="xs:string" name="CS_CombinedWith"/>
+							<xs:element type="xs:string" name="CS_DeleteAllClassRB"/>
+							<xs:element type="xs:string" name="CS_CombinationSectionNumber"/>
+							<xs:element type="xs:string" name="CS_AdditionalComments"/>
+							<xs:element name="CancelMeetingPatternRow" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="CS_Room"/>
+										<xs:element type="xs:string" name="CS_MeetingDays"/>
+										<xs:element type="xs:string" name="CS_MeetingPat"/>
+										<xs:element type="xs:string" name="CS_MeetingStartTime"/>
+										<xs:element type="xs:string" name="CS_MeetingEndTime"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AddNewSectionMainContentPanel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="AN_CourseID"/>
+							<xs:element type="xs:string" name="AN_Subject"/>
+							<xs:element type="xs:string" name="AN_CatalogNumber"/>
+							<xs:element type="xs:string" name="AN_SectionNumber"/>
+							<xs:element type="xs:string" name="AN_Session"/>
+							<xs:element type="xs:string" name="AN_ClassStatus"/>
+							<xs:element type="xs:string" name="AN_SessionStartDate"/>
+							<xs:element type="xs:string" name="AN_SessionEndDate"/>
+							<xs:element name="AddNewRepetitiveSectionMeetingPatternPanel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="AN_Room"/>
+										<xs:element type="xs:string" name="AN_MondayCB"/>
+										<xs:element type="xs:string" name="AN_TuesdayCB"/>
+										<xs:element type="xs:string" name="AN_WednesdayCB"/>
+										<xs:element type="xs:string" name="AN_ThursdayCB"/>
+										<xs:element type="xs:string" name="AN_FridayCB"/>
+										<xs:element type="xs:string" name="AN_SaturdayCB"/>
+										<xs:element type="xs:string" name="AN_SundayCB"/>
+										<xs:element type="xs:string" name="AN_StartTime"/>
+										<xs:element type="xs:string" name="AN_EndTime"/>
+										<xs:element type="xs:string" name="AN_StartDate"/>
+										<xs:element type="xs:string" name="AN_EndDate"/>
+										<xs:element type="xs:string" name="AN_Pat"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="AN_EnrollmentCap"/>
+							<xs:element type="xs:string" name="AN_WaitlistCap"/>
+							<xs:element type="xs:string" name="AN_DepartmentConsentRB"/>
+							<xs:element type="xs:string" name="AN_SchedulePrintRB"/>
+							<xs:element type="xs:string" name="AN_CombinedSectionCB"/>
+							<xs:element type="xs:string" name="AN_MultipleComponentClassCB"/>
+							<xs:element type="xs:string" name="AN_UpdateInstructorCB"/>
+							<xs:element type="xs:string" name="AN_AdditionalOptionCB"/>
+							<xs:element type="xs:string" name="AN_Topic"/>
+							<xs:element type="xs:string" name="AN_ClassNote"/>
+							<xs:element name="AddNewRepetitiveSectionClassNotePanel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="AN_ClassNoteNbr"/>
+										<xs:element type="xs:string" name="AN_ClassNoteDescription"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="AN_CombinedWithClassNumbers"/>
+							<xs:element type="xs:string" name="AN_ComponentType"/>
+							<xs:element type="xs:string" name="AN_ComponentTypeAssociatedClassNumber"/>
+							<xs:element type="xs:string" name="AN_ComponentTypeAutoEnroll"/>
+							<xs:element type="xs:string" name="AN_ComponentTypeAutoEnroll2"/>
+							<xs:element name="AddNewRepetitiveSectionBottomUpdateInstructorPanel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="AN_Cwid"/>
+										<xs:element type="xs:string" name="AN_InstructorName"/>
+										<xs:element type="xs:string" name="AN_InstructorRole"/>
+										<xs:element type="xs:string" name="AN_PrintInstructorRB"/>
+										<xs:element type="xs:string" name="AN_GradeAccess"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EditSectionMainContentPanel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="ES_ClassNumber"/>
+							<xs:element type="xs:string" name="ES_TableClassNumber"/>
+							<xs:element type="xs:string" name="ES_Subject"/>
+							<xs:element type="xs:string" name="ES_CatalogNumber"/>
+							<xs:element type="xs:string" name="ES_SectionNumber"/>
+							<xs:element type="xs:string" name="ES_CombinedRB"/>
+							<xs:element name="EditMeetingPatternRow" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_Room"/>
+										<xs:element type="xs:string" name="ES_MeetingDays"/>
+										<xs:element type="xs:string" name="ES_MeetingStartTime"/>
+										<xs:element type="xs:string" name="ES_MeetingEndTime"/>
+										<xs:element type="xs:string" name="ES_Pat"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EditSectionCombinedRow" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_TClassNumber"/>
+										<xs:element type="xs:string" name="ES_TClass"/>
+										<xs:element type="xs:string" name="ES_TEnrollmentCap"/>
+										<xs:element type="xs:string" name="ES_TWaitlistCap"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="ES_TConsolidatedEnrollmentCap"/>
+							<xs:element type="xs:string" name="ES_TConsolidatedWaitlistCap"/>
+							<xs:element name="EditRepetitiveSectionClassNotePanel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_ClassNoteNbr"/>
+										<xs:element type="xs:string" name="ES_ClassNoteDescription"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EditRepetitiveSectionBottomUpdateInstructorPanel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_Cwid"/>
+										<xs:element type="xs:string" name="ES_InstructorName"/>
+										<xs:element type="xs:string" name="ES_InstructorRole"/>
+										<xs:element type="xs:string" name="ES_PrintInstructorRB"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="ES_MinimumUnits"/>
+							<xs:element type="xs:string" name="ES_MaximumUnits"/>
+							<xs:element name="EditSectionClassRequisiteRow" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_ClassRequisite"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EditSectionCatalogRequisiteRow" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="ES_CatalogRequisite"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="ES_DATA_HOLD"/>
+							<xs:element type="xs:string" name="ES_INSTRUCTOR_DATA_HOLD"/>
+							<xs:element type="xs:string" name="displaytext"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

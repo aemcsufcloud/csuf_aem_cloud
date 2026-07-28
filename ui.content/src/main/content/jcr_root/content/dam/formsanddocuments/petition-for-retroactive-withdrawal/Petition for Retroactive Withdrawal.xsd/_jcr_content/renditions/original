@@ -1,0 +1,120 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PetitionRetroactive">
+     <xs:complexType>
+       <xs:sequence>
+        <xs:element type="xs:string" name="Initial1"/>
+        <xs:element type="xs:string" name="Initial2"/>
+        <xs:element type="xs:string" name="Initial3"/>
+        <xs:element type="xs:string" name="B_Date"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="CampusID"/>
+        <xs:element type="xs:string" name="Address"/>
+        <xs:element type="xs:string" name="Phone"/>
+        <xs:element type="xs:string" name="City"/>
+        <xs:element type="xs:string" name="State"/>
+        <xs:element type="xs:string" name="ZipCode"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="SemYear"/>
+		
+		<xs:element name="CourseRow">
+            <xs:complexType>
+                <xs:sequence>
+				    <xs:element type="xs:string" name="SelectCB"/>
+                    <xs:element type="xs:string" name="DeptCourseNo"/>					
+                    <xs:element type="xs:string" name="ScheduleNo"/>
+                    <xs:element type="xs:string" name="Grade"/>					
+                    <xs:element type="xs:string" name="DateParticipation"/>
+					<xs:element type="xs:string" name="AssociateDeanName"/>					
+                    <xs:element type="xs:string" name="AssociateDeanEmailId"/>
+					<xs:element type="xs:string" name="AssociateDeanUserId"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+		
+
+		
+        <xs:element type="xs:byte" name="WU_CB"/>
+        <xs:element type="xs:byte" name="I_CB"/>
+        <xs:element type="xs:byte" name="IC_CB"/>
+        <xs:element type="xs:byte" name="Othe_CB"/>
+        <xs:element type="xs:string" name="Other"/>
+        <xs:element type="xs:byte" name="NC_CB"/>
+        <xs:element type="xs:byte" name="RP_CB"/>
+        <xs:element type="xs:string" name="ApproxDate"/>
+        <xs:element type="xs:string" name="C_Date"/>
+        <xs:element type="xs:byte" name="CommitteeDecision"/>
+        <xs:element type="xs:string" name="Comments"/>
+        <xs:element type="xs:string" name="Statement_1"/>
+        <xs:element type="xs:string" name="Documentation_CB"/>
+        <xs:element type="xs:string" name="Statement_3"/>
+        <xs:element type="xs:byte" name="Statement_4_Yes_or_No"/>
+        <xs:element type="xs:string" name="Statement_4"/>
+        <xs:element type="xs:byte" name="Statement_5_Yes_or_No"/>
+        <xs:element type="xs:string" name="Statement_5"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+        <xs:element type="xs:string" name="lastName"/>
+        <xs:element type="xs:string" name="firstName"/>
+        <xs:element type="xs:string" name="cwid"/>
+        <xs:element type="xs:string" name="WUnitUsed"/>
+        <xs:element type="xs:string" name="WUnitsLeft"/>
+        <xs:element type="xs:string" name="StudentScribbleSignature"/>
+		<xs:element type="xs:string" name="withdrawalType"/>
+		<xs:element type="xs:string" name="GraduationType"/>
+		<xs:element type="xs:string" name="DQType"/>
+		<xs:element type="xs:string" name="AssociateDeanSignature"/>
+		<xs:element type="xs:string" name="AssociateDeanSignatureDate"/>
+		<xs:element type="xs:string" name="AssociateDeanComments"/>
+		<xs:element type="xs:string" name="MedicalCommitteeSignature"/>
+		<xs:element type="xs:string" name="MedicalCommitteeSignatureDate"/>
+		<xs:element type="xs:string" name="MedicalCommitteeComments"/>
+		<xs:element type="xs:string" name="GraduateStudiesSignature"/>
+		<xs:element type="xs:string" name="GraduateStudiesSignatureDate"/>
+		<xs:element type="xs:string" name="GraduateStudiesComments"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorSignature"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorSignatureDate"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorComments"/>
+		<xs:element type="xs:string" name="RecordsSignature"/>
+		<xs:element type="xs:string" name="RecordsSignatureDate"/>
+		<xs:element type="xs:string" name="RecordsComments"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="StudentFullCollege"/>
+		<xs:element type="xs:string" name="StudentFirstName"/>
+		<xs:element type="xs:string" name="StudentLastName"/>
+		<xs:element type="xs:string" name="LookupResult"/>
+		<xs:element type="xs:string" name="CourseNumberList"/>
+		<xs:element type="xs:string" name="classNumberList"/>
+		
+		<xs:element type="xs:string" name="AssociateDeanDecision"/>
+		<xs:element type="xs:string" name="MedicalComDecision"/>
+		<xs:element type="xs:string" name="GraduateStudeisDecision"/>
+		<xs:element type="xs:string" name="AVPStudiesDecision"/>
+		<xs:element type="xs:string" name="PetitionCoDecision"/>
+		<xs:element type="xs:string" name="RecordsDecision"/>
+		<xs:element type="xs:string" name="TermCode"/>
+		
+		<xs:element type="xs:string" name="AVPSignature"/>
+		<xs:element type="xs:string" name="AVPSignatureDate"/>
+		<xs:element type="xs:string" name="AVPComments"/>
+		<xs:element type="xs:string" name="splitFlag"/>
+		<xs:element type="xs:string" name="workflow_ID"/>
+		<xs:element type="xs:string" name="Select_CB_Count"/>
+		<xs:element type="xs:string" name="ChildWorkflowCount"/>
+		
+		<xs:element type="xs:string" name="MedicalReviewRB"/>
+		<xs:element type="xs:string" name="MedicalCondition"/>
+		<xs:element type="xs:string" name="PetRecommendationRB"/>
+		<xs:element type="xs:string" name="RecordsStaffRB"/>
+		
+		<xs:element type="xs:string" name="PetitionCoordinatorInSignature"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorInSignDate"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorInComments"/>
+		
+     </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

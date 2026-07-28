@@ -1,0 +1,68 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GradRequestExcess">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:string" name="caseId"/>
+        <xs:element type="xs:string" name="grad_name"/>
+        <xs:element type="xs:string" name="grad_CWID"/>
+        <xs:element type="xs:string" name="grad_phone"/>
+		<xs:element type="xs:string" name="grad_classLevel"/>
+		<xs:element type="xs:string" name="grad_address"/>
+        <xs:element type="xs:string" name="grad_email"/>        
+        <xs:element type="xs:string" name="grad_units"/> 
+		<xs:element type="xs:string" name="grad_cumulativeGPA"/> 
+        <xs:element type="xs:byte" name="grad_reason"/>
+		<xs:element type="xs:string" name="grad_degreeProgram"/>
+        <xs:element type="xs:string" name="grad_studentUnits"/>
+		<xs:element type="xs:byte" name="grad_studentSignature"/>
+		<xs:element type="xs:string" name="grad_student_comments"/> 
+        <xs:element type="xs:byte" name="grad_studentDate"/>
+        <xs:element type="xs:string" name="spring_semester"/>
+        <xs:element type="xs:string" name="fall_semester"/>
+		<xs:element type="xs:string" name="summer_semester"/>
+		<xs:element type="xs:string" name="semesterYear"/>
+        <xs:element type="xs:string" name="grad_winter_reason"/>
+		<xs:element type="xs:string" name="request_statusRB"/>
+		<xs:element type="xs:string" name="request_denied_reason"/>
+
+		<xs:element type="xs:string" name="Grad_name"/>
+        <xs:element type="xs:string" name="Grad_CWID"/>
+        <xs:element type="xs:string" name="Grad_phone"/>
+		<xs:element type="xs:byte" name="Grad_advisorDecision"/>        
+		<xs:element type="xs:string" name="Grad_advisorSignature"/>
+		<xs:element type="xs:string" name="Grad_advisorDate"/>
+		<xs:element type="xs:string" name="studentSignature"/>		
+        <xs:element type="xs:string" name="studentDate"/>
+		
+		<xs:element type="xs:byte" name="grad_advisorDecision"/>
+        <xs:element type="xs:string" name="grad_advisorName"/>
+		<xs:element type="xs:string" name="grad_advisorSignature"/>
+		<xs:element type="xs:string" name="grad_advisorDate"/>
+		<xs:element type="xs:string" name="grad_advisor_comment"/>
+		<xs:element type="xs:byte" name="grad_ChairDecision"/>
+        <xs:element type="xs:string" name="grad_ChairName"/>        
+        <xs:element type="xs:string" name="grad_ChairSignature"/>
+		<xs:element type="xs:string" name="grad_chairDate"/>
+        <xs:element type="xs:string" name="grad_chair_comment"/>
+		<xs:element type="xs:string" name="grad_arscDecision"/>
+		<xs:element type="xs:string" name="grad_arscSignature"/> 
+		<xs:element type="xs:string" name="grad_arscDate"/>
+        <xs:element type="xs:string" name="grad_arscComment"/>
+		<xs:element type="xs:string" name="requestTypeFlag"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>	
+		<xs:element type="xs:string" name="hidden_chair_userID"/>
+		<xs:element type="xs:string" name="hidden_chair_name"/>
+		<xs:element type="xs:string" name="hidden_chair_email"/>
+		<xs:element type="xs:string" name="hidden_advisor_userID"/>
+		<xs:element type="xs:string" name="hidden_advisor_name"/>
+		<xs:element type="xs:string" name="hidden_advisor_email"/>
+		<xs:element type="xs:string" name="term_code"/>
+		<xs:element type="xs:string" name="term_description"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

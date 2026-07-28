@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-07-20T05:46:03Z" uuid="6d166af3-6840-4320-93db-5086552151ec">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1TGSF" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <subform w="200.025mm" h="95.272mm">
+            <draw name="logo" w="66.675mm" h="22.225mm">
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <field name="AidYear" w="37mm" h="9mm" x="88.9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption>
+                  <para vAlign="middle"/>
+               </caption>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">this.presence = "hidden";
+
+</script>
+               </event>
+            </field>
+            <field name="cwid" y="9.525mm" x="117.475mm" w="60.325mm" h="12.831mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25.9636mm">
+                  <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Enter Student's CWID Here:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="formCode" y="9.525mm" x="177.8mm" w="22.225mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Text1" y="28.575mm" x="41.275mm" w="120.65mm" h="0.261583in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>TEACH GRANT SUPPLEMENT FOR CURRENT </text>
+               </value>
+               <font size="16pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center"/>
+               <?renderCache.bounds 339166 16000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 35 TEACH GRANT SUPPLEMENT FOR CURRENT  0 27980 13417 0 0 0 "Calibri" 1 0 16000 ISO-8859-1?></draw>
+            <draw name="Text1" y="34.925mm" x="57.15mm" w="50.91mm" h="0.261583in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>TEACHER OR RETIREE</text>
+               </value>
+               <font size="16pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="TextField1" y="33.884mm" x="107.95mm" w="37mm" h="9.525mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="16pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <validate>
+                  <script contentType="application/x-javascript"/>
+               </validate>
+               <calculate>
+                  <script contentType="application/x-javascript"/>
+               </calculate>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+
+</script>
+               </event>
+               <event activity="enter" name="event__enter">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="exit" name="event__exit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="validationState" name="event__validationState">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseEnter" name="event__mouseEnter">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseExit" name="event__mouseExit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="change" name="event__change">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="full" name="event__full">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseUp" name="event__mouseUp">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseDown" name="event__mouseDown">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="click" name="event__click">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="preSave" ref="$host" name="event__preSave">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postSave" ref="$host" name="event__postSave">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="prePrint" ref="$host" name="event__prePrint">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postPrint" ref="$host" name="event__postPrint">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="preSubmit" ref="$form" name="event__preSubmit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postSubmit" ref="$form" name="event__postSubmit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="docReady" ref="$host" name="event__docReady">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="docClose" ref="$host" name="event__docClose">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="ready" ref="$form" name="event__form_ready">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript"/>
+               </event>
+            </field>
+            <draw name="Text2" y="47.625mm" x="3.175mm" w="196.85mm" h="23.93mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;letter-spacing:0in">INSTRUCTIONS:</p><p style="font-weight:normal;text-decoration:none;letter-spacing:0in">This supplement form is only to be completed by current teachers and retirees.<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Only complete section 1 or Section 2 based on your current status.<span style="xfa-spacerun:yes"> </span></span>Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy, This will delay processing.</p><p style="font-weight:normal;text-decoration:none;letter-spacing:0in"><br/></p></body>
+                  </exData>
+               </value>
+               <font size="11pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text3" y="73.025mm" x="6.35mm" w="193.675mm" h="20.473mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">SECTION 1: TEACH GRANT CURRENT TEACHER CERTIFICATION<span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span></p><p style="font-weight:normal;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span><span style="font-size:11pt;font-weight:bold">EMPLOYER CERTIFICATION: This section<span style="xfa-spacerun:yes"> </span></span><span style="font-size:11pt;font-weight:bold;text-decoration:underline">MUST BE<span style="xfa-spacerun:yes"> </span></span><span style="font-size:11pt;font-weight:bold">completed and signed by the Authorized Principal or</span></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">         </span>Authorized Human Resources Administrator.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span><span style="font-size:11pt;font-weight:normal;font-style:italic">I certify that the person listed on this form is a current teacher.</span><span style="xfa-spacerun:yes">        </span><span style="xfa-tab-count:2">                  </span><span style="xfa-spacerun:yes">                          </span></p></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="EmpName" w="187.325mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="46.2295mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Employee (Applicant) Name:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="SchoolName" w="187.325mm" minH="8.627mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="27.1268mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name of School:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="City" w="187.325mm" minH="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="22.3413mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>City/District:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PersonNameCC" w="187.325mm" minH="11.451mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="72.8368mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name of the Person Completing Certification:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+            <value>
+               <text>{{*CCompletingCertificationPersonName1_es_:signer1:multiline(3)}}</text>
+            </value>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="TitleCC" w="187.325mm" minH="12.7mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="65.041mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Title of Person Completing Certification:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>{{*CCompletingCertificationTitleName2_es_:signer:multiline(3)}}</p></body>
+               </exData>
+            </value>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="ContactNo" w="187.325mm" h="9mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.6019mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Contact Number:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+            <value>
+               <float>{{*Mobile_es_:signer1:phone}}</float>
+            </value>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="TeachSignature" w="187.325mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="19.221mm">
+               <font typeface="Myriad Pro" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Signature :</text>
+               </value>
+            </caption>
+            <value>
+               <text>{{Sig_es_:signer1:signature}}</text>
+            </value>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="TeacherSignDate" w="187.325mm" h="9mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date>{{Date_es_:signer1:date}}</date>
+            </value>
+            <caption reserve="11.9mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <draw name="Text4" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text3" w="193.675mm" h="1.006028in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">SECTION 2: TEACH GRANT RETIREE CERTIFICATION<span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span></p><p style="font-weight:normal;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span><span style="font-size:11pt;font-weight:bold">The section is completed and signed<span style="xfa-spacerun:yes"> </span></span><span style="font-size:11pt;font-weight:bold;text-decoration:underline">ONLY</span><span style="font-size:11pt;font-weight:bold"> by students who are retirees.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span><span style="font-size:11pt;font-weight:normal;font-style:italic">I certify that I am a retiree with existing expertise in a high need field. I have attached supporting documentation</span></p><p style="font-size:11pt;font-weight:normal;font-style:italic;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>to verify my retired status.<span style="font-size:12pt;font-weight:bold;font-style:normal"><span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                     </span><span style="xfa-tab-count:2">                  </span><span style="xfa-spacerun:yes">                          </span></p></body>
+               </exData>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="StudentName" w="187.325mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="26.1142mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Student Name:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="RetireeESign" w="187.325mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="18.6143mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="12.7mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="RetireeDate" w="187.325mm" h="9mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="11.9mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 148 37 0003000400120018001C002F00450057005E00640102010F0110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C7035503570358036C037E037F ACDEINPSTabcdefghilmnoprstuvwy,:./()?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 184 46 00030004001100120018001C00260027002C002F003E00440045004B0057005A005E006400680074007A0102010F0110011A011E0150015A015D016F01750176017D0189018C0190019A01B501C101C701CC03570358039603ED03EE ABCDEFGHILMNOPRSTUWYabcdeghilmnoprstuwyz:.'12?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 96 24 0003002F01020110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C601C70358 Iacdefghilmnoprstuvwxy.?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 144 36 00010009000A000B001200130014001B00240025002E002F003100340035004000420043004400450046004700480049004A004D004E004F005000510053005400550056005C005E ()*123:CDMNPST_abcdefghilmnoprstu{}?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\Teach Grant Supplement Form.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 85?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Adobe Gothic Std B" psName="AdobeGothicStd-Bold" weight="bold" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-07-20T05:46:03Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:6d166af3-6840-4320-93db-5086552151ec</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

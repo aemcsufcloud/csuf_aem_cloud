@@ -1,0 +1,32 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AdmissionsAppealExternalForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:byte" name="Term"/>
+        <xs:element type="xs:byte" name="TermYear"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:byte" name="Level"/>
+        <xs:element type="xs:byte" name="AppealReason1"/>
+        <xs:element type="xs:byte" name="AppealReason2"/>
+        <xs:element type="xs:byte" name="AppealReason3"/>
+        <xs:element type="xs:byte" name="AppealReason6"/>
+        <xs:element type="xs:byte" name="OtherText"/>
+        <xs:element type="xs:string" name="AppealReason7"/>
+        <xs:element type="xs:string" name="AppealStatement"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+		<xs:element type="xs:byte" name="AdmissionsDecision"/>
+        <xs:element type="xs:byte" name="MissedEnrolAdminCharDeadline"/>
+        <xs:element type="xs:byte" name="MissedInitialDeadline"/>
+        <xs:element type="xs:byte" name="MissedFinalDeadline"/>
+		<xs:element type="xs:string" name="CaseId"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

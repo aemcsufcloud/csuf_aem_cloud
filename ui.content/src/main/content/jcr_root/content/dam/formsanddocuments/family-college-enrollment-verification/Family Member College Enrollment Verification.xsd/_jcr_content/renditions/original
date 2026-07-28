@@ -1,0 +1,71 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="F1ENRL">
+    <xs:complexType>
+      
+        
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element type="xs:string" name="cwid"/>
+              <xs:element type="xs:string" name="formCode"/>
+              <xs:element type="xs:string" name="TextField1"/>
+              <xs:element type="xs:string" name="AidYear"/>
+              <xs:element type="xs:string" name="TextField2" maxOccurs="unbounded" minOccurs="0"/>
+              <xs:element type="xs:string" name="ApplicantIn1CB"/>
+            
+        <xs:element type="xs:string" name="FamilyMemName"/>
+        <xs:element type="xs:string" name="InstitutionName"/>
+        <xs:element type="xs:string" name="TextField4"/>
+        <xs:element type="xs:string" name="Relationship"/>
+        <xs:element type="xs:string" name="FamilyMemSign"/>
+        <xs:element type="xs:string" name="FamilyMemDOB"/>
+        <xs:element type="xs:float" name="SSN"/>
+		<xs:element type="xs:string" name="ParentEmail"/>
+        <xs:element type="xs:string" name="ConfirmParentEmail"/>
+		<xs:element type="xs:string" name="AdminEmail"/>
+        <xs:element type="xs:string" name="ConfirmAdminEmail"/>
+        <xs:element type="xs:string" name="Date_2"/>
+
+              <xs:element type="xs:byte" name="YesCB"/>
+              <xs:element type="xs:byte" name="NoCB"/>
+              <xs:element type="xs:byte" name="FederallyDependentCB"/>
+              <xs:element type="xs:byte" name="FederallyIndependentCB"/>
+              <xs:element type="xs:byte" name="FederallyFundsCB"/>
+              <xs:element type="xs:byte" name="StudentDidntCB"/>
+              <xs:element type="xs:string" name="TextField2" maxOccurs="unbounded" minOccurs="0"/>
+            
+        <xs:element type="xs:string" name="FinAidAdminSign"/>
+        <xs:element type="xs:string" name="NameOfInstitutionIn3"/>
+        <xs:element type="xs:string" name="NameTitleOfFinAid"/>
+        <xs:element type="xs:string" name="PhoneNo"/>
+        <xs:element type="xs:string" name="DateIn3"/>
+        
+              <xs:element type="xs:string" name="StudentSign"/>
+              <xs:element type="xs:string" name="InitiatedDate"/>
+              <xs:element type="xs:string" name="StudentName"/>
+              <xs:element type="xs:string" name="SCWID"/> 
+	    <xs:element type="xs:string" name="CertificationRB"/>  
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="firstName"/>
+		<xs:element type="xs:string" name="lastName"/>
+		<xs:element type="xs:string" name="ESignature"/>
+		<xs:element type="xs:string" name="IPAddress"/>
+		<xs:element type="xs:string" name="SignStudentName"/>
+		<xs:element type="xs:string" name="StudentFullName"/>
+		<xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="StudentEmailId"/>
+		<xs:element type="xs:string" name="StudentComments"/>
+		<xs:element type="xs:string" name="FinancialAidSignature"/>
+		<xs:element type="xs:string" name="FinancialAidSignatureDate"/>
+		<xs:element type="xs:string" name="staffComment"/>
+		<xs:element type="xs:string" name="staffDecision"/>
+        <xs:element type="xs:string" name="financialAidYear"/>
+		<xs:element type="xs:string" name="Date_1"/>
+		<xs:element type="xs:string" name="financialAidAssignee"/>
+		<xs:element type="xs:string" name="documentNameForAdobeSign"/>
+            
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

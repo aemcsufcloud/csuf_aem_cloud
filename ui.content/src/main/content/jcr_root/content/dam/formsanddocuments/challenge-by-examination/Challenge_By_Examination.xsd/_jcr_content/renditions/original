@@ -1,0 +1,75 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ChallengeByExamination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="FirstName"/>
+	    <xs:element type="xs:string" name="LastName"/>
+	    <xs:element type="xs:string" name="CWID"/>
+	    <xs:element type="xs:string" name="PhoneNo"/>
+	    <xs:element type="xs:string" name="Email"/>
+	    <xs:element type="xs:string" name="Major"/>
+        <xs:element type="xs:byte" name="InstrctionsCheckBox"/>
+		<xs:element type="xs:byte" name="CheckBox_CourseDetails"/>
+		<xs:element type="xs:byte" name="CheckBox_StuSign"/>
+		<xs:element type="xs:string" name="StuSign"/>
+		<xs:element type="xs:string" name="StuSignDate"/>
+		<xs:element type="xs:string" name="StuSignComments"/>
+		<xs:element type="xs:byte" name="CheckBox_DeptChairSign"/>
+		<xs:element type="xs:string" name="DeptChairSign"/>
+		<xs:element type="xs:string" name="DeptChairSignDate"/>
+		<xs:element type="xs:byte" name="DeptChairRecommend"/>
+		<xs:element type="xs:string" name="DeptChairComments"/>
+		<xs:element type="xs:byte" name="CheckBox_InstructorSign"/>
+		<xs:element type="xs:string" name="InstructorSign"/>
+		<xs:element type="xs:string" name="InstructorSignDate"/>
+		<xs:element type="xs:string" name="ExamAdministeredDate"/>
+		<xs:element type="xs:byte" name="PassedNotPassed"/>
+		<xs:element type="xs:string" name="Grade"/>
+		<xs:element type="xs:byte" name="InstructorRecommend"/>
+		<xs:element type="xs:string" name="InstructorComments"/>
+		<xs:element type="xs:string" name="RecordsComments"/>
+		<xs:element type="xs:byte" name="CheckBox_RecordsSign"/>
+		<xs:element type="xs:string" name="RecordsSign"/>
+		<xs:element type="xs:string" name="RecordsSignDate"/>
+		<xs:element type="xs:byte" name="RecordsRecommend"/>
+		<xs:element type="xs:string" name="UpdatedStudentRecord"/>
+		<xs:element type="xs:string" name="NoUpdate"/>
+		<xs:element name="CourseRow" maxOccurs="unbounded" minOccurs="0">
+		  <xs:complexType>
+			<xs:sequence>
+			  <xs:element type="xs:string" name="SelectCB"/>
+			  <xs:element type="xs:string" name="CourseNo"/>
+			  <xs:element type="xs:string" name="ScheduleNo"/>                          
+			  <xs:element type="xs:string" name="NumberOfUnits"/>						  
+			  <xs:element type="xs:string" name="NameOfInstructor"/>
+			  <xs:element type="xs:string" name="SectionNo"/>
+			</xs:sequence>
+		  </xs:complexType>
+        </xs:element>
+	    <xs:element type="xs:string" name="StageIndicator"/>
+        <xs:element type="xs:string" name="EmailSubject"/>
+        <xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="StudentFullName"/>
+		<xs:element type="xs:string" name="TermYear"/>
+		<xs:element type="xs:string" name="Term"/>
+		<xs:element type="xs:string" name="TermCode"/>
+        <xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="DeptChairUserId"/>
+		<xs:element type="xs:string" name="InstructorUserId"/>
+		<xs:element type="xs:string" name="RecordsUserId"/>
+		<xs:element type="xs:string" name="DeptChairEmailId"/>
+		<xs:element type="xs:string" name="InstructorEmailId"/>
+		<xs:element type="xs:string" name="RecordsUserEmailId"/>
+		<xs:element type="xs:string" name="CaseID"/>
+		<xs:element type="xs:string" name="LookupResult"/>
+		<xs:element type="xs:string" name="ClassSectionList"/>
+		<xs:element type="xs:string" name="ClassNumberList"/>
+		<xs:element type="xs:string" name="CourseNumberList"/>
+		<xs:element type="xs:string" name="InstructorName"/>
+		<xs:element type="xs:string" name="DeptChairName"/>
+		<xs:element type="xs:string" name="RecordsName"/>
+		<xs:element type="xs:string" name="InstructorLname"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

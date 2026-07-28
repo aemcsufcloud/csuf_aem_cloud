@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:conf="/conf/AdobeSign Configuration"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-10-23T00:57:24.702-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-10-23T00:57:46.736-07:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/staff-performance-evaluation--units-2--5--7----9--1"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="NACHA Form"
+        jcr:uuid="33ab008d-318b-4693-a2e1-4143ecee4e8a"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2024-07-12T00:21:57.396-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="Attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.nacha_form_nacha_form"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/nacha-form/NACHA_Form.xdp"
+            dorType="select"
+            enableFocusOnFirstField="{Boolean}true"
+            enableLayoutLayer="false"
+            enablePortalSubmit="true"
+            from="erpimaging@fullerton.edu"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            mailto="[swathi.kumari@thoughtfocus.com,pushpa.kawadi@thoughtfocus.com,yashovardhan.jayaram@thoughtfocus.com]"
+            name="guide1"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="&lt;p style=&quot;text-align: center;&quot;>Thank you for submitting the evaluation form.&lt;/p>&#xd;&#xa;"
+            thankYouOption="message"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/nacha-form"
+            xsdRef="/content/dam/formsanddocuments/nacha-form/NACHA_Form.xsd"
+            xsdRootElement="NACHA">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                cq:cssClass="guide-1563885247859"
+                jcr:lastModified="{Date}2020-02-12T01:20:49.000-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExpReq="{Boolean}false"
+                cssStyle=".guide-1563885247859 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon:hover,.guide-1563885247859  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.stepped > a.guideLeftNavIcon:hover{&#xa;color:#ffffff;&#xa;background:#ff6800;&#xa;&#xa;border-top-width: 0;&#xa;margin-bottom:0;&#xa;&#xa;margin-top: 0;&#xa;&#xa;&#xa;&#xa;}&#xa;.guide-1563885247859 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon,.guide-1563885247859  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active.stepped > a.guideLeftNavIcon,.guide-1563885247859  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon:hover{&#xa;background:#ff6800;&#xa;&#xa;border-top-width: 0;&#xa;margin-bottom:0;&#xa;&#xa;margin-top: 0;&#xa;&#xa;&#xa;&#xa;}&#xa;.guide-1563885247859 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon{&#xa;background:#00274c;&#xa;color:#ffffff;&#xa;&#xa;border-top-width: 0;&#xa;&#xa;margin-bottom:0;&#xa;margin-top: 0;&#xa;&#xa;&#xa;&#xa;}&#xa;.guide-1563885247859 .guideWizardLayout{&#xa;padding-top:15px;&#xa;&#xa;}&#xa;"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/rootPanel">
+                    <panel
+                        jcr:created="{Date}2024-02-08T06:19:17.530-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2024-02-08T06:19:50.836-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="panel1707401957588"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="6"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guideseparator
+                                cq:cssClass="guide-1707406291485"
+                                jcr:created="{Date}2024-02-08T07:26:55.095-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:30:58.262-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Separator"
+                                sling:resourceType="fd/af/components/guideseparator"
+                                colspan="6"
+                                cssStyle=".guide-1707406291485 hr{&#xa;visibility: hidden;&#xa;}&#xa;"
+                                guideNodeClass="guideSeparator"
+                                name="separator1707406015160"
+                                thickness="4">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_separator
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[cssOverride:visibility: hidden;]"/>
+                                </style>
+                            </guideseparator>
+                            <guidetextdraw
+                                jcr:created="{Date}2024-02-08T06:19:35.540-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T06:19:58.943-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                colspan="5"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1707401975587"
+                                textIsRich="true"/>
+                            <guidetextbox
+                                jcr:created="{Date}2024-02-08T06:20:05.121-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:22:55.972-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Form ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/caseId"
+                                enabled="{Boolean}false"
+                                guideNodeClass="guideTextBox"
+                                name="caseId"
+                                textIsRich="[true,true,true]"/>
+                            <guideseparator_1715844845
+                                cq:cssClass="guide-1707406333648"
+                                jcr:created="{Date}2024-02-08T07:27:07.547-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:27:30.899-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Separator"
+                                sling:resourceType="fd/af/components/guideseparator"
+                                colspan="6"
+                                cssStyle=".guide-1707406333648 hr{&#xa;visibility: hidden;&#xa;}&#xa;"
+                                guideNodeClass="guideSeparator"
+                                name="separator_17158448451707406027594"
+                                thickness="4">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_separator
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[cssOverride:visibility: hidden;]"/>
+                                </style>
+                            </guideseparator_1715844845>
+                        </items>
+                    </panel>
+                    <panel_1420556625
+                        cq:cssClass="guide-1707402687966"
+                        jcr:created="{Date}2023-05-30T23:13:45.101-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2024-02-08T03:45:53.885-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        cssStyle=".guide-1707402687966 .guideGridFluidLayout{&#xa;border-style:solid;&#xa;border-top-right-radius:1px;&#xa;border-bottom-left-radius:1px;&#xa;border-bottom-right-radius:1px;&#xa;border-top-left-radius:1px;&#xa;border-right-width:0.5px;&#xa;border-bottom-width:0.5px;&#xa;border-left-width:0.5px;&#xa;border-top-width:0.5px;&#xa;padding-left:10px;&#xa;border-color:#08b1cf;&#xa;padding-top:10px;&#xa;padding-right:10px;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="MainPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextdraw
+                                jcr:created="{Date}2023-05-30T23:20:29.674-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T03:46:18.440-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1685514029789"
+                                textIsRich="true"/>
+                            <guidetextdraw_301020380
+                                jcr:created="{Date}2023-05-30T23:26:27.984-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T03:46:36.455-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_3010203801685514388127"
+                                textIsRich="true"/>
+                            <guidetextdraw_1993423872
+                                jcr:created="{Date}2024-02-08T07:23:26.424-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:24:44.599-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p style=&quot;text-align: right;&quot;>Total Amount&amp;nbsp;&amp;nbsp;&lt;/p>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_19934238721707405806477"
+                                textIsRich="true"/>
+                            <guidenumericbox
+                                jcr:created="{Date}2024-02-08T03:45:15.422-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:24:23.981-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Total Amount"
+                                sling:resourceType="fd/af/components/guidenumericbox"
+                                bindRef="/NACHA/TotalAmount"
+                                colspan="2"
+                                guideNodeClass="guideNumericBox"
+                                hideTitle="true"
+                                mandatory="true"
+                                name="TotalAmount"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.TotalAmount&quot;\,&quot;type&quot;:&quot;NUMBER FIELD|FIELD|AFCOMPONENT|NUMBER&quot;\,&quot;name&quot;:&quot;TotalAmount&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_TotalAmount_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_TotalAmount_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidenumericbox>
+                            <guidetextdraw_2130620573
+                                jcr:created="{Date}2024-02-08T07:23:33.000-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:24:31.125-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_21306205731707405813051"
+                                textIsRich="true"/>
+                            <guidetextdraw_1306983749
+                                jcr:created="{Date}2024-02-08T07:09:33.188-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-03-06T02:21:16.756-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>Reviewer Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="ReviewerAcknowledgementText"
+                                textIsRich="true"/>
+                            <guidecheckbox
+                                jcr:created="{Date}2024-02-08T03:47:25.040-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-03-05T05:50:29.549-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Check Box"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/NACHA/ReviewerCB"
+                                colspan="4"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                mandatory="true"
+                                name="ReviewerCB"
+                                options="[1=Please check the box to indicate that you have completed the review]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.checkbox1707392845084&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ReviewerCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ReviewerCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ReviewerCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidecheckbox>
+                            <guidetextbox
+                                jcr:created="{Date}2024-02-08T03:47:42.653-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-19T07:00:30.859-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Reviewer ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ReviewerID"
+                                colspan="2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="ReviewerID"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.textbox1707392862698&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ReviewerID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ReviewerID_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ReviewerID_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox>
+                            <guidetextbox_573009327
+                                jcr:created="{Date}2024-02-08T03:48:24.420-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:18:01.860-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Reviewed Time"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ReviewedTime"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="ReviewedTime"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.textbox_5730093271707392904463&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ReviewedTime&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ReviewedTime_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ReviewedTime_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox_573009327>
+                            <guidetextbox_195287198
+                                jcr:created="{Date}2024-02-08T03:49:32.045-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:18:36.352-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Reviewer Comments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ReviewerComments"
+                                colspan="4"
+                                guideNodeClass="guideTextBox"
+                                multiLine="true"
+                                name="ReviewerComments"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextdraw_149860803
+                                jcr:created="{Date}2024-02-08T07:10:02.815-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-03-06T02:21:06.424-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>Approver Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="ApproverAcknowledgementText"
+                                textIsRich="true"/>
+                            <guidecheckbox_1755171058
+                                jcr:created="{Date}2024-02-08T03:48:31.000-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-03-05T05:50:45.244-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Check Box"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/NACHA/ApproverCB"
+                                colspan="4"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                name="ApproverCB"
+                                options="[1=Please check the box to indicate that you have completed the review]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.ApproverCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApproverCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ApproverCB_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ApproverCB_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.ApproverCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApproverCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ApproverCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ApproverCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidecheckbox_1755171058>
+                            <guidetextbox_2090609464
+                                jcr:created="{Date}2024-02-08T03:49:51.579-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-19T06:55:22.711-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Approver ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ApproverID"
+                                colspan="2"
+                                guideNodeClass="guideTextBox"
+                                name="ApproverID"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.ApproverID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApproverID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ApproverID_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ApproverID_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox_2090609464>
+                            <guidetextbox_1725520218
+                                jcr:created="{Date}2024-02-08T03:49:59.117-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-19T07:00:17.440-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Approved Time"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ApprovedTime"
+                                guideNodeClass="guideTextBox"
+                                name="ApprovedTime"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.ApprovedTime&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApprovedTime&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ApprovedTime_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ApprovedTime_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox_1725520218>
+                            <guidetextbox_1392715329
+                                jcr:created="{Date}2024-02-08T03:50:06.044-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:20:18.542-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Approver Comments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ApproverComments"
+                                colspan="4"
+                                guideNodeClass="guideTextBox"
+                                multiLine="true"
+                                name="ApproverComments"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextdraw_1660422294
+                                jcr:created="{Date}2024-10-21T23:54:48.349-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-10-21T23:55:10.122-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>Fax Confirmation Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="FaxconfirmationAcknowledgementText"
+                                textIsRich="true"/>
+                            <guidecheckbox_1585833756
+                                jcr:created="{Date}2024-10-21T23:55:24.904-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-10-21T23:56:00.634-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Check Box"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/NACHA/FaxConfirmationCB"
+                                colspan="4"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                mandatory="true"
+                                name="FaxConfirmationCB"
+                                options="[1=Please check the box to indicate that you have completed the review]"
+                                textIsRich="[true,true,true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.FaxConfirmationCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FaxConfirmationCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidecheckbox_1585833756>
+                            <guidetextbox_459384801
+                                jcr:created="{Date}2024-10-21T23:56:34.227-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-10-21T23:57:30.757-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Fax Confirmation Approver ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FaxConfirmationID"
+                                colspan="2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="FaxConfirmationID"
+                                textIsRich="[true,true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.FaxConfirmationID&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FaxConfirmationID&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationID_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationID_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox_459384801>
+                            <guidetextbox_1759615412
+                                jcr:created="{Date}2024-10-21T23:56:41.439-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-10-21T23:58:05.176-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Time"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FaxConfirmationTime"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="FaxConfirmationTime"
+                                textIsRich="[true,true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.MainPanel.FaxConfirmationTime&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FaxConfirmationTime&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationTime_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationTime_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </guidetextbox_1759615412>
+                            <guidetextbox_1468906992
+                                jcr:created="{Date}2024-10-21T23:56:47.772-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-10-21T23:58:43.928-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Fax Confirmation Comments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FaxConfirmationComments"
+                                colspan="4"
+                                guideNodeClass="guideTextBox"
+                                multiLine="true"
+                                name="FaxConfirmationComments"
+                                textIsRich="[true,true,true,true]"/>
+                            <guidetextbox_1672587995
+                                jcr:created="{Date}2024-02-08T03:55:10.391-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2024-02-08T07:21:03.783-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="SFTP Activity Log"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/SFTPActivityLog"
+                                colspan="4"
+                                guideNodeClass="guideTextBox"
+                                multiLine="true"
+                                name="SFTPActivityLog"
+                                textIsRich="[true,true,true]"/>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_responsivepanel
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[border-style:solid,border-top-right-radius:1px,border-bottom-left-radius:1px,border-bottom-right-radius:1px,border-top-left-radius:1px,border-right-width:0.5px,border-bottom-width:0.5px,border-left-width:0.5px,border-top-width:0.5px,padding-left:10px,border-color:#08b1cf,padding-top:10px,padding-right:10px]"
+                                default_x0023_default_x0023_ui="[borderRadiusPopover:1px,borderWidthPopover:0.5px,paddingLock:linkOff,paddingPopover:10px\, 10px\, —\, 10px]"/>
+                        </style>
+                    </panel_1420556625>
+                    <panel_369124471
+                        jcr:created="{Date}2024-02-08T07:21:39.873-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2024-08-01T22:39:24.719-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hidden Panel"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="HiddenPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <StageIndicator1707405736933
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Stage Indicator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/StageIndicator"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="StageIndicator"/>
+                            <aftiaDescCWID1707405741796
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Aftia Desc CWID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/aftiaDescCWID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="aftiaDescCWID"/>
+                            <EmailSubject1707405745877
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email Subject"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/EmailSubject"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="EmailSubject"/>
+                            <NACHAFileName1709553679982
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="NACHA File Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/NACHAFileName"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="NACHAFileName"/>
+                            <RunId1710763295406
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Run Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/RunId"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="RunId"/>
+                            <ReportDate1710763304506
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Report Date"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/ReportDate"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="ReportDate"/>
+                            <TotalCount1710763308585
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Total Count"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/TotalCount"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="TotalCount"/>
+                            <ReportName1710763325014
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Report Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/ReportName"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="ReportName"/>
+                            <EstimatedSettlementDate1710763335398
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Estimated Settlement Date"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/EstimatedSettlementDate"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="EstimatedSettlementDate"/>
+                            <Title1710763339481
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Title"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/NACHA/Title"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="Title"/>
+                            <InitialFormSubmittedAttachments1720808535485
+                                jcr:lastModified="{Date}2024-07-13T07:53:40.661-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Initial Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/InitialFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="InitialFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.InitialFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;InitialFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_InitialFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_InitialFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </InitialFormSubmittedAttachments1720808535485>
+                            <ReviewerFormSubmittedAttachments1720808547424
+                                jcr:lastModified="{Date}2024-07-13T07:54:57.809-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Reviewer Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ReviewerFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="ReviewerFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.ReviewerFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ReviewerFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ReviewerFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ReviewerFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.ReviewerFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ReviewerFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ReviewerFormSubmittedAttachments_init1&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ReviewerFormSubmittedAttachments_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </ReviewerFormSubmittedAttachments1720808547424>
+                            <ApproverFormSubmittedAttachments1720881403902
+                                jcr:lastModified="{Date}2024-07-13T07:56:06.254-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Approver Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/ApproverFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="ApproverFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.ApproverFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApproverFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_ApproverFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_ApproverFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </ApproverFormSubmittedAttachments1720881403902>
+                            <FaxErrorFormSubmittedAttachments1720881833326
+                                jcr:lastModified="{Date}2024-07-13T07:57:26.783-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Fax Error Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FaxErrorFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="FaxErrorFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.FaxErrorFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FaxErrorFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FaxErrorFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FaxErrorFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </FaxErrorFormSubmittedAttachments1720881833326>
+                            <FaxConfirmationFormSubmittedAttachments1720809477147
+                                jcr:lastModified="{Date}2024-07-13T07:58:29.974-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Fax Confirmation Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FaxConfirmationFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="FaxConfirmationFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.FaxConfirmationFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FaxConfirmationFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FaxConfirmationFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </FaxConfirmationFormSubmittedAttachments1720809477147>
+                            <FinalReviewerFormSubmittedAttachments1720881665372
+                                jcr:lastModified="{Date}2024-07-13T07:59:16.169-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Final Reviewer Form Submitted Attachments"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/NACHA/FinalReviewerFormSubmittedAttachments"
+                                guideNodeClass="guideTextBox"
+                                name="FinalReviewerFormSubmittedAttachments"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel.FinalReviewerFormSubmittedAttachments&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;FinalReviewerFormSubmittedAttachments&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_FinalReviewerFormSubmittedAttachments_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_FinalReviewerFormSubmittedAttachments_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </FinalReviewerFormSubmittedAttachments1720881665372>
+                        </items>
+                    </panel_369124471>
+                </items>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_tabsonleftnavgrp1title
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_active="[cssOverride:&#xa;border-top-width: 0;&#xa;margin-bottom:0;&#xa;&#xa;margin-top: 0;&#xa;&#xa;&#xa;,background:#ff6800]"
+                        default_x0023_active_x0023_ui="[backgroundColor:#ff6800]"
+                        default_x0023_default="[background:#00274c,cssOverride:&#xa;border-top-width: 0;&#xa;&#xa;margin-bottom:0;&#xa;margin-top: 0;&#xa;&#xa;&#xa;,color:#ffffff]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                        default_x0023_hover="[cssOverride:&#xa;border-top-width: 0;&#xa;margin-bottom:0;&#xa;&#xa;margin-top: 0;&#xa;&#xa;&#xa;,color:#ffffff,background:#ff6800]"
+                        default_x0023_hover_x0023_ui="[backgroundColor:#ff6800]"/>
+                    <af_wizard
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[padding-top:15px]"
+                        default_x0023_default_x0023_mask="[margin-top,margin-right,margin-bottom,margin-left,marginPopover,marginLock]"
+                        default_x0023_default_x0023_ui="[marginLock:linkOff,marginPopover:Set,paddingLock:linkOff,paddingPopover:15px\, —\, —\, —]"/>
+                </style>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init1&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init2&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_guideRootPanel_init2&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                signConfigPath="/conf/global/settings/cloudconfigs/echosign/adobe-sign-cloud-config"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="guide[0].guide1[0].guideRootPanel[0].signature[0].EmpEmailID[0]"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+                <signer1
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="guide[0].guide1[0].guideRootPanel[0].signature[0].SupervisorEmailID[0]"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer Two"/>
+            </signerInfo>
+            <assets jcr:primaryType="nt:unstructured"/>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toolbar"
+                sling:resourceType="fd/af/components/toolbar"
+                css=""
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                    <guidebutton
+                        jcr:created="{Date}2020-03-02T20:16:30.398-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-03-02T20:16:45.360-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate PDF"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="generateDOR"
+                        textIsRich="[true,true]"
+                        type="Button">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;nacha_form_nacha_form.generated_generateDOR_click0&quot;\,&quot;displayName&quot;:&quot;nacha_form_nacha_form.generated_generateDOR_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+            </toolbar>
+        </guideContainer>
+        <parsys1
+            jcr:lastModified="{Date}2019-03-11T01:19:10.761-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1563884477140"
+                jcr:created="{Date}2019-03-10T22:37:16.000-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:46:24.448-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1563884477140 .afHeader{&#xa;background:#00274C;&#xa;height:65px;&#xa;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1686579265688">
+                <guideimage
+                    cq:cssClass="guide-1563884928424"
+                    jcr:lastModified="{Date}2020-03-06T01:17:04.928-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1563884928424 .guideImage img{&#xa;margin-top: 0;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/CSUF Assets/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="CSUF_logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top: 0;]"/>
+                    </style>
+                </guideimage>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:&#xa;margin: 0 auto;,background:#00274C,height:65px]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274C]"/>
+                </style>
+                <guidetextdraw
+                    cq:cssClass="guide-1575273661724"
+                    jcr:lastModified="{Date}2024-02-08T07:26:31.082-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div>&lt;p class=&quot;headerTextCertificate&quot; style=&quot;height: 90px; padding-left: 352px; font-size: 23px; padding-top: 3px;&quot;>&lt;b>NACHA File Processing&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select an entry&lt;/p>&#xa;&lt;span id=&quot;closeButton&quot; class=&quot;close&quot;>×&lt;/span>&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;p id=&quot;showData&quot;>&amp;nbsp;&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;"
+                    css="headerText"
+                    cssStyle=""
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    text="&lt;div>&lt;p class=&quot;headerTextCertificate&quot; style=&quot;height: 90px; padding-left: 300px;&quot;>&lt;b>Fee Waiver Program Certificate of Eligibility&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select the department&lt;/p>&#xa;&lt;span class=&quot;close&quot;>×&lt;/span>&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;p id=&quot;showData&quot;>&amp;nbsp;&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;"
+                    textIsRich="true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_headertext
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:height:65px;]"/>
+                    </style>
+                </guidetextdraw>
+            </guideheader>
+        </parsys1>
+        <parsys2
+            jcr:lastModified="{Date}2019-03-11T01:19:22.529-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1563885847200"
+                jcr:created="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1563885847200 .afFooter{&#xa;background:#00274C;&#xa;&#xa;}&#xa;"
+                name="footer1686579268892">
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[background:#00274C]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274C]"/>
+                </style>
+                <Copy_x0020_of_x0020_guidetextdraw1
+                    jcr:lastModified="{Date}2023-06-05T03:22:09.718-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p id=&quot;FooterText&quot;>© 2021 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    text="&lt;p>© 2020 CSUF | All rights reserved&lt;/p>&#xa;"
+                    textIsRich="true"/>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

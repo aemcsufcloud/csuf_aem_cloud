@@ -1,0 +1,33 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AppealsExternal">
+    <xs:complexType>
+      <xs:sequence>
+	    <xs:element type="xs:string" name="CaseId"/>
+        <xs:element type="xs:string" name="Term"/>
+		<xs:element type="xs:string" name="TermYear"/>
+		<xs:element type="xs:string" name="TermDescription"/>
+		<xs:element type="xs:string" name="FirstName"/>
+		<xs:element type="xs:string" name="LastName"/>
+		<xs:element type="xs:string" name="FullName"/>
+        <xs:element type="xs:string" name="CWID"/>
+		<xs:element type="xs:string" name="AppealStatement"/>
+		<xs:element type="xs:byte" name="NoIDCB"/>
+		<xs:element type="xs:string" name="Level"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+        <xs:element type="xs:byte" name="AppealReason1"/>
+        <xs:element type="xs:byte" name="AppealReason2"/>
+        <xs:element type="xs:byte" name="AppealReason3"/>
+        <xs:element type="xs:byte" name="AppealReason4"/>
+        <xs:element type="xs:byte" name="AppealReason5"/>
+        <xs:element type="xs:byte" name="AppealReason6"/>
+		<xs:element type="xs:byte" name="AppealReason7"/>
+		<xs:element type="xs:string" name="OtherText"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

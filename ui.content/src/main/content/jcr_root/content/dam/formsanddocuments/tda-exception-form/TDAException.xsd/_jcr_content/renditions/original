@@ -1,0 +1,137 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TDAException">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element type="xs:string" name="ExceptionFlag"/>
+		<xs:element type="xs:string" name="DORExceptionFlag"/>
+            
+        <xs:element type="xs:string" name="StudentName"/>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="RequestID"/>
+        <xs:element type="xs:string" name="AcademicPlan"/>
+        <xs:element type="xs:string" name="CatalogYear"/>
+        <xs:element type="xs:string" name="Term"/>
+        <xs:element type="xs:string" name="ExceptionType"/> 
+        <xs:element type="xs:byte" name="ExceptionProcessType"/>
+          
+                    <xs:element name="GeneralEducationATCE" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="GeneralEducationATCE_Transfer"/>
+                          <xs:element type="xs:string" name="GeneralEducationATCE_InstitutionName"/>
+                          <xs:element type="xs:string" name="GeneralEducationATCE_TransferCourse"/>
+                          <xs:element type="xs:string" name="GeneralEducationATCE_GEArea"/>
+						  <xs:element type="xs:string" name="GeneralEducationATCE_GEAreaOther"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="GeneralEducationTDA" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="GeneralEducationTDA_CSUF"/>
+                          <xs:element type="xs:string" name="GeneralEducationTDA_CSUFCourse"/>
+                          <xs:element type="xs:string" name="GeneralEducationTDA_GEArea"/>
+						  <xs:element type="xs:string" name="GeneralEducationTDA_GEAreaOther"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  
+                    <xs:element name="MajorReqATCE" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="MajorReqATCE_Transfer"/>
+                          <xs:element type="xs:string" name="MajorReqATCE_InstitutionName"/>
+                          <xs:element type="xs:string" name="MajorReqATCE_TransferCourse"/>
+                          <xs:element type="xs:string" name="MajorReqATCE_SubstitueCourse"/>
+                          <xs:element type="xs:string" name="MajorReqATCE_SatisfyReq"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  
+                    <xs:element name="MajorReqTDA" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="MajorReqTDA_CSUF"/>
+                          <xs:element type="xs:string" name="MajorReqTDA_CSUFCourse"/>
+                          <xs:element type="xs:string" name="MajorReqTDA_SubstitueCourse"/>
+                          <xs:element type="xs:string" name="MajorReqTDA_SatisfyReq"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  
+                    <xs:element name="OtherATCE" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="OtherATCE_Transfer"/>
+                          <xs:element type="xs:string" name="OtherATCE_InstitutionName"/>
+                          <xs:element type="xs:string" name="OtherATCE_TransferCourse"/>
+                          <xs:element type="xs:string" name="OtherATCE_Request"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  
+                    <xs:element name="OtherTDA" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="OtherTDA_CSUF"/>
+                          <xs:element type="xs:string" name="OtherTDA_CSUFCourse"/>
+                          <xs:element type="xs:string" name="OtherTDA_Request"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                 
+              <xs:element type="xs:string" name="InitiatorDate"/>
+              <xs:element type="xs:string" name="InitiatorDept"/>
+              <xs:element type="xs:string" name="InitiatorSignature"/>
+			  <xs:element type="xs:string" name="InitiatorComments"/>
+			  
+			  <xs:element type="xs:string" name="StudentFirstName"/>
+              <xs:element type="xs:string" name="StudengtLastName"/>
+			  
+			  <xs:element type="xs:string" name="FacultyEmplID"/>
+              <xs:element type="xs:string" name="FacultyUserID"/>
+              <xs:element type="xs:string" name="FacultyEmail"/>
+			  <xs:element type="xs:string" name="FacultyName"/>
+              <xs:element type="xs:string" name="FacultyFirstName"/>
+              <xs:element type="xs:string" name="FacultyLastName"/>
+			  <xs:element type="xs:string" name="FacultyDeptID"/>
+			  <xs:element type="xs:string" name="FacultyDept"/>
+			  
+			  <xs:element type="xs:string" name="EmailSubject"/>
+		      <xs:element type="xs:string" name="StageIndicator"/> 
+              <xs:element type="xs:string" name="aftiaDescCWID"/>
+			  <xs:element type="xs:string" name="StudentEmail"/>
+			  <xs:element type="xs:string" name="InitiatorReturnFlag"/>
+			  
+			  <xs:element type="xs:string" name="DeanName"/>
+              <xs:element type="xs:string" name="DeanEmailID"/>
+	          <xs:element type="xs:string" name="DeanUserID"/>
+			  
+			  <xs:element type="xs:string" name="ATCEDecision"/> 
+		      <xs:element type="xs:string" name="ATCESignature"/>
+              <xs:element type="xs:string" name="ATCESignDate"/>
+	          <xs:element type="xs:string" name="ATCEComment"/>
+			  <xs:element type="xs:string" name="ATCEDecisionFlag"/>
+			  
+			  <xs:element type="xs:string" name="TDADecision"/> 
+		      <xs:element type="xs:string" name="TDASignature"/>
+              <xs:element type="xs:string" name="TDASignDate"/>
+	          <xs:element type="xs:string" name="TDAComment"/>
+			  <xs:element type="xs:string" name="TDADecisionFlag"/>
+			  
+			  <xs:element type="xs:string" name="OfficeGradSignature"/>
+              <xs:element type="xs:string" name="OfficeGradSignDate"/>
+	          <xs:element type="xs:string" name="OfficeGradComment"/>
+			  
+			  <xs:element type="xs:string" name="DeanSignature"/>
+              <xs:element type="xs:string" name="DeanSignDate"/>
+	          <xs:element type="xs:string" name="DeanComment"/>
+			  
+			  <xs:element type="xs:string" name="WorkflowFlag"/>
+            
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

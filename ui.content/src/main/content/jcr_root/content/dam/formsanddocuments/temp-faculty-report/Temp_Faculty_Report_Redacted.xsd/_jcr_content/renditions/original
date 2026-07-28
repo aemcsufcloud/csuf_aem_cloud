@@ -1,0 +1,76 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FacultyPayroll">
+    <xs:complexType>
+      <xs:sequence>        
+              <xs:element type="xs:string" name="Department"/>
+              <xs:element type="xs:string" name="Agency"/>
+              <xs:element type="xs:string" name="ReportingUnit"/>
+              <xs:element type="xs:string" name="JobCode"/>
+              <xs:element type="xs:string" name="RunDateTime"/>            
+            <xs:element name="Row1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="EmpName"/>
+                    <xs:element type="xs:string" name="EmpId"/>
+                    <xs:element type="xs:string" name="Red"/>
+					<xs:element type="xs:string" name="SSN"/>
+                    <xs:element type="xs:string" name="ActionOrReason"/>
+                    <xs:element type="xs:string" name="CMSPosition"/>
+                    <xs:element type="xs:string" name="SCOPosition"/>
+                    <xs:element type="xs:string" name="StartDt"/>
+                    <xs:element type="xs:string" name="EndDt"/>
+                    <xs:element type="xs:string" name="ApptDur"/>
+                    <xs:element type="xs:string" name="Timebase"/>
+                    <xs:element type="xs:string" name="Range"/>
+                    <xs:element type="xs:string" name="Salary"/>
+                    <xs:element type="xs:string" name="DeptCode"/>
+                    <xs:element type="xs:string" name="SchoolCode"/>
+					<xs:element type="xs:string" name="Comments"/>
+                  </xs:sequence>
+                </xs:complexType>
+            </xs:element>    
+			<xs:element type="xs:string" name="DeptCooCB"/>
+            <xs:element type="xs:string" name="DeptCooSignedDate"/> 
+			<xs:element type="xs:string" name="DeptCooSignature"/>
+			<xs:element type="xs:string" name="DeptCooComments"/>
+			<xs:element type="xs:string" name="ChairCB"/>
+            <xs:element type="xs:string" name="ChairSignedDate"/> 
+			<xs:element type="xs:string" name="ChairSignature"/> 
+			<xs:element type="xs:string" name="ChairComments"/> 
+			<xs:element type="xs:string" name="PayrollCB"/>
+            <xs:element type="xs:string" name="PayrollSignedDate"/> 
+			<xs:element type="xs:string" name="PayrollSignature"/> 
+			<xs:element type="xs:string" name="PayrollComments"/> 			
+			<xs:element type="xs:string" name="DeanCB"/>
+            <xs:element type="xs:string" name="DeanSignedDate"/> 
+			<xs:element type="xs:string" name="DeanSignature"/> 
+			<xs:element type="xs:string" name="DeanComments"/> 
+			<xs:element type="xs:string" name="StageIndicator"/> 
+			<xs:element type="xs:string" name="generatePdfStep"/> 
+			<xs:element type="xs:string" name="LogUser"/> 
+			<xs:element type="xs:string" name="FromDate"/> 
+			<xs:element type="xs:string" name="ThroughDate"/> 
+			<xs:element type="xs:string" name="ChairUserId"/> 
+			<xs:element type="xs:string" name="ChairName"/>
+			<xs:element type="xs:string" name="ChairEmail"/>
+			<xs:element type="xs:string" name="DeanUserId"/> 
+			<xs:element type="xs:string" name="DeanName"/>
+			<xs:element type="xs:string" name="DeanEmail"/> 
+            <xs:element type="xs:string" name="OPRName"/> 
+			<xs:element type="xs:string" name="DeptCooEmail"/> 
+			<xs:element type="xs:string" name="DeptCooEmpId"/>
+			<xs:element type="xs:string" name="aftiaDescCWID"/>
+			<xs:element type="xs:string" name="customTitle"/>
+			<xs:element type="xs:string" name="DeptCooUserId"/>
+			<xs:element type="xs:string" name="JobCode_1"/>
+			<xs:element type="xs:string" name="EmailSubject1"/>
+			<xs:element type="xs:string" name="EmailSubject2"/>
+			<xs:element type="xs:string" name="EmailSubject3"/>
+			<xs:element type="xs:string" name="EmailSubject4"/>
+			<xs:element type="xs:string" name="CaseId"/>
+			<xs:element type="xs:string" name="EmployeeId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

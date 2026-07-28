@@ -1,0 +1,68 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="NewAssetAcquisition">
+    <xs:complexType>
+      <xs:sequence>
+	   <xs:element name="EquipmentPanel">
+          <xs:complexType>
+            <xs:sequence>
+        <xs:element type="xs:string" name="PurchaseDate"/>
+        <xs:element type="xs:string" name="PCardInfo"/>
+        <xs:element type="xs:string" name="Account"/>
+        <xs:element type="xs:string" name="SerialNo"/>
+        <xs:element type="xs:string" name="Model"/>
+        <xs:element type="xs:string" name="TagNumber"/>
+        <xs:element type="xs:string" name="AssetIDNo"/>
+        <xs:element type="xs:string" name="Custodian"/>
+        <xs:element type="xs:string" name="Department"/>
+        <xs:element type="xs:string" name="Location"/>
+		<xs:element type="xs:string" name="PcardInfoRB"/>
+				</xs:sequence>
+              </xs:complexType>
+            </xs:element>
+	
+					
+        <xs:element type="xs:string" name="YesNoCB"/>
+		<xs:element type="xs:string" name="NoCB"/>
+        <xs:element type="xs:string" name="NOTF"/>
+		<xs:element type="xs:string" name="DeptID"/>
+		<xs:element type="xs:string" name="DepartmentName"/>
+		<xs:element type="xs:string" name="Division"/>
+        <xs:element type="xs:string" name="SchoolDivision"/>
+
+		
+		<xs:element type="xs:string" name="InitiatorComments"/>
+        <xs:element type="xs:string" name="InitiatorName"/>
+        <xs:element type="xs:string" name="InitiatorSign"/>
+        <xs:element type="xs:string" name="InitiatorDate"/>
+		<xs:element type="xs:string" name="InitiatorUserID"/>
+		<xs:element type="xs:string" name="InitiatorEmail"/>
+		<xs:element type="xs:string" name="InitiatorFlag"/>
+		
+        <xs:element type="xs:string" name="Comments"/>
+        <xs:element type="xs:string" name="AssetStaffName"/>
+        <xs:element type="xs:string" name="AssetManagementSign"/>
+        <xs:element type="xs:string" name="AssetDate"/>
+		<xs:element type="xs:string" name="AssetDecision"/>
+		<xs:element type="xs:string" name="AssetDetailsJSON"/>
+		
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="LastName"/>
+		<xs:element type="xs:string" name="Date_1"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+        <xs:element type="xs:string" name="EmailSubject"/>
+        <xs:element type="xs:string" name="StageIndicator"/> 
+		<xs:element type="xs:string" name="cwid_initiator"/>
+		
+		<xs:element type="xs:string" name="RequestorSignature"/>
+        <xs:element type="xs:string" name="RequestorSignDate"/>
+		<xs:element type="xs:string" name="RequestorComments"/>
+		<xs:element type="xs:string" name="RequestorUserID"/>
+        <xs:element type="xs:string" name="RequestorEmail"/>
+		<xs:element type="xs:string" name="RequestorName"/>
+		
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

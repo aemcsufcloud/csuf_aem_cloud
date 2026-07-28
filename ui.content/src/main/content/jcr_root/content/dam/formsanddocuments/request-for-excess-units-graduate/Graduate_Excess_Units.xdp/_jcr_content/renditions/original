@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-11-07T09:25:38Z" uuid="68434c32-3fae-40d3-be47-082e54e13c01">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="GradRequestExcess" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="203.318mm" layout="lr-tb">
+         <border>
+            <edge presence="hidden"/>
+            <corner thickness="0.175mm" presence="hidden"/>
+         </border>
+         <draw name="Image1" w="120.65mm" h="22.225mm">
+            <value>
+               <image href=".\Excess_Units_Logo.png" contentType="image/png" aspect="none"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+            <margin rightInset="0mm" leftInset="2.54mm" topInset="2.54mm"/>
+         </draw>
+         <draw name="Text1" w="12.7mm" h="22.225mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 60166 0 0 1417 1417 0 0?></draw>
+         <subform x="133.35mm" w="57.15mm" layout="lr-tb">
+            <draw name="GradWinterSessionText" w="57.15mm" h="22.225mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:left;font-size:14pt;letter-spacing:0in"><br/><span style="font-family:Calibri;font-size:16pt;font-weight:normal">Winter Session 2026</span><span style="font-family:Calibri;font-size:10pt;font-weight:normal"><br/></span><span style="font-family:Calibri;font-size:12pt;font-weight:normal">CSUF Students</span></p></body>
+                  </exData>
+               </value>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(requestTypeFlag.rawValue == "Winter"){
+	this.presence = "visible";	
+}
+else{
+	this.presence = "hidden"
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text1" w="203.2mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?></draw>
+         <subform y="28.575mm" w="203.2mm" minH="27.552mm" layout="lr-tb" name="GraduateWinterPanel">
+            <draw name="Text1" w="203.2mm" h="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Times New Roman" size="18pt" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="1.5162mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <value>
+                  <text>REQUEST FOR EXCESS UNITS</text>
+               </value>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 21285 0 0 1417 4298 0 0?>
+               <?renderCache.textRun 24 REQUEST FOR EXCESS UNITS 0 156713 18413 255 255 255 "Times New Roman" 1 0 18000 ISO-8859-1?></draw>
+            <draw name="Line5" w="203.2mm" h="=0mm">
+               <value>
+                  <line/>
+               </value>
+            </draw>
+            <draw name="Text1" w="203.2mm" h="4.528mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 573166 10001 0 0 1417 1417 0 0?></draw>
+            <subform y="12.7mm" w="203.2mm" minH="18.368mm" layout="lr-tb" name="StudentInformationPanel">
+               <field name="grad_name" w="101.6mm" h="9.184mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.3923mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Name</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_CWID" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="13.7656mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> CWID</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_phone" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.3923mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Phone</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_classLevel" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="24.409mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Class Level</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_email" w="92.075mm" h="9.184mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.3923mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Email</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <draw name="Text1" w="203.2mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?></draw>
+               <?templateDesigner expand 0?></subform>
+            <draw name="GradWinterSessionPolicyText" w="8in" h="53.829mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="3.0402mm" bottomInset="0.5mm" leftInset="3.0402mm" rightInset="3.0402mm"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Policy</p><p style="text-decoration:none;letter-spacing:0in"><br/>A student whose academic record justifies a study list in excess of 4 units may request to enroll for up to 3 additional units. In general, only students with superior academic records are allowed to enroll for more than the maximum. In addition, the need to enroll for the extra study must be established. Factors such as time spent in employment or commuting, the nature of the academic program, extracurricular activities and the student’s health should be considered in planning a study program.</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">A student’s request to enroll for more than 4 units must be approved by the<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">student’s major advisor<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:bold;text-decoration:underline">or</span><span style="font-weight:bold"> the department chair of the major</span>.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p></body>
+                  </exData>
+               </value>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <subform w="203.2mm" minH="14.233mm" layout="lr-tb" name="InformationPanel">
+               <draw name="Text2" w="44.45mm" h="7.83mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>I wish to register for a total of</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <margin topInset="3.8022mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 123166 10000 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 33 I wish to register for a total of 0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <field name="grad_units" h="9mm" minW="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0.01in">
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <draw w="130.175mm" h="7.83mm">
+                  <value>
+                     <text>units in the Winter Session 2026 term.</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="3.8022mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 366166 10000 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 38 units in the Winter Session 2026 term. 0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <draw name="Text1" w="203.2mm" h="3.7mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 573166 7654 0 0 1417 1417 0 0?></draw>
+               <draw w="25.4mm" h="7.916mm">
+                  <value>
+                     <text>Cumulative GPA</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="3.8022mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 69166 10244 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 14 Cumulative GPA 0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <field name="grad_cumulativeGPA" h="9mm" minW="51.271mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0.01in">
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <draw w="123.825mm" h="7.916mm">
+                  <value>
+                     <text>(Refer to your TITAN Online account for GPA)</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="3.8022mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 348166 10244 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 44 (Refer to your TITAN Online account for GPA) 0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <field name="grad_winter_reason" w="203.2mm" minH="22.75mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="4.6949mm" placement="top">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Reason for request:</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <subform w="203.2mm" minH="39.882mm" layout="lr-tb" name="StudentSignaturePanel">
+               <field name="grad_studentSignature" w="146.05mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="30.3457mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Student Signature</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_studentDate" w="53.975mm" h="9mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <caption reserve="10.9509mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Date</text>
+                     </value>
+                  </caption>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <draw name="Text1" w="203.2mm" h="4.528mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 573166 10001 0 0 1417 1417 0 0?></draw>
+               <draw name="Line5" w="203.2mm" h="=0mm">
+                  <value>
+                     <line>
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw w="203.2mm" h="5.522mm">
+                  <value>
+                     <text>Approval signature(s) are required and boxes must be checked for approval or denial.</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" posture="italic" baselineShift="0pt"/>
+                  <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 573166 12819 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 84 Approval signature(s) are required and boxes must be checked for approval or denial. 0 115114 9259 0 0 0 "Times New Roman" 0 1 10000 ISO-8859-1?></draw>
+               <field name="grad_student_comments" w="203.2mm" minH="20.832mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="4.6949mm" placement="top">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Comments:</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <subform y="191.328mm" w="203.422mm" name="SignaturePanel" h="41.275mm">
+               <subform name="Subform2" w="101.712mm" h="41.275mm">
+                  <draw y="9.525mm" x="1.016mm">
+                     <font typeface="Myriad Pro"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:'Myriad Pro';letter-spacing:0in">Print Advisor Name</p></body>
+                        </exData>
+                     </value>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  </draw>
+                  <exclGroup name="grad_advis" y="31.75mm">
+                     <?templateDesigner itemValuesSpecified 1?>
+                     <field w="29.751mm" h="6mm" name="approved">
+                        <ui>
+                           <checkButton mark="square">
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption placement="right" reserve="23.751mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text> Approved</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <text>1</text>
+                        </items>
+                     </field>
+                     <field w="38.1mm" h="6mm" name="denied" x="34.925mm">
+                        <ui>
+                           <checkButton mark="square">
+                              <border>
+                                 <edge/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption placement="right" reserve="32.1mm">
+                           <para vAlign="middle"/>
+                           <value>
+                              <text> Denied</text>
+                           </value>
+                        </caption>
+                        <items>
+                           <text>0</text>
+                        </items>
+                     </field>
+                     <?templateDesigner expand 0?></exclGroup>
+                  <draw y="25.4mm" x="1.016mm">
+                     <font typeface="Myriad Pro"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:'Myriad Pro';letter-spacing:0in">Signature of Advisor</p></body>
+                        </exData>
+                     </value>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  </draw>
+                  <draw x="64.516mm" y="25.4mm">
+                     <font typeface="Myriad Pro"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:'Myriad Pro';letter-spacing:0in">Date</p></body>
+                        </exData>
+                     </value>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  </draw>
+                  <field name="grad_advisorSignature" w="63.5mm" h="9.184mm" y="15.875mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge presence="hidden"/>
+                              <edge presence="hidden"/>
+                              <edge/>
+                              <edge presence="hidden"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Times New Roman"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="0.01in">
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                     </caption>
+                  </field>
+                  <field name="hidden_advisor_name" w="101.6mm" h="9.184mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge presence="hidden"/>
+                              <edge presence="hidden"/>
+                              <edge/>
+                              <edge presence="hidden"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Times New Roman"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="0.01in">
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                     </caption>
+                  </field>
+                  <field name="grad_advisorDate" y="15.875mm" x="63.5mm" w="38.1mm" h="9.184mm">
+                     <ui>
+                        <dateTimeEdit>
+                           <border>
+                              <edge presence="hidden"/>
+                              <edge presence="hidden"/>
+                              <edge/>
+                              <edge presence="hidden"/>
+                           </border>
+                           <margin/>
+                        </dateTimeEdit>
+                     </ui>
+                     <font typeface="Times New Roman"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <date/>
+                     </value>
+                     <caption reserve="0.01in">
+                        <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </caption>
+                     <format>
+                        <picture>date{MM/DD/YYYY}</picture>
+                     </format>
+                  </field>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if(grad_advisorSignature.rawValue == null){
+this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+
+</script>
+                  </event>
+                  <?templateDesigner expand 0?></subform>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(grad_advisorSignature.rawValue == null){
+this.presence = "hidden";
+}
+else
+{
+this.presence = "visible";
+}
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <subform w="203.2mm" minH="27.552mm" layout="lr-tb" name="GraduateNonWinterPanel">
+            <draw name="Text1" w="203.2mm" h="9.875mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 573166 25158 0 0 1417 1417 0 0?></draw>
+            <draw w="203.2mm" h="6.644mm">
+               <value>
+                  <text>REQUEST FOR EXCESS UNITS – GRADUATE STUDENT</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" size="14pt" weight="bold" baselineShift="0pt"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 15999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 45 REQUEST FOR EXCESS UNITS – GRADUATE STUDENT 0 104014 12396 0 0 0 "Times New Roman" 1 0 14000 ISO-8859-1?></draw>
+            <draw name="Text1" w="203.2mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?></draw>
+            <subform y="12.7mm" w="203.2mm" minH="18.368mm" layout="lr-tb" name="StudentInformationPanel">
+               <field name="Grad_name" w="101.6mm" h="9.184mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.3923mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Name</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="Grad_CWID" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="28.4772mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Student ID No.</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_address" w="101.6mm" minH="9mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="19.3948mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Address</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="Grad_phone" w="101.6mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="28.1579mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Phone No.</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="grad_degreeProgram" h="9.184mm" minW="203.2mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="30.9725mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Degree Program</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <draw name="Text2" w="31.75mm" h="7.83mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>I wish to register for </text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <margin topInset="3.8022mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 87166 10000 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 23 I wish to register for  0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <field name="grad_studentUnits" h="9mm" minW="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0.01in">
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <draw w="19.05mm" h="7.83mm">
+                  <value>
+                     <text>  units for: </text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="3.8022mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 51166 10000 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 13   units for:  0 1417 18620 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+               <field name="spring_semester" w="31.75mm" h="7.93mm">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm" topInset="2.54mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="24.75mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Fall Semester 20</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="semesterYear" h="9mm" minW="28.575mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="0.01in">
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="fall_semester" w="50.8mm" h="7.93mm">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="43.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>  Fall Semester 20</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.presence = "hidden";
+</script>
+                  </event>
+               </field>
+               <draw name="Text4" w="88.9mm" h="5.2331mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 249166 12000 0 0 1417 1417 0 0?></draw>
+               <field name="summer_semester" w="50.8mm" h="7.93mm">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="43.8mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>  Summer Semester 20</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+this.presence = "hidden";
+</script>
+                  </event>
+               </field>
+               <draw name="Text1" w="203.2mm" h="4.613mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 573166 10242 0 0 1417 1417 0 0?></draw>
+               <field name="grad_reason" w="203.2mm" minH="21.141mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="4.6949mm" placement="top">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>Reason for request:</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="studentSignature" w="146.05mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="30.3457mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Student Signature</text>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="studentDate" w="53.975mm" h="9mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <caption reserve="10.9509mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Date</text>
+                     </value>
+                  </caption>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <?templateDesigner expand 0?>
+               <draw name="Text1" w="203.2mm" h="4.528mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 573166 10001 0 0 1417 1417 0 0?></draw>
+            </subform>
+            <draw name="GradWinterSessionPolicyText" w="8in" h="60.197mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="10.6602mm" bottomInset="1.2622mm" leftInset="10.6602mm" rightInset="10.6602mm"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span style="xfa-tab-count:4">                                    </span>Policy/ Procedures Statement</p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">The maximum study load for a student working toward a master’s degree is 12 units per semester. In exceptional<br/>cases, however, a student may take more units with the approval of the graduate program adviser<span style="font-weight:bold">.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:bold;font-style:italic">Student must<br/><span style="xfa-tab-count:3">                           </span><span style="xfa-spacerun:yes">       </span>provide a typed statement when submitting this form.</span></p><p style="font-weight:bold;font-style:italic;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Factors to consider when planning a study program involving excess units include time spent in employment or</p><p style="letter-spacing:0in">commuting, the nature of the academic program, extracurricular activities, and possible health considerations.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="font-weight:bold">Requests are to be signed by the student’s graduate program adviser and SUBMITTED TO</span></p><p style="font-weight:bold;letter-spacing:0in">REGISTRATION &amp; RECORDS (arsc@fullerton.edu),<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal;font-style:italic">on the first day of the approved semester or term.</span></p></body>
+                  </exData>
+               </value>
+               <border>
+                  <edge thickness="0.6833mm"/>
+                  <corner thickness="0.683mm"/>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <subform w="203.385mm" name="SignaturePanel" layout="lr-tb" hAlign="right">
+               <draw name="Text2" w="203.2mm" h="8.535mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Graduate Program Advisor for area of study:</text>
+                  </value>
+                  <font typeface="Times New Roman" size="12pt" weight="bold" underline="1" baselineShift="0pt"/>
+                  <margin topInset="3.8022mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 573166 11999 0 0 1417 10778 0 0?>
+                  <?renderCache.textRun 43 Graduate Program Advisor for area of study: 0 1417 20188 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?>
+                  <?renderCache.line 1417 21327 235376 21327 0 0 0 414?></draw>
+               <exclGroup name="grad_advisorDecision" minW="183.575mm" layout="lr-tb">
+                  <?templateDesigner itemValuesSpecified 1?>
+                  <field w="41.275mm" h="6.886mm" name="RequestApproved">
+                     <ui>
+                        <checkButton mark="square">
+                           <border>
+                              <edge/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption placement="right" reserve="35.275mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text> Request Approved</text>
+                        </value>
+                        <font typeface="Times New Roman"/>
+                     </caption>
+                     <items>
+                        <text>1</text>
+                     </items>
+                  </field>
+                  <field w="44.45mm" h="6.886mm" name="RequestDeniedReason">
+                     <ui>
+                        <checkButton mark="square">
+                           <border>
+                              <edge/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption placement="right" reserve="38.45mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text> Request Denied/Reason:</text>
+                        </value>
+                        <font typeface="Times New Roman"/>
+                     </caption>
+                     <items>
+                        <text>0</text>
+                     </items>
+                  </field>
+                  <?templateDesigner expand 1?></exclGroup>
+               <draw name="Text1" w="123.825mm" h="4.014mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 348166 8544 0 0 1417 1417 0 0?></draw>
+               <field name="grad_advisor_comment" w="203.2mm" minH="9.502mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <draw name="Text1" w="123.825mm" h="4.014mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 348166 8544 0 0 1417 1417 0 0?></draw>
+               <field name="Grad_advisorSignature" w="142.875mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="14.7116mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text> Signed</text>
+                     </value>
+                     <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  </caption>
+               </field>
+               <field name="Grad_advisorDate" w="53.975mm" h="9mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <caption reserve="10.9509mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Date</text>
+                     </value>
+                  </caption>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <draw name="Text1" w="19.05mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 51166 15166 0 0 1417 1417 0 0?></draw>
+               <draw>
+                  <value>
+                     <text>Graduate Program Advisor for Area of Study</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Times New Roman" posture="italic" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(Grad_advisorSignature.rawValue == null){
+	this.presence = "hidden";
+}
+else
+{
+	this.presence = "visible";
+}
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(requestTypeFlag.rawValue == "Non-Winter"){
+	this.presence = "visible";
+	GraduateWinterPanel.presence = "hidden";
+}else if(requestTypeFlag.rawValue == "Winter"){
+this.presence = "hidden";
+	GraduateWinterPanel.presence = "visible";
+}else{
+this.presence = "visible";
+	GraduateWinterPanel.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text1" w="203.2mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform1" w="203.2mm" layout="lr-tb">
+            <draw name="Text8" w="203.2mm" h="6.644mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>CHAIR SIGNATURE</text>
+               </value>
+               <font size="14pt" typeface="Times New Roman" baselineShift="0pt">
+                  <fill>
+                     <color value="54,95,145"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 15999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 15 CHAIR SIGNATURE 0 1417 12396 54 95 145 "Times New Roman" 0 0 14000 ISO-8859-1?></draw>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text9" w="25.4mm" h="6.828mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Recommend</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="11pt"/>
+               <margin topInset="1.0082mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 69166 15080 0 0 1417 2858 0 0?>
+               <?renderCache.textRun 10  Recommend 0 1417 11484 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <exclGroup name="grad_ChairDecision" layout="lr-tb">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="34.925mm" h="6mm" name="approved">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="28.925mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Approved</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field w="32.325mm" h="6mm" name="denied">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="26.325mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Denied</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>0</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 1?></exclGroup>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="hidden_chair_name" w="85.725mm" h="16.24mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="bottom" reserve="5.314mm">
+                  <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Department Chair Name</text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Line10" w="0in" h="16.241mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_ChairSignature" w="82.55mm" h="16.015mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="5.314mm" placement="bottom">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <value>
+                     <text>Signature of Department Chair</text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Line10" w="0in" h="16.241mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_chairDate" w="34.925mm" h="16.015mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="5.314mm" placement="bottom">
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_chair_comment" w="203.2mm" minH="17.913mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="4.6882mm" placement="top">
+                  <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Comments:</text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+ if(grad_ChairSignature.rawValue == null){
+this.presence = "hidden";
+}else{
+this.presence = "visible";
+}
+</script>
+            </event>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <subform w="203.2mm" layout="lr-tb" name="RecordsSignaturePanel">
+            <draw name="Text1" w="203.2mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?></draw>
+            <draw name="Text8" w="74.937mm" h="6.644mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>ARSC SIGNATURE</text>
+               </value>
+               <font size="14pt" typeface="Times New Roman" baselineShift="0pt">
+                  <fill>
+                     <color value="54,95,145"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 209586 15999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 14 ARSC SIGNATURE 0 1417 12396 54 95 145 "Times New Roman" 0 0 14000 ISO-8859-1?></draw>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw name="Text9" w="28.575mm" h="6.828mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Recommend</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="11pt"/>
+               <margin topInset="1.0082mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 78166 15080 0 0 1417 2858 0 0?>
+               <?renderCache.textRun 10  Recommend 0 1417 11484 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <exclGroup name="grad_arscDecision" layout="lr-tb">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="28.575mm" h="6mm" name="Approval">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="22.575mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Approved</text>
+                     </value>
+                     <font typeface="Times New Roman"/>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field w="24.688mm" h="6mm" name="Denial">
+                  <ui>
+                     <checkButton mark="square">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="18.689mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Denied</text>
+                     </value>
+                     <font typeface="Times New Roman"/>
+                  </caption>
+                  <items>
+                     <text>0</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 1?></exclGroup>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_arscSignature" w="107.95mm" h="13.707mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden">
+                        <?templateDesigner StyleID aped3?></border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="3.6588mm" placement="top">
+                  <font typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Signature: </text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Line10" w="0in" h="15.24mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_arscDate" w="95.25mm" h="13.706mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="3.6588mm" placement="top">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Date:</text>
+                  </value>
+                  <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <field name="grad_arscComment" w="203.2mm" minH="24.047mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Times New Roman"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="5.6579mm" placement="top">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Comments:</text>
+                  </value>
+                  <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <draw name="Line3" w="203.2mm" h="0in">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(grad_arscSignature.rawValue == null){
+	this.presence = "hidden";
+}
+else
+{
+	this.presence = "visible";
+}
+</script>
+            </event>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 1?></subform>
+         <field name="requestTypeFlag" w="107.95mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.4114mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text> requestTypeFlag</text>
+               </value>
+            </caption>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 0040?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 72 18 000300120026005E00680074011A011E015D0176017D018C0190019A01B503EC03EE03F2 CFSUWdeinorstu026?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 104 26 0001002200250027002F00310034003500420045004600470048004A004D004E004F00500051005200530054005500560057005A ADFNPSTadefgilmnopqrstuvy?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 76 19 000100240025002F0031003400420046004700480049004A004E004F00500051005300550056 CDNPSaefghimnoprtu?>
+      <?renderCache.subset "Times New Roman" 0 0 ISO-8859-1 4 244 63 0003000B000C000F001100120013001400150016001700180019001A001D002300240026002700280029002A002B002C002D002F00300031003200330035003600370038003A004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B005C00B6 (),./01234567:@ACDEFGHIJLMNOPRSTUWabcdefghijklmnopqrstuvwxy’?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 212 57 00030009000B000C000F00110012001D0023002400250026002700280029002A002C002F003000310032003300340035003600370038003A003B004400450046004700480049004A004B004C004D004F0050005100520053005400550056005700580059005C00B100B6 &(),./:@ABCDEFGILMNOPQRSTUWXabcdefghijlmnopqrstuvy–’?>
+      <?renderCache.subset "Times New Roman" 0 1 ISO-8859-1 4 124 31 0003000B000C00110024002A00330036004400450046004700480049004A004B004C004E004F0050005100520053005400550056005700580059005B005C ().AGPSabcdefghiklmnopqrstuvxy?>
+      <?renderCache.subset "Times New Roman" 1 1 ISO-8859-1 4 108 27 00030011001D0026002900310036003800440045004700480049004A004B004C005000510052005300550056005700580059005A005C .:CFNSUabdefghimnoprstuvwy?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?layout containedExclGroup 1?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 84?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Adobe Heiti Std R" psName="AdobeHeitiStd-Regular" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri Light" psName="Calibri-Light" weight="normal" posture="normal"/>
+      <font typeface="Cambria" psName="Cambria" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2025-11-07T09:25:38Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:68434c32-3fae-40d3-be47-082e54e13c01</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

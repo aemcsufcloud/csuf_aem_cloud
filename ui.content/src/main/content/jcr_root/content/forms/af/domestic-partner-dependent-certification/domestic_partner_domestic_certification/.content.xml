@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-09-19T09:40:20.509-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-09-19T09:40:22.549-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/print_only_form_template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Domestic Partner Certification (Total Wellness)"
+        jcr:uuid="8d07fb0c-cf20-47e1-9886-da167a1c71cc"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2021-03-23T00:59:52.468-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.domestic_partner_dependent_certification_domestic_partner_domestic_certification"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/domestic-partner-dependent-certification/Domestic_Partner_Dependent_Certification.xdp"
+            dorType="select"
+            enableLayoutLayer="false"
+            enablePortalSubmit="true"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            redirect="/content/formsPortal/domestic-partner-dependent-certification"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="Thank you for submitting the form."
+            thankYouOption="page"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/Domestic_Partner_Dependent_Certification"
+            xsdRef="/content/dam/formsanddocuments/domestic-partner-dependent-certification/Domestic_Partner_Dependent_Certification.xsd"
+            xsdRootElement="DomesticPartner">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:lastModified="{Date}2020-06-23T23:46:26.977-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    columns="4"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                    <guidetextdraw
+                        jcr:created="{Date}2020-06-23T23:46:36.838-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-23T23:47:28.182-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>This form is to be used by a CSU employee to determine his/her imputed tax liability status for domestic partnership (DP) health-related benefits. (Currently only health and dental benefits are subject to DP imputed tax liability.) Please check the appropriate statement and complete the employee portion of the form.&lt;/p>&#xa;"
+                        colspan="4"
+                        guideNodeClass="guideTextDraw"
+                        name="text1"
+                        textIsRich="true"/>
+                    <certifyCB11592981319578
+                        jcr:lastModified="{Date}2020-06-24T04:27:42.462-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Certify CB 1"
+                        sling:resourceType="fd/af/components/guidecheckbox"
+                        alignment="guideFieldHorizontalAlignment"
+                        bindRef="/DomesticPartner/certifyCB1"
+                        dataType="integer"
+                        exclusiveMaximum="{Boolean}false"
+                        exclusiveMinimum="{Boolean}false"
+                        guideNodeClass="guideCheckBox"
+                        hideTitle="true"
+                        maximum="127"
+                        minimum="-128"
+                        name="certifyCB1"
+                        options="[1=]"
+                        textIsRich="[true,true]">
+                        <fd:rules
+                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.certifyCB1&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;certifyCB1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_certifyCB1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_certifyCB1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </certifyCB11592981319578>
+                    <guidetextdraw_322683075
+                        jcr:created="{Date}2020-06-23T23:49:23.679-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-23T23:50:19.075-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>This is to certify, under the penalty of perjury, that effective with tax year&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text2"
+                        textIsRich="true"/>
+                    <tax_year1592981440428
+                        cq:cssClass="guide-1596520891254"
+                        jcr:lastModified="{Date}2020-09-08T02:45:34.053-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tax Year"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/tax_year"
+                        cssStyle=".guide-1596520891254 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596520891254 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        displayIsSameAsValidate="true"
+                        displayPatternType="custom"
+                        displayPictureClause="^[0-9]{4}$"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="tax_year"
+                        textIsRich="[true,true,true]"
+                        validatePictureClauseMessage="Invalid date format">
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </tax_year1592981440428>
+                    <guidetextdraw_1755921861
+                        jcr:created="{Date}2020-06-23T23:50:57.611-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-23T23:51:16.377-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>, I,&amp;nbsp;&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text3"
+                        textIsRich="true"/>
+                    <name_of_employee1592981487709
+                        jcr:lastModified="{Date}2020-08-03T22:19:48.683-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Name Of Employee"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/name_of_employee"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="name_of_employee"
+                        placeholderText="(name of employee)"
+                        textIsRich="[true,true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.name_of_employee&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;name_of_employee&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_name_of_employee_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_name_of_employee_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </name_of_employee1592981487709>
+                    <guidetextdraw_1281101388
+                        jcr:created="{Date}2020-06-23T23:52:17.074-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-23T23:52:29.352-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>am claiming my domestic partner,&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text4"
+                        textIsRich="true"/>
+                    <name_of_domestic_partner1592981563308
+                        jcr:lastModified="{Date}2020-08-03T22:19:53.672-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Name Of Domestic Partner"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/name_of_domestic_partner"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="name_of_domestic_partner"
+                        placeholderText="(name of domestic partner)"
+                        textIsRich="[true,true,true]"/>
+                    <guidetextdraw_1647906731
+                        jcr:created="{Date}2020-06-23T23:52:58.224-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-24T02:34:39.541-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>as my tax dependent for the purpose of my federal income taxes.&amp;nbsp; I understand that should I no longer declare my domestic partner as a dependent for tax purposes, that I will immediately notify my benefits/payroll department.&amp;nbsp; In addition, If I fail to make this notification, I may be held liable for any taxes due based on when the dependency ended.&amp;nbsp; By signing this document, I agree, upon request, to provide the CSU or the State Controller's Office access to my tax records, domestic partner filing documents, and/or any other supporting documentation as needed to verify dependency for federal income tax purposes.&lt;/p>&#xa;"
+                        colspan="4"
+                        guideNodeClass="guideTextDraw"
+                        name="text5"
+                        textIsRich="true"/>
+                    <certifyCB21592991702976
+                        jcr:lastModified="{Date}2020-06-24T04:27:34.607-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Certify CB 2"
+                        sling:resourceType="fd/af/components/guidecheckbox"
+                        alignment="guideFieldHorizontalAlignment"
+                        bindRef="/DomesticPartner/certifyCB2"
+                        dataType="integer"
+                        exclusiveMaximum="{Boolean}false"
+                        exclusiveMinimum="{Boolean}false"
+                        guideNodeClass="guideCheckBox"
+                        hideTitle="true"
+                        maximum="127"
+                        minimum="-128"
+                        name="certifyCB2"
+                        options="[1=]"
+                        textIsRich="[true,true]">
+                        <fd:rules
+                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.certifyCB2&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;certifyCB2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_certifyCB2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_certifyCB2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </certifyCB21592991702976>
+                    <guidetextdraw_676743117
+                        jcr:created="{Date}2020-06-24T02:41:51.623-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-24T02:44:15.904-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>This is to certify, under the penalty of perjury, that effective with tax year&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text7"
+                        textIsRich="true"/>
+                    <tax_year21592991717125
+                        cq:cssClass="guide-1596520872827"
+                        jcr:lastModified="{Date}2020-09-08T03:01:32.108-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tax Year 2"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/tax_year2"
+                        cssStyle=".guide-1596520872827 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596520872827 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        displayIsSameAsValidate="true"
+                        displayPatternType="custom"
+                        displayPictureClause="^[0-9]{4}$"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="tax_year2"
+                        textIsRich="[true,true,true]"
+                        validatePictureClauseMessage="Invalid date format">
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </tax_year21592991717125>
+                    <guidetextdraw_175592
+                        jcr:created="{Date}2020-06-23T23:50:57.611-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-24T02:42:32.627-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>, I,&amp;nbsp;&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text6"
+                        textIsRich="true"/>
+                    <name_of_employee11592991770780
+                        jcr:lastModified="{Date}2020-08-03T22:20:04.078-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Name Of Employee 1"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/name_of_employee1"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="name_of_employee1"
+                        placeholderText="(name of employee)"
+                        textIsRich="[true,true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.name_of_employee1&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;name_of_employee1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_name_of_employee1_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_name_of_employee1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </name_of_employee11592991770780>
+                    <guidetextdraw_1927789463
+                        jcr:created="{Date}2020-06-24T02:43:13.879-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-24T02:44:45.268-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>, am no longer claiming my domestic partner,&lt;/p>&#xa;"
+                        guideNodeClass="guideTextDraw"
+                        name="text8"
+                        textIsRich="true"/>
+                    <name_of_domestic_partner11592991807840
+                        jcr:lastModified="{Date}2020-08-03T22:20:10.503-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Name Of Domestic Partner 1"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/name_of_domestic_partner1"
+                        guideNodeClass="guideTextBox"
+                        hideTitle="true"
+                        name="name_of_domestic_partner1"
+                        placeholderText="(name of domestic partner)"
+                        textIsRich="[true,true,true]"/>
+                    <guidetextdraw_1038347367
+                        jcr:created="{Date}2020-06-24T02:45:05.743-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-08T03:14:30.117-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;p>as my dependent for the purposes of my federal income taxes. I understand that by rescinding this  certification, the domestic partner benefits will be taxed as imputed income for federal income tax purposes.&lt;/p>&#xa;"
+                        colspan="4"
+                        guideNodeClass="guideTextDraw"
+                        name="text8"
+                        textIsRich="true"/>
+                    <guidetextdraw_1456774246
+                        cq:cssClass="guide-1596523891086"
+                        jcr:created="{Date}2020-06-24T04:19:04.362-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-09-08T03:08:05.659-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Check Box"
+                        sling:resourceType="fd/af/components/guidecheckbox"
+                        _value="The text will appear here"
+                        alignment="guideFieldHorizontalAlignment"
+                        colspan="4"
+                        cssStyle=".guide-1596523891086 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideCheckBox"
+                        hideTitle="true"
+                        mandatory="true"
+                        name="EmpCB"
+                        options="[1=Please indicate that you have completed the form]"
+                        textIsRich="[true,true]">
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                        <fd:rules
+                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.EmpCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;EmpCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_EmpCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_EmpCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidetextdraw_1456774246>
+                    <emp_signature1592992929618
+                        cq:cssClass="guide-1596523904630"
+                        jcr:lastModified="{Date}2020-08-03T23:52:02.339-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="* Employee Signature"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/emp_signature"
+                        cssStyle=".guide-1596523904630 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596523904630 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="emp_signature"
+                        textIsRich="[true,true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.emp_signature&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;emp_signature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_emp_signature_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_emp_signature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </emp_signature1592992929618>
+                    <SSN1592992934756
+                        cq:cssClass="guide-1596599574857"
+                        jcr:lastModified="{Date}2020-09-08T03:35:27.046-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="* Employee SSN"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        bindRef="/DomesticPartner/SSN"
+                        cssStyle=".guide-1596599574857 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596599574857 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="SSN">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.SSN&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;SSN&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_SSN_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_SSN_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </SSN1592992934756>
+                    <First_Name1592992939451
+                        cq:cssClass="guide-1596599580513"
+                        jcr:lastModified="{Date}2020-08-03T22:22:47.060-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="* Employee First Name"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        bindRef="/DomesticPartner/First_Name"
+                        cssStyle=".guide-1596599580513 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596599580513 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="First_Name">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.First_Name&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;First_Name&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_First_Name_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_First_Name_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </First_Name1592992939451>
+                    <Last_Name1592992944639
+                        cq:cssClass="guide-1596599581901"
+                        jcr:lastModified="{Date}2020-08-03T22:22:51.227-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="* Employee Last Name"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        bindRef="/DomesticPartner/Last_Name"
+                        cssStyle=".guide-1596599581901 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596599581901 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="Last_Name">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.Last_Name&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Last_Name&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Last_Name_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Last_Name_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </Last_Name1592992944639>
+                    <campus1592992950079
+                        cq:cssClass="guide-1596599583806"
+                        jcr:lastModified="{Date}2020-06-24T03:07:21.704-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Campus"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        _value="CSU-FULLERTON"
+                        autofillFieldKeyword="name"
+                        bindRef="/DomesticPartner/campus"
+                        cssStyle=".guide-1596599583806 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1596599583806 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="campus"
+                        textIsRich="[true,true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.campus&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;campus&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_campus_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_campus_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_textboxwidgetandtext
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[]"/>
+                            <af_fielderrormessage
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[color:#FF4136]"/>
+                        </style>
+                    </campus1592992950079>
+                    <Date_Initiated1592992952936
+                        jcr:lastModified="{Date}2020-09-08T03:36:14.184-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Date Signed"
+                        sling:resourceType="fd/af/components/guidedatepicker"
+                        bindRef="/DomesticPartner/Date_Initiated"
+                        guideNodeClass="guideDatePicker"
+                        name="Date_Initiated"
+                        textIsRich="[true,true]">
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.Date_Initiated&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;Date_Initiated&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Date_Initiated_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Date_Initiated_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </Date_Initiated1592992952936>
+                    <panel_1372197772
+                        jcr:created="{Date}2020-08-04T00:39:04.291-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-08-04T00:39:25.440-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Office Use Only"
+                        sling:resourceType="fd/af/components/panel"
+                        colspan="4"
+                        guideNodeClass="guidePanel"
+                        name="officeUsePanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextdraw
+                                jcr:created="{Date}2020-08-04T00:41:32.616-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-08-04T00:43:16.964-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p style=&quot;text-align: center;&quot;>&lt;b>Office Use Only&lt;/b>&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1596526892715"
+                                textIsRich="true"/>
+                            <guidecheckbox
+                                cq:cssClass="guide-1600675133355"
+                                jcr:created="{Date}2020-09-21T00:46:25.963-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-09-21T00:57:13.127-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Check Box"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                colspan="4"
+                                cssStyle=".guide-1600675133355 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                mandatory="true"
+                                name="officeCB"
+                                options="[1=Please indicate that you have completed the review]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.officeUsePanel.officeCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;officeCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_officeCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_officeCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </guidecheckbox>
+                            <campus_representative1596526774543
+                                cq:cssClass="guide-1600675120195"
+                                jcr:lastModified="{Date}2020-09-21T00:57:47.249-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Campus Representative Signature"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/DomesticPartner/campus_representative"
+                                colspan="1"
+                                cssStyle=".guide-1600675120195 .textField input[type='text']{&#xa;&#xa;}&#xa;.guide-1600675120195 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="campus_representative"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_textboxwidgetandtext
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[]"/>
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </campus_representative1596526774543>
+                            <Telephone_no1596526779483
+                                jcr:lastModified="{Date}2020-08-04T00:40:55.753-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Telephone Number"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                _value="(657) 278-2425"
+                                autofillFieldKeyword="name"
+                                bindRef="/DomesticPartner/Telephone_no"
+                                guideNodeClass="guideTextBox"
+                                name="Telephone_no"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.officeUsePanel.Telephone_no&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Telephone_no&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Telephone_no_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_Telephone_no_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </Telephone_no1596526779483>
+                            <Date_Approved1596526781974
+                                cq:cssClass="guide-1600675545771"
+                                jcr:lastModified="{Date}2020-09-21T00:58:08.771-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="* Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/DomesticPartner/Date_Approved"
+                                cssStyle=".guide-1600675545771 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                mandatory="true"
+                                name="Date_Approved"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Date_Approved1596526781974>
+                            <guidetextdraw_1210838540
+                                jcr:created="{Date}2020-08-04T00:41:57.389-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-08-24T03:11:09.674-07:00"
+                                jcr:lastModifiedBy="kcase"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Mail this form to : State Controller's Office&lt;/p>&#xa;&lt;p>Attention : Mr. Tom Parker&amp;nbsp;&amp;nbsp;&lt;/p>&#xa;&lt;p>PPSD - PMAB - 10th Floor&lt;br>&#xa;&lt;/p>&#xa;&lt;p>300 Capitol Mall - P.O. Box 942850&lt;/p>&#xa;&lt;p>Sacramento, CA 94250-5878&lt;/p>&#xa;"
+                                colspan="2"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_12108385401596526917533"
+                                textIsRich="true"/>
+                            <guidetextdraw_121083
+                                jcr:created="{Date}2020-08-04T00:41:57.389-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-08-24T02:42:43.885-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>CC : Employee&lt;/p>&#xa;&lt;p>Human Resources&lt;/p>&#xa;&lt;p>Payroll Department&lt;/p>&#xa;"
+                                colspan="2"
+                                guideNodeClass="guideTextDraw"
+                                name="text2"
+                                textIsRich="true"/>
+                        </items>
+                    </panel_1372197772>
+                    <guidetextdraw_937084111
+                        jcr:created="{Date}2020-06-24T03:08:24.161-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-04-02T03:03:51.788-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/components/guidetextdraw"
+                        _value="&lt;h2 style=&quot;text-align: center;&quot;>Privacy Statement&lt;/h2>&#xa;&lt;p>The information Practices Act of 1977 (Civil Code Section 1798.17) and the Federal Privacy Act (Public Law 93-579) require that this notice be provided when collecting personal information from individuals.&lt;/p>&#xa;&lt;p>Information requested on this form is used by CSU and the State Controller's Office for the purposes of payroll and deductions and to properly identify you for the purposes of income tax exemption. It is mandatory to furnish all information requested on this form. Failure to provide the mandatory information will result in the form not being processed which may impact your tax withholding.&lt;/p>&#xa;&lt;p>The State Controller's Office requires employee's social security number and name for identification purposes. Legal references authorizing maintenance of this information include Government Code Sections 1151 and 1153, Sections 6011 and 6051 of the Internal Revenue Code, and Regulation 4, Section 404.1256, Code of Federal regulations, under Section 218, Title II of the Social Security Act.&lt;/p>&#xa;&lt;p>Copies of the Domestic Partner Dependent Certification form are maintained in confidential files of the State Controller's Office for five years. Employees have the right to access copies of this form upon request. The official responsible for the maintenance of the form is: Chief of Personnel/Payroll Services Division, State Controller's Office, P.O. Box 942850, Sacramento, Ca 94250-5878&lt;br>&#xa;&lt;/p>&#xa;"
+                        colspan="4"
+                        guideNodeClass="guideTextDraw"
+                        name="text9"
+                        textIsRich="true"/>
+                    <panel
+                        jcr:created="{Date}2020-07-29T03:17:48.812-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-07-29T04:12:34.580-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hidden Fields Section"
+                        sling:resourceType="fd/af/components/panel"
+                        colspan="3"
+                        guideNodeClass="guidePanel"
+                        name="HiddenPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <generatePDFStep1596017892539
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Generate PDF Step"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/generatePDFStep"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="generatePDFStep"/>
+                            <employeeEmail1596017894686
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Employee Email"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/employeeEmail"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="employeeEmail"/>
+                            <empUserId1596017896966
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Emp User Id"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/empUserId"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="empUserId"/>
+                            <aftiaDescCWID1600673987609
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Aftia Desc CWID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/aftiaDescCWID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="aftiaDescCWID"/>
+                            <customTitle1600673990422
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Custom Title"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/customTitle"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="customTitle"/>
+                            <StageIndicator1600673995797
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Stage Indicator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/StageIndicator"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="StageIndicator"/>
+                            <guidetextbox
+                                jcr:created="{Date}2020-09-21T04:20:14.533-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-09-21T04:21:24.135-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Form Saved Status"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideTextBox"
+                                name="formSavedStatus"
+                                textIsRich="[true,true,true]"/>
+                            <guidetextbox_1208906072
+                                jcr:created="{Date}2020-12-30T05:30:19.843-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-12-30T05:30:26.317-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="workflow_initiator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideTextBox"
+                                name="workflow_initiator"
+                                textIsRich="[true,true,true]"/>
+                            <EmailSubject1615449208581
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email Subject"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/DomesticPartner/EmailSubject"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="EmailSubject"/>
+                        </items>
+                        <fd:rules
+                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.HiddenPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;HiddenPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_HiddenPanel_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_HiddenPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </panel>
+                </items>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                signConfigPath="/conf/global/settings/cloudconfigs/echosign/adobe-sign-cloud-config"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toolbar"
+                sling:resourceType="fd/af/components/toolbar"
+                css=""
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                    <guidebutton
+                        jcr:created="{Date}2020-06-24T03:48:07.000-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-06-24T04:35:54.619-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate PDF"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="generatePDF"
+                        textIsRich="[true,true]"
+                        type="Button">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generatePDF&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generatePDF&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_generatePDF_click0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_generatePDF_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton>
+                    <reset
+                        jcr:created="{Date}2020-07-29T03:13:03.218-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-07-29T03:13:03.218-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reset"
+                        sling:resourceType="fd/af/components/actions/reset"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="reset1596017583285"
+                        type="reset">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;RESET_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.reset();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </reset>
+                    <saveguidedraft
+                        jcr:created="{Date}2020-07-29T03:12:58.650-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-07-29T03:12:58.650-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save"
+                        sling:resourceType="fd/fp/components/actions/saveGuideDraft"
+                        buttonType="button-default"
+                        guideNodeClass="guideButton"
+                        name="saveguidedraft1596017578753"
+                        type="save">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.saveguidedraft1596017578753&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;saveguidedraft1596017578753&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_saveguidedraft1596017578753_click0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_saveguidedraft1596017578753_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </saveguidedraft>
+                    <submit
+                        jcr:created="{Date}2020-07-29T03:13:08.568-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-07-29T03:13:08.568-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceType="fd/af/components/actions/submit"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="submit1596017588628"
+                        type="submit">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.submit1596017588628&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1596017588628&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_submit1596017588628_click0&quot;\,&quot;displayName&quot;:&quot;domestic_partner_dependent_certification_domestic_partner_domestic_certification.generated_submit1596017588628_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </submit>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+            </toolbar>
+        </guideContainer>
+        <parsys2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1592999459665"
+                jcr:created="{Date}2020-05-26T00:40:44.351-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:41:27.751-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1592999459665 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;"
+                name="footer1727947762811">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2021-04-07T04:14:37.020-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>© 2021 CSUF | All rights reserved | To report problems, please contact DL-TotalWellness@FULLERTON.EDU&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+        <parsys1
+            jcr:lastModified="{Date}2020-05-26T00:59:33.688-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1592999430756"
+                jcr:created="{Date}2020-05-26T00:40:34.383-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:42:47.208-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1592999430756 .afHeader{&#xa;background:#00274c;&#xa;height: 72px;&#xa;max-height: 75px;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1727947761160">
+                <guideimage
+                    cq:cssClass="guide-1592999510544"
+                    jcr:lastModified="{Date}2020-05-26T00:42:21.922-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1592999510544 .guideImage img{&#xa;margin-top:0 !important;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_headerlogo
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:&#xa;margin-top:0 !important;&#xa;&#xa;&#xa;&#xa;]"/>
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top:0 !important;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2024-09-19T09:33:05.161-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;domesticPartnerHeaderText&quot;>&lt;p class=&quot;headertext1&quot; style=&quot;text-align: center; padding-left: 250px; font-size: 24px;&quot;>&lt;b>Domestic Partner Certification&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select the correct entry&lt;/p>&#xa;&lt;span class=&quot;close&quot;>×&lt;/span>&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;showData&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;text-align: center; display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot; id=&quot;modalHeaderId&quot; style=&quot;padding: 7px !important;&quot;>&lt;p id=&quot;modalText&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot;>Error Body&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 72px;&#xa;max-height: 75px;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+    </jcr:content>
+</jcr:root>

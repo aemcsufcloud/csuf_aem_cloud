@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-05-16T18:07:26Z" uuid="22435338-190b-40eb-92ef-1eea18130bb9">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="DependencyOverrideAppeal" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="8in" h="10.5in"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="lr-tb" w="203.2mm">
+         <field name="logo1" w="57.15mm" h="22.225mm">
+            <ui>
+               <imageEdit/>
+            </ui>
+            <value>
+               <image href=".\CSUF_LOGO..png" contentType="image/png"/>
+            </value>
+         </field>
+         <field name="formType" w="34.925mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text12" w="111.125mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 312166 15166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text12" w="174.625mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 492166 15166 0 0 1417 1417 0 0?></draw>
+         <field name="formCode" w="25.4mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.value == "CDA"){
+if (aidYear.rawValue == "2021"){
+this.rawValue = "F0CDOA";
+}
+else if (aidYear.rawValue == "2022"){
+this.rawValue = "F1CDOA";
+}
+}
+
+if (formType.value == "FAFSA"){
+if (aidYear.rawValue == "2021"){
+this.rawValue = "F0DPOR";
+}
+else if (aidYear.rawValue == "2022"){
+this.rawValue = "F1DPOR";
+}
+}
+</script>
+            </event>
+         </field>
+         <field name="aidYear" w="19.05mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="ready" ref="$layout" name="event__layout_ready">
+               <script contentType="application/x-javascript">this.presence="hidden";
+</script>
+            </event>
+         </field>
+         <subform name="Subform1" w="203.2mm" h="6.35mm">
+            <draw w="203.2mm" h="4.88mm" name="CADreamActTitle1">
+               <value>
+                  <text>CA Dream Act Application</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" size="11pt" weight="bold" baselineShift="0pt"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 10999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 24 CA Dream Act Application 0 223995 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <field name="TitleYear1" w="203.2mm" h="8.126mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="16pt" typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = "DEPENDENCY OVERRIDE APPEAL (" +aidYearVal+"-"+otherAidYearVal+ ")";
+</script>
+            </event>
+         </field>
+         <subform name="Subform2" w="203.2mm" h="22.75mm">
+            <draw w="203.2mm" h="22.225mm" name="PARA1" y="0.525mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Financial aid guidelines state that the student and the parents/stepparents have the primary responsibility for paying educational costs; therefore, we will consider a Dependency Override if you document that you have an “adverse home situation” such as parental abuse, abandonment or irreconcilable estrangement from your parents.<span style="font-style:italic"> If your appeal is based solely on the fact that you do not live with or receive support from your parents, your appeal will be denied.</span> If you believe your circumstances qualify for an appeal, please read the following instructions carefully.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(formType.rawValue == "CDA"){
+this.presence = "visible";
+}else{
+this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform3" w="203.2mm" h="22.225mm">
+            <draw w="203.2mm" h="22.225mm" name="PARA1">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Federal financial aid guidelines state that the student and the parents/stepparents have the primary responsibility for paying educational costs; therefore, we will consider a Dependency Override if you document that you have an “adverse home situation” such as parental abuse, abandonment or irreconcilable estrangement from your parents.<span style="font-style:italic"> If your appeal is based solely on the fact that you do not live with or receive support from your parents, your appeal will be denied.</span> If you believe your circumstances qualify for an appeal, please read the following instructions carefully.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(formType.rawValue == "FAFSA"){
+this.presence = "visible";
+}else{
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform4" w="203.2mm" h="39.499mm">
+            <draw w="203.2mm" h="5.233mm" name="InstructionText">
+               <value>
+                  <text>INSTRUCTIONS</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="11pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 12 INSTRUCTIONS 0 1417 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <field name="Instruction1" y="6.35mm" w="7.407mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text5" y="6.35mm" x="9.525mm" w="193.675mm" h="7.14mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Complete all the pages of this form and gather all required documentation.</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 17405 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 74 Complete all the pages of this form and gather all required documentation. 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Instruction2" y="12.7mm" w="7.407mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text6" y="12.7mm" x="9.525mm" w="193.675mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Attach all documentation to this appeal form.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Incomplete appeals will not be processed.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 46 Attach all documentation to this appeal form.  0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 41 Incomplete appeals will not be processed. 0 185255 9259 0 0 0 "Times New Roman" 0 1 10000 ISO-8859-1?></draw>
+            <field name="Instruction3" y="19.05mm" w="7.407mm" h="6.35mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?>
+            <subform name="Subform13" x="9.522mm" y="20.449mm" w="193.675mm" h="19.045mm">
+               <draw w="7.625in">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times New Roman';text-decoration:none;letter-spacing:0in">Log on to<span style="color:#0000ff;text-decoration:underline"> https://dream.csac.ca.gov/</span> and complete the<span style="xfa-spacerun:yes">  </span>2024-2025 CA Dream Act application by the priority filing deadline of<span style="xfa-spacerun:yes">    </span></p><p style="font-family:'Times New Roman';text-decoration:none;letter-spacing:0in">May 2,2024 . Be sure to answer all questions in the student sections ONLY. Skip Sections D and E, and go to Section F. Once you submit your Dream application without parental data, our office will receive your<span style="xfa-spacerun:yes">  </span>2024-2025 Dream application information from the California Student Aid Commission (CSAC).</p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <subform name="Subform14" x="9.525mm" y="17.274mm" w="193.675mm" h="22.225mm">
+               <draw name="Text7" y="1.776mm" w="7.625in" h="19.05mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Log on to<span style="color:#0000ff;text-decoration:underline"> https://dream.csac.ca.gov/</span> and complete the<span style="xfa-spacerun:yes">                   </span>CA Dream Act application by the priority filing deadline of<span style="xfa-spacerun:yes">    </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                          </span>. Be sure to answer all questions in the student sections ONLY. Skip Sections D and E, and go to Section F. Once you submit your Dream application without parental data, our office will receive your<span style="xfa-spacerun:yes">                      </span>Dream application information from the California Student Aid Commission (CSAC) beginning<span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <field name="Year1" y="0.508mm" x="76.708mm" w="19.05mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+
+</script>
+                  </event>
+               </field>
+               <field name="Year2" y="5.207mm" w="23.622mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "March 2, "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year3" w="19.05mm" h="6.35mm" x="116.967mm" y="9.525mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+
+</script>
+                  </event>
+               </field>
+               <field name="Year4" y="13.589mm" x="79.375mm" w="23.622mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "April "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+         </subform>
+         <subform name="Subform5" w="203.2mm" h="42.948mm">
+            <draw w="203.2mm" h="5.233mm" name="InstructionText" y="0mm">
+               <value>
+                  <text>INSTRUCTIONS</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="11pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 12 INSTRUCTIONS 0 1417 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <field name="FAFSAInstruction1" y="6.35mm" w="7.407mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text5" y="6.35mm" x="9.525mm" w="193.675mm" h="7.14mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Complete all the pages of this form and gather all required documentation.</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 17405 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 74 Complete all the pages of this form and gather all required documentation. 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+            <field name="FAFSAInstruction2" y="12.7mm" w="7.407mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text6" y="12.7mm" x="9.525mm" w="193.675mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Attach all documentation to this appeal form.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Incomplete appeals will not be processed.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 46 Attach all documentation to this appeal form.  0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 41 Incomplete appeals will not be processed. 0 185255 9259 0 0 0 "Times New Roman" 0 1 10000 ISO-8859-1?></draw>
+            <field name="FAFSAInstruction3" y="19.05mm" w="7.407mm" h="6.35mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "hidden"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "visible";
+}
+
+</script>
+            </event>
+            <subform name="Subform9" x="9.525mm" y="20.445mm" w="193.675mm" h="22.503mm">
+               <?templateDesigner expand 0?>
+               <draw name="Text7" y="0mm" w="7.625in" h="18.996mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Log on to<span style="color:#0000ff;text-decoration:underline"><span style="xfa-spacerun:yes"> </span></span><a href="http://www.studentaid.gov">www.studentaid.gov</a> and complete the 2024 - 2025 FAFSA application by the priority filing deadline of<span style="xfa-spacerun:yes">    </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>May 2, 2024.Be sure to answer all questions in the student sections ONLY and select the option,<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">“I have a special circumstance and I am unable to provide parental information.”<span style="xfa-spacerun:yes"> </span></span>If appeal was approved at another school in year prior, you can attach the same documentation reviewed at that prior school.</p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+            </subform>
+            <subform name="Subform10" x="9.522mm" y="15.159mm" w="193.675mm" h="27.512mm">
+               <draw name="Text7" y="3.877mm" w="7.625in" h="18.996mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Log on to<span style="color:#0000ff;text-decoration:underline"><span style="xfa-spacerun:yes"> </span></span><a href="http://www.fafsa.ed.gov/">www.fafsa.ed.gov</a> and complete the<span style="xfa-spacerun:yes">                      </span>FAFSA application by the priority filing deadline of<span style="xfa-spacerun:yes">    </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                          </span>.Be sure to answer all questions in the student sections ONLY and select the option,<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">“I have a special circumstance and I am unable to provide parental information.”<span style="xfa-spacerun:yes"> </span></span>Our office will receive your<span style="xfa-spacerun:yes">                        </span>FAFSA information from the Central Processing System (CPS) beginning<span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <field name="Year1" w="19.05mm" h="6.35mm" y="2.859mm" x="66.675mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year2" y="7.18mm" w="23.622mm" h="6.35mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "March 2, "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year5" w="19.05mm" h="6.35mm" y="11.851mm" x="107.95mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year6" w="23.622mm" h="6.35mm" y="15.559mm" x="53.213mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "April "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform6" w="203.2mm" h="120.65mm">
+            <draw w="203.2mm" h="35.36mm" name="PARA2">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;letter-spacing:0in">APPEAL PROCESSING<span style="font-size:10pt;font-weight:normal"><br/>The Office of Financial Aid Appeals Committee will review your appeal and documentation. We will notify you of our decision within 4 to 6 weeks of the date you submit your appeal. All decisions on dependency overrides are made based on professional judgment by the Office of Financial Aid at CSU Fullerton.<br/><br/><br/></span><br/></p><p style="font-size:11pt;font-weight:bold;letter-spacing:0in"><br/></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text1" w="8in" h="22.225mm" y="25.4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li style="font-size:12pt;font-weight:bold;font-style:italic">If your appeal is approved:<span style="font-size:10pt;font-weight:normal;font-style:normal"> We will notify the California Student Aid Commission (CSAC) that your Dream application should be processed as an independent student.</span></li><li style="font-size:12pt;font-weight:bold;font-style:italic">If your appeal is denied:<span style="font-size:11pt;font-weight:normal;font-style:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:10pt;font-weight:normal;font-style:normal">We will provide you written instructions on how to proceed with your CA Dream Act application as a dependent student.</span></li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text2" w="8in" h="28.575mm" y="47.625mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Conditions that DO NOT warrant a Dependency Override:</p><ul style="font-weight:normal;font-style:normal;letter-spacing:0in;list-style-type:square"><li style="font-size:10pt">Parents refuse to provide information on the Dream application or for verification</li><li style="font-size:10pt">Parents do not claim student as a dependent for income tax purposes<span style="xfa-spacerun:yes"> </span></li><li style="font-size:10pt">Parents unwilling or unable to contribute to student’s education</li><li style="font-size:10pt">Student reluctant to request the income information from parents</li><li style="font-size:10pt">Student does not wish to communicate with parents</li></ul></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Times New Roman" weight="bold" posture="italic" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <subform name="Subform11" y="19.05mm" w="151.69mm" h="6.35mm">
+               <draw>
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times New Roman';letter-spacing:0in">Decisions made at other institutions are not accepted.</p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <subform name="Subform11" y="73.025mm" w="161.925mm" h="12.7mm">
+               <draw w="152.4mm" h="0.344917in">
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:square"><li>Student is self supporting</li></ul></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <subform name="Subform15" y="79.375mm" w="203.2mm" h="19.05mm">
+               <draw name="Text3" w="203.2mm" h="19.05mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">APPEAL FILING DATES</p><p style="font-size:10pt;font-weight:normal;letter-spacing:0in">You must complete the<span style="xfa-spacerun:yes">                      </span>CA Dream Act application<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">and</span> submit your appeal and all supporting documentation to the Office of Financial Aid by the March 2nd deadline.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">We will accept appeals after<span style="xfa-spacerun:yes">                         </span>; however, we cannot guarantee availability of funds for students with a CA Dream Act application filed after the March 2nd priority deadline.</span></p></body>
+                     </exData>
+                  </value>
+                  <font size="11pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <field name="Year3" w="19.05mm" h="6.35mm" y="3.937mm" x="34.925mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year4" w="23.622mm" h="6.35mm" y="8.001mm" x="100.33mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "March 2, "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+            </subform>
+            <subform name="Subform16" y="79.375mm" w="203.2mm" h="19.05mm">
+               <draw name="Text3" w="203.2mm" h="19.05mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">APPEAL FILING DATES</p><p style="font-size:10pt;font-weight:normal;text-decoration:none;letter-spacing:0in">You must complete the 2024-2025 CADAA and submit your appeal and all supporting documentation to the Office of Financial Aid by the May 2nd deadline. We will accept appeals after May 2, 2024 however, we cannot guarantee availability of funds for students with a CADAA filed after the March 2nd priority deadline.</p></body>
+                     </exData>
+                  </value>
+                  <font size="11pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <?templateDesigner expand 1?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+            </subform>
+         </subform>
+         <subform name="Subform7" w="203.2mm" h="107.95mm">
+            <draw w="8in" h="1.058806in" name="PARA2" y="3.175mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;letter-spacing:0in">APPEAL PROCESSING<span style="font-size:10pt;font-weight:normal"><br/>The Office of Financial Aid Appeals Committee will review your appeal and documentation. We will notify you of our decision within 4 weeks of the date you submit your appeal. All decisions on dependency overrides are made based on professional judgment by the Office of Financial Aid at CSU Fullerton. <br/></span><br/></p><p style="font-size:11pt;font-weight:bold;letter-spacing:0in"><br/></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text1" w="8in" h="0.93125in" y="25.4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li style="font-size:12pt;font-weight:bold;font-style:italic">If your appeal is approved:<span style="font-size:10pt;font-weight:normal;font-style:normal"> We will notify the Central Processing System (CPS) that your FAFSA should be processed as an independent student.</span></li><li style="font-size:12pt;font-weight:bold;font-style:italic">If your appeal is denied:<span style="font-size:11pt;font-weight:normal;font-style:normal"> We will provide you written instructions on how to proceed with your financial aid as a dependent student.</span></li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Text2" w="8in" h="31.48mm" y="47.625mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Conditions that DO NOT warrant a Dependency Override:</p><ul style="font-size:10pt;font-weight:normal;font-style:normal;letter-spacing:0in;list-style-type:square"><li>Parents refuse to provide information on the FAFSA application or for verification</li><li>Parents do not claim student as a dependent for income tax purposes<span style="xfa-spacerun:yes"> </span></li><li>Parents unwilling or unable to contribute to student’s education</li><li>Student reluctant to request the income information from parents</li><li>Student does not wish to communicate with parents</li></ul></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Times New Roman" weight="bold" posture="italic" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "hidden"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "visible";
+}
+
+</script>
+            </event>
+            <subform name="Subform11" y="19.046mm" w="151.69mm" h="7.703mm">
+               <draw y="1.27mm">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times New Roman';letter-spacing:0in">Decisions made at other institutions are not accepted.</p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Subform11" y="73.021mm" w="161.925mm" h="12.7mm">
+               <draw w="152.4mm" h="0.344917in">
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="text-decoration:none;letter-spacing:0in;list-style-type:square"><li>Student is self supporting</li></ul></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Subform11" y="82.546mm" w="203.2mm" h="25.4mm">
+               <draw w="203.2mm" h="25.4mm">
+                  <font typeface="Times New Roman" baselineShift="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in">APPEAL FILING DATES</p><p style="text-decoration:none;letter-spacing:0in">You must complete the 2024-2025<span style="xfa-spacerun:yes">  </span>FAFSA<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">and</span> submit your appeal and all supporting documentation to the Office of Financial Aid by the May 2nd deadline.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">We will accept appeals after<span style="xfa-spacerun:yes">  </span>May 2,2024; however, we cannot guarantee availability of funds for students with a FAFSA filed after the March 2nd priority deadline.</span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Subform12" y="82.546mm" w="203.2mm" h="20.021mm">
+               <draw name="Text3" w="203.2mm" h="19.05mm" y="0mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">APPEAL FILING DATES</p><p style="font-size:10pt;font-weight:normal;letter-spacing:0in">You must complete the<span style="xfa-spacerun:yes">                        </span>FAFSA<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">and</span> submit your appeal and all supporting documentation to the Office of Financial Aid by the March 2nd deadline.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">We will accept appeals after<span style="xfa-spacerun:yes">                           </span>; however, we cannot guarantee availability of funds for students with a FAFSA filed after the March 2nd priority deadline.</span></p></body>
+                     </exData>
+                  </value>
+                  <font size="11pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <field name="Year5" w="19.05mm" h="6.35mm" y="3.81mm" x="34.925mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+                  </event>
+               </field>
+               <field name="Year6" w="23.622mm" h="6.35mm" y="8.382mm" x="70.104mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Times New Roman" posture="italic"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+this.rawValue = "March 2, "+aidYearVal;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+
+</script>
+               </event>
+            </subform>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="8in" h="10.5in">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <subform name="Subform8" w="203.2mm" h="9.604mm" y="22.225mm">
+            <draw y="3.175mm" w="203.2mm" h="4.88mm" name="CADreamActTitle2">
+               <value>
+                  <text>CA Dream Act Application</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Times New Roman" size="11pt" weight="bold" baselineShift="0pt"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 10999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 24 CA Dream Act Application 0 223995 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <field name="Step1CB3" w="8.199mm" h="5.999mm" y="92.075mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Step1CB4" w="8.2mm" h="5.999mm" y="104.775mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="logo2" w="57.15mm" h="22.225mm">
+            <ui>
+               <imageEdit/>
+            </ui>
+            <value>
+               <image href=".\CSUF_LOGO..png" contentType="image/png"/>
+            </value>
+         </field>
+         <field name="cwid" w="63.5mm" h="12.7mm" y="9.525mm" x="114.3mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="26.7195mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Enter Student's            CWID Here :</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw w="203.2mm" h="15.875mm" name="Instruction" y="44.45mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;letter-spacing:0in">INSTRUCTIONS:<span style="font-size:10pt;font-weight:normal"> Attach the following documentation to this appeal in order to have your independent status considered. Use the checklist below to ensure that you include all appropriate information. Be sure to review page one thoroughly before proceeding.</span><span style="font-size:10pt;font-weight:normal;font-style:italic"> Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</span><span style="font-size:10pt;font-weight:normal"><br/></span><br/></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw w="8in" h="6.35mm" y="63.5mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Step 1<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Provide a detailed personal statement (on pages 3 &amp; 4 of this appeal form), which must include the following:</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="11pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="Step1CB1" w="8.2mm" h="6mm" y="73.025mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Step1CB2" w="7.94mm" h="6mm" y="82.55mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw w="203.2mm" h="4.88mm" y="117.475mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-style:normal;text-decoration:none;letter-spacing:0in">Step 2<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Provide the following supporting documentation:</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" weight="bold" posture="italic" baselineShift="0pt" size="11pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="Step2CB1" w="8.199mm" h="6mm" y="123.825mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw w="193.675mm" h="4.528mm" y="123.825mm" x="9.525mm">
+            <value>
+               <text>Copies of official documents (e.g. court documents, medical records, police reports.) </text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 10001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 86 Copies of official documents (e.g. court documents, medical records, police reports.)  0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw w="193.675mm" h="34.225mm" y="139.7mm" x="9.525mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><br/></p><ul style="letter-spacing:0in;list-style-type:disc"><li>At least one letter from a professional (on letterhead) familiar with your situation (e.g., a counselor, school official, attorney, clergyman, physician, social worker).<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">Character references and letters of recommendation that do not specifically document direct knowledge of your adverse home situation or estrangement are not acceptable.</span><br/><span style="xfa-spacerun:yes"> </span></li><li>The other letter may be from a friend or family member and must address circumstances and/or length of the estrangement and/or adverse home conditions.</li></ul></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="Step2CB2" w="8.199mm" h="6mm" y="133.35mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Step2CB3" w="8.199mm" h="6mm" y="174.625mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw w="193.675mm" h="12.994mm" y="171.45mm" x="9.525mm">
+            <value>
+               <text>
+A copy of your current lease or rental agreement. If you do not have either, provide a signed statement from your current landlord verifying your tenancy.</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 33999 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 131 A copy of your current lease or rental agreement. If you do not have either, provide a signed statement from your current landlord  0 1417 21259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 23 verifying your tenancy. 0 1417 33259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw w="203.2mm" h="8.761mm" y="190.5mm">
+            <value>
+               <text>If you are unable to provide any part of the documentation described above, you must see a financial aid counselor to determine other documentation options.</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" posture="italic" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 22000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 134 If you are unable to provide any part of the documentation described above, you must see a financial aid counselor to determine other  0 1417 9259 0 0 0 "Times New Roman" 0 1 10000 ISO-8859-1?>
+            <?renderCache.textRun 22 documentation options. 0 1417 21259 0 0 0 "Times New Roman" 0 1 10000 ISO-8859-1?></draw>
+         <draw w="203.2mm" h="26.118mm" name="Certification" y="200.025mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/><span style="xfa-spacerun:yes">  </span><span style="font-size:11pt;font-weight:bold">CERTIFICATION:</span><br/><span style="xfa-spacerun:yes">  </span>By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I<span style="xfa-spacerun:yes">    </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span>agree to provide proof of the information I have reported, if requested to do so. I also certify that I have read the terms and conditions section<span style="xfa-spacerun:yes">   </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span>of the CSU Fullerton, Financial Aid website (<a href="http://www.fullerton.edu/financialaid/info/Terms.php" style="margin-top:0pt;margin-bottom:0pt;font-family:'Times New Roman'">http://www.fullerton.edu/financialaid/info/Terms.php</a>) *</p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="studentScribleSignature" w="101.6mm" h="9.525mm" y="228.6mm" x="3.175mm">
+            <ui>
+               <imageEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </imageEdit>
+            </ui>
+            <caption reserve="33.34mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Student E-signature:</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="ipAddress" w="88.9mm" h="9mm" y="228.6mm" x="111.125mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="19.84mm">
+               <font typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>IP Address : </text>
+               </value>
+            </caption>
+         </field>
+         <field name="DATE" w="47.625mm" h="9.525mm" y="238.125mm" x="104.775mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="9.79mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="StudentCWID" w="47.625mm" h="9.525mm" y="238.125mm" x="152.4mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.96mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CWID:</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="PrintStudentsName" w="101.6mm" h="9.525mm" y="238.125mm" x="3.175mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="35.72mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Print Student's Name:</text>
+               </value>
+               <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw w="203.2mm" h="8.761mm" name="warningText" y="250.825mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">*Warning:<span style="font-weight:normal"> If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" posture="italic" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw w="203.2mm" h="9.525mm" name="FormTitle2" y="31.75mm">
+            <value>
+               <text>DEPENDENCY OVERRIDE APPEAL (                  )</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" size="16pt" weight="bold" baselineShift="0pt"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 47 DEPENDENCY OVERRIDE APPEAL (                  ) 0 109996 13964 0 0 0 "Times New Roman" 1 0 16000 ISO-8859-1?></draw>
+         <draw name="Text4" w="193.675mm" h="6.35mm" y="133.35mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Two letters from third parties familiar with your circumstances:</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 64 Two letters from third parties familiar with your circumstances: 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text8" w="193.675mm" h="6.35mm" y="73.025mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Outline the extenuating circumstances that you believe qualify you for an exception to the federal definition of independence.</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 126 Outline the extenuating circumstances that you believe qualify you for an exception to the federal definition of independence. 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text9" w="193.675mm" h="6.35mm" y="82.55mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Explain how you have supported yourself from the time your parent(s) ceased supporting you until now</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 100 Explain how you have supported yourself from the time your parent(s) ceased supporting you until now 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text10" w="7.625in" h="9.525mm" y="92.075mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Chronological history of your status from the date of estrangement and/or adverse home situation to the present (i.e., living arrangements, employment, financial support). List the address of where you are currently living.</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 126 Chronological history of your status from the date of estrangement and/or adverse home situation to the present (i.e., living  0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 97 arrangements, employment, financial support). List the address of where you are currently living. 0 1417 21259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text11" w="193.675mm" h="6.35mm" y="104.775mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Statement indicating the date and circumstances of your last contact with your parents.</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 87 Statement indicating the date and circumstances of your last contact with your parents. 0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <field name="TitleYear" w="27.432mm" h="9.525mm" y="30.48mm" x="136.525mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="16pt" typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue;
+var otherAidYearVal = parseInt(aidYearVal)+1;
+this.rawValue = aidYearVal+"-"+otherAidYearVal;
+</script>
+            </event>
+         </field>
+         <draw name="Rectangle1" w="203.2mm" h="66.675mm" y="200.025mm">
+            <value>
+               <rectangle>
+                  <edge/>
+                  <corner radius="5.08mm"/>
+               </rectangle>
+            </value>
+         </draw>
+         <?templateDesigner expand 1?></subform>
+      <subform w="8in" layout="lr-tb">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <draw name="PrintStudentName" w="33.02mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> Print Student’s Name:</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 90766 42166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 23 Print Student’s Name: 0 1417 21259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <field name="lastName" w="56.718mm" h="15.647mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="5.29mm" placement="bottom">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               <value>
+                  <text>Last Name</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="firstName" w="56.718mm" h="15.647mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="5.56mm" placement="bottom">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>First Name</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="PrintStudentCWID" w="56.744mm" h="9.525mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.9448mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>CWID :</text>
+               </value>
+            </caption>
+         </field>
+         <draw w="203.2mm" h="18.78mm" name="Title3">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-family:'Times New Roman';font-size:12pt;text-decoration:none;letter-spacing:0in">PERSONAL STATEMENT</p><p style="font-weight:normal;text-decoration:none;letter-spacing:0in"><br/><span style="font-family:'Times New Roman';font-size:12pt">DEPENDENCY OVERRIDE APPEAL</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw w="203.2mm" h="15.875mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/><span style="font-size:11pt">A.DESCRIBE YOUR EXTENUATING CIRCUMSTANCES:</span><span style="font-weight:normal"><br/></span><span style="font-size:11pt;font-weight:normal">(attach a separate sheet if you need more space)</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="PersonalStatementA" w="203.2mm" minH="22.86mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw w="8in" h="14.194mm">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/>B.FINANCIAL SUPPORT:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">Explain how you have supported yourself from the time your parent(s) ceased supporting you until now.</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt" weight="bold" size="11pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="PersonalStatementB" w="203.2mm" minH="22.86mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw w="203.2mm" h="4.88mm" name="PersonalStatementC">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;letter-spacing:0in">C.DOCUMENTATION OF EVENTS:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">List chronologically events which led to your estrangement from your parent(s).</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="DATE1" w="50.8mm" h="9.771mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.188mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EVENT1" w="152.4mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.7mm">
+               <value>
+                  <text>Event :</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+         </field>
+         <field name="DATE2" w="50.8mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.188mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EVENT2" w="152.4mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.96mm">
+               <value>
+                  <text>Event :</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="DATE3" w="50.8mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.188mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EVENT3" w="152.4mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.96mm">
+               <value>
+                  <text>Event :</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="DATE4" w="50.8mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.188mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EVENT4" w="152.4mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.96mm">
+               <value>
+                  <text>Event :</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="DATE5" w="50.8mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.188mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EVENT5" w="152.4mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.96mm">
+               <value>
+                  <text>Event :</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="PersonalStatementDText" w="60.325mm" h="14.194mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> D.LAST PATERNAL CONTACT: </text>
+            </value>
+            <font size="11pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 168166 37401 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?>
+            <?renderCache.textRun 25 D.LAST PATERNAL CONTACT:  0 1417 23243 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+         <field name="StatementDMonth" w="22.225mm" h="18.262mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="7.14mm">
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Month</text>
+               </value>
+            </caption>
+         </field>
+         <field name="StatementDYear" w="25.4mm" h="19.05mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption reserve="7.94mm" placement="bottom">
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Year</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ParentName" w="203.2mm" h="9.525mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="27.25mm">
+               <value>
+                  <text>Parent Name(s):</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw w="19.05mm" h="15.875mm" name="Address">
+            <value>
+               <text> Address : </text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 51166 42166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 10 Address :  0 1417 21259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <field name="Street" w="42.787mm" h="16.056mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="7.5406mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+               <value>
+                  <text>Street</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="City" w="42.787mm" h="16.056mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="7.0556mm">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>City</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="State" w="42.787mm" h="16.056mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="6.7639mm">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>State</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="ZipCode" w="49.439mm" h="16.056mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <caption placement="bottom" reserve="7.0556mm">
+               <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Zip Code</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="TelephoneNumber" w="85.725mm" h="9.525mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.49mm">
+               <value>
+                  <text>Telephone Number:</text>
+               </value>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw w="203.2mm" h="9.344mm" name="CircumstancesText">
+            <value>
+               <text>
+Circumstances of your last contact with your parent(s).</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 23653 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 9259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 55 Circumstances of your last contact with your parent(s). 0 1417 21259 0 0 0 "Times New Roman" 0 0 10000 ISO-8859-1?></draw>
+         <field name="CircumstanceOfParent" w="203.2mm" minH="23.449mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw w="203.2mm" h="15.875mm" name="ReturnTo">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/><span style="font-size:11pt">RETURN TO:<span style="xfa-tab-count:1">         </span>California State University, Fullerton, Office of Financial Aid<br/>P.O. Box 6804 GH- 146, Fullerton, CA 92834-6804</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <?templateDesigner expand 0?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 4 1 0001 ?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 4 1 0001 ?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?>
+      <?renderCache.subset "Times New Roman" 0 0 ISO-8859-1 4 316 85 000300040005000A000B000C000D000F0010001100120013001400150016001700180019001A001C001D001E001F002000210022002400250026002700280029002B002C002F003000310032003300350036003700380039003A003C003D0042004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B005C005D005E006000B300B400B6 !"'()*,-./012345679:;<=>?ABCDEFHILMNOPRSTUVWYZ_abcdefghijklmnopqrstuvwxyz{}“”’?>
+      <?renderCache.subset "Times New Roman" 0 0 UTF-16 2 4 0176?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 228 57 0003000A000B000C000F00100011001300140015001600170019001B001C001D002400250026002700280029002A002B002C002F003000310032003300350036003700380039003A003B003C00440046004700480049004A004C004F005000510052005300550056005700580059005B005C '(),-.01234689:ABCDEFGHILMNOPRSTUVWXYacdefgilmnoprstuvxy?>
+      <?renderCache.subset "Times New Roman" 0 1 ISO-8859-1 4 164 45 0003000F0011001300150017001E0024002600270029002C0030003200360037003A004400450046004700480049004A004B004C004D004F005000510052005300550056005700580059005A005C00B300B4 ,.024;ACDFIMOSTWabcdefghijlmnoprstuvwy“”?>
+      <?renderCache.subset "Times New Roman" 1 1 ISO-8859-1 4 160 40 00030009000B000C000D000F001100160017001D00260027002C0031003200330037003A004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059005A005C &()*,.34:CDINOPTWabcdefghiklmnoprstuvwy?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner Grid show:0, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\abc.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 75?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <common/>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-05-16T18:07:26Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:22435338-190b-40eb-92ef-1eea18130bb9</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:f9466197-e968-4792-9d80-f63b6aafa783</xmpMM:InstanceID>
+         <dc:format>application/pdf</dc:format>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>

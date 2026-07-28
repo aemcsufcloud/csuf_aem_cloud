@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+   <xs:element name="form1">
+      <xs:complexType>
+         <xs:sequence>
+			<xs:element type="xs:string" name="caseId" />
+            <xs:element type="xs:string" name="LastName" />
+            <xs:element type="xs:string" name="FirstName" />
+            <xs:element type="xs:string" name="MiddleName" />
+            <xs:element type="xs:string" name="StudentID" />
+            <xs:element type="xs:string" name="ExpectedGraduDate" />
+            <xs:element type="xs:string" name="DegreeObjective" />
+            <xs:element type="xs:string" name="Major" />
+            <xs:element type="xs:string" name="AcademicPlan" />
+            <xs:element type="xs:string" name="ProgramPlan" />
+            <xs:element type="xs:string" name="TelephoneNo" />
+            <xs:element type="xs:string" name="Email" />
+            <xs:element type="xs:string" name="TermCode" />
+            <xs:element type="xs:string" name="AllCoursWithdrawRB" />
+            <xs:element type="xs:string" name="TermDesc" />
+			<xs:element type="xs:string" name="typeOfForm" />
+            <xs:element name="CourseRow">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="SelectCB" />
+                     <xs:element type="xs:string" name="CourseNo" />
+                     <xs:element type="xs:string" name="ScheduleNo" />
+                     <xs:element type="xs:string" name="NumberOfUnits" />
+                     <xs:element type="xs:string" name="NameOfInstructor" />
+                     <xs:element type="xs:string" name="SectionNo" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element type="xs:string" name="StudentPetitionComment" />
+            <xs:element type="xs:string" name="StudentPetitionComment1" />
+            <xs:element type="xs:string" name="StudentPetitionComment2" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment1" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment2" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment3" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment4" />
+            <xs:element type="xs:string" name="StudentPetitionMedicalComment5" />
+            <xs:element type="xs:string" name="StudentSign" />
+            <xs:element type="xs:string" name="StudentSignDate" />
+            <xs:element type="xs:string" name="LastdateAttended" />
+            <xs:element type="xs:string" name="Grade" />
+            <xs:element type="xs:string" name="InstructorRB" />
+            <xs:element type="xs:string" name="RecommendInstructor" />
+            <xs:element type="xs:string" name="InstructorSign" />
+            <xs:element type="xs:string" name="InstructorReviewDate" />
+            <xs:element type="xs:string" name="InstructorComment" />
+            <xs:element type="xs:string" name="ChairComment" />
+            <xs:element type="xs:string" name="ChairReviewDate" />
+            <xs:element type="xs:string" name="ChairSign" />
+            <xs:element type="xs:string" name="RecommendChair" />
+            <xs:element type="xs:string" name="AdminDate" />
+            <xs:element type="xs:string" name="ProcessedAdmin" />
+            <xs:element type="xs:string" name="RecommendMedical" />
+            <xs:element type="xs:string" name="MedicalReviewerSign" />
+            <xs:element type="xs:string" name="MedicalReviewDate" />
+            <xs:element type="xs:string" name="MedicalReviewComment" />
+            <xs:element type="xs:string" name="ARSCComment" />
+            <xs:element type="xs:string" name="ARSCSign" />
+            <xs:element type="xs:string" name="logUser" />
+            <xs:element type="xs:string" name="stepRef" />
+            <xs:element type="xs:string" name="studentCB" />
+            <xs:element type="xs:string" name="studentMedCB" />
+            <xs:element type="xs:string" name="instructorCB" />
+            <xs:element type="xs:string" name="chairCB" />
+            <xs:element type="xs:string" name="adminCB" />
+            <xs:element type="xs:string" name="medicalCB" />
+            <xs:element type="xs:string" name="CourseNumberList" />
+            <xs:element type="xs:string" name="International_Students" />
+            <xs:element type="xs:string" name="SubjectLine" />
+            <xs:element type="xs:string" name="EIP_Flag" />
+            <xs:element type="xs:string" name="AllCourseWithdrawStatus" />
+            <xs:element type="xs:string" name="SubjectLineARSC" />
+            <xs:element type="xs:string" name="SubjectLineMedical" />
+            <xs:element type="xs:string" name="InstructorDenialReasons" />
+            <xs:element type="xs:string" name="ChairDenialReasons" />
+            <xs:element type="xs:string" name="Nursing_Flag" />
+            <xs:element type="xs:string" name="Covid19CB" />
+            <xs:element type="xs:string" name="Circumstances" />
+            <xs:element type="xs:string" name="DisabilitySupServiceCB" />
+			<xs:element type="xs:string" name="LookupResult" />
+			<xs:element type="xs:string" name="InstructorLname" />
+			<xs:element type="xs:string" name="classNumberList" />
+			<xs:element type="xs:string" name="classSectionList" />
+			<xs:element type="xs:string" name="aftiaDescCWID" />
+			<xs:element type="xs:string" name="ARSCRecommend" />
+			<xs:element type="xs:string" name="AutoAdvanceFlag" />
+			<xs:element type="xs:string" name="RecommendAthleticReviewer" />
+            <xs:element type="xs:string" name="AthleticReviewerSign" />
+            <xs:element type="xs:string" name="AthleticReviewerDate" />
+            <xs:element type="xs:string" name="AthleticReviewerComment" />
+			<xs:element type="xs:string" name="RecommendISSReviewer" />
+            <xs:element type="xs:string" name="ISSReviewerSign" />
+            <xs:element type="xs:string" name="ISSReviewerDate" />
+            <xs:element type="xs:string" name="ISSReviewerComment" />
+			<xs:element type="xs:string" name="ISSReviewerCB" />
+            <xs:element type="xs:string" name="AthleticReviewerCB" />
+			<xs:element type="xs:string" name="AthleticFlag" />
+			<xs:element type="xs:string" name="ISSReviewerUserId" />
+			<xs:element type="xs:string" name="ISSReviewerName" />
+			<xs:element type="xs:string" name="ISSReviewerEmail" />
+            <xs:element type="xs:string" name="AthleticReviewerUserId" />
+			<xs:element type="xs:string" name="AthleticReviewerName" />
+			<xs:element type="xs:string" name="AthleticReviewerEmail" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+

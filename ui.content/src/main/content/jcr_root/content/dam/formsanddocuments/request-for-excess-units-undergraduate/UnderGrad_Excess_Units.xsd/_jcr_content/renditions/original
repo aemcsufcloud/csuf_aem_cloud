@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UnderGradRequestExcess">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:string" name="caseId1"/>
+        <xs:element type="xs:string" name="studentName"/>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="street"/>
+		<xs:element type="xs:string" name="telephone"/>
+		<xs:element type="xs:string" name="address"/>
+        <xs:element type="xs:string" name="major"/>        
+        <xs:element type="xs:string" name="class_level"/> 
+		<xs:element type="xs:string" name="units"/> 
+		<xs:element type="xs:byte" name="term"/>
+        <xs:element type="xs:byte" name="year"/>
+		<xs:element type="xs:string" name="cumulative_GPA"/>
+        <xs:element type="xs:string" name="reason"/>    		
+		<xs:element type="xs:string" name="underGradUnits"/> 
+		<xs:element type="xs:byte" name="underGradTerm"/>
+        <xs:element type="xs:byte" name="underGradYear"/>
+		<xs:element type="xs:string" name="underGradCumulative_GPA"/>
+        <xs:element type="xs:string" name="underGradReason"/>       
+        <xs:element type="xs:byte" name="student_signature"/>
+        <xs:element type="xs:byte" name="student_date"/>
+        <xs:element type="xs:string" name="student_comments"/>		
+		<xs:element type="xs:byte" name="advisor_decision"/> 		
+		<xs:element type="xs:string" name="advisor_signature"/>
+		<xs:element type="xs:string" name="advisor_date"/>
+		<xs:element type="xs:string" name="advisor_comment"/>
+		<xs:element type="xs:string" name="chair_decision"/>
+		<xs:element type="xs:byte" name="chair_signature"/>         
+        <xs:element type="xs:string" name="chair_date"/>
+		<xs:element type="xs:string" name="chair_comment"/>
+		<xs:element type="xs:string" name="arscDecision"/>
+		<xs:element type="xs:string" name="arscSignature"/> 
+		<xs:element type="xs:string" name="arscDate"/>
+        <xs:element type="xs:string" name="arscComment"/>
+		<xs:element type="xs:string" name="requestTypeFlag"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="hidden_student_email"/>
+		<xs:element type="xs:string" name="hidden_chair_userID"/>
+		<xs:element type="xs:string" name="hidden_chair_name"/>
+		<xs:element type="xs:string" name="hidden_chair_email"/>
+		<xs:element type="xs:string" name="hidden_advisor_userID"/>
+		<xs:element type="xs:string" name="hidden_advisor_name"/>
+		<xs:element type="xs:string" name="hidden_advisor_email"/>
+		<xs:element type="xs:string" name="term_code"/>
+		<xs:element type="xs:string" name="term_description"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

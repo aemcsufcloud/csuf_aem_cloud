@@ -1,0 +1,134 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TitanCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="MiddleName"/>
+		<xs:element type="xs:string" name="PreferredLastName"/>
+        <xs:element type="xs:string" name="PreferredFirstName"/>
+        <xs:element type="xs:string" name="Cwid"/>
+        <xs:element type="xs:string" name="TitanCardNumber"/>
+        <xs:element type="xs:byte" name="ReasonWithdrawingCB"/>
+        <xs:element type="xs:byte" name="ReasonGraduatingCB"/>
+        <xs:element type="xs:byte" name="ReasonLeavingEmploymentCB"/>
+        <xs:element type="xs:byte" name="ReasonOtherCB"/>
+        <xs:element type="xs:string" name="ReasonOther"/>
+        <xs:element type="xs:string" name="MailCheckTo"/>
+        <xs:element type="xs:string" name="Street"/>
+        <xs:element type="xs:string" name="Apt"/>
+        <xs:element type="xs:string" name="City"/>
+        <xs:element type="xs:string" name="State"/>
+        <xs:element type="xs:string" name="ZipCode"/>
+        <xs:element type="xs:string" name="CurrentFundsOnAccount"/>
+        <xs:element type="xs:string" name="AdministartiveFee"/>
+        <xs:element type="xs:string" name="FinalCheckTotal"/>
+        <xs:element type="xs:string" name="Signature"/>
+        <xs:element type="xs:string" name="SignDate"/>
+        <xs:element type="xs:string" name="PhoneNumber"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="AdditionalComments"/>
+        <xs:element type="xs:string" name="TitanCardStaffAuthorization"/>
+		<xs:element type="xs:string" name="TitanCardStaffAuthoriztionDate"/>
+        <xs:element type="xs:string" name="CRVendorPayeeFirstName"/>
+		<xs:element type="xs:string" name="CRVendorPayeeLastName"/>
+        <xs:element type="xs:string" name="CRRequestedByName"/>
+        <xs:element type="xs:string" name="CRVendorPayeeStreet"/>
+        <xs:element type="xs:string" name="CRRequestedByDeptRoomNo"/>
+		<xs:element type="xs:string" name="CRVendorPayeeCity"/>
+        <xs:element type="xs:string" name="CRVendorPayeeState"/>
+        <xs:element type="xs:string" name="CRVendorPayeeZip"/>
+        <xs:element type="xs:string" name="CRRequestedByPhone"/>
+        <xs:element type="xs:string" name="CRVendorPayeeFedTaxID"/>
+        <xs:element type="xs:string" name="CRVendorPayeeTin"/>
+		<xs:element type="xs:string" name="CRVendorEmailAddress"/>
+        <xs:element type="xs:string" name="CRRequestedByDate"/>
+        <xs:element type="xs:byte" name="CRPayeeCSUFEmployeeRB"/>
+        <xs:element type="xs:byte" name="CRPayeeASCEmployeeRB"/>
+        <xs:element type="xs:byte" name="CRPayeeUSCitizenRB"/>
+        <xs:element type="xs:byte" name="CRRequestforServiceRB"/>
+        <xs:element type="xs:string" name="CRRequestForServiceDropdown"/>
+        <xs:element type="xs:byte" name="CRMailToPayeeCB"/>
+        <xs:element type="xs:byte" name="CRMailToDepartmentCB"/>
+        <xs:element type="xs:string" name="CRMailToDepartmentTF"/>
+        <xs:element type="xs:byte" name="CRHoldforPickupCB"/>
+        <xs:element type="xs:string" name="CRHoldforPickupTF"/>          
+        <xs:element type="xs:byte" name="CRRushCB"/>
+        <xs:element type="xs:string" name="CRRushDateNeeded"/>
+              <xs:element name="Table1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="HeaderRow"/>
+                    <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="CRTableDescription"/>
+                          <xs:element type="xs:string" name="CRTableInvoiceNumber"/>
+                          <xs:element type="xs:string" name="CRTableProject"/>
+                          <xs:element type="xs:string" name="CRTableObjectCode"/>
+                          <xs:element type="xs:string" name="CRTableAmount"/>
+                          <xs:element type="xs:string" name="CRTable1099"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Row2">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="CRTableLessWithHolding"/>
+                          <xs:element type="xs:string" name="CRTableLessWithHoldingAmount"/>
+                          <xs:element type="xs:string" name="CRTableLessWithHolding1099"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Row3">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="CRTableTotalAmount"/>
+                          <xs:element type="xs:string" name="CRTableTotal1099"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+        <xs:element type="xs:string" name="CRASCPeid"/>
+        <xs:element type="xs:byte" name="CRASCW9OnFileSoleCB"/>
+        <xs:element type="xs:byte" name="CRASCW9OnFileCorpCB"/>
+        <xs:element type="xs:string" name="CRASCProjObject"/>
+        <xs:element type="xs:string" name="CRASCDesc"/>
+        <xs:element type="xs:string" name="CRASCInvoiceNo"/>
+        <xs:element type="xs:string" name="CRASCInvoiceDate"/>
+        <xs:element type="xs:string" name="CRASCInvoiceDueDate"/>
+        <xs:element type="xs:string" name="CRASC1099"/>
+        <xs:element type="xs:string" name="CRASCDivision"/>
+        <xs:element type="xs:string" name="CRASCOther"/>
+        <xs:element type="xs:string" name="CRASCAuditedBy"/>
+		<xs:element type="xs:string" name="CRASCApprovedBy"/>
+        <xs:element type="xs:string" name="CRASCRemarks"/>
+        <xs:element type="xs:string" name="CRAuthorizedNameOne"/>
+        <xs:element type="xs:string" name="CRAuthorizedSignatureOne"/>
+        <xs:element type="xs:string" name="CRAuthorizedSignDateOne"/>
+        <xs:element type="xs:string" name="CRAuthorizedNameTwo"/>
+        <xs:element type="xs:string" name="CRAuthorizedSignatureTwo"/>
+        <xs:element type="xs:string" name="CRAuthorizedSignDateTwo"/>
+        <xs:element type="xs:string" name="CRApprovedBy"/>
+        <xs:element type="xs:string" name="CRApprovedByDate"/>
+		<xs:element type="xs:string" name="TitanCardStaffComments"/>
+		<xs:element type="xs:string" name="ITFinanceComments"/>
+		<xs:element type="xs:string" name="ITAVPStaffComments"/>
+		<xs:element type="xs:string" name="ASCStaffComments"/>
+	    <xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="InitiatedDate"/>
+		<xs:element type="xs:string" name="CRApprovedBy2"/>
+        <xs:element type="xs:string" name="CRApprovedByDate2"/>
+		<xs:element type="xs:string" name="ASCStaffComments2"/>
+		<xs:element type="xs:string" name="CRApprovedBy3"/>
+        <xs:element type="xs:string" name="CRApprovedByDate3"/>
+		<xs:element type="xs:string" name="ASCStaffComments3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,46 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BatchLaunch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="HeaderRow"/>
+              <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Cwid"/>
+                    <xs:element type="xs:string" name="FacultyName"/>
+                    <xs:element type="xs:string" name="FacultyEmail"/>
+                    <xs:element type="xs:string" name="DeptId"/>
+                    <xs:element type="xs:string" name="Department"/>
+                    <xs:element type="xs:string" name="College"/>
+                    <xs:element type="xs:string" name="StartTerm"/>
+                    <xs:element type="xs:string" name="EndTerm"/>
+                    <xs:element type="xs:string" name="WTUUnits"/>
+                    <xs:element type="xs:string" name="TimeReasons"/>
+                    <xs:element type="xs:string" name="BriefDescription"/>
+                    <xs:element type="xs:string" name="ChairName"/>
+                    <xs:element type="xs:string" name="ChairEmail"/>
+                    <xs:element type="xs:string" name="AlternateApproverName"/>
+                    <xs:element type="xs:string" name="AlternateApproverDept"/>
+                    <xs:element type="xs:string" name="AlternateApproverEmail"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="InitiatorName"/>
+		<xs:element type="xs:string" name="InitiatorFirstName"/>
+		<xs:element type="xs:string" name="InitiatorLastName"/>
+        <xs:element type="xs:string" name="InitiatorUserId"/>
+		<xs:element type="xs:string" name="InitiatorCwid"/>
+        <xs:element type="xs:string" name="InitiatorEmailId"/>
+		<xs:element type="xs:string" name="InitiatedDate"/>
+		<xs:element type="xs:string" name="RecordsCount"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-08-14T16:18:16Z" uuid="3d8c1a44-3af8-40b6-929d-437a0d5b19bb">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1GSTG" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" h="266.7mm">
+         <draw name="Logo" w="73.025mm" h="25.4mm">
+            <value>
+               <image href=".\CSUF Financial Aid Logo.png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <field name="cwid" y="19.05mm" x="107.95mm" w="76.2mm" h="13.607mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.7486mm">
+               <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Enter Student's       CWID Here:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="aidYear" x="88.9mm" w="25.4mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="formCode" x="184.15mm" w="19.05mm" h="9mm" y="19.05mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Heading" y="43.815mm" x="104.775mm" w="34.925mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="12pt" typeface="Calibri" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue-1;
+var otherAidYearVal = aidYear.rawValue;
+this.rawValue = "("+aidYearVal+"-"+otherAidYearVal+")";
+</script>
+            </event>
+         </field>
+         <draw y="53.975mm" w="43.171mm" h="6.35mm">
+            <value>
+               <text>Section 1: Grant Overview</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 119540 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 25 Section 1: Grant Overview 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Line1" y="60.325mm" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge/>
+               </line>
+            </value>
+         </draw>
+         <draw name="Line2" y="61.087mm" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge thickness="0.4826mm"/>
+               </line>
+            </value>
+         </draw>
+         <draw y="107.95mm" w="120.65mm" h="6.35mm">
+            <value>
+               <text>Section 2: Program and Enrollment Information</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 339166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 45 Section 2: Program and Enrollment Information 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Line1" y="114.3mm" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge/>
+               </line>
+            </value>
+         </draw>
+         <field name="NameCredential" y="117.475mm" w="101.6mm" h="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="33.0881mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name of Credential:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ExpectedCompletion" y="117.475mm" x="104.775mm" w="98.425mm" h="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="59.9376mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Expected Completion (e.g., Fall 2023):</text>
+               </value>
+            </caption>
+         </field>
+         <draw y="130.175mm">
+            <value>
+               <text>The Financial Aid office will certify the grant across term(s) of enrollment during the academic year.</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw y="136.525mm">
+            <value>
+               <text>Select your period of enrollment:</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="Fall_CB" y="136.525mm" x="57.15mm" w="12.7mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="5.7mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>Fall</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Spring_CB" y="136.525mm" x="88.9mm" w="19.05mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="12.398mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>Spring</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Summer_CB" y="136.525mm" x="123.825mm" w="22.225mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="15.573mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>Summer </text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw name="Line1" y="155.575mm" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge/>
+               </line>
+            </value>
+         </draw>
+         <draw y="149.225mm" w="120.65mm" h="6.35mm">
+            <value>
+               <text>Section 3: GSTG Amount Eligibility </text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 339166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 35 Section 3: GSTG Amount Eligibility  0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw y="158.75mm" w="8in" h="1.486972in">
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">The GSTG amount is determined based on your estimated Cost of Attendance (COA), minus other Financial Aid awarded.<span style="xfa-spacerun:yes"> </span></p><ul style="text-decoration:none;letter-spacing:0in;list-style-type:disc"><li>COA includes tuition and fees, room and board, books and supplies, transportation, and miscellaneous expenses.<span style="xfa-spacerun:yes"> </span></li><li>To maximize the amount of GSTG this academic year, you have the option to<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">request a reduction or cancelation of student loan(s)</span> you may have accepted or received. This means that GSTG funds will replace the loans, essentially paying off a portion or the entirety of your loans for the Academic Year or semester.<span style="xfa-spacerun:yes"> </span></li><li>Review our Financial Aid website for more information on how Middle Class Scholarship is affected by GSTG and how the Federal TEACH grant impacts eligibility for the GSTG funds.</li></ul></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text1" y="215.9mm" x="44.45mm" w="117.475mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Example - Academic Year (Off-Campus)</text>
+            </value>
+            <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt">
+               <fill>
+                  <color value="255,255,255"/>
+               </fill>
+            </font>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+               <fill>
+                  <color value="0,0,0"/>
+               </fill>
+            </border>
+            <?renderCache.bounds 330166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 36 Example - Academic Year (Off-Campus) 0 77372 9667 255 255 255 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Text2" y="220.98mm" x="44.45mm" w="117.475mm" h="32.82mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Cost of Attendance (COA):<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">Grants/Scholarships</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">Student Loan</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">=<span style="xfa-spacerun:yes">  </span>Golden State Teacher Grant eligibility<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge thickness="0.4826mm"/>
+               <corner thickness="0.483mm"/>
+            </border>
+         </draw>
+         <field name="FallYear" y="136.525mm" x="69.85mm" w="12.7mm" h="5.881mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">this.rawValue = aidYear.rawValue - 1;
+</script>
+            </event>
+         </field>
+         <field name="SpringYear" y="136.525mm" x="104.775mm" w="12.7mm" h="5.881mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">this.rawValue = aidYear.rawValue;
+</script>
+            </event>
+         </field>
+         <field name="SummerYear" y="136.525mm" x="142.875mm" w="12.7mm" h="5.881mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">this.rawValue = aidYear.rawValue;
+</script>
+            </event>
+         </field>
+         <draw y="38.1mm" w="104.775mm" h="6.35mm" x="50.8mm">
+            <value>
+               <text>Golden State Teacher Grant Certification</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="12pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center"/>
+            <?renderCache.bounds 294166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 40 Golden State Teacher Grant Certification 0 47332 10417 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+         <draw x="79.375mm" y="44.45mm">
+            <font typeface="Myriad Pro"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:center;font-family:Calibri;font-size:12pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>Request Form<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+         </draw>
+         <subform name="Subform1" x="136.525mm" y="220.98mm" w="25.4mm" layout="lr-tb">
+            <draw name="Text2" w="25.4mm" h="32.82mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">$31,273.00</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">$6,660.00</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">$7,500.00</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">$17,113.00</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge thickness="0.4826mm" presence="hidden"/>
+                  <corner thickness="0.483mm" presence="hidden"/>
+               </border>
+            </draw>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue != "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+         </subform>
+         <subform name="Subform2" x="136.525mm" y="220.98mm" w="25.4mm" layout="lr-tb">
+            <draw name="Text2" w="25.4mm" h="32.82mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">$17,394.00</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">$5,000.00</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">$3,750.00</p><p style="letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in">$8,644.00</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge thickness="0.4826mm" presence="hidden"/>
+                  <corner thickness="0.483mm" presence="hidden"/>
+               </border>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue == "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform3" y="63.5mm" w="203.2mm" layout="lr-tb">
+            <draw w="8in">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">The Golden State Teacher Grant(GSTG) is state funding offered by the California Student Aid Commission (CSAC) for students enrolled in a credential program. The online GSTG CSAC application deadline is April 1, 2024, and must be submitted if you’re a new applicant for this program. Submit this form annually to have your GSTG eligibility reviewed by our office, deadline<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">May 17, 2024</span>. Applications are processed after Census date (typically the fifth week of the semester); submissions after Census will be processed in 2-3 weeks.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">GSTG program can pay up to $20,000, distributed throughout multiple academic years; however, you must complete the credential program within three years from the date the first payment is disbursed to you. Please review<span style="xfa-spacerun:yes"> </span><a href="https://www.csac.ca.gov/gstg">CSAC’s website</a> for additional information, and our<span style="xfa-spacerun:yes"> </span><a href="https://www.fullerton.edu/financialaid/graduate/goldenstateteachergrant.php">Financial Aid website</a> for the application process.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue != "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+         </subform>
+         <subform name="Subform4" y="63.5mm" w="203.2mm" layout="lr-tb">
+            <draw w="8in">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">The Golden State Teacher Grant(GSTG) is state funding offered by the California Student Aid Commission (CSAC) for students enrolled in a teaching credential program. The online GSTG CSAC application deadline is April 1, 2025, and must be submitted if you’re a new applicant for this program. Submit this form every new academic year to have your GSTG eligibility reviewed by our office, deadline<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">May 16, 2025</span>. Applications are processed after Census date (typically the fifth week of the semester); submissions after Census will be processed in 2-3 weeks.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in">GSTG program can pay up to $20,000, distributed throughout multiple academic years; however, you must complete the credential program within three years from the date the first payment is disbursed to you. Please review<span style="xfa-spacerun:yes"> </span><a href="https://www.csac.ca.gov/gstg">CSAC’s website</a> for additional information, and our<span style="xfa-spacerun:yes"> </span><a href="https://www.fullerton.edu/financialaid/graduate/goldenstateteachergrant.php">Financial Aid website</a> for the application process.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue == "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+         </subform>
+         <subform name="Subform5" y="193.675mm" w="203.2mm" h="15.875mm">
+            <draw w="203.2mm" h="15.875mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-size:11pt;letter-spacing:0in">In the example shown here, a student can receive $17,113 in GSTG for Fall and Spring terms, but if student requests a loan reduction, the GSTG funds can be increased to $20,000. If loans are not canceled, remaining GSTG can be awarded the following year, if continued enrollment in an eligible program.<span style="xfa-spacerun:yes"> </span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue != "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform6" y="193.675mm" w="203.2mm" h="18.972mm">
+            <draw w="8in" h="0.742139in">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-size:11pt;letter-spacing:0in">In the example shown here, a student can receive $8,644 in GSTG for one semester, but if student requests a loan reduction, the GSTG funds can be increased to $10,000 - keep in mind award sizes vary, depending on your application cohort. Any remaining GSTG funds not used for this aid year, may be used for the following aid year, and is dependent upon program eligibility, and availability of funds.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(aidYear.rawValue == "2025"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="576pt" h="756pt">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <draw name="Logo" w="73.025mm" h="25.4mm">
+            <value>
+               <image href=".\CSUF Financial Aid Logo.png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <field name="cwid_2" y="15.875mm" x="107.95mm" w="76.2mm" h="13.607mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.7486mm">
+               <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Enter Student's       CWID Here:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="formCode_2" x="184.15mm" w="19.05mm" h="9mm" y="15.875mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw y="34.925mm">
+            <value>
+               <text>Select ONE of the statements to indicate what action you would like to be taken with your loan(s):</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field y="41.275mm" x="22.225mm" w="6.35mm" h="8.128mm" name="Loan_RB1">
+            <ui>
+               <checkButton shape="round">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw x="28.575mm" y="42.545mm" w="136.525mm" h="14.194mm">
+            <font typeface="Myriad Pro"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:Calibri;font-size:11pt;text-decoration:none;letter-spacing:0in">I have not accepted or have applied for student loans. Please certify Golden State Teacher Grant up to my maximum eligibility across my term(s) of enrollment, minus any other applicable grants/scholarships.</p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+         </draw>
+         <draw name="Text3" y="41.275mm" x="22.225mm" w="146.05mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.483mm"/>
+            </border>
+            <?renderCache.bounds 411166 42166 0 0 1417 1417 0 0?></draw>
+         <field y="57.15mm" x="22.225mm" w="6.35mm" h="8.128mm" name="Loan_RB2">
+            <ui>
+               <checkButton shape="round">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw x="28.575mm" y="57.15mm" w="136.525mm" h="31.75mm">
+            <font typeface="Myriad Pro"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:Calibri;font-size:11pt;text-decoration:none;letter-spacing:0in">Cancel or reduce my student loan(s) as needed to maximize the amount I can receive for GSTG across my term(s) of enrollment. I understand that if the loan already disbursed to me or towards my tuition, the reduction/cancelation will create a charge on my account, which will be covered by GSTG funds, either by me (after getting the refund) or automatically once GSTG pays. The adjustments will take place once the Financial Aid Office receives the GSTG funds.</p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+         </draw>
+         <draw name="Text3" y="57.15mm" x="22.225mm" w="146.05mm" h="31.75mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.483mm"/>
+            </border>
+            <?renderCache.bounds 411166 87166 0 0 1417 1417 0 0?></draw>
+         <field y="88.9mm" x="22.225mm" w="6.35mm" h="8.128mm" name="Loan_RB3">
+            <ui>
+               <checkButton shape="round">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw x="28.575mm" y="88.24mm" w="136.525mm" h="18.85mm">
+            <font typeface="Myriad Pro"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;font-family:Calibri;font-size:11pt;letter-spacing:0in">Do not Cancel or Reduce my student loan(s). Certify Golden State Teacher Grant up to my remaining eligibility across my term(s) of enrollment. I understand this may limit the GSTG amount I will get for this academic year or term.</p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+         </draw>
+         <draw name="Text3" y="88.9mm" x="22.225mm" w="146.05mm" h="19.05mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <?renderCache.bounds 411166 51166 0 0 1417 1417 0 0?></draw>
+         <field name="GSTGAmount" y="111.125mm" w="114.3mm" h="7.715mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="63.2174mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>GSTG funds awarded in a prior aid year:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{$z,zzz,zzz,zz9.99}</picture>
+            </format>
+         </field>
+         <draw name="Line1" y="127mm" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge/>
+               </line>
+            </value>
+         </draw>
+         <draw y="120.65mm" w="120.65mm" h="6.35mm">
+            <value>
+               <text>Section 4: Certification and Signature</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" weight="bold" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 339166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 38 Section 4: Certification and Signature 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw y="130.175mm" w="8in" h="9.537mm">
+            <value>
+               <text>Checkbox each statement below to confirm your understanding of the process and that you completed the necessary steps to submit this form:</text>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 24200 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 121 Checkbox each statement below to confirm your understanding of the process and that you completed the necessary steps to  0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?>
+            <?renderCache.textRun 17 submit this form: 0 1417 22867 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+         <field name="Certification_CB1" y="142.875mm" x="3.175mm" w="196.85mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="189.85mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>I have filed a FAFSA or CA Dream Act application for the                     award year at CSU, Fullerton.</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Certification_CB2" y="152.4mm" x="3.175mm" w="196.85mm" h="12.35mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="189.85mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">I have completed a GSTG online application<span style="xfa-spacerun:yes"> </span><a href="https://gstg.csac.ca.gov/">https://gstg.csac.ca.gov/</a>, either for this year or a prior year and included CSUF as the institution.</p></body>
+                  </exData>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Certification_CB3" y="168.275mm" x="3.175mm" w="196.85mm" h="12.35mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="189.85mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>I understand that even after school certifies the grant amount, the amount is subject to change if there are changes to my Financial Aid award, such as receiving additional grants or scholarships.</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Certification_CB4" y="180.975mm" x="3.175mm" w="196.85mm" h="15.525mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="189.85mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">To the best of my knowledge I will notify the Financial Aid office of new scholarship/waivers awarded that may not be in my Financial Aid award letter yet to facilitate the certification process and reduce the disbursement delays it may cause, by calling the office (657)278-3125 or submitting a ticket via the<span style="xfa-spacerun:yes"> </span><a href="https://www.fullerton.edu/financialaid/credentials/teachgrant.php">Financial Aid webpage</a></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="Certification_CB5" y="200.025mm" x="3.175mm" w="196.85mm" h="15.525mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="189.85mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <value>
+                  <text>I understand that I can self-decline or complete the Service Agreement (SA) online https://gstg.csac.ca.gov once the Financial Aid Office certifies my GSTG application. I will receive an email from the California Student Aid Commission once the SA is ready to be signed.</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw name="Text25" w="196.85mm" h="47.625mm" x="3.175mm" y="219.075mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I also certify that I have read the terms and conditions section of the CSU Fullerton, Financial Aid website (<a href="http://www.fullerton.edu/financialaid/info/Terms.php">http://www.fullerton.edu/financialaid/info/Terms.php</a>)<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Signature is required.</span></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in"><br/></p><p style="font-weight:bold;letter-spacing:0in">Warning:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge thickness="0.4826mm"/>
+               <corner thickness="0.483mm"/>
+            </border>
+         </draw>
+         <field name="studentSignature" w="95.25mm" h="9mm" x="101.6mm" y="243.95mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="37.2017mm">
+               <font typeface="Calibri" baselineShift="0pt" weight="bold" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Print Student’s Name:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="studentSignDate" w="50.8mm" h="8.999mm" x="50.8mm" y="243.95mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="11.9647mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:11pt">Date:</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <field name="studentIDNumber" w="47.625mm" h="8.999mm" x="3.175mm" y="243.95mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.64mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CWID:</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" weight="bold" size="11pt"/>
+            </caption>
+         </field>
+         <field name="ipAddress" w="47.625mm" h="9mm" x="136.525mm" y="234.95mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="19.0539mm">
+               <font typeface="Calibri" baselineShift="0pt" weight="bold" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>IP Address:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <field name="studentScribbleSignature" w="133.35mm" h="9mm" x="3.175mm" y="234.95mm">
+            <ui>
+               <imageEdit data="embed"/>
+               <extras name="x-scribble-add-on">
+                  <boolean name="geoLocMandatoryOnIpad">1</boolean>
+               </extras>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <caption reserve="37.2017mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Student E-signature:</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            </caption>
+            <desc>
+               <text name="embeddedHref"/>
+            </desc>
+            <border>
+               <edge presence="hidden"/>
+               <corner/>
+               <corner/>
+               <corner presence="hidden"/>
+               <corner/>
+            </border>
+         </field>
+         <field name="CBYear" y="142.875mm" x="96.52mm" w="25.4mm" h="5.881mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue-1;
+var otherAidYearVal = aidYear.rawValue;
+this.rawValue = aidYearVal+"-"+otherAidYearVal
+</script>
+            </event>
+         </field>
+         <draw name="Text26" y="112.141mm" x="114.3mm" w="53.975mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> (Indicate $0 if no funds received)</text>
+            </value>
+            <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 150166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 35  (Indicate $0 if no funds received) 0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 264 68 00030004001100120018001C00260027002C002F003E00440045004B0057005A005E00640068007A0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC0355035603570358035B036C0372037E037F03A803EC03ED03EE03EF03F003F103F203F303F403F5 ABCDEFGHILMNOPRSTUYabcdefghijklmnopqrstuvwxyz,;:.’/-()$0123456789?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 244 63 0003000400120018001C00260027002C002F00440045004B0057005A005E00640074007A0102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C601C7035503570358035B0372037E037F039603A803EC03ED03EE03EF03F003F103F203F303F40441 ACDEFGHIMNOPRSTWYabcdefghiklmnopqrstuvwxy,:.’-()'$012345678=?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 16 4 00110013001500160245?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\Golden State Teacher Grant Certification Form.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 82?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-08-14T16:18:16Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:3d8c1a44-3af8-40b6-929d-437a0d5b19bb</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

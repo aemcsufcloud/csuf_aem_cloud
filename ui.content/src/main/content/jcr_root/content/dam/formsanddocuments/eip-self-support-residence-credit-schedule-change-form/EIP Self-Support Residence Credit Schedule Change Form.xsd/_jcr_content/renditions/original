@@ -1,0 +1,255 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="EIP_Schedule_Change">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element type="xs:string" name="Program" />
+            <xs:element type="xs:string" name="Term" />
+            <xs:element type="xs:byte" name="CaseId" />
+            <xs:element type="xs:byte" name="FullName" />
+            <xs:element type="xs:byte" name="FirstName" />
+            <xs:element type="xs:byte" name="LastName" />
+            <xs:element type="xs:byte" name="CWID" />
+            <xs:element type="xs:byte" name="Date" />
+            <xs:element type="xs:byte" name="Email" />
+			
+            <xs:element name="Row3" maxOccurs="unbounded" minOccurs="0">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="RequestedAct" />
+                     <xs:element type="xs:string" name="SUBJ" />
+                     <xs:element type="xs:string" name="CAT" />
+                     <xs:element type="xs:string" name="SEC" />
+                     <xs:element type="xs:string" name="CLASS" />
+                     <xs:element type="xs:string" name="InstrMode" />
+                     <xs:element type="xs:string" name="Comp" />
+                     <xs:element type="xs:string" name="Session" />
+                     <xs:element type="xs:string" name="ClassUnits" />
+                     <xs:element type="xs:string" name="StartDate" />
+                     <xs:element type="xs:string" name="EndDate" />
+                     <xs:element type="xs:string" name="Days" />
+                     <xs:element type="xs:string" name="StartTime" />
+                     <xs:element type="xs:string" name="EndTime" />
+                     <xs:element type="xs:string" name="Location" />
+                     <xs:element type="xs:string" name="Enroll" />
+                     <xs:element type="xs:string" name="PrimarySec" />
+                     <xs:element type="xs:string" name="PrimaryClass" />
+                     <xs:element type="xs:string" name="FacultyName" />
+                     <xs:element type="xs:string" name="FacultyCWID" />
+                     <xs:element type="xs:string" name="Rank" />
+                     <xs:element type="xs:string" name="AYClass" />
+                     <xs:element type="xs:string" name="WTUs" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="WinterSummerTableRowTwo">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="WS_RequestedAction" />
+                     <xs:element type="xs:string" name="WS_SCH" />
+                     <xs:element type="xs:string" name="WS_Dept" />
+                     <xs:element type="xs:string" name="WS_Course" />
+                     <xs:element type="xs:string" name="WS_Sect_Dept" />
+                     <xs:element type="xs:string" name="WS_Sec" />
+                     <xs:element type="xs:string" name="WS_Class" />
+                     <xs:element type="xs:string" name="WS_Instr_Mode" />
+                     <xs:element type="xs:string" name="WS_Comp" />
+                     <xs:element type="xs:string" name="WS_Session" />
+                     <xs:element type="xs:string" name="WS_Days" />
+                     <xs:element type="xs:string" name="WS_Hours_Start" />
+                     <xs:element type="xs:string" name="WS_Hours_End" />
+                     <xs:element type="xs:string" name="WS_Room" />
+                     <xs:element type="xs:string" name="WS_Enroll_Cap" />
+                     <xs:element type="xs:string" name="WS_Wait_List_Cap" />
+                     <xs:element type="xs:string" name="WS_Consent_Required" />
+                     <xs:element type="xs:string" name="WS_Class_Notes" />
+                     <xs:element type="xs:string" name="WS_Faculty_Full_Name" />
+                     <xs:element type="xs:string" name="WS_Faculty_CWID" />
+                     <xs:element type="xs:string" name="WS_Faculty_Rank" />
+                     <xs:element type="xs:string" name="WS_AY_Class_Code" />
+                     <xs:element type="xs:string" name="WS_WTUS" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="FS_Cancel_Section_Row_Two">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Dept" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_CourseNo" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_SectionNo" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Class_Number" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Days" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Hours_Start" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Hours_End" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Room" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="FS_Add_Section_Row_Two">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Add_Section_Dept" />
+                     <xs:element type="xs:string" name="FS_Add_Section_CourseNo" />
+                     <xs:element type="xs:string" name="FS_Add_Section_SectionNo" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Component" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Days" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Hours_Start" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Hours_End" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Room" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Enrl_Cap" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Class_Note" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Final_Exam" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Faculty_CWID_Name" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="FS_Change_Section_Row_Three">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Change_Section_Dept" />
+                     <xs:element type="xs:string" name="FS_Change_Section_CourseNo" />
+                     <xs:element type="xs:string" name="FS_Change_Section_SectionNo" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Class_Number" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Current_MP" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Action" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Room" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Days" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Hours_Start" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Hours_End" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Date" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Instr_Mode" />
+                     <xs:element type="xs:string" name="FS_Change_Section_APDB_Mode" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+			<xs:element name="FS_Cancel_Section_Row_Two_SS">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Dept_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_CourseNo_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_SectionNo_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Class_Number_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Days_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Hours_Start_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Hours_End_SS" />
+                     <xs:element type="xs:string" name="FS_Cancel_Section_Room_SS" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="FS_Add_Section_Row_Two_SS">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Add_Section_Dept_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_CourseNo_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_SectionNo_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Component_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Days_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Hours_Start_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Hours_End_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Room_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Enrl_Cap_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Class_Note_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Final_Exam_SS" />
+                     <xs:element type="xs:string" name="FS_Add_Section_Faculty_CWID_Name_SS" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+            <xs:element name="FS_Change_Section_Row_Three_SS">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="xs:string" name="FS_Change_Section_Dept" />
+                     <xs:element type="xs:string" name="FS_Change_Section_CourseNo_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_SectionNo_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Class_Number_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Current_MP_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Action_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Room_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Days_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Hours_Start_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Hours_End_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Date_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_Instr_Mode_SS" />
+                     <xs:element type="xs:string" name="FS_Change_Section_APDB_Mode_SS" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+			
+			<xs:element type="xs:string" name="ChairSignature" />
+            <xs:element type="xs:string" name="ChairDept" />
+            <xs:element type="xs:string" name="ChairSignDate" />
+			<xs:element type="xs:string" name="ChairDecision" />
+			<xs:element type="xs:string" name="ChairComments" />
+			
+            <xs:element type="xs:string" name="DeanSignature" />
+            <xs:element type="xs:string" name="DeanCollege" />
+            <xs:element type="xs:string" name="DeanSignDate" />
+			<xs:element type="xs:string" name="DeanDecision" />
+			<xs:element type="xs:string" name="DeanComments" />
+			
+			<xs:element type="xs:string" name="InitiatorName" />
+            <xs:element type="xs:string" name="InitiatorEmail" />
+            <xs:element type="xs:string" name="InitiatorUserID" />
+			
+            <xs:element type="xs:string" name="InitiatorSign" />
+            <xs:element type="xs:string" name="InitiatorDept" />
+            <xs:element type="xs:string" name="InitiatorSignDate" />
+			<xs:element type="xs:string" name="InitiatorComments" />
+			
+			<xs:element type="xs:string" name="ScheduleSign" />
+            <xs:element type="xs:string" name="ScheduleSignDate" />
+			<xs:element type="xs:string" name="SchedulingDecision" />
+			<xs:element type="xs:string" name="ScheduleComments" />
+			
+			<xs:element type="xs:string" name="EIPSign" />
+            <xs:element type="xs:string" name="EIPSignDate" />
+			<xs:element type="xs:string" name="EIPDecision" />
+			<xs:element type="xs:string" name="EIPComments" />
+			           
+            <xs:element type="xs:string" name="WS_Year" />
+            <xs:element type="xs:string" name="WS_Additional_Information" />
+			
+            <xs:element type="xs:string" name="FS_Year" />
+            <xs:element type="xs:string" name="FS_Additional_Information" />
+			
+			<xs:element type="xs:string" name="Cancel_Fall" />
+            <xs:element type="xs:string" name="Add_Fall" />
+            <xs:element type="xs:string" name="Change_Fall" />
+			
+			<xs:element type="xs:string" name="FS_SS_Year" />
+            <xs:element type="xs:string" name="FS_Additional_Information_SS" />
+			
+			<xs:element type="xs:string" name="Cancel_FallSS" />
+            <xs:element type="xs:string" name="Add_FallSS" />
+            <xs:element type="xs:string" name="Change_FallSS" />
+			
+			<xs:element type="xs:string" name="termCode" />
+			
+            <xs:element type="xs:string" name="StageIndicator" />
+            <xs:element type="xs:string" name="EmailSubject" />
+            <xs:element type="xs:string" name="aftiaDescCWID" />
+			
+			<xs:element type="xs:string" name="DeptID" />
+            <xs:element type="xs:string" name="FulCollege" />
+			
+			<xs:element type="xs:string" name="ChairUserID" />
+            <xs:element type="xs:string" name="ChairName" />
+            <xs:element type="xs:string" name="ChairName" />
+            <xs:element type="xs:string" name="ChairEmail" />
+			
+			<xs:element type="xs:string" name="DeanUserID" />
+            <xs:element type="xs:string" name="DeanName" />
+            <xs:element type="xs:string" name="DeanEmail" />
+			
+			<xs:element type="xs:string" name="EIPFlag" />
+			<xs:element type="xs:string" name="DORFlag" />
+						
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

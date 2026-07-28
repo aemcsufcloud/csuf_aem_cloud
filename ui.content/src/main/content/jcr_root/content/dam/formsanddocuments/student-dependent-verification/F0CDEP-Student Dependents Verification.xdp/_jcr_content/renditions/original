@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-05-31T04:59:39Z" uuid="69926c23-2304-4114-a37e-385d2f9a09c8">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="StudentDependentsVerification" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <draw name="Image1" w="57.15mm" h="22.225mm">
+            <value>
+               <image href=".\CSUF Financial Aid Logo.png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <draw name="Text1" w="29.2864mm" h="8.761mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> </text>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 80183 22000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 1   0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+         <field name="aidYear" w="37mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="formType" w="34.925mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text2" w="44.838mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 124266 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text3" w="111.125mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 312166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="cwid" w="60.325mm" h="0.474583in">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="justify"/>
+            <caption reserve="28.6827mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="justify"/>
+               <value>
+                  <text>       Enter Student's               CWID Here:</text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="formCode" w="31.75mm" h="9.525mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+         </field>
+         <subform name="Subform1" w="203.2mm" h="6.996mm">
+            <draw name="CDA_Title" w="203.2mm" h="6.35mm" y="0.646mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>CA Dream Act Application</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge thickness="0.3048mm"/>
+                  <corner thickness="0.305mm"/>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 24 CA Dream Act Application 0 229814 9259 0 0 0 "Times New Roman" 1 0 10000 ISO-8859-1?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+} 
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Heading" w="53.975mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="right" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 150166 15166 0 0 1417 1417 0 0?></draw>
+         <field name="Year_Heading" w="107.95mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="12pt" weight="bold"/>
+            <margin topInset="0.762mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text5" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?></draw>
+         <subform name="InstructionCDAPanel" w="203.2mm" h="24.324mm">
+            <draw name="Instructions_1" w="146.424mm" h="4.938mm" y="0.243mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;text-decoration:none"> You listed one or more dependents other than a spouse in your household on your</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="Year_InstructionsCDA" w="19.05mm" h="5.029mm" x="143.51mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Instructions_2" w="37.035mm" h="4.938mm" x="160.274mm" y="0.519mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>California Dream Act</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 102147 11163 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 20 California Dream Act 0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Instructions_3" w="8in" y="4.075mm" h="17.297mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Application<span style="xfa-spacerun:yes">                 </span>In order for us to determine whether or not such individuals may be considered your “dependents” for financial aid purposes, you must provide the following information to verify and explain the relationships of each person to you.<span style="xfa-spacerun:yes">  </span>You must also have adequate income to provide for your own support and more than half of the support of the dependent(s) listed.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "visible"; 
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "hidden";
+} 
+
+</script>
+            </event>
+            <field name="Year_InstructionsCDA1" w="19.05mm" h="0.217639in" x="15.875mm" y="3.937mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if (aidYear.rawValue != "2024"){
+this.rawValue = "(CDA)."; 
+}
+else {
+this.rawValue = "(CADAA).";
+}
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="InstructionsFAFSAPanel" w="203.212mm" layout="lr-tb">
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){
+this.presence = "hidden";
+}
+else if (formType.rawValue == "FAFSA"){
+this.presence = "visible";
+}
+
+</script>
+            </event>
+            <subform name="FAFSA2024" w="203.267mm" h="17.228mm">
+               <draw name="Instructions_FAFSA" w="8in" h="17.228mm" y="0mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="font-weight:normal;text-decoration:none"> In order for us to determine your “dependents” for financial aid purposes, you must provide the following information to verify and explain the relationships of each person to you.<span style="xfa-spacerun:yes">  </span>You must also have adequate income to provide for your own support and more than half of the support of the dependent(s) listed. Please provide complete information.</span><span style="font-weight:normal;font-style:italic;text-decoration:none"> Incomplete documents will not be returned to you.</span><span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic;text-decoration:none">They will be disposed of in a secure manner, per university policy. This will delay processing.</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+               </event>
+            </subform>
+            <subform name="FAFSA2025" w="203.267mm" h="21.948mm">
+               <draw name="Instructions_FAFSA" w="8in" h="21.948mm" y="0mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="font-weight:normal;text-decoration:none"> You are only dependent because you indicated that you have dependents other than spouse or children.</span></p><p style="letter-spacing:0in">In order for us to determine your “dependents” for financial aid purposes, you must provide the following information to verify and explain the relationships of each person to you.<span style="xfa-spacerun:yes">  </span>You must also have adequate income to provide for your own support and more than half of the support of the dependent(s) listed. Please provide complete information.<span style="font-style:italic"> Incomplete documents will not be returned to you.</span><span style="xfa-spacerun:yes"> </span><span style="font-style:italic">They will be disposed of in a secure manner, per university policy. This will delay processing.</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+               </event>
+            </subform>
+            <?templateDesigner expand 0?></subform>
+         <subform name="FormPanel" w="203.2mm" layout="lr-tb">
+            <subform name="Instructions" w="200.025mm" h="22.225mm">
+               <field name="Year_Regulations" y="12.752mm" x="36.576mm" w="48.26mm" h="5.08mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Calibri"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="Regulation" w="85.471mm" h="5.825mm" y="0mm" x="3.429mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Calibri" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if (formType.rawValue == "CDA"){  
+this.rawValue = "State regulations define legal dependents as:";
+}
+else if (formType.rawValue == "FAFSA"){
+this.rawValue = "Federal regulations define legal dependents as:";
+} 
+
+</script>
+                  </event>
+               </field>
+               <draw name="StateRegulation" w="200.025mm" h="21.614mm" y="0.381mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes">                  </span></p><ol style="letter-spacing:0in"><li>your child if you provide more than half of his/her support or</li><li>any other person who lives with you, receives more than half of his or her support from you, and will continue to receive that support through<span style="xfa-spacerun:yes"> </span></li></ol></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <border>
+                     <edge thickness="0.4826mm"/>
+                     <corner thickness="0.483mm"/>
+                  </border>
+               </draw>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Action2024" w="200.025mm" layout="lr-tb">
+               <draw w="7.875in">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-weight:bold;text-decoration:underline;letter-spacing:0in">ACTION TO COMPLETE FORM:<span style="xfa-spacerun:yes"> </span></p><p style="font-family:Calibri;letter-spacing:0in">For each family member listed, provide the name of the college or university they are attending during<span style="xfa-spacerun:yes">  </span>2023-2024 if they are enrolled in six (6) or more units per semester and the classes are leading to a degree or certificate. Do not include any person who will<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">not</span> continue to receive more than half of his or her support from you during the 2023-2024 school year.<span style="xfa-spacerun:yes">  </span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+} 
+</script>
+               </event>
+            </subform>
+            <subform name="Action2025" w="203.2mm" layout="lr-tb">
+               <draw w="203.2mm" h="14.522mm">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-weight:bold;text-decoration:underline;letter-spacing:0in">ACTION TO COMPLETE FORM:<span style="xfa-spacerun:yes"> </span></p><p style="font-family:Calibri;letter-spacing:0in">For each family member listed, provide the name name, date of birth, relationship, and income.</p><p style="font-family:Calibri;letter-spacing:0in">Do not include any person who will<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">not</span> continue to receive more than half of his or her support from you during the 2024-2025 school year.<span style="xfa-spacerun:yes">  </span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if (aidYear.rawValue == "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+               </event>
+            </subform>
+            <subform name="Subform2" w="200.025mm" h="35.586mm">
+               <draw name="ActionToCompleteForm" y="5.08mm" w="47.625mm" h="6.35mm" x="82.55mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>and sign the certification below. </text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 132166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 34 and sign the certification below.  0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+               <field name="CheckBox_Dependent" y="4.417mm" w="88.9mm" h="6mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption reserve="76.514mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                     <value>
+                        <text>If you DO NOT have any dependents, check this box</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="ListCollege" y="12.28mm" x="171.45mm" w="28.575mm" h="22.225mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <caption reserve="27.575mm">
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">List college if enrolled in 6 or more units</p><p style="letter-spacing:0in"><br/></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+                  </event>
+               </field>
+               <draw name="ClaimTax" y="12.28mm" w="31.75mm" h="22.225mm" x="139.7mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text> Claimed on your  taxes?</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 87166 60166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 11 Claimed on  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 6 your   0 1417 32917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 6 taxes? 0 1417 44917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+               <draw name="Indicate_Income" y="12.279mm" w="50.8mm" h="0.868972in" x="88.9mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Indicate all income from any</p><p style="text-decoration:none;letter-spacing:0in">sources this person received</p><p style="text-decoration:none;letter-spacing:0in">in calender year<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span><span style="text-decoration:underline">Total Income</span><span style="xfa-spacerun:yes">              </span><span style="text-decoration:underline">Source</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt" posture="italic">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Relationship" y="12.28mm" w="28.575mm" h="22.225mm" x="60.325mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text> Relationship (i.e., son, niece, etc.)</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 60166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 13 Relationship  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 12 (i.e., son,  0 1417 32917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 12 niece, etc.) 0 1417 44917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+               <draw name="DOB_Table1" y="12.28mm" w="22.225mm" h="22.225mm" x="38.1mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text> Date of Birth</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 60166 60166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 8 Date of  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 5 Birth 0 1417 32917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+               <draw name="FullName" y="12.28mm" w="34.925mm" h="22.225mm" x="3.175mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text> Full name of  dependents</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 96166 60166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 14 Full name of   0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+                  <?renderCache.textRun 10 dependents 0 1417 32917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+               <field name="IndicateIncome_Year" w="11.43mm" h="5.029mm" x="112.522mm" y="20.382mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Calibri" weight="bold" posture="italic">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+this.rawValue=aidYearVal -2 + "*";
+</script>
+                  </event>
+                  <value>
+                     <text>2021*</text>
+                  </value>
+               </field>
+               <field name="TaxClaim_Year" w="9.652mm" h="5.029mm" x="146.812mm" y="20.382mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Calibri" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+this.rawValue=aidYearVal-2;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform name="TablePanel" w="203.2mm" layout="lr-tb">
+            <draw name="Text8" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <subform name="Table1" layout="table" columnWidths="34.925mm 22.225mm 28.575mm 25.4mm 25.4mm 31.852mm 28.464mm">
+               <border>
+                  <edge/>
+               </border>
+               <subform layout="row" name="ExampleRow" y="0mm">
+                  <assist role="TR"/>
+                  <draw h="9.023mm" name="Cell1">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:left;font-family:Calibri;text-decoration:none;letter-spacing:0in">Example</p><p style="text-align:left;font-family:Calibri;text-decoration:none;letter-spacing:0in">Mom Smith</p></body>
+                        </exData>
+                     </value>
+                  </draw>
+                  <draw h="9.023mm" name="Cell2">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Calibri" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <text>03/10/1946</text>
+                     </value>
+                  </draw>
+                  <draw h="9.023mm" name="Cell3">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Calibri"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Mom</text>
+                     </value>
+                  </draw>
+                  <draw h="9.023mm" name="Cell4">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Calibri"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>$ 6,000</text>
+                     </value>
+                  </draw>
+                  <draw h="9.023mm" name="Cell5">
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Pension</text>
+                     </value>
+                  </draw>
+                  <subform layout="lr-tb">
+                     <exclGroup name="RadioButtonList" w="31.852mm" layout="lr-tb">
+                        <?templateDesigner itemValuesSpecified 1?>
+                        <field w="12.7mm" h="6mm" name="ExampleYes">
+                           <ui>
+                              <checkButton>
+                                 <border>
+                                    <edge/>
+                                    <fill/>
+                                 </border>
+                              </checkButton>
+                           </ui>
+                           <font typeface="Myriad Pro"/>
+                           <margin leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption placement="right" reserve="7.0196mm">
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Yes</text>
+                              </value>
+                           </caption>
+                           <items>
+                              <text>0</text>
+                           </items>
+                           <value>
+                              <text>0</text>
+                           </value>
+                        </field>
+                        <field w="12.7mm" h="6mm" name="ExampleNo">
+                           <ui>
+                              <checkButton>
+                                 <border>
+                                    <edge/>
+                                    <fill/>
+                                 </border>
+                              </checkButton>
+                           </ui>
+                           <font typeface="Myriad Pro"/>
+                           <margin leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption placement="right" reserve="7.285mm">
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>No</text>
+                              </value>
+                           </caption>
+                           <items>
+                              <text>1</text>
+                           </items>
+                        </field>
+                        <?templateDesigner expand 1?></exclGroup>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.175mm"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <field name="Cell7" h="9.023mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Calibri"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </border>
+                     <value>
+                        <text>N/A</text>
+                     </value>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+                     </event>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="192,192,192"/>
+                     </fill>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <overflow leader="HeaderRow"/>
+               <subform layout="row" name="Row2" y="0mm">
+                  <assist role="TR"/>
+                  <field name="DependentName" minH="10mm" y="0mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="DOBDependent" y="0mm" minH="10mm">
+                     <ui>
+                        <dateTimeEdit>
+                           <margin/>
+                        </dateTimeEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <date/>
+                     </value>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <format>
+                        <picture>date{MM/DD/YYYY}</picture>
+                     </format>
+                  </field>
+                  <field name="Relationship" y="0mm" minH="10mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <field name="TotalIncome" y="0mm" minH="10mm">
+                     <ui>
+                        <numericEdit>
+                           <margin/>
+                        </numericEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <format>
+                        <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+                     </format>
+                  </field>
+                  <field name="Source" y="0mm" minH="10mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                  </field>
+                  <subform layout="lr-tb" w="1.254014in" y="0mm">
+                     <exclGroup name="TaxRadioButtonList" w="31.852mm" layout="lr-tb">
+                        <?templateDesigner itemValuesSpecified 1?>
+                        <field w="12.7mm" h="6mm" name="TaxYes">
+                           <ui>
+                              <checkButton>
+                                 <border>
+                                    <edge/>
+                                    <fill/>
+                                 </border>
+                              </checkButton>
+                           </ui>
+                           <font typeface="Myriad Pro"/>
+                           <margin leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption placement="right" reserve="6.7mm">
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Yes</text>
+                              </value>
+                           </caption>
+                           <items>
+                              <text>0</text>
+                           </items>
+                        </field>
+                        <field w="12.7mm" h="6mm" name="TaxNo">
+                           <ui>
+                              <checkButton>
+                                 <border>
+                                    <edge/>
+                                    <fill/>
+                                 </border>
+                              </checkButton>
+                           </ui>
+                           <font typeface="Myriad Pro"/>
+                           <margin leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption placement="right" reserve="6.7mm">
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>No</text>
+                              </value>
+                           </caption>
+                           <items>
+                              <text>1</text>
+                           </items>
+                        </field>
+                        <?templateDesigner expand 1?></exclGroup>
+                     <para vAlign="middle" hAlign="center"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.175mm"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <field name="CollegeList" y="0mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1778mm"/>
+                     </border>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+                     </event>
+                  </field>
+                  <occur max="100"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
+            <draw name="Text8" w="203.2mm" h="4.283mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 573166 9307 0 0 1417 1417 0 0?></draw>
+            <draw name="Text8" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <draw w="200.025mm" h="9.525mm" name="Text_Table2">
+               <font typeface="Myriad Pro" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;letter-spacing:0in">*If you report zero income for a dependent other than your child or spouse,<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">attach an explanation.<span style="xfa-spacerun:yes"> </span></span> For example, if you support your niece and you have not been appointed her legal guardian, explain why her parents do not provide support.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subform name="TablePanel2" w="203.2mm" h="23.837mm">
+            <draw name="Heading_1" w="69.85mm" h="12.994mm" x="3.175mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Full name of spouse (if married) </text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 195166 33999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 33 Full name of spouse (if married)  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <draw name="Heading_2" w="25.4mm" h="12.994mm" x="73.025mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Date of birth </text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 69166 33999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 14 Date of birth  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <draw name="Heading_3" w="60.325mm" h="12.994mm" x="98.425mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> College Attending </text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 168166 33999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 18 College Attending  0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <draw name="Heading_4" w="41.275mm" h="12.994mm" x="158.75mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Enroll in 6 or more units?</text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 114166 33999 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 20 Enroll in 6 or more  0 1417 8917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 6 units? 0 1417 20917 255 255 255 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <field name="FullName_Spouse" y="12.7mm" w="69.85mm" x="3.175mm" minH="9.525mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+            </field>
+            <field name="DOB" y="12.7mm" x="73.025mm" w="25.4mm" minH="9.525mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="CollegeAttending" y="12.7mm" x="98.425mm" w="60.325mm" minH="9.525mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+            </field>
+            <draw name="Enroll" y="12.7mm" x="158.75mm" w="41.275mm" h="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 111330 21330 0 0 2835 2835 0 0?></draw>
+            <subform layout="lr-tb" w="1.254014in" x="165.1mm" y="22.225mm">
+               <para vAlign="middle" hAlign="center"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <exclGroup name="EnrollYesNo" w="31.852mm" x="158.75mm" y="12.7mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="12.7mm" h="6mm" name="EnrollYes">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="6.7mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Yes</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>0</text>
+                  </items>
+               </field>
+               <field w="12.7mm" h="6mm" name="EnrollNo" x="12.7mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="6.7mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>No</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 1?></exclGroup>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (aidYear.rawValue != "2024"){
+this.presence = "visible"; 
+}
+else {
+this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text8" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Explanation" w="196.85mm" minH="14.412mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="5.1434mm" placement="top">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Explanation:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text8" w="12.7mm" h="4.638mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 33166 10313 0 0 1417 1417 0 0?></draw>
+         <subform name="SignaturePanel" w="203.212mm" h="44.45mm">
+            <draw name="Certification_Text" w="7.875083in" h="44.451mm">
+               <ui>
+                  <textEdit>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">CERTIFICATION:</p><p style="font-size:9pt;letter-spacing:0in">By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I (we) agree to provide additional proof of the information I (we) have reported, if requested to do so. I (we) also certify that I (we) have read the term sand conditions section of the CSU Fullerton, Financial Aid website (<a href="http://www.fullerton.edu/financialaid/infoTerms.php">http://www.fullerton.edu/financialaid/infoTerms.php</a>)<span style="font-weight:bold">* Signatures are required.</span></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;letter-spacing:0in">*Warning<span style="font-weight:normal">: If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="8pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge thickness="0.4826mm"/>
+                  <corner thickness="0.483mm"/>
+               </border>
+            </draw>
+            <field name="studentIDNumber" y="25.4mm" x="149.225mm" w="47.625mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="11.64mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+               </caption>
+            </field>
+            <field name="studentSignature" y="25.4mm" w="98.425mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="37.2017mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student’s Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="studentScribbleSignature" w="133.35mm" h="9mm" y="15.875mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="37.2017mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Student E-signature</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner presence="hidden"/>
+                  <corner/>
+               </border>
+            </field>
+            <field name="ipAddress" y="15.875mm" x="133.35mm" w="63.5mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="18.2076mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> IP Address</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+               </caption>
+            </field>
+            <field name="studentSignDate" y="25.4mm" x="98.425mm" w="50.8mm" h="8.999mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="11.9647mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Date</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 240 64 00030004001100120018001C0026002F00440045004B0057005E00640068007A0102010F0110011A011E01280150015A015D0169016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC035503570358035E035F036C0372037E037F038E03A803EC03ED03EE03EF03F003F103F203F5 ABCDEFIMNOPSTUYabcdefghijlmnopqrstuvwxyz,:.“”/-()*$01234569?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 212 55 00030004001100120018001C0026002C002F003E00440045004B0057005A005E0064006800740102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C601C7034D035503570358035B0372037E037F038E039603F2 ABCDEFHILMNOPRSTUWabcdefghiklmnopqrstuvxy?,:.’-()*'6?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 104 26 0003002F00640102010F0110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C703550358 ITabcdefghilmnoprstuvwy,.?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 104 26 0003002F005E006401020110011A011E0128015A015D016F01750176017D0189018C0190019A01B501C001C7038E03EC03ED03EE ISTacdefhilmnoprstuvy*012?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 96 24 0001001100130015001B00220024002500260027002F00310034003A00420046004A004D004F00500051005400550059 024:ACDEFNPSYaeilnopstx?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 60 15 0003002400260027004400460048004C004F005000510052005300550057 ACDaceilmnoprt?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\F0CDEP-Student Dependents Verification.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 82?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-05-31T04:59:39Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:69926c23-2304-4114-a37e-385d2f9a09c8</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

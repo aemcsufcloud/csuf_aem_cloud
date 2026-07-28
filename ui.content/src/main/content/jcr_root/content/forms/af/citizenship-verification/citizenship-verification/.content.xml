@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-10-01T05:05:32.734-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-10-01T05:05:56.478-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/print_only_form_template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Citizenship Verification"
+        jcr:uuid="d724b37c-f4c4-4808-baa9-3c528c13b795"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            fd:version="1.1"
+            jcr:lastModified="{Date}2023-03-01T21:41:36.552-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="Attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.citizenship_verification_citizenship_verification"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/citizenship-verification/Citizenship_Verification.xdp"
+            dorType="select"
+            enableFocusOnFirstField="{Boolean}true"
+            enableLayoutLayer="false"
+            enablePortalSubmit="true"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            redirect="/content/formsPortal/citizenship-verification-thank-you"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="Thank you for submitting the form."
+            thankYouOption="page"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/citizenship-verification"
+            xsdRef="/content/dam/formsanddocuments/citizenship-verification/Citizenship_Verification.xsd"
+            xsdRootElement="CitizenshipVerification">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                    nonNavigable="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                    <basicinformation_cop
+                        jcr:lastModified="{Date}2022-02-03T04:09:08.016-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Student Information"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="FormHeadText"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}true">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextdraw_463201574
+                                jcr:created="{Date}2022-06-01T23:17:21.146-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-01T23:17:52.633-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                colspan="5"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_4632015741654150641264"
+                                textIsRich="true"/>
+                            <caseid1589953404287_
+                                jcr:lastModified="{Date}2022-05-19T02:00:10.530+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Case ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/caseId"
+                                colspan="1"
+                                guideNodeClass="guideTextBox"
+                                name="caseId"
+                                textIsRich="[true,true,true]">
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.StudentInformationPanel.caseId&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;caseId&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_caseId_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_caseId_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </caseid1589953404287_>
+                            <guidetextdraw_463201
+                                jcr:created="{Date}2022-06-01T23:17:21.146-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-14T23:38:39.895-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                colspan="5"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_4632015741654150641264_copy_1"
+                                textIsRich="true"/>
+                            <guidetextdraw_copy_1
+                                jcr:created="{Date}2022-02-01T03:45:36.360-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-06-15T00:16:24.586-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p id=&quot;mainHeadingText&quot;>&lt;b>F0CITZ&lt;/b>&lt;/p>&#xa;"
+                                colspan="1"
+                                guideNodeClass="guideTextDraw"
+                                name="headingText_copy_1"
+                                textIsRich="true"/>
+                            <guidetextdraw
+                                jcr:created="{Date}2022-02-01T03:45:36.360-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-19T01:53:45.884+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p id=&quot;f0citzHeadingText&quot; style=&quot;text-align: center;&quot;>&lt;b>CITIZENSHIP VERIFICATION(2021-22)&lt;/b>&lt;/p>&#xa;"
+                                colspan="6"
+                                guideNodeClass="guideTextDraw"
+                                name="headingText"
+                                textIsRich="true"/>
+                            <guidetextdraw_copy
+                                jcr:lastModified="{Date}2022-04-18T17:41:42.995+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p style=&quot;text-align: center;&quot;>&lt;b>F1HSZS&lt;/b>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="6"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                    </basicinformation_cop>
+                    <panel_564360763
+                        cq:cssClass="guide-1608104020427"
+                        jcr:created="{Date}2020-12-15T23:16:23.442-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-15T23:22:56.709-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Section"
+                        sling:resourceType="fd/af/components/panel"
+                        completionExpReq="{Boolean}false"
+                        cssStyle=".guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon:hover{&#xa;background:#084B8A;&#xa;color:#ffffff;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon,.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li.stepped.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.stepped.active > a.guideTopNavIcon,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators > li.active > a.guideTopNavIcon:hover,.guide-1608104020427  .guideVerticalTabbedPanelLayout .tab-navigators-vertical .tab-navigators-vertical li.active > a.guideTopNavIcon:hover{&#xa;background:084B8A;&#xa;color:#ffffff;&#xa;border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideVerticalTabbedPanelLayout .tab-navigators > li > a.guideTopNavIcon{&#xa;color:#ffffff;&#xa;background:#00274c;&#xa;border-top-right-radius: 50px 20px&#xa;}&#xa;.guide-1608104020427 .guideLayout.guideVerticalTabbedPanelLayout{&#xa;padding-right:5px;&#xa;padding-bottom:5px;&#xa;padding-left:5px;&#xa;padding-top:5px;&#xa;&#xa;}&#xa;.guide-1608104020427 .afTabTopPanel{&#xa;border-right-width:1px;&#xa;border-bottom-width:1px;&#xa;border-left-width:1px;&#xa;border-top-width:1px;&#xa;border-style:solid;&#xa;border-color:#AAAAAA;&#xa;&#xa;}&#xa;"
+                        guideNodeClass="guidePanel"
+                        name="formContainer"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/panel/verticalTabbedPanelLayout"
+                            columns="1"
+                            enableLayoutOptimization="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <panel
+                                jcr:created="{Date}2020-12-15T23:17:02.431-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-02-03T23:03:43.388-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student Information"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="StudentInformation"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="3"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_copy_c
+                                        jcr:created="{Date}2019-04-25T01:38:24.305-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-01T23:10:18.691-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Federal law requires a recipient of financial aid to be either a United States citizen or an eligible non-citizen. In order to verify your status as eligible for federal aid, &lt;b>complete this form and attach the required documents.&lt;/b>&amp;nbsp;Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.&amp;nbsp;&lt;/p>&#xa;"
+                                        colspan="3"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1556181504365"
+                                        textIsRich="true"/>
+                                    <CWID1608528569867
+                                        cq:cssClass="guide-1608532614727"
+                                        jcr:lastModified="{Date}2022-05-19T02:00:18.861+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* CWID"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/cwid"
+                                        cssStyle=".guide-1608532614727 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        displayIsSameAsValidate="true"
+                                        displayPatternType="custom"
+                                        displayPictureClause="^[0-9]*$"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="true"
+                                        name="cwid"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.cwid&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;cwid&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_cwid_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_cwid_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CWID1608528569867>
+                                    <FName1608528551624
+                                        cq:cssClass="guide-1608532599958"
+                                        jcr:lastModified="{Date}2022-05-19T02:00:35.662+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* First Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/firstName"
+                                        cssStyle=".guide-1608532599958 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="firstName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                        </style>
+                                    </FName1608528551624>
+                                    <LastName1608528567620
+                                        cq:cssClass="guide-1608546608681"
+                                        jcr:lastModified="{Date}2022-05-19T02:00:48.579+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="* Last Name"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/lastName"
+                                        cssStyle=".guide-1608546608681 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="lastName"
+                                        textIsRich="[true,true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                        </style>
+                                    </LastName1608528567620>
+                                    <Date_11611907440915
+                                        cq:cssClass="guide-1611922333158"
+                                        jcr:lastModified="{Date}2022-06-02T10:26:06.106-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        bindRef="/CitizenshipVerification/Date_1"
+                                        cssStyle=".guide-1611922333158 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        guideNodeClass="guideDatePicker"
+                                        mandatory="true"
+                                        name="Date_1"
+                                        textIsRich="[true,true]">
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.Date_1&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;Date_1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_Date_1_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_Date_1_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.Date_1&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;Date_1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_Date_1_init1&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_Date_1_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </Date_11611907440915>
+                                    <financialAidYear1644932986771
+                                        jcr:lastModified="{Date}2022-05-19T02:00:58.339+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Financial Aid Year"
+                                        sling:resourceType="fd/af/components/guidedropdownlist"
+                                        bindRef="/CitizenshipVerification/financialAidYear"
+                                        guideNodeClass="guideDropDownList"
+                                        mandatory="true"
+                                        name="financialAidYear"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentInformation.financialAidYear&quot;\,&quot;type&quot;:&quot;DROPDOWN|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;financialAidYear&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_financialAidYear_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_financialAidYear_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </financialAidYear1644932986771>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2022-03-03T10:31:11.772-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-03-03T10:31:33.757-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1646332271967"
+                                        textIsRich="true"/>
+                                </items>
+                                <fd:rules jcr:primaryType="nt:unstructured"/>
+                            </panel>
+                            <panel_1194576218_cop
+                                jcr:created="{Date}2021-07-30T03:08:50.051-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-05-18T11:34:57.502+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Citizenship Details"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="StudentCitizenshipDetailsPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw
+                                        jcr:created="{Date}2021-07-30T03:10:16.641-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-07-30T03:10:53.970-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>&lt;u>ACTION TO COMPLETE FORM: &lt;/u>&lt;/b>&lt;/p>&#xa;&lt;p>Select &lt;b>one &lt;/b>of the categories below which best describes your status:&amp;nbsp;&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1627639816687"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_1165735475
+                                        jcr:created="{Date}2021-07-30T03:12:37.130-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-07-30T03:13:30.668-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>I. U.S CITIZEN* (check only one)&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_11657354751627639957182"
+                                        textIsRich="true"/>
+                                    <BirthCertificate1627640467442
+                                        jcr:lastModified="{Date}2021-07-30T03:22:16.797-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Birth Certificate"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/BirthCertificate"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="BirthCertificate"
+                                        options="[1=Birth Certificate]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.BirthCertificate&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;BirthCertificate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_BirthCertificate_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_BirthCertificate_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </BirthCertificate1627640467442>
+                                    <USPassport1627640471497
+                                        jcr:lastModified="{Date}2021-07-30T03:22:47.144-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="US Passport"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/USPassport"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="USPassport"
+                                        options="[1=U.S. Passport]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.USPassport&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;USPassport&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_USPassport_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_USPassport_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </USPassport1627640471497>
+                                    <NaturalizationCertification1627640474909
+                                        jcr:lastModified="{Date}2021-07-30T03:23:03.157-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Naturalization Certification"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/NaturalizationCertification"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="NaturalizationCertification"
+                                        options="[1=Naturalization Certification]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.NaturalizationCertification&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;NaturalizationCertification&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_NaturalizationCertification_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_NaturalizationCertification_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </NaturalizationCertification1627640474909>
+                                    <naturalizationcertif
+                                        jcr:lastModified="{Date}2022-05-19T02:05:21.703+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="certificationOfCitizenship"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/certificationOfCitizenship"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="certificationOfCitizenship"
+                                        options="[1=Certification of Citizenship]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.certificationOfCitizenship&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;certificationOfCitizenship&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_certificationOfCitizenship_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_certificationOfCitizenship_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </naturalizationcertif>
+                                    <guidetextdraw_1067782992
+                                        jcr:created="{Date}2021-07-30T03:23:34.830-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-05-18T15:01:00.044+05:30"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>*The citizenship status you reported on your Free Application for Federal Student Aid (FAFSA) does not match the citizenship status on file with the Social Security Administration.You must take proof of your U.S. citizenship and update your status with the Social Security Administration.&lt;/p>&#xa;&lt;p>To locate the closest Social Security Office go to: &lt;a href=&quot;https://secure.ssa.gov/apps6z/FOLO/fo001.jsp&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-71&quot;>https://secure.ssa.gov/apps6z/FOLO/fo001.jsp&lt;/a>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_10677829921627640614887"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_116573
+                                        jcr:created="{Date}2021-07-30T03:12:37.130-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-07-30T03:29:36.661-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>II. U.S &amp;nbsp;PERMANENT RESIDENT (check only one)&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_11657354751627639957182_copy_1"
+                                        textIsRich="true"/>
+                                    <AlienRegistrationCard1627640984779
+                                        jcr:lastModified="{Date}2021-07-30T03:37:46.036-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Alien Registration Card"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/AlienRegistrationCard"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="AlienRegistrationCard"
+                                        options="[1=Alien Registration Card I-55I]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.AlienRegistrationCard&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;AlienRegistrationCard&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_AlienRegistrationCard_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_AlienRegistrationCard_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </AlienRegistrationCard1627640984779>
+                                    <Passportstamped1627640991809
+                                        jcr:lastModified="{Date}2023-03-02T01:33:52.937-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Passportstamped"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/Passportstamped"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="Passportstamped"
+                                        options="[1=Passport stamped &quot;Processed for I-55I&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.Passportstamped&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Passportstamped&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_Passportstamped_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_Passportstamped_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </Passportstamped1627640991809>
+                                    <DepartureRecord1627640995856
+                                        jcr:lastModified="{Date}2023-03-02T01:34:36.987-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Departure Record"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/DepartureRecord"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="DepartureRecord"
+                                        options="[1=Departure Record (Form I-94) stamped &quot;Processed for I-55I&quot; or &quot;Temporary Form I-55I&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.DepartureRecord&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;DepartureRecord&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_DepartureRecord_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_DepartureRecord_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </DepartureRecord1627640995856>
+                                    <OtherUSPerm1627641000323
+                                        jcr:lastModified="{Date}2021-07-30T03:39:07.448-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Other US Perm"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/OtherUSPerm"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="OtherUSPerm"
+                                        options="[1=Other]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.OtherUSPerm&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;OtherUSPerm&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherUSPerm_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherUSPerm_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </OtherUSPerm1627641000323>
+                                    <USPermTextBox1627903018507
+                                        jcr:lastModified="{Date}2022-06-02T03:35:07.349-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="(List Type of Document)"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/USPermTextBox"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="USPermTextBox"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextdraw_116573_2017436836
+                                        jcr:created="{Date}2021-07-30T03:12:37.130-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-07-30T03:42:27.875-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>III.&amp;nbsp;OTHER ELIGIBLE NON-CITIZEN (check only one)&lt;/b>&lt;/p>&#xa;&lt;p>&lt;b>Attach copy of your Departure Record (Form I-94) with a stamp indicating one of the following:&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_11657354751627639957182_copy_1_copy_1"
+                                        textIsRich="true"/>
+                                    <Refugee1627641652431
+                                        jcr:lastModified="{Date}2023-02-22T02:19:27.115-08:00"
+                                        jcr:lastModifiedBy="jluzzi"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Refugee"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/Refugee"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="Refugee"
+                                        options="[1=&quot;Refugee&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.Refugee&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;Refugee&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_Refugee_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_Refugee_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </Refugee1627641652431>
+                                    <AsylumGranted1627641655388
+                                        jcr:lastModified="{Date}2023-02-22T02:19:44.053-08:00"
+                                        jcr:lastModifiedBy="jluzzi"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Asylum Granted"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/AsylumGranted"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="AsylumGranted"
+                                        options="[1=&quot;Asylum Granted&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.AsylumGranted&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;AsylumGranted&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_AsylumGranted_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_AsylumGranted_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </AsylumGranted1627641655388>
+                                    <IndefiniteParole1627641659547
+                                        jcr:lastModified="{Date}2023-02-22T02:20:17.343-08:00"
+                                        jcr:lastModifiedBy="jluzzi"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Indefinite Parole"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/IndefiniteParole"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="IndefiniteParole"
+                                        options="[1=&quot;Indefinite Parole&quot; and/or &quot;Humanitarian Parole&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.IndefiniteParole&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;IndefiniteParole&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_IndefiniteParole_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_IndefiniteParole_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </IndefiniteParole1627641659547>
+                                    <CubanHaitianEntrant1627641664918
+                                        jcr:lastModified="{Date}2023-02-22T02:20:30.948-08:00"
+                                        jcr:lastModifiedBy="jluzzi"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Cuban Haitian Entrant"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/CubanHaitianEntrant"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="CubanHaitianEntrant"
+                                        options="[1=&quot;Cuban-Haitian Entrant\, Status Pending&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.CubanHaitianEntrant&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;CubanHaitianEntrant&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_CubanHaitianEntrant_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_CubanHaitianEntrant_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CubanHaitianEntrant1627641664918>
+                                    <CurrentFormI6881627641668586
+                                        jcr:lastModified="{Date}2023-02-22T02:20:46.185-08:00"
+                                        jcr:lastModifiedBy="jluzzi"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Current FormI 688"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/CurrentFormI688"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="CurrentFormI688"
+                                        options="[1=Current Form I-688 &quot;Temporary Resident Card&quot;]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.CurrentFormI688&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;CurrentFormI688&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_CurrentFormI688_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_CurrentFormI688_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </CurrentFormI6881627641668586>
+                                    <OtherNonCitizen1627641672008
+                                        jcr:lastModified="{Date}2021-07-30T03:45:24.891-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Other Non Citizen"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/OtherNonCitizen"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="OtherNonCitizen"
+                                        options="[1=Other]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.OtherNonCitizen&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;OtherNonCitizen&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherNonCitizen_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherNonCitizen_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </OtherNonCitizen1627641672008>
+                                    <EligibleNonCitizenTextBox1627903029054
+                                        jcr:lastModified="{Date}2022-06-02T03:35:21.595-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="(List Type of Document)"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/EligibleNonCitizenTextBox"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="EligibleNonCitizenTextBox"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextdraw_116573_1481387999
+                                        jcr:created="{Date}2021-07-30T03:12:37.130-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-07-30T04:45:12.747-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>IV. NON-ELIGIBLE NON-CITIZEN** (check only one) &lt;/b>&lt;/p>&#xa;&lt;p>&lt;b>**If you are in any of the following categories, you are not eligible for federal aid.&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw_11657354751627639957182_copy_1_copy_1_copy_1"
+                                        textIsRich="true"/>
+                                    <EmploymentAuth1627645729877
+                                        jcr:lastModified="{Date}2023-02-22T20:26:42.394-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="employmentAuth"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/employmentAuth"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="employmentAuth"
+                                        options="[1=I-688A\, I-688B\, or 766 &quot;Employment Authorization&quot; card]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.EmploymentAuth&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;employmentAuth&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_employmentAuth_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_employmentAuth_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </EmploymentAuth1627645729877>
+                                    <ApplSubmitted1627645733523
+                                        jcr:lastModified="{Date}2021-07-30T04:51:36.603-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Appl Submitted"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/ApplSubmitted"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="ApplSubmitted"
+                                        options="[1=Application submitted for permanent resident status and not in category listed above]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.ApplSubmitted&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;ApplSubmitted&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_ApplSubmitted_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_ApplSubmitted_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </ApplSubmitted1627645733523>
+                                    <F1F2SeriesVisa1627645736058
+                                        jcr:lastModified="{Date}2021-07-30T04:51:02.985-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="F 1F 2 Series Visa"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/F1F2SeriesVisa"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="F1F2SeriesVisa"
+                                        options="[1=F1\, F2\, J1\, J2 or G series visa]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.F1F2SeriesVisa&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;F1F2SeriesVisa&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_F1F2SeriesVisa_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_F1F2SeriesVisa_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </F1F2SeriesVisa1627645736058>
+                                    <OtherNonEligibleNonCitizien1627645738350
+                                        jcr:lastModified="{Date}2021-07-30T04:51:28.821-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Other Non Eligible Non Citizien"
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/CitizenshipVerification/OtherNonEligibleNonCitizien"
+                                        dataType="integer"
+                                        exclusiveMaximum="{Boolean}false"
+                                        exclusiveMinimum="{Boolean}false"
+                                        guideNodeClass="guideCheckBox"
+                                        hideTitle="true"
+                                        maximum="127"
+                                        minimum="-128"
+                                        name="OtherNonEligibleNonCitizien"
+                                        options="[1=Other]"
+                                        textIsRich="[true,true]">
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.StudentCitizenshipDetailsPanel.OtherNonEligibleNonCitizien&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;OtherNonEligibleNonCitizien&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherNonEligibleNonCitizien_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_OtherNonEligibleNonCitizien_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </OtherNonEligibleNonCitizien1627645738350>
+                                    <NonEligibleNonCitizenTextBox1627903035228
+                                        jcr:lastModified="{Date}2022-06-02T03:35:36.759-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="(List Type of Document)"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        bindRef="/CitizenshipVerification/NonEligibleNonCitizenTextBox"
+                                        enabled="{Boolean}false"
+                                        guideNodeClass="guideTextBox"
+                                        name="NonEligibleNonCitizenTextBox"
+                                        textIsRich="[true,true,true]"/>
+                                </items>
+                            </panel_1194576218_cop>
+                            <supportingdocuments_
+                                jcr:lastModified="{Date}2022-05-18T14:36:32.966-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supporting Documents"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="SupportingDocumentsPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false"
+                                visible="{Boolean}true">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextdraw_copy_c
+                                        jcr:created="{Date}2020-05-19T21:23:41.266-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-02-06T22:51:51.581-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Supporting Documents&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw1589948621360"
+                                        textIsRich="true"/>
+                                    <guidetextdraw
+                                        jcr:created="{Date}2020-09-16T00:33:06.000-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-09T22:56:40.327-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;color: rgb(255, 0, 0);&quot;>&lt;b>Please Note:&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Attachment does not support following special characters / \\ : * ? &amp;amp; { } ; [ ]&lt;/li>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>Only PDF files are allowed!&lt;/li>&#xa;&lt;li style=&quot;color: rgb(255, 0, 0);&quot;>At least one supporting document is required.&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="supDocErrorMessage"
+                                        text="&lt;p>The text will appear here&lt;/p>&#xa;"
+                                        textIsRich="true"/>
+                                    <guidetextdraw_1972492335
+                                        jcr:created="{Date}2020-09-17T04:22:19.247-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2021-08-30T03:44:22.017-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p style=&quot;color: rgb(255, 0, 0);&quot;>&lt;b>Please attach supporting document(s)&lt;/b>&lt;/p>&#xa;"
+                                        colspan="6"
+                                        guideNodeClass="guideTextDraw"
+                                        name="nonMedSupDocMessage"
+                                        textIsRich="true"/>
+                                    <guidefileupload
+                                        cq:cssClass="guide-1647840463996"
+                                        jcr:created="{Date}2020-09-12T09:27:05.700-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-09T06:01:07.584-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 1"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        cssStyle=".guide-1647840463996 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc1"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                mandatory="true"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <style jcr:primaryType="nt:unstructured">
+                                            <af_fielderrormessage
+                                                jcr:primaryType="nt:unstructured"
+                                                default_x0023_default="[color:#FF4136]"/>
+                                        </style>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SupportingDocumentsPanel.supportDoc1&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc1&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc1_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc1_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload>
+                                    <guidefileupload_375784259
+                                        jcr:created="{Date}2020-09-12T09:28:19.750-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-09T06:01:41.384-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 2"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc2"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SupportingDocumentsPanel.supportDoc2&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc2&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc2_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc2_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload_375784259>
+                                    <guidefileupload_1478215996
+                                        jcr:created="{Date}2020-09-14T01:58:06.709-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-06-09T06:02:01.264-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supporting Document 3"
+                                        sling:resourceType="fd/af/components/guidefileupload"
+                                        buttonText="Attach"
+                                        dorExclusion="true"
+                                        guideNodeClass="guideFileUpload"
+                                        mimeType="[ image/*, application/pdf]"
+                                        name="supportDoc3"
+                                        textIsRich="[true,true]">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fileattachment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="fileAttachment"/>
+                                            <comment
+                                                jcr:primaryType="nt:unstructured"
+                                                guideNodeClass="guideCompositeFieldItem"
+                                                name="comment"/>
+                                        </items>
+                                        <fd:rules
+                                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SupportingDocumentsPanel.supportDoc3&quot;\,&quot;type&quot;:&quot;FILE ATTACHMENT|FIELD|AFCOMPONENT|BINARY&quot;\,&quot;name&quot;:&quot;supportDoc3&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc3_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_supportDoc3_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </guidefileupload_1478215996>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.LeaveOfAbsencePanel.Non-MedicalSupportingDocumentsPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;SupportingDocumentsPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_SupportingDocumentsPanel_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_SupportingDocumentsPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </supportingdocuments_>
+                            <panel_928599710
+                                jcr:created="{Date}2020-12-15T23:18:14.611-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-12-20T20:46:17.010-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Signature and Acknowledgement"
+                                sling:resourceType="fd/af/components/panel"
+                                guideNodeClass="guidePanel"
+                                name="SignatureSection"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="1"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <panel_820626414
+                                        jcr:created="{Date}2020-12-31T00:31:38.478-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-12-31T00:32:54.723-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Student Signature Section"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        name="StudentSignaturePanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextdraw_copy
+                                                jcr:created="{Date}2021-01-03T20:41:20.885-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2021-06-30T07:03:19.624-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Student Signature and Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988"
+                                                textIsRich="true"/>
+                                            <guidetextdraw_copy_c_1963088604
+                                                jcr:created="{Date}2021-01-03T20:41:20.885-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-03-21T03:02:06.252-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Warning:&lt;/b> If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988_copy_2"
+                                                textIsRich="true"/>
+                                            <guidetextdraw_copy_c
+                                                jcr:created="{Date}2021-01-03T20:41:20.885-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-03-08T04:29:09.224-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>CERTIFICATION:&lt;/b>&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988_copy_1"
+                                                textIsRich="true"/>
+                                            <StudentCB1609822008080
+                                                cq:cssClass="guide-1611922315694"
+                                                jcr:lastModified="{Date}2023-02-22T20:30:55.210-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Student CB"
+                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                colspan="1"
+                                                cssStyle=".guide-1611922315694 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideCheckBox"
+                                                hideTitle="true"
+                                                name="StudentCB"
+                                                options="[1=]"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignaturePanel.StudentCB&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;StudentCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_StudentCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_StudentCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </StudentCB1609822008080>
+                                            <guidetextdraw
+                                                jcr:created="{Date}2022-03-23T11:55:51.676-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2023-02-22T02:24:15.500-08:00"
+                                                jcr:lastModifiedBy="jluzzi"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I agree to provide additional proof of the information reported, if requested to do so. I also certify that I have read the terms and conditions section of the CSU Fullerton, Financial Aid website (&lt;a href=&quot;http://www.fullerton.edu/financialaid/info/Terms.php&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-21&quot;>http://www.fullerton.edu/financialaid/info/Terms.php&lt;/a>)&lt;/p>&#xa;"
+                                                colspan="3"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1648061751822"
+                                                textIsRich="true"
+                                                visible="{Boolean}true"/>
+                                            <guidescribble
+                                                cq:cssClass="guide-1651781980459"
+                                                jcr:created="{Date}2022-04-18T22:04:19.114-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-06-01T23:11:07.076-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Student E-signature"
+                                                sling:resourceType="fd/af/components/guidescribble"
+                                                aspectRatio="6.8888"
+                                                bindRef="/CitizenshipVerification/studentScribleSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1651781980459 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideScribble"
+                                                mandatory="true"
+                                                name="studentScribleSignature"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </guidescribble>
+                                            <guidetextbox
+                                                jcr:created="{Date}2022-04-18T22:05:02.081-07:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-05-19T02:07:02.283+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="IP Address"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/CitizenshipVerification/ipAddress"
+                                                enabled="{Boolean}false"
+                                                guideNodeClass="guideTextBox"
+                                                name="ipAddress"
+                                                textIsRich="[true,true,true]"/>
+                                            <studentname160811450
+                                                cq:cssClass="guide-1608532672760"
+                                                jcr:lastModified="{Date}2022-06-02T08:52:44.957-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Student Name"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/CitizenshipVerification/studentSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1608532672760 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="studentSignature"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignaturePanel.StudentName_1&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;studentSignature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_studentSignature_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_studentSignature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentname160811450>
+                                            <studentsigndate16085
+                                                cq:cssClass="guide-1608532684413"
+                                                jcr:lastModified="{Date}2022-05-19T02:02:01.863+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Date"
+                                                sling:resourceType="fd/af/components/guidedatepicker"
+                                                bindRef="/CitizenshipVerification/studentSignDate"
+                                                cssStyle=".guide-1608532684413 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDatePicker"
+                                                mandatory="true"
+                                                name="studentSignDate"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.StudentSignaturePanel.StudentSignDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;studentSignDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_studentSignDate_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_studentSignDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </studentsigndate16085>
+                                        </items>
+                                    </panel_820626414>
+                                    <panel_655746086
+                                        jcr:created="{Date}2021-01-03T20:36:23.541-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2022-02-04T01:37:37.158-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Financial Signature Panel"
+                                        sling:resourceType="fd/af/components/panel"
+                                        guideNodeClass="guidePanel"
+                                        name="FinancialSignaturePanel"
+                                        textIsRich="true"
+                                        validateOnStepCompletion="{Boolean}false">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            columns="4"
+                                            nonNavigable="{Boolean}true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <guidetextdraw_copy
+                                                jcr:created="{Date}2021-01-03T20:41:20.885-08:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2022-02-03T23:08:56.271-08:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="fd/af/components/guidetextdraw"
+                                                _value="&lt;p>&lt;b>Financial Aid Signature and Acknowledgement&lt;/b>&lt;/p>&#xa;"
+                                                colspan="4"
+                                                guideNodeClass="guideTextDraw"
+                                                name="textdraw1609735280988"
+                                                textIsRich="true"/>
+                                            <EvaluatorsCB1609735064353
+                                                cq:cssClass="guide-1611922319507"
+                                                jcr:lastModified="{Date}2022-03-23T10:45:05.278-07:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="evaluator_signChk"
+                                                sling:resourceType="fd/af/components/guidecheckbox"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                colspan="4"
+                                                cssStyle=".guide-1611922319507 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideCheckBox"
+                                                hideTitle="true"
+                                                mandatory="true"
+                                                name="evaluator_signChk"
+                                                options="[1=Please indicate that you have completed the review]"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                                <fd:rules
+                                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.FinancialSignaturePanel.evaluator_signChk&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;evaluator_signChk&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_evaluator_signChk_valueCommit0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_evaluator_signChk_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                            </EvaluatorsCB1609735064353>
+                                            <EvaluatorsSignature1609735068874
+                                                cq:cssClass="guide-1611922220664"
+                                                jcr:lastModified="{Date}2022-05-19T02:02:19.796+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Signature"
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/CitizenshipVerification/staffSignature"
+                                                colspan="2"
+                                                cssStyle=".guide-1611922220664 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                mandatory="true"
+                                                name="staffSignature"
+                                                textIsRich="[true,true,true]">
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.EvaluatorsSignaturePanel.EvaluatorsSignature&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;staffSignature&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_staffSignature_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_staffSignature_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                            </EvaluatorsSignature1609735068874>
+                                            <EvaluatorsSignDate1609735072224
+                                                cq:cssClass="guide-1654168396487"
+                                                jcr:lastModified="{Date}2022-05-19T02:02:28.759+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Date"
+                                                sling:resourceType="fd/af/components/guidedatepicker"
+                                                bindRef="/CitizenshipVerification/staffSignDate"
+                                                cssStyle=".guide-1654168396487 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideDatePicker"
+                                                mandatory="true"
+                                                name="staffSignDate"
+                                                textIsRich="[true,true]">
+                                                <fd:rules
+                                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.formContainer.SignatureSection.EvaluatorsSignaturePanel.EvaluatorsSignDate&quot;\,&quot;type&quot;:&quot;DATE FIELD|FIELD|AFCOMPONENT|DATE&quot;\,&quot;name&quot;:&quot;staffSignDate&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_staffSignDate_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_staffSignDate_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                                    jcr:primaryType="nt:unstructured"/>
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </EvaluatorsSignDate1609735072224>
+                                            <EvaluatorsRecommend1609735078864
+                                                cq:cssClass="guide-1611922272997"
+                                                jcr:lastModified="{Date}2022-05-19T02:02:40.174+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="* Recommend"
+                                                sling:resourceType="fd/af/components/guideradiobutton"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                bindRef="/CitizenshipVerification/staffDecision"
+                                                colspan="6"
+                                                cssStyle=".guide-1611922272997 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideRadioButton"
+                                                mandatory="true"
+                                                name="staffDecision"
+                                                options="[1=Approve,2=Reject]"
+                                                textIsRich="[true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[color:#FF4136]"/>
+                                                </style>
+                                            </EvaluatorsRecommend1609735078864>
+                                            <EvaluatorsComment1609735075711
+                                                cq:cssClass="guide-1611922222742"
+                                                jcr:lastModified="{Date}2022-05-19T02:02:48.537+05:30"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Comment "
+                                                sling:resourceType="fd/af/components/guidetextbox"
+                                                autofillFieldKeyword="name"
+                                                bindRef="/CitizenshipVerification/staffComment"
+                                                colspan="4"
+                                                cssStyle=".guide-1611922222742 .guideFieldError{&#xa;border-color:#FF4136;&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                                guideNodeClass="guideTextBox"
+                                                multiLine="true"
+                                                name="staffComment"
+                                                textIsRich="[true,true,true]">
+                                                <style jcr:primaryType="nt:unstructured">
+                                                    <af_fielderrormessage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        default_x0023_default="[border-color:#FF4136,color:#FF4136]"/>
+                                                </style>
+                                            </EvaluatorsComment1609735075711>
+                                        </items>
+                                    </panel_655746086>
+                                </items>
+                            </panel_928599710>
+                        </items>
+                        <style jcr:primaryType="nt:unstructured">
+                            <af_tabsontopnavgrp1title
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[background:084B8A,color:#ffffff,cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px]"
+                                default_x0023_active_x0023_ui="[backgroundColor:084B8A]"
+                                default_x0023_default="[cssOverride:border-top-right-radius: 50px 20px,color:#ffffff,background:#00274c]"
+                                default_x0023_default_x0023_ui="[backgroundColor:#00274c]"
+                                default_x0023_hover="[cssOverride:border-bottom: 5px solid #ff6800;&#xa;border-top-right-radius: 50px 20px,background:#084B8A,color:#ffffff]"
+                                default_x0023_hover_x0023_ui="[backgroundColor:#084B8A]"/>
+                            <af_tabsontopnavgrp1
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_active="[cssOverride:background:none !important;&#xa;text-align: center !important;&#xa;]"
+                                default_x0023_active_x0023_ui="[]"/>
+                            <af_tabsontop
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[padding-right:5px,padding-bottom:5px,padding-left:5px,padding-top:5px]"
+                                default_x0023_default_x0023_ui="[paddingPopover:5px,borderWidthPopover:Set]"/>
+                            <af_tabsontopcontentarea
+                                jcr:primaryType="nt:unstructured"
+                                default_x0023_default="[border-right-width:1px,border-bottom-width:1px,border-left-width:1px,border-top-width:1px,border-style:solid,border-color:#AAAAAA]"
+                                default_x0023_default_x0023_ui="[borderWidthPopover:1px]"/>
+                        </style>
+                    </panel_564360763>
+                    <panel
+                        jcr:created="{Date}2022-02-03T22:23:44.798-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-02-07T23:53:09.887-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="HiddenPanel"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="HiddenPanel"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false"
+                        visible="{Boolean}true">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextbox_739183521
+                                jcr:created="{Date}2022-02-10T07:33:01.872-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2022-02-10T07:33:15.838-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="workflow_initiator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                guideNodeClass="guideTextBox"
+                                name="workflow_initiator"
+                                textIsRich="[true,true,true]"/>
+                            <EmailSubject1643957782499
+                                jcr:lastModified="{Date}2022-05-19T02:03:00.134+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email Subject"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/EmailSubject"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="EmailSubject"
+                                textIsRich="[true,true,true]"/>
+                            <StageIndicator1643957789349
+                                jcr:lastModified="{Date}2022-05-19T02:03:10.019+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Stage Indicator"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/StageIndicator"
+                                guideNodeClass="guideTextBox"
+                                name="StageIndicator"
+                                textIsRich="[true,true,true]"/>
+                            <aftiaDescCWID1643957798878
+                                jcr:lastModified="{Date}2022-05-19T02:03:18.807+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Aftia Desc CWID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/aftiaDescCWID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="aftiaDescCWID"
+                                textIsRich="[true,true,true]"/>
+                            <HiddenStudentUserID1643957807267
+                                jcr:lastModified="{Date}2022-05-19T02:03:28.235+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Hidden Student User ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/HiddenStudentUserID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="HiddenStudentUserID"
+                                textIsRich="[true,true,true]"/>
+                            <HiddenStudentEmail1643957819764
+                                jcr:lastModified="{Date}2022-05-19T02:03:35.663+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Hidden Student Email"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/HiddenStudentEmail"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="HiddenStudentEmail"
+                                textIsRich="[true,true,true]"/>
+                            <HiddenStudentName1643971185502
+                                jcr:lastModified="{Date}2022-05-19T02:03:44.761+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Hidden Student Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/HiddenStudentName"
+                                guideNodeClass="guideTextBox"
+                                name="HiddenStudentName"
+                                textIsRich="[true,true,true]"/>
+                            <studentIDNumber1643974162830
+                                jcr:lastModified="{Date}2022-05-18T15:35:00.708-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="studentCWID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/studentCWID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="studentCWID"
+                                textIsRich="[true,true,true]"/>
+                            <aidYear1646318077734
+                                jcr:lastModified="{Date}2022-05-19T02:04:23.916+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Aid Year"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/aidYear"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="aidYear"
+                                textIsRich="[true,true,true]"/>
+                            <financialAidAssignee1654461822718
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Financial Aid Assignee"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/CitizenshipVerification/financialAidAssignee"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="financialAidAssignee"/>
+                            <formCode1646390588568
+                                jcr:lastModified="{Date}2022-05-19T02:04:31.489+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Form Code"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/CitizenshipVerification/formCode"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="formCode"
+                                textIsRich="[true,true,true]"/>
+                        </items>
+                    </panel>
+                </items>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init1&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init1&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:false\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init2&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_guideRootPanel_init2&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                signConfigPath="/conf/global/settings/cloudconfigs/echosign/adobe-sign-cloud-config"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="undefined"
+                    emailSource="form"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toolbar"
+                sling:resourceType="fd/af/components/toolbar"
+                css=""
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                    <guidebutton_copy
+                        jcr:created="{Date}2021-05-05T00:00:39.882-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-02-08T04:06:09.272-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generate PDF"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="generateDOR"
+                        textIsRich="[true,true]"
+                        type="Button"
+                        visible="{Boolean}true">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_generateDOR_click0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_generateDOR_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton_copy>
+                    <submit
+                        jcr:created="{Date}2020-12-20T21:43:36.000-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-12-20T21:43:36.000-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceType="fd/af/components/actions/submit"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="submit1608529416101"
+                        type="submit">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.submit1608529416101&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1608529416101&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;citizenship_verification_citizenship_verification.generated_submit1608529416101_click0&quot;\,&quot;displayName&quot;:&quot;citizenship_verification_citizenship_verification.generated_submit1608529416101_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </submit>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+            </toolbar>
+        </guideContainer>
+        <parsys2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1608103985312"
+                jcr:created="{Date}2020-05-26T00:40:44.351-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:41:27.751-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1608103985312 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;}&#xa;"
+                name="footer1675842005985">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2023-01-16T23:26:46.737-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p id=&quot;FooterText&quot;>© 2022 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    text="&lt;p>© 2020 CSUF | All rights reserved&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+        <parsys1
+            jcr:lastModified="{Date}2020-05-26T00:59:33.688-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1608103936290"
+                jcr:created="{Date}2020-05-26T00:40:34.383-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-05-26T00:42:47.208-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1608103936290 .afHeader{&#xa;background:#00274c;&#xa;height: 65px;&#xa;&#xa;margin: 0 auto;&#xa;}&#xa;"
+                name="header1675842003532">
+                <guideimage
+                    cq:cssClass="guide-1608104012074"
+                    jcr:lastModified="{Date}2020-05-26T00:42:21.922-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1608104012074 .guideImage img{&#xa;margin-top:0;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top:0;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    jcr:lastModified="{Date}2023-02-09T03:32:05.160-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;citizenshipVerificationHeader&quot; style=&quot;padding-left: 350px;&quot;>&lt;p>&lt;b>Citizenship Verification&lt;br>&#xa;&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;span class=&quot;close&quot;>×&lt;/span>&lt;p style=&quot;font-size: 24px;&quot;>Please select the Financial Aid Year&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;input type=&quot;radio&quot; class=&quot;rb1&quot; value=&quot;type1&quot; id=&quot;button1&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type1&quot; class=&quot;lb1&quot;>&lt;b id=&quot;PopupTextOne&quot;>2021-2022&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb2&quot; value=&quot;type2&quot; id=&quot;button2&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type2&quot; class=&quot;lb2&quot;>&lt;b id=&quot;PopupTextTwo&quot;>2022-2023&lt;/b>&lt;/label>&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    text="&lt;div id=&quot;petitionHeader&quot;>&lt;p>&lt;b>Petitions&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;span class=&quot;close&quot;>×&lt;/span>&lt;p style=&quot;font-size: 24px;&quot;>Please select the type of petition&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;input type=&quot;radio&quot; class=&quot;rb1&quot; name=&quot;withdrawal&quot; value=&quot;type1&quot; id=&quot;button1&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type1&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN A – RETROACTIVE ADD&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb2&quot; name=&quot;withdrawal&quot; value=&quot;type2&quot; id=&quot;button2&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type2&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN B – RETROACTIVE CHANGE OF GRADING BASIS&lt;/b>&lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb3&quot; name=&quot;withdrawal&quot; value=&quot;type3&quot; id=&quot;button3&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type3&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN C – RETROACTIVE CHANGE OF UNIT VALUE&lt;/b> &lt;/label>&lt;br>&#xa;&lt;input type=&quot;radio&quot; class=&quot;rb4&quot; name=&quot;withdrawal&quot; value=&quot;type4&quot; id=&quot;button4&quot; aria-invalid=&quot;false&quot;>&lt;label for=&quot;type4&quot; class=&quot;lb&quot;>&lt;b>UNIV PETN D – OTHER&lt;/b>&lt;/label>&lt;br>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p id=&quot;modal-text&quot;>Alert !&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>hello&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:height: 65px;&#xa;&#xa;margin: 0 auto;,background:#00274c]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274c]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+    </jcr:content>
+</jcr:root>

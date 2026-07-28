@@ -1,0 +1,78 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TimeConflict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="RegistrationEnrollment"/>
+        <xs:element type="xs:string" name="RegistrationEnrollmentDate"/>
+		<xs:element type="xs:string" name="TermName"/>
+        <xs:element type="xs:string" name="InitiatedDate"/>
+        <xs:element type="xs:string" name="StudentLastName"/>
+        <xs:element type="xs:string" name="StudentFirstName"/>
+        <xs:element type="xs:string" name="StudentMiddleName"/>
+        <xs:element type="xs:string" name="Cwid"/>
+        <xs:element type="xs:string" name="AmountofTimeOverlap"/>
+        <xs:element type="xs:string" name="StudentPhoneNumber"/>
+        <xs:element type="xs:string" name="StudentEmailAddress"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+		<xs:element type="xs:string" name="StudentSignatureDate"/>
+		<xs:element type="xs:string" name="StudentComments"/>
+        <xs:element type="xs:string" name="RequestedDeptCourse"/>
+        <xs:element type="xs:string" name="RequestedCourseScheduleNumber"/>
+        <xs:element type="xs:string" name="RequestedNumberofUnits"/>
+        <xs:element type="xs:string" name="RequestedCourseDaysAndTimes"/>
+        <xs:element type="xs:string" name="RequestedCourseInstructorName"/>
+        <xs:element type="xs:string" name="RequestedCourseApprovalCB"/>
+        <xs:element type="xs:string" name="RequestedCourseInstructorSignature"/>
+        <xs:element type="xs:string" name="RequestedCourseInstructorSignDate"/>
+        <xs:element type="xs:string" name="TimeConflictDeptCourse"/>
+        <xs:element type="xs:string" name="TimeConflictScheduleNumber"/>
+        <xs:element type="xs:string" name="TimeConflictNumberofUnits"/>
+        <xs:element type="xs:string" name="TimeConflictApprovalCB"/>
+        <xs:element type="xs:string" name="TimeConflictDaysandTimes"/>
+        <xs:element type="xs:string" name="TimeConflictInstructorName"/>
+        <xs:element type="xs:string" name="TimeConflictInstructorSignature"/>
+        <xs:element type="xs:string" name="TimeConflictInstructorSignDate"/>
+	    <xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="CaseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StudentName"/>
+		<xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="RequestedCourseInstructorUserId"/>
+		<xs:element type="xs:string" name="RequestedCourseInstructorEmailId"/>
+		<xs:element type="xs:string" name="TimeConflictCourseInstructorUserId"/>
+		<xs:element type="xs:string" name="TimeConflictCourseInstructorEmailId"/>
+		<xs:element type="xs:string" name="RequestedCourseInstructorComments"/>
+		<xs:element type="xs:string" name="TimeConflictInstructorComments"/>
+		<xs:element type="xs:string" name="ARSCSignature"/>
+		<xs:element type="xs:string" name="ARSCSignatureDate"/>
+		<xs:element type="xs:string" name="ARSCComments"/>
+		<xs:element type="xs:string" name="ARSCDecision"/>
+		<xs:element type="xs:string" name="RequestedCourseInstructorEmailName"/>
+		<xs:element type="xs:string" name="TimeConflictInstructorEmailName"/>
+		<xs:element name="PopupTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="HeaderRow"/>
+              <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="PopupCB"/>
+                    <xs:element type="xs:string" name="CourseName"/>
+                    <xs:element type="xs:string" name="InstructorName"/>
+                    <xs:element type="xs:string" name="Department"/>
+                    <xs:element type="xs:string" name="DepartmentId"/>
+					<xs:element type="xs:string" name="ScheduleNumber"/>
+					<xs:element type="xs:string" name="NumberOfUnits"/>
+					<xs:element type="xs:string" name="CourseDays"/>
+					<xs:element type="xs:string" name="CoureTime"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

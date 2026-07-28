@@ -1,0 +1,97 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RFIAndIFTForm">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="CWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="CustomerSelectionRB"/>
+		<xs:element type="xs:string" name="RFISelectionRB"/>
+		<xs:element type="xs:string" name="customerDetails"/>
+		<xs:element type="xs:string" name="CSUCampusChancellorOffice"/>
+		<xs:element type="xs:string" name="InitiatorFlag"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="cwid_initiator"/>		        
+		<xs:element type="xs:string" name="ServiceDateFrom"/>
+        <xs:element type="xs:string" name="ServiceDateTo"/>		
+		<xs:element type="xs:string" name="FiscalYear"/>	
+		<xs:element type="xs:string" name="RequestorDepartment"/>    
+        <xs:element type="xs:string" name="RequestorDepartmentID"/>		
+        <xs:element type="xs:string" name="RequestorContact"/>
+        <xs:element type="xs:string" name="RequestorPhoneExt"/>
+		<xs:element type="xs:string" name="RequestorEmail"/>
+		<xs:element type="xs:string" name="ReasonForRequest"/>
+        <xs:element type="xs:string" name="RequestorUserId"/>
+		<xs:element type="xs:string" name="RequestorName"/>
+		<xs:element type="xs:string" name="RequestorFirstName"/>
+		<xs:element type="xs:string" name="RequestorLastName"/>
+		<xs:element type="xs:string" name="RequestorDivision"/>
+        <xs:element type="xs:string" name="RequestorSign"/>
+		<xs:element type="xs:string" name="RequestorSignDate"/>	
+        <xs:element type="xs:string" name="RequestDate"/>
+		<xs:element type="xs:string" name="RequestorComments"/>	
+        <xs:element type="xs:string" name="OptionalEmailAddress"/>
+<xs:element type="xs:string" name="OptionalCCOne"/>
+<xs:element type="xs:string" name="OptionalCCTwo"/>
+<xs:element type="xs:string" name="OptionalCCThree"/>
+<xs:element type="xs:string" name="ApproversDepartment"/>
+<xs:element type="xs:string" name="OptionalFinal"/>			
+		<xs:element type="xs:string" name="CustomerID"/>
+        <xs:element type="xs:string" name="CustomerName1"/>	
+        <xs:element type="xs:string" name="CustomerName2"/>
+		<xs:element type="xs:string" name="CustomerName"/>		
+		<xs:element type="xs:string" name="CustomerAddress1"/>      
+        <xs:element type="xs:string" name="CustomerAddress2"/>
+        <xs:element type="xs:string" name="CustomerContact"/>
+        <xs:element type="xs:string" name="CustomerEmail"/>
+		<xs:element type="xs:string" name="CustomerCity"/>
+		<xs:element type="xs:string" name="CustomerState"/>
+		<xs:element type="xs:string" name="Fax"/>
+		<xs:element type="xs:string" name="Zipcode"/>
+		<xs:element type="xs:string" name="InvoiceHandling"/>	
+		<xs:element type="xs:string" name="ApproverUserId"/>
+		<xs:element type="xs:string" name="approverDepartment"/>
+		<xs:element type="xs:string" name="approver"/>
+		<xs:element type="xs:string" name="ApproverName"/>
+		<xs:element type="xs:string" name="ApproverFirstName"/>
+		<xs:element type="xs:string" name="ApproverLastName"/>
+        <xs:element type="xs:string" name="ApproverEmail"/>
+        <xs:element type="xs:string" name="ApproverSign"/>
+        <xs:element type="xs:string" name="ApproverSignDate"/>
+		<xs:element type="xs:string" name="ApproverComments"/>
+		<xs:element type="xs:string" name="ApproverDecision"/>		
+		<xs:element type="xs:string" name="ASFRUserId"/>
+		<xs:element type="xs:string" name="ASFRName"/>
+		<xs:element type="xs:string" name="ASFRFirstName"/>
+		<xs:element type="xs:string" name="ASFRLastName"/>
+        <xs:element type="xs:string" name="ASFREmail"/>
+        <xs:element type="xs:string" name="ASFRSign"/>
+        <xs:element type="xs:string" name="ASFRSignDate"/>
+		<xs:element type="xs:string" name="ASFRComments"/>
+		<xs:element type="xs:string" name="ASFRDecision"/>
+		<xs:element type="xs:string" name="InvoiceType"/>
+        <xs:element type="xs:string" name="ExpenseType"/>
+		<xs:element type="xs:string" name="OtherExpenseType"/>
+		<xs:element type="xs:string" name="BillDescription"/>
+		<xs:element type="xs:string" name="PONumber"/>
+		<xs:element type="xs:string" name="PO"/>		
+		<xs:element type="xs:string" name="TotalBillAmount"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Account"/>
+                          <xs:element type="xs:string" name="FundCode"/>                         
+                          <xs:element type="xs:string" name="Dept"/>						  
+                          <xs:element type="xs:string" name="Program"/>
+                          <xs:element type="xs:string" name="Class"/>
+						  <xs:element type="xs:string" name="Project"/>
+                          <xs:element type="xs:string" name="CreditAmount"/>
+						  <xs:element type="xs:string" name="gridPONumber"/>
+                        </xs:sequence>
+                      </xs:complexType>
+         </xs:element>     			
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

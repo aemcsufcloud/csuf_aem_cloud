@@ -1,0 +1,53 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DockNotice">
+    <xs:complexType>
+      <xs:sequence>
+	    <xs:element type="xs:string" name="CHRSID"/>
+        <xs:element type="xs:string" name="DeptID"/>
+        <xs:element type="xs:string" name="DeptName"/>
+        <xs:element type="xs:string" name="TimeKeeper"/>
+        <xs:element type="xs:string" name="DockDate"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="MiddleName"/>
+        <xs:element type="xs:string" name="SSN"/>
+        <xs:element type="xs:string" name="PositionNumber"/>
+        <xs:element type="xs:string" name="EmplID"/>
+        <xs:element type="xs:string" name="PayPeriodMonth"/>
+        <xs:element type="xs:string" name="PayPeriodYear"/>
+        <xs:element type="xs:string" name="EmplRCD"/>
+		<xs:element type="xs:string" name="Cbid"/>
+		<xs:element type="xs:string" name="ManagerUserID"/>
+		<xs:element type="xs:string" name="ManagerEmailID"/>
+		<xs:element type="xs:string" name="managerName"/>
+		<xs:element type="xs:string" name="EmpEmailID"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="logUser"/>
+        <xs:element name="AbsentDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="DateAbsent"/>
+              <xs:element type="xs:string" name="HourAbsent"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="SupervisorSignature"/>
+		<xs:element type="xs:string" name="SupervisorDate"/>
+		<xs:element type="xs:string" name="SupervisorComments"/>
+		<xs:element type="xs:string" name="PayrollSignature"/>
+		<xs:element type="xs:string" name="PayrollDate"/>
+		<xs:element type="xs:string" name="PayrollComments"/>
+		<xs:element type="xs:string" name="Section"/>
+		<xs:element type="xs:string" name="BatchNumber"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="TimekeeperFieldVal"/>
+		<xs:element type="xs:string" name="Unit"/>
+		<xs:element type="xs:string" name="Division"/>
+		<xs:element type="xs:string" name="maskSSN"/>
+		<xs:element type="xs:string" name="Decision"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

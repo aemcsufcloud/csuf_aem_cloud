@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="studentFamilySizeCert">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="cwid"/>
+		<xs:element type="xs:string" name="studentIDNumber"/>
+		<xs:element type="xs:string" name="cdaStudentName"/>
+		<xs:element type="xs:string" name="cdaStudentDob"/>
+		<xs:element type="xs:string" name="cdaStudentRelationship"/>
+		<xs:element type="xs:string" name="cdaStudentCollege"/>
+		<xs:element type="xs:string" name="cdaStudentUnitsYes"/>
+		<xs:element type="xs:string" name="cdaStudentUnitsNo"/>
+		<xs:element type="xs:string" name="fafsaStudentName"/>
+		<xs:element type="xs:string" name="fafsaStudentDob"/>
+		<xs:element type="xs:string" name="fafsaStudentRelationship"/>
+		<xs:element type="xs:string" name="fafsaStudentCollege"/>
+		<xs:element type="xs:string" name="fafsaStudentUnitsYes"/>
+		<xs:element type="xs:string" name="fafsaStudentUnitsNo"/>
+		
+		<xs:element name="cdaRow3">	
+			<xs:complexType>
+				<xs:sequence>						
+					<xs:element type="xs:string" name="cdaFullName"/>
+					<xs:element type="xs:string" name="cdaDob"/>
+					<xs:element type="xs:string" name="cdaRelationship"/>
+					<xs:element type="xs:string" name="cdaCollege"/>
+					<xs:element type="xs:string" name="cdaUnitsYes"/>
+					<xs:element type="xs:string" name="cdaUnitsNo"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>	
+
+		
+		<xs:element name="fafsaRow3">	
+			<xs:complexType>
+				<xs:sequence>						
+					<xs:element type="xs:string" name="fafsaFullName"/>
+					<xs:element type="xs:string" name="fafsaDob"/>
+					<xs:element type="xs:string" name="fafsaRelationship"/>
+					<xs:element type="xs:string" name="fafsaCollege"/>
+					<xs:element type="xs:string" name="fafsaUnitsYes"/>
+					<xs:element type="xs:string" name="fafsaUnitsNo"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>	
+		
+		
+		<xs:element type="xs:string" name="studentScribbleSignature"/>
+		<xs:element type="xs:string" name="ipAddress"/>
+		<xs:element type="xs:string" name="studentSignature"/>		
+        <xs:element type="xs:string" name="studentSignDate"/> 
+		<xs:element type="xs:string" name="studentComment"/> 
+		<xs:element type="xs:string" name="studentCWID"/>
+		<xs:element type="xs:string" name="lastName"/>
+		<xs:element type="xs:string" name="firstName"/>
+		<xs:element type="xs:string" name="parentEmail"/>
+		<xs:element type="xs:string" name="staffDecision"/> 
+		<xs:element type="xs:string" name="staffSignature"/>
+        <xs:element type="xs:string" name="staffSignDate"/>
+		<xs:element type="xs:string" name="staffComment"/>			
+        <xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/> 
+        <xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="HiddenStudentUserID"/> 
+        <xs:element type="xs:string" name="HiddenStudentEmail"/>
+		<xs:element type="xs:string" name="HiddenStudentName"/>		
+		<xs:element type="xs:string" name="financialAidYear"/>
+		<xs:element type="xs:string" name="aidYear"/>
+		<xs:element type="xs:string" name="formCode"/>
+		<xs:element type="xs:string" name="formType"/>
+		<xs:element type="xs:string" name="financialAidAssignee"/>
+		<xs:element type="xs:string" name="Date_1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

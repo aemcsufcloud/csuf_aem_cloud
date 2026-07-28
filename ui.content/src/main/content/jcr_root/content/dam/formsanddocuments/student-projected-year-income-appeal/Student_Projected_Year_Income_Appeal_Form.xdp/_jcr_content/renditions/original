@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-08-31T06:45:34Z" uuid="4fd17098-76cd-4e00-a0a3-5ef8046d4924">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="StudentProjectedYearForm" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="6.35mm" y="6.096mm" w="203.2mm" h="25.654mm"/>
+            <contentArea x="6.35mm" w="203.2mm" h="238.125mm" y="31.75mm"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <draw name="Logo" w="60.325mm" h="22.225mm" x="6.35mm" y="6.35mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <value>
+                  <image href=".\CSUF_LOGO..png" contentType="image/png"/>
+               </value>
+            </draw>
+            <field name="cwid1" w="57.15mm" h="12.054mm" x="127mm" y="19.05mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="27.6098mm">
+                  <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Enter Student's  CWID Here:</text>
+                  </value>
+               </caption>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">this.rawValue = cwid.rawValue;
+
+</script>
+               </event>
+            </field>
+            <field name="formCode1" w="25.4mm" h="8.89mm" x="184.15mm" y="19.05mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" weight="bold" size="12pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+               </event>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = formCode.rawValue;
+</script>
+               </event>
+            </field>
+            <contentArea x="6.35mm" w="203.2mm" h="6.35mm" y="269.875mm"/>
+            <draw name="Pages" x="190.5mm" y="273.05mm">
+               <ui>
+                  <textEdit>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Page<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField030379"/> of<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField010816"/></p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <field h="7.5mm" name="CurrentPage" presence="hidden" w="55mm" x="601.97mm" y="893.828mm" access="readOnly" id="floatingField030379">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Text Field</text>
+                  </value>
+               </caption>
+               <calculate override="error"/>
+               <event name="event__layout_ready" activity="ready" ref="$layout">
+                  <script contentType="application/x-javascript">this.rawValue = xfa.layout.page(this);
+</script>
+               </event>
+               <?templateDesigner floatingFieldPlaceholder #?>
+               <bind match="none"/>
+            </field>
+            <field h="7.5mm" name="PageCount" presence="hidden" w="55mm" x="601.97mm" y="893.828mm" access="readOnly" id="floatingField010816">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Text Field</text>
+                  </value>
+               </caption>
+               <calculate override="error"/>
+               <event name="event__layout_ready" activity="ready" ref="$layout">
+                  <script contentType="application/x-javascript">this.rawValue = xfa.layout.pageCount();
+</script>
+               </event>
+               <?templateDesigner floatingFieldPlaceholder ##?>
+               <bind match="none"/>
+            </field>
+            <?templateDesigner expand 0?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="8in" layout="lr-tb">
+         <subform name="Subform1" w="203.291mm" h="28.575mm">
+            <field name="TitleYear" w="190.5mm" h="8.636mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="16pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "Student Income Appeal "+aidYearValTwo +"-"+aidYearVal;
+</script>
+               </event>
+            </field>
+            <field name="aidYear" w="12.7mm" h="8.89mm" x="190.5mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.presence="hidden";
+</script>
+               </event>
+            </field>
+            <draw name="Text2" w="203.2mm" h="6.096mm" y="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Appeal Deadlines:<span style="xfa-spacerun:yes">                              </span>if attending Fall only |<span style="font-weight:bold"><span style="xfa-spacerun:yes">                </span></span> if attending Academic Year</p></body>
+                  </exData>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="Deadline1" y="8.636mm" x="47.625mm" w="28.575mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="14pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="Deadline2" y="8.636mm" x="122.199mm" w="15.748mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="14pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="StudentName" y="15.875mm" x="6.35mm" w="95.25mm" h="9.525mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="30.3565mm">
+                  <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student's Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform2" w="203.301mm" h="27.222mm">
+            <draw name="Text3" w="203.2mm" h="6.35mm" y="0.27mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Required Documents for All Appeals</text>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 34 Required Documents for All Appeals 0 175386 11917 255 255 255 "Myriad Pro" 1 0 14000 ISO-8859-1?></draw>
+            <draw name="Text4" w="7.998069in" h="19.221mm" y="8.001mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Attach a signed, written statement addressing the following:</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">               </span>1.<span style="xfa-spacerun:yes"> </span>Detailed explanation as to the reason for the decrease in income<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:underline">AND</span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">               </span>2. Why you feel this appeal should be considered</p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text48" w="177.8mm" h="3.445mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 501166 6931 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform3" w="203.2mm" h="42.358mm">
+            <draw name="Text3" w="203.2mm" h="6.35mm" y="0mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Possible Reason for Appeal</text>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 26 Possible Reason for Appeal 0 203763 11917 255 255 255 "Myriad Pro" 1 0 14000 ISO-8859-1?></draw>
+            <field name="Reason1CB" w="6.35mm" h="4.572mm" y="9.099mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="0.01in">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text5" w="177.8mm" h="4.572mm" x="6.35mm" y="9.099mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Decreased income due to fewer hours, new employment, furlough, etc.</text>
+               </value>
+               <font typeface="Myriad Pro" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 501166 10126 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 67 Decreased income due to fewer hours, new employment, furlough, etc. 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text9" w="107.95mm" h="4.572mm" x="6.35mm" y="33.258mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Other, including one time income received in             no longer available</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 303166 10126 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 76 Other, including one time income received in             no longer available 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <draw x="6.35mm" y="13.924mm">
+               <value>
+                  <text>Separation of work due to layoff or termination</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Myriad Pro"/>
+            </draw>
+            <field name="Reason1CB3" w="6.35mm" h="4.572mm" y="18.781mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="-0.65mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text6" w="107.445mm" h="4.572mm" x="6.35mm" y="18.781mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Legal separation or divorce</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 301735 10126 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 27 Legal separation or divorce 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Reason1CB4" w="6.35mm" h="4.572mm" y="23.86mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="-0.65mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text7" w="120.65mm" h="4.572mm" x="6.35mm" y="23.86mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Termination of untaxed income</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 339166 10126 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 29 Termination of untaxed income 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Reason1CB5" w="6.35mm" h="4.572mm" y="28.305mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="-0.65mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw name="Text8" w="177.8mm" h="4.572mm" x="6.35mm" y="28.305mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Death of a spouse after filing financial aid application</text>
+               </value>
+               <font typeface="Myriad Pro" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 501166 10126 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 56 Death of a spouse after filing financial aid application 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Reason1CB6" w="6.35mm" h="4.572mm" y="33.258mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="0.855mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="Reason1CB2" w="6.35mm" h="4.572mm" y="13.783mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="-0.65mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="ReasonYear" y="32.728mm" x="73.025mm" w="8.89mm" h="0.217639in">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <validate>
+                  <script contentType="application/x-javascript"/>
+               </validate>
+               <calculate>
+                  <script contentType="application/x-javascript"/>
+               </calculate>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">this.rawValue = Subform1.aidYear.rawValue-3;
+
+
+</script>
+               </event>
+               <event activity="enter" name="event__enter">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="exit" name="event__exit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="validationState" name="event__validationState">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseEnter" name="event__mouseEnter">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseExit" name="event__mouseExit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="change" name="event__change">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="full" name="event__full">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseUp" name="event__mouseUp">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="mouseDown" name="event__mouseDown">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="click" name="event__click">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="preSave" ref="$host" name="event__preSave">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postSave" ref="$host" name="event__postSave">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="prePrint" ref="$host" name="event__prePrint">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postPrint" ref="$host" name="event__postPrint">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="preSubmit" ref="$form" name="event__preSubmit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="postSubmit" ref="$form" name="event__postSubmit">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="docReady" ref="$host" name="event__docReady">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="docClose" ref="$host" name="event__docClose">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="ready" ref="$form" name="event__form_ready">
+                  <script contentType="application/x-javascript"/>
+               </event>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript"/>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform4" w="203.2mm" layout="lr-tb">
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <draw name="Text3" w="203.2mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Documents Required (if checked)</text>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 31 Documents Required (if checked) 0 185171 11917 255 255 255 "Myriad Pro" 1 0 14000 ISO-8859-1?></draw>
+            <draw w="203.2mm" h="3.556mm" name="Text">
+               <font typeface="Myriad Pro" size="8pt"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <?renderCache.bounds 573166 7246 0 0 1417 1417 0 0?></draw>
+            <field name="DocumentCB1" w="103.454mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="97.183mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Tax Return (1040 and all schedules) or Tax Return Transcript for 20</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentsTF1" w="15.875mm" h="5.334mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw w="53.976mm" h="5.08mm" name="Text1">
+               <font typeface="Myriad Pro"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <?renderCache.bounds 150169 11566 0 0 1417 1417 0 0?></draw>
+            <field name="DocumentCB2" w="74.397mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="68.126mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Most recent paystubs from all employers in 20</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentsTF2" w="15.875mm" h="5.334mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw w="53.976mm" h="5.08mm" name="Text2">
+               <font typeface="Myriad Pro"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <?renderCache.bounds 150169 11566 0 0 1417 1417 0 0?></draw>
+            <field name="DocumentCB3" w="107.95mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="101.679mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Severance compensation letter</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB4" w="120.65mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="114.379mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> EDD Notice of Unemployment Insurance Award Letter</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB5" w="117.475mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="111.204mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Signed letter from employer showing decreased hours and effective date</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB6" w="187.325mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="181.054mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Legal separation documentation, attorney’s letter, or utility bills that show spouse lives separately</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB7" w="155.575mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="149.304mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Copy of the Divorce Decree that states the date of change in marital status, alimony, or child support</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB8" w="158.75mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="152.479mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Letter from agency discontinuing payment with effective date (child support, disability, EDD, etc.) </text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB9" w="158.75mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="152.479mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Documentation from agency which shows amount of income received prior to termination</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB10" w="104.775mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="98.5044mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> A copy of death certificate or obituary </text>
+                  </value>
+               </caption>
+            </field>
+            <field name="DocumentCB11" w="174.625mm" h="5.08mm">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <caption placement="right" reserve="168.354mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> A statement regarding value of accounts payable upon death of spouse (life insurance policy payment, etc.)</text>
+                  </value>
+               </caption>
+            </field>
+            <draw w="203.2mm" h="9.525mm" name="Text4">
+               <font typeface="Myriad Pro"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <?renderCache.bounds 573166 24166 0 0 1417 1417 0 0?></draw>
+            <field name="OtherrCB1" w="6.271mm" h="5.08mm" y="2.985in">
+               <ui>
+                  <checkButton mark="check">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="OtherTF" w="193.675mm" minH="6.858mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.6502mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Other</text>
+                  </value>
+               </caption>
+            </field>
+            <draw w="6.35mm" h="6.35mm">
+               <font typeface="Myriad Pro"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <?renderCache.bounds 15166 15166 0 0 1417 1417 0 0?></draw>
+            <field name="CommentsTF" w="196.85mm" minH="15.875mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.9249mm">
+                  <value>
+                     <text>Comments:</text>
+                  </value>
+                  <para vAlign="middle"/>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <subform layout="tb" w="8in">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <subform name="Subform5" w="203.2mm" h="165.025mm">
+            <draw name="Text28" w="203.2mm" h="6.35mm" y="22.225mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Income for Specified Time Period Noted Above</text>
+               </value>
+               <font size="12pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 44 Income for Specified Time Period Noted Above 0 163682 10417 255 255 255 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+            <draw name="Text29" w="60.325mm" h="8.89mm" y="28.575mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Income Earned from Work- Student</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 168166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 32 Income Earned from Work- Student 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="FromDate" y="12.7mm" x="73.025mm" w="28.575mm" h="6.586mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="incomeStudent1" y="28.575mm" x="60.325mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="IncomeStudent2" y="28.575mm" x="165.1mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.01in">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text29" w="66.675mm" h="8.89mm" y="28.575mm" x="98.425mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Child support received for all children</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 186166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 39 Child support received for all children 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text40" w="133.35mm" h="19.05mm" y="79.375mm" x="69.85mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><br/></p><ul style="letter-spacing:0in;list-style-type:disc"><li>A farm, if it is the principal residence and you participate in the farm’s operations</li><li>The value of retirement plans (pensions, IRA’s, Keogh plans, etc</li><li>Any debts that are not related to the assets listed below</li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <draw name="Text39" w="73.025mm" h="25.96mm" y="76.2mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:underline;letter-spacing:0in">Do NOT include:</p><p style="text-decoration:underline;letter-spacing:0in"><br/></p><ul style="letter-spacing:0in;list-style-type:disc"><li style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt">A home, if it is the principal residence</li><li style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt">Student financial aid awards<span style="xfa-spacerun:yes"> </span></li><li style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt">Personal or consumer debts<span style="xfa-spacerun:yes"> </span></li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <draw name="Text41" w="203.2mm" h="6.35mm" y="101.6mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Student Asset Information as of Today</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt" size="12pt">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 37 Student Asset Information as of Today 0 185947 10417 255 255 255 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+            <draw name="Text42" w="85.725mm" h="9.525mm" y="107.95mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Cash, savings, and checking accounts</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 240166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 36 Cash, savings, and checking accounts 0 1417 20917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text43" w="203.2mm" h="6.35mm" y="117.475mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>                                                                                                                                                Value                                                                    Debt</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <fill>
+                     <color value="192,192,192"/>
+                  </fill>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 221                                                                                                                                                 Value                                                                    Debt 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="CashAccounts" y="107.95mm" x="85.725mm" w="117.475mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text44" w="85.725mm" h="9.525mm" y="123.825mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Other real estate and investments</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 240166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 33 Other real estate and investments 0 1417 20917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Value1" y="123.825mm" x="85.725mm" w="57.15mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.8233mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Debt1" y="123.825mm" x="142.875mm" w="60.325mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="StudentAssetsCB" w="203.2mm" h="6.35mm" y="152.4mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="196.2mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>  Check here if your family business or family farm has fewer than 100 full-time or full-time equivalent employees.</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+            </field>
+            <draw name="Line30" w="0in" h="6.35mm" y="117.475mm" x="85.725mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <draw w="8in" h="9.525mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS<span style="font-weight:normal;text-decoration:none">: Provide the best estimate of income received by your parent(s) from all sources listed below. Report "0" if nothing was received.<span style="xfa-spacerun:yes">                                                                                  </span></span><span style="text-decoration:none"> Do Not Leave Any Blanks.</span></p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Myriad Pro"/>
+            </draw>
+            <draw y="12.7mm">
+               <value>
+                  <text>List amounts received for the specified period of:</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Myriad Pro"/>
+            </draw>
+            <draw x="101.6mm" y="12.7mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <text>to</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <field name="ToDate" y="12.7mm" x="106.68mm" w="28.575mm" h="6.586mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <draw name="Text29" w="60.325mm" h="8.89mm" y="37.465mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Income Earned from Work- Spouse</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 168166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 31 Income Earned from Work- Spouse 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="incomeSpouse1" y="37.465mm" x="60.325mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text29" w="66.675mm" h="8.89mm" y="37.465mm" x="98.425mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Veteran's non-educational benefits</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 186166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 34 Veteran's non-educational benefits 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="IncomeSpouse2" y="37.465mm" x="165.1mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.01in">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text29" w="60.325mm" h="8.89mm" y="46.355mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Payments to IRA, 401K, or other plans</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 168166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 37 Payments to IRA, 401K, or other plans 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text29" w="60.325mm" h="8.89mm" y="55.245mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Disability benefits (not SSI) </text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 168166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 30 Disability benefits (not SSI)  0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Payments1" y="46.355mm" x="60.325mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Disability1" y="55.245mm" x="60.325mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Text29" w="66.675mm" h="8.89mm" y="46.355mm" x="98.425mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Worker’s compensation</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 186166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 23 Worker’s compensation 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text29" w="66.675mm" h="8.89mm" y="55.245mm" x="98.425mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Housing, food, and other living allowances</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 186166 22366 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 42 Housing, food, and other living allowances 0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Payments2" y="46.355mm" x="165.1mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.2709mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Disability2" y="55.245mm" x="165.1mm" w="38.1mm" h="8.89mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.01in">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw y="66.675mm" w="8in" h="9.525mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">NOTE: If you have jointly owned assets and are now separated or divorced, provide only yours (the student's) portion of assets and debts.<span style="xfa-spacerun:yes">                                             </span><span style="font-weight:bold"><span style="xfa-spacerun:yes">                                                               </span></span></p><p style="font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes">                                                                                                             </span>Do Not Leave Any Blanks.</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Myriad Pro"/>
+            </draw>
+            <draw name="Text44" w="85.725mm" h="9.525mm" y="133.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Business</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 240166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 8 Business 0 1417 20917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <draw name="Text44" w="85.725mm" h="9.525mm" y="142.875mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text> Farm</text>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <?renderCache.bounds 240166 24166 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 8917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 4 Farm 0 1417 20917 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Value2" y="133.35mm" x="85.725mm" w="57.15mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.8233mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Value3" y="142.875mm" x="85.725mm" w="57.15mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.8233mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Debt2" y="133.35mm" x="142.875mm" w="60.325mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <field name="Debt3" y="142.875mm" x="142.875mm" w="60.325mm" h="9.525mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="0.5523mm">
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+               </border>
+               <format>
+                  <picture>num{$z,zzz,zzz,zzz,zz9.99}</picture>
+               </format>
+            </field>
+            <draw name="Line30" w="0in" h="6.35mm" y="117.475mm" x="142.875mm">
+               <value>
+                  <line slope="/"/>
+               </value>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform7" w="203.2mm" h="42.205mm">
+            <field name="SignDate" y="22.3mm" w="47.625mm" h="9mm" x="98.425mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.79mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date : </text>
+                  </value>
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <draw name="Text45" y="3.25mm" w="8.000861in" h="38.1mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:<span style="font-weight:normal"> By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete, and accurate. I (we) agree to provide additional proof of the information we have reported if requested to do<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Warning:<span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt;font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, sentenced to jail, or both.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <field name="studentScribleSignature" y="22.3mm" x="3.175mm" w="95.25mm" h="9mm">
+               <ui>
+                  <imageEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </imageEdit>
+               </ui>
+               <caption reserve="34.66mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student E-signature :</text>
+                  </value>
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               </caption>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="SignCWID" y="22.3mm" w="53.975mm" h="9mm" x="146.05mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="11.64mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID :</text>
+                  </value>
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="PrintStudentName" y="12.775mm" w="130.175mm" h="9mm" x="3.175mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="35.45mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print student’s name :</text>
+                  </value>
+                  <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="ipAddress" y="12.775mm" x="133.35mm" w="66.675mm" h="9.525mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="19.31mm">
+                  <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+               </caption>
+            </field>
+            <border>
+               <edge thickness="0.4293mm"/>
+               <corner thickness="0.429mm"/>
+            </border>
+            <?templateDesigner expand 0?></subform>
+         <field name="cwid" w="37mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">this.presence="hidden";
+
+</script>
+            </event>
+         </field>
+         <field name="formCode" w="28.575mm" h="9mm" presence="invisible">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.presence="hidden";
+</script>
+            </event>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 004F?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 52 13 00030045005E0102011A011E017501760190019A01B503570396 NSademnstu:'?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 248 64 00010003000400080009000A000D000E000F0011001200130015001B0022002300240025002600270029002A002C002D002E002F00300031003300340035003600370038003A00420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005D0068 "#’(),-.0124:ABCDEFHIKLMNOPRSTUVWYabcdefghijklmnopqrstuvwxy|'?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 188 49 000100080009000A000E000F001B0022002300240025002600270029002A002D002F003000310033003400350036003800420043004400450046004700480049004A004C004D004E004F00500051005200530054005500560057005A0068 ’()-.:ABCDEFHILNOPRSTUWabcdefghiklmnopqrstuvy'?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\Student_Projected_Year_Income_Appeal_Form.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 101?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-08-31T06:45:34Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:4fd17098-76cd-4e00-a0a3-5ef8046d4924</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

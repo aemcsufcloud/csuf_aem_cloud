@@ -1,0 +1,108 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PET">
+    <xs:complexType>
+      <xs:sequence>
+	  
+        <xs:element type="xs:string" name="FISCALYR"/>
+		<xs:element type="xs:string" name="Division"/>
+		<xs:element type="xs:string" name="Comments_Initiator"/>
+        
+          <xs:element name="Row1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Emp_Name"/>
+                    <xs:element type="xs:string" name="Emp_ID"/>
+					<xs:element type="xs:string" name="PaycheckNo"/>
+                    <xs:element type="xs:string" name="Emp_Record"/>
+                    <xs:element type="xs:string" name="PositionNo"/>
+                    <xs:element type="xs:string" name="ChargePeriod"/>
+                    <xs:element type="xs:string" name="HRDeptID"/>
+                    <xs:element type="xs:string" name="TotalAmtChanged"/>
+                    <xs:element type="xs:string" name="TransferPercentage"/>
+                    <xs:element type="xs:string" name="TransferAmt"/>
+                    <xs:element type="xs:string" name="Credit_Dept"/>
+                    <xs:element type="xs:string" name="Credit_Funds"/>
+                    <xs:element type="xs:string" name="Credit_Class"/>
+                    <xs:element type="xs:string" name="Credit_Project"/>
+                    <xs:element type="xs:string" name="Credit_Program"/>
+                    <xs:element type="xs:string" name="Credit_Account"/>
+                    <xs:element type="xs:string" name="Debit_Dept"/>
+                    <xs:element type="xs:string" name="Debit_Funds"/>
+                    <xs:element type="xs:string" name="Debit_Class"/>
+                    <xs:element type="xs:string" name="Debit_Project"/>
+                    <xs:element type="xs:string" name="Debit_Program"/>
+                    <xs:element type="xs:string" name="Debit_Account"/>
+                    <xs:element type="xs:string" name="PermanentFundChange"/>
+                    <xs:element type="xs:string" name="TransferAmt_Benefits"/>
+                    <xs:element type="xs:string" name="PayTapePeriod"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+                  
+         <xs:element type="xs:string" name="SubmittedBy"/>
+         <xs:element type="xs:string" name="InitiatorSubmittedDate"/>
+         <xs:element type="xs:string" name="FromDeptApproval"/>
+         <xs:element type="xs:string" name="FromDeptApproverName"/>
+         <xs:element type="xs:string" name="FromDeptApprovalDate"/>
+         <xs:element type="xs:string" name="ToDeptApproval"/>
+         <xs:element type="xs:string" name="ToDeptApproverName"/>
+         <xs:element type="xs:string" name="ToDeptApprovalDate"/>
+         <xs:element type="xs:string" name="ProcessedBy"/>
+         <xs:element type="xs:string" name="ProcessDate"/>
+         <xs:element type="xs:string" name="JournalID"/>
+         <xs:element type="xs:string" name="JournalDate"/>
+	
+	     <xs:element type="xs:string" name="StageIndicator"/>
+		 <xs:element type="xs:string" name="ApproverEmail"/>
+		 <xs:element type="xs:string" name="ApproverUserID"/>
+		 <xs:element type="xs:string" name="EmailSubject"/>
+		 <xs:element type="xs:string" name="SenderEmail"/>
+		 <xs:element type="xs:string" name="BCCEmailAddress"/>
+		 <xs:element type="xs:string" name="Case_ID"/>
+		 
+		 <xs:element type="xs:string" name="StageIndicator_ToDept"/>
+		 <xs:element type="xs:string" name="ApproverEmail_ToDept"/>
+		 <xs:element type="xs:string" name="ApproverUserID_ToDept"/>
+		 <xs:element type="xs:string" name="ApproverName_ToDept"/>
+		 <xs:element type="xs:string" name="EmailSubject_ToDept"/>
+		 <xs:element type="xs:string" name="SenderEmail_ToDept"/>
+		 <xs:element type="xs:string" name="BCCEmailAddress_ToDept"/>
+		 
+		 <xs:element type="xs:string" name="InitiatorEmail"/>
+		 <xs:element type="xs:string" name="InitiatorUserID"/>
+		 <xs:element type="xs:string" name="InitiatorName"/>
+		  
+		 <xs:element type="xs:string" name="aftiaDescCWID"/>
+		 
+		 <xs:element type="xs:string" name="FinalRowCount"/>
+		 
+		 <xs:element type="xs:string" name="FinalTotalAmount"/>
+		 
+		 <xs:element type="xs:string" name="Journal_Date"/>
+		 
+		 <xs:element name="BudgetInputRow1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Set_ID"/>
+                    <xs:element type="xs:string" name="HR_Dept"/>
+					<xs:element type="xs:string" name="Empl_ID"/>
+					<xs:element type="xs:string" name="BI_Empl_Name"/>
+                    <xs:element type="xs:string" name="Emp_Rcd"/>
+                    <xs:element type="xs:string" name="Charge_Period"/>
+                    <xs:element type="xs:string" name="Pay_Ck_Number"/>
+					<xs:element type="xs:string" name="BI_Total_Amount"/>
+					<xs:element type="xs:string" name="BI_Transfer_Amount"/>
+                    <xs:element type="xs:string" name="Transfer_From_Combo_Code"/>
+                    <xs:element type="xs:string" name="Transfer_From_Combo_Code_Per"/>
+                    <xs:element type="xs:string" name="Transfer_To_Combo_Code"/>
+                    <xs:element type="xs:string" name="Transfer_To_Combo_Code_Per"/>
+                    <xs:element type="xs:string" name="Position_No"/>
+                    <xs:element type="xs:string" name="Completed_Status"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+		
+       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

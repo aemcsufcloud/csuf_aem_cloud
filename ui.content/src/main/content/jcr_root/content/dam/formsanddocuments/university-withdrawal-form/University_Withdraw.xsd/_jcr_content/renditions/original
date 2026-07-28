@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UniversityWithdrawal">
+    <xs:complexType>
+      <xs:sequence>
+	    <xs:element type="xs:string" name="CWID"/>
+	    <xs:element type="xs:string" name="CaseId"/>
+        <xs:element type="xs:string" name="Term"/>
+		<xs:element type="xs:string" name="TermYear"/>
+		<xs:element type="xs:string" name="AdmittedTerm"/>
+		<xs:element type="xs:string" name="StudentUserId"/>
+		<xs:element type="xs:string" name="StudentFirstName"/>
+		<xs:element type="xs:string" name="StudentLastName"/>
+	    <xs:element type="xs:string" name="StudentFullName"/>
+		<xs:element type="xs:string" name="StudentEmail"/>
+		<xs:element type="xs:string" name="StudentPhone"/>
+        <xs:element type="xs:string" name="StudentMajor"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+		<xs:element type="xs:string" name="StudentComment"/>
+		<xs:element type="xs:string" name="WithdrawReason"/>
+        <xs:element type="xs:byte" name="WithdrawReason1"/>
+        <xs:element type="xs:byte" name="WithdrawReason2"/>
+        <xs:element type="xs:byte" name="WithdrawReason3"/>
+        <xs:element type="xs:byte" name="WithdrawReason4"/>
+		<xs:element type="xs:byte" name="Other"/>
+		<xs:element type="xs:string" name="OtherWithdrawReason"/>
+        <xs:element type="xs:byte" name="Statement1"/>
+        <xs:element type="xs:byte" name="Statement2"/>
+		<xs:element type="xs:byte" name="Statement3"/>
+		<xs:element type="xs:byte" name="Statement4"/>
+		<xs:element type="xs:string" name="RegistrationUnitSignature"/>
+		<xs:element type="xs:string" name="RegistrationUnitEmail"/>
+		<xs:element type="xs:string" name="RegistrationUnitRecommend"/>
+        <xs:element type="xs:string" name="RegistrationUnitSignDate"/>
+		<xs:element type="xs:string" name="RegistrationUnitComments"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

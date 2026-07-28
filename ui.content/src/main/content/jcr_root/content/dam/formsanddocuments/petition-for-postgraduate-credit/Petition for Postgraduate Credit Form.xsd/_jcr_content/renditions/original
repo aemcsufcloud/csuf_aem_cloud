@@ -1,0 +1,68 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PetitionPGCredit">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="Date_1"/>
+        <xs:element type="xs:string" name="Address"/>
+        <xs:element type="xs:string" name="Telephone"/>
+        <xs:element type="xs:string" name="City"/>
+        <xs:element type="xs:string" name="State"/>
+        <xs:element type="xs:string" name="ZipCode"/>
+
+        <xs:element type="xs:string" name="UGDegree"/>
+        <xs:element type="xs:string" name="UGMajor"/>
+
+        <xs:element type="xs:string" name="StudentID"/>
+        <xs:element type="xs:string" name="GraduationDate"/>
+
+        <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="DeptCourseNo"/>
+                    <xs:element type="xs:string" name="Semester"/>
+                    <xs:element type="xs:string" name="CourseUnitValue"/>
+                    <xs:element type="xs:string" name="Verification"/>
+                  </xs:sequence>
+                </xs:complexType>
+        </xs:element>
+
+        <xs:element type="xs:string" name="GradUnitSupervisor"/>
+        <xs:element type="xs:string" name="GradUnitSupervisorSignDate"/>
+		<xs:element type="xs:string" name="GradUnitSupervisorComments"/>
+		
+		<xs:element type="xs:string" name="StudentScribbleSign"/>
+        <xs:element type="xs:string" name="StudentID_Miscellaneous"/>
+		<xs:element type="xs:string" name="Name_Miscellaneous"/>
+		
+		<xs:element type="xs:string" name="StudentUserID"/>
+        <xs:element type="xs:string" name="StudentEmail"/>
+		<xs:element type="xs:string" name="AcadCareer"/>
+		
+        <xs:element type="xs:string" name="cwid"/>		
+		<xs:element type="xs:string" name="firstName"/>
+		<xs:element type="xs:string" name="lastName"/>
+		
+		<xs:element type="xs:string" name="caseId"/>		
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		
+		<xs:element type="xs:string" name="StudentSign"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+		
+		<xs:element type="xs:string" name="PetitionCoordinatorSign"/>
+        <xs:element type="xs:string" name="PetitionCoordinatorDate"/>
+		<xs:element type="xs:string" name="PetitionCoordinatorComments"/>
+		
+		<xs:element type="xs:string" name="RecordsSign"/>
+        <xs:element type="xs:string" name="RecordsSignDate"/>
+		<xs:element type="xs:string" name="RecordsSignComments"/>
+		<xs:element type="xs:string" name="RecordsDecision"/>
+		
+			  
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

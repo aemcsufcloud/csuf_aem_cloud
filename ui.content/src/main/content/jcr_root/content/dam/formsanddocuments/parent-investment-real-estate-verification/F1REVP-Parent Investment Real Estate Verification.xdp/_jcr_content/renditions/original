@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-06-21T06:57:04Z" uuid="638008a9-7b84-465c-9c4c-150621660611">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <subform name="F1REVP" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <subform name="Subform1" w="203.2mm" h="41.275mm">
+            <draw name="logo" w="76.2mm" h="28.575mm">
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <draw name="Text1" y="19.939mm" x="120.142mm" w="29.2864mm" h="9.537mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Enter Student      CWID Here : </text>
+               </value>
+               <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 80183 24200 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 15 Enter Student   0 9964 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?>
+               <?renderCache.textRun 16     CWID Here :  0 8739 22867 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="cwid" w="34.925mm" h="10.668mm" x="146.05mm" y="19.05mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="formCode" y="19.05mm" x="184.15mm" w="19.05mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Text2" y="32.512mm" x="35.941mm" w="133.35mm" h="5.939mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>PARENT INVESTMENT/REAL ESTATE VERIFICATION </text>
+               </value>
+               <font size="14pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 375166 14001 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 43 PARENT INVESTMENT/REAL ESTATE VERIFICATION  0 1417 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?></draw>
+            <field name="TextField2" y="31.75mm" x="139.7mm" w="29.21mm" h="7.31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="14pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+               </event>
+            </field>
+            <field name="AidYear" x="165.1mm" w="37mm" h="9mm" presence="invisible">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text3" w="196.85mm" h="25.4mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="font-weight:normal;text-decoration:none"> Before further action can be taken on your financial aid application, the following information is required. Please verify information regarding the value your Parents' investments and real estate, excluding their principal residence. See definition of parent below. Attach copies of the documentation used to calculate the value and debt of items listed below.<span style="xfa-spacerun:yes">  </span>Several documents may be used to verify real estate or investment value and debt (e.g., statements from a real estate office, mortgage statement, local newspaper ads, and/or comparable property listings).<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic;text-decoration:none">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" size="9.5pt" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text13" w="22.225mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 60166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text11" w="177.8mm" h="33.02mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">Definition of parent:<span style="font-weight:normal;text-decoration:none"> For the FAFSA, “parent” refers to your biological and/ or adoptive parents (including your step-parent If that person is currently married to your “parent”).</span></p><p style="letter-spacing:0in">The following are<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">NOT considered to be a “legal parent” for the FAFSA:</span></p><ul style="letter-spacing:0in;list-style-type:disc"><li>Grandparents, foster parents, legal guardians, aunts and uncles are NOT considered parents unless they have legally adopted you.</li><li>Any person who is not married to your parent and who is not a legal or biological parent<span style="xfa-spacerun:yes"> </span></li></ul><p style="letter-spacing:0in">If your parent’s FAFSA marital status is “married,” or “unmarried and both parents living together,” then both their information must be provided.<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font size="9.5pt" typeface="Calibri" posture="italic" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text12" w="196.85mm" h="1.279639in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">ACTION TO COMPLETE FORM:<span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Enter a value in each line below for the value of your parents' investments as of the day your FAFSA was filed. Do not leave blank spaces, use zeroes when appropriate.<span style="xfa-spacerun:yes"> </span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Investment Value<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">- List the value and debt of your parents' investments.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">Investments include: college savings plans, trust funds, money market funds, mutual funds, certificates of deposit, stocks, bonds, other securities, installment and land sale contracts (including mortgages held), commodities, precious and strategic metals, etc.<span style="xfa-spacerun:yes">  </span></span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in">Do not include the value of life insurance and retirement plans (pension funds, annuities, IRAs, Keogh plans, etc.)<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font size="9.5pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="InvestmentsValue" w="82.55mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="30.9277mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Investments Value =</text>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text5" w="19.05mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 51166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="InvestmentDebt" w="76.2mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.9948mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Investments Debt =</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text5" w="22.225mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 60166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text10" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text6" w="196.85mm" h="12.735mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Real Estate Investment Value<span style="font-weight:normal"> - List the value and debt of your parents' real estate investments, please exclude their principal residence.</span><span style="font-weight:normal;font-style:italic"> Other real estate includes rental property, land, second or summer homes, the rental portion of family home that maintains a separate entrance, etc</span><span style="font-weight:normal">. In determining real estate value, indicate the expected market value if the properties were sold today. List each property separately.</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" size="9.5pt" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyOneAddress" w="184.15mm" minH="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="30.3018mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 1 Address:</text>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="15.875mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 42166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyOneMarketValue" w="101.6mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="41.8628mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 1: Market Value =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <field name="PropertyOneDebt" w="82.55mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.743mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 1: Debt =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text10" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyTwoAddress" w="184.15mm" minH="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="30.9277mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 2 Address:</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="15.875mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 42166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyTwoMarketValue" w="101.6mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="42.1816mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 2: Market Value =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <field name="PropertyTwoDebt" w="82.55mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.0619mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 2: Debt =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text10" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyThreeAddress" w="184.15mm" minH="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="30.3018mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 3 Address:</text>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="15.875mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 42166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyThreeMarketValue" w="101.6mm" h="9mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="42.1816mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 3: Market Value =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <field name="PropertyThreeDebt" w="82.55mm" h="9mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.0619mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 3: Debt =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text10" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyFourAddress" w="184.15mm" minH="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="30.3018mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 4 Address:</text>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="15.875mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 42166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="PropertyFourMarketValue" w="101.6mm" h="9mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="42.1816mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 4: Market Value =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <field name="PropertyFourDebt" w="82.55mm" h="9mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.0619mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Property 4: Debt =</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text10" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text7" w="196.85mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Use the space below to explain unusual circumstances related to the values listed above. </text>
+            </value>
+            <font typeface="Calibri" size="9.5pt" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 555166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 89 Use the space below to explain unusual circumstances related to the values listed above.  0 1417 8542 0 0 0 "Calibri" 0 0 9500 ISO-8859-1?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Comments" w="196.85mm" minH="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>COMMENTS:</text>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Text4" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform2" w="203.2mm" h="50.734mm">
+            <draw name="Rectangle1" x="1.905mm" w="197.739mm" h="50.734mm">
+               <value>
+                  <rectangle>
+                     <edge/>
+                     <corner radius="5.08mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <draw name="Text8" y="0.435mm" x="3.175mm" w="196.85mm" h="18.615mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:</p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete, and accurate. I agree to provide additional proof of the information we have reported, if requested to do so.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">*Only one parent signature is required. Signing parent must be a parent that provided information on the FAFSA.<span style="xfa-spacerun:yes"> </span></span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="StudentESignature" w="107.95mm" h="9mm" x="3.175mm" y="18.984mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="32.8053mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student E-signature:</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+            </field>
+            <field name="IPAddress" y="18.984mm" x="134.62mm" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.5009mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="StudentName" y="27.983mm" x="3.175mm" w="107.95mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="34.6829mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student’s Name:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" weight="bold" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="StudentSignatureDate" y="27.983mm" x="114.3mm" w="34.925mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.0575mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" weight="bold" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="SCwid" y="27.983mm" x="152.4mm" w="44.45mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.6833mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <draw name="Text9" y="45.583mm" x="3.175mm" w="7.875in" h="5.151mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:9pt;font-weight:bold;letter-spacing:0in">*Warning<span style="font-size:8.5pt;font-weight:normal">: If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" size="8.5pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="2pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <field name="ParentSignature" y="36.982mm" x="3.175mm" w="107.95mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="27.8101mm">
+                  <font size="10.5pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Parent Signature:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text>{{Sig_es_:signer1:signature}}</text>
+               </value>
+            </field>
+            <field name="ParentSignatureDate" y="36.982mm" x="114.3mm" w="2.036083in" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.3763mm">
+                  <font size="10.5pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text>{{PDate1_es_:signer1:date}}</text>
+               </value>
+            </field>
+         </subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 220 55 00030004001100120018001C0026002F003E00440045004B0057005E0064006800730102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C7035503570358036C0372037E037F039603ED03EE03EF03F00441 ABCDEFILMNOPSTUVabcdefghijklmnopqrstuvwxy,:./-()'1234=?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 208 54 00030004001100120018001C0026002C002F003E00440045004B0057005A005E00640068007300740102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C701CC035503570358035B036C0372038E0396 ABCDEFHILMNOPRSTUVWabcdefghiklmnopqrstuvwyz,:.’/-*'?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 176 50 00030004001800260027002F003C0045004B005A005E00640102010F0110011A011E01280150015A015D016C016F01750176017D0189018C0190019A01B501C001C101C7035503570358035B035E035F036C0372037E037F ADFGIKNORSTabcdefghiklmnoprstuvwy,:.’“”/-()?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 136 38 00030004001800260045004B005E00640102010F0110011A011E01280150015A015D016F01750176017D0189018B018C0190019A01B501C001C703570358035E035F038E ADFNOSTabcdefghilmnopqrstuvy:.“”*?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 96 24 00010012001B001E0025002A00310034004000420043004500460048004A004E004F00530054005500560057005C005E 1:=DIPS_abdegimnrstuv{}?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 88?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-06-21T06:57:04Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:638008a9-7b84-465c-9c4c-150621660611</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

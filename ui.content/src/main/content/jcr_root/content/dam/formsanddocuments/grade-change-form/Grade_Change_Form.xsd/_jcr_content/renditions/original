@@ -1,0 +1,110 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GradeChange">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:string" name="caseID"/>
+        <xs:element type="xs:string" name="InstructorCWID"/>
+		<xs:element type="xs:string" name="InstructorName"/>
+		<xs:element type="xs:string" name="InstructorFirstName"/>
+        <xs:element type="xs:string" name="Term"/>
+        <xs:element type="xs:string" name="CourseName"/>
+        <xs:element type="xs:string" name="SectionNumber"/>
+        <xs:element type="xs:string" name="ClassNumber"/>
+		<xs:element type="xs:string" name="CourseLevel"/>
+        <xs:element type="xs:string" name="StudentCWID"/>        
+        <xs:element type="xs:string" name="TodayDate"/>
+		<xs:element type="xs:string" name="massGradeChange"/>
+		<xs:element name="Row1">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element type="xs:string" name="GradeCHK"/>
+				<xs:element type="xs:string" name="StudentLastName"/>
+				<xs:element type="xs:string" name="StudentFirstName"/>				
+				<xs:element type="xs:string" name="SID"/>
+				<xs:element type="xs:string" name="UnitTaken"/>
+				<xs:element type="xs:string" name="GradeChangeFrom"/>
+				<xs:element type="xs:string" name="GradeChangeTo"/>
+				<xs:element type="xs:string" name="Reason"/>
+				<xs:element type="xs:string" name="Description"/>								
+				<xs:element type="xs:string" name="RPFieldDate"/>				
+			  </xs:sequence>
+			</xs:complexType>
+        </xs:element>		
+		<xs:element type="xs:string" name="firstNameListForInboxReport"/>
+		<xs:element type="xs:string" name="lastNameListForInboxReport"/>
+		<xs:element type="xs:string" name="cwidListForInboxReport"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="Initiator"/>
+		<xs:element type="xs:string" name="AdminUserID"/>
+		<xs:element type="xs:string" name="AdminEmailID"/>
+		<xs:element type="xs:string" name="AdminFullName"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="AftiaDescription"/>
+		<xs:element type="xs:string" name="DeptCode"/>
+		<xs:element type="xs:string" name="HiddentStudentUserID"/>
+		<xs:element type="xs:string" name="HiddentStudentEmail"/>
+		<xs:element type="xs:string" name="GradingBasisHidden"/>
+		<xs:element type="xs:string" name="GradingSchemeHidden"/>
+		<xs:element type="xs:string" name="HiddentTermID"/>
+		<xs:element type="xs:string" name="HiddenSchduleNBR"/>
+        <xs:element type="xs:string" name="HiddenCourseID"/>
+		<xs:element type="xs:string" name="HiddenStudentEnrolStatus"/>
+        <xs:element type="xs:string" name="HiddenMajorType"/>
+        <xs:element type="xs:string" name="HiddenCourseLevel"/>
+		<xs:element type="xs:string" name="HiddenTermDescription"/>
+        <xs:element type="xs:string" name="HiddenDepartmentCode"/>
+        <xs:element type="xs:string" name="HiddenMajorCode"/>
+		<xs:element type="xs:string" name="HiddenCollege"/>
+        <xs:element type="xs:string" name="HiddenMajorDescription"/>
+        <xs:element type="xs:string" name="HiddenDegreeType"/>
+        <xs:element type="xs:string" name="HiddenEffSEQ"/>	
+		<xs:element type="xs:string" name="HiddenInstituation"/>
+        <xs:element type="xs:string" name="HiddenEffDT"/>
+		<xs:element type="xs:string" name="HiddenAcademicProg"/>
+        <xs:element type="xs:string" name="HiddenUnitTaken"/>
+        <xs:element type="xs:string" name="HiddenStudentMiddleName"/>
+		<xs:element type="xs:string" name="HiddenStudentCarNBR"/>
+        <xs:element type="xs:string" name="HiddenStudentUserID"/>
+        <xs:element type="xs:string" name="HiddenStudentID"/>
+		<xs:element type="xs:string" name="HiddenInstructorUserID"/>
+        <xs:element type="xs:string" name="HiddenInstructorName"/>
+        <xs:element type="xs:string" name="HiddenInstructorEmail"/>
+        <xs:element type="xs:string" name="HiddenChairCWID"/>
+		<xs:element type="xs:string" name="HiddenChairName"/>
+        <xs:element type="xs:string" name="HiddenChairUserID"/>
+		<xs:element type="xs:string" name="HiddenChairEmail"/>
+        <xs:element type="xs:string" name="HiddenDeanCWID"/>
+        <xs:element type="xs:string" name="HiddenDeanName"/>
+		<xs:element type="xs:string" name="HiddenDeanUserID"/>
+        <xs:element type="xs:string" name="HiddenDeanEmail"/>
+        <xs:element type="xs:string" name="HiddenAssociateDeanCWID"/>
+		<xs:element type="xs:string" name="HiddenAssociateDeanName"/>
+        <xs:element type="xs:string" name="HiddenAssociateDeanUserID"/>
+        <xs:element type="xs:string" name="HiddenAssociateDeanEmail"/>
+		<xs:element type="xs:string" name="InstructorCHK"/>
+		<xs:element type="xs:string" name="InstructorSign"/>
+        <xs:element type="xs:string" name="InstructorDate"/>
+		<xs:element type="xs:string" name="InstructorComment"/>
+		<xs:element type="xs:string" name="ChairCHK"/>
+		<xs:element type="xs:string" name="ChairAction"/>		
+        <xs:element type="xs:string" name="ChairSign"/>
+        <xs:element type="xs:string" name="ChairDate"/>
+		<xs:element type="xs:string" name="ChairComment"/>
+		<xs:element type="xs:string" name="DeanCHK"/>
+		<xs:element type="xs:string" name="DeanAction"/>
+        <xs:element type="xs:string" name="DeanSign"/>
+        <xs:element type="xs:string" name="DeanDate"/>
+		<xs:element type="xs:string" name="DeanComment"/>
+		<xs:element type="xs:string" name="RecordsCHK"/>
+		<xs:element type="xs:string" name="RecordsAction"/>
+        <xs:element type="xs:string" name="EnrollmentReqID"/>
+        <xs:element type="xs:string" name="CMSUpdateDate"/>
+        <xs:element type="xs:string" name="RecordersName"/>
+		<xs:element type="xs:string" name="RecordersSignature"/>
+		<xs:element type="xs:string" name="RecordersComments"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

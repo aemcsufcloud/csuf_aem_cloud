@@ -1,0 +1,72 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BlueCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Subform1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="CampusID"/>
+              <xs:element type="xs:string" name="CampusPhone"/>
+              <xs:element type="xs:string" name="Department"/>
+              <xs:element type="xs:string" name="Contact"/>
+              <xs:element type="xs:string" name="Ext"/>
+              <xs:element type="xs:byte" name="EmploymentType"/>
+              <xs:element type="xs:string" name="Signature"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Subform2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="OfficeUse"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="HeaderRow"/>
+              <xs:element name="Row1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Hook"/>
+                    <xs:element type="xs:string" name="Copy"/>
+                    <xs:element type="xs:string" name="Building"/>
+                    <xs:element type="xs:string" name="Room"/>
+                    <xs:element type="xs:string" name="ResponsibleSignature"/>
+                    <xs:element type="xs:string" name="IssuedDate"/>
+                    <xs:element type="xs:string" name="ReturnDate"/>
+					<xs:element type="xs:string" name="ReturnStatus"/>
+					<xs:element type="xs:string" name="REFWorkflowInstanceID"/>
+					<xs:element type="xs:string" name="REFCaseID"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		      <xs:element type="xs:string" name="CaseID"/>
+			  <xs:element type="xs:string" name="WorkflowInstanceID"/>
+		      <xs:element type="xs:string" name="EmployeeSignatureScribble"/>
+		      <xs:element type="xs:string" name="SignatureDate"/>
+			  <xs:element type="xs:string" name="ApplicantSignature"/>
+			  <xs:element type="xs:string" name="ApplicantSignatureDate"/>
+			  <xs:element type="xs:string" name="PoliceSignatureDate"/>
+			  <xs:element type="xs:string" name="StageIndicator"/>
+			  <xs:element type="xs:string" name="aftiaDescCWID"/>
+			  <xs:element type="xs:string" name="EmailSubject"/>
+			  <xs:element type="xs:string" name="InitiatorName"/>
+			  <xs:element type="xs:string" name="InitiatorUserId"/>
+			  <xs:element type="xs:string" name="InitiatorEmail"/>
+			  <xs:element type="xs:string" name="ApproverName"/>
+			  <xs:element type="xs:string" name="ApproverUserId"/>
+			  <xs:element type="xs:string" name="ApproverEmail"/>
+			  <xs:element type="xs:string" name="PoliceApproverName"/>
+			  <xs:element type="xs:string" name="PoliceApproverUserId"/>
+			  <xs:element type="xs:string" name="PoliceApproverEmail"/>
+			  <xs:element type="xs:string" name="EmployeeEmail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

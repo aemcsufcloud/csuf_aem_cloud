@@ -1,0 +1,62 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DQAppeal">
+    <xs:complexType>
+      <xs:sequence>
+	  
+        <xs:element type="xs:string" name="firstName"/>
+        <xs:element type="xs:string" name="lastName"/>
+		
+		<xs:element type="xs:string" name="StudentName"/>
+        <xs:element type="xs:string" name="cwid"/>
+        <xs:element type="xs:string" name="major"/>
+        <xs:element type="xs:string" name="email"/>
+        <xs:element type="xs:string" name="GPA"/>
+        <xs:element type="xs:string" name="Units"/>
+        <xs:element type="xs:string" name="AdvisorName"/>
+        <xs:element type="xs:string" name="partA"/>
+        <xs:element type="xs:string" name="partB"/>
+		<xs:element type="xs:string" name="partC"/>
+ 		     
+        <xs:element type="xs:byte" name="StudentCB"/>
+		<xs:element type="xs:string" name="StudentSign"/>
+        <xs:element type="xs:string" name="StudentSignDate"/>
+		
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+        <xs:element type="xs:string" name="EmailSubject"/>
+        <xs:element type="xs:string" name="StageIndicator"/>
+		
+		<xs:element type="xs:string" name="caseId"/>
+        <xs:element type="xs:string" name="deptId"/>
+		<xs:element type="xs:string" name="college"/>
+		
+		<xs:element type="xs:string" name="DeanName"/>
+        <xs:element type="xs:string" name="DeanEmailID"/>
+	    <xs:element type="xs:string" name="DeanUserID"/>
+		
+		<xs:element type="xs:string" name="petitionAnalystSignature"/>
+        <xs:element type="xs:string" name="petitionAnalystSignDate"/>
+		<xs:element type="xs:byte" name="petitionDecision"/>
+	    <xs:element type="xs:string" name="petitionAnalystComment"/>
+		 
+		<xs:element type="xs:string" name="DeanSignature"/>
+        <xs:element type="xs:string" name="DeanSignDate"/>
+		<xs:element type="xs:byte" name="deanDecision"/>
+	    <xs:element type="xs:string" name="DeanComment"/>
+		
+		<xs:element type="xs:string" name="AcademicAdvisorSignature"/>
+        <xs:element type="xs:string" name="AcademicAdvisorDate"/>
+		<xs:element type="xs:byte" name="academicAdvisorDecision"/>
+	    <xs:element type="xs:string" name="AcademicAdvisorComment"/>
+
+        <xs:element type="xs:string" name="RecordsSignature"/>
+        <xs:element type="xs:string" name="RecordsSignDate"/>
+		<xs:element type="xs:byte" name="recordDecision"/>
+	    <xs:element type="xs:string" name="RecordsComment"/>
+
+        <xs:element type="xs:string" name="AssociateDeanPanelFlag"/>
+        <xs:element type="xs:string" name="AssociateDeanFlag"/>			
+		
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

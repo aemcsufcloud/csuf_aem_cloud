@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-08-31T09:46:40Z" uuid="1f054145-0968-49c7-8e04-423630137f90">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1CARE" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <draw name="Text2" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform1" w="200.025mm" h="44.45mm">
+            <draw name="Logo" w="79.375mm" h="31.75mm">
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <field name="cwid" y="19.05mm" x="139.7mm" w="34.174mm" h="10.432mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Heading" y="34.925mm" x="38.1mm" w="133.416mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:14pt">CAL GRANT TRANSFER ENTITLEMENT VERIFICATION</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="formCode" y="19.05mm" x="177.8mm" w="22.225mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="AidYear" y="34.925mm" x="177.8mm" w="22.225mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.presence = "hidden";
+</script>
+               </event>
+            </field>
+            <field name="TextField1" y="34.417mm" x="145.542mm" w="29.083mm" h="7.193mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="14pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearOtherVal = aidYearVal-1;
+this.rawValue = "("+aidYearOtherVal+"-"+aidYearVal+")";
+
+</script>
+               </event>
+            </field>
+            <draw name="Text5" y="19.657mm" x="112.903mm" w="29.2864mm" h="9.537mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Enter Student’s        CWID Here:</text>
+               </value>
+               <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 80183 24200 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 19 Enter Student’s   0 6352 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?>
+               <?renderCache.textRun 16       CWID Here: 0 7496 22867 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform2" w="202.516mm" layout="lr-tb">
+            <draw name="Text3" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <field name="StudentName" w="130.175mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>STUDENT NAME: </text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Text3" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <field name="StudentPhone" w="57.15mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="12.4758mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>PHONE: </text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Text3" w="7.112mm" h="0.17825in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 17326 10000 0 0 1417 1417 0 0?></draw>
+            <draw name="Text3" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <field name="LastCommunityAttended" minH="8.999mm" w="120.65mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="66.4592mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Last California Community College attended: </text>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Text3" w="3.175mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+            <field name="LastTerm" w="66.675mm" minH="8.999mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="32.4513mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Last term completed:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="About" w="200.025mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>The California Student Aid Commission (CSAC) requires the Office of Financial Aid to obtain documentation that verify you have met  the specific eligibility requirements before you receive your Transfer Entitlement Cal Grant Award. Your Cal Grant is on HOLD  by CSAC for AB840 verification.</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 564166 42166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 132 The California Student Aid Commission (CSAC) requires the Office of Financial Aid to obtain documentation that verify you have met   0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 127 the specific eligibility requirements before you receive your Transfer Entitlement Cal Grant Award. Your Cal Grant is on HOLD   0 1417 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 31 by CSAC for AB840 verification. 0 1417 32917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform4" w="200.025mm">
+            <draw name="Eligibility" w="200.025mm" h="41.275mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">Eligibility Requirements</p><p style="text-decoration:none;letter-spacing:0in">•<span style="xfa-spacerun:yes">    </span><span style="font-weight:bold"> Graduate from a California high school<span style="xfa-spacerun:yes"> </span></span>(unless due to military orders that required you or your parent or<span style="xfa-spacerun:yes">  </span>guardian be out of<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>state at the time of your graduation) or<span style="xfa-spacerun:yes">  </span>have completed a high school graduation equivalency (including GED or the California</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>High School Proficiency Exam) on or after June 30,<span style="xfa-spacerun:yes">          </span>.</p><p style="text-decoration:none;letter-spacing:0in">•<span style="xfa-spacerun:yes">     </span>Be a<span style="font-weight:bold"> California resident at the time of your high school graduation</span>, or its equivalent</p><p style="text-decoration:none;letter-spacing:0in">•<span style="xfa-spacerun:yes">     </span>Earn a verified cumulative<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Community College GPA of at least 2.4</span></p><p style="text-decoration:none;letter-spacing:0in">•<span style="xfa-spacerun:yes">     </span>Attended and completed at least one term at a CA Community College and be transferring or transferred to a CA baccalaureate</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>degree granting institution<span style="xfa-spacerun:yes">                                               </span><span style="xfa-tab-count:3">                           </span></p><p style="text-decoration:none;letter-spacing:0in">•<span style="xfa-spacerun:yes">     </span><span style="font-weight:bold">Be no more than 27 years of age</span> by December 31 in the year of first award</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="TextChangerOne" y="11.847mm" x="77.343mm" w="12.7mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Instructions" w="200.025mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="font-weight:normal;text-decoration:none"> Submit this completed form and all required documents indicated in<span style="xfa-spacerun:yes"> </span></span><span style="text-decoration:none">Section A</span><span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal">or</span><span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="text-decoration:none">Section B</span><span style="font-weight:normal;text-decoration:none"> to the Office of<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in">Financial Aid. Failure to submit this form could adversely affect your ability to be considered for a Cal Grant Award.<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">Incomplete<span style="xfa-spacerun:yes"> </span></span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in">forms will not be returned; they will be disposed of in a secure manner, per university policy.</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="SectionA" w="193.675mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>  SECTION A - TO BE COMPLETED ONLY IF YOU WERE 18 OR OLDER WHEN YOU GRADUATED HIGH SCHOOL</text>
+            </value>
+            <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge thickness="0.381mm"/>
+               <fill>
+                  <color value="128,128,128"/>
+               </fill>
+               <corner thickness="0.381mm"/>
+            </border>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 89   SECTION A - TO BE COMPLETED ONLY IF YOU WERE 18 OR OLDER WHEN YOU GRADUATED HIGH SCHOOL 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Text4" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="SecA-Content" w="200.025mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Submit a copy of your<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">California high school transcript<span style="xfa-spacerun:yes"> </span></span>that shows your graduation date (month, day, and<span style="xfa-spacerun:yes">  </span>year), or proof of<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">equivalency (passing score for GED or CHSPE).</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="SectionB" w="193.675mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>  SECTION B - TO BE COMPLETED ONLY IF YOU WERE 17 OR YOUNGER WHEN YOU GRADUATED HIGH SCHOOL</text>
+            </value>
+            <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge thickness="0.381mm"/>
+               <fill>
+                  <color value="128,128,128"/>
+               </fill>
+               <corner thickness="0.381mm"/>
+            </border>
+            <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 91   SECTION B - TO BE COMPLETED ONLY IF YOU WERE 17 OR YOUNGER WHEN YOU GRADUATED HIGH SCHOOL 0 1417 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Text4" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text3" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" w="196.85mm" h="102.741mm">
+            <ui>
+               <textEdit>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">   </span><span style="font-weight:bold">1.</span><span style="xfa-spacerun:yes">   </span>Submit a copy of your<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">California high school transcript</span> that shows your graduation date (month, day, and year), or proof of</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">          </span>equivalency<span style="xfa-spacerun:yes">  </span>(passing score for GED or CHSPE)<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:underline">AND</span> one of the following.</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">              </span><span style="font-weight:bold"> a.</span><span style="xfa-spacerun:yes">    </span>A copy of<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">your parents’<span style="xfa-spacerun:yes"> </span></span>(or legal guardians’)<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">signed</span> California Resident Income Tax Return (Form 540) for the year<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                      </span>immediately prior to your high school graduation or equivalency<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">(e.g., a<span style="xfa-spacerun:yes">  </span>2015 CA state tax return if<span style="xfa-spacerun:yes">  </span>you graduated in 2016)<span style="xfa-spacerun:yes">  </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">               </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                       </span><span style="font-weight:bold">OR</span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">              </span><span style="font-weight:bold"> b.</span><span style="xfa-spacerun:yes">    </span><span style="font-weight:bold">If your parents’</span> (or legal guardians’) did not file a California Resident Income Tax Return (Form 540) for the year</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                       </span>requested, your parents’ (or legal guardians’) must provide one of the following documents<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;font-style:italic">with a signature</span> for the<span style="xfa-spacerun:yes"> </span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                       </span>calendar year (e.g., date should include June 2015 if<span style="xfa-spacerun:yes">  </span>you graduated in June 2016):<span style="xfa-spacerun:yes"> </span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">    </span><span style="font-style:normal"><span style="xfa-spacerun:yes">     </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                                         </span>-CA utility bill or letter from utility<span style="xfa-spacerun:yes">            </span>-CA<span style="xfa-spacerun:yes">  </span>lease or rental agreement<span style="xfa-spacerun:yes">          </span>-CA<span style="xfa-spacerun:yes">  </span>bank account record</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                                          </span>confirming date of residence<span style="xfa-spacerun:yes">                    </span>-CA<span style="xfa-spacerun:yes">  </span>auto registration<span style="xfa-spacerun:yes">                           </span>-CA<span style="xfa-spacerun:yes">  </span>voter registration</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span><span style="font-size:11pt;font-weight:bold">OR – For military personnel:<span style="xfa-spacerun:yes"> </span></span></p><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">    </span>2.<span style="font-weight:normal"><span style="xfa-spacerun:yes">   </span>Submit a copy of your</span> parent’s military records verifying relocation orders<span style="font-weight:normal"> from California dated prior to your high school</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">           </span>graduation or equivalency<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:underline">AND</span> at least one of the documents listed above for a period that predates the relocation orders.</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-align:center;font-weight:bold;text-decoration:none;letter-spacing:0in">*All documents must be submitted in its entirety.*</p><p style="text-decoration:none;letter-spacing:0in">-If submitting a parent document and that parent is<span style="xfa-spacerun:yes"> </span><span style="text-decoration:underline">not</span> on your HS transcript, please include a signed statement stating that they are your parent<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">(e.g., if your mother's name is on your HS transcript and you are submitting your father's CA Tax Return, please submit a signed statement stating your relationship)</span>.</p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <subform name="Subform3" w="203.2mm" h="25.4mm">
+            <field name="StudentESignature" w="111.125mm" h="9mm" x="3.175mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="33.7012mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student E-signature:</text>
+                  </value>
+                  <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+            </field>
+            <field name="IPAddress" x="136.525mm" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="18.4072mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="StudentSignatureDate" y="12.7mm" x="107.95mm" w="41.275mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.0444mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="SCwid" y="12.7mm" x="152.4mm" w="47.625mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="10.9193mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="StudentSignature" y="12.7mm" x="3.175mm" w="101.6mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="34.6328mm">
+                  <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student's Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 236 63 00030004001100120018001C00260027002C002F003A003E0045004B0057005A005E00640074007A0102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C601C7035503570358035B0372037B037E037F039603EC03ED03EF03F003F103F4 ABCDEFGHIJLNOPRSTWYabcdefghiklmnopqrstuvwxy,:.’-•()'013458?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 232 62 00030004001100120018001C00260027002C002F003E00440045004B0057005A005E0064006800730074007A0102010F0110011A011E01280150015A015D016F01750176017D0189018B018C0190019A01B501C001C601C7035503570358035B03720374037E038E039603ED03EE03F003F303F4 ABCDEFGHILMNOPRSTUVWYabcdefghilmnopqrstuvxy,:.’-–(*'12478?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 152 38 000300040012002F003A0102010F0110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C601C70355035603570358037E037F03EC03ED03EE03F103F2 ACIJabcdefghilmnoprstuvwxy,;:.()01256?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 52 13 00030102011A011E0150015A015D0176018C0190019A01B501C1 adeghinrstuw?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 88?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-08-31T09:46:40Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:1f054145-0968-49c7-8e04-423630137f90</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

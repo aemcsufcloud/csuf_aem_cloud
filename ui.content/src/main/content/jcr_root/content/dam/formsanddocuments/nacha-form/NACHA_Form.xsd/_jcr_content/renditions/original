@@ -1,0 +1,39 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="NACHA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:float" name="TotalAmount"/>
+        <xs:element type="xs:string" name="ReviewerComments"/>
+        <xs:element type="xs:string" name="ReviewerID"/>
+        <xs:element type="xs:string" name="ReviewedTime"/>
+        <xs:element type="xs:string" name="ApproverComments"/>
+        <xs:element type="xs:string" name="ApproverID"/>
+        <xs:element type="xs:string" name="ApprovedTime"/>		
+		<xs:element type="xs:string" name="FaxConfirmationComments"/>
+        <xs:element type="xs:string" name="FaxConfirmationID"/>
+        <xs:element type="xs:string" name="FaxConfirmationTime"/>		
+        <xs:element type="xs:string" name="SFTPActivityLog"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="NACHAFileName"/>
+		<xs:element type="xs:string" name="ReviewerCB"/>
+		<xs:element type="xs:string" name="ApproverCB"/>
+		<xs:element type="xs:string" name="FaxConfirmationCB"/>
+		<xs:element type="xs:string" name="RunId"/>
+		<xs:element type="xs:string" name="ReportDate"/>
+		<xs:element type="xs:string" name="TotalCount"/>
+		<xs:element type="xs:string" name="ReportName"/>
+		<xs:element type="xs:string" name="EstimatedSettlementDate"/>
+		<xs:element type="xs:string" name="Title"/>
+		<xs:element type="xs:string" name="InitialFormSubmittedAttachments"/>
+		<xs:element type="xs:string" name="ReviewerFormSubmittedAttachments"/>
+		<xs:element type="xs:string" name="ApproverFormSubmittedAttachments"/>
+		<xs:element type="xs:string" name="FaxErrorFormSubmittedAttachments"/>
+		<xs:element type="xs:string" name="FaxConfirmationFormSubmittedAttachments"/>
+		<xs:element type="xs:string" name="FinalReviewerFormSubmittedAttachments"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

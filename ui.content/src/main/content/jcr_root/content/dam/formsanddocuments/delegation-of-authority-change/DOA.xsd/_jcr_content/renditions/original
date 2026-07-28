@@ -1,0 +1,126 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DOA">
+    <xs:complexType>
+		<xs:sequence>
+			<xs:element type="xs:string" name="effective_date"/>
+			<xs:element type="xs:string" name="division"/>
+			<xs:element type="xs:string" name="college"/> 
+			<xs:element name="Row1">	
+			<xs:complexType>
+			  <xs:sequence>	
+				<xs:element type="xs:string" name="department_Id"/>
+				<xs:element type="xs:string" name="agency_unit"/>
+			  </xs:sequence>
+			</xs:complexType>
+			</xs:element>			
+			<xs:element type="xs:string" name="timeKeeper_primary_delete"/>
+			<xs:element type="xs:string" name="timeKeeper_primary_add"/>
+			<xs:element type="xs:string" name="timeKeeper_alternate_delete"/>
+			<xs:element type="xs:string" name="timeKeeper_alternate_add"/>
+			<xs:element type="xs:string" name="timeKeeper_approving_official_delete"/>			
+			<xs:element type="xs:string" name="timeKeeper_approving_official_add"/>			
+			<xs:element type="xs:string" name="approving_official_signature"/>
+			<xs:element type="xs:string" name="approving_official_date"/>
+			<xs:element type="xs:string" name="student_primary_delete"/>
+			<xs:element type="xs:string" name="student_primary_add"/>			
+			<xs:element type="xs:string" name="student_alternate_delete"/>
+			<xs:element type="xs:string" name="student_alternate_add"/>
+			<xs:element type="xs:string" name="approving_official_cd_delete"/>
+			<xs:element type="xs:string" name="approving_official_cd_add"/>
+			<xs:element type="xs:string" name="approving_official_cd_signature"/>
+			<xs:element type="xs:string" name="approving_official_cd_date"/>
+			<xs:element type="xs:string" name="warrant_primary_delete"/>
+			<xs:element type="xs:string" name="warrant_primary_add"/>
+			<xs:element type="xs:string" name="warrant_alternate_delete"/>
+			<xs:element type="xs:string" name="warrant_alternate_add"/>
+			<xs:element type="xs:string" name="warrant_coordinator_primary_signature"/>
+			<xs:element type="xs:string" name="warrant_coordinator_primary_date"/>
+			<xs:element type="xs:string" name="warrant_coordinator_alternate_signature"/>
+			<xs:element type="xs:string" name="warrant_coordinator_alternate_date"/>
+			<xs:element type="xs:string" name="cms_student_primary_delete"/>
+			<xs:element type="xs:string" name="cms_student_primary_add"/>
+			<xs:element type="xs:string" name="cms_student_alternate_delete"/>
+			<xs:element type="xs:string" name="cms_student_alternate_add"/>
+			<xs:element type="xs:string" name="cms_student_primary_signature"/>
+			<xs:element type="xs:string" name="cms_student_primary_date"/>
+			<xs:element type="xs:string" name="cms_student_alternate_signature"/>
+			<xs:element type="xs:string" name="cms_student_alternate_date"/>
+			<xs:element type="xs:string" name="department_head_name"/>
+			<xs:element type="xs:string" name="department_head_signature"/>
+			<xs:element type="xs:string" name="department_head_date"/>
+			<xs:element type="xs:string" name="division_head_name"/>
+			<xs:element type="xs:string" name="division_head_signature"/>
+			<xs:element type="xs:string" name="division_head_date"/>
+			<xs:element type="xs:string" name="college_dean_name"/>
+			<xs:element type="xs:string" name="college_dean_signature"/>
+			<xs:element type="xs:string" name="college_dean_date"/>			
+			<xs:element type="xs:string" name="hidden_name"/>
+			<xs:element type="xs:string" name="hidden_cwid"/>			
+			<xs:element type="xs:string" name="hidden_email_subject"/>
+			<xs:element type="xs:string" name="aftiaDescCWID"/>
+			<xs:element type="xs:string" name="stage_indicator"/>
+			<xs:element type="xs:string" name="faculty_staff_flag"/>
+			<xs:element type="xs:string" name="student_attendance_flag"/> 
+			<xs:element type="xs:string" name="primary_warrant_coordinator_flag"/> 
+			<xs:element type="xs:string" name="alternate_warrant_coordinator_flag"/> 
+			<xs:element type="xs:string" name="primary_cms_student_flag"/>
+			<xs:element type="xs:string" name="alternate_cms_student_flag"/>
+			<xs:element type="xs:string" name="college_flag"/>
+			<xs:element type="xs:string" name="department_flag"/>
+			<xs:element type="xs:string" name="division_flag"/>
+			<xs:element type="xs:string" name="deparment_approver_names"/>
+			<xs:element type="xs:string" name="college_approver_names"/>
+			<xs:element type="xs:string" name="division_approver_names"/>
+			<xs:element type="xs:string" name="hidden_division_code"/>
+			<xs:element type="xs:string" name="hidden_college_code"/>
+			<xs:element type="xs:string" name="hidden_primary_timekeeper_emplID"/>
+			<xs:element type="xs:string" name="hidden_primary_timekeeper_userID"/>
+			<xs:element type="xs:string" name="hidden_primary_timekeeper_email"/>
+			<xs:element type="xs:string" name="hidden_alternate_timekeeper_emplID"/>
+			<xs:element type="xs:string" name="hidden_alternate_timekeeper_userID"/>
+			<xs:element type="xs:string" name="hidden_alternate_timekeeper_email"/>
+			<xs:element type="xs:string" name="hidden_primary_student_timekeeper_emplID"/>
+			<xs:element type="xs:string" name="hidden_primary_student_timekeeper_userID"/>
+			<xs:element type="xs:string" name="hidden_primary_student_timekeeper_email"/>
+			<xs:element type="xs:string" name="hidden_alternate_student_timekeeper_emplID"/>
+			<xs:element type="xs:string" name="hidden_alternate_student_timekeeper_userID"/>
+			<xs:element type="xs:string" name="hidden_alternate_student_timekeeper_email"/>
+			<xs:element type="xs:string" name="hidden_official_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_official_approver_name"/>
+			<xs:element type="xs:string" name="hidden_official_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_official_approver_email"/>
+			<xs:element type="xs:string" name="hidden_official_cd_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_official_cd_approver_name"/>
+			<xs:element type="xs:string" name="hidden_official_cd_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_official_cd_approver_email"/>
+			<xs:element type="xs:string" name="hidden_primary_warrant_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_primary_warrant_approver_name"/>
+			<xs:element type="xs:string" name="hidden_primary_warrant_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_primary_warrant_approver_email"/>
+			<xs:element type="xs:string" name="hidden_alternate_warrant_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_alternate_warrant_approver_name"/>
+			<xs:element type="xs:string" name="hidden_alternate_warrant_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_alternate_warrant_approver_email"/>
+			<xs:element type="xs:string" name="hidden_primary_cms_student_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_primary_cms_student_approver_name"/>
+			<xs:element type="xs:string" name="hidden_primary_cms_student_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_primary_cms_student_approver_email"/>
+			<xs:element type="xs:string" name="hidden_alternate_cms_student_approver_emplID"/>
+			<xs:element type="xs:string" name="hidden_alternate_cms_student_approver_name"/>
+			<xs:element type="xs:string" name="hidden_alternate_cms_student_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_alternate_cms_student_approver_email"/>
+			<xs:element type="xs:string" name="hidden_division_approver_name"/>
+			<xs:element type="xs:string" name="hidden_division_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_division_approver_email"/>
+			<xs:element type="xs:string" name="hidden_college_approver_name"/>
+			<xs:element type="xs:string" name="hidden_college_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_college_approver_email"/>
+			<xs:element type="xs:string" name="hidden_department_approver_name"/>
+			<xs:element type="xs:string" name="hidden_department_approver_userID"/>
+			<xs:element type="xs:string" name="hidden_department_approver_email"/>
+			<xs:element type="xs:string" name="hidden_row_count"/>
+			<xs:element type="xs:string" name="hidden_department_ID"/>
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+</xs:schema>

@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DroneFlightSubmission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="PrefferedEmail"/>
+        <xs:element type="xs:string" name="FlightLocation"/>
+        <xs:element type="xs:string" name="FlightDate"/>
+		<xs:element type="xs:string" name="DroneFlightStartTime"/>
+		<xs:element type="xs:string" name="DroneFlightEndTime"/>
+        <xs:element type="xs:string" name="FlightTime"/>
+        <xs:element type="xs:string" name="MakeofDrone"/>
+        <xs:element type="xs:string" name="ModelofDrone"/>
+        <xs:element type="xs:byte" name="PurposofFlight"/>
+        <xs:element type="xs:string" name="AdditionalComments"/>
+        <xs:element type="xs:string" name="StudentName"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+        <xs:element type="xs:string" name="StudentDate"/>
+        <xs:element type="xs:string" name="VPName"/>
+        <xs:element type="xs:string" name="VPSignature"/>
+        <xs:element type="xs:string" name="VPDate"/>
+		<xs:element type="xs:string" name="VPComments"/>
+        <xs:element type="xs:string" name="RiskMgmtName"/>
+        <xs:element type="xs:string" name="RiskMgmtSignature"/>
+        <xs:element type="xs:string" name="RiskMgmtDate"/>
+		<xs:element type="xs:string" name="RiskMgmtComments"/>
+        <xs:element type="xs:string" name="CampusPoliceName"/>
+        <xs:element type="xs:string" name="CampusPoliceSignature"/>
+        <xs:element type="xs:string" name="CampusPoliceDate"/>
+        <xs:element type="xs:string" name="CampusPoliceComments"/>
+		<xs:element type="xs:string" name="InitiatorEmailId"/>
+	    <xs:element type="xs:string" name="InitiatorUserId"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="VPDecision"/>
+		<xs:element type="xs:string" name="RiskMgmtDecision"/>
+		<xs:element type="xs:string" name="CampusPoliceDecision"/>
+		<xs:element type="xs:string" name="DecisionFlag"/>
+		<xs:element type="xs:string" name="InitiatorFirstName"/>
+	    <xs:element type="xs:string" name="InitiatorLastName"/>
+		<xs:element type="xs:string" name="FlightStartTimeHours"/>
+        <xs:element type="xs:string" name="FlightStartTimeMins"/>
+        <xs:element type="xs:string" name="FlightStartTimeMeridiem"/>
+		<xs:element type="xs:string" name="FlightEndTimeHours"/>
+        <xs:element type="xs:string" name="FlightEndTimeMins"/>
+        <xs:element type="xs:string" name="FlightEndTimeMeridiem"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

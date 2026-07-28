@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-03-06T11:46:52Z" uuid="72fa3082-0ee1-4251-8207-63c10f312176">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="LoanStatusVerification" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="203.185mm" h="266.685mm">
+         <draw name="logo" w="57.15mm" h="22.225mm">
+            <value>
+               <image href=".\CSUF_LOGO..png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <field name="cwid" h="12.7mm" minW="66.675mm" hAlign="right" x="104.775mm" y="15.875mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.31mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Enter Student's            CWID Here :</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+            </caption>
+         </field>
+         <field name="formCode" w="25.4mm" h="9.525mm" hAlign="right" x="177.8mm" y="19.05mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="aidYear" w="25.4mm" h="9.525mm" y="31.75mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+this.presence="hidden";
+</script>
+            </event>
+         </field>
+         <draw name="Text1" w="203.2mm" h="9.525mm" y="31.75mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>LOAN STATUS VERIFICATION(                  )         </text>
+            </value>
+            <font size="16pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 53 LOAN STATUS VERIFICATION(                  )          0 128426 13964 0 0 0 "Times New Roman" 1 0 16000 ISO-8859-1?></draw>
+         <keep intact="none"/>
+         <field name="TitleYear" w="26.67mm" h="9mm" x="130.175mm" y="30.734mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="16pt" typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text2" w="203.2mm" h="47.625mm" y="44.45mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">INSTRUCTIONS:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">When you filed your Free Application for Federal Student Aid (FAFSA), the FAFSA processor sent you a response indicating their records showed that a previous loan is in default, discharged, or that you have filed bankruptcy. Based on that response, the federal government requires that we obtain information from you to confirm your continued eligibility to receive federal funds.</span><span style="font-weight:normal;font-style:italic"> Incomplete documents will not be returned.</span><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">They will be disposed of in a secure manner, per university policy.</span><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">This will delay processing.<span style="xfa-spacerun:yes"> </span></span></p><p style="font-style:italic;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">Your loan history from the National Student Loan Data System (<a href="http://www.nslds.ed.gov/">www.nsldsfap.ed.gov</a>) may show that your loans are defaulted. You may call the U.S. Department of Education at 1.800.621.3115 for assistance or for information regarding your loan.</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in">We cannot proceed with the review of your financial aid eligibility until you submit a copy of the requested documentation that is appropriate to you situation and it is verified as resolved.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify"/>
+         </draw>
+         <draw name="Text3" y="95.25mm" w="203.2mm" h="17.78mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;font-weight:bold;text-decoration:underline;letter-spacing:0in">ACTION TO COMPLETE FORM:</p><p style="font-family:Arial;font-weight:bold;text-decoration:underline;letter-spacing:0in"><br/></p><p style="font-family:Arial;font-weight:bold;letter-spacing:0in">Select situation below which is relevant to you and attach a copy of documentation showing that you have resolved your loan status:</p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+         </draw>
+         <field name="ActionCB1" y="113.538mm" w="5.842mm" h="6.35mm" x="15.875mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="ActionCB2" y="126.492mm" w="5.842mm" h="6.35mm" x="15.875mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="ActionCB3" y="141.986mm" w="5.842mm" h="6.35mm" x="15.875mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw name="Text4" y="161.925mm" x="15.875mm" w="187.31mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li>If you do not meet the three year conditional disability discharge, you must also include a signed statement that you affirm you will resume responsibility to pay back your previous student loan</li></ul></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text6" y="127mm" x="22.225mm" w="7.124403in" h="12.994mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Active Bankruptcy Claim -<span style="font-weight:normal"> If you have a non-defaulted student loan in an active bankruptcy claim, you will most likely be eligible for aid as long as you do not have any student loans in a default status. Attach your NSLDS loan</span><span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">history to this form to document that all your student loans are in good standing.</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text7" y="114.3mm" x="22.225mm" w="180.975mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold">Defaulted Loans<span style="font-weight:normal"> - If one or more of your federal student loans are defaulted, submit this form only after you can</span></p><p>attach documentation that the loans are repaid or rehabilitated.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 510166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 15 Defaulted Loans 0 1417 9313 0 0 0 "Arial" 1 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 99  - If one or more of your federal student loans are defaulted, submit this form only after you can  0 79205 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 64 attach documentation that the loans are repaid or rehabilitated. 0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+         <field name="ActionCB4" y="173.736mm" w="5.842mm" h="6.35mm" x="15.875mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw name="Text5" y="174.625mm" x="22.225mm" w="7.124403in" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Veteran Disability Discharge -<span style="font-weight:normal"> If you qualified for a disability discharge based on one of the two standards listed</span></p><p style="letter-spacing:0in">below, submit a copy of the documentation that confirms your eligibility:</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text5" y="142.875mm" x="22.225mm" w="7.124403in" h="17.228mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Non-Veteran Disability Discharge -<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you wish to take out additional student loans, attach a physician’s<span style="xfa-spacerun:yes">  </span>certification that you have the ability to engage in substantial gainful activity AND a statement that you signed stating that you are aware the new student loans can’t later be discharged for any present impairment unless your condition deteriorates to the point where you become permanently disabled.</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text8" y="187.325mm" x="15.875mm" w="7.374403in" h="26.67mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li>Letter from the VA confirming that you have a service connected 100 % disability; OR</li><li>Letter from the VA confirming that you are totally disabled based on your employability determination; AND</li><li>A physician’s certification that you have the ability to engage in substantial gainful activity; AND</li><li>A statement that you signed stating that you are aware the new student loans or TEACH Grant service obligation can’t later be discharged for any present impairment unless your condition deteriorates to the point where you become permanently disabled.</li></ul></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Rectangle1" w="203.2mm" h="50.8mm" y="215.9mm">
+            <value>
+               <rectangle>
+                  <edge/>
+                  <corner radius="5.08mm"/>
+               </rectangle>
+            </value>
+         </draw>
+         <draw name="Text9" y="215.9mm" w="203.2mm" h="22.225mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:</p><p style="text-decoration:none;letter-spacing:0in">By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I (we) agree to provide additional proof of the information I (we) have reported, if requested to do so. I (we) I also certify that I (we) have read the terms and conditions section of the CSU Fullerton, Financial Aid website</p><p style="text-decoration:none;letter-spacing:0in">(<a href="http://www.fullerton.edu/financialaid/info/Terms.php">http://www.fullerton.edu/financialaid/info/Terms.php</a>)*Signatures are required</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+         </draw>
+         <field name="studentScribleSignature" w="133.35mm" h="9mm" y="238.125mm">
+            <ui>
+               <imageEdit data="embed"/>
+               <extras name="x-scribble-add-on">
+                  <boolean name="geoLocMandatoryOnIpad">1</boolean>
+               </extras>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <caption reserve="35.1175mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Student E-signature</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+            <desc>
+               <text name="embeddedHref"/>
+            </desc>
+            <border>
+               <edge presence="hidden"/>
+               <corner/>
+               <corner/>
+               <corner presence="hidden"/>
+               <corner/>
+            </border>
+         </field>
+         <field name="ipAddress" y="238.125mm" x="133.35mm" w="69.85mm" h="8.999mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="21.43mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> IP Address</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+            </caption>
+         </field>
+         <field name="studentSignature" y="247.65mm" w="101.6mm" h="8.999mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="27.8325mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Student Name:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+            </caption>
+         </field>
+         <field name="studentSignDate" y="247.65mm" w="50.8mm" h="8.999mm" x="101.6mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="11.64mm">
+               <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}|date{YY/MM/DD}</picture>
+            </format>
+         </field>
+         <field name="studentIDNumber" y="247.65mm" x="152.4mm" w="50.8mm" h="8.999mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.9647mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> CWID</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+            </caption>
+         </field>
+         <draw y="256.934mm" w="203.2mm" h="0.384486in" name="Warning">
+            <font typeface="Arial" baselineShift="0pt"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:0.85pt;margin-left:5.35pt;line-height:12pt;font-weight:bold;letter-spacing:0in">*Warning:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 64 00030008000B000C000D000F001000110012001300140015001600180019001B001D001E002400250026002700280029002A002B002C002F0031003200350036003700380039003A003C004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005C00B6 %()*,-./0123568:;ABCDEFGHILNORSTUVWYabcdefghijklmnopqrstuvwy’?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 184 46 0003000A000D0010001D002400250026002700280029002B002C002F003000310032003300350036003700380039003A004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059005A005C '*-:ABCDEFHILMNOPRSTUVWabcdefghiklmnoprstuvwy?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 100 25 0003000F00110037004400450046004700480049004A004B004C004F005000510052005300550056005700580059005A005C ,.Tabcdefghilmnoprstuvwy?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 64 16 0003000B000C0024002600280029002C002F0031003200350036003700380039 ()ACEFILNORSTUV?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\abc.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 92?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-03-06T11:46:52Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:72fa3082-0ee1-4251-8207-63c10f312176</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

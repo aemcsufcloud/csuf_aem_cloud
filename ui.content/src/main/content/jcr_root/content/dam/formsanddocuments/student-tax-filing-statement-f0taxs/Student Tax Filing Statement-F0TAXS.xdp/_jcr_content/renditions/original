@@ -1,0 +1,2149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2022-03-16T10:32:53Z" uuid="52a8739d-7d9e-426e-8f39-2c110d0a700e">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="form1" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="6.35mm" y="6.35mm" w="209.55mm" h="266.7mm"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 0?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="8.25in" h="10.5in">
+         <subform w="206.375mm" minH="263.525mm" name="MainPanel" layout="lr-tb">
+            <bind match="none"/>
+            <subform w="206.537mm" name="HeadingPanel" h="34.925mm">
+               <keep intact="none"/>
+               <field name="aidYear" y="25.4mm" x="6.35mm" w="37mm" h="9mm" presence="invisible">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="TextField1" w="19.177mm" h="9.525mm" x="174.625mm" y="25.4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" size="14pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "F0CTXP";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "F1CTXP";
+}
+</script>
+                  </event>
+               </field>
+               <draw name="Image1" x="3.175mm" w="73.025mm" h="25.4mm">
+                  <value>
+                     <image href=".\Parent Tax Filling Logo.png" contentType="image/png"/>
+                  </value>
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <subform w="206.375mm" minH="12.7mm" name="StudentInfoPanel" layout="lr-tb">
+               <draw name="Text11" w="206.375mm" h="3.586mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 582166 7331 0 0 1417 1417 0 0?></draw>
+               <draw name="Text1" w="28.575mm" h="9.936mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text> Enter Student's 
+          CWID Here:</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 78166 25331 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 17  Enter Student's  0 1417 9667 0 0 0 "Myriad Pro" 1 0 11000 ISO-8859-1?>
+                  <?renderCache.textRun 20           CWID Here: 0 1417 22867 0 0 0 "Myriad Pro" 1 0 11000 ISO-8859-1?></draw>
+               <field name="studentIDNumber" w="34.925mm" h="9.936mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+               </field>
+               <draw name="Text1" w="19.05mm" h="9.537mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Student's 
+Name:</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 51166 24200 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 11 Student's   0 1417 9667 0 0 0 "Myriad Pro" 1 0 11000 ISO-8859-1?>
+                  <?renderCache.textRun 5 Name: 0 1417 22867 0 0 0 "Myriad Pro" 1 0 11000 ISO-8859-1?></draw>
+               <field name="HiddenStudentName" h="9.936mm" minW="34.925mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+               </field>
+               <draw name="Text1" w="19.05mm" h="9.537mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>   Case ID</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 51166 24200 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 10    Case ID 0 1417 9667 0 0 0 "Myriad Pro" 1 0 11000 ISO-8859-1?></draw>
+               <field name="caseId" w="34.925mm" h="9.936mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+               </field>
+               <field name="financialAidYear" w="34.925mm" h="9.936mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+               </field>
+               <draw name="Text11" w="29.2864mm" h="2.764mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <?renderCache.bounds 80183 5001 0 0 1417 1417 0 0?></draw>
+               <?templateDesigner expand 0?></subform>
+            <subform w="206.883mm" name="InformationPanel" h="261.828mm">
+               <keep intact="none"/>
+               <draw name="Text3" y="1.117mm" w="203.2mm" h="5.939mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:center;letter-spacing:0in">STUDENT (AND SPOUSE)<span style="xfa-spacerun:yes">              </span>TAX FILLING STATEMENT(<span style="xfa-spacerun:yes">                          </span>)</p></body>
+                     </exData>
+                  </value>
+                  <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+               </draw>
+               <draw name="Text4" y="7.467mm" w="203.2mm" h="31.75mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">          </span>To verify student's (and student's spouse, if married)<span style="xfa-spacerun:yes">             </span>income and wages information, you must provide the information below.</p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;font-weight:bold;text-decoration:underline;letter-spacing:0in">Instructions for completing this form:</p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Complete Section A<span style="font-weight:normal"> whether or not you, the parent (and your spouse), have already completed your<span style="xfa-spacerun:yes"> </span></span><span style="xfa-spacerun:yes">          </span><span style="font-weight:normal"><span style="xfa-spacerun:yes">  </span>U.S. Federal Tax Return<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                             </span><span style="font-weight:bold">Do NOT</span> email any IRS Tax Return Transcripts or other IRS documents to our office to protect your privacy.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">               </span><span style="font-style:italic">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <draw name="Text3" y="39.217mm" w="203.2mm" h="5.939mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+                  <?renderCache.bounds 573166 14001 0 0 1417 1417 0 0?></draw>
+               <draw name="Text5" y="48.742mm" x="3.175mm" w="193.675mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>  Did you, the parent, file a            income tax return with the IRS? (if married, include spouse)</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 546166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 101   Did you, the parent, file a            income tax return with the IRS? (if married, include spouse) 0 1417 9667 0 0 0 "Myriad Pro" 0 0 11000 ISO-8859-1?></draw>
+               <draw name="Line1" y="70.967mm" w="206.375mm" h="0in">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line2" y="70.967mm" w="0in" h="136.525mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line2" y="70.967mm" x="206.375mm" w="0in" h="136.525mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="Line2" y="70.967mm" x="104.775mm" w="0in" h="136.525mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw x="31.75mm" y="74.142mm">
+                  <value>
+                     <text>Student Tax Filers</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro" size="12pt" weight="bold" underline="1" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Text6" y="88.9mm" w="101.6mm" h="21.461mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">  </span>- Submit your<span style="xfa-spacerun:yes">             </span>IRS Tax Return Transcript or<span style="xfa-spacerun:yes">              </span>1040 Tax<br/><span style="xfa-spacerun:yes">     </span>Returns along with<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>- Obtain your transcript from the IRS website http://www.irs.gov and<br/><span style="xfa-spacerun:yes">    </span>click on "Get Transcript of Your Tax Records" OR by calling (800)<br/><span style="xfa-spacerun:yes">    </span>908-9946 to request an IRS Tax Return Transcript for the<span style="xfa-spacerun:yes">            </span>year</p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw x="130.175mm" y="74.142mm">
+                  <value>
+                     <text>Student Non-Tax Filers</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro" size="12pt" weight="bold" underline="1" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw x="104.775mm" y="90.017mm" w="98.425mm" h="17.228mm">
+                  <value>
+                     <text>     - MUST provide confirmation of non-filling from the IRS through                   form 4506-T (box 7), or online through IRS dated on or after               October 1, 
+       or provide written statement of non-filing</text>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 276166 46001 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 80      - MUST provide confirmation of non-filling from the IRS through             0 1417 8167 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 75        form 4506-T (box 7), or online through IRS dated on or after         0 1417 18967 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 19        October 1,   0 1417 29767 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 49        or provide written statement of non-filing 0 1417 40567 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+               <draw x="6.35mm" y="118.592mm">
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">since separated.<span style="font-weight:normal"> Date of separation:</span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro"/>
+               </draw>
+               <draw name="Text6" y="124.942mm" w="101.6mm" h="18.415mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>         - Submit a SIGNED copy of the             Tax Return Transcript or                            1040 Tax Returns along with             - AND copied of all W2s, as they are required to determine your                  portion of the income</text>
+                  </value>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 285166 49366 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 81          - Submit a SIGNED copy of the             Tax Return Transcript or       0 1417 8167 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 52                       1040 Tax Returns along with    0 1417 18967 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 79           - AND copied of all W2s, as they are required to determine your       0 1417 29767 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 33             portion of the income 0 1417 40567 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+               <draw name="Text6" y="150.342mm" w="101.6mm" h="34.655mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- If tax extension is beyond the 6 month<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">October 15,<span style="xfa-spacerun:yes">               </span>deadline:</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                      </span>- Submit form 4868, unexpired IRS approval of extensions<span style="xfa-spacerun:yes">     </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                         </span>beyond the automatic 6-month extension</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">   </span>- All W2s, a signed statement with estimated<span style="xfa-spacerun:yes">            </span>income<br/><span style="xfa-spacerun:yes">                         </span>and/or business related income amount(s)(if applicable),<br/><span style="xfa-spacerun:yes">                         </span>a signed copy of<span style="xfa-spacerun:yes">             </span>federal tax return form (1040,<br/><span style="xfa-spacerun:yes">                        </span>1040A, or 1040EZ), and provide confirmation of non-filling<br/><span style="xfa-spacerun:yes">                        </span>from the IRS through form 4506-T (box 7) dated on or<br/><span style="xfa-spacerun:yes">                        </span>after October 1,<span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Text6" y="191.617mm" x="6.35mm" w="95.25mm" h="9.525mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>- Submit a signed and translated copy of your foreign tax return, which          shows the            Adjusted Gross Income(AGI) and taxes paid.</text>
+                  </value>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 267166 24166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 73 - Submit a signed and translated copy of your foreign tax return, which   0 1417 8167 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?>
+                  <?renderCache.textRun 67     shows the            Adjusted Gross Income(AGI) and taxes paid. 0 1417 18967 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+               <draw x="104.775mm" y="118.592mm" w="98.425mm" h="38.465mm">
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">     </span>-<span style="xfa-spacerun:yes">  </span>Submit a copy of all your<span style="xfa-spacerun:yes">              </span>Form W-2(s) from your employer<br/><span style="xfa-spacerun:yes">         </span>or your<span style="xfa-spacerun:yes">              </span>IRS Wage and Income tax Transcript. OR 1099S<br/><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">      </span>-<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:underline">MUST</span> provide confirmation of non-filling from the IRS through<br/><span style="xfa-spacerun:yes">         </span>form 4506-T (box 7), or online through IRS dated on or after<br/><span style="xfa-spacerun:yes">         </span>October 1,<span style="xfa-spacerun:yes">             </span>or provide written statement of non-filing<br/><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- List the names of all your<span style="xfa-spacerun:yes">            </span>employer(s) and the amount<br/><span style="xfa-spacerun:yes">          </span>earned from each employer in<span style="xfa-spacerun:yes">             </span>in the space provided below</p><p style="letter-spacing:0in"><br/></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                  <font typeface="Myriad Pro" size="9pt" baselineShift="0pt"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Line1" y="207.492mm" w="206.375mm" h="0in">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.6833mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <field name="yesCHK" y="55.092mm" x="3.175mm" w="92.075mm" h="9.525mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="85.075mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span style="xfa-spacerun:yes">  </span><span style="font-weight:bold">Yes (select one option from the column below)</span></p></body>
+                        </exData>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt"/>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="noCHK" y="55.092mm" x="104.775mm" w="88.9mm" h="9.525mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="81.9mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Myriad Pro" baselineShift="0pt"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span style="xfa-spacerun:yes">  </span><span style="font-weight:bold">No(select one option from the column below)</span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="noUseIRSCHK" y="80.492mm" w="88.9mm" h="8.539mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="81.9mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                     <value>
+                        <text> I am unable to OR choose not to use the IRS DRT</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="taxExtensionCHK" y="143.992mm" w="76.2mm" h="6mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="69.2mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:none"> I/we have filed a Tax Extension</span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="foreignTaxCHK" y="185.267mm" w="82.55mm" h="6mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="75.55mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold"> I/we have filed a<span style="xfa-spacerun:yes">             </span>Foreign Tax Return</span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="separatedCHK" y="112.242mm" w="101.6mm" h="6mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="94.6mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:none"> My filling status was Married Filing Jointly; however I have</span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="noIncomeCHK" y="80.492mm" x="104.775mm" w="98.425mm" h="9.525mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="91.425mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold"> I was not employed and had no income earned from <br/><span style="xfa-spacerun:yes">  </span>work in<span style="xfa-spacerun:yes"> </span></span></p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="notRequireFileCHK" y="112.242mm" x="104.775mm" w="85.725mm" h="6mm">
+                  <ui>
+                     <checkButton mark="check">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <integer>0</integer>
+                  </value>
+                  <caption placement="right" reserve="78.725mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+                     <value>
+                        <text> I was employed in             but not required to file</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                     <integer>0</integer>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <field name="separatedDate" y="115.417mm" x="63.5mm" w="37mm" h="9mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <format>
+                     <picture>date{MM/DD/YYYY}</picture>
+                  </format>
+               </field>
+               <subform name="Table1" layout="table" columnWidths="46.0377mm 46.0377mm" x="111.125mm" y="158.75mm">
+                  <border>
+                     <edge/>
+                  </border>
+                  <subform layout="row" name="HeaderRow" id="HeaderRow_ID">
+                     <assist role="TH"/>
+                     <draw h="9.5252mm" name="Cell1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>Employer's Name</text>
+                        </value>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" hAlign="center"/>
+                     </draw>
+                     <field name="TextField4" w="41.275mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle" hAlign="center"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <event activity="ready" ref="$layout" name="event__layout_ready">
+                           <script contentType="application/x-javascript">
+
+this.rawValue = StudentInfoPanel.aidYear.rawValue+" Amount Earned";
+</script>
+                        </event>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue.concat(" Amount Earned");
+</script>
+                        </event>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <occur max="-1"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row1">
+                     <assist role="TR"/>
+                     <draw h="9.5252mm" name="Cell1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:8pt;letter-spacing:0in">Example:<span style="font-size:10pt"> Suzy's Auto Body Shop</span></p></body>
+                           </exData>
+                        </value>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle"/>
+                     </draw>
+                     <draw h="9.5252mm" name="Cell2">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Example:<span style="xfa-spacerun:yes">   </span><span style="font-size:10pt"> $2000.00</span></p></body>
+                           </exData>
+                        </value>
+                        <font typeface="Myriad Pro" size="8pt" baselineShift="0pt"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     </draw>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row2">
+                     <assist role="TR"/>
+                     <field name="emploeeName1" y="2.675mm" x="21.725mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="amount1" y="2.675mm" x="32.837mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row3">
+                     <assist role="TR"/>
+                     <field name="employeeName2" y="3.2mm" x="34.425mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="amount2" y="3.2mm" x="16.962mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="row" name="Row4">
+                     <assist role="TR"/>
+                     <field name="employeeName3" y="3.725mm" x="31.25mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <field name="amount3" y="3.725mm" x="26.487mm" w="62mm" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <border>
+                           <edge/>
+                           <corner thickness="0.175mm"/>
+                        </border>
+                     </field>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+                  <overflow leader="HeaderRow"/>
+                  <?templateDesigner expand 0?></subform>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="83.566mm" y="6.985mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="148.59mm" y="20.27mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" underline="1"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="0.231528in" x="45.72mm" y="48.336mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="11pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="19.812mm" y="88.392mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="65.913mm" y="88.392mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="76.2mm" y="103.632mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue="2017";
+}
+else{
+	this.rawValue="2019";
+}
+
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="46.482mm" y="124.333mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue="2019";
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="6.604mm" y="128.27mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="74.93mm" y="149.657mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="73.279mm" y="161.417mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="38.862mm" y="168.91mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue="2019";
+}
+else{
+	this.rawValue="2018";
+}
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="36.703mm" y="180.086mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="8.763mm" h="5.528mm" x="32.512mm" y="185.42mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="22.733mm" y="194.945mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="124.282mm" y="84.806mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="123.825mm" y="97.1mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="139.7mm" y="112.522mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="143.51mm" y="117.983mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "2020";
+}
+else{
+	this.rawValue = "2018";
+}
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="120.65mm" y="121.666mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="125.095mm" y="137.033mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="144.018mm" y="144.653mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="9.652mm" h="5.528mm" x="151.638mm" y="148.209mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="14.859mm" h="6.939mm" x="79.756mm" y="0.559mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" size="14pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="28.575mm" h="6.939mm" x="149.606mm" y="0.508mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" weight="bold" size="14pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue=StudentInfoPanel.financialAidYear.rawValue;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 0?>
+               <field name="TextField1" w="41.275mm" h="5.528mm" x="28.575mm" y="91.766mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "all schedules if applicable";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "schedules 1,2,3 if applicable";
+}
+</script>
+                  </event>
+               </field>
+               <field name="TextField1" w="41.275mm" h="5.528mm" x="53.213mm" y="127.732mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro" size="9pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="ready" ref="$layout" name="event__layout_ready">
+                     <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+                  </event>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.rawValue = "all schedules if applicable";
+}
+else if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.rawValue = "schedules 1,2,3 if applicable";
+}
+</script>
+                  </event>
+               </field>
+               <draw x="3.175mm" y="39.721mm" w="101.6mm" h="5.939mm">
+                  <font typeface="Myriad Pro"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:14pt;color:#ffffff;background-color:#000000;font-weight:bold;letter-spacing:0in">Section A: Student Income Information<span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               </draw>
+            </subform>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="209.55mm" layout="lr-tb">
+         <subform w="200.025mm" h="63.504mm" name="CertificationPanel">
+            <draw name="Line1" w="200.025mm" h="0in">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Line1" y="60.325mm" w="200.025mm" h="0in">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Line2" w="0in" h="60.325mm">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <field name="PName1" y="38.1mm" x="3.175mm" w="136.525mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="40.0626mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Print Student's Name:</span></p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = CertificationPanel.studentSignature.rawValue;
+</script>
+               </event>
+            </field>
+            <field name="studentSignature" y="28.575mm" x="3.175mm" w="136.525mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="36.9695mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">*Student's Signature:</span></p></body>
+                     </exData>
+                  </value>
+               </caption>
+            </field>
+            <field name="studentSignDate" y="28.575mm" x="142.875mm" w="53.975mm" h="9mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="10.6434mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Date</span></p></body>
+                     </exData>
+                  </value>
+               </caption>
+            </field>
+            <field name="cwid" y="38.1mm" x="142.875mm" w="53.975mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="10.6434mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">CWID</span></p></body>
+                     </exData>
+                  </value>
+               </caption>
+            </field>
+            <draw name="Text8" y="50.8mm" x="15.875mm" w="182.445mm" h="8.761mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>*<span style="xfa-spacerun:yes">     </span>Warning:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be<br/><span style="xfa-spacerun:yes">                             </span>fined, be sentenced to jail or both</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="Line2" x="200.025mm" w="0in" h="60.325mm">
+               <value>
+                  <line slope="/">
+                     <edge thickness="0.6833mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw x="3.175mm" y="1.524mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">CERTIFICATION:</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <draw x="3.175mm" y="12.7mm" w="196.85mm" h="12.994mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">accurate. I agree to provide additional proof of the information reported, if requested to do so. I also certify that I have read the<span style="xfa-spacerun:yes">  </span>terms and conditions section of the CSUF Fullerton, Financial Aid website (<a href="http://www.fullerton.edu/financialaid/info/Terms.php">http://www.fullerton.edu/financialaid/info/Terms.php</a>)<span style="xfa-spacerun:yes">  </span>*Signature is required</p></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <draw w="7.75in" h="9.777mm" x="3.175mm" y="6.35mm">
+               <font typeface="Myriad Pro"/>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="1.5162mm" bottomInset="0.5mm"/>
+               <value>
+                  <text>By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and </text>
+               </value>
+               <?renderCache.bounds 555166 21999 0 0 1417 4298 0 0?>
+               <?renderCache.textRun 131 By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and  0 1417 11798 0 0 0 "Myriad Pro" 0 0 10000 ISO-8859-1?></draw>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Line1" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge thickness="0.6833mm"/>
+               </line>
+            </value>
+         </draw>
+         <draw name="Text12" w="8.25in" h="104.771mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><br/>USING THE IRS DATA RETRIEVAL TOOL (DRT)<br/><span style="font-size:9pt;font-weight:normal">The IRS Data Retrieval Tool can be used when completing the FAFSA to directly pull parental tax information from the IRS into the FAFSA. This will expedite the application process. In most cases, no further documentation is needed by our office to verify income if the transfer of data using the IRS DRT is successful. Below are the steps on how to utilize IRS DRT.<br/></span><br/></p><ol style="font-size:9pt;font-weight:normal;letter-spacing:0in"><li>Log in to your current FAFSA or start a new FAFSA at www.fafsa.gov using your FSA ID.</li><li>Skip to the "Financial Information" section and, if applicable, update the following:<br/><span style="xfa-tab-count:1">         </span>a. Whether or not you have filed an IRS income tax return and,<br/><span style="xfa-tab-count:1">         </span>b. Your tax filing status.</li><li>After updating the above information, you will be asked additional questions to screen your DRT eligibility.</li><li>You will see the "Link to IRS" button if you are eligible to use the IRS DRT, if so, click on the button and log in with the IRS to retrieve your tax return information.</li><li>Review your tax return information, and see the tax data that will be transferred into your FAFSA.</li><li>Check the "Transfer My Tax Information into the FAFSA" box, and click the "Transfer Now" button.</li><li>Review your federal tax return information that has been transferred into the data fields on your FAFSA and submit your correction.</li></ol><p style="letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">If you successfully transferred your tax information and submitted your correction, you will no longer have to submit tax return transcripts. Please allow<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold;text-decoration:underline">two business weeks</span> for our office to download these corrections. Shortly after we will remove the Student Tax Filing Statement and/or Parent Tax Filing Statement from your To-Do List.</p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:9pt;text-decoration:none;letter-spacing:0in">Please note:<span style="font-weight:normal"> Not everyone can use the IRS DRT function. Please visit<span style="xfa-spacerun:yes"> </span></span><a href="https://fafsa.ed.gov/help/irshlp10.htm">https://fafsa.ed.gov/help/irshlp10.htm</a><span style="font-weight:normal"> to determine if you can use DRT. If you cannot use the IRS DRT you may have to request tax return transcripts. Please visit<span style="xfa-spacerun:yes"> </span></span><a href="www.irs.gov/transcript" style="font-weight:normal">www.irs.gov/transcript</a><span style="font-weight:normal"> to view transcript ordering options or call 1-800-908-9946 to request return transcripts via phone.</span></p></body>
+               </exData>
+            </value>
+            <font size="14pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text10" w="8.25in" h="84.044mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">HOW TO REQUEST AN IRS TAX TRANSCRIPT</p><p style="font-size:9pt;font-weight:normal;letter-spacing:0in">The IRS has now made downloading an electronic copy of your tax transcript an option for those individuals with a valid Social Security<br/>Number (SSN) or individual Taxpayer ID Number (ITIN). You can begin this process by navigating to<span style="xfa-spacerun:yes"> </span><a href="http://www.irs.gov/transcript">http://www.irs.gov/transcript<span style="color:#000000;text-decoration:none">. The</span></a></p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">website will require authentication of the primary tax filer's identity. You will be asked to provide the following information that should</p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">correspond with what the IRS has on file for the primary tax filer: SSN, ITIN, date of birth, street address, and zip code. Once the</p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">authentication is complete, take the following steps:</p><ul style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in;list-style-type:disc"><li>Choose the "Get Transcript ONLINE" option. You must sign in or sign up to create an account.</li><li>Select the reason you are requesting a transcript as "Higher Education/Student Aid".</li><li>In the "Return Transcript" Box, choose the transcript for the appropriate tax year. Your IRS Tax Return Transcript should<br/>the open on-screen as a pdf document.</li><li>Print the transcript and write the student's name and Cal State Fullerton CWID at the top of page, attach all printed pages<br/>of the tax return Transcript to the Tax Filing Statement form, and return them to the Office of Financial Aid (UH 146).<br/><span style="xfa-spacerun:yes"> </span></li></ul><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">If you are a taxpayer but are unable to access your Tax Return Transcript online, you will have to order a paper tax transcript to be</p><p style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in">sent to you via regular post. You can do so by:</p><ul style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in;list-style-type:disc"><li>Navigating to the IRS website http://www.irs.gov and clicking on "Get Transcript of Your Tax Records", OR</li><li>Calling 1-800-908-9946 to request an IRS Tax Return Transcript for the appropriate year.<br/><span style="font-weight:bold;font-style:italic">PLEASE NOTE:<span style="xfa-spacerun:yes"> </span></span>Turnaround time for the above options can take up to 10 business days depending on IRS peak processing times. Additionally, tax transcripts requested online or by telephone<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">CANNOT<span style="xfa-spacerun:yes"> </span></span>be sent directly to a<span style="xfa-spacerun:yes"> </span><p>third party by the IRS.</p></li></ul></body>
+               </exData>
+            </value>
+            <font size="14pt" typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Line1" w="203.2mm" h="0in">
+            <value>
+               <line slope="/">
+                  <edge thickness="0.6833mm"/>
+               </line>
+            </value>
+         </draw>
+         <draw>
+            <font typeface="Myriad Pro"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:14pt;font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>WHO IS REQUIRED TO FILE A U.S. FEDERAL INCOME TAX RETURN?</p><p style="font-size:14pt;font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:9pt;font-weight:normal">You must file a U.S. Federal Income Tax Return, AND follow the instructions in Section A of the previous page, if your gross income was at<br/><span style="xfa-spacerun:yes">  </span>least:</span></p></body>
+               </exData>
+            </value>
+            <ui>
+               <textEdit/>
+            </ui>
+            <margin leftInset="0.5mm" rightInset="0.5mm" topInset="1.0082mm" bottomInset="0.5mm"/>
+         </draw>
+         <subform y="201.209mm" w="203.2mm">
+            <draw name="NintyText" w="203.2mm" h="26.234mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in;list-style-type:disc"><li>$12,200 if parents claimed you as a dependent</li><li>$12,200 if single</li><li>$18,350 if head of household</li><li>$24,400 if married, filing jointly</li><li>$5.00 if married, filing separately</li><li>Or, you had earnings from self-employment of any amount of at least $400.00</li></ul></body>
+                  </exData>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2019"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <subform y="228.6mm" w="203.2mm" layout="lr-tb">
+            <draw name="TwentyText" w="203.2mm" h="25.4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="font-size:9pt;font-weight:normal;text-decoration:none;letter-spacing:0in;list-style-type:disc"><li>$12,400 if parents claimed you as a dependent</li><li>$12,400 if single</li><li>$18,650 if head of household</li><li>$24,800 if married, filing jointly</li><li>$5.00 if married, filing separately</li><li>Or, you had earnings from self-employment of any amount of at least $400.00</li></ul></body>
+                  </exData>
+               </value>
+               <font size="14pt" typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(MainPanel.HeadingPanel.aidYear.rawValue == "2020"){
+	this.presence = "visible";
+}
+else{
+	this.presence = "hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <subform y="257.877mm" w="209.55mm">
+            <draw w="8.25in" y="0mm" h="34.417mm">
+               <font typeface="Myriad Pro"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">  </span><span style="font-size:9pt">If an individual did not file an IRS income tax return, regardless if he/she earned any income from work, MUST provide confirmation of non-<span style="xfa-spacerun:yes">     </span></span></p><p style="font-size:9pt;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span>filing from the IRS through form 4506-T (box 7) or other relevant taxing authority dated on or after October 1,<span style="xfa-spacerun:yes">             </span>:</p><p style="font-size:9pt;letter-spacing:0in"><br/></p><ul style="font-size:9pt;letter-spacing:0in;list-style-type:disc"><li>Complete the 4506-T form (box 7) on this link https://www.irs.gov/pub/irs-pdf/f4506t.pdf and submit to the IRS</li><li>Submit the non-filing letter from IRS along with this form to the school</li><li>OR confirmation from other relevant taxing authority</li></ul></body>
+                  </exData>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+            </draw>
+            <field name="TextField1" w="9.652mm" h="5.528mm" x="145.542mm" y="3.683mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="9pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript">
+this.rawValue=CertificationPanel.aidYear.rawValue;
+</script>
+               </event>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue=MainPanel.HeadingPanel.aidYear.rawValue;
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 0?></subform>
+      <subform w="203.2mm" minH="62.768mm" layout="lr-tb" name="FinancialAidSignaturePanel">
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text11" w="203.2mm" h="0in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 2834 0 0 1417 -1417 0 0?></draw>
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text8" w="200.025mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Financial Aid Signature</text>
+            </value>
+            <font size="12pt" typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+            <margin topInset="1.2622mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 564166 13005 0 0 1417 3578 0 0?>
+            <?renderCache.textRun 23 Financial Aid Signature 0 1417 12578 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text9" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> Recommend</text>
+            </value>
+            <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 10  Recommend 0 1417 8917 0 0 0 "Myriad Pro" 1 0 10000 ISO-8859-1?></draw>
+         <exclGroup name="staffDecision" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="50.8mm" h="6.001mm" name="Approval">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="44.8mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Approved</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <field w="100.013mm" h="6mm" name="Denial">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="94.013mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Reject</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></exclGroup>
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <field name="staffSignature" w="101.6mm" h="17.929mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.185306in" placement="top">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature:</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <draw name="Line3" w="0in" h="17.535mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="staffSignDate" w="101.6mm" h="17.929mm">
+            <ui>
+               <dateTimeEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="0.185306in" placement="top">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <field name="staffComment" w="203.2mm" minH="25.44mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="5.7337mm" placement="top">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Comments:</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <event activity="initialize" name="event__initialize">
+            <script contentType="application/x-javascript">if(staffSignature.rawValue == 1){
+	this.presence = "visible";
+}else{
+	this.presence = "hidden";
+}
+</script>
+         </event>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 004F?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 284 71 0001000300050009000A000B000D000E000F0010001100120013001400150016001700180019001A001B002000220023002400250026002700280029002A002D002E002F00300031003300340035003600370038003A003B00420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B0068 "$()*,-./0123456789:?ABCDEFGHILMNOPRSTUVWYZabcdefghijklmnopqrstuvwxyz'?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 276 69 000100030009000A000B000D000E000F0010001100120015001600170019001A001B001C002000220023002400250026002700280029002A002B002D002E002F0030003100320033003400350036003700380039003A00420043004400450046004700480049004A004C004D004E004F0050005100520053005400550056005700580059005A005B0068 "()*,-./0145689:;?ABCDEFGHIJLMNOPQRSTUVWXYabcdefghiklmnopqrstuvwxyz'?>
+      <?renderCache.subset "Myriad Pro" 0 1 ISO-8859-1 4 104 26 0001000D000F002A003500420043004400450046004700480049004A004D004E004F00500051005300540055005600570058005A ,.ITabcdefghilmnoprstuvwy?>
+      <?renderCache.subset "Myriad Pro" 1 1 ISO-8859-1 4 40 10 0001001B00220026002D002F0030003100340035 :AELNOPST?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 101?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Malgun Gothic" psName="MalgunGothicRegular" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2022-03-16T10:32:53Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:52a8739d-7d9e-426e-8f39-2c110d0a700e</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

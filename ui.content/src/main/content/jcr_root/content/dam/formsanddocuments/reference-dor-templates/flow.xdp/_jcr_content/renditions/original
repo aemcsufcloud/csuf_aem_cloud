@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.2.0.20160331.1.924316" APIVersion="3.6.16075.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2017-02-24T05:24:02Z" uuid="19c60a3b-0ca1-4891-900b-79aa26d802a0">
+  <template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+    <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+    <subform name="AF_METATEMPLATE" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+        <pageArea name="AF_MASTERPAGE" id="Page1">
+          <contentArea x="12.7mm" y="39.79mm" w="184.15mm" h="246.681mm" name="ContentArea"/>
+          <medium stock="a4" short="210mm" long="297mm"/>
+          <area y="0" x="0" name="MasterPageContent">
+            <draw name="Background" x="0" y="0.3mm" w="209.7mm" h="296.7mm">
+              <value>
+                <rectangle>
+                  <edge presence="hidden"/>
+                  <fill>
+                    <color value="246,238,235"/>
+                  </fill>
+                  <corner radius="5.08mm" presence="hidden"/>
+                </rectangle>
+              </value>
+            </draw>
+            <area x="12.7mm" y="7.62mm" name="Header">
+              <draw name="AF_LOGO_IMAGE" h="15.24mm" minW="80.604mm">
+                <ui>
+                  <imageEdit/>
+                </ui>
+              </draw>
+              <subform x="184.15mm" name="HeaderInfo" layout="tb" anchorType="topRight">
+                <bind match="none"/>
+                <margin topInset="0.1524mm" bottomInset="0.1524mm"/>
+                <draw name="AF_FORM_TITLE" anchorType="topRight" minW="80.604mm" h="6.35mm">
+                  <ui>
+                    <textEdit>
+                      <border>
+                        <edge stroke="lowered"/>
+                      </border>
+                      <margin/>
+                    </textEdit>
+                  </ui>
+                  <font usehref=".#som($template.#subform.#font)" size="14pt" weight="bold" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                    <fill usehref=".#som($template.#subform.#fill)"/>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" lineHeight="16pt">
+                    <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                  </para>
+                  <value>
+                    <text>FORM TITLE</text>
+                  </value>
+                </draw>
+                <subform x="3.172667in" y="0.270417in" minH="10.16mm" layout="lr-tb" name="ContactInfo">
+                  <bind match="none"/>
+                  <field name="Phone" h="3.81mm" anchorType="topLeft" minW="40.302mm">
+                    <ui>
+                      <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                      </textEdit>
+                    </ui>
+                    <font usehref=".#som($template.#subform.#font)" size="11pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                      <fill usehref=".#som($template.#subform.#fill)"/>
+                    </font>
+                    <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1.27mm"/>
+                    <para vAlign="bottom">
+                      <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                    </para>
+                    <caption reserve="12mm">
+                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1.27mm"/>
+                      <para vAlign="bottom">
+                        <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                      </para>
+                      <value>
+                        <text>Phone: </text>
+                      </value>
+                    </caption>
+                    <bind match="none"/>
+                    <desc>
+                      <text name="fieldLabel">Phone</text>
+                    </desc>
+                  </field>
+                  <draw name="Bullet" w="1.524mm" h="3.81mm" anchorType="middleCenter" y="0.041847in" x="1.618069in">
+                    <value>
+                      <arc hand="right" circular="1">
+                        <fill usehref=".#som($template.#subform.#fill)"/>
+                        <edge presence="hidden"/>
+                      </arc>
+                    </value>
+                    <para vAlign="middle" hAlign="center"/>
+                    <margin topInset="0mm" rightInset="0mm" leftInset="0mm" bottomInset="0mm"/>
+                  </draw>
+                  <field name="Email" h="3.81mm" anchorType="topLeft" minW="40.302mm">
+                    <ui>
+                      <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                      </textEdit>
+                    </ui>
+                    <font usehref=".#som($template.#subform.#font)" size="11pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                      <fill usehref=".#som($template.#subform.#fill)"/>
+                    </font>
+                    <margin topInset="0mm" bottomInset="0mm" leftInset="1.27mm" rightInset="0mm"/>
+                    <para vAlign="bottom">
+                      <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                    </para>
+                    <caption reserve="12mm">
+                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1.27mm"/>
+                      <para vAlign="bottom">
+                        <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                      </para>
+                      <value>
+                        <text>Email: </text>
+                      </value>
+                    </caption>
+                    <bind match="none"/>
+                    <desc>
+                      <text name="fieldLabel">Email</text>
+                    </desc>
+                  </field>
+                  <margin bottomInset="0.508mm" topInset="1.27mm" leftInset="0.762mm"/>
+                  <?templateDesigner expand 1?>
+                </subform>
+                <subform x="3.172667in" y="0.470417in" minH="27.648mm" layout="lr-tb" name="DateTimePageInfo">
+                  <bind match="none"/>
+                  <field name="CurrentDateField" w="62mm" h="9mm" id="floatingField000041" access="readOnly" presence="hidden">
+                    <ui>
+                      <dateTimeEdit>
+                        <border>
+                          <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                      </dateTimeEdit>
+                    </ui>
+                    <font typeface="Myriad Pro"/>
+                    <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                    <para vAlign="middle"/>
+                    <value>
+                      <date/>
+                    </value>
+                    <event activity="ready" ref="$layout" name="event__layout_ready">
+                      <script>$.rawValue = Num2Date(Date(), "YYYY-MM-DD")</script>
+                    </event>
+                    <bind match="none"/>
+                    <?templateDesigner floatingFieldPlaceholder {current date}?>
+                  </field>
+                  <draw name="CurrentDate" minH="3.81mm" w="30mm">
+                    <ui>
+                      <textEdit/>
+                    </ui>
+                    <value>
+                      <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+                          <p style="letter-spacing:0in;text-valign:middle">
+                            <span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField000041"/>
+                          </p>
+                        </body>
+                      </exData>
+                    </value>
+                    <font usehref=".#som($template.#subform.#font)" size="11pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                      <fill>
+                        <color value="79,76,76"/>
+                      </fill>
+                    </font>
+                    <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1.27mm"/>
+                    <para>
+                      <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                    </para>
+                  </draw>
+                  <draw name="Bullet" w="1.524mm" h="3.81mm" anchorType="middleCenter">
+                    <value>
+                      <arc hand="right" circular="1">
+                        <fill usehref=".#som($template.#subform.#fill)"/>
+                        <edge presence="hidden"/>
+                      </arc>
+                    </value>
+                    <para vAlign="middle" hAlign="center"/>
+                    <margin topInset="0mm" rightInset="0mm" leftInset="0mm" bottomInset="0mm"/>
+                  </draw>
+                  <field name="CurrentTimeField" w="62mm" h="9mm" id="floatingField018467" access="readOnly" presence="hidden">
+                    <ui>
+                      <dateTimeEdit>
+                        <border>
+                          <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                      </dateTimeEdit>
+                    </ui>
+                    <font typeface="Myriad Pro"/>
+                    <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                    <para vAlign="middle"/>
+                    <value>
+                      <time/>
+                    </value>
+                    <event activity="ready" ref="$layout" name="event__layout_ready">
+                      <script>$.rawValue = Num2Time(Time(), "HH:MM:SS")</script>
+                    </event>
+                    <bind match="none"/>
+                    <?templateDesigner floatingFieldPlaceholder {current time}?>
+                  </field>
+                  <draw name="CurrentTime" minH="3.81mm" w="28.868mm">
+                    <ui>
+                      <textEdit/>
+                    </ui>
+                    <value>
+                      <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+                          <p style="letter-spacing:0in;text-valign:middle">
+                            <span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField018467"/>
+                          </p>
+                        </body>
+                      </exData>
+                    </value>
+                    <font usehref=".#som($template.#subform.#font)" size="11pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                      <fill>
+                        <color value="79,76,76"/>
+                      </fill>
+                    </font>
+                    <margin topInset="0mm" bottomInset="0mm" leftInset="1.27mm" rightInset="1.27mm"/>
+                    <para>
+                      <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                    </para>
+                  </draw>
+                  <draw name="Bullet" w="1.524mm" h="3.81mm" anchorType="middleCenter">
+                    <value>
+                      <arc hand="right" circular="1">
+                        <fill usehref=".#som($template.#subform.#fill)"/>
+                        <edge presence="hidden"/>
+                      </arc>
+                    </value>
+                    <para vAlign="middle" hAlign="center"/>
+                    <margin topInset="0mm" rightInset="0mm" leftInset="0mm" bottomInset="0mm"/>
+                  </draw>
+                  <field name="CurrentPageNumber" w="62mm" h="9mm" id="floatingField006334" access="readOnly" presence="hidden">
+                    <ui>
+                      <numericEdit>
+                        <border>
+                          <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                      </numericEdit>
+                    </ui>
+                    <font typeface="Myriad Pro"/>
+                    <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                    <para vAlign="middle"/>
+                    <event activity="ready" ref="$layout" name="event__layout_ready">
+                      <script contentType="application/x-javascript">this.rawValue = xfa.layout.page(this)</script>
+                    </event>
+                    <bind match="none"/>
+                    <?templateDesigner floatingFieldPlaceholder #?>
+                  </field>
+                  <field name="NumberofPages" w="62mm" h="9mm" id="floatingField026500" access="readOnly" presence="hidden">
+                    <ui>
+                      <numericEdit>
+                        <border>
+                          <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                      </numericEdit>
+                    </ui>
+                    <font typeface="Myriad Pro"/>
+                    <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                    <para vAlign="middle"/>
+                    <event activity="ready" ref="$layout" name="event__layout_ready">
+                      <script contentType="application/x-javascript">this.rawValue = xfa.layout.pageCount()</script>
+                    </event>
+                    <bind match="none"/>
+                    <?templateDesigner floatingFieldPlaceholder ##?>
+                  </field>
+                  <draw name="PageIndex" minH="3.81mm" w="28.328mm">
+                    <ui>
+                      <textEdit/>
+                    </ui>
+                    <value>
+                      <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+                          <p style="letter-spacing:0in;text-valign:middle">Page<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField006334"/> of<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField026500"/></p>
+                        </body>
+                      </exData>
+                    </value>
+                    <font usehref=".#som($template.#subform.#font)" size="11pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                      <fill>
+                        <color value="79,76,76"/>
+                      </fill>
+                    </font>
+                    <margin topInset="0mm" bottomInset="0mm" leftInset="1.27mm" rightInset="0mm"/>
+                    <para>
+                      <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                    </para>
+                  </draw>
+                  <margin leftInset="0.762mm"/>
+                  <?templateDesigner expand 0?>
+                </subform>
+                <?templateDesigner expand 1?>
+              </subform>
+              <?templateDesigner expand 1?>
+            </area>
+          </area>
+          <?templateDesigner expand 1?>
+        </pageArea>
+        <?templateDesigner expand 1?>
+      </pageSet>
+      <subform w="184.15mm" name="AF_FIELDSSUBFORM" layout="tb">
+        <field name="AF_DATETIMEEDIT_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <dateTimeEdit>
+              <margin/>
+            </dateTimeEdit>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Date Field</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <value>
+            <date/>
+          </value>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <field name="AF_DROPDOWNLIST_XFO" w="184.15mm" minH="12.7mm">
+          <ui>
+            <choiceList>
+              <margin/>
+            </choiceList>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Drop-down List</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <field name="AF_NUMERICFIELD_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <numericEdit>
+              <margin/>
+            </numericEdit>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" marginLeft="0pt" textIndent="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Numeric Field</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <field name="AF_PASSWORDFIELD_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <passwordEdit>
+              <margin/>
+            </passwordEdit>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Password Field</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <field name="AF_TEXTFIELD_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <textEdit multiLine="1">
+              <margin/>
+            </textEdit>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Text Field</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+        </field>
+        <field name="AF_TELEPHONE_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <textEdit multiLine="1">
+              <margin/>
+            </textEdit>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="0mm" rightInset="0mm"/>
+          <para vAlign="top" spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="70.01mm">
+            <margin leftInset="10.16mm" rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Telephone Field</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <draw name="AF_TEXT_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <textEdit/>
+          </ui>
+          <value>
+            <text>Text</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="10.16mm" rightInset="0mm"/>
+          <para spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" vAlign="top" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+        </draw>
+        <draw name="AF_DOC_FRAG_XFO" w="184.15mm" minH="9.001mm">
+          <ui>
+            <textEdit multiLine="1">
+              <margin/>
+            </textEdit>
+          </ui>
+          <value>
+            <text>Document Fragment</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="10.16mm" rightInset="0mm"/>
+          <para spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" vAlign="top" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+        </draw>
+        <field name="AF_ADOBESIGNBLOCK_XFO" w="184.15mm" minH="9.002mm">
+          <ui>
+            <textEdit multiLine="1">
+              <margin/>
+              <border presence="hidden"/>
+            </textEdit>
+          </ui>
+          <value>
+            <exData contentType="text/html">
+              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+                <p>Signature</p>
+              </body>
+            </exData>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="10.16mm" rightInset="0mm"/>
+          <para spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" vAlign="top" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <caption reserve="0mm" placement="top">
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Adobe Sign Block</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="255,102,0"/>
+            </edge>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="255,102,0"/>
+            </corner>
+          </border>
+          <keep intact="contentArea"/>
+          <bind match="none"/>
+        </field>
+        <field name="AF_SIGNATURESCRIBBLE_XFO" w="184.15mm" h="25.4mm">
+          <ui>
+            <imageEdit data="embed"/>
+            <extras name="x-scribble-add-on">
+              <boolean name="geoLocMandatoryOnIpad">1</boolean>
+            </extras>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <para spaceBelow="0pt" marginRight="0pt" spaceAbove="0pt" vAlign="top">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <margin topInset="4.318mm" bottomInset="2.794mm" leftInset="10.16mm" rightInset="0mm"/>
+          <caption reserve="59.85mm">
+            <margin rightInset="12.7mm"/>
+            <para vAlign="top" marginRight="0pt" spaceBelow="0pt" spaceAbove="0pt" textIndent="0pt" marginLeft="0pt" lineHeight="12pt">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <value>
+              <text>Signature Scribble</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+        </field>
+        <subform name="AF_TERMSANDCONDITIONS_XFO" w="184.15mm" layout="tb">
+          <field name="AF_TC_TEXTFIELD_XFO" w="184.15mm" minH="16mm">
+            <ui>
+              <textEdit multiLine="1">
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="10.16mm" rightInset="0mm"/>
+            <para spaceBelow="0pt" lineHeight="12pt" vAlign="top">
+				<hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+			</para>
+            <caption reserve="0mm" placement="top">
+              <para vAlign="top" spaceBelow="0pt" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>Terms and Conditions</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="AF_TC_CHECKBOX_XFO" w="184.15mm" minH="2mm">
+            <ui>
+              <checkButton mark="check"/>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin leftInset="10.16mm" rightInset="0mm" topInset="2mm" bottomInset="0mm"/>
+            <value>
+              <text>false</text>
+            </value>
+            <caption placement="right" reserve="172.99mm">
+              <para marginRight="0pt" spaceBelow="0pt" marginLeft="21.6pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt" vAlign="top">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>I agree to terms and conditions</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <items>
+              <text>true</text>
+              <text>false</text>
+            </items>
+            <keep intact="contentArea" previous="contentArea"/>
+          </field>
+          <margin topInset="4.318mm" bottomInset="2.794mm"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <?templateDesigner expand 1?>
+        </subform>
+        <subform name="AF_CHECKBOX_XFO" w="184.15mm" layout="tb">
+          <field name="AF_CHECKBOXTITLE" w="184.15mm" minH="0.111mm">
+            <ui>
+              <textEdit multiLine="1">
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+            <para marginRight="0pt" vAlign="top" spaceBelow="0pt" marginLeft="0pt" lineHeight="12pt">
+				<hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <caption reserve="70.01mm">
+              <margin leftInset="10.16mm" rightInset="12.7mm"/>
+              <value>
+                <text>Check Box Title</text>
+              </value>
+              <para vAlign="top" marginRight="0pt" spaceBelow="0pt" marginLeft="0pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="AF_CHECKBUTTON" w="184.15mm" minH="2mm">
+            <ui>
+              <checkButton mark="check"/>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)"/>
+            <margin leftInset="10.16mm" rightInset="0mm" topInset="2mm" bottomInset="0mm"/>
+            <value>
+              <integer>0</integer>
+            </value>
+            <caption reserve="172.99mm" placement="right">
+              <para marginRight="0pt" spaceBelow="0pt" marginLeft="21.6pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt" vAlign="top">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>Check Box</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <items>
+              <integer>1</integer>
+              <integer>0</integer>
+              <integer>2</integer>
+            </items>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="HiddenTextField" w="80.604mm" h="13.707mm" presence="hidden">
+            <ui>
+              <textEdit>
+                <border>
+                  <edge stroke="lowered"/>
+                </border>
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" weight="bold">
+              <fill>
+                <color value="128,128,128"/>
+              </fill>
+            </font>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="bottom" spaceBelow="0pt" lineHeight="10pt"/>
+            <caption reserve="0.185306in" placement="top">
+              <para vAlign="middle" spaceBelow="7.2pt"/>
+              <value>
+                <text>Text Field</text>
+              </value>
+            </caption>
+            <event activity="ready" ref="$form" name="event__form_ready">
+              <script contentType="application/x-javascript">
+ dorCheckBoxMerge.mergeData(this, this.parent.resolveNode("AF_CHECKBOXTITLE"));
+ 
+</script>
+            </event>
+          </field>
+          <bind match="none"/>
+          <margin bottomInset="2.794mm" topInset="4.318mm"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+          <?templateDesigner expand 1?>
+        </subform>
+        <subform name="AF_RADIOBUTTONLIST_XFO" w="184.15mm" layout="tb">
+          <field name="AF_RADIOBUTTONLISTTITLE" w="184.15mm" minH="0.111mm">
+            <ui>
+              <textEdit multiLine="1">
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para marginRight="0pt" vAlign="top" spaceBelow="0pt" marginLeft="0pt" lineHeight="12pt">
+				<hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <caption reserve="70.01mm">
+              <margin leftInset="10.16mm" rightInset="12.7mm"/>
+              <para vAlign="top" marginRight="0pt" spaceBelow="0pt" marginLeft="0pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>Radio Button Title</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <exclGroup name="AF_RADIOBUTTONLIST" layout="tb" w="184.15mm">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="184.15mm" minH="4.539mm" name="AF_RADIOBUTTON">
+              <ui>
+                <checkButton shape="round" mark="check"/>
+              </ui>
+              <font usehref=".#som($template.#subform.#font)"/>
+              <margin leftInset="10.16mm" rightInset="0mm" topInset="1.9988mm" bottomInset="0mm"/>
+              <caption reserve="172.99mm" placement="right">
+                <para marginRight="0pt" spaceBelow="0pt" marginLeft="21.6pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt" vAlign="top">
+                  <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+                </para>
+                <value>
+                  <text>Radio Button</text>
+                </value>
+                <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                  <fill usehref=".#som($template.#subform.#fill)"/>
+                </font>
+              </caption>
+              <items>
+                <text>1</text>
+              </items>
+              <keep intact="contentArea" next="contentArea"/>
+            </field>
+            <event activity="ready" ref="$form" name="event__form_ready">
+              <script contentType="application/x-javascript">
+ dorRadioButtonMerge.mergeData(this, this.parent.resolveNode("AF_RADIOBUTTONLISTTITLE"));</script>
+            </event>
+            <?templateDesigner expand 1?>
+          </exclGroup>
+          <margin topInset="4.318mm" bottomInset="2.794mm"/>
+          <bind match="none"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+          <?templateDesigner expand 1?>
+        </subform>
+        <subform name="AF_SWITCH_XFO" w="184.15mm" layout="tb">
+          <field name="AF_SWITCHTITLE" w="184.15mm" minH="0.111mm">
+            <ui>
+              <textEdit multiLine="1">
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+            <para marginRight="0pt" vAlign="top" spaceBelow="0pt" marginLeft="0pt" lineHeight="12pt">
+				<hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <caption reserve="70.01mm">
+              <margin leftInset="10.16mm" rightInset="12.7mm"/>
+              <value>
+                <text>Switch Title</text>
+              </value>
+              <para vAlign="top" marginRight="0pt" spaceBelow="0pt" marginLeft="0pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="AF_SWITCH" w="184.15mm" minH="2mm">
+            <ui>
+              <checkButton mark="check"/>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)"/>
+            <margin leftInset="10.16mm" rightInset="0mm" topInset="2mm" bottomInset="0mm"/>
+            <value>
+              <integer>0</integer>
+            </value>
+            <caption reserve="172.99mm" placement="right">
+              <para marginRight="0pt" spaceBelow="0pt" marginLeft="21.6pt" spaceAbove="0pt" textIndent="0pt" vAlign="top" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>Switch</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <items>
+              <integer>1</integer>
+              <integer>0</integer>
+              <integer>2</integer>
+            </items>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="HiddenTextField" w="80.604mm" h="13.707mm" presence="hidden">
+            <ui>
+              <textEdit>
+                <border>
+                  <edge stroke="lowered"/>
+                </border>
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" weight="bold">
+              <fill>
+                <color value="128,128,128"/>
+              </fill>
+            </font>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="bottom" spaceBelow="0pt" lineHeight="10pt"/>
+            <caption reserve="0.185306in" placement="top">
+              <para vAlign="middle" spaceBelow="7.2pt"/>
+              <value>
+                <text>Text Field</text>
+              </value>
+            </caption>
+            <event activity="ready" ref="$form" name="event__form_ready">
+              <script contentType="application/x-javascript">
+ dorCheckBoxMerge.mergeData(this, this.parent.resolveNode("AF_SWITCHTITLE"));
+ 
+</script>
+            </event>
+          </field>
+          <margin bottomInset="2.794mm" leftInset="0mm" rightInset="0mm" topInset="4.318mm"/>
+          <bind match="none"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+          <?templateDesigner expand 1?>
+        </subform>
+        <subform name="AF_IMAGECHOICE_XFO" w="184.15mm" layout="tb">
+          <field name="AF_IMAGECHOICETITLE" w="184.15mm" minH="0.111mm">
+            <ui>
+              <textEdit multiLine="1">
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+            <para marginRight="0pt" vAlign="top" spaceBelow="0pt" marginLeft="0pt" lineHeight="12pt">
+				<hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+            <caption reserve="70.01mm">
+              <margin leftInset="10.16mm" rightInset="12.7mm"/>
+              <value>
+                <text>Image Choice Title</text>
+              </value>
+              <para vAlign="top" marginRight="0pt" spaceBelow="0pt" marginLeft="0pt" spaceAbove="0pt" textIndent="0pt" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="AF_IMAGECHOICEBUTTON" w="184.15mm" minH="2mm">
+            <ui>
+              <checkButton mark="check"/>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)"/>
+            <margin leftInset="10.16mm" rightInset="0mm" topInset="2mm" bottomInset="0mm"/>
+            <value>
+              <integer>0</integer>
+            </value>
+            <caption reserve="172.99mm" placement="right">
+              <para marginRight="0pt" spaceBelow="0pt" marginLeft="21.6pt" spaceAbove="0pt" textIndent="0pt" vAlign="top" lineHeight="12pt">
+                <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+              </para>
+              <value>
+                <text>Image Choice Option Label</text>
+              </value>
+              <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+                <fill usehref=".#som($template.#subform.#fill)"/>
+              </font>
+            </caption>
+            <items>
+              <integer>1</integer>
+              <integer>0</integer>
+              <integer>2</integer>
+            </items>
+            <keep intact="contentArea" next="contentArea"/>
+            <bind match="none"/>
+          </field>
+          <field name="HiddenTextField" w="80.604mm" h="13.707mm" presence="hidden">
+            <ui>
+              <textEdit>
+                <border>
+                  <edge stroke="lowered"/>
+                </border>
+                <margin/>
+              </textEdit>
+            </ui>
+            <font usehref=".#som($template.#subform.#font)" weight="bold">
+              <fill>
+                <color value="128,128,128"/>
+              </fill>
+            </font>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="bottom" spaceBelow="0pt" lineHeight="10pt"/>
+            <caption reserve="0.185306in" placement="top">
+              <para vAlign="middle" spaceBelow="7.2pt"/>
+              <value>
+                <text>Text Field</text>
+              </value>
+            </caption>
+            <event activity="ready" ref="$form" name="event__form_ready">
+              <script contentType="application/x-javascript">
+ dorCheckBoxMerge.mergeData(this, this.parent.resolveNode("AF_IMAGECHOICETITLE"));
+ 
+ 
+</script>
+            </event>
+          </field>
+          <margin bottomInset="2.794mm" leftInset="0mm" rightInset="0mm" topInset="4.318mm"/>
+          <bind match="none"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+          <keep intact="contentArea"/>
+          <?templateDesigner expand 1?>
+        </subform>
+        <field name="AF_IMAGEFIELD_XFO" w="80.523mm" h="52.056mm">
+          <ui>
+            <imageEdit data="embed"/>
+          </ui>
+          <value>
+            <image contentType="application/octet-stream" aspect="none"/>
+          </value>
+          <desc>
+            <text name="embeddedHref"/>
+          </desc>
+          <margin bottomInset="2.794mm" leftInset="1mm" rightInset="1mm" topInset="4.318mm"/>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="249,252,251"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden">
+              <color value="249,252,251"/>
+            </corner>
+            <corner presence="hidden"/>
+          </border>
+        </field>
+        <field name="AF_BUTTON_XFO" w="54.589mm" minH="8.539mm">
+          <ui>
+            <button highlight="inverted"/>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)"/>
+          <caption>
+            <value>
+              <text>Button</text>
+            </value>
+            <para vAlign="middle" hAlign="center" lineHeight="10pt"/>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border hand="right">
+            <edge stroke="raised"/>
+            <fill>
+              <color value="212,208,200"/>
+            </fill>
+          </border>
+          <bind match="none"/>
+        </field>
+        <field name="AF_RESETBUTTON_XFO" w="54.589mm" minH="8.539mm">
+          <?templateDesigner isResetFieldsObject true?>
+          <ui>
+            <button highlight="inverted"/>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)"/>
+          <caption>
+            <value>
+              <text>Reset Form</text>
+            </value>
+            <para hAlign="center" vAlign="middle" lineHeight="10pt"/>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border hand="right">
+            <edge stroke="raised"/>
+            <fill>
+              <color value="212,208,200"/>
+            </fill>
+          </border>
+          <bind match="none"/>
+          <event name="event__click" activity="click">
+            <script contentType="application/x-javascript">xfa.host.resetData();
+</script>
+          </event>
+        </field>
+        <field name="AF_SUBMITBUTTON_XFO" w="54.589mm" minH="8.539mm">
+          <?templateDesigner isHttpSubmitObject true?>
+          <ui>
+            <button highlight="inverted"/>
+          </ui>
+          <font usehref=".#som($template.#subform.#font)"/>
+          <caption>
+            <value>
+              <text>Submit</text>
+            </value>
+            <para hAlign="center" vAlign="middle" lineHeight="10pt"/>
+            <font usehref=".#som($template.#subform.#font)" weight="normal" size="10pt" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+              <fill usehref=".#som($template.#subform.#fill)"/>
+            </font>
+          </caption>
+          <border hand="right">
+            <edge stroke="raised"/>
+            <fill>
+              <color value="212,208,200"/>
+            </fill>
+          </border>
+          <bind match="none"/>
+          <event name="event__click" activity="click">
+            <submit format="urlencoded" textEncoding="UTF-8"/>
+          </event>
+        </field>
+        <?templateDesigner expand 0?>
+      </subform>
+      <subform w="184.15mm" name="AF_PANELSUBFORM_XFO" layout="tb">
+        <border>
+          <edge stroke="lowered" presence="hidden"/>
+          <corner presence="hidden"/>
+        </border>
+        <breakBefore/>
+        <draw name="AF_PANELTITLE" w="184.15mm" minH="5.842mm">
+          <ui>
+            <textEdit/>
+          </ui>
+          <value>
+            <text>Panel Title</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="16pt" baselineShift="0pt" weight="bold" posture="normal" underline="0" lineThrough="0" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+            <fill usehref=".#som($template.#subform.#fill)"/>
+          </font>
+          <margin topInset="3.81mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0.5mm"/>
+          <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" lineHeight="18pt" vAlign="bottom">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge thickness="0.1524mm" presence="hidden">
+              <color value="233,239,239"/>
+            </edge>
+            <edge presence="hidden"/>
+            <corner thickness="1.524mm" presence="hidden">
+              <color value="233,239,239"/>
+            </corner>
+            <corner thickness="1.524mm" presence="hidden"/>
+            <corner thickness="0.152mm" presence="hidden"/>
+            <corner thickness="1.524mm" presence="hidden"/>
+          </border>
+          <keep next="contentArea"/>
+        </draw>
+        <draw name="AF_PANELDESCRIPTION" w="184.15mm" minH="5.233mm">
+          <ui>
+            <textEdit/>
+          </ui>
+          <value>
+            <text>Panel description</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="8pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+          <para lineHeight="10pt" vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+          </border>
+          <keep previous="contentArea"/>
+        </draw>
+        <margin bottomInset="0mm"/>
+        <draw name="Spacer" w="184.15mm" h="5.08mm">
+          <value>
+            <rectangle>
+              <edge presence="hidden"/>
+              <corner radius="5.08mm" presence="hidden"/>
+            </rectangle>
+          </value>
+        </draw>
+        <?templateDesigner expand 0?>
+      </subform>
+      <subform w="184.15mm" name="AF_TABLE_XFO" layout="table" columnWidths="184.15mm">
+        <margin topInset="4.318mm" bottomInset="0.508mm"/>
+        <draw name="AF_PANELTITLE" w="184.15mm" minH="5.842mm" x="51.772mm">
+          <ui>
+            <textEdit/>
+          </ui>
+          <value>
+            <text>Table Title</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="16pt" baselineShift="0pt" weight="bold" posture="normal" underline="0" lineThrough="0" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+            <fill usehref=".#som($template.#subform.#fill)"/>
+          </font>
+          <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0.5mm"/>
+          <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" lineHeight="18pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+          </border>
+          <keep next="contentArea"/>
+        </draw>
+        <draw name="AF_PANELDESCRIPTION" w="184.15mm" minH="5.233mm" hAlign="center" x="51.772mm">
+          <ui>
+            <textEdit/>
+          </ui>
+          <value>
+            <text>Table description</text>
+          </value>
+          <font usehref=".#som($template.#subform.#font)" size="8pt" weight="normal" posture="normal" underline="0" lineThrough="0" baselineShift="0pt" letterSpacing="0" kerningMode="none" fontHorizontalScale="100%" fontVerticalScale="100%">
+            <fill>
+              <color value="79,76,76"/>
+            </fill>
+          </font>
+          <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+          <para lineHeight="10pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt">
+            <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+          </para>
+          <border>
+            <edge presence="hidden"/>
+          </border>
+          <keep previous="contentArea"/>
+        </draw>
+        <subform name="AF_TABLEHEADERROW_XFO" layout="row" hAlign="center">
+          <border>
+            <fill usehref=".#som($template.#subform.#fill)"/>
+          </border>
+          <draw name="AF_TABLEITEM_XFO" minH="8.999mm" hAlign="center">
+            <ui>
+              <textEdit/>
+            </ui>
+            <value>
+              <text>Header Row</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="bold" posture="normal">
+              <fill>
+                <color value="255,255,255"/>
+              </fill>
+            </font>
+            <border/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para vAlign="middle" lineHeight="12pt" hAlign="center">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+          </draw>
+          <assist role="TH"/>
+          <keep next="contentArea"/>
+          <?templateDesigner expand 1?>
+        </subform>
+        <subform name="AF_TABLEBODYROW_XFO" layout="row" hAlign="center">
+          <border>
+            <edge presence="hidden"/>
+            <corner presence="hidden"/>
+            <fill/>
+          </border>
+          <breakBefore/>
+          <draw name="AF_TABLEITEM_XFO" minH="8.999mm" hAlign="center">
+            <ui>
+              <textEdit/>
+            </ui>
+            <value>
+              <text>Body Row</text>
+            </value>
+            <font usehref=".#som($template.#subform.#font)" size="10pt" weight="normal" posture="normal">
+              <fill>
+                <color value="79,76,76"/>
+              </fill>
+            </font>
+            <border/>
+            <para vAlign="middle" lineHeight="12pt" hAlign="center">
+              <hyphenation use="designer__defaultHyphenation.para.hyphenation"/>
+            </para>
+          </draw>
+          <event activity="indexChange" name="event__indexChange">
+            <script contentType="application/x-javascript" runAt="both">
+ dorTableRowShading.shadeRows(this);             
+</script>
+          </event>
+          <?templateDesigner expand 1?>
+        </subform>
+        <border>
+          <edge presence="hidden"/>
+          <corner presence="hidden"/>
+        </border>
+        <?templateDesigner expand 1?>
+        <?templateDesigner rowpattern first:1, next:1, firstcolor:ffffff, nextcolor:d7d7d7, apply:1?>
+      </subform>
+      <proto>
+        <font typeface="Times New Roman"/>
+        <fill>
+          <color value="125,38,38"/>
+        </fill>
+        <edge>
+          <color value="125,38,38"/>
+        </edge>
+        <field name="designer__defaultHyphenation">
+          <para>
+            <hyphenation hyphenate="1"/>
+          </para>
+        </field>
+        <draw name="spaceFiller" w="127mm" h="0mm" hAlign="center">
+          <value>
+            <rectangle>
+              <edge presence="hidden"/>
+            </rectangle>
+          </value>
+        </draw>
+      </proto>
+      <desc>
+        <text name="version">6.2.0.20160331.1.924316.921890</text>
+      </desc>
+      <?templateDesigner expand 1?>
+    </subform>
+    <?templateDesigner DefaultPreviewDynamic 1?>
+    <?templateDesigner DefaultRunAt client?>
+    <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+    <?templateDesigner WidowOrphanControl 0?>
+    <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+    <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+    <?templateDesigner DefaultLanguage JavaScript?>
+    <?acrobat JavaScript strictScoping?>
+    <?templateDesigner SavePDFWithLog 0?>
+    <?layout containedExclGroup 1?>
+    <?templateDesigner SaveTaggedPDF 0?>
+    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+    <?templateDesigner FormTargetVersion 36?>
+    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+    <?templateDesigner Zoom 99?>
+  </template>
+  <config xmlns="http://www.xfa.org/schema/xci/3.0/">
+    <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+        <!--  [0..n]  -->
+        <fontInfo/>
+      </pdf>
+    </agent>
+    <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+        <!--  [0..n]  -->
+        <fontInfo>
+          <embed>0</embed>
+        </fontInfo>
+        <version>1.7</version>
+        <adobeExtensionLevel>11</adobeExtensionLevel>
+        <tagged>0</tagged>
+      </pdf>
+      <xdp>
+        <packets>*</packets>
+      </xdp>
+    </present>
+  </config>
+  <localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+    <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+        <monthNames>
+          <month>January</month>
+          <month>February</month>
+          <month>March</month>
+          <month>April</month>
+          <month>May</month>
+          <month>June</month>
+          <month>July</month>
+          <month>August</month>
+          <month>September</month>
+          <month>October</month>
+          <month>November</month>
+          <month>December</month>
+        </monthNames>
+        <monthNames abbr="1">
+          <month>Jan</month>
+          <month>Feb</month>
+          <month>Mar</month>
+          <month>Apr</month>
+          <month>May</month>
+          <month>Jun</month>
+          <month>Jul</month>
+          <month>Aug</month>
+          <month>Sep</month>
+          <month>Oct</month>
+          <month>Nov</month>
+          <month>Dec</month>
+        </monthNames>
+        <dayNames>
+          <day>Sunday</day>
+          <day>Monday</day>
+          <day>Tuesday</day>
+          <day>Wednesday</day>
+          <day>Thursday</day>
+          <day>Friday</day>
+          <day>Saturday</day>
+        </dayNames>
+        <dayNames abbr="1">
+          <day>Sun</day>
+          <day>Mon</day>
+          <day>Tue</day>
+          <day>Wed</day>
+          <day>Thu</day>
+          <day>Fri</day>
+          <day>Sat</day>
+        </dayNames>
+        <meridiemNames>
+          <meridiem>AM</meridiem>
+          <meridiem>PM</meridiem>
+        </meridiemNames>
+        <eraNames>
+          <era>BC</era>
+          <era>AD</era>
+        </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+        <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+        <datePattern name="long">MMMM D, YYYY</datePattern>
+        <datePattern name="med">MMM D, YYYY</datePattern>
+        <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+        <timePattern name="full">h:MM:SS A Z</timePattern>
+        <timePattern name="long">h:MM:SS A Z</timePattern>
+        <timePattern name="med">h:MM:SS A</timePattern>
+        <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+        <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+        <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+        <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+        <numberSymbol name="decimal">.</numberSymbol>
+        <numberSymbol name="grouping">,</numberSymbol>
+        <numberSymbol name="percent">%</numberSymbol>
+        <numberSymbol name="minus">-</numberSymbol>
+        <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+        <currencySymbol name="symbol">$</currencySymbol>
+        <currencySymbol name="isoname">USD</currencySymbol>
+        <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+        <typeface name="Myriad Pro"/>
+        <typeface name="Minion Pro"/>
+        <typeface name="Courier Std"/>
+        <typeface name="Adobe Pi Std"/>
+        <typeface name="Adobe Hebrew"/>
+        <typeface name="Adobe Arabic"/>
+        <typeface name="Adobe Thai"/>
+        <typeface name="Kozuka Gothic Pro-VI M"/>
+        <typeface name="Kozuka Mincho Pro-VI R"/>
+        <typeface name="Adobe Ming Std L"/>
+        <typeface name="Adobe Song Std L"/>
+        <typeface name="Adobe Myungjo Std M"/>
+        <typeface name="Adobe Devanagari"/>
+      </typefaces>
+    </locale>
+  </localeSet>
+  <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+        <xmp:MetadataDate>2017-02-24T05:24:02Z</xmp:MetadataDate>
+        <xmp:CreatorTool>Designer 6.2</xmp:CreatorTool>
+        <pdf:Producer>Designer 6.2</pdf:Producer>
+        <xmpMM:DocumentID>uuid:19c60a3b-0ca1-4891-900b-79aa26d802a0</xmpMM:DocumentID>
+        <desc:version rdf:parseType="Resource">
+          <rdf:value>6.2.0.20160331.1.924316.921890</rdf:value>
+          <desc:ref>/template/subform[1]</desc:ref>
+        </desc:version>
+      </rdf:Description>
+    </rdf:RDF>
+  </x:xmpmeta>
+</xdp:xdp>

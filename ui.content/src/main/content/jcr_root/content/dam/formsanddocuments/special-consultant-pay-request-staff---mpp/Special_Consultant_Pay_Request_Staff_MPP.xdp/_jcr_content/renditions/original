@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2020-11-30T06:35:52Z" uuid="0fe67406-5e82-49e7-b8dc-437c1c534a1c">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.3/">
+   <?formServer defaultPDFRenderFormat acrobat10.0dynamic?>
+   <subform name="SCPRSM" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="756pt" h="576pt"/>
+            <medium stock="default" short="612pt" long="792pt" orientation="landscape"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <proto/>
+      <desc>
+         <text name="version">9.0.0.2.20120627.2.874785</text>
+      </desc>
+      <subform w="756pt" layout="lr-tb">
+         <border>
+            <edge/>
+            <corner thickness="0.175mm"/>
+         </border>
+         <draw name="Image1" w="57.15mm" h="19.05mm">
+            <value>
+               <image href=".\CSUF_LOGO.jpg" contentType="image/jpeg"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+            <margin topInset="5.08mm" leftInset="2.54mm"/>
+         </draw>
+         <draw name="Text1" w="206.375mm" h="25.4mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Arial;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                             </span></p><p style="text-align:center;font-family:'Times New Roman';font-size:14pt;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="color:#000000">SPECIAL CONSULTANT PAY REQUEST, STAFF / MPP<br/>(To initiate pay for additional employment for Staff / MPP from general, grant, contract or gift funds)</span></p></body>
+               </exData>
+            </value>
+            <font size="12pt" typeface="ArialMT" baselineShift="0pt" weight="bold">
+               <fill>
+                  <color value="255,51,51"/>
+               </fill>
+            </font>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Text2" w="266.7mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>My Employee Status is:   </text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 25 My Employee Status is:    0 1417 12396 0 0 0 "Times New Roman" 0 0 14000 ISO-8859-1?></draw>
+         <exclGroup name="EmpStatusRB" x="119.157mm" y="98.422mm" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="56.857mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="50.857mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Full - Time Staff / MPP</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(EmpStatusRB.rawValue == 4){
+StatusTB.presence = "visible";
+}else{
+StatusTB.presence = "hidden";
+}
+</script>
+               </event>
+            </field>
+            <field w="35.219mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="29.219mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Part - Time</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <field w="42.863mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="36.863mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Retired Annuitant</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <text>3</text>
+               </items>
+            </field>
+            <field w="61.911mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="55.912mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other (e.g. split appointment)</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <text>4</text>
+               </items>
+               <value>
+                  <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+               </value>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <field name="StatusTB" w="66.969mm" h="12.7mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Text3" w="266.7mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Additional employment for which this pay is requested is (check ALL that apply):</text>
+            </value>
+            <font size="14pt" typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 80 Additional employment for which this pay is requested is (check ALL that apply): 0 1417 12396 0 0 0 "Times New Roman" 0 0 14000 ISO-8859-1?></draw>
+         <field name="AdditionalEmpCB1" w="133.35mm" h="12.7mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <?templateDesigner StyleID apcb2?>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="124.045mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <value>
+                  <text>of a substantially different nature from primary or normal work assignment</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="AdditionalEmpCB2" w="133.35mm" h="12.7mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <?templateDesigner StyleID apcb2?>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="124.472mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <value>
+                  <text>occurring during a non-work period (intersession, summer)</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="AdditionalEmpCB3" w="133.35mm" h="12.7mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <?templateDesigner StyleID apcb2?>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="124.045mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <value>
+                  <text>funded from non-general fund sources</text>
+               </value>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <field name="AdditionalEmpCB4" w="133.35mm" h="12.7mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <?templateDesigner StyleID apcb2?>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <caption placement="right" reserve="124.472mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>the result of accrual of part-time employment on more than one campus (not to exceeed 125%)</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+            </caption>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Text4" w="266.7mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>During the fiscal year (July - June) in which this requested pay falls:</text>
+            </value>
+            <font typeface="Times New Roman" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 71 During the fiscal year (July - June) in which this requested pay falls: 0 1417 12396 0 0 0 "Times New Roman" 0 0 14000 ISO-8859-1?></draw>
+         <draw name="Text5" w="133.35mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>I have or will work for pay at another CSU location:</text>
+            </value>
+            <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 375166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 52 I have or will work for pay at another CSU location: 0 1417 10827 0 0 0 "Times New Roman" 0 0 12000 ISO-8859-1?></draw>
+         <draw name="Text6" w="133.35mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>I have or will teach or work for CSUF's Extended Education:</text>
+            </value>
+            <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 375166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 59 I have or will teach or work for CSUF's Extended Education: 0 1417 10827 0 0 0 "Times New Roman" 0 0 12000 ISO-8859-1?></draw>
+         <exclGroup name="FiscalAnotherLocationRB" x="119.157mm" y="98.422mm" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="28.683mm" h="12mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22.683mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+                  <value>
+                     <text>No</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if(FiscalAnotherLocationRB.rawValue == "2"){
+FiscalAnotherLocationTB.presence = "visible";
+}else{
+FiscalAnotherLocationTB.presence = "hidden";
+}
+
+</script>
+               </event>
+            </field>
+            <field w="104.667mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="98.667mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Yes (list work done, # of Days, date(s) worked)</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <exclGroup name="FiscalExtendedEducationRB" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="28mm" h="12mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+                  <value>
+                     <text>No</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(FiscalExtendedEducationRB.rawValue == "2"){
+FiscalExtendedEducationTB.presence = "visible";
+}else{
+FiscalExtendedEducationTB.presence = "hidden";
+}
+</script>
+               </event>
+            </field>
+            <field w="102.175mm" h="12.7mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="96.175mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Yes (list Term(s)/Year(s))</text>
+                  </value>
+                  <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               </caption>
+               <items>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <field name="FiscalAnotherLocationTB" w="133.35mm" minH="14.293mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="FiscalExtendedEducationTB" w="133.35mm" minH="14.293mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="EmpID" w="68.58mm" minH="17.457mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Employee ID</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Unit" w="66.675mm" minH="17.457mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Unit</text>
+               </value>
+            </caption>
+         </field>
+         <field name="OfficeOrRoom" w="66.675mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Office/Room #</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Extension" w="64.77mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Extension</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="College" w="82.55mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.3904mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>College</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EmpFname" w="63.5mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Employee First Name</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EmpLname" w="63.5mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Employee Last Name</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EmpMname" w="57.15mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="7.599mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Employee Middle Name</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="HRDeptID" w="79.375mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.3904mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>HR Department ID</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Dept" w="82.55mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.3904mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Department</text>
+               </value>
+            </caption>
+         </field>
+         <field name="DescOfWork" w="101.6mm" minH="17.458mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="6.7983mm" placement="top">
+               <font typeface="Times New Roman" baselineShift="0pt" size="12pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Description of Work Performed</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Line1" w="266.7mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Text9" w="266.7mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>This form serves as certification  of dates worked if submitted and approved after time is worked; if submitted and approved prior to  time worked a Time Sheet must  be submitted at the end of each month in which time worked is reported.</text>
+            </value>
+            <font size="12pt" typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 42166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 147 This form serves as certification  of dates worked if submitted and approved after time is worked; if submitted and approved prior to  time worked  0 1417 10827 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?>
+            <?renderCache.textRun 90 a Time Sheet must  be submitted at the end of each month in which time worked is reported. 0 1417 25227 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
+         <draw name="Text7" w="69.85mm" h="7.029mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Year(XXXX)</text>
+            </value>
+            <font size="11pt" typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 195166 17091 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 10 Year(XXXX) 0 1417 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Text7" w="73.025mm" h="7.029mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Month (e.g. January)</text>
+            </value>
+            <font size="12pt" typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 204166 17091 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 20 Month (e.g. January) 0 1417 10827 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
+         <draw name="Text8" w="123.825mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Dates Worked (e.g. 12, 14, 15)</text>
+            </value>
+            <font size="11pt" typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 348166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 30 Dates Worked (e.g. 12, 14, 15) 0 1417 10043 0 0 0 "Times New Roman" 1 0 11000 ISO-8859-1?></draw>
+         <draw name="Line2" w="266.7mm" h="0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="Year1" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month1" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked1" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Year2" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month2" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked2" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Year3" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month3" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked3" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Year4" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month4" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked4" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Year5" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month5" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked5" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Year6" w="68.58mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="Month6" w="74.295mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="DateWorked6" w="73.025mm" minH="10.782mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Line4" w="266.7mm" h="0.221mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text10" w="266.7mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Compensation</text>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 12 Compensation 0 1417 12396 0 0 0 "Times New Roman" 1 0 14000 ISO-8859-1?></draw>
+         <field name="AmtPerDay" w="85.725mm" h="15.24mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.185306in" placement="top">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Amount Per Day</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{($zzzzzzz9.999)}</picture>
+            </format>
+         </field>
+         <field name="NoPayDays" w="82.55mm" h="15.24mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="0.185306in" placement="top">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Number of Pay Days</text>
+               </value>
+            </caption>
+         </field>
+         <field name="TotalDue" w="88.9mm" h="15.24mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="5.1969mm" placement="top">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Total Due</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{($zzzzzzz9.999)}</picture>
+            </format>
+         </field>
+         <draw name="Line2" w="266.7mm" h="0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="ProjAccTitle" w="263.525mm" h="12.215mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="47.5728mm">
+               <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Project / Account Title</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line3" w="266.7mm" h="=0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text10" w="266.7mm" h="18.758mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Funding Source to be Charged :<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="letter-spacing:0in">CSUF</p></body>
+               </exData>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="FundingCMSPos" w="101.6mm" h="10.783mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.7794mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CMS Position #:  </text>
+               </value>
+            </caption>
+         </field>
+         <field name="Acct" w="73.025mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="13.9893mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Acct</text>
+               </value>
+            </caption>
+         </field>
+         <field name="FundingDept" w="85.725mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="23.5947mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Dept</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Program" w="101.6mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.1722mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Program</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Fund" w="73.025mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="13.9893mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Fund</text>
+               </value>
+            </caption>
+         </field>
+         <field name="Class" w="85.725mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="22.7818mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Class</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text10" w="209.55mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Auxiliary Services Corporation :<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">(Dept ID 10297)</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Line2" w="266.7mm" h="0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="AuxCMSPos" w="69.85mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="29.9728mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CMS Position #:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ProjNumber" w="73.025mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.7794mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Project Number</text>
+               </value>
+            </caption>
+         </field>
+         <field name="PONumber" w="66.675mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="24.776mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>P.O. Number</text>
+               </value>
+            </caption>
+         </field>
+         <field name="AYSalary" w="57.15mm" h="10.782mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="19.1862mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>AY Salary</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{($zzzzzzz9.999)}</picture>
+            </format>
+         </field>
+         <draw name="Line3" w="266.7mm" h="=0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text10" w="266.7mm" h="0.233806in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>CSF Philanthropic Foundation (Dept ID 11244)</text>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 14000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 44 CSF Philanthropic Foundation (Dept ID 11244) 0 1417 12396 0 0 0 "Times New Roman" 1 0 14000 ISO-8859-1?></draw>
+         <draw name="Text11" w="76.2mm" h="0.433806in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">CMS Position #:</p><p style="font-size:14pt;text-decoration:none;letter-spacing:0in">P7634660</p></body>
+               </exData>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="12pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="PhilanthropicAccNumber" w="95.25mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="33.9763mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Account Number</text>
+               </value>
+            </caption>
+         </field>
+         <field name="PhilanthropicPONumber" w="92.075mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="33.9763mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>P.O. Number</text>
+               </value>
+            </caption>
+         </field>
+         <?templateDesigner expand 0?></subform>
+      <subform w="756pt" layout="lr-tb">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <border>
+            <edge/>
+            <corner thickness="0.175mm"/>
+         </border>
+         <draw name="Text10" w="209.55mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Employee Signature</text>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 591166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 18 Employee Signature 0 1417 12396 0 0 0 "Times New Roman" 1 0 14000 ISO-8859-1?></draw>
+         <field name="EmpSign" w="63.5mm" h="12.7mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="19.1862mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature</text>
+               </value>
+            </caption>
+         </field>
+         <field name="EmpDate" w="50.8mm" h="12.7mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="11.9952mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date</text>
+               </value>
+            </caption>
+         </field>
+         <field name="FormPreparedBy" w="82.55mm" h="12.7mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.9821mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Form Prepared By</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line3" w="266.7mm" h="=0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Line3" w="266.7mm" h="=0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <draw name="Text10" w="266.7mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Supervisor Signature</text>
+            </value>
+            <font typeface="Times New Roman" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 753166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 20 Supervisor Signature 0 1417 12396 0 0 0 "Times New Roman" 1 0 14000 ISO-8859-1?></draw>
+         <field name="ManagerSign" w="101.6mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="27.7136mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Name</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ManagerSign" w="92.075mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Times New Roman" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ManagerSignDate" w="73.025mm" h="10.782mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="14.5436mm">
+               <font size="12pt" typeface="Times New Roman" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Line3" w="266.7mm" h="=0mm">
+            <value>
+               <line/>
+            </value>
+         </draw>
+         <?templateDesigner expand 0?></subform>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 4 1 0003 ?>
+      <?renderCache.subset "Times New Roman" 0 0 ISO-8859-1 4 248 62 000300060008000A000B000C000F0010001100120013001400150018001A001C001D002400250026002700280029002B002C002D002F00300031003200330035003600370038003A003C004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B005C #%'(),-./012579:ABCDEFHIJLMNOPRSTUWYabcdefghijklmnopqrstuvwxy?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 244 61 00030006000B000C000F001100120013001400150016001700180019001A001D001E00240026002700280029002C002D002F003000310032003300340035003600370038003A003B003C004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C #(),./01234567:;ACDEFIJLMNOPQRSTUWXYabcdefghijklmnoprstuvwxy?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.8/?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 33?>
+   <?templateDesigner Zoom 71?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>8</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2.1-c043 52.437709, 2010/08/04-17:30:07        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2020-11-30T06:35:52Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:0fe67406-5e82-49e7-b8dc-437c1c534a1c</xmpMM:DocumentID>
+         <pdfuaid:part>1</pdfuaid:part>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>9.0.0.2.20120627.2.874785</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

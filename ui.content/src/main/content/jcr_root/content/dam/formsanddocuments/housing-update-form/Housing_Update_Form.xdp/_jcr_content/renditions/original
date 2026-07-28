@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-06-19T08:29:42Z" uuid="0bf06772-565d-41b9-a1f9-1a2f26dc305d">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <subform name="HousingUpdateForm" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 0?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <draw name="Logo" w="63.5mm" h="22.225mm">
+            <value>
+               <image href=".\CSUF_LOGO1.png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <draw name="Text1" w="139.7mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 393166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" w="104.775mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 294166 6166 0 0 1417 1417 0 0?></draw>
+         <field name="cwid" w="73.025mm" h="13.111mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge presence="hidden"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+            </border>
+            <caption reserve="33.3974mm">
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span>Enter Student's<br/><span style="xfa-spacerun:yes">         </span>CWID Here:<span style="font-size:10pt;font-weight:normal"><span style="xfa-spacerun:yes"> </span></span></p></body>
+                  </exData>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+         </field>
+         <field name="formCode" w="25.4mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (aidYear.rawValue == "2022"){
+this.rawValue = "F0HPLN";
+}
+else if (aidYear.rawValue == "2023"){
+this.rawValue = "F1HPLN";
+}
+
+</script>
+            </event>
+         </field>
+         <field name="aidYear" w="25.4mm" h="5.939mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" weight="bold" size="14pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+this.presence="hidden";
+</script>
+            </event>
+         </field>
+         <field name="TitleYear" w="177.8mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="14pt" typeface="Times New Roman" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle" hAlign="center"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "HOUSING UPDATE FORM ("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+            </event>
+         </field>
+         <draw name="Text1" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform1" w="203.263mm" h="38.038mm">
+            <draw name="Text2" w="203.2mm" h="26.483mm" y="2.092mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS:<span style="font-weight:normal;text-decoration:none"> You did not indicate your<span style="xfa-spacerun:yes">                    </span>housing plans on your Free Application for Federal Student Aid (FAFSA),</span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">OR<span style="font-weight:normal"> you listed a housing value which we need to confirm before we can determine your aid eligibility. Please check the appropriate box that describes your living situation during the school year, attach requested documentation, sign the certification at the bottom of the form, and return the form to the Office of Financial Aid. Please note that your housing status usually does<span style="xfa-spacerun:yes"> </span></span>not<span style="font-weight:normal"> affect the amount of grant aid (free money) you can receive.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <field name="Year1" w="19.05mm" h="6.35mm" x="68.199mm" y="1.316mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var aidYearVal = aidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = aidYearValTwo+"-"+aidYearVal;
+
+</script>
+               </event>
+            </field>
+            <draw name="Text3" w="203.2mm" h="8.761mm" y="26.67mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <value>
+                  <text> Is this the first Housing Plan Update form you are completing for            ?</text>
+               </value>
+               <?renderCache.bounds 573166 22000 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 1   0 1417 9313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 78 Is this the first Housing Plan Update form you are completing for            ? 0 1417 21313 0 0 0 "Arial" 0 0 10000 ISO-8859-1?></draw>
+            <field name="Year2" w="9.525mm" h="6.35mm" y="30.069mm" x="101.6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <exclGroup name="FirstPlanYesNo" y="30.323mm" x="114.3mm">
+               <?templateDesigner itemValuesSpecified 1?>
+               <field w="17.463mm" h="6mm" name="Yes">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="3.585mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>Y</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>1</text>
+                  </items>
+               </field>
+               <field w="16.51mm" h="6mm" name="No" x="9.525mm">
+                  <ui>
+                     <checkButton>
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="4.1373mm">
+                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                     <value>
+                        <text>N</text>
+                     </value>
+                  </caption>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </value>
+                  <items>
+                     <text>2</text>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text3" w="203.2mm" h="2.54mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 4366 0 0 1417 1417 0 0?></draw>
+         <exclGroup name="PlanRB1" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="203.2mm" h="6mm" name="PlanRB1">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="196.1962mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Live at home with parent(s).</text>
+                  </value>
+                  <font typeface="Arial"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Text3" w="203.2mm" h="5.08mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">       </span><span style="font-weight:bold;font-style:italic;text-decoration:underline">Note:</span> If you live at home, even if you pay rent, check this box.</p></body>
+               </exData>
+            </value>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <exclGroup name="PlanRB2" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <margin/>
+            <field w="203.2mm" h="6mm" name="PlanRB2">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="196.1962mm">
+                  <para vAlign="middle"/>
+                  <font typeface="Arial"/>
+                  <value>
+                     <text> Live on-campus in a CSUF residence hall.</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></exclGroup>
+         <draw name="Text3" w="8in" h="8.89mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">       </span><span style="font-weight:bold;font-style:italic;text-decoration:underline">Note:</span> Once the Office of Housing and Residential Life confirms your on-campus housing, your budget will automatically be<span style="xfa-spacerun:yes">         </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>revised by the Office of Financial Aid.</p></body>
+               </exData>
+            </value>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <exclGroup name="PlanRB3" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <margin/>
+            <field w="203.2mm" h="9.581mm" name="PlanRB3">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="196.1962mm">
+                  <para vAlign="middle"/>
+                  <font typeface="Arial"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>Live off-campus, by myself or with others, in an apartment or other rental property or house.<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Please provide a copy of a<span style="xfa-spacerun:yes">  </span></span></p><p style="font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>rental or lease agreement.</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></exclGroup>
+         <draw name="Text27" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="Address" w="104.775mm" minH="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="22.8501mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>My address is</text>
+               </value>
+            </caption>
+         </field>
+         <field name="City" w="63.5mm" h="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="7.7066mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>City </text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text27" w="28.575mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 78166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text27" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="State" w="66.675mm" h="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="9.4228mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>State</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ZipCode" w="66.675mm" h="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="15.7048mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Zip code</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text27" w="63.5mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 177166 12000 0 0 1417 1417 0 0?></draw>
+         <draw name="Text27" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="residenceDate" w="123.825mm" minH="7.62mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="53.979mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date you move into this residence</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <field name="rentalDate" w="73.025mm" minH="7.62mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="30.5568mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>(Month/Date/Year)</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <exclGroup name="PlanRB4" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="203.2mm" h="7.925mm" name="PlanRB4">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="195.767mm">
+                  <para vAlign="middle"/>
+                  <font typeface="Arial"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>Live off- campus, but cannot provide a copy of the rental agreement.<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">(To be completed by the landlord if a copy of rental</span></p><p style="font-weight:bold;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>agreement/lease cannot be provided)</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Text4" w="203.2mm" h="1.05mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 142 0 0 1417 1417 0 0?></draw>
+         <draw name="Text4" w="6.35mm" h="5.3mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12190 0 0 1417 1417 0 0?></draw>
+         <field name="LandlordName" w="120.65mm" h="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="27.4158mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Landlord’s Name</text>
+               </value>
+            </caption>
+         </field>
+         <field name="ChargedRent" w="76.2mm" h="7.62mm">
+            <ui>
+               <numericEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </numericEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="37.1301mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Rent charged monthly:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>num{($z,zzz,zzz,zz9.99)}</picture>
+            </format>
+         </field>
+         <draw name="Text4" w="6.35mm" h="5.3mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12190 0 0 1417 1417 0 0?></draw>
+         <field name="LandlordAddress" w="196.85mm" minH="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.9816mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Landlord’s Address</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text5" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="LandlordPhone" w="82.55mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="31.9816mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Landlord’s Phone</text>
+               </value>
+            </caption>
+            <format>
+               <picture>text{'('999')' 999-9999}</picture>
+            </format>
+         </field>
+         <draw name="Text5" w="8in" h="5.701mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial" size="9.75pt" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <text>       I certify that the above named individual is residing at the above indicated residence and pays the above indicated monthly rent.</text>
+            </value>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 13326 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 136        I certify that the above named individual is residing at the above indicated residence and pays the above indicated monthly rent. 0 1417 9115 0 0 0 "Arial" 0 0 9750 ISO-8859-1?></draw>
+         <draw name="Text5" w="6.35mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 15166 12000 0 0 1417 1417 0 0?></draw>
+         <field name="LandlordSign" w="104.775mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <para vAlign="middle"/>
+            <caption reserve="33.1242mm">
+               <value>
+                  <text>Landlord’s Signature</text>
+               </value>
+               <para vAlign="middle"/>
+            </caption>
+            <event name="event__click" activity="click">
+               <submit format="xml" textEncoding="UTF-8" target="mailto:"/>
+            </event>
+            <bind match="none"/>
+            <value>
+               <text>{{LName1_es_:signer1:signature}}</text>
+            </value>
+         </field>
+         <field name="LandlordsDate" w="52.836mm" h="7.821mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="8.4316mm">
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date</text>
+               </value>
+            </caption>
+            <value>
+               <text>{{LDate1_es_:signer1:date}}</text>
+            </value>
+         </field>
+         <draw name="Text" w="142.875mm" h="0.17825in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 402166 10000 0 0 1417 1417 0 0?></draw>
+         <field name="StaffInitials" w="60.325mm" h="7.62mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="22.5587mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Staff Initials :</text>
+               </value>
+            </caption>
+         </field>
+         <subform name="Subform2" w="203.263mm" h="39.409mm">
+            <field name="StudentCwid" w="60.325mm" h="7.62mm" y="29.831mm" x="136.525mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="11.7943mm">
+                  <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="studentScribleSignature" w="95.25mm" h="7.62mm" y="21.741mm">
+               <ui>
+                  <imageEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </imageEdit>
+               </ui>
+               <caption reserve="36.5828mm">
+                  <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student E-signature : </text>
+                  </value>
+               </caption>
+               <font typeface="Myriad Pro" size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="StudentSignatureDate" w="44.45mm" h="7.62mm" x="95.25mm" y="21.741mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="11.1886mm">
+                  <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date:</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="ipAddress" w="57.15mm" h="7.62mm" x="139.7mm" y="21.741mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20.1844mm">
+                  <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="StudentSignature" w="136.525mm" h="7.62mm" y="29.831mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="39.6114mm">
+                  <font typeface="Arial" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student's Name: </text>
+                  </value>
+               </caption>
+            </field>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <?templateDesigner expand 0?>
+            <draw name="Text24" w="8.002486in" h="21.741mm" y="0.75mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:</p><p style="text-decoration:none;letter-spacing:0in">By signing this form, I (we) certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I (we) agree to provide additional proof of the information I (we) have reported, if requested to do so. I (we) also certify that I (we) have read the terms and conditions section of the CSU Fullerton, Financial Aid website</p><p style="text-decoration:none;letter-spacing:0in"><a href="http://www.fullerton.edu/financialaid/info/Terms.php">http://www.fullerton.edu/financialaid/info/Terms.php</a></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+         </subform>
+         <draw name="Text5" w="203.2mm" h="2.54mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 4366 0 0 1417 1417 0 0?></draw>
+         <draw name="Line1" w="203.2mm" h="0mm">
+            <value>
+               <line slope="/">
+                  <edge thickness="0.1778mm"/>
+               </line>
+            </value>
+         </draw>
+         <draw name="Text5" w="203.2mm" h="2.286mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 3646 0 0 1417 1417 0 0?></draw>
+         <draw name="Text25" w="203.2mm" h="5.939mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>FINANCIAL AID DECISION - OFFICE USE ONLY</text>
+            </value>
+            <font size="14pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 14001 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 40 FINANCIAL AID DECISION - OFFICE USE ONLY 0 130886 12471 0 0 0 "Arial" 1 0 14000 ISO-8859-1?></draw>
+         <draw name="Text5" w="203.2mm" h="2.54mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 4366 0 0 1417 1417 0 0?></draw>
+         <draw name="Text5" w="31.75mm" h="4.528mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 87166 10001 0 0 1417 1417 0 0?></draw>
+         <exclGroup name="staffDecision" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="28mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Approved</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <field w="28mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Denied</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <field w="28mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Comment</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>3</text>
+               </items>
+            </field>
+            <field w="28mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Scan &amp; Mail</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>4</text>
+               </items>
+            </field>
+            <field w="28mm" h="6mm">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Scan Only</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>5</text>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Text26" w="64.65mm" h="8.246mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 180426 20540 0 0 1417 1417 0 0?></draw>
+         <field name="FinancialAidSign" w="98.425mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="37.062mm">
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Staff Member’s Initials:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="FinancialAidSignDate" w="34.925mm" h="7.62mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="11.1886mm">
+               <font typeface="Arial" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 224 58 0003000B000C000F0010001100120014001D002200240025002600270029002B002C002F00300031003200330035003600370038003C003D0042004400450046004700480049004A004B004C004E004F0050005100520053005400550056005700580059005A005B005C005E006000B6 (),-./1:?ABCDFHILMNOPRSTUYZ_abcdefghiklmnopqrstuvwxy{}’?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 180 45 0003000A000B000C001000110012001D00240026002700280029002B002C002F0031003200330035003600370038003A003C004400450046004700480049004A004B004C004F005000510052005300550056005700580059005C '()-./:ACDEFHILNOPRSTUWYabcdefghilmnoprstuvy?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 104 26 0003000F0011002C0037004400450046004700480049004A004B004C004F005000510052005300550056005700580059005A005C ,.ITabcdefghilmnoprstuvwy?>
+      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 20 5 001D0031004800520057:Neot?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 120 30 000100070012001B002200240025002D002E00300034004000420044004500460048004A004D004E004F005000510053005400550057005A005C005E &1:ACDLMOS_acdegilmnoprstvy{}?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 86?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-06-19T08:29:42Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:0bf06772-565d-41b9-a1f9-1a2f26dc305d</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

@@ -1,0 +1,134 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SFTS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="MonthYear"/>
+		<xs:element type="xs:string" name="CHRSID"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="MiddleInitial"/>
+        <xs:element type="xs:string" name="PosNoSubAssignment"/>
+        <xs:element type="xs:string" name="CMSPosNo" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="EstimatedHoursWS" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Lecture1"/>
+              <xs:element type="xs:string" name="Lab1"/>
+              <xs:element type="xs:string" name="Lab2"/>
+              <xs:element type="xs:string" name="Lecture2"/>
+              <xs:element type="xs:string" name="Lab3"/>
+              <xs:element type="xs:string" name="Lecture3"/>
+              <xs:element type="xs:string" name="Lecture4"/>
+              <xs:element type="xs:string" name="Lab4"/>
+              <xs:element type="xs:string" name="Lab5"/>
+              <xs:element type="xs:string" name="Lecture5"/>
+              <xs:element type="xs:string" name="Lab6"/>
+              <xs:element type="xs:string" name="Lecture6"/>
+              <xs:element type="xs:string" name="Lab7"/>
+              <xs:element type="xs:string" name="Lecture7"/>
+              <xs:element type="xs:string" name="Lab8"/>
+              <xs:element type="xs:string" name="Lecture8"/>
+              <xs:element type="xs:string" name="Lab9"/>
+              <xs:element type="xs:string" name="Lecture9"/>
+              <xs:element type="xs:string" name="Lab10"/>
+              <xs:element type="xs:string" name="Lecture10"/>
+              <xs:element type="xs:string" name="Lab11"/>
+              <xs:element type="xs:string" name="Lecture11"/>
+              <xs:element type="xs:string" name="Lab12"/>
+              <xs:element type="xs:string" name="Lecture12"/>
+              <xs:element type="xs:string" name="Lab13"/>
+              <xs:element type="xs:string" name="Lecture13"/>
+              <xs:element type="xs:string" name="Lab14"/>
+              <xs:element type="xs:string" name="Lecture14"/>
+              <xs:element type="xs:string" name="Lab15"/>
+              <xs:element type="xs:string" name="Lecture15"/>
+              <xs:element type="xs:string" name="Lab16"/>
+              <xs:element type="xs:string" name="Lecture16"/>
+              <xs:element type="xs:string" name="Lecture17"/>
+              <xs:element type="xs:string" name="Lab17"/>
+              <xs:element type="xs:string" name="Lab18"/>
+              <xs:element type="xs:string" name="Lecture18"/>
+              <xs:element type="xs:string" name="Lab19"/>
+              <xs:element type="xs:string" name="Lecture19"/>
+              <xs:element type="xs:string" name="Lecture20"/>
+              <xs:element type="xs:string" name="Lab20"/>
+              <xs:element type="xs:string" name="Lab21"/>
+              <xs:element type="xs:string" name="Lecture21"/>
+              <xs:element type="xs:string" name="Lab22"/>
+              <xs:element type="xs:string" name="Lecture22"/>
+              <xs:element type="xs:string" name="Lab23"/>
+              <xs:element type="xs:string" name="Lecture23"/>
+              <xs:element type="xs:string" name="Lab24"/>
+              <xs:element type="xs:string" name="Lecture24"/>
+              <xs:element type="xs:string" name="Lab25"/>
+              <xs:element type="xs:string" name="Lecture25"/>
+              <xs:element type="xs:string" name="Lab26"/>
+              <xs:element type="xs:string" name="Lecture26"/>
+              <xs:element type="xs:string" name="Lab27"/>
+              <xs:element type="xs:string" name="Lecture27"/>
+              <xs:element type="xs:string" name="Lab28"/>
+              <xs:element type="xs:string" name="Lecture28"/>
+              <xs:element type="xs:string" name="Lab29"/>
+              <xs:element type="xs:string" name="Lecture29"/>
+              <xs:element type="xs:string" name="Lab30"/>
+              <xs:element type="xs:string" name="Lecture30"/>
+              <xs:element type="xs:string" name="Lab31"/>
+              <xs:element type="xs:string" name="Lecture31"/>
+			  <xs:element type="xs:string" name="LabN_1"/>
+              <xs:element type="xs:string" name="LectureN_1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="LectureHoursTotal"/>
+        <xs:element type="xs:string" name="LabHoursTotal"/>
+        <xs:element type="xs:string" name="RangeCode"/>
+        <xs:element type="xs:string" name="NumberofLectureHours"/>
+        <xs:element type="xs:string" name="NumberofLabPrepHours"/>
+        <xs:element type="xs:string" name="HourlyRateOfPayLecture"/>
+        <xs:element type="xs:string" name="HourlyRateOfPayLab"/>
+        <xs:element type="xs:string" name="LecturePayment"/>
+        <xs:element type="xs:string" name="LabPayment"/>
+        <xs:element type="xs:string" name="CombinedTotalPaymentDue"/>
+        <xs:element type="xs:string" name="EmployeeSignature"/>
+        <xs:element type="xs:string" name="EmployeeDate"/>
+		<xs:element type="xs:string" name="EmployeeComments"/>
+        <xs:element type="xs:string" name="DeptChairSign"/>
+        <xs:element type="xs:string" name="ChairDate"/>
+		<xs:element type="xs:string" name="ChairComments"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="ReportingUnit"/>
+		<xs:element type="xs:string" name="EmplId"/>
+		<xs:element type="xs:string" name="DeptId"/>
+		<xs:element type="xs:string" name="FacultyUserId"/>
+		<xs:element type="xs:string" name="FacultyEmail"/>
+		<xs:element type="xs:string" name="FacultyName"/>
+		<xs:element type="xs:string" name="DeptCooUserId"/>
+		<xs:element type="xs:string" name="DeptCooEmail"/>
+		<xs:element type="xs:string" name="DeptCooName"/>
+		<xs:element type="xs:string" name="ChairUserId"/>
+		<xs:element type="xs:string" name="ChairEmail"/>
+		<xs:element type="xs:string" name="ChairName"/>
+		<xs:element type="xs:string" name="DeptCooSignature"/>
+        <xs:element type="xs:string" name="DeptCooDate"/>
+		<xs:element type="xs:string" name="DeptCooComments"/>
+		<xs:element type="xs:string" name="PayrollSignature"/>
+        <xs:element type="xs:string" name="PayrollDate"/>
+		<xs:element type="xs:string" name="PayrollComments"/>
+		<xs:element type="xs:string" name="EmpUnionCD"/>
+		<xs:element type="xs:string" name="CWID"/>
+		<xs:element type="xs:string" name="ApprovalDecision"/>	
+		<xs:element type="xs:string" name="Department"/>
+		<xs:element type="xs:string" name="OptionalReviewerName"/>								
+		<xs:element type="xs:string" name="OptionalReviewerUserId"/>	
+		<xs:element type="xs:string" name="OptionalReviewerEmailId"/>
+        <xs:element type="xs:string" name="OptionalReviewerSignature"/>	
+		<xs:element type="xs:string" name="OptionalReviewerSignatureDate"/>
+		<xs:element type="xs:string" name="OptionalReviewerComments"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

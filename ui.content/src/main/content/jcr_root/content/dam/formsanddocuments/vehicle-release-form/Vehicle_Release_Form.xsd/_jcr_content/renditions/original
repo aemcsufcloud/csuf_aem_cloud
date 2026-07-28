@@ -1,0 +1,86 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="VehicleReleaseForm">
+    <xs:complexType>
+      <xs:sequence>
+        
+              <xs:element type="xs:string" name="DeptName"/>
+			  <xs:element type="xs:string" name="DeptID"/>
+			  <xs:element type="xs:string" name="Division"/>
+              <xs:element type="xs:string" name="SchoolDivision"/>
+              <xs:element type="xs:string" name="DeptDate"/>
+
+        <xs:element name="VehicleInfo" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="VehicleType"/>
+              <xs:element type="xs:string" name="Year"/>
+              <xs:element type="xs:string" name="Make"/>
+              <xs:element type="xs:string" name="Model"/>
+              <xs:element type="xs:string" name="PropertyTN"/>
+              <xs:element type="xs:string" name="VINNo"/>
+              <xs:element type="xs:string" name="CommentsNotes"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		
+		<xs:element type="xs:string" name="InitiatorComments"/>
+        <xs:element type="xs:string" name="InitiatorName"/>
+        <xs:element type="xs:string" name="InitiatorSign"/>
+        <xs:element type="xs:string" name="InitiatorDate"/>
+		<xs:element type="xs:string" name="InitiatorUserID"/>
+		<xs:element type="xs:string" name="InitiatorEmail"/>
+		<xs:element type="xs:string" name="InitiatorFlag"/> 
+		
+        <xs:element type="xs:string" name="DeptAssetRecKeeperName"/>
+        <xs:element type="xs:string" name="DeptAssetRecKeeperSign"/>
+        <xs:element type="xs:string" name="DeptAssetRecKeeperDate"/>
+		<xs:element type="xs:string" name="DeptAssetRecUserID"/>
+		<xs:element type="xs:string" name="DeptAssetRecEmail"/>
+		<xs:element type="xs:string" name="DeptAssetRecComments"/>
+		<xs:element type="xs:string" name="DeptAssetRecDecision"/>
+	
+		
+		<xs:element type="xs:string" name="DeptAdminUserID"/>
+		<xs:element type="xs:string" name="DeptAdminEmail"/>
+		<xs:element type="xs:string" name="DeptAdminComments"/>
+		<xs:element type="xs:string" name="DeptHeadDecision"/>
+        <xs:element type="xs:string" name="DeptAdminAppName"/>
+        <xs:element type="xs:string" name="DeptAdminAppSign"/>
+        <xs:element type="xs:string" name="DeptAdminAppDate"/>
+		
+        <xs:element type="xs:string" name="FleetCoOrdinatorName"/>
+        <xs:element type="xs:string" name="CPFMSign"/>
+        <xs:element type="xs:string" name="CPFMDate"/>
+		<xs:element type="xs:string" name="CPFMDecision"/>
+        <xs:element type="xs:string" name="WorkOrderNo"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="Ext"/>
+        <xs:element type="xs:string" name="CPFMCommentsNotes"/>
+        
+              <xs:element type="xs:string" name="AssetComments"/>
+              <xs:element type="xs:string" name="AssetName"/>
+              <xs:element type="xs:string" name="AssetSign"/>
+              <xs:element type="xs:string" name="AssetDate"/>
+			  <xs:element type="xs:string" name="AssetDetailsJSON"/>
+
+			<xs:element type="xs:string" name="caseId"/>
+			<xs:element type="xs:string" name="CWID"/>
+			<xs:element type="xs:string" name="FirstName"/>
+			<xs:element type="xs:string" name="LastName"/>
+			<xs:element type="xs:string" name="Date_1"/>
+			<xs:element type="xs:string" name="aftiaDescCWID"/>
+			<xs:element type="xs:string" name="EmailSubject"/>
+			<xs:element type="xs:string" name="StageIndicator"/> 
+			<xs:element type="xs:string" name="AssetDecision"/>
+			<xs:element type="xs:string" name="cwid_initiator"/>
+			
+		<xs:element type="xs:string" name="RequestorSignature"/>
+        <xs:element type="xs:string" name="RequestorSignDate"/>
+		<xs:element type="xs:string" name="RequestorComments"/>
+		<xs:element type="xs:string" name="RequestorUserID"/>
+        <xs:element type="xs:string" name="RequestorEmail"/>
+		<xs:element type="xs:string" name="RequestorName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="HRCovidSelfCertification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="CampusEmail"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="DepartmentName"/>
+        <xs:element type="xs:string" name="DepartmentID"/>
+        <xs:element type="xs:string" name="Title"/>
+        <xs:element type="xs:string" name="CampusExtension"/>
+		<xs:element type="xs:string" name="TypesOfVaccination"/>
+        <xs:element type="xs:string" name="AppropriateAdministrator"/>
+        <xs:element type="xs:string" name="Division"/>
+        <xs:element type="xs:byte" name="EmploymentType"/>
+        <xs:element type="xs:byte" name="EmploymentCatagory"/>
+        <xs:element type="xs:byte" name="Others"/>
+        <xs:element type="xs:byte" name="Faculty"/>
+        <xs:element type="xs:string" name="OthersText"/>
+		<xs:element type="xs:string" name="AccountAccessRequest"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+        <xs:element type="xs:string" name="EmailSubject"/>
+        <xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="ExpiryFlag"/>
+		<xs:element type="xs:string" name="InitiatorSignature"/>
+		<xs:element type="xs:string" name="InitiatorComments"/>
+		<xs:element type="xs:string" name="InitiatorSignatureDate"/>
+		<xs:element type="xs:string" name="RequestorUserID"/>
+		<xs:element type="xs:string" name="RequestorName"/>
+		<xs:element type="xs:string" name="RequestorEmail"/>
+		<xs:element type="xs:string" name="EmployeeUserID"/>
+		<xs:element type="xs:string" name="EmployeeName"/>
+		<xs:element type="xs:string" name="EmployeeEmail"/>
+		<xs:element type="xs:string" name="ManagerUserID"/>
+		<xs:element type="xs:string" name="ManagerName"/>
+		<xs:element type="xs:string" name="ManagerEmail"/>
+		<xs:element type="xs:string" name="InitiatorUserName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

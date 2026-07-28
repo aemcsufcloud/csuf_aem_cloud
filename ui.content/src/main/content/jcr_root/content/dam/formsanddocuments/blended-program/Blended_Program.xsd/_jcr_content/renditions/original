@@ -1,0 +1,94 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MajorMinorChange">
+    <xs:complexType>
+      <xs:sequence> 
+		<xs:element type="xs:string" name="caseId"/>	  
+		<xs:element type="xs:string" name="StudentLastName"/>
+		<xs:element type="xs:string" name="StudentFirstName"/>
+		<xs:element type="xs:string" name="StudentMiddleName"/>
+        <xs:element type="xs:string" name="StudentCWID"/>
+        <xs:element type="xs:string" name="StudentPhone"/>
+        <xs:element type="xs:string" name="StudentDate"/>
+        <xs:element type="xs:string" name="StudentSignature"/>
+		<xs:element type="xs:string" name="StudentEmail"/>
+		<xs:element type="xs:string" name="StudentInformationTabCurrentMajor"/>
+		<xs:element type="xs:string" name="CatalogYear"/>
+		<xs:element type="xs:string" name="CurrentMajorToNewMajorCHK"/>
+        <xs:element type="xs:string" name="CurrentMajor"/>        
+        <xs:element type="xs:string" name="NewMajor"/>
+		<xs:element type="xs:string" name="CurrentMajorAcadPlanCode"/>
+		<xs:element type="xs:string" name="NewMajorAcadPlanCode"/>
+		<xs:element type="xs:string" name="AddSecondMajorCHK"/>
+		<xs:element type="xs:string" name="AddSecondMajor"/>
+		<xs:element type="xs:string" name="AddSecondMajorAcadCode"/>	
+		<xs:element type="xs:string" name="HiddenEmailSubject"/>	
+		<xs:element name="Row1">	
+			<xs:complexType>
+			  <xs:sequence>	
+					<xs:element type="xs:string" name="CurrentMajorConcentrationColumn"/>
+			  </xs:sequence>
+			</xs:complexType>
+        </xs:element>		
+		<xs:element type="xs:string" name="ChangeAdditionalMajorCHK"/>
+		<xs:element type="xs:string" name="ChangeAdditionalCurrentMajor"/>
+		<xs:element type="xs:string" name="ChangeAdditionalCurrentMajorAcadCode"/>
+		<xs:element type="xs:string" name="ChangeAdditionalNewMajor"/>
+		<xs:element type="xs:string" name="ChangeAdditionalNewMajorAcadCode"/>
+		<xs:element type="xs:string" name="DropSecondMajorCHK"/>
+		<xs:element type="xs:string" name="MajorToDropAcadPlanCode"/>
+		<xs:element type="xs:string" name="MajorToDrop"/>
+		<xs:element type="xs:string" name="DepartmentSignatureNewMajorCHK"/>
+		<xs:element type="xs:string" name="DepartmentSignatureNewMajorAction"/>
+		<xs:element type="xs:string" name="DepartmentSignNewMajor"/> 
+		<xs:element type="xs:string" name="DepartmentNewMajorDate"/>
+		<xs:element type="xs:string" name="NewMajorSignatureApprovedBy"/>
+		<xs:element type="xs:string" name="DepartmentNameNewMajor"/>
+		<xs:element type="xs:string" name="DepartmentNewMajorComment"/>		
+		<xs:element type="xs:string" name="DepartmentSignatureAddSecondMajorCHK"/>
+		<xs:element type="xs:string" name="DepartmentSignatureAddSecondMajorAction"/>
+		<xs:element type="xs:string" name="DepartmentSignatureAddSecondMajor"/> 
+		<xs:element type="xs:string" name="DepartmentAddSecondMajorDate"/> 
+		<xs:element type="xs:string" name="DepartmentNameAddSecondMajor"/>
+		<xs:element type="xs:string" name="AdditionalMajorSignatureApprovedBy"/> 
+		<xs:element type="xs:string" name="DepartmentAddSecondMajorComment"/> 
+		<xs:element type="xs:string" name="MajorRecordsCHK"/>	
+		<xs:element type="xs:string" name="MajorRecordsAction"/>		
+		<xs:element type="xs:string" name="MajorRecordsSignature"/>
+		<xs:element type="xs:string" name="MajorRecordsDate"/>
+		<xs:element type="xs:string" name="MajorCode"/>
+        <xs:element type="xs:string" name="SecondaMajorCode"/>  
+		<xs:element type="xs:string" name="MajorBy"/> 
+		<xs:element type="xs:string" name="MajorRecordComment"/>
+		<xs:element type="xs:string" name="AdditionalMajorRecordsAction"/>		
+		<xs:element type="xs:string" name="AdditionalMajorRecordsSignature"/>
+		<xs:element type="xs:string" name="AdditionalMajorRecordsDate"/>
+		<xs:element type="xs:string" name="AdditionalMajorRecordsComment"/>
+		<xs:element type="xs:string" name="AdditionalMajorRecordsBy"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="LogUser"/>
+		<xs:element type="xs:string" name="AftiaDescription"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="EmailDataStudentRequest"/>
+		<xs:element type="xs:string" name="HiddenCollegeCodeNewMajor"/>
+		<xs:element type="xs:string" name="HiddenFullCollegeNameNewMajor"/>		
+		<xs:element type="xs:string" name="HiddenChairEmailNewMajor"/>
+		<xs:element type="xs:string" name="HiddenChairUserIDNewMajor"/>
+		<xs:element type="xs:string" name="HiddenChairNameNewMajor"/>
+		<xs:element type="xs:string" name="HiddenDepartmentNameNewMajor"/>
+		<xs:element type="xs:string" name="HiddenDpartmentIDNewMajor"/>
+		<xs:element type="xs:string" name="HiddenCollegeCodeSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenFullCollegeNameSecondMajor"/>	
+		<xs:element type="xs:string" name="HiddenChairEmailSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenChairUserIDSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenChairNameSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenDepartmentNameSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenDepartmentIDSecondMajor"/>
+		<xs:element type="xs:string" name="HiddenChairEmailDropMajor"/>		
+		<xs:element type="xs:string" name="HiddenChairUserIDDropMajor"/>
+		<xs:element type="xs:string" name="HiddenChairNameDropMajor"/>
+		<xs:element type="xs:string" name="HiddenDepartmentNameDropMajor"/>
+		<xs:element type="xs:string" name="HiddenDepartmentIDDropMajor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+</xs:schema>

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2021-04-19T23:25:23.179-07:00"
+        cq:lastModifiedBy="fd-service"
+        cq:lastReplicated="{Date}2021-06-13T23:23:50.248-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/basic"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="April 21, 1999"
+        jcr:uuid="d57b7365-00ac-4a6f-abb5-eabafdcb5bfb"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <parsys1
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/guideheader">
+                <guideimage
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo Image"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    fileName="cq5dam.web.1280.1280.png"
+                    guideNodeClass="guideImage"
+                    imageRotate="0"
+                    name="logoImage">
+                    <file/>
+                </guideimage>
+                <guidetextdraw
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>Child support services&lt;/p>&#xd;&#xa;&#xd;&#xa;"
+                    css="headerText"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    textIsRich="true"/>
+            </guideheader>
+            <guideformtitle
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/afFormTitle"
+                _value="&lt;p>Application Form&lt;/p>&#xd;&#xa;&#xd;&#xa;"
+                css="guideformtitle container"
+                guideNodeClass="guideTextDraw"
+                name="formTitle"
+                textIsRich="true"/>
+        </parsys1>
+        <guideContainer
+            fd:formtype="acroform"
+            fd:version="1.1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            _useSignedPdf="{Boolean}false"
+            actionType="fd/af/components/guidesubmittype/restendpoint"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            disableSwipeGesture="{Boolean}false"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            schemaRef="/content/dam/formsanddocuments/direct_pay_dental/output/schema/petn5-ge_variation.schema.json"
+            schemaType="jsonschema"
+            themeRef="/content/dam/formsanddocuments-themes/reference-themes/urbane"
+            useExistingAF="false">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                editable="{Boolean}true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/panel/tabbedPanelLayout"
+                    enableLayoutOptimization="{Boolean}true"
+                    toolbarPosition="Bottom"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <Page_1
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page 1"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="page">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            nonNavigable="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>UNIVERSITY PETITION FOR GENERAL EDUCATION VARIATION&lt;/b>&lt;/p>&lt;p>Please pay the &lt;b>$20.00 filing fee&lt;/b> prior to submitting this form to the Records and Registration (LH-114). Each petition receives an individual and comprehensive review and can be either granted or denied. The amount of time it takes for a petition to be reviewed varies, and&lt;/p>&lt;p>may take up to six months.&lt;/p>&lt;p>&lt;b>STUDENT INFORMATION&lt;/b>&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="university_petition_for_general_txt1"/>
+                            <DATE
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="DATE"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/date"
+                                dorBindRef="Date"
+                                dorDataFormat="m/d/yy"
+                                guideNodeClass="guideDatePicker"
+                                keywords="date"
+                                mandatory="false"
+                                name="date"
+                                visible="true"/>
+                            <STUDENT_ID_NUMBER
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="STUDENT I.D. NUMBER"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/student_id_number"
+                                dorBindRef="CWID"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="student_id_number"
+                                visible="true"/>
+                            <NAME
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="NAME"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/name1"
+                                dorBindRef="NAME"
+                                guideNodeClass="guideTextBox"
+                                keywords="name"
+                                mandatory="false"
+                                name="name1"
+                                schemaMeaning="name"
+                                visible="true"/>
+                            <EMAIL
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="EMAIL"
+                                sling:resourceType="fd/af/components/guideemail"
+                                bindRef="/email"
+                                dorBindRef="EMAIL"
+                                guideNodeClass="guideTextBox"
+                                keywords="email"
+                                longDescription="Specify the e-mail address for the contact point."
+                                mandatory="false"
+                                name="email"
+                                schemaMeaning="email"
+                                validatePictureClause="^(([^&lt;>()\\[\\]\\.,;:\\s@&quot;]+(\\.[^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+)*)|(&quot;.+&quot;))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+                                visible="true"/>
+                            <ADDRESS
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="ADDRESS"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/address"
+                                dorBindRef="Address"
+                                guideNodeClass="guideTextBox"
+                                keywords="address"
+                                mandatory="false"
+                                name="address"
+                                schemaMeaning="address"
+                                visible="true"/>
+                            <text2
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="PHONE NUMBER"
+                                sling:resourceType="fd/af/components/guidetelephone"
+                                bindRef="/phone_number"
+                                guideNodeClass="guideTelephone"
+                                keywords="phone number"
+                                longDescription="Specify the telephone number for the contact point."
+                                name="phone_number"
+                                schemaMeaning="phone number"/>
+                            <AREA_CODE_NUMBER
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AREA CODE NUMBER"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/area_code_number"
+                                dorBindRef="Phone Number"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="area_code_number"
+                                visible="true"/>
+                            <CITY_STATE_ZIP_CODE
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="CITY STATE ZIP CODE"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/city_state_zip_code"
+                                dorBindRef="Address 2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="city_state_zip_code"
+                                visible="true"/>
+                            <MAJOR
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="MAJOR"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/major"
+                                dorBindRef="Major"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="major"
+                                visible="true"/>
+                            <EXPECTED_DATE_OF_GRADUATION_SEMESTER_YEAR
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="EXPECTED DATE OF GRADUATION (SEMESTER / YEAR)"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/expected_date_of_graduation"
+                                dorBindRef="EXPECTED DATE OF GRADUATION SEMESTER  YEAR"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="expected_date_of_graduation"
+                                visible="true"/>
+                            <select_applicable
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title=""
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                bindRef="/not_known_yet"
+                                dorBindRef="Not Known"
+                                guideNodeClass="guideCheckBox"
+                                mandatory="false"
+                                name="not_known_yet"
+                                options="[Yes=NOT KNOWN YET]"
+                                visible="true"/>
+                            <text3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>IMPORTANT: THE MINIMUM NUMBER OF UNITS REQUIRED TO EARN A DEGREE IS NOT PETITIONABLE.&lt;/p>&lt;p>&lt;b>PETIT&lt;/b>&lt;/p>&lt;p>&lt;b>answers to the questions under ITEM 3 on the reverse side of this form.&lt;/b>&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="important_minimum_number_of_txt1"/>
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/panel"
+                                bindRef="/exception_per_form"
+                                guideNodeClass="guidePanel"
+                                name="exception_per_form">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    nonNavigable="{Boolean}true"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <text4
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>ITEM 1:&lt;/b>&lt;/p>&lt;p>&lt;b>ONE EXCEPTION PER FORM&lt;/b>&lt;/p>"
+                                        guideNodeClass="guideTextDraw"
+                                        name="item_txt1"/>
+                                    <State_the_specific_GE_graduation_requirement_for_which_you_are_seeking_an_exception_Examples_lacking_2_units_in_GE_Area_D4_lacking_3_units_of_upperdivision_GE_etc
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="State the specific G.E. graduation requirement for which you are seeking an exception. Examples : lacking 2 units in G.E. Area D4: lacking 3 units of upper-division G.E. etc."
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/exception_per_form/state_specific_ge_graduation"
+                                        dorBindRef="Lacking Requirement2"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="false"
+                                        name="state_specific_ge_graduation"
+                                        visible="true"/>
+                                    <O_F_F_I_C_E_U_S_E_O_N_L_Y
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="O _ F _ F _ I _ C _ E U _ S _ E _ O N L Y"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/exception_per_form/field"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="{Boolean}false"
+                                        name="field"/>
+                                    <text5
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>ITEM 2: State the alternative course you are requesting to be used&lt;/b> &lt;b>for fulfilling this requirement and the&lt;/b> &lt;b>reason(s) that this would be an appropriate substitution for the deficiency you have listed in Item 1. above.&lt;/b> (You cannot request to waive a graduation requirement.)&lt;/p>"
+                                        guideNodeClass="guideTextDraw"
+                                        name="alternative_course_requirement_reason_txt"/>
+                                    <DeptCourse_Number
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Dept./Course Number"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/exception_per_form/deptcourse_number"
+                                        dorBindRef="DeptCourse Number"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="false"
+                                        name="deptcourse_number"
+                                        visible="true"/>
+                                    <Semester_Taken
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Semester Taken"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/exception_per_form/semester_taken"
+                                        dorBindRef="Semester Taken"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="false"
+                                        name="semester_taken"
+                                        visible="true"/>
+                                    <DATE_STAMP
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="DATE STAMP"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/exception_per_form/date_stamp"
+                                        dorBindRef="Explanation2"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="false"
+                                        name="date_stamp"
+                                        visible="true"/>
+                                </items>
+                            </section>
+                            <ADMINISTRATIVE_USE_ONLY
+                                jcr:description="ADMINISTRATIVE USE ONLY"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="ADMINISTRATIVE USE ONLY"
+                                sling:resourceType="fd/af/components/panel"
+                                bindRef="/administrative_use_only"
+                                guideNodeClass="guidePanel"
+                                name="administrative_use_only">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                                    nonNavigable="{Boolean}true"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <text6
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>&lt;b>Committee Decision&lt;/b>&lt;/p>"
+                                        guideNodeClass="guideTextDraw"
+                                        name="committee_decision_txt"/>
+                                    <select_applicable2
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        bindRef="/administrative_use_only/committee_decision"
+                                        dorBindRef="PetitionDecision"
+                                        guideNodeClass="guideCheckBox"
+                                        mandatory="false"
+                                        name="committee_decision"
+                                        options="[Yes=1. Your petition is granted.]"
+                                        visible="true"/>
+                                    <select_applicable3
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        bindRef="/administrative_use_only/action_petition"
+                                        dorBindRef="PetitionDecision"
+                                        guideNodeClass="guideCheckBox"
+                                        mandatory="false"
+                                        name="action_petition"
+                                        options="[Yes=2. No action has been taken on your petition because:]"
+                                        visible="true"/>
+                                    <select_applicable4
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        bindRef="/administrative_use_only/academic_department_regulation"
+                                        dorBindRef="No Action1"
+                                        guideNodeClass="guideCheckBox"
+                                        mandatory="false"
+                                        name="academic_department_regulation"
+                                        options="[Resolve=a. This can be resolved by the academic department concerned.,1=b. This regulation is contained in Title 5 California Administrative Code\, and is not subject to petition.]"
+                                        visible="true"/>
+                                    <select_applicable5
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        bindRef="/administrative_use_only/field"
+                                        dorBindRef="No Action1"
+                                        guideNodeClass="guideCheckBox"
+                                        mandatory="false"
+                                        name="field"
+                                        options="[Resolve=c.]"
+                                        visible="true"/>
+                                    <select_applicable6
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guidecheckbox"
+                                        bindRef="/administrative_use_only/petition_reason_denial"
+                                        dorBindRef="PetitionDecision"
+                                        guideNodeClass="guideCheckBox"
+                                        mandatory="false"
+                                        name="petition_reason_denial"
+                                        options="[Yes=3. Your petition is denied. Reason for denial:]"
+                                        visible="true"/>
+                                    <Date
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Date"
+                                        sling:resourceType="fd/af/components/guidedatepicker"
+                                        bindRef="/administrative_use_only/date"
+                                        dorBindRef="Date"
+                                        dorDataFormat="m/d/yy"
+                                        guideNodeClass="guideDatePicker"
+                                        keywords="date"
+                                        mandatory="false"
+                                        name="date"
+                                        visible="true"/>
+                                    <select_one
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="fd/af/components/guideradiobutton"
+                                        bindRef="/administrative_use_only/other"
+                                        dorBindRef="Other"
+                                        guideNodeClass="guideRadioButton"
+                                        mandatory="false"
+                                        name="other"
+                                        options="[0=Other]"
+                                        visible="true"/>
+                                    <a_Such_action_would_violate_CSUF_or_CSU_policy_on_academic_standards_b_Other
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="a. Such action would violate CSUF or CSU policy on academic standards. b. Other"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        bindRef="/administrative_use_only/such_action_csuf_csu"
+                                        dorBindRef="Other 1"
+                                        guideNodeClass="guideTextBox"
+                                        mandatory="false"
+                                        name="such_action_csuf_csu"
+                                        visible="true"/>
+                                    <text7
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="fd/af/components/guidetextdraw"
+                                        _value="&lt;p>Rev 08/14/18&lt;/p>"
+                                        guideNodeClass="guideTextDraw"
+                                        name="rev_1418_txt"/>
+                                </items>
+                            </ADMINISTRATIVE_USE_ONLY>
+                        </items>
+                    </Page_1>
+                    <Page_2
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page 2"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="page1">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout2"
+                            nonNavigable="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <text8
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>ITEM 3:&lt;/b> &lt;b>The rest of your petition statement consists of answers to the four questions, (a) through (d), below.&lt;/b>&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="rest_petition_statement_answers_txt"/>
+                            <list
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;ol start='1' type=''>&lt;b>&lt;li>&lt;b>&lt;p>&lt;b>PLEASE ANSWER THE QUESTIONS BELOW IN THE SPACE PROVIDED ON THIS PAGE.&lt;/b>&lt;/b>&lt;/b>&lt;b>&lt;b>&lt;b>IF YOU NEED&lt;/b>&lt;/b>&lt;/b>&lt;b>&lt;b>&lt;b>ADDITIONAL SPACE, PLEASE CONTINUE ON A SEPARATE SHEET OF PAPER.&lt;/b>&lt;/p>&lt;/b>&lt;/li>&lt;/b>&lt;/ol>"
+                                guideNodeClass="guideTextDraw"
+                                name="please_answer_the_questions_txt"/>
+                            <a_When_and_how_did_you_become_aware_that_you_had_not_yet_met_the_requirement_for_which_you_are_submitting_this_through_an_advisor_by_reviewing_your_Titan_Degree_Audit_on_your_own_etc
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="(a) When, and how, did you become aware that you had not yet met the requirement for which you are submitting this (through an advisor, by reviewing your Titan Degree Audit on your own, etc)"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/aware_not_yet_requirement"
+                                dorBindRef="petition through an advisor by reviewing your Titan Degree Audit on your own etc 2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="aware_not_yet_requirement"
+                                visible="true"/>
+                            <petition
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="petition?"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/petition"
+                                dorBindRef="petition through an advisor by reviewing your Titan Degree Audit on your own etc 1"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="petition"
+                                visible="true"/>
+                            <b_Describe_the_other_options_which_you_have_considered
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="(b) Describe the other options which you have considered."
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/describe_options_considered"
+                                dorBindRef="b Describe the other options for meeting this requirement which you have considered 2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="describe_options_considered"
+                                visible="true"/>
+                            <for_meeting_this_requirement
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="for meeting this requirement"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/meeting_requirement"
+                                dorBindRef="b Describe the other options for meeting this requirement which you have considered 1"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="meeting_requirement"
+                                visible="true"/>
+                            <c_Have_you_ever_sought_advisement_through_either_the_Academic_Advisement_Center_or_through_your_major_department_If_not_why_not
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="(c) Have you ever sought advisement through either the Academic Advisement Center, or through your major department? If not, why not?"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/ever_advisement_academic"
+                                dorBindRef="If so when If not why not 2"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="ever_advisement_academic"
+                                visible="true"/>
+                            <If_so_when
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="If so, when?"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/if_so_when"
+                                dorBindRef="If so when If not why not 1"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="if_so_when"
+                                visible="true"/>
+                            <text9
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>What extenuating circumstances prevent you from taking a course at this time to meet the G.E. requirement for&lt;/b> &lt;b>which you are requesting a variation?&lt;/b> &lt;b>(Documentation for circumstances must be provided with your petition.)&lt;/b>&lt;/p>&lt;p>&lt;i>&lt;b>If you have questions related to documentation of circumstances, please ask for assistance&lt;/b>&lt;/i> &lt;i>&lt;b>from a Records Office representative.&lt;/b>&lt;/i>&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="circumstances_course_time_ge_txt1"/>
+                            <EXPLANATION_OF_EXTENUATING_CIRCUMSTANCES
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="EXPLANATION OF EXTENUATING CIRCUMSTANCES:"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/explanation_of_extenuating_circumstances"
+                                dorBindRef="EXPLANATION OF EXTENUATING CIRCUMSTANCES 1"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="explanation_of_extenuating_circumstances"
+                                visible="true"/>
+                            <text10
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>DEADLINE FOR GRADUATION CANDIDATES IN THEIR FINAL SEMESTER:&lt;/b>&lt;/p>&lt;p>&lt;b>Candidates to graduate who are in their last semester of attendance have the following deadline for submitting a&lt;/b> &lt;b>G.E. Variation petition:&lt;/b>&lt;/p>&lt;p>&lt;b>This petition must be submitted no later than the grade due date for the semester in which you plan to graduate.&lt;/b> &lt;b>Please check the online Registration Guide (Semester Calendar section) each semester for the grade due date.&lt;/b>&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="deadline_for_graduation_candidates_txt1"/>
+                            <Student_Signature
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student Signature:"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="Student Signature:"
+                                dorBindRef="Student Signature"
+                                guideNodeClass="guideTextDraw"
+                                keywords="student.signature,person.signature"
+                                mandatory="false"
+                                name="student_signature"
+                                schemaMeaning="person.signature"
+                                visible="true"/>
+                            <Date2
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date:"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/date_1"
+                                dorBindRef="Sig Date"
+                                dorDataFormat="m/d/yy"
+                                guideNodeClass="guideDatePicker"
+                                keywords="date"
+                                mandatory="false"
+                                name="date"
+                                visible="true"/>
+                            <Print_your_name_First_name
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Print your name: First name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/print_name_first_name"
+                                dorBindRef="First name"
+                                guideNodeClass="guideTextBox"
+                                mandatory="false"
+                                name="print_name_first_name"
+                                visible="true"/>
+                            <Last_Name
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Last Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                bindRef="/last_name"
+                                dorBindRef="Last Name"
+                                guideNodeClass="guideTextBox"
+                                keywords="name"
+                                mandatory="false"
+                                name="last_name"
+                                schemaMeaning="name"
+                                visible="true"/>
+                        </items>
+                    </Page_2>
+                </items>
+            </rootPanel>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/toolbar"
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items jcr:primaryType="nt:unstructured">
+                    <reset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reset"
+                        sling:resourceSuperType="fd/af/components/guidebutton"
+                        sling:resourceType="fd/af/components/actions/reset"
+                        guideNodeClass="guideButton"
+                        name="reset"
+                        type="reset">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;RESET_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.reset();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </reset>
+                    <saveGuideDraft
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save"
+                        sling:resourceSuperType="fd/af/components/guidebutton"
+                        sling:resourceType="fd/fp/components/actions/saveGuideDraft"
+                        guideNodeClass="guideButton"
+                        name="saveGuideDraft"
+                        type="save">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SAVE_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nhandleDraftSave(this);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </saveGuideDraft>
+                    <submit
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceSuperType="fd/af/components/guidebutton"
+                        sling:resourceType="fd/af/components/actions/submit"
+                        guideNodeClass="guideButton"
+                        name="submit"
+                        type="submit">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SUBMIT_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.submit();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </submit>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/mobileFixedToolbarLayout"/>
+            </toolbar>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    signerTitle="Signer One"/>
+            </signerInfo>
+        </guideContainer>
+        <parsys2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/guidefooter">
+                <guidetextdraw1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>© 2017 Company name | All rights reserved&lt;/p>"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"/>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

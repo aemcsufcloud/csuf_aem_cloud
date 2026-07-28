@@ -1,0 +1,161 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Petition">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element type="xs:string" name="FName"/>
+		<xs:element type="xs:string" name="LastName"/>
+		<xs:element type="xs:string" name="CWID"/>
+		<xs:element type="xs:string" name="PhoneNumber"/>
+		<xs:element type="xs:string" name="Address"/>
+		<xs:element type="xs:string" name="City"/>
+		<xs:element type="xs:string" name="State"/>
+		<xs:element type="xs:string" name="Zipcode"/>
+		<xs:element type="xs:string" name="EmailAddress"/>
+		<xs:element type="xs:string" name="Date_1"/>
+		<xs:element type="xs:string" name="petitionA_term"/>		
+		<xs:element name="petitionA_Row1">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element type="xs:string" name="petitionA_Chk"/>
+				<xs:element type="xs:string" name="petitionA_deptCourse"/>
+				<xs:element type="xs:string" name="petitionA_instructorName"/>
+				<xs:element type="xs:string" name="petitionA_scheduleNumber"/>
+				<xs:element type="xs:string" name="petitionA_Grade"/>
+				<xs:element type="xs:string" name="petitionA_Unit"/>
+			  </xs:sequence>
+			</xs:complexType>
+		</xs:element>	
+		<xs:element type="xs:string" name="petitionA_titan_chk1"/>
+		<xs:element type="xs:string" name="petitionA_titan_chk2"/>
+		<xs:element type="xs:string" name="petitionA_titan_chk3"/>
+		<xs:element type="xs:string" name="petitionA_titan_chk4"/>
+		<xs:element type="xs:string" name="peitionA_yes_chk"/>
+		<xs:element type="xs:string" name="peitionA_no_chk"/>
+		<xs:element type="xs:string" name="petitionA_question1_comment"/>
+		<xs:element type="xs:string" name="petitionA_question2_comment"/>
+		<xs:element type="xs:string" name="PetitionASection2Comment"/>
+		<xs:element type="xs:string" name="petitionB_underGrad_term"/>
+		<xs:element name="petitionB_undergrad_Row1">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element type="xs:string" name="petitionB_undergrad_Chk"/>
+				<xs:element type="xs:string" name="petitionB_undergrad_deptCourse"/>
+				<xs:element type="xs:string" name="petitionB_undergrad_instructorName"/>
+				<xs:element type="xs:string" name="petitionB_undergrad_currentGrade"/>
+				<xs:element type="xs:string" name="petitionB_undergrad_currentGradeOfficial"/>
+			  </xs:sequence>
+			</xs:complexType>
+		</xs:element>		  
+		<xs:element type="xs:byte" name="petitionB_undergrad_GE_chk"/>
+		<xs:element type="xs:byte" name="petitionB_undergrad_TDA"/>
+		<xs:element type="xs:byte" name="petitionB_undergrad_major_chk"/>
+		<xs:element type="xs:string" name="petitionB_undergrad_major"/>
+		<xs:element type="xs:string" name="petitionB_undergrad_minor_chk"/>
+		<xs:element type="xs:string" name="petitionB_undergrad_minor"/>
+		<xs:element type="xs:string" name="petitionB_undergrad_comment"/>
+		<xs:element type="xs:string" name="petitionB_grad_term"/>
+		<xs:element name="petitionB_grad_Row1">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element type="xs:string" name="petitionB_grad_Chk"/>
+				<xs:element type="xs:string" name="petitionB_grad_deptCourse"/>
+				<xs:element type="xs:string" name="petitionB_grad_instructorName"/>
+				<xs:element type="xs:string" name="petitionB_grad_currentGrade"/>
+				<xs:element type="xs:string" name="petitionB_grad_currentGradeOfficial"/>
+			  </xs:sequence>
+			</xs:complexType>
+		</xs:element>		
+		<xs:element type="xs:string" name="petitionB_grad_comment"/>
+		<xs:element type="xs:byte" name="petitionB_grad_attachmentYes"/>
+		<xs:element type="xs:string" name="petitionB_grad_attachmentNo"/>
+		<xs:element type="xs:string" name="petitionB_grad_attachment1"/>
+		
+		<xs:element type="xs:string" name="petitionC_term_taken"/>		
+		<xs:element name="petitionC_Row1">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element type="xs:string" name="petitionC_Chk"/>
+				<xs:element type="xs:string" name="petitionC_deptCourse"/>
+				<xs:element type="xs:string" name="petitionC_instructorName"/>
+				<xs:element type="xs:string" name="petitionC_scheduleNumber"/>
+				<xs:element type="xs:string" name="petitionC_unit_value_From"/>
+				<xs:element type="xs:string" name="petitionC_unit_value_To"/>
+				<xs:element type="xs:string" name="petitionC_row_number"/>
+			  </xs:sequence>
+			</xs:complexType>
+		</xs:element> 
+		<xs:element type="xs:string" name="petitionC_reason"/>	
+		<xs:element type="xs:string" name="student_signature"/>
+		<xs:element type="xs:string" name="student_signDate"/>
+		<xs:element type="xs:string" name="student_comment"/>
+		<xs:element type="xs:string" name="expected_term"/>
+		<xs:element type="xs:string" name="instructor_signChk"/>
+		<xs:element type="xs:string" name="petitionC_instructor_signChk"/>
+		<xs:element type="xs:string" name="instructor_signature"/>
+		<xs:element type="xs:string" name="instructor_signDate"/>
+		<xs:element type="xs:string" name="instructor_recommend"/>
+		<xs:element type="xs:string" name="instructor_comment"/>	
+		<xs:element type="xs:string" name="graduate_studies_SignChk"/>
+		<xs:element type="xs:string" name="grad_office_signature"/>
+		<xs:element type="xs:string" name="grad_office_signDate"/>
+		<xs:element type="xs:string" name="grad_office_comment"/>
+		<xs:element type="xs:string" name="grad_office_recommend"/>
+		<xs:element type="xs:string" name="evaluator_signChk"/>
+		<xs:element type="xs:string" name="evaluator_signature"/>
+		<xs:element type="xs:string" name="evaluator_signDate"/>
+		<xs:element type="xs:string" name="evaluator_comment"/>
+		<xs:element type="xs:string" name="evaluator_recommend"/>	
+		<xs:element type="xs:string" name="eip_signChk"/>		
+		<xs:element type="xs:string" name="eip_signature"/>
+		<xs:element type="xs:string" name="eip_signDate"/>
+		<xs:element type="xs:string" name="eip_comment"/>
+		<xs:element type="xs:string" name="eip_recommend"/>
+		<xs:element type="xs:string" name="petition_signChk"/>
+		<xs:element type="xs:string" name="petition_coord_signature"/>
+		<xs:element type="xs:string" name="petition_coord_signDate"/>
+		<xs:element type="xs:string" name="petitionDecision"/>
+		<xs:element type="xs:string" name="petition_coord_comment"/>	
+		<xs:element type="xs:string" name="records_signChk"/>
+		<xs:element type="xs:string" name="records_signature"/>
+		<xs:element type="xs:string" name="records_signDate"/>
+		<xs:element type="xs:string" name="records_comment"/>
+		<xs:element type="xs:string" name="recordsDecision"/>		
+		<xs:element type="xs:string" name="dean_SignChk"/>
+		<xs:element type="xs:string" name="dean_signature"/>
+		<xs:element type="xs:string" name="dean_signDate"/>
+		<xs:element type="xs:string" name="dean_comment"/>
+		<xs:element type="xs:string" name="dean_recommend"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="CaseId"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="workflow_initiator"/>
+		<xs:element type="xs:string" name="StudentUserID"/>
+		<xs:element type="xs:string" name="InstructorUserId"/>
+		<xs:element type="xs:string" name="InstructorName"/>
+		<xs:element type="xs:string" name="InstructorEmail"/>
+		<xs:element type="xs:string" name="AcadCareer"/>
+		<xs:element type="xs:string" name="EIPFlag"/>
+		<xs:element type="xs:string" name="PetitionType"/> 
+		<xs:element type="xs:string" name="StudentFullName"/>
+		<xs:element type="xs:string" name="Programs"/>
+		<xs:element type="xs:string" name="TermCode"/>
+		<xs:element type="xs:string" name="course_name"/>
+		<xs:element type="xs:string" name="college_code"/>
+		<xs:element type="xs:string" name="DeanName"/>
+		<xs:element type="xs:string" name="DeanUserId"/>
+		<xs:element type="xs:string" name="DeanEmail"/>
+		<xs:element type="xs:string" name="ChairName"/>
+		<xs:element type="xs:string" name="ChairUserId"/>
+		<xs:element type="xs:string" name="ChairEmail"/>
+		<xs:element type="xs:string" name="ChairComments"/>
+		<xs:element type="xs:string" name="ChairSignatureDate"/>
+		<xs:element type="xs:string" name="ChairSignature"/>
+		<xs:element type="xs:string" name="ChairRecommend"/>
+		<xs:element type="xs:string" name="InstructorSignatureCB"/>
+		
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

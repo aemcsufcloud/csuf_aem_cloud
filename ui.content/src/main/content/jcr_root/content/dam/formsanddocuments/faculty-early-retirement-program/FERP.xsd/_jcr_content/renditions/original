@@ -1,0 +1,65 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FERP">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="PrintName"/>
+		<xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="Department"/>        
+		<xs:element type="xs:string" name="ChangeToParticipationCB"/>
+		<xs:element type="xs:string" name="ChangeFromParticipationCB"/>
+		<xs:element type="xs:string" name="BeginParticipationCB"/>		
+        <xs:element type="xs:string" name="BeginEffAcadYear"/>
+        <xs:element type="xs:string" name="BeginRetirementDate"/>
+        <xs:element type="xs:byte" name="SickLeaveRB"/>       
+        <xs:element type="xs:string" name="ChangeEffAcadYear"/>
+        <xs:element type="xs:string" name="FromFTERB"/>
+        <xs:element type="xs:string" name="TOCB"/>
+        <xs:element type="xs:string" name="ToFTEValue"/>
+        <xs:element type="xs:string" name="ReduceCB"/>
+		<xs:element type="xs:string" name="EndParticipationEffectiveDt"/>
+        <xs:element type="xs:string" name="FacultyMemComments"/>
+        <xs:element type="xs:string" name="FacultyMemSign"/>
+        <xs:element type="xs:string" name="FacultyMemDate"/>
+        <xs:element type="xs:string" name="ChairComments"/>
+        <xs:element type="xs:byte" name="ChairApproval"/>
+        <xs:element type="xs:string" name="ChairSign"/>
+        <xs:element type="xs:string" name="ChairDate"/>
+        <xs:element type="xs:string" name="DeanComments"/>
+        <xs:element type="xs:byte" name="DeanApproval"/>
+        <xs:element type="xs:string" name="DeanSign"/>
+        <xs:element type="xs:string" name="DeanDate"/>
+        <xs:element type="xs:string" name="VPAAComments"/>
+        <xs:element type="xs:byte" name="VPAApproval"/>
+        <xs:element type="xs:string" name="VPAASign"/>
+        <xs:element type="xs:string" name="VPAADate"/>
+		<xs:element type="xs:string" name="DeptCooCB"/>
+        <xs:element type="xs:string" name="DeptCooSign"/>
+        <xs:element type="xs:string" name="DeptCooDate"/>
+		<xs:element type="xs:string" name="DeptCooComments"/>
+		<xs:element type="xs:string" name="AHRSign"/>
+        <xs:element type="xs:string" name="AHRDate"/>
+		<xs:element type="xs:string" name="AHRComments"/>
+		<xs:element type="xs:string" name="InitiatorUserId"/>
+		<xs:element type="xs:string" name="FacultyUserId"/>
+		<xs:element type="xs:string" name="FacultyFirstName"/>
+		<xs:element type="xs:string" name="FacultyLastName"/>
+		<xs:element type="xs:string" name="FacultyEmail"/>
+		<xs:element type="xs:string" name="DeptId"/>
+		<xs:element type="xs:string" name="ChairUserId"/>
+		<xs:element type="xs:string" name="ChairName"/>
+		<xs:element type="xs:string" name="ChairEmail"/>
+		<xs:element type="xs:string" name="DeanUserId"/>
+		<xs:element type="xs:string" name="DeanName"/>
+		<xs:element type="xs:string" name="DeanEmail"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="InitiatorEmail"/>
+		<xs:element type="xs:string" name="PreparerName"/>
+		<xs:element type="xs:string" name="EndPArticipationYear"/>
+		<xs:element type="xs:string" name="EndParticipationRB"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="ApprovalDecision"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

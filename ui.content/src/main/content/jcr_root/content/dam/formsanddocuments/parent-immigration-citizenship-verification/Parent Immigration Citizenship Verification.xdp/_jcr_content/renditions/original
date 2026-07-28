@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-04-13T12:19:34Z" uuid="02de499d-1dfc-4777-b5ef-4dbe30da0b59">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1PPRV" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="8in" h="10.5in"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="8in" layout="lr-tb">
+         <subform w="203.2mm" h="41.275mm" name="HeadingPanel">
+            <field name="aidYear" w="31.75mm" h="9.525mm" presence="invisible" x="82.55mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Image1" w="69.85mm" h="25.4mm">
+               <value>
+                  <image href=".\CSUF Financial Aid Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <field name="HeadingText" w="200.025mm" h="9.525mm" y="25.4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" weight="bold" size="14pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = aidYear.rawValue; 
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "PARENT IMMIGRATION/CITIZENSHIP VERIFICATION ("+aidYearValTwo +"-"+aidYearVal +")";
+</script>
+               </event>
+            </field>
+            <draw name="Text10" w="200.025mm" h="5.939mm" y="33.02mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>FOR PARENTAL LOAN FOR UNDERGRADUATE STUDENTS (PLUS) ELIGIBILITY</text>
+               </value>
+               <font size="14pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 564166 14001 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 63 FOR PARENTAL LOAN FOR UNDERGRADUATE STUDENTS (PLUS) ELIGIBILITY 0 66035 11917 0 0 0 "Calibri" 1 0 14000 ISO-8859-1?></draw>
+            <field name="formCode" w="19.177mm" h="9.525mm" x="180.975mm" y="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="12pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(HeadingPanel.aidYear.rawValue == "2022"){
+	this.rawValue = "F0ALNC";
+}
+else if(HeadingPanel.aidYear.rawValue == "2023"){
+	this.rawValue = "F1ALNC";
+}
+</script>
+               </event>
+            </field>
+            <field name="cwid" y="9.525mm" x="120.65mm" w="60.325mm" h="15.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="26.0137mm">
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt" size="11pt"/>
+                  <para vAlign="middle" hAlign="right" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Enter Student's CWID Here:</text>
+                  </value>
+               </caption>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text4" w="200.025mm" h="0.678653in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">INSTRUCTIONS<span style="font-weight:normal;text-decoration:none">: Federal law requires a parent loan recipient to be either a United States citizen or an eligible non-citizen. See definition of a parent below.<span style="xfa-spacerun:yes">  </span>In order to verify eligibility for a PLUS loan, complete this form and attach photocopies of the front and back side of your documentation of the item checked below.<span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic;text-decoration:none">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text8" w="9.525mm" h="4.987mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 24166 11302 0 0 1417 1417 0 0?></draw>
+         <draw name="Text9" w="190.5mm" h="38.571mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:underline;letter-spacing:0in">Definition of parent:<span style="font-weight:normal;text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;font-style:italic;text-decoration:none">For the FAFSA, “parent” refers to your biological and/ or adoptive parents (including your step-parent If that person is currently married to your “parent”).</span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in">The following are<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">NOT considered to be a “legal parent” for the FAFSA:</span></p><ul style="letter-spacing:0in;list-style-type:disc"><li style="font-style:italic">Grandparents, foster parents, legal guardians, aunts and uncles are NOT considered parents unless they have legally adopted you.</li><li style="font-style:italic">Any person who is not married to your parent and who is not a legal or biological parent<span style="xfa-spacerun:yes"> </span></li></ul><p style="font-style:italic;letter-spacing:0in">If your parent’s FAFSA marital status is “married,” or “unmarried and both parents living together,” then both their information must be provided.<span style="font-style:normal"><span style="xfa-spacerun:yes"> </span></span></p><p style="letter-spacing:0in"><br/></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text5" w="200.025mm" h="0.344917in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">ACTION TO COMPLETE FORM:<span style="text-decoration:none"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal;text-decoration:none">Select one of the categories that best describes the immigration/citizenship status of the parent applying for the loan.<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <subform w="203.2mm" name="USParmanentResidentPanel" h="34.326mm">
+            <draw name="Text2" w="203.2mm" h="4.826mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>I. 	U.S. PERMANENT RESIDENT (check only one and attach a copy of your documentation)</text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 10846 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 3 I.  0 1417 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 1   0 9015 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 80 U.S. PERMANENT RESIDENT (check only one and attach a copy of your documentation) 0 37417 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <field name="AlienRegistrationCard" w="73.025mm" h="6mm" y="4.826mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="66.025mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Alien Registration Card I-551 </text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="Passportstamped" w="73.025mm" h="6mm" y="10.826mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="66.025mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Passport stamped “Processed for I-551”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="DepartureRecord" w="149.225mm" h="6mm" y="16.826mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="142.225mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Departure Record (Form I-94) stamped “Processed for I-551” or “Temporary Form I-551”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="OtherUSPerm" w="25.4mm" h="6mm" y="22.826mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="18.4mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="USPermTextBox" w="149.225mm" h="6.35mm" y="22.826mm" x="41.275mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw x="92.075mm" y="29.972mm">
+               <value>
+                  <text>(List Type of Document)</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subform w="203.2mm" name="OtherEligibleNonCitizenPanel" h="50.8mm">
+            <draw name="Text2" w="203.2mm" h="8.761mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">II. <span style="xfa-tab-count:1">         </span>OTHER ELIGIBLE NON-CITIZEN (check only one)</p><p style="letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="font-weight:normal">Attach copy of your Departure Record (Form I-94) with a stamp indicating one of the following:</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="Refugee" w="47.625mm" h="6mm" y="8.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="40.625mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>“Refugee”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="AsylumGranted" w="47.625mm" h="6mm" y="14.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="40.625mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>“Asylum Granted”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="IndefiniteParole" w="85.725mm" h="6mm" y="20.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="78.725mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>“Indefinite Parole” and/or “Humanitarian Parole”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="CubanHaitianEntrant" w="85.725mm" h="6mm" y="26.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="78.725mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>“Cuban-Haitian Entrant, Status Pending”</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="CurrentFormI688" w="85.725mm" h="6mm" y="32.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="78.725mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+                  <value>
+                     <text>Current Form I-688 “Temporary Resident Card”</text>
+                  </value>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="OtherNonCitizen" w="25.4mm" h="6mm" y="38.761mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="18.4mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="EligibleNonCitizenTextBox" w="149.225mm" h="6.35mm" y="38.761mm" x="41.275mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw x="92.075mm" y="45.593mm">
+               <value>
+                  <text>(List Type of Document)</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subform w="203.41mm" name="NonEligibleNonCitizenPanel" h="37.629mm">
+            <draw name="Text2" w="203.2mm" h="5.879mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>III.  	NON-ELIGIBLE NON-CITIZEN (check only one and attach a copy of your documentation)</text>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 13831 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 6 III.   0 1417 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 1   0 16607 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?>
+               <?renderCache.textRun 81 NON-ELIGIBLE NON-CITIZEN (check only one and attach a copy of your documentation) 0 37417 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?></draw>
+            <field name="EmploymentAuth" w="98.425mm" h="6mm" y="5.88mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="91.425mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>I-688A, I-688B, or 766 “Employment Authorization” card</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="ApplSubmitted" w="142.875mm" h="6mm" y="11.88mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="135.875mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Application submitted for permanent resident status and not in category listed above</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="F1F2SeriesVisa" w="63.5mm" h="6mm" y="17.88mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="56.5mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>F1, F2, J1, J2 or G series visa</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <draw x="92.075mm" y="32.044mm">
+               <value>
+                  <text>(List Type of Document)</text>
+               </value>
+               <ui>
+                  <textEdit/>
+               </ui>
+               <margin leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <field name="NonEligibleNonCitizenTextBox" w="152.4mm" h="6.35mm" x="38.1mm" y="25.694mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="OtherNonEligibleNonCitizien" w="25.4mm" h="6mm" y="25.694mm" x="12.7mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="18.4mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Other</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+         </subform>
+         <subform w="203.3mm" name="USCitizenPanel" h="25.4mm">
+            <draw name="Text2" w="203.2mm" h="0.218264in" y="0.035mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">IV. <span style="xfa-tab-count:1">         </span>U.S. CITIZEN (check only one and attach a copy of your documentation)</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" weight="bold" baselineShift="0pt" underline="1"/>
+               <margin topInset="1.5162mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="NaturalizationCertification" w="53.975mm" h="6mm" x="12.7mm" y="16.598mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="46.975mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Naturalization Certification</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="BirthCertificate" w="34.925mm" h="6mm" x="12.7mm" y="4.598mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="27.925mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Birth Certificate</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <field name="USPassport" w="34.925mm" h="6mm" x="12.7mm" y="10.598mm">
+               <ui>
+                  <checkButton mark="circle">
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <integer>0</integer>
+               </value>
+               <caption placement="right" reserve="27.925mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>U.S. Passport</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <integer>1</integer>
+                  <integer>0</integer>
+                  <integer>2</integer>
+               </items>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="SignaturePanel" w="203.2mm" h="60.325mm">
+            <draw name="Certification" x="3.175mm" w="196.85mm" h="57.515mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;font-weight:bold;text-decoration:none;letter-spacing:0in">CERTIFICATION:<span style="xfa-spacerun:yes"> </span></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete, and accurate. I agree to provide additional proof of the information we have reported, if requested to do so.</p><p style="font-weight:bold;font-style:italic;text-decoration:none;letter-spacing:0in">*Only one parent signature is required. Signing parent must be a parent that provided information on the FAFSA.</p><p style="font-size:11pt;font-weight:bold;font-style:italic;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;font-weight:bold;font-style:italic;text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                                                                                                                                                 </span></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:9pt;font-weight:bold;text-decoration:none;letter-spacing:0in">*Warning:<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <border>
+                  <edge thickness="0.4826mm"/>
+                  <corner thickness="0.483mm"/>
+               </border>
+            </draw>
+            <field name="studentCWID" y="28.575mm" x="152.4mm" w="44.45mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="11.64mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+               </caption>
+            </field>
+            <field name="studentSignDate" y="28.575mm" x="104.775mm" w="47.625mm" h="8.999mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="9.0228mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Date</text>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <field name="studentSignature" y="28.575mm" w="101.6mm" h="9mm" x="3.175mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="33.2578mm">
+                  <font typeface="Calibri" baselineShift="0pt" weight="bold"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student’s Name:</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="ipAddress" y="19.05mm" x="133.35mm" w="63.5mm" h="8.999mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="18.5997mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> IP Address</text>
+                  </value>
+                  <font typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+               </caption>
+            </field>
+            <field name="studentScribbleSignature" w="130.175mm" h="9mm" y="19.05mm" x="3.175mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="31.2871mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Student E-signature</span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Calibri" baselineShift="0pt"/>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner presence="hidden"/>
+                  <corner/>
+               </border>
+            </field>
+            <field y="38.1mm" x="3.175mm" w="136.525mm" h="9mm" name="ParentSign">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="28.0979mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>*Parent Signature:</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               </caption>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:0in;margin-bottom:0in;">{{PName1_es_:signer1:signature}}</p></body>
+                  </exData>
+               </value>
+            </field>
+            <field y="38.1mm" x="139.7mm" w="57.15mm" h="9mm" name="ParentSignDate">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.1038mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date</text>
+                  </value>
+                  <font typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               </caption>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:0in;margin-bottom:0in;">{{PDate1_es_:signer1:date}}</p></body>
+                  </exData>
+               </value>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 0035?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 244 65 00030004001100120018001C00260027002C002F003A003E0045004B0057005A005E006400680102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C701CC035503570358035E035F036C0372037E037F03ED03EE03F003F103F203F303F403F5 ABCDEFGHIJLNOPRSTUabcdefghijklmnopqrstuvwyz,:.“”/-()12456789?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 216 56 00030004001100120018001C00260027002C002F003E00440045004B0057005A005E0064006800730074007A007F01020110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C7035503570358035B0372037E037F038E0396 ABCDEFGHILMNOPRSTUVWYZacdefghiklmnopqrstuvwy,:.’-()*'?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 156 45 0003000400260027002F0045004B005E00640102010F0110011A011E01280150015A015D016F01750176017D0189018C0190019A01B501C001C101C703550358035B035E035F036C0372037E037F AFGINOSTabcdefghilmnoprstuvwy,.’“”/-()?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 132 37 0003000400260045004B005E00640102010F0110011A011E01280150015A015D016F01750176017D0189018B018C0190019A01B501C001C703570358035E035F038E AFNOSTabcdefghilmnopqrstuvy:.“”*?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 76 19 0012001B0025002F003100400042004500460048004A004E004F0053005400550056005C005E1:DNP_adegimnrstu{}?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 32 8 00010022002A00310045004600530054 AIPders?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\Parent Immigration Citizenship Verification.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 92?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-04-13T12:19:34Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:02de499d-1dfc-4777-b5ef-4dbe30da0b59</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

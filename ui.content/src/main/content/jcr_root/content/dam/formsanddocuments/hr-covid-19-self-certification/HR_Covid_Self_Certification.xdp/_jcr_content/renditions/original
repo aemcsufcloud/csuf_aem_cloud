@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2022-08-25T05:26:20Z" uuid="609949ee-6ac4-492d-a4e3-7fe16bb77c35">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="HRCovidSelfCertification" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="203.318mm" layout="lr-tb">
+         <border>
+            <edge/>
+            <corner thickness="0.175mm"/>
+         </border>
+         <draw name="Logo" w="85.725mm" h="22.225mm">
+            <value>
+               <image href=".\Logo.png" contentType="image/png" aspect="none"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+            <margin rightInset="0mm" leftInset="2.54mm" topInset="2.54mm"/>
+         </draw>
+         <draw name="Text1" h="25.271mm" w="114.515mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">California State University, Fullerton</p><p style="text-decoration:none;letter-spacing:0in">COVID-19 Vaccination/Exemption and Self Certification Form</p></body>
+               </exData>
+            </value>
+            <font size="16pt" typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+            <margin topInset="5.5802mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" hAlign="center" vAlign="middle"/>
+            <border>
+               <edge stroke="raised" presence="hidden"/>
+               <corner presence="hidden"/>
+            </border>
+         </draw>
+         <draw name="Text1" w="203.2mm" h="3.175mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 6166 0 0 1417 1417 0 0?></draw>
+         <draw name="Line1" w="203.2mm" h="=0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="EmployeeInformation" w="203.2mm" h="8.636mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial" size="16pt" weight="bold" baselineShift="0pt"/>
+            <margin topInset="1.2622mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <value>
+               <text> Employee Information</text>
+            </value>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge/>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+               <corner thickness="0.175mm"/>
+            </border>
+            <?renderCache.bounds 573166 19485 0 0 1417 3578 0 0?>
+            <?renderCache.textRun 21  Employee Information 0 1417 16211 0 0 0 "Arial" 1 0 16000 ISO-8859-1?></draw>
+         <draw name="Line1" w="203.2mm" h="=0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Line1" w="203.2mm" h="=0mm">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <field name="CWID" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="0.7976mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25.0358mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> CWID:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="CampusEmail" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.1579mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Campus E-mail:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="FirstName" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25.3433mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> First Name:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="LastName" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.1579mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Last Name:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="DepartmentName" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="33.4796mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Department Name:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="DepartmentID" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="28.1579mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Department ID:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="Title" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="12.8313mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Title:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="AppropriateAdministrator" w="101.6mm" minH="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="45.9916mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Appropriate Administrator:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <field name="Division" w="101.6mm" h="8.89mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="18.153mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text> Division:</text>
+               </value>
+               <font typeface="Arial" baselineShift="0pt"/>
+            </caption>
+         </field>
+         <exclGroup name="EmploymentType" layout="lr-tb">
+            <field w="28mm" h="6mm" name="Permanent">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="21mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text> Permanent</text>
+                  </value>
+                  <font typeface="Arial"/>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="35.5mm" h="6mm" name="Temporary">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="28.5mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text> Temporary</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <margin leftInset="1.0008mm"/>
+            <?templateDesigner expand 1?></exclGroup>
+         <exclGroup name="EmploymentCatagory" layout="lr-tb" minW="99mm">
+            <field w="28mm" h="6mm" name="Faculty">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="21mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>  Faculty</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="28.149mm" h="6mm" name="Staff">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="21.149mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>  Staff</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <field w="35.5mm" h="6mm" name="Management">
+               <ui>
+                  <checkButton>
+                     <border>
+                        <edge/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="28.5mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>  Management</text>
+                  </value>
+                  <font typeface="Arial" baselineShift="0pt"/>
+               </caption>
+               <items>
+                  <text>3</text>
+               </items>
+            </field>
+            <margin leftInset="1.0008mm" bottomInset="2.54mm"/>
+            <?templateDesigner expand 1?></exclGroup>
+         <?templateDesigner expand 1?></subform>
+      <subform name="Subform1" w="203.406mm" h="49.499mm">
+         <draw name="Text3" w="8in" h="18.921mm" y="1.874mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>Documentation of COVID-19 Vaccination and/or Booster Records</p><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:10pt;font-weight:normal">Valid examples of vaccination and/or booster documentation include a COVID-19 Vaccination Record Card, QR Code from the<span style="xfa-spacerun:yes">  </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>State of California, or a letter from a healthcare provider.</p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+         </draw>
+         <draw name="Text2" w="8.008111in" h="8.761mm" y="24.099mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>For more information on COVID-19 Vaccination and Exemption requirements, please go to<span style="xfa-spacerun:yes"> </span><a href="https://coronavirus.fullerton.edu/covid-19-testing-vaccinations-employees/" style="margin-top:0pt;margin-bottom:0pt;font-family:Arial;font-size:10pt">https://coronavirus.fullerton.edu/covid-19-testing-vaccinations-employees/</a></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="TypesOfVaccination" w="155.575mm" h="9.525mm" y="36.799mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="53.6508mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Types of Vaccination/Exemption : </text>
+               </value>
+            </caption>
+            <items>
+               <text>Medical Exemption</text>
+               <text>Religious Exemption</text>
+               <text>Vaccination</text>
+               <text>Booster</text>
+            </items>
+            <items save="1" presence="hidden">
+               <text>1</text>
+               <text>2</text>
+               <text>3</text>
+               <text>4</text>
+            </items>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <subform name="Subform2" layout="lr-tb">
+         <draw name="Text4" w="203.2mm" h="5.2331mm" hAlign="justify">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Initiator Signature</text>
+            </value>
+            <font size="11pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 19 Initiator Signature 0 1417 10102 0 0 0 "Arial" 1 0 11000 ISO-8859-1?></draw>
+         <field name="InitiatorSignature" w="101.6mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="20.8968mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Signature :</text>
+               </value>
+            </caption>
+         </field>
+         <field name="InitiatorSignatureDate" w="50.8mm" h="9mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="11.4175mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date :</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YY}</picture>
+            </format>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <field name="InitiatorComments" w="203.2mm" minH="10.05mm">
+         <ui>
+            <textEdit multiLine="1">
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge/>
+                  <edge presence="hidden"/>
+               </border>
+               <margin/>
+            </textEdit>
+         </ui>
+         <font typeface="Arial"/>
+         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+         <para vAlign="middle"/>
+         <caption reserve="20.8968mm">
+            <para vAlign="middle"/>
+            <value>
+               <text>Comments : </text>
+            </value>
+         </caption>
+      </field>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 188 47 0003000F0010001100120014001C001D00240026002700280029002C002F003000310032003300340035003600370039003A004400450046004700480049004A004B004C004F0050005100520053005400550056005700580059005B005C ,-./19:ACDEFILMNOPQRSTVWabcdefghilmnopqrstuvxy?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 124 31 0003001000120014001C0025002600270028002C003200350036003900440046004700480049004A004C004F00500051005200530055005600570058005C -/19BCDEIORSVacdefgilmnoprstuy?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 132 33 0003000F001000120014001C0026002700280029002C003200360038003900440046004700480049004C004F005000510052005300550056005700580059005B005C ,-/19CDEFIOSUVacdefilmnoprstuvxy?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName .\abc.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?layout containedExclGroup 1?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 120?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Adobe Heiti Std R" psName="AdobeHeitiStd-Regular" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri Light" psName="Calibri-Light" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2022-08-25T05:26:20Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:609949ee-6ac4-492d-a4e3-7fe16bb77c35</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

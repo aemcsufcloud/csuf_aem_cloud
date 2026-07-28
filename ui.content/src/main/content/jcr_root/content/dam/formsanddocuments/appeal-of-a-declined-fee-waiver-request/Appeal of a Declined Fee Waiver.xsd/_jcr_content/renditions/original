@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ADFW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="FeeWaiverHolderLastName"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderFirstName"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderMiddleName"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderCWID"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderContactTelephone"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderEmailAddress"/>
+        <xs:element type="xs:string" name="AppealRequesterForTermYear"/>
+        <xs:element type="xs:byte" name="FeeWaiverHoldeQualifyingPositionRB"/>
+        <xs:element type="xs:byte" name="AppealRequestedForTermRB"/>
+        <xs:element type="xs:string" name="IndividualUsingFeeWaiverLastName"/>
+        <xs:element type="xs:string" name="IndividualUsingFeeWaiverFirstName"/>
+        <xs:element type="xs:string" name="IndividualUsingFeeWaiverMiddleName"/>
+        <xs:element type="xs:byte" name="RelationshipToFeeWaiverRB"/>
+        <xs:element type="xs:byte" name="FeeWaiverRequestRB"/>
+		<xs:element type="xs:string" name="FeeWaiverRequestRBExplanation"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderSignature"/>
+        <xs:element type="xs:string" name="FeeWaiverHolderSignatureDate"/>
+		<xs:element type="xs:string" name="FeeWaiverHolderComments"/>
+        <xs:element type="xs:byte" name="AppealsCommitteeDecision"/>
+        <xs:element type="xs:string" name="AppealsCommitteCurrentTerm"/>
+        <xs:element type="xs:byte" name="AdministrationCBOne"/>
+        <xs:element type="xs:string" name="AppealsCommittePriorTerm"/>
+        <xs:element type="xs:byte" name="AdministrationCBTwo"/>
+        <xs:element type="xs:string" name="AppealsCommitteeSignature"/>
+        <xs:element type="xs:string" name="AppealsCommitteeSignDate"/>
+		<xs:element type="xs:string" name="AppealsCommitteeComment"/>
+        <xs:element type="xs:string" name="AdministrationSignature"/>
+        <xs:element type="xs:string" name="AdministrationSignDate"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="caseId"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="FeeWaiverHolderFullName"/>
+		<xs:element type="xs:string" name="FeeWaiverHolderUserId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,108 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="FAER">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:integer" name="EmployementType"/>
+                <xs:element type="xs:string" name="CWID"/>
+				<xs:element type="xs:string" name="chrsID"/>
+                <xs:element type="xs:string" name="Name"/>
+                <xs:element type="xs:string" name="PositionNo"/>
+                <xs:element type="xs:string" name="DeptID"/>
+                <xs:element type="xs:string" name="DeptName"/>
+                <xs:element type="xs:string" name="ReportsTo"/>
+                <xs:element type="xs:string" name="PoolID"/>
+                <xs:element type="xs:string" name="ContractType"/>
+                <xs:element type="xs:string" name="AssignmentComp"/>
+                <xs:element type="xs:string" name="Category"/>
+                <xs:element type="xs:string" name="StartDate"/>
+                <xs:element type="xs:string" name="EndDate"/>
+                <xs:element type="xs:string" name="DescWork"/>
+                <xs:element type="xs:string" name="FacultyName"/>
+                <xs:element type="xs:string" name="FacultyDate"/>
+                <xs:element type="xs:string" name="PreparerEmailID"/>
+                <xs:element type="xs:string" name="DeanName"/>
+                <xs:element type="xs:string" name="DeanDate"/>
+                <xs:element maxOccurs="unbounded" name="FundDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="FundDeptID"/>
+                            <xs:element type="xs:string" name="Fund"/>
+                            <xs:element type="xs:string" name="Program"/>
+                            <xs:element type="xs:string" name="Class"/>
+                            <xs:element type="xs:string" name="Account"/>
+                            <xs:element type="xs:string" name="Amount"/>
+                            <xs:element type="xs:string" name="FundApproverName"/>
+                            <xs:element type="xs:string" name="FundApproverSign"/>
+                            <xs:element type="xs:string" name="FundApproverDate"/>
+							<xs:element type="xs:string" name="SearchLastName"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+				<xs:element type="xs:string" name="logUser"/>
+				<xs:element type="xs:string" name="aftiaDescCWID"/>
+				<xs:element type="xs:string" name="customTitle"/>
+				<xs:element type="xs:string" name="EmailSubject"/>
+				<xs:element type="xs:string" name="StageIndicator"/>
+				<xs:element type="xs:string" name="Division"/>
+				<xs:element type="xs:string" name="DivisionName"/>
+				<xs:element type="xs:string" name="DeanDesigneeName"/>
+				<xs:element type="xs:string" name="DeanDesigneeEmail"/>
+				<xs:element type="xs:string" name="DeanDesigneeUserID"/>
+				<xs:element type="xs:string" name="FacultyUserID"/>
+				<xs:element type="xs:string" name="FacultyEmailID"/>
+				<xs:element type="xs:string" name="PreparedBy"/>
+				<xs:element type="xs:string" name="FacultySignRequired"/>
+				<xs:element type="xs:string" name="ApproverUserID0"/>
+				<xs:element type="xs:string" name="ApproverEmail0"/>
+				<xs:element type="xs:string" name="ApproverName0"/>
+				<xs:element type="xs:string" name="ApproverIndex0"/>
+				<xs:element type="xs:string" name="ApproverEmpID0"/>
+				
+				<xs:element type="xs:string" name="ApproverUserID1"/>
+				<xs:element type="xs:string" name="ApproverEmail1"/>
+				<xs:element type="xs:string" name="ApproverName1"/>
+				<xs:element type="xs:string" name="ApproverIndex1"/>
+				<xs:element type="xs:string" name="ApproverEmpID1"/>
+				
+				<xs:element type="xs:string" name="ApproverUserID2"/>
+				<xs:element type="xs:string" name="ApproverEmail2"/>
+				<xs:element type="xs:string" name="ApproverName2"/>
+				<xs:element type="xs:string" name="ApproverIndex2"/>
+				<xs:element type="xs:string" name="ApproverEmpID2"/>
+				
+				<xs:element type="xs:string" name="FundingName0"/>
+                <xs:element type="xs:string" name="FundingDate0"/>
+				<xs:element type="xs:string" name="FundingName1"/>
+                <xs:element type="xs:string" name="FundingDate1"/>
+				<xs:element type="xs:string" name="FundingName2"/>
+                <xs:element type="xs:string" name="FundingDate2"/>
+				
+				<xs:element type="xs:string" name="FacultyComments"/>
+				<xs:element type="xs:string" name="FundingComments0"/>
+				<xs:element type="xs:string" name="FundingComments1"/>
+				<xs:element type="xs:string" name="FundingComments2"/>
+				
+				<xs:element type="xs:string" name="HRComments"/>
+				<xs:element type="xs:string" name="HRCB"/>
+				<xs:element type="xs:string" name="HRSignature"/>
+				<xs:element type="xs:string" name="HRDate"/>
+				<xs:element type="xs:string" name="BudgetAnalystName"/>
+				<xs:element type="xs:string" name="BudgetAnalystName_1"/>
+				<xs:element type="xs:string" name="BudgetAnalystEmail"/>
+				<xs:element type="xs:string" name="BudgetAnalystUserID"/>
+				<xs:element type="xs:string" name="BudgetAnalystSign"/>
+                <xs:element type="xs:string" name="BudgetAnalystSignDate"/>
+				<xs:element type="xs:string" name="BudgetAnalystComments"/>
+				<xs:element type="xs:string" name="EmpFirstName"/>
+                <xs:element type="xs:string" name="EmpLastName"/>			
+				<xs:element type="xs:string" name="DeanComments"/>
+				
+				<xs:element type="xs:string" name="FTE"/>
+				<xs:element type="xs:string" name="AYMonthlyBaseRate"/>
+				<xs:element type="xs:string" name="consecutiveDays"/>
+				
+				
+			</xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

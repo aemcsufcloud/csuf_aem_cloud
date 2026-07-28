@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PreRetTB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="CWID"/>
+		<xs:element type="xs:string" name="CHRSID"/>
+        <xs:element type="xs:string" name="PrintName"/>
+        <xs:element type="xs:string" name="Department"/>
+        <!--<xs:element type="xs:byte" name="BeginParticipationCB1"/>
+        <xs:element type="xs:byte" name="BeginParticipationCB2"/>
+        <xs:element type="xs:byte" name="BeginParticipationCB3"/>-->
+        <xs:element type="xs:string" name="BeginEffAcadYear"/>
+        <!--<xs:element type="xs:byte" name="FromCB1"/>
+        <xs:element type="xs:byte" name="FromCB2"/>
+        <xs:element type="xs:byte" name="FromCB3"/>
+        <xs:element type="xs:byte" name="ToCB1"/>
+        <xs:element type="xs:byte" name="ToCB2"/>-->
+		
+		 <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:byte" name="LastName"/>
+        <xs:element type="xs:string" name="ChangeEffAcadYear"/>
+        <xs:element type="xs:byte" name="EndCB"/>
+        <xs:element type="xs:string" name="ExpectedRetirementDate"/>
+        <xs:element type="xs:string" name="FacultyMemComments"/>
+        <xs:element type="xs:byte" name="FacultyCB"/>
+        <xs:element type="xs:string" name="FacultyMemSign"/>
+        <xs:element type="xs:string" name="FacultyMemDate"/>
+        <xs:element type="xs:string" name="ChairComments"/>
+        <xs:element type="xs:byte" name="ChairApproval"/>
+        <xs:element type="xs:string" name="ChairSign"/>
+        <xs:element type="xs:string" name="ChairDate"/>
+        <xs:element type="xs:string" name="DeanComments"/>
+        <xs:element type="xs:byte" name="DeanApproval"/>
+        <xs:element type="xs:string" name="DeanSign"/>
+        <xs:element type="xs:string" name="DeanDate"/>
+        <xs:element type="xs:string" name="VPAAComments"/>
+        <xs:element type="xs:byte" name="VPAApproval"/>
+        <xs:element type="xs:string" name="VPAASign"/>
+        <xs:element type="xs:string" name="VPAADate"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		
+        <xs:element type="xs:string" name="HRDISignature"/>
+        <xs:element type="xs:string" name="HRDIDate"/>
+        
+        <xs:element type="xs:string" name="HRDIComments"/>
+		<xs:element type="xs:string" name="DeptID"/>
+		<xs:element type="xs:string" name="DeanName"/>
+		<xs:element type="xs:string" name="DeanUserID"/>
+		<xs:element type="xs:string" name="DeanEmail"/>
+		<xs:element type="xs:string" name="ChairEmail"/>
+		<xs:element type="xs:string" name="ChairName"/>
+		<xs:element type="xs:string" name="ChairUserID"/>
+		<xs:element type="xs:string" name="FacultyUserID"/>
+		<xs:element type="xs:string" name="FacultyEmailID"/>
+		<xs:element type="xs:byte" name="BeginParticipation"/>
+		<xs:element type="xs:byte" name="FromChangeParticipation"/>
+        <xs:element type="xs:byte" name="ToChangeParticipation"/>
+		
+		<xs:element type="xs:string" name="FulCollegeName"/>
+		<xs:element type="xs:string" name="FulCollege"/>
+		<xs:element type="xs:string" name="ApprovalDecision"/>
+		<xs:element type="xs:string" name="PreparerUserId"/>
+		<xs:element type="xs:string" name="PreparerEmail"/>
+		<xs:element type="xs:string" name="PreparerName"/>
+		<xs:element type="xs:string" name="DeptCooComments"/>
+        <xs:element type="xs:byte" name="DeptCooCB"/>
+        <xs:element type="xs:string" name="DeptCooSign"/>
+        <xs:element type="xs:string" name="DeptCooDate"/>
+		
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

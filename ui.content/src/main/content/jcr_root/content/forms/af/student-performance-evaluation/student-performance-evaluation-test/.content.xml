@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2020-04-23T03:36:09.049-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-12-03T02:35:50.795-08:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/staff-performance-evaluation--units-2--5--7----9--1"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Student Performance Evaluation"
+        jcr:uuid="27de01a8-676c-481d-aeac-4c7e40582117"
+        sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <guideContainer
+            cq:conf="/conf/AdobeSignConfig"
+            fd:version="1.1"
+            jcr:lastModified="{Date}2020-04-20T03:52:43.000-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="fd/dashboard/components/actions/aemworkflowsubmit"
+            attachmentsFolderPath="attachments"
+            autoSaveStrategyType="fd/fp/components/actions/autosave/timebased"
+            clientLibRef="af.generated.student_performance_evaluation_student_performance_evaluation_test"
+            dataXMLPath="Data.xml"
+            disableSwipeGesture="{Boolean}false"
+            dorTemplateRef="/content/dam/formsanddocuments/student-performance-evaluation/Student_Performance_Evaluation.xdp"
+            dorType="select"
+            enableAsyncSubmission="true"
+            enablePortalSubmit="true"
+            from="csuf@fullerton.edu"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            mailto="[swathi.kumari@thoughtfocus.com]"
+            name="guide1"
+            schemaType="xmlschema"
+            textIsRich="true"
+            thankYouMessage="&lt;p style=&quot;text-align: center;&quot;>Your data has been submitted successfully&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>If you need any assistance, please contact a representative at Human Resource Services.&lt;/p>&#xd;&#xa;"
+            thankYouOption="message"
+            themeRef="/content/dam/formsanddocuments-themes/themeLibrary/advancedEnrollmentTheme"
+            useExistingAF="false"
+            workflowModel="/var/workflow/models/student-performance-evaluation"
+            xsdRef="/content/dam/formsanddocuments/student-performance-evaluation/Student_Performance_Evaluation.xsd"
+            xsdRootElement="StudentPerfEval">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/layouts/defaultGuideLayout"
+                mobileLayout="fd/af/layouts/mobile/step"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                cq:cssClass="guide-1564485680051"
+                jcr:lastModified="{Date}2019-03-10T23:45:39.356-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Root Panel"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExpReq="{Boolean}false"
+                cssStyle=".guide-1564485680051 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon:hover,.guide-1564485680051  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.stepped > a.guideLeftNavIcon:hover{&#xa;background:#ff6800;&#xa;&#xa;}&#xa;.guide-1564485680051 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon,.guide-1564485680051  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active.stepped > a.guideLeftNavIcon,.guide-1564485680051  .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li.active > a.guideLeftNavIcon:hover{&#xa;background:#ff6800;&#xa;&#xa;}&#xa;.guide-1564485680051 .guideTabbedPanelLayout .tab-navigators.tab-navigators-vertical > li > a.guideLeftNavIcon{&#xa;font-size:15px;&#xa;color:#ffffff;&#xa;background:#00274C;&#xa;margin-bottom: 1px;&#xa;border-bottom-width: 0px;&#xa;border-top-width:0px;&#xa;}&#xa;"
+                dorExcludeDescription="true"
+                dorExcludeTitle="true"
+                guideNodeClass="rootPanelNode"
+                name="guideRootPanel"
+                panelSetType="Navigable"
+                validateOnStepCompletion="{Boolean}false">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/panel/tabbedPanelLayout"
+                    enableLayoutOptimization="true"
+                    toolbarPosition="Bottom"/>
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/rootPanel">
+                    <additionalcriteria
+                        jcr:lastModified="{Date}2019-04-24T21:58:59.325-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic Information"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="BasicInfo"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <ChoiceList1556168118296
+                                cq:cssClass="guide-1574751152542"
+                                jcr:lastModified="{Date}2019-11-24T20:52:46.797-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student Type"
+                                sling:resourceType="fd/af/components/guideradiobutton"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/StudentPerfEval/ChoiceList"
+                                colspan="3"
+                                cssStyle=".guide-1574751152542 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideRadioButton"
+                                mandatory="true"
+                                name="ChoiceList"
+                                options="[1=Student Assistant / Alternate Student Assistant,2=Federal Work-Study]"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </ChoiceList1556168118296>
+                            <DateInitiated1556168133852
+                                jcr:lastModified="{Date}2020-03-15T23:42:14.501-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date Initiated"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/StudentPerfEval/DateInitiated"
+                                defaultToCurrentDate="true"
+                                guideNodeClass="guideDatePicker"
+                                name="DateInitiated"
+                                textIsRich="[true,true]"/>
+                            <EmpId1556168138199
+                                cq:cssClass="guide-1574746385273"
+                                jcr:lastModified="{Date}2019-11-24T20:53:09.406-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Employee ID"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/EmpId"
+                                cssStyle=".guide-1574746385273 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="EmpId"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.BasicInfo.EmpId&quot;\,&quot;type&quot;:&quot;TEXT FIELD|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;EmpId&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_EmpId_valueCommit0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_EmpId_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </EmpId1556168138199>
+                            <Lastname1556168141368
+                                cq:cssClass="guide-1574746627934"
+                                jcr:lastModified="{Date}2019-11-24T20:53:16.234-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Last Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Lastname"
+                                cssStyle=".guide-1574746627934 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="Lastname"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Lastname1556168141368>
+                            <FirstName1556168653288
+                                cq:cssClass="guide-1574746631075"
+                                jcr:lastModified="{Date}2019-11-24T20:53:24.362-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="First Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/FirstName"
+                                cssStyle=".guide-1574746631075 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                mandatory="true"
+                                name="FirstName"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </FirstName1556168653288>
+                            <MiddleName1556173574136
+                                jcr:lastModified="{Date}2019-11-24T20:53:32.329-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Middle Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/MiddleName"
+                                guideNodeClass="guideTextBox"
+                                name="MiddleName"
+                                textIsRich="[true,true,true]"/>
+                            <PositionClassification1556168868509
+                                cq:cssClass="guide-1574746634494"
+                                jcr:lastModified="{Date}2020-04-16T01:31:55.079-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Position Classification"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/PositionClassification"
+                                cssStyle=".guide-1574746634494 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                name="PositionClassification"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </PositionClassification1556168868509>
+                            <HireDate1556168924755
+                                jcr:lastModified="{Date}2019-11-24T20:53:49.782-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Original Hire Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/StudentPerfEval/HireDate"
+                                guideNodeClass="guideDatePicker"
+                                name="HireDate"
+                                textIsRich="[true,true]"/>
+                            <FromDate1556168931371
+                                jcr:lastModified="{Date}2019-11-24T20:53:56.675-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Evaluation From Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/FromDate"
+                                guideNodeClass="guideDatePicker"
+                                name="FromDate"
+                                textIsRich="[true,true]"/>
+                            <ToDate1556168938858
+                                jcr:lastModified="{Date}2019-11-24T20:54:04.000-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Evaluation To Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/StudentPerfEval/ToDate"
+                                guideNodeClass="guideDatePicker"
+                                name="ToDate"
+                                textIsRich="[true,true]"/>
+                            <Supervisorname1556168958027
+                                jcr:lastModified="{Date}2019-11-24T20:54:15.437-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supervisor Name"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Supervisorname"
+                                guideNodeClass="guideTextBox"
+                                name="Supervisorname"
+                                textIsRich="[true,true,true]"/>
+                            <Department1556168966651
+                                jcr:lastModified="{Date}2019-11-24T20:54:25.547-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Department"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Department"
+                                guideNodeClass="guideTextBox"
+                                name="Department"
+                                textIsRich="[true,true,true]"/>
+                            <Room1556168973731
+                                jcr:lastModified="{Date}2019-11-24T20:54:32.281-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Room"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Room"
+                                guideNodeClass="guideTextBox"
+                                name="Room"
+                                textIsRich="[true,true,true]"/>
+                            <Extension1556168983494
+                                jcr:lastModified="{Date}2019-11-24T20:54:40.750-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Extension"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Extension"
+                                guideNodeClass="guideTextBox"
+                                name="Extension"
+                                textIsRich="[true,true,true]"/>
+                            <panel
+                                jcr:created="{Date}2019-11-25T22:34:07.125-08:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-11-25T22:34:46.063-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Hidden Section"
+                                sling:resourceType="fd/af/components/panel"
+                                colspan="4"
+                                guideNodeClass="guidePanel"
+                                name="hiddenPanel"
+                                textIsRich="true"
+                                validateOnStepCompletion="{Boolean}false">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    columns="5"
+                                    nonNavigable="{Boolean}true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <guidetextbox
+                                        jcr:created="{Date}2019-11-25T22:34:53.915-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:37:13.594-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="First Name Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="firstNameHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1953558792
+                                        jcr:created="{Date}2019-11-25T22:35:01.219-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:37:35.829-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Last Name Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="lastNameHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1042084512
+                                        jcr:created="{Date}2019-11-25T22:35:08.251-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:37:57.860-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Middle name Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="midNameHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_184878704
+                                        jcr:created="{Date}2019-11-25T22:35:15.132-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:38:19.141-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Classification Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="classificationHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_830157254
+                                        jcr:created="{Date}2019-11-25T22:35:47.891-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:38:38.795-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Hire date hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="hireDatehidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1163589080
+                                        jcr:created="{Date}2019-11-25T22:35:54.913-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:39:24.517-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Supervisor Name Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="supervisorNameHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1934076587
+                                        jcr:created="{Date}2019-11-25T22:36:03.157-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:39:48.185-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Extension Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="extensionHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1054487775
+                                        jcr:created="{Date}2019-11-25T22:43:01.469-08:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2019-11-25T22:43:25.703-08:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Department Hidden"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="deptHidden"
+                                        textIsRich="[true,true,true]"/>
+                                    <guidetextbox_1299123663
+                                        jcr:created="{Date}2020-04-21T02:29:48.670-07:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2020-04-21T02:30:15.778-07:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Reset Flag"
+                                        sling:resourceType="fd/af/components/guidetextbox"
+                                        _value="0"
+                                        autofillFieldKeyword="name"
+                                        guideNodeClass="guideTextBox"
+                                        name="resetFlag"
+                                        textIsRich="[true,true,true]"/>
+                                </items>
+                                <fd:rules
+                                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.BasicInfo.hiddenPanel&quot;\,&quot;type&quot;:&quot;PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;hiddenPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_hiddenPanel_init0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_hiddenPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </panel>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                    </additionalcriteria>
+                    <comments
+                        jcr:lastModified="{Date}2019-04-24T22:24:24.444-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Ratings"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="ratings"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidetextdraw
+                                jcr:created="{Date}2019-04-24T22:15:18.649-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-11-25T21:29:31.299-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>&lt;b>Ratings:&amp;nbsp;Unsatisfactory (0-2),&amp;nbsp;Average (3-4),&amp;nbsp;Above Average (5-6),&amp;nbsp;Outstanding (7-8)&lt;/b>&lt;/p>&#xa;"
+                                colspan="5"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1556169318721"
+                                textIsRich="true"/>
+                            <guidetextdraw_449018
+                                jcr:created="{Date}2019-04-24T22:15:54.910-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:24:39.946-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>WORK HABITS&lt;/p>&#xa;"
+                                colspan="3"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_4490185631556169354959_copy_1"
+                                textIsRich="true"/>
+                            <Attendance1556169488829
+                                cq:cssClass="guide-1574746694129"
+                                jcr:lastModified="{Date}2019-11-24T20:54:51.337-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Attendance"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Attendance"
+                                cssStyle=".guide-1574746694129 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Attendance"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Attendance1556169488829>
+                            <Punctuality1556169495330
+                                cq:cssClass="guide-1574746697011"
+                                jcr:lastModified="{Date}2019-11-24T20:54:59.121-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Punctuality"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Punctuality"
+                                cssStyle=".guide-1574746697011 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Punctuality"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Punctuality1556169495330>
+                            <Neatness1556169501378
+                                cq:cssClass="guide-1574746702182"
+                                jcr:lastModified="{Date}2019-11-24T20:55:07.408-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Neatness"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Neatness"
+                                cssStyle=".guide-1574746702182 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Neatness"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Neatness1556169501378>
+                            <guidetextdraw_333567249
+                                jcr:created="{Date}2019-04-24T22:18:41.242-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:24:46.870-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>INTERPERSONAL SKILLS&lt;/p>&#xa;"
+                                colspan="3"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_3335672491556169521302"
+                                textIsRich="true"/>
+                            <WithCoWorker1556169744255
+                                cq:cssClass="guide-1574746707742"
+                                jcr:lastModified="{Date}2019-11-24T20:55:15.610-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="With Co-Workers"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/WithCoWorker"
+                                cssStyle=".guide-1574746707742 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="WithCoWorker"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </WithCoWorker1556169744255>
+                            <WithSupervisor1556169756022
+                                cq:cssClass="guide-1574746713642"
+                                jcr:lastModified="{Date}2019-11-24T20:55:22.875-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="With Supervisor"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/WithSupervisor"
+                                cssStyle=".guide-1574746713642 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="WithSupervisor"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </WithSupervisor1556169756022>
+                            <WithPublic1556169762146
+                                cq:cssClass="guide-1574746717462"
+                                jcr:lastModified="{Date}2019-11-24T20:55:31.028-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="With the Public"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/WithPublic"
+                                cssStyle=".guide-1574746717462 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="WithPublic"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </WithPublic1556169762146>
+                            <guidetextdraw_731894004
+                                jcr:created="{Date}2019-04-24T22:25:35.445-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:26:09.322-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>UNDERSTANDING DUTIES&lt;/p>&#xa;"
+                                colspan="3"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_7318940041556169935504"
+                                textIsRich="true"/>
+                            <LearnQuick1556169990921
+                                cq:cssClass="guide-1574746737026"
+                                jcr:lastModified="{Date}2019-11-24T20:55:42.563-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Ability to Learn Quickly"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/LearnQuick"
+                                cssStyle=".guide-1574746737026 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="LearnQuick"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </LearnQuick1556169990921>
+                            <JobResponsibility1556169996258
+                                cq:cssClass="guide-1574746724998"
+                                jcr:lastModified="{Date}2019-11-24T20:55:53.610-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Understanding Job Responsibility"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/JobResponsibility"
+                                cssStyle=".guide-1574746724998 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="JobResponsibility"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </JobResponsibility1556169996258>
+                            <guidetextdraw_1075353413
+                                jcr:created="{Date}2019-04-24T22:27:30.780-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:28:35.260-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>PRODUCTIVITY&lt;/p>&#xa;"
+                                colspan="3"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_10753534131556170050851"
+                                textIsRich="true"/>
+                            <quanityWorkComplete1556170123421
+                                cq:cssClass="guide-1574746742227"
+                                jcr:lastModified="{Date}2019-11-24T20:56:07.670-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Quanity of Work Completed"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/quanityWorkComplete"
+                                cssStyle=".guide-1574746742227 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="quanityWorkComplete"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </quanityWorkComplete1556170123421>
+                            <guidetextdraw_1957476843
+                                jcr:created="{Date}2019-04-24T22:29:26.487-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:29:53.550-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>ATTITUDE&lt;/p>&#xa;"
+                                colspan="3"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_19574768431556170166545"
+                                textIsRich="true"/>
+                            <Co-operativie1556170251432
+                                cq:cssClass="guide-1574746778496"
+                                jcr:lastModified="{Date}2019-11-24T20:58:13.689-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Co-operative, Flexible"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Co-operativie"
+                                cssStyle=".guide-1574746778496 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Co-operativie"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Co-operativie1556170251432>
+                            <Conscientious1556170247143
+                                cq:cssClass="guide-1574746781870"
+                                jcr:lastModified="{Date}2019-11-24T20:58:22.344-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Conscientious"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Conscientious"
+                                cssStyle=".guide-1574746781870 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Conscientious"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Conscientious1556170247143>
+                            <FollowDirection1556170204784
+                                cq:cssClass="guide-1574746784710"
+                                jcr:lastModified="{Date}2019-11-24T20:58:30.516-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Follow Directions"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/FollowDirection"
+                                cssStyle=".guide-1574746784710 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="FollowDirection"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </FollowDirection1556170204784>
+                            <AcceptCorrection1556170254800
+                                cq:cssClass="guide-1574746791119"
+                                jcr:lastModified="{Date}2019-11-24T20:58:37.610-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Accept Corrections.,if needed"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/AcceptCorrection"
+                                cssStyle=".guide-1574746791119 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="AcceptCorrection"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </AcceptCorrection1556170254800>
+                            <Responsible1556170258728
+                                cq:cssClass="guide-1574746787965"
+                                jcr:lastModified="{Date}2019-11-24T20:58:46.181-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Responsible,Identifies Work Needs"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/Responsible"
+                                cssStyle=".guide-1574746787965 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                displayIsSameAsValidate="true"
+                                displayPatternType="custom"
+                                displayPictureClause="^[0-8]$"
+                                guideNodeClass="guideTextBox"
+                                name="Responsible"
+                                textIsRich="[true,true,true]"
+                                validatePictureClauseMessage="Please select rating between 0 and 8">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </Responsible1556170258728>
+                            <OverallComment1556170435477
+                                cq:cssClass="guide-1574746796753"
+                                jcr:lastModified="{Date}2019-11-24T20:58:54.797-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Overall Rating Comments:"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/OverallComment"
+                                colspan="3"
+                                cssStyle=".guide-1574746796753 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                multiLine="true"
+                                name="OverallComment"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </OverallComment1556170435477>
+                            <RecomMeritSalaryInc1556170666417
+                                jcr:lastModified="{Date}2020-03-16T00:11:29.186-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Recom Merit Salary Inc"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/StudentPerfEval/RecomMeritSalaryInc"
+                                colspan="3"
+                                dataType="integer"
+                                exclusiveMaximum="{Boolean}false"
+                                exclusiveMinimum="{Boolean}false"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                maximum="127"
+                                minimum="-128"
+                                name="RecomMeritSalaryInc"
+                                options="[1=I recommend a merit salary increase.]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.ratings.RecomMeritSalaryInc&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;RecomMeritSalaryInc&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_RecomMeritSalaryInc_valueCommit0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_RecomMeritSalaryInc_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </RecomMeritSalaryInc1556170666417>
+                            <EffectiveDate1556170708668
+                                cq:cssClass="guide-1574746852856"
+                                jcr:lastModified="{Date}2020-03-16T00:12:47.121-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Effective Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/StudentPerfEval/EffectiveDate"
+                                colspan="3"
+                                cssStyle=".guide-1574746852856 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                name="EffectiveDate"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </EffectiveDate1556170708668>
+                            <DontRecommendSalaryInc1556170678470
+                                jcr:lastModified="{Date}2019-11-24T20:59:16.157-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dont Recommend Salary Inc"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/StudentPerfEval/DontRecommendSalaryInc"
+                                colspan="3"
+                                dataType="integer"
+                                exclusiveMaximum="{Boolean}false"
+                                exclusiveMinimum="{Boolean}false"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                maximum="127"
+                                minimum="-128"
+                                name="DontRecommendSalaryInc"
+                                options="[1=I  do not recommend a salary increase.]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.ratings.DontRecommendSalaryInc&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;DontRecommendSalaryInc&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_DontRecommendSalaryInc_valueCommit0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_DontRecommendSalaryInc_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </DontRecommendSalaryInc1556170678470>
+                            <RecomThreeMonthExt1556170684918
+                                jcr:lastModified="{Date}2019-11-24T20:59:22.767-08:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Recom Three Month Ext"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/StudentPerfEval/RecomThreeMonthExt"
+                                colspan="3"
+                                dataType="integer"
+                                exclusiveMaximum="{Boolean}false"
+                                exclusiveMinimum="{Boolean}false"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                maximum="127"
+                                minimum="-128"
+                                name="RecomThreeMonthExt"
+                                options="[1=I recommend adding a three month extension to the original probation (only for initial hires).]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.ratings.RecomThreeMonthExt&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;RecomThreeMonthExt&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_RecomThreeMonthExt_valueCommit0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_RecomThreeMonthExt_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </RecomThreeMonthExt1556170684918>
+                            <StudEmpReEvalDate1556170719738
+                                cq:cssClass="guide-1574746831690"
+                                jcr:lastModified="{Date}2020-04-23T01:50:06.894-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Re-Evaluation Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                bindRef="/StudentPerfEval/StudEmpReEvalDate"
+                                colspan="6"
+                                cssStyle=".guide-1574746831690 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                name="StudEmpReEvalDate"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </StudEmpReEvalDate1556170719738>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="3"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                    </comments>
+                    <instructions
+                        jcr:lastModified="{Date}2019-04-24T22:45:55.447-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Signature &amp; Acknowledgement"
+                        sling:resourceType="fd/af/components/panel"
+                        guideNodeClass="guidePanel"
+                        name="signature"
+                        textIsRich="true"
+                        validateOnStepCompletion="{Boolean}false">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <guidecheckbox
+                                cq:cssClass="guide-1587031649892"
+                                jcr:created="{Date}2020-04-16T03:05:24.563-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2020-04-16T03:07:14.876-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Check Box"
+                                sling:resourceType="fd/af/components/guidecheckbox"
+                                alignment="guideFieldHorizontalAlignment"
+                                colspan="6"
+                                cssStyle=".guide-1587031649892 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideCheckBox"
+                                hideTitle="true"
+                                mandatory="true"
+                                name="signatureCB"
+                                options="[1=Please indicate that you have completed the Student Performance Evaluation and agree with the ratings]"
+                                textIsRich="[true,true]">
+                                <fd:rules
+                                    fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.signature.checkbox1587031524657&quot;\,&quot;type&quot;:&quot;CHECK BOX|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;signatureCB&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is changed&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_signatureCB_valueCommit0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_signatureCB_valueCommit0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </guidecheckbox>
+                            <SupervisorSign1556171042693
+                                cq:cssClass="guide-1574746666528"
+                                jcr:lastModified="{Date}2020-04-16T02:39:07.012-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supervisor's Signature"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/SupervisorSign"
+                                colspan="2"
+                                cssStyle=".guide-1574746666528 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                name="SupervisorSign"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </SupervisorSign1556171042693>
+                            <SupervisorDate1556171046929
+                                cq:cssClass="guide-1574746872454"
+                                jcr:lastModified="{Date}2020-04-16T02:39:13.610-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/SupervisorDate"
+                                colspan="2"
+                                cssStyle=".guide-1574746872454 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                name="SupervisorDate"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </SupervisorDate1556171046929>
+                            <DeptSign1556171051616
+                                cq:cssClass="guide-1574746670093"
+                                jcr:lastModified="{Date}2020-04-16T02:04:40.875-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Authorized Department Signature"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/DeptSign"
+                                colspan="2"
+                                cssStyle=".guide-1574746670093 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                name="DeptSign"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </DeptSign1556171051616>
+                            <DeptSignDate1556171055048
+                                cq:cssClass="guide-1574746875902"
+                                jcr:lastModified="{Date}2020-04-16T02:04:48.109-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/DeptSignDate"
+                                colspan="2"
+                                cssStyle=".guide-1574746875902 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                name="DeptSignDate"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </DeptSignDate1556171055048>
+                            <guidetextdraw
+                                jcr:created="{Date}2019-04-24T22:48:10.813-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:48:47.122-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>I certify that this performance appraisal has been discussed with me. My signature does not necessarily indicate that I agree with this evaluation.&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw1556171290885"
+                                textIsRich="true"/>
+                            <StudentEmpSign1556171061672
+                                cq:cssClass="guide-1574746672559"
+                                jcr:lastModified="{Date}2020-04-16T02:04:56.360-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Student Employee Signature"
+                                sling:resourceType="fd/af/components/guidetextbox"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/StudentEmpSign"
+                                colspan="2"
+                                cssStyle=".guide-1574746672559 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideTextBox"
+                                name="StudentEmpSign"
+                                textIsRich="[true,true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </StudentEmpSign1556171061672>
+                            <StudentEmpDate1556171066160
+                                cq:cssClass="guide-1574746880770"
+                                jcr:lastModified="{Date}2020-04-16T02:05:05.275-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date"
+                                sling:resourceType="fd/af/components/guidedatepicker"
+                                autofillFieldKeyword="name"
+                                bindRef="/StudentPerfEval/StudentEmpDate"
+                                colspan="2"
+                                cssStyle=".guide-1574746880770 .guideFieldError{&#xa;color:#FF4136;&#xa;&#xa;}&#xa;"
+                                guideNodeClass="guideDatePicker"
+                                name="StudentEmpDate"
+                                textIsRich="[true,true]">
+                                <style jcr:primaryType="nt:unstructured">
+                                    <af_fielderrormessage
+                                        jcr:primaryType="nt:unstructured"
+                                        default_x0023_default="[color:#FF4136]"/>
+                                </style>
+                            </StudentEmpDate1556171066160>
+                            <guidetextdraw_998865833
+                                jcr:created="{Date}2019-04-24T22:51:09.352-07:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-04-24T22:51:48.684-07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="fd/af/components/guidetextdraw"
+                                _value="&lt;p>Please keep a copy of the Evaluation in your department and give a copy to the student employee. If you are recommending a salary increase, please process via CMS and submit the signed Confirmation Ticket to the Payroll Office. The effective date of increase must be at the beginning of a pay period.&lt;/p>&#xa;"
+                                colspan="4"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_9988658331556171469477"
+                                textIsRich="true"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="4"
+                            nonNavigable="{Boolean}true"
+                            toolbarPosition="Bottom"/>
+                    </instructions>
+                </items>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_tabsonleftnavgrp1title
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_active="[background:#ff6800]"
+                        default_x0023_active_x0023_ui="[backgroundColor:#ff6800]"
+                        default_x0023_default="[font-size:15px,color:#ffffff,background:#00274C,cssOverride:margin-bottom: 1px;&#xa;border-bottom-width: 0px;&#xa;border-top-width:0px;]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274C]"
+                        default_x0023_hover="[background:#ff6800]"
+                        default_x0023_hover_x0023_ui="[backgroundColor:#ff6800]"/>
+                </style>
+                <fd:rules
+                    fd:init="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel&quot;\,&quot;type&quot;:&quot;ROOTPANEL|PANEL|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;guideRootPanel&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is initialized&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_guideRootPanel_init0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_guideRootPanel_init0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Initialize&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                    jcr:primaryType="nt:unstructured"/>
+            </rootPanel>
+            <autoSaveInfo
+                jcr:primaryType="nt:unstructured"
+                metadataselector="global"/>
+            <signerInfo
+                jcr:primaryType="nt:unstructured"
+                firstSignerFormFiller="false"
+                workflowType="SEQUENTIAL">
+                <signer0
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="xyz1@email.com"
+                    emailSource="typed"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Supervisor's Signature"/>
+                <signer1
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="xyz2@email.com"
+                    emailSource="typed"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Authorized Department Signature"/>
+                <signer2
+                    jcr:primaryType="nt:unstructured"
+                    countryCode="undefined"
+                    countryCodeSource="form"
+                    email="xyz3@email.com"
+                    emailSource="typed"
+                    phone="undefined"
+                    phoneSource="form"
+                    securityOption="NONE"
+                    signerTitle="Student Signature"/>
+            </signerInfo>
+            <assets jcr:primaryType="nt:unstructured"/>
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toolbar"
+                sling:resourceType="fd/af/components/toolbar"
+                css=""
+                guideNodeClass="guideToolbar"
+                name="toolbar">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout">
+                    <guidebutton
+                        jcr:created="{Date}2020-04-16T02:50:54.648-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-04-16T03:09:05.829-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Genarate PDF"
+                        sling:resourceType="fd/af/components/guidebutton"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="generateDOR"
+                        textIsRich="[true,true]"
+                        type="Button">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.generateDOR&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;generateDOR&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_generateDOR_click0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_generateDOR_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidebutton>
+                    <reset
+                        jcr:created="{Date}2019-11-25T22:07:17.984-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2019-11-25T22:07:17.984-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reset"
+                        sling:resourceType="fd/af/components/actions/reset"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="reset1574748438062"
+                        type="reset">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.reset1574748438062&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;reset1574748438062&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_reset1574748438062_click0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_reset1574748438062_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </reset>
+                    <saveguidedraft
+                        jcr:created="{Date}2019-11-25T22:07:12.914-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2019-11-25T22:07:12.914-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Save"
+                        sling:resourceType="fd/fp/components/actions/saveGuideDraft"
+                        buttonType="button-default"
+                        guideNodeClass="guideButton"
+                        name="saveguidedraft1574748432984"
+                        type="save">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SAVE_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nhandleDraftSave(this);\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </saveguidedraft>
+                    <submit
+                        jcr:created="{Date}2019-11-25T22:07:06.281-08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2019-11-25T22:07:06.281-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Submit"
+                        sling:resourceType="fd/af/components/actions/submit"
+                        dorExclusion="true"
+                        guideNodeClass="guideButton"
+                        name="submit1574748426406"
+                        type="submit">
+                        <fd:rules
+                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.toolbar.submit1574748426406&quot;\,&quot;type&quot;:&quot;BUTTON|AFCOMPONENT&quot;\,&quot;name&quot;:&quot;submit1574748426406&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;FUNCTION_CALL&quot;\,&quot;functionName&quot;:{&quot;id&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_submit1574748426406_click0&quot;\,&quot;displayName&quot;:&quot;student_performance_evaluation_student_performance_evaluation_test.generated_submit1574748426406_click0&quot;\,&quot;type&quot;:&quot;STRING&quot;\,&quot;isDuplicate&quot;:false\,&quot;displayPath&quot;:&quot;&quot;\,&quot;args&quot;:[]\,&quot;impl&quot;:&quot;$0.apply(this\, [guidelib.model.util.CommonUtils._getScope(this)])&quot;}\,&quot;params&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </submit>
+                </items>
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+            </toolbar>
+        </guideContainer>
+        <parsys1
+            jcr:lastModified="{Date}2019-03-11T01:19:10.761-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                cq:cssClass="guide-1564485844683"
+                jcr:created="{Date}2019-03-10T22:37:16.000-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:46:24.448-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"
+                cssStyle=".guide-1564485844683 .afHeader:hover{&#xa;&#xa;}&#xa;.guide-1564485844683 .afHeader{&#xa;background:#00274C;&#xa;height: 70px;&#xa;}&#xa;">
+                <guideimage
+                    cq:cssClass="guide-1587382091907"
+                    jcr:lastModified="{Date}2020-04-20T03:53:05.690-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Logo"
+                    sling:resourceType="fd/af/components/guideimage"
+                    css="logoImage"
+                    cssStyle=".guide-1587382091907 .guideImage img{&#xa;margin-top: 0 !important;&#xa;}&#xa;"
+                    enabled="{Boolean}true"
+                    fileName="csfu-logo.png"
+                    fileReference="/content/dam/CSUF Assets/csfu-logo.png"
+                    guideNodeClass="guideImage"
+                    name="CSUF_logoImage"
+                    visible="{Boolean}true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_guideimage
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[cssOverride:margin-top: 0 !important;]"/>
+                    </style>
+                </guideimage>
+                <guidetextdraw
+                    cq:cssClass="guide-1556168018902"
+                    jcr:lastModified="{Date}2020-04-22T23:35:42.559-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;div id=&quot;headerTextStudentPerfEval&quot; style=&quot;padding-left: 352px;&quot;>&lt;p>&lt;b>Student Employment Program&amp;nbsp;&lt;/b>&lt;/p>&#xa;&lt;p style=&quot;padding-left: 26px;&quot;>&lt;b>Performance Evaluation&lt;/b>&lt;/p>&#xa;&lt;/div>&#xa;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;>&lt;div class=&quot;modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Please select the department&lt;/p>&#xa;&lt;span class=&quot;close&quot;>×&lt;/span>&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;p id=&quot;showData&quot;>&amp;nbsp;&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;modal_footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div id=&quot;gifModal&quot; class=&quot;gif-modal&quot; style=&quot;display: none;&quot;>&lt;img src=&quot;/content/dam/loading_img.gif&quot; class=&quot;gif-img&quot;>&lt;/div>&#xa;&lt;div id=&quot;errorPopup&quot; class=&quot;modal&quot;>&lt;div class=&quot;error-modal-content&quot;>&lt;div class=&quot;modal-header&quot;>&lt;p class=&quot;modal-text&quot;>Error:&lt;/p>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-body&quot;>&lt;div id=&quot;errorData&quot;>&lt;p id=&quot;para&quot; style=&quot;color: black; padding-top: 6px; font-size: 18px;&quot;>&amp;nbsp;&lt;/p>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;modal-footer&quot; id=&quot;errorPopup-footer&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;"
+                    css="headerText"
+                    cssStyle=".guide-1556168018902 .guideTextDraw.guideStaticText{&#xa;font-size:20px;&#xa;&#xa;}&#xa;"
+                    guideNodeClass="guideTextDraw"
+                    name="headerText"
+                    textIsRich="true">
+                    <style jcr:primaryType="nt:unstructured">
+                        <af_textdraw
+                            jcr:primaryType="nt:unstructured"
+                            default_x0023_default="[font-size:20px]"/>
+                    </style>
+                </guidetextdraw>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_header
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[background:#00274C,cssOverride:height: 70px;]"
+                        default_x0023_default_x0023_ui="[backgroundColor:#00274C]"
+                        default_x0023_hover="[]"
+                        default_x0023_hover_x0023_ui="[]"/>
+                </style>
+            </guideheader>
+        </parsys1>
+        <parsys2
+            jcr:lastModified="{Date}2019-03-11T01:19:22.529-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guidefooter
+                cq:cssClass="guide-1587364140790"
+                jcr:created="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-03-10T23:18:47.846-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Footer"
+                sling:resourceType="fd/af/components/guidefooter"
+                cssStyle=".guide-1587364140790 .afFooter{&#xa;background-image: linear-gradient(to right top, #00203e, #002140, #002243, #002445, #002548, #00294e, #012c55, #01305b, #023766, #033d72, #05447e, #084b8a);&#xa;opacity:1;&#xa;margin-top: 0;&#xa;}&#xa;">
+                <guidetextdraw1
+                    jcr:lastModified="{Date}2020-04-19T23:29:30.746-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/af/components/guidetextdraw"
+                    _value="&lt;p>© 2020 CSUF | All rights reserved&lt;/p>&#xa;"
+                    css="footerText"
+                    guideNodeClass="guideTextDraw"
+                    name="footerText"
+                    textIsRich="true"/>
+                <style jcr:primaryType="nt:unstructured">
+                    <af_footer
+                        jcr:primaryType="nt:unstructured"
+                        default_x0023_default="[cssOverride:background-image: linear-gradient(to right top\, #00203e\, #002140\, #002243\, #002445\, #002548\, #00294e\, #012c55\, #01305b\, #023766\, #033d72\, #05447e\, #084b8a);&#xa;opacity:1;&#xa;margin-top: 0;]"/>
+                </style>
+            </guidefooter>
+        </parsys2>
+    </jcr:content>
+</jcr:root>

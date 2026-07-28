@@ -1,0 +1,106 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GraduateAdvisorReq">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element type="xs:string" name="StudentName"/>
+        <xs:element type="xs:string" name="CWID"/>
+        <xs:element type="xs:string" name="RequestID"/>
+        <xs:element type="xs:string" name="AcademicPlan"/>
+        <xs:element type="xs:string" name="CatalogYear"/>
+        <xs:element type="xs:string" name="Term"/>
+        <xs:element type="xs:string" name="Status"/>
+        <xs:element type="xs:string" name="Notes"/>
+		
+        
+              <xs:element type="xs:byte" name="Classification"/>
+            
+              <xs:element type="xs:byte" name="AdvancedCandidacy"/>
+            
+              <xs:element type="xs:byte" name="StudentAdmitted"/>
+              <xs:element type="xs:byte" name="StudentGraduating"/>
+              <xs:element type="xs:string" name="CatalogYearChange_Notes"/>
+              <xs:element type="xs:string" name="GraduateDegProg"/>
+              <xs:element type="xs:string" name="ConcentrationDeclaration_Notes"/>
+            
+       
+                    <xs:element name="TransferCourse" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="InstitutionName"/>
+                          <xs:element type="xs:string" name="TransferCourse_TC"/>
+                          <xs:element type="xs:string" name="CSUFCourse"/>
+                          <xs:element type="xs:string" name="Area_TC"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					
+                    <xs:element name="CourseSubstitution" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Course"/>
+                          <xs:element type="xs:string" name="ReplaceCourse"/>
+                          <xs:element type="xs:string" name="Area_CS"/>
+                          <xs:element type="xs:string" name="Reason"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+				
+                    <xs:element name="CourseWaiver" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="WaiveCourse"/>
+                          <xs:element type="xs:string" name="WaiveReason"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+		
+              <xs:element type="xs:byte" name="TimeExtensionCheck"/>
+              <xs:element type="xs:string" name="TimeExtension_Notes"/>
+            
+              <xs:element type="xs:string" name="ThesisCompleteDate"/>
+           
+              <xs:element type="xs:string" name="Other"/>
+            
+              <xs:element type="xs:string" name="InitiatorDate"/>
+              <xs:element type="xs:string" name="InitiatorSignature"/>
+			  <xs:element type="xs:string" name="InitiatorComments"/>
+			  
+			  <xs:element type="xs:string" name="ExceptionType"/> 
+              <xs:element type="xs:string" name="ExceptionProcessType"/>
+			  
+			  <xs:element type="xs:string" name="StudentFirstName"/>
+              <xs:element type="xs:string" name="StudengtLastName"/>
+			  
+			  <xs:element type="xs:string" name="FacultyEmplID"/>
+              <xs:element type="xs:string" name="FacultyUserID"/>
+              <xs:element type="xs:string" name="FacultyEmail"/>
+			  <xs:element type="xs:string" name="FacultyName"/>
+              <xs:element type="xs:string" name="FacultyFirstName"/>
+              <xs:element type="xs:string" name="FacultyLastName"/>
+			  <xs:element type="xs:string" name="FacultyDeptID"/>
+			  <xs:element type="xs:string" name="FacultyDept"/>
+			  
+			  <xs:element type="xs:string" name="EmailSubject"/>
+		      <xs:element type="xs:string" name="StageIndicator"/> 
+              <xs:element type="xs:string" name="aftiaDescCWID"/>
+			  
+			  <xs:element type="xs:string" name="EvalDecision"/> 
+		      <xs:element type="xs:string" name="EvalSignature"/>
+              <xs:element type="xs:string" name="EvalSignDate"/>
+	          <xs:element type="xs:string" name="EvalComment"/>
+			  
+			  <xs:element type="xs:string" name="AVPDecision"/> 
+		      <xs:element type="xs:string" name="AVPSignature"/>
+              <xs:element type="xs:string" name="AVPSignDate"/>
+	          <xs:element type="xs:string" name="AVPComment"/>
+			  
+			  <xs:element type="xs:string" name="TDAAnalystDecision"/> 
+		      <xs:element type="xs:string" name="TDAAnalystSignature"/>
+              <xs:element type="xs:string" name="TDAAnalystSignDate"/>
+	          <xs:element type="xs:string" name="TDAAnalystComment"/>
+      
+	  </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

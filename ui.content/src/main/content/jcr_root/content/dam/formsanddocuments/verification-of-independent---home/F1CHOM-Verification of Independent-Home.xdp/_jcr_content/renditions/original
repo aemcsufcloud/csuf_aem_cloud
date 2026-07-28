@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-07-05T05:18:43Z" uuid="011c76f9-3464-448c-8a8c-6616580b2ce1">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1CHOM" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" layout="lr-tb">
+         <subform name="Subform1" w="203.2mm" h="34.925mm">
+            <draw name="logo" w="76.2mm" h="28.575mm">
+               <value>
+                  <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <field name="AidYear" w="27.671mm" h="9mm" x="174.625mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.presence="hidden";
+</script>
+               </event>
+            </field>
+            <field name="cwid" w="34.925mm" h="10.668mm" x="146.05mm" y="21.082mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="Text1" y="21.971mm" x="120.142mm" w="29.2864mm" h="9.537mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Enter Student      CWID Here : </text>
+               </value>
+               <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 80183 24200 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 15 Enter Student   0 9964 9667 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?>
+               <?renderCache.textRun 16     CWID Here :  0 8739 22867 0 0 0 "Calibri" 1 0 11000 ISO-8859-1?></draw>
+            <field name="formCode" y="22.225mm" x="184.15mm" w="19.05mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform2" w="203.2mm" h="9.525mm">
+            <draw name="CADreamAct" w="203.2mm" h="6.35mm">
+               <value>
+                  <text>CA Dream Act Application</text>
+               </value>
+               <para hAlign="center" spaceAbove="4pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <font typeface="Calibri" size="12pt" weight="bold" baselineShift="0pt"/>
+               <border>
+                  <edge thickness="0.4293mm"/>
+                  <corner thickness="0.429mm"/>
+               </border>
+               <?renderCache.bounds 576000 18000 0 0 0 0 0 0?>
+               <?renderCache.textRun 24 CA Dream Act Application 0 223620 13000 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform3" w="203.422mm" h="12.641mm">
+            <field name="TextField9" w="203.2mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="14pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var aidYearVal = Subform1.AidYear.rawValue;
+var otherAidYearVal = aidYearVal-1;
+this.rawValue = "UNACCOMPANIED HOMELESS YOUTH VERIFICATION - HOME ("+otherAidYearVal+"-"+aidYearVal+")";
+
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform4" w="203.422mm" h="13.418mm">
+            <draw name="Instruction" w="8.008736in" h="0.52825in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">You indicated on your California Dream Act Application (CDA) that you are an unaccompanied homeless youth<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">(as defined below)</span> or were self-supporting and at risk of homelessness at any time on or after</p><p style="font-size:10pt;font-style:italic;letter-spacing:0in">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="CDAInstructionTextChanger" y="3.683mm" x="108.712mm" w="22.225mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform5" w="203.422mm" h="13.417mm">
+            <draw name="Instruction" w="8.008736in" h="0.52825in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">You indicated on your Free Application for Federal Student Aid (FAFSA) that you are an unaccompanied homeless youth<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">(as defined below)</span> or were self-supporting and at risk of homelessness at any time on or after<span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-style:italic;letter-spacing:0in">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="FAFSAInstructionTextChanger" y="3.683mm" x="123.825mm" w="22.428mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform14" w="203.422mm" h="9.271mm">
+            <draw name="Instruction" w="8.008736in" h="9.271mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>You indicated on your California Dream Act Application (CADAA) that you are an unaccompanied homeless youth (as defined below) or were self-supporting and at risk of homelessness</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform15" w="203.422mm" h="9.271mm">
+            <draw name="Instruction" w="8.008736in" h="9.271mm" y="0mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>You indicated on your Free Application for Federal Student Aid (FAFSA) that you are an unaccompanied homeless youth (as defined below) or were self-supporting and at risk of homelessness</text>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform6" w="203.422mm" h="36.521mm">
+            <draw name="PurposeOfForm" w="203.2mm" h="6.35mm" y="0mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Definitions to reference for the purpose of completing this form:</p></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro" size="12pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill>
+                     <color value="192,192,192"/>
+                  </fill>
+               </border>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <draw name="ListOfPurpose" w="8.008736in" h="1.071194in" y="9.36mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li>"<span style="font-weight:bold">Unaccompanied</span>” - you are not living in the physical custody of your parent or guardian.</li><li style="font-weight:bold">"Homeless<span style="font-weight:normal">” - you are lacking fixed, regular and adequate housing, which includes living in shelters, motels or cars, or temporarily living with other people because you have nowhere else to go. If you are living in any of these situations and fleeing an abusive parent you may be considered homeless even if your parent would provide support and a place to live.</span></li><li style="font-weight:bold">"Youth<span style="font-weight:normal">” - you were<span style="xfa-spacerun:yes">       </span>years of age or younger as of the date you signed the<span style="xfa-spacerun:yes"> </span></span></li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="TextField11" y="26.437mm" x="127.762mm" w="18.288mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="10.5pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0CHOM"){
+this.rawValue="CDA.";
+}else if(Subform1.formCode.rawValue == "F1HOME" || Subform1.formCode.rawValue == "F0HOME"){
+this.rawValue="FAFSA.";
+}else if(Subform1.formCode.rawValue == "F1CHOM"){
+this.rawValue="CADAA.";
+}
+
+</script>
+               </event>
+            </field>
+            <field name="Age" y="26.437mm" x="42.672mm" w="12.7mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Calibri" size="10.5pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0HOME" || Subform1.formCode.rawValue == "F0CHOM"){
+this.rawValue="21";
+}else if(Subform1.formCode.rawValue == "F1HOME" || Subform1.formCode.rawValue == "F1CHOM"){
+this.rawValue="23";
+}
+
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Line1" w="203.2mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Documentation" w="203.2mm" h="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Please complete this form by checking one of the boxes below, attaching the specified documentation, and then signing and submitting it to the Office of Financial Aid.</text>
+            </value>
+            <font size="12pt" typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge presence="hidden"/>
+               <fill>
+                  <color value="192,192,192"/>
+               </fill>
+            </border>
+         </draw>
+         <field name="CheckBox1" w="7mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <subform name="Subform7" w="196.2mm" h="15.857mm">
+            <draw name="Text2" x="-0.001mm" w="7.724403in" h="13.594mm" y="1.041mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was 21 years of age or younger as of the date I signed the CDA. I meet the definition of “<span style="font-style:italic">unaccompanied homeless youth</span>”, as defined above, and was homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                          </span>.<span style="font-weight:normal"> By checking this box, you certify that you are able to provide verification of this status. You must sign this form and provide a written statement from:</span></p></body>
+                  </exData>
+               </value>
+               <font size="10.5pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="CDACheckBoxOne" y="4.681mm" x="110.476mm" w="25.269mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform8" h="15.875mm" w="196.2mm">
+            <draw name="Text2" w="7.724403in" h="13.594mm" y="0.635mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was 21 years of age or younger as of the date I signed the FAFSA. I meet the definition of “<span style="font-style:italic">unaccompanied homeless youth</span>”, as defined above, and was homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                          </span>.<span style="font-weight:normal"> By checking this box, you certify that you are able to provide verification of this status. You must sign this form and provide a written statement from:</span></p></body>
+                  </exData>
+               </value>
+               <font size="10.5pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="FAFSACheckBoxOne" y="4.275mm" x="114.3mm" w="25.519mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform21" w="196.2mm" h="15.857mm">
+            <draw name="Text2" x="-0.001mm" w="7.724403in" h="13.594mm" y="1.041mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">I was under the age of 24. I meet the definition of “homeless”, as defined above, and was homeless or at risk of homelessness on or after June 28, 2023.<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">By checking this box, you certify that you are able to provide verification of this status. You must sign this form and provide a written statement from:</span></p></body>
+                  </exData>
+               </value>
+               <font size="10.5pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform16" w="203.41mm" h="30.193mm">
+            <draw name="Statements" w="203.2mm" h="30.193mm" y="0mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="letter-spacing:0in;list-style-type:disc"><li>A Mckinney-Vento School District Liaison,</li><li>A director or designee of a HUD/RHYA-funded shelter, OR</li><li>A third-party professional who can verify that you meet the definition of unaccompanied youth who was homeless or at risk of homelessness. Examples of third-party professionals include: teachers, counselors, financial aid administrators, medical authorities, members of clergy, social workers, etc. Statements from third-party professionals should include appropriate contact information and should be printed on agency letterhead.</li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else if(Subform1.formCode.rawValue == "F0HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+         </subform>
+         <subform name="Subform17" w="203.41mm" h="15.004mm">
+            <draw name="Statements" w="203.2mm" h="15.004mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><ul style="font-family:'Myriad Pro';font-size:10pt;letter-spacing:0in;list-style-type:disc"><li style="font-family:Calibri;font-size:10.5pt">Director or designee of an emergency or transitional shelter, or other program serving those experiencing homelessness, OR</li><li style="font-family:Calibri;font-size:10.5pt">Your high school or school district homeless liaison or designee, OR</li><li style="font-family:Calibri;font-size:10.5pt">Director or designee of a project supported by a federal TRIO or GEAR UP program grant</li></ul></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+if(Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+         </subform>
+         <field name="CheckBox2" w="7mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <subform name="Subform9" w="196.2mm" h="25.429mm">
+            <draw name="Text3" y="1.171mm" x="-0.001mm" w="7.724403in" h="22.484mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">I was 22 or 23 at the time my CDA was signed but was homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                          </span>.<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you are between the ages of 22 to 23 and believe you otherwise meet the criteria of an unaccompanied homeless youth, you may be eligible to have your dependency status updated by the Office of Financial Aid. Please complete and submit this form AND the<span style="xfa-spacerun:yes">     </span></span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                     </span>Dependency Override Appeal Form, available on the Cal State Fullerton’s financial aid website at<span style="xfa-spacerun:yes"> </span><span style="color:#0000ff;text-decoration:underline">www.fullerton.edu/financialaid</span> under “Forms &amp; Appeals”, to the Office of Financial Aid.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="CDACheckBoxTwo" y="0.283mm" x="156.577mm" w="25.399mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="TextField12" y="13.618mm" x="0.011mm" w="21.571mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform1.AidYear.rawValue;
+var otherAidYearVal = aidYearVal-1;
+this.rawValue = otherAidYearVal+"-"+aidYearVal;
+</script>
+               </event>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform10" w="196.2mm" h="25.4mm">
+            <field name="FAFSACheckBoxTwo" x="160.02mm" w="25.4mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="TextField12" y="13.335mm" x="0.005mm" w="21.571mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var aidYearVal = Subform1.AidYear.rawValue;
+var otherAidYearVal = aidYearVal-1;
+this.rawValue = otherAidYearVal+"-"+aidYearVal;
+</script>
+               </event>
+            </field>
+            <draw name="Text3" y="0.888mm" w="7.724403in" h="22.484mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was 22 or 23 at the time my FAFSA was signed but was homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                          </span>.<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">If you are between the ages of 22 to 23 and believe you otherwise meet the criteria of an unaccompanied homeless youth, you may be eligible to have your dependency status updated by the Office of Financial Aid. Please complete and submit this form AND the<span style="xfa-spacerun:yes">     </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                     </span>Dependency Override Appeal Form, available on the Cal State Fullerton’s financial aid website at<span style="xfa-spacerun:yes"> </span><span style="color:#0000ff;text-decoration:underline">www.fullerton.edu/financialaid</span> under “Forms Bank”, to the Office of Financial Aid.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform19" w="196.2mm" h="16.968mm">
+            <draw name="Text3" y="0.888mm" w="7.724403in" h="16.08mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was under the age of 24 at the time my CADAA was signed and was homeless or at risk of homelessness but cannot provide documentation as listed above.<span style="font-weight:normal"> Please complete and submit this form and a personal statement of your situation and circumstances.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform20" w="196.2mm" h="16.968mm">
+            <draw name="Text3" y="0.888mm" w="7.724403in" h="16.08mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was under the age of 24 at the time my FAFSA was signed and was homeless or at risk of homelessness but cannot provide documentation as listed above.<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">Please complete and submit this form and a personal statement of your situation and circumstances.</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <draw name="Text8" w="203.2mm" h="1.27mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 766 0 0 1417 1417 0 0?></draw>
+         <field name="CheckBox3" w="7mm" h="6mm">
+            <ui>
+               <checkButton>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <fill/>
+                  </border>
+               </checkButton>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <integer>0</integer>
+            </value>
+            <items>
+               <integer>1</integer>
+               <integer>0</integer>
+               <integer>2</integer>
+            </items>
+         </field>
+         <subform name="Subform11" h="19.162mm" w="196.2mm">
+            <draw name="Text9" y="1.27mm" w="196.2mm" h="18.039mm" x="-0.001mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">I was NOT homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                            </span>and will provide parental information on the CDA<span style="font-weight:normal">.<span style="xfa-spacerun:yes"> </span></span></p><p style="letter-spacing:0in">You must correct the information on your CDA by providing your parental financial information. You and one parent must sign the CDA and submit it to the State processor. You can do so at https://dream.csac.ca.gov/. A new item will be placed on your<span style="font-style:italic"> To Do List</span> requesting parental information. If applicable, please check this box, sign below &amp; submit to the Office of Financial Aid.</p></body>
+                  </exData>
+               </value>
+               <font size="10.5pt" typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="CDACheckBoxThree" x="89.521mm" w="26.423mm" h="6.35mm" y="0.635mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if(Subform1.formCode.rawValue == "F0CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform12" w="196.2mm" h="20.305mm">
+            <draw name="Text10" w="7.724403in" h="19.162mm" y="1.143mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I was NOT homeless or at risk of homelessness on or after<span style="xfa-spacerun:yes">                            </span>and will provide parental information on the FAFSA<span style="font-weight:normal">.<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in">You must correct the information on your FAFSA by providing your parental financial information. You and one parent must sign the FAFSA and submit it to the federal processor. You can do so at<span style="xfa-spacerun:yes"> </span><a href="www.fafsa.ed.gov">www.fafsa.ed.gov</a>. A new item will be placed on your<span style="font-style:italic"> To Do List</span> requesting parental information.<span style="xfa-spacerun:yes"> </span></p></body>
+                  </exData>
+               </value>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.formCode.rawValue == "F0HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <field name="FAFSACheckBoxThree" x="89.662mm" w="26.154mm" h="6.35mm" y="0.254mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="10.5pt" typeface="Calibri" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform18" w="196.2mm" h="20.305mm">
+            <draw name="Text10" w="7.724403in" h="0.754403in" y="1.143mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Calibri" baselineShift="0pt" size="10.5pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">I am unable to provide documentation as listed above.<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">I feel my situation is too personal to provide a statement and I would like to schedule a meeting with a counselor to discuss my circumstances.</span></p><ul style="text-decoration:none;letter-spacing:0in;list-style-type:disc"><li style="font-style:italic">We will reach out to you when we receive this form. It may be quicker to call us at 657-278-3125 and request an appointment with a counselor.</li></ul></body>
+                  </exData>
+               </value>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.formCode.rawValue == "F1CHOM" || Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 0?></subform>
+         <subform name="Subform22" w="203.41mm" h="19.294mm">
+            <draw name="Statements" w="203.2mm" h="19.294mm" y="0mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">NOTE: If you inadvertently answered “Yes” to being homeless or at risk of homelessness on your CADAA, but do not meet the definitions above, you must correct the information on your CADAA by providing your parental financial information. You and one parent must sign the CADAA and submit it to the State processor. You can do so at<span style="xfa-spacerun:yes"> </span><a href="https://dream.csac.ca.gov/" style="margin-top:0pt;margin-bottom:0pt;font-family:Calibri;font-size:10.5pt;font-weight:bold">https://dream.csac.ca.gov/</a>. A new item will be placed on your To Do List requesting parental information.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" weight="bold" size="10.5pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+if(Subform1.formCode.rawValue == "F1CHOM"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Subform23" w="203.41mm" h="14.986mm">
+            <draw name="Statements" w="203.2mm" h="0.59in">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>NOTE: If you inadvertently answered "Yes" to being homeless or at risk of homelessness on your FAFSA, but do not meet the definitions above, please correct your FAFSA by changing the answer to this question and providing parental information. You must submit a FAFSA correction before we can continue processing your application.</text>
+               </value>
+               <font typeface="Calibri" weight="bold" size="10.5pt" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <?renderCache.bounds 573166 39646 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 122 NOTE: If you inadvertently answered "Yes" to being homeless or at risk of homelessness on your FAFSA, but do not meet the  0 1417 9292 0 0 0 "Calibri" 1 0 10500 ISO-8859-1?>
+               <?renderCache.textRun 130 definitions above, please correct your FAFSA by changing the answer to this question and providing parental information. You must  0 1417 21892 0 0 0 "Calibri" 1 0 10500 ISO-8859-1?>
+               <?renderCache.textRun 77 submit a FAFSA correction before we can continue processing your application. 0 1417 34492 0 0 0 "Calibri" 1 0 10500 ISO-8859-1?></draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(Subform1.formCode.rawValue == "F1HOME"){
+this.presence="visible";
+}else{
+this.presence="hidden";
+}
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <draw name="Text4" w="203.2mm" h="1mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 573166 1 0 0 1417 1417 0 0?></draw>
+         <draw name="Text5" w="3.175mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <?renderCache.bounds 6166 12000 0 0 1417 1417 0 0?></draw>
+         <subform name="Subform13" h="51.165mm" w="196.85mm">
+            <border>
+               <edge thickness="0.4293mm"/>
+               <corner thickness="0.429mm"/>
+            </border>
+            <draw name="Text6" y="0mm" x="0.635mm" w="7.625in" h="25.4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="margin-top:2pt;font-size:12pt;font-weight:bold;letter-spacing:0in">CERTIFICATION:</p><p style="margin-top:2pt;font-size:10.5pt;letter-spacing:0in">By signing this form, I certify that all of the information reported on this form and any attachments hereto is true, complete and accurate. I agree to provide proof of the information I have reported, if requested to do so. I also certify that I have read the terms and conditions section of the CSU Fullerton, Financial Aid website (<span style="color:#0000ff;text-decoration:underline">http://www.fullerton.edu/financialaid/info/Terms.php</span>)</p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="StudentESignature" w="101.6mm" h="9mm" y="25.4mm">
+               <ui>
+                  <imageEdit data="embed"/>
+                  <extras name="x-scribble-add-on">
+                     <boolean name="geoLocMandatoryOnIpad">1</boolean>
+                  </extras>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <caption reserve="31.508mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Student E-Signature:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+               <desc>
+                  <text name="embeddedHref"/>
+               </desc>
+            </field>
+            <field name="IPAddress" w="66.675mm" h="9mm" x="130.175mm" y="25.4mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="17.1572mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>IP Address:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="StudentName" w="101.6mm" h="9mm" y="34.925mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="33.7012mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Print Student’s Name:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="SCwid" w="47.625mm" h="9mm" x="149.225mm" y="34.925mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="9.9877mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>CWID:</text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+            </field>
+            <field name="StudentSignatureDate" w="41.275mm" h="9mm" x="104.775mm" y="34.925mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <date/>
+               </value>
+               <caption reserve="8.73mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Date: </text>
+                  </value>
+                  <font typeface="Calibri" size="10.5pt" baselineShift="0pt"/>
+               </caption>
+               <format>
+                  <picture>date{MM/DD/YYYY}</picture>
+               </format>
+            </field>
+            <draw name="Text7" y="44.45mm" x="0mm" w="195.25mm" h="5.2331mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:9pt;font-weight:bold;text-decoration:none;letter-spacing:0in">*Warning<span style="font-size:10pt">:</span><span style="font-size:10pt;font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:8.5pt;font-weight:normal">If you give false or misleading information on documents submitted to the Office of Financial Aid, you may be fined, be sentenced to jail or both</span></p></body>
+                  </exData>
+               </value>
+               <font typeface="Calibri" baselineShift="0pt"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 228 63 00030004001100120018001C00260027002F0045004B0057005A005E006400680074007A0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C7035503570358035B035E035F036C0372037E037F0397039803EE03EF ABCDEFGINOPRSTUWYabcdefghijklmnopqrstuvwxy,:.’“”/-()"&23?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 244 65 0003000400120018001C0026002C002F003A003E0045004B005A005E006400680074007A0102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C7035503570358035E035F036C037A037E037F038E039703EC03ED03EE03EF03F003F4044104440445 ACDEFHIJLNORSTUWYabcdefghiklmnopqrstuvwy,:.“”/_()*"012348=<>?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 156 39 00030018002F003E006400740102010F0110011A011E01280150015A015D016C016F01750176017D0189018B018C0190019A01B501C001C101C703550358037203ED03EE03EF03F103F203F303F4 DILTWabcdefghiklmnopqrstuvwy,.-1235678?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 64 16 000301020110011A011E015A015D016F01750176017D01890190019A01B501C7 acdehilmnopstuy?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 164 41 0001000D000E000F0010001B0022002500260029002D002E00300033003400360037003A00420043004400450046004700480049004A004C004D004E004F005000510053005400550056005700580059005A ,-./:ADEHLMORSUVYabcdefghiklmnoprstuvwxy?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 124 31 0001000D000F001B0022002500270030003100420043004400450046004700480049004A004C004D004E004F00500051005300540055005600580059005A ,.:ADFOPabcdefghiklmnoprstuwxy?>
+      <?renderCache.subset "Symbol" 0 0 fontSpecific 4 8 3 00000076 ·?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 82?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <common/>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-07-05T05:18:43Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:011c76f9-3464-448c-8a8c-6616580b2ce1</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:7021d45c-8c2f-4513-b934-a257e049c67e</xmpMM:InstanceID>
+         <dc:format>application/pdf</dc:format>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>

@@ -1,0 +1,25 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="HealthPremium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="EnrollmentType"/>
+        <xs:element type="xs:string" name="EmplID"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="HealthPlan"/>
+        <xs:element type="xs:string" name="MonthlyPremium"/>
+        <xs:element type="xs:string" name="Signature"/>
+        <xs:element type="xs:string" name="SignatureDate"/>
+		<xs:element type="xs:string" name="SignatureComments"/>
+		<xs:element type="xs:string" name="logUser"/>
+		<xs:element type="xs:string" name="aftiaDescCWID"/>
+		<xs:element type="xs:string" name="customTitle"/>
+		<xs:element type="xs:string" name="EmailSubject"/>
+		<xs:element type="xs:string" name="StageIndicator"/>
+		<xs:element type="xs:string" name="EmployeeUserID"/>
+		<xs:element type="xs:string" name="EmployeeEmailID"/>
+		<xs:element type="xs:string" name="Coverage"/>
+		
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

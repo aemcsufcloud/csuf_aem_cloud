@@ -1,0 +1,2054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="Designer_V6.4.0.20180228.1.932123" APIVersion="3.6.18045.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-03-24T07:55:14Z" uuid="0b7f242f-2ae4-4ce9-8b18-2fc100576e55">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
+   <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="F1LNGN" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="576pt" h="756pt"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="576pt" h="266.7mm">
+         <field name="cwid" y="24.13mm" x="142.875mm" w="34.925mm" minH="10.16mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Logo" x="6.35mm" w="73.025mm" h="31.75mm">
+            <value>
+               <image href=".\CSUF BW Logo.png" contentType="image/png"/>
+            </value>
+            <ui>
+               <imageEdit/>
+            </ui>
+         </draw>
+         <draw name="LoanRequest" y="63.5mm" w="149.225mm" h="6.35mm" x="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Is this the first paper loan request form you are submitting for the                      academic year?</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 420166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 104 Is this the first paper loan request form you are submitting for the                      academic year? 0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+         <field name="AidYear" w="25.4mm" h="9mm" x="174.625mm" y="44.45mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+this.presence="hidden";
+</script>
+            </event>
+         </field>
+         <exclGroup name="FirstLoanRB" x="158.75mm" y="62.865mm">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field y="0mm" w="13.879mm" h="6mm" name="Yes">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="7.3368mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+                  <value>
+                     <text>Yes</text>
+                  </value>
+               </caption>
+               <value>
+                  <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+               </value>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <field w="13.879mm" h="6mm" name="No" x="19.05mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="8.0526mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+                  <value>
+                     <text>No</text>
+                  </value>
+               </caption>
+               <value>
+                  <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+               </value>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Heading" y="41.275mm" x="9.525mm" w="174.625mm" h="0.261583in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-align:justify;font-size:14pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">                                     </span><span style="font-size:16pt"> Federal Direct Loan Request<span style="xfa-spacerun:yes"> </span></span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Line1" y="76.2mm" x="6.35mm" w="193.675mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <draw name="Reinstate" y="79.375mm" x="6.35mm" w="196.85mm" h="1.764361in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;font-weight:bold;letter-spacing:0in">Request to Reinstate/Increase Award</p><p style="font-size:12pt;font-weight:bold;letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                                                 </span><span style="font-size:12pt;font-weight:bold">units</span>(enter zero if you will not enroll)<span style="xfa-spacerun:yes">                                                      </span><span style="font-size:12pt"><span style="xfa-spacerun:yes">  </span></span><span style="font-size:12pt;font-weight:bold">units</span>(enter zero if you will not enroll)</p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><br/></p><p style="letter-spacing:0in"><br/></p><p style="font-weight:bold;font-style:italic;letter-spacing:0in">Note:<span style="font-size:9pt;font-weight:normal"> If university records indicate your graduation date is Spring<span style="xfa-spacerun:yes">           </span>or after, your loan will be awarded for the full year as long as you are</span></p><p style="font-size:9pt;font-style:italic;letter-spacing:0in">enrolled in six or more units each term.<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="RequestedFallUnits" y="86.741mm" x="25.4mm" w="19.05mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="RequestedSpringUnits" y="86.995mm" x="125.73mm" w="19.05mm" minH="9.525mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="ExpectedGraduationDate" y="101.6mm" x="9.525mm" w="78.675mm" h="9.525mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="44.3022mm">
+               <font typeface="Calibri" weight="bold" baselineShift="0pt" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Expected Graduation Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <field name="RequestedTotalLoanAmount" y="133.35mm" x="92.075mm" w="107.95mm" h="9mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="DateFormat" y="104.775mm" x="88.9mm" w="29.2864mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>(mm/dd/yyyy)</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 80183 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 12 (mm/dd/yyyy) 0 1417 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Line2" y="127mm" x="6.35mm" w="193.675mm" h="0in">
+            <value>
+               <line slope="/"/>
+            </value>
+         </draw>
+         <exclGroup name="EligibleRB" y="174.625mm" x="19.05mm">
+            <field w="13.879mm" h="6mm" name="Yes">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="7.879mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt" size="12pt"/>
+                  <value>
+                     <text>Yes</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>1</text>
+               </items>
+            </field>
+            <field w="13.879mm" h="6mm" name="No" y="9.525mm">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="7.879mm">
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Calibri" baselineShift="0pt" size="12pt"/>
+                  <value>
+                     <text>No</text>
+                  </value>
+               </caption>
+               <items>
+                  <text>2</text>
+               </items>
+            </field>
+            <?templateDesigner itemValuesSpecified 1?>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Yes2_Cond" y="174.625mm" x="34.925mm" w="100.437mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>(if you fail to check an option, we will assume the answer is no)</text>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 281869 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 65 (if you fail to check an option, we will assume the answer is no) 0 1417 9667 0 0 0 "Calibri" 0 0 11000 ISO-8859-1?></draw>
+         <field name="FallGradeLevel" y="199.136mm" x="58.42mm" w="37mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="SpringGradeLevel" y="199.136mm" x="152.4mm" w="37mm" h="7.62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <draw name="Certification" y="219.075mm" x="6.35mm" w="190.5mm" h="44.45mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>CERTIFICATION:</p><p style="font-size:11pt;font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:10pt;font-weight:normal">By signing this form, I certify that I have read the terms and conditions section of the CSU Fullerton, Financial Aid website at<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><a href="http://www.fullerton.edu/financialaid/info/Terms.php" style="margin-top:0pt;margin-bottom:0pt;font-family:Calibri">http://www.fullerton.edu/financialaid/info/Terms.php</a></p><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="StudentESignature" w="95.25mm" h="9mm" x="6.35mm" y="238.125mm">
+            <ui>
+               <imageEdit data="embed"/>
+               <extras name="x-scribble-add-on">
+                  <boolean name="geoLocMandatoryOnIpad">1</boolean>
+               </extras>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <caption reserve="32.4513mm">
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Student E-Signature:</text>
+               </value>
+               <font typeface="Calibri" size="11pt" baselineShift="0pt"/>
+            </caption>
+            <desc>
+               <text name="embeddedHref"/>
+            </desc>
+         </field>
+         <field name="StudentSignatureDate" y="250.825mm" x="106.426mm" w="41.275mm" h="9mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="9.3628mm">
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Date:</text>
+               </value>
+            </caption>
+            <format>
+               <picture>date{MM/DD/YYYY}</picture>
+            </format>
+         </field>
+         <field name="StudentSignature" y="250.825mm" x="6.35mm" w="98.425mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="35.2578mm">
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Print Student’s Name:</text>
+               </value>
+            </caption>
+         </field>
+         <field name="SCwid" y="250.825mm" x="149.225mm" w="44.45mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="10.2943mm">
+               <font typeface="Calibri" baselineShift="0pt" size="11pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>CWID</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Rect_Certify" y="217.17mm" x="6.35mm" w="190.5mm" h="44.45mm">
+            <value>
+               <rectangle>
+                  <edge thickness="0.508mm"/>
+                  <corner radius="5.08mm" thickness="0.508mm"/>
+               </rectangle>
+            </value>
+         </draw>
+         <draw name="Fall" y="88.9mm" x="6.35mm" w="19.05mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Fall           :</text>
+            </value>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt" size="12pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 51166 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 16 Fall           : 0 1417 10417 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+         <draw name="Spring" y="89.408mm" x="101.6mm" w="23.791mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Spring           :</text>
+            </value>
+            <font typeface="Calibri" weight="bold" baselineShift="0pt" size="12pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 64605 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 18 Spring           : 0 1417 10417 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+         <field name="TextField13" y="24.13mm" x="180.975mm" w="22.225mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="11pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+if(AidYear.rawValue == "2022"){
+	this.rawValue = "F0LNGN";
+}
+else if(AidYear.rawValue == "2023"){
+	this.rawValue = "F1LNGN";
+}
+</script>
+            </event>
+         </field>
+         <draw name="Text4" y="50.8mm" x="15.875mm" w="168.275mm" h="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:Calibri;font-size:11pt;letter-spacing:0in"><span style="xfa-spacerun:yes">                 </span><span style="font-weight:bold">DEADLINE</span>:<span style="xfa-spacerun:yes"> </span></p><p style="font-family:Calibri;font-size:11pt;letter-spacing:0in"><span style="xfa-spacerun:yes">         </span><span style="font-size:8pt;font-style:italic">Incomplete documents will not be returned. They will be disposed of in a secure manner, per university policy. This will delay processing.</span></p></body>
+               </exData>
+            </value>
+            <font typeface="Myriad Pro" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="TextField5" y="40.005mm" x="118.745mm" w="30.48mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="16pt" typeface="Calibri" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = "("+aidYearValTwo +"-"+aidYearVal+")";
+</script>
+            </event>
+         </field>
+         <field name="Deadline" y="50.165mm" x="48.26mm" w="123.825mm" h="5.891mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="11pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+         </field>
+         <field name="TextField7" y="61.468mm" x="113.792mm" w="19.558mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = aidYearValTwo +"/"+aidYearVal;	
+
+
+
+</script>
+            </event>
+         </field>
+         <draw name="Text5" y="200.025mm" w="38.914mm" h="5.2331mm" x="19.05mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Fall           Grade Level:</text>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 107473 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 27 Fall           Grade Level: 0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+         <draw name="Text5" y="200.025mm" w="43.832mm" h="5.2331mm" x="107.95mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Spring           Grade Level:</text>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 121414 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 29 Spring           Grade Level: 0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+         <draw name="Text6" y="127.508mm" x="12.7mm" w="151.901mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">1.<span style="xfa-spacerun:yes">   </span>List the<span style="font-weight:bold"> TOTAL</span> loan amount you wish to borrow for the<span style="xfa-spacerun:yes">                     </span>Academic Year:</p></body>
+               </exData>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text7" y="142.875mm" x="15.875mm" w="174.625mm" h="0.375472in">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>-<span style="xfa-spacerun:yes">   </span><span style="font-style:italic"> If you initially requested $3,000 and want to borrow $1,000 in additional Direct Loan funds, enter $4,000</span></p><p style="font-style:italic;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">      </span>($3,000 + $1,000 = $4,000) in the space provided above.</p></body>
+               </exData>
+            </value>
+            <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text8" y="155.575mm" x="12.7mm" w="187.325mm" h="15.875mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>2.    If you are not eligible for the loan amount requested in SUBSIDIZED loan funds (government pays          the interest while you are in school and up to six months after you drop below half-time status), do you          want the balance of your request in UNSUBSIDIZED funds (which accrue interest while in school)?  </text>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 528166 42166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 103 2.    If you are not eligible for the loan amount requested in SUBSIDIZED loan funds (government pays   0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?>
+            <?renderCache.textRun 113         the interest while you are in school and up to six months after you drop below half-time status), do you  0 1417 24817 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?>
+            <?renderCache.textRun 105         want the balance of your request in UNSUBSIDIZED funds (which accrue interest while in school)?   0 1417 39217 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+         <draw name="Text9" y="193.675mm" x="12.7mm" w="188.784mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>3.    I would like to receive an increase in my Federal Direct Loans due to a grade level change.</text>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 532302 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 97 3.    I would like to receive an increase in my Federal Direct Loans due to a grade level change. 0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+         <field name="TextField11" y="199.517mm" x="25.4mm" w="12.7mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">var aidYearVal = AidYear.rawValue;
+this.rawValue = aidYearVal -1;
+</script>
+            </event>
+         </field>
+         <field name="TextField12" y="199.72mm" x="119.253mm" w="10.922mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="12pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.rawValue = AidYear.rawValue;
+</script>
+            </event>
+         </field>
+         <field name="TextField14" y="127mm" x="114.046mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="12pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = aidYearValTwo +"-"+aidYearVal;
+</script>
+            </event>
+         </field>
+         <field name="TextField15" y="115.062mm" x="91.313mm" w="9.525mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="9pt" typeface="Calibri" posture="italic"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.rawValue = AidYear.rawValue;
+</script>
+            </event>
+         </field>
+         <field name="TextField16" y="88.9mm" x="113.03mm" w="12.7mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="12pt" typeface="Calibri" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.rawValue = AidYear.rawValue;
+</script>
+            </event>
+         </field>
+         <field name="TextField17" y="88.392mm" x="12.7mm" w="12.7mm" h="6.35mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="12pt" typeface="Calibri" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = AidYear.rawValue;
+this.rawValue = aidYearVal -1;
+
+</script>
+            </event>
+         </field>
+         <field name="IPAddress" y="238.125mm" x="136.525mm" w="57.15mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="18.4072mm">
+               <font size="11pt" typeface="Calibri" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>IP Address:</text>
+               </value>
+            </caption>
+         </field>
+         <draw name="Text10" y="24.384mm" x="117.475mm" w="29.2864mm" h="9.537mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Enter Student’s        CWID Here:</text>
+            </value>
+            <font size="11pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text11" y="136.39mm" x="87.048mm" w="8.202mm" h="5.2331mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text> $</text>
+            </value>
+            <font size="12pt" typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 20416 12000 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 2  $ 0 1417 10417 0 0 0 "Calibri" 0 0 12000 ISO-8859-1?></draw>
+         <?templateDesigner expand 1?></subform>
+      <subform w="576pt" h="756pt">
+         <breakBefore targetType="pageArea" startNew="1"/>
+         <draw name="Reinstate-Process" y="28.575mm" x="12.7mm" w="180.975mm" h="120.65mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:12pt;font-weight:bold;text-decoration:underline;letter-spacing:0in">REQUEST TO REINSTATE/INCREASE LOAN</p><p style="font-size:12pt;font-weight:bold;text-decoration:underline;letter-spacing:0in"><br/></p><p style="font-size:12pt;text-decoration:none;letter-spacing:0in">In order to process this loan request, you must:</p><p style="font-size:12pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Meet Satisfactory Academic Progress</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Not exceed federal loan aggregate limits</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Be enrolled at least half time each semester</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:2">                  </span>•(<span style="font-weight:bold">6 units</span> undergraduate/credential or<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">4 units</span> Graduate 500 level courses)</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•First time borrowers must complete the Entrance Loan Counseling and sign a Master</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">  </span>Promissory Note (MPN) by logging on to www.studentloans.gov using your FSA ID and</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">  </span>password</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•A loan origination fee is deducted by the Department of Education from each loan<span style="xfa-spacerun:yes"> </span></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">  </span>disbursement you receive (www.studentaid.ed.gov/sa/types/loans)</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Loans will be divided equally between the Fall<span style="xfa-spacerun:yes">           </span>and Spring<span style="xfa-spacerun:yes">           </span>semesters</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">  </span>(unless you are a one-semester student)</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Seniors graduating in Fall<span style="xfa-spacerun:yes">           </span>are subject to loan proration based on units enrolled</p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><br/></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span>•Completing this form authorizes the Office of Financial Aid to accept the loan on your<span style="xfa-spacerun:yes"> </span></p><p style="font-size:11pt;text-decoration:none;letter-spacing:0in"><span style="xfa-tab-count:1">         </span><span style="xfa-spacerun:yes">  </span>behalf<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Table-Heading" y="155.575mm" x="50.8mm" w="105.901mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>FEDERAL DIRECT LOAN ANNUAL AND LIFETIME MAXIMUMS</text>
+            </value>
+            <font size="12pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 297358 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 48 FEDERAL DIRECT LOAN ANNUAL AND LIFETIME MAXIMUMS 0 1417 10417 0 0 0 "Calibri" 1 0 12000 ISO-8859-1?></draw>
+         <draw name="Text1" y="165.1mm" x="9.525mm" w="38.1mm" h="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="51,102,255"/>
+               </fill>
+            </border>
+            <?renderCache.bounds 105166 33166 0 0 1417 1417 0 0?></draw>
+         <draw name="Text1" y="165.1mm" x="47.625mm" w="63.5mm" h="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Myriad Pro" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="51,102,255"/>
+               </fill>
+            </border>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><br/></p><p style="font-family:Calibri;font-weight:bold;text-decoration:none;letter-spacing:0in">Dependent Students</p></body>
+               </exData>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text1" y="165.1mm" x="111.125mm" w="85.725mm" h="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="51,102,255"/>
+               </fill>
+            </border>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Independent Students<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">(And Dependent<span style="xfa-spacerun:yes"> </span></span></p><p style="text-decoration:none;letter-spacing:0in">Students Whose Parent are plus<span style="xfa-spacerun:yes"> </span><span style="font-weight:bold">Denied</span>)</p></body>
+               </exData>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <draw name="Text1" y="177.8mm" x="9.525mm" w="38.1mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Academic Year/Annual Limits</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 21 Academic Year/Annual  0 7787 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 6 Limits 0 41979 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="177.8mm" x="47.625mm" w="22.225mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Subsidized</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 10 Subsidized 0 9981 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="177.8mm" x="69.85mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Subsidized/ Unsubsidized  Combined</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 26 Subsidized/ Unsubsidized   0 6908 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 8 Combined 0 37687 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="177.8mm" x="111.125mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Subsidized</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 10 Subsidized 0 36981 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="177.8mm" x="152.4mm" w="44.45mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Subsidized/ Unsubsidized  Combined</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 26 Subsidized/ Unsubsidized   0 11408 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 8 Combined 0 42187 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="187.325mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>Year 1 (0-29 units)</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 19 Year 1 (0-29 units) 0 16815 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="187.325mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$3,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $3,500 0 17582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="187.325mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="187.325mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$3,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $3,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="187.325mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$9,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $9,500 0 49082 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="193.675mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Year 2 (30-59 units)</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 20 Year 2 (30-59 units) 0 14281 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="193.675mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$4,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $4,500 0 17582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="193.675mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$6,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $6,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="193.675mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$4,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $4,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="193.675mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$10,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $10,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="200.025mm" x="9.525mm" w="38.1mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>Year 3 &amp; 4 (60 or more  units)</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 24 Year 3 & 4 (60 or more   0 7850 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 6 units) 0 42452 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="200.025mm" x="47.625mm" w="22.225mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 17582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="200.025mm" x="69.85mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$7,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $7,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="200.025mm" x="111.125mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="200.025mm" x="152.4mm" w="44.45mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$12,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $12,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="209.55mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Teacher Credential</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 18 Teacher Credential 0 15575 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="209.55mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 17582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="209.55mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="209.55mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="209.55mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$12,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $12,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="215.9mm" x="9.525mm" w="38.1mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>Post-Baccalaureate Unclassified</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 19 Post-Baccalaureate  0 14923 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?>
+            <?renderCache.textRun 12 Unclassified 0 29662 20917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="215.9mm" x="47.625mm" w="22.225mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 17582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="215.9mm" x="69.85mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="215.9mm" x="111.125mm" w="41.275mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$5,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 6 $5,500 0 44582 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="215.9mm" x="152.4mm" w="44.45mm" h="9.525mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$12,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 24166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $12,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="225.425mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Graduate/Professional</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 21 Graduate/Professional 0 8124 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="225.425mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 23448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="225.425mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 50448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="225.425mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 50448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="225.425mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$20,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $20,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text2" y="231.775mm" x="9.525mm" w="187.325mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>Aggregate Limits</text>
+            </value>
+            <font typeface="Calibri" weight="bold" underline="1" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <?renderCache.bounds 528166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 16 Aggregate Limits 0 230849 8917 0 0 0 "Calibri" 1 0 10000 ISO-8859-1?>
+            <?renderCache.line 230849 10017 300151 10017 0 0 0 400?></draw>
+         <draw name="Text1" y="238.125mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Dependent</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 9 Dependent 0 31278 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="238.125mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$23,000</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $23,000 0 15047 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="238.125mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$31,000</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $31,000 0 42047 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="238.125mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 50448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="238.125mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 54948 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="244.475mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>Independent</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 11 Independent 0 27840 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="244.475mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 23448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="244.475mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 50448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="244.475mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$23,000</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $23,000 0 42047 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="244.475mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+            </border>
+            <value>
+               <text>$57,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $57,500 0 46547 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="250.825mm" x="9.525mm" w="38.1mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>Graduate/Professional</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 105166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 21 Graduate/Professional 0 8124 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="250.825mm" x="47.625mm" w="22.225mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 60166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 23448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="250.825mm" x="69.85mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>N/A</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 3 N/A 0 50448 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="250.825mm" x="111.125mm" w="41.275mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$65,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 114166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 7 $65,500 0 42047 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text1" y="250.825mm" x="152.4mm" w="44.45mm" h="6.35mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Calibri" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge thickness="0.254mm"/>
+               <corner thickness="0.254mm"/>
+               <fill>
+                  <color value="153,204,255"/>
+               </fill>
+            </border>
+            <value>
+               <text>$138,500</text>
+            </value>
+            <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <?renderCache.bounds 123166 15166 0 0 1417 1417 0 0?>
+            <?renderCache.textRun 8 $138,500 0 44013 8917 0 0 0 "Calibri" 0 0 10000 ISO-8859-1?></draw>
+         <draw name="Text3" y="3.175mm" x="66.675mm" w="79.375mm" h="19.05mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">     </span>CALIFORNIA STATE UNIVERSITY,</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">   </span><span style="text-decoration:none">FULLERTON FEDERAL DIRECT LOAN</span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes">                </span>REQUEST:<span style="xfa-spacerun:yes"> </span></p></body>
+               </exData>
+            </value>
+            <font size="14pt" typeface="Calibri" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <para hAlign="justify" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
+         <field name="TextField1" y="14.351mm" x="105.41mm" w="24.765mm" h="6.939mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="14pt" typeface="Calibri" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var aidYearVal = xfa.resolveNode("#subform[0].AidYear").rawValue;
+var aidYearValTwo = aidYearVal -1;
+this.rawValue = aidYearValTwo +"/"+aidYearVal;	
+</script>
+            </event>
+         </field>
+         <field name="TextField2" y="111.887mm" x="100.076mm" w="10.033mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+	this.rawValue = xfa.resolveNode("#subform[0].AidYear").rawValue-1;
+</script>
+            </event>
+         </field>
+         <field name="TextField3" y="125.984mm" x="67.056mm" w="12.034mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Calibri" size="11pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+ this.rawValue = xfa.resolveNode("#subform[0].AidYear").rawValue-1;
+</script>
+            </event>
+         </field>
+         <field name="TextField4" y="111.887mm" x="126.238mm" w="10.033mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="11pt" typeface="Calibri"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript"> 
+ this.rawValue = xfa.resolveNode("#subform[0].AidYear").rawValue;
+
+</script>
+            </event>
+         </field>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">6.4.0.20180228.1.932123.929382</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Calibri" 0 0 ISO-8859-1 4 272 72 00030004001100120018001C00260027002F003E00440045004B0057005E006400680074007A007F0102010F0110011A011E01280150015A015D0169016C016F01750176017D0189018B018C0190019A01B501C001C101C601C701CC034D035503570358035B036C0372037B037E037F039803A803EC03ED03EE03EF03F003F103F203F303F403F5 ABCDEFGILMNOPSTUWYZabcdefghijklmnopqrstuvwxyz?,:.’/-•()&$0123456789?>
+      <?renderCache.subset "Calibri" 1 0 ISO-8859-1 4 184 48 0003000400120018001C00260027002C002F003E00440045004B0059005A005E00640068007300740079007A01020110011A011E0150015D016F01750176017D0189018B018C0190019A01B501C101C603550357035B036C03F003F2 ACDEFGHILMNOQRSTUVWXYacdegilmnopqrstuwx,:’/46?>
+      <?renderCache.subset "Calibri" 0 1 ISO-8859-1 4 160 40 00030018002F003E005E00640102010F0110011A011E01280150015A015D016F01750176017D0189018B018C0190019A01B501C001C101C601C703550358037E037F03A803EC03ED03EF03F0043D0441 DILSTabcdefghilmnopqrstuvwxy,.()$0134+=?>
+      <?renderCache.subset "Calibri" 1 1 ISO-8859-1 4 20 5 0045011E017D019A0357Neot:?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 20 5 00010011001200130015 0124?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000)?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.6/?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 36?>
+   <?templateDesigner Zoom 92?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>11</adobeExtensionLevel>
+      </pdf>
+      <common/>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Bold" weight="bold" posture="normal"/>
+      <font typeface="Calibri" psName="Calibri-Italic" weight="normal" posture="italic"/>
+      <font typeface="Calibri" psName="Calibri-BoldItalic" weight="bold" posture="italic"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+</xfa:datasets>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2023-03-24T07:55:14Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Designer 6.4</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Designer 6.4</pdf:Producer>
+         <xmpMM:DocumentID>uuid:0b7f242f-2ae4-4ce9-8b18-2fc100576e55</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:aa1753ac-dd8e-4315-a9bd-c1ed3e7d6bc9</xmpMM:InstanceID>
+         <dc:format>application/pdf</dc:format>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>6.4.0.20180228.1.932123.929382</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>
