@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[granite:AuthenticationRequired]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2020-08-05T19:07:06.908+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/csu/settings/wcm/templates/content-page-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Task Details"
+        sling:resourceType="csu/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <task_details
+                    jcr:created="{Date}2020-04-06T14:46:16.277+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-04-06T14:46:16.277+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="csu/components/content/my-tasks/task-details"/>
+            </responsivegrid>
+        </root>
+        <newlogo
+            jcr:lastModified="{Date}2020-06-05T11:19:19.368+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="csu/components/content/image"
+            fileReference="/content/dam/csu/csuf_transparent_logo.png"/>
+        <footer-logo
+            jcr:lastModified="{Date}2020-06-11T18:16:40.013+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="csu/components/content/image"
+            fileReference="/content/dam/csu/csuf_transparent_logo.png"/>
+        <user-img
+            jcr:lastModified="{Date}2020-06-11T18:16:50.522+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="csu/components/content/image"
+            fileReference="/content/dam/csu/Pierre-Person.jpg"/>
+    </jcr:content>
+</jcr:root>
