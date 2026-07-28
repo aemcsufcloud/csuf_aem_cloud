@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:fd="http://www.adobe.com/aemfd/fd/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-26T21:24:53.077-08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/formsPortal/settings/wcm/templates/formsportaltemplate"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Forms Portal"
+        sling:resourceType="formsPortal/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:created="{Date}2019-12-12T12:13:26.376+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-12-12T12:13:51.782+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <querybuilder
+                    jcr:created="{Date}2019-12-12T12:16:16.948+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-12-12T12:16:46.736+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/fp/components/querybuilder"
+                    assetsources="\{&quot;path&quot;:&quot;/mnt/overlay/fd/fp/extensions/querybuilder/assettypes/adaptiveform&quot;,&quot;renderType&quot;:&quot;HTML&quot;,&quot;htmlToolTip&quot;:&quot;Click here to view as HTML&quot;,&quot;pdfToolTip&quot;:&quot;Click here to view as PDF&quot;}"
+                    customTemplate="/libs/fd/fp/extensions/template/grid/template.html/jcr:content">
+                    <view
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/fp/components/lenses/view"/>
+                    <textbar
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/fp/components/predicates/textbar"/>
+                    <searchAssets
+                        fd:version="1.0"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/fp/search"/>
+                </querybuilder>
+                <draftsandsubmissions
+                    jcr:created="{Date}2020-02-11T17:07:21.500-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-02-26T21:24:53.068-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="fd/fp/components/draftsAndSubmissions"
+                    displayOptions="draftOnly"
+                    draftTemplate="/libs/fd/fp/extensions/template/draft/template.html/jcr:content"
+                    pendignSignTemplate="/libs/fd/fp/extensions/template/pendingSign/template.html/jcr:content"
+                    submissionTemplate="/libs/fd/fp/extensions/template/submission/template.html/jcr:content">
+                    <save
+                        fd:version="1.0"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/fp/draftsandSubmissionServlet"/>
+                </draftsandsubmissions>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
