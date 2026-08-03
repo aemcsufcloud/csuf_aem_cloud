@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2024-10-01T00:38:56.114-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-10-01T00:39:00.431-07:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/formsPortal/settings/wcm/templates/content-page1"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="8f8da322-4bfe-4b41-8d06-b26d36302f8a"
+        sling:resourceType="formsPortal/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:created="{Date}2019-12-05T15:45:29.452+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-12-05T15:45:29.452+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="formsPortal/components/content/header">
+                <logo
+                    jcr:lastModified="{Date}2024-09-19T22:28:26.722-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/image"
+                    fileName="rsz_actualfullertonlogo.png"
+                    fileReference="/content/dam/csfu-logo.png">
+                    <file/>
+                </logo>
+                <text
+                    jcr:lastModified="{Date}2020-12-10T04:00:35.530-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="formsPortal/components/content/text"/>
+            </header>
+            <responsivegrid_436751876
+                jcr:created="{Date}2019-12-05T15:45:57.698+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-10-01T00:39:29.080-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true"/>
+            <footer
+                jcr:created="{Date}2019-12-05T15:46:01.651+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-12-05T15:46:01.651+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="formsPortal/components/content/footer"
+                editable="{Boolean}true"/>
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>
