@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     // tooltip display for icons
-    /*$('[tool-tip-toggle="tooltip-icon"]').tooltip({
+    $('[tool-tip-toggle="tooltip-icon"]').tooltip({
         placement: 'top'
-    });*/
+    });
 
     if (window.matchMedia("(max-width: 767px)").matches) {
         $('#workflow-delegation-dataTable').DataTable({
