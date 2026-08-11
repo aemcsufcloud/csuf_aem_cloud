@@ -80,7 +80,6 @@ public class CSUFRequestFilter implements Filter {
 			String formAccessType = null;
 			resolver = slingRequest.getResourceResolver();
 			session = resolver.adaptTo(Session.class);
-
 			String ldapName = inboxService.getldapAccountName(session, resolver);
 			logger.info("ldapName : {}", ldapName);
 			if (StringUtils.isBlank(ldapName)) {
