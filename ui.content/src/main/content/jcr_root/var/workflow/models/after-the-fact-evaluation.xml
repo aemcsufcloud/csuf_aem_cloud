@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    jcr:uuid="b2b89325-140e-44b9-bf9d-54f63978f545"
+    sling:resourceType="cq/workflow/components/model"
+    description="No Description"
+    title="After the Fact Evaluation">
+    <variables jcr:primaryType="nt:unstructured">
+        <EvalFlag
+            jcr:primaryType="nt:unstructured"
+            name="EvalFlag"
+            type="java.lang.String"/>
+        <InitiatorUserID
+            jcr:primaryType="nt:unstructured"
+            name="InitiatorUserID"
+            type="java.lang.String"/>
+        <BCCEmailAddress
+            jcr:primaryType="nt:unstructured"
+            defaultValue="shreyas.manjunatha@thoughtfocus.com"
+            name="BCCEmailAddress"
+            type="java.lang.String"/>
+        <FacultyUserID
+            jcr:primaryType="nt:unstructured"
+            name="FacultyUserID"
+            type="java.lang.String"/>
+        <StageIndicator
+            jcr:primaryType="nt:unstructured"
+            name="StageIndicator"
+            type="java.lang.String"/>
+        <InitiatorName
+            jcr:primaryType="nt:unstructured"
+            name="InitiatorName"
+            type="java.lang.String"/>
+        <AdditionalReviewerEmailId
+            jcr:primaryType="nt:unstructured"
+            name="AdditionalReviewerEmailId"
+            type="java.lang.String"/>
+        <FacultyEmail
+            jcr:primaryType="nt:unstructured"
+            name="FacultyEmail"
+            type="java.lang.String"/>
+        <sendBackFlag
+            jcr:primaryType="nt:unstructured"
+            name="sendBackFlag"
+            type="java.lang.String"/>
+        <AdditionalReviewerName
+            jcr:primaryType="nt:unstructured"
+            name="AdditionalReviewerName"
+            type="java.lang.String"/>
+        <FacultyName
+            jcr:primaryType="nt:unstructured"
+            name="FacultyName"
+            type="java.lang.String"/>
+        <ChairDeptEmail
+            jcr:primaryType="nt:unstructured"
+            name="ChairDeptEmail"
+            type="java.lang.String"/>
+        <InitiatorFlag
+            jcr:primaryType="nt:unstructured"
+            name="InitiatorFlag"
+            type="java.lang.String"/>
+        <formSubmittedData
+            jcr:primaryType="nt:unstructured"
+            name="formSubmittedData"
+            type="org.w3c.dom.Document"/>
+        <ChairDeptName
+            jcr:primaryType="nt:unstructured"
+            name="ChairDeptName"
+            type="java.lang.String"/>
+        <InitiatorEmail
+            jcr:primaryType="nt:unstructured"
+            name="InitiatorEmail"
+            type="java.lang.String"/>
+        <EmailSubject
+            jcr:primaryType="nt:unstructured"
+            name="EmailSubject"
+            type="java.lang.String"/>
+        <ChairUserID
+            jcr:primaryType="nt:unstructured"
+            name="ChairUserID"
+            type="java.lang.String"/>
+        <SenderEmail
+            jcr:primaryType="nt:unstructured"
+            defaultValue="academichr@fullerton.edu"
+            name="SenderEmail"
+            type="java.lang.String"/>
+        <AdditionalReviewerUserId
+            jcr:primaryType="nt:unstructured"
+            name="AdditionalReviewerUserId"
+            type="java.lang.String"/>
+    </variables>
+    <metaData
+        cq:generatingPage="/conf/global/settings/workflow/models/after-the-fact-evaluation/jcr:content"
+        cq:lastModified="{Long}1719985891930"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            title="Save Workflow Instance History - Start"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                PROCESS_ARGS="Start of the Workflow Instance"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Set Variable for Initiator Flag"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;formSubmittedData&quot;\,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;\,&quot;mappingValue&quot;:&quot;Data.xml&quot;},{&quot;variableName&quot;:&quot;InitiatorFlag&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorFlag&quot;},{&quot;variableName&quot;:&quot;EvalFlag&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/EvalFlag&quot;}]"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set EvalFlag to True"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                PROCESS_ARGS="afData/afBoundData/FacultyAssignedTimeAgreement/EvalFlag,True"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node3>
+        <node4
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node4>
+        <node5
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5>
+        <node6
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Set Variable for Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;formSubmittedData&quot;\,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;\,&quot;mappingValue&quot;:&quot;Data.xml&quot;},{&quot;variableName&quot;:&quot;StageIndicator&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;ToEvalInitiator&quot;},{&quot;variableName&quot;:&quot;EmailSubject&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/EmailSubject&quot;},{&quot;variableName&quot;:&quot;FacultyName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyName&quot;},{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyEmail&quot;},{&quot;variableName&quot;:&quot;FacultyUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyUserID&quot;},{&quot;variableName&quot;:&quot;InitiatorName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorName&quot;},{&quot;variableName&quot;:&quot;InitiatorUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorUserId&quot;},{&quot;variableName&quot;:&quot;InitiatorEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorEmail&quot;}]"/>
+        </node6>
+        <node7
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set StageIndicator to ToEvalInitiator"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                PROCESS_ARGS="afData/afBoundData/FacultyAssignedTimeAgreement/StageIndicator,ToEvalInitiator"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node7>
+        <node8
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Hardcoded Emails"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;InitiatorEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;}]"/>
+        </node8>
+        <node9
+            jcr:primaryType="cq:WorkflowNode"
+            description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+            title="Send Email to Initiator"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                bccAddressType="Variable"
+                bccAddressValue="BCCEmailAddress"
+                ccAddressType="Literal"
+                emailSubject="EmailSubject"
+                fromAddressType="Variable"
+                fromAddressValue="SenderEmail"
+                hiddenCheckbox="false"
+                hiddenIsFormsAsset="false"
+                Key="initiatorName"
+                PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                PROCESS_AUTO_ADVANCE="true"
+                subjectType="Variable"
+                templatemetadatatype="Variable"
+                templatePath="/etc/notification/email/csuf/Faculty_Reassigned_Time_After_The_Fact/Faculty_Reassigned_Time_After_The_Fact_Initiator.txt"
+                toAddressType="Variable"
+                toAddressValue="InitiatorEmail"
+                Value="InitiatorName"/>
+        </node9>
+        <node10
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save Before Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node10>
+        <node11
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save Before Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="Before Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node11>
+        <node12
+            jcr:primaryType="cq:WorkflowNode"
+            description="Create and assign a task based on an adaptive form, non-interactive PDF, or interactive communication"
+            title="Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                AF_PATH="/content/dam/formsanddocuments/faculty-assigned-time-agreement/faculty-assigned-time-agreement"
+                ALLOW_OUT_OF_OFFICE="false"
+                allowExplicitSharing="false"
+                allowInboxSharing="false"
+                DELEGATE_TO="workflow-users"
+                DUEDATE_UNIT="OFF"
+                DUEDATE_VALUE="[,]"
+                DYNAMIC_ASSIGNEE="[com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser,com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser]"
+                FORM_RESOLUTION="PATH"
+                FORM_TYPE="AF"
+                HISTORY_DOR="READONLY_AF"
+                HTML_EMAIL_TEMPLATE_LOCATION="/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt"
+                icDataSourceType="PROVIDEDATADOCUMENT"
+                INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                IS_ATTACHMENT_ALLOWED="false"
+                IS_COMMENT_ALLOWED="true"
+                IS_NEXT_STEP_DATA_ALLOWED="true"
+                IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                IS_VIEW_ATTACHMENT_NOT_ALLOWED="false"
+                OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                PARTICIPANT="workflow-users"
+                PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                PROCESS_AUTO_ADVANCE="false"
+                PROCESS_PARTICIPANT_TYPE="dynamic"
+                PROVIDE_METADATA="true"
+                ROUTE_PROPERTYNAME="actionTakenByInitiator"
+                SHOW_ACTION="true"
+                SHOW_ASSIGNEE="true"
+                SHOW_COMMENT="true"
+                SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                SHOW_RESET="false"
+                SHOW_SAVE="false"
+                SHOW_SUBMIT="true"
+                STATIC_ASSIGNEE="jluzzi"
+                SUBTYPE="forms:assigntask"
+                TASK_PRIORITY="MEDIUM"
+                TIMEOUT_HANDLER="[,]"
+                USER_METADATA_RESOURCE="[,]"
+                WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                workflowStage="[,]"/>
+        </node12>
+        <node13
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save After Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="After Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node13>
+        <node14
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save After Initiator Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node14>
+        <node15
+            jcr:primaryType="cq:WorkflowNode"
+            description="A no operation process"
+            title="No Operation"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/libs/workflow/scripts/noop.ecma"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node15>
+        <node16
+            jcr:primaryType="cq:WorkflowNode"
+            description="A no operation process"
+            title="No Operation"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/libs/workflow/scripts/noop.ecma"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node16>
+        <node17
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Set Variable for Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;formSubmittedData&quot;\,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;\,&quot;mappingValue&quot;:&quot;Data.xml&quot;},{&quot;variableName&quot;:&quot;StageIndicator&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;ToEvalFaculty&quot;},{&quot;variableName&quot;:&quot;EmailSubject&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/EmailSubject&quot;},{&quot;variableName&quot;:&quot;FacultyName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyName&quot;},{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyEmail&quot;},{&quot;variableName&quot;:&quot;FacultyUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyUserID&quot;},{&quot;variableName&quot;:&quot;InitiatorName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorName&quot;},{&quot;variableName&quot;:&quot;InitiatorUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorUserId&quot;},{&quot;variableName&quot;:&quot;InitiatorEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/InitiatorEmail&quot;}]"/>
+        </node17>
+        <node18
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set StageIndicator to ToEvalFaculty"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                PROCESS_ARGS="afData/afBoundData/FacultyAssignedTimeAgreement/StageIndicator,ToEvalFaculty"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node18>
+        <node19
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Hardcoded Email"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;ChairDeptEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;}]"/>
+        </node19>
+        <node20
+            jcr:primaryType="cq:WorkflowNode"
+            description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+            title="Send Email to Faculty"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                bccAddressType="Variable"
+                bccAddressValue="BCCEmailAddress"
+                ccAddressType="Literal"
+                emailSubject="EmailSubject"
+                fromAddressType="Variable"
+                fromAddressValue="SenderEmail"
+                hiddenCheckbox="false"
+                hiddenIsFormsAsset="false"
+                Key="FacultyName"
+                PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                PROCESS_AUTO_ADVANCE="true"
+                subjectType="Variable"
+                templatemetadatatype="Variable"
+                templatePath="/etc/notification/email/csuf/Faculty_Reassigned_Time_After_The_Fact/Faculty_Reassigned_Time_After_The_Fact_ToFaculty.txt"
+                toAddressType="Variable"
+                toAddressValue="FacultyEmail"
+                Value="FacultyName"/>
+        </node20>
+        <node21
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save Before Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node21>
+        <node22
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save Before Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="Before Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node22>
+        <node23
+            jcr:primaryType="cq:WorkflowNode"
+            description="Create and assign a task based on an adaptive form, non-interactive PDF, or interactive communication"
+            title="Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                AF_PATH="/content/dam/formsanddocuments/faculty-assigned-time-agreement/faculty-assigned-time-agreement"
+                ALLOW_OUT_OF_OFFICE="false"
+                allowExplicitSharing="false"
+                allowInboxSharing="false"
+                DELEGATE_TO="workflow-users"
+                DUEDATE_UNIT="OFF"
+                DUEDATE_VALUE="[,]"
+                DYNAMIC_ASSIGNEE="[com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser,com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser]"
+                FORM_RESOLUTION="PATH"
+                FORM_TYPE="AF"
+                HISTORY_DOR="READONLY_AF"
+                HTML_EMAIL_TEMPLATE_LOCATION="/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt"
+                icDataSourceType="PROVIDEDATADOCUMENT"
+                INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                IS_ATTACHMENT_ALLOWED="false"
+                IS_COMMENT_ALLOWED="true"
+                IS_NEXT_STEP_DATA_ALLOWED="true"
+                IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                IS_VIEW_ATTACHMENT_NOT_ALLOWED="false"
+                OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                PARTICIPANT="workflow-users"
+                PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                PROCESS_AUTO_ADVANCE="false"
+                PROCESS_PARTICIPANT_TYPE="dynamic"
+                PROVIDE_METADATA="true"
+                ROUTE_PROPERTYNAME="actionTakenByFaculty"
+                SHOW_ACTION="true"
+                SHOW_ASSIGNEE="true"
+                SHOW_COMMENT="true"
+                SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                SHOW_RESET="false"
+                SHOW_SAVE="false"
+                SHOW_SUBMIT="true"
+                STATIC_ASSIGNEE="jluzzi"
+                SUBTYPE="forms:assigntask"
+                TASK_PRIORITY="MEDIUM"
+                TIMEOUT_HANDLER="[,]"
+                USER_METADATA_RESOURCE="[,]"
+                WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                workflowStage="[,]"/>
+        </node23>
+        <node24
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save After Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="After Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node24>
+        <node25
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save After Faculty Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node25>
+        <node26
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Set Variable for Chair Department Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;formSubmittedData&quot;\,&quot;mappingType&quot;:&quot;RELATIVE_TO_PAYLOAD&quot;\,&quot;mappingValue&quot;:&quot;Data.xml&quot;},{&quot;variableName&quot;:&quot;EmailSubject&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/EmailSubject&quot;},{&quot;variableName&quot;:&quot;FacultyName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/Faculty2PrintName&quot;},{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyEmail&quot;},{&quot;variableName&quot;:&quot;ChairDeptName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/Chair1PrintName&quot;},{&quot;variableName&quot;:&quot;ChairDeptEmail&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/ChairEmail&quot;},{&quot;variableName&quot;:&quot;StageIndicator&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;ToEvalChair&quot;},{&quot;variableName&quot;:&quot;ChairUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/ChairUserID&quot;},{&quot;variableName&quot;:&quot;FacultyUserID&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/FacultyUserID&quot;},{&quot;variableName&quot;:&quot;AdditionalReviewerName&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/AdditionalReviewerName&quot;},{&quot;variableName&quot;:&quot;AdditionalReviewerEmailId&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/AdditionalReviewerEmailId&quot;},{&quot;variableName&quot;:&quot;AdditionalReviewerUserId&quot;\,&quot;mappingType&quot;:&quot;XPATH&quot;\,&quot;mappingValue&quot;:&quot;formSubmittedData:afData/afBoundData/FacultyAssignedTimeAgreement/AdditionalReviewerUserId&quot;}]"/>
+        </node26>
+        <node27
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Hardcoded Email"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;ChairDeptEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;AdditionalReviewerEmailId&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;}]"/>
+        </node27>
+        <node28
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set StageIndicator to ToEvalChair"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                PROCESS_ARGS="afData/afBoundData/FacultyAssignedTimeAgreement/StageIndicator,ToEvalChair"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node28>
+        <node29
+            jcr:primaryType="cq:WorkflowNode"
+            description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+            title="Send Email to Chair Department"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                bccAddressType="Variable"
+                bccAddressValue="BCCEmailAddress"
+                ccAddressType="Literal"
+                emailSubject="EmailSubject"
+                fromAddressType="Variable"
+                fromAddressValue="SenderEmail"
+                hiddenCheckbox="false"
+                hiddenIsFormsAsset="false"
+                Key="ChairDeptName"
+                PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                PROCESS_AUTO_ADVANCE="true"
+                subjectType="Variable"
+                templatemetadatatype="Variable"
+                templatePath="/etc/notification/email/csuf/Faculty_Reassigned_Time_After_The_Fact/Faculty_Reassigned_Time_After_The_Fact_ToChair.txt"
+                toAddressType="Variable"
+                toAddressValue="ChairDeptEmail"
+                Value="ChairDeptName"/>
+        </node29>
+        <node30
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save Before Chair Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node30>
+        <node31
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save Before Chair Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="Before Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node31>
+        <node32
+            jcr:primaryType="cq:WorkflowNode"
+            description="Create and assign a task based on an adaptive form, non-interactive PDF, or interactive communication"
+            title="Chair Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                AF_PATH="/content/dam/formsanddocuments/faculty-assigned-time-agreement/faculty-assigned-time-agreement"
+                ALLOW_OUT_OF_OFFICE="false"
+                allowExplicitSharing="false"
+                allowInboxSharing="false"
+                DELEGATE_TO="workflow-users"
+                DUEDATE_UNIT="OFF"
+                DUEDATE_VALUE="[,]"
+                DYNAMIC_ASSIGNEE="[com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser,com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser]"
+                FORM_RESOLUTION="PATH"
+                FORM_TYPE="AF"
+                HISTORY_DOR="READONLY_AF"
+                HTML_EMAIL_TEMPLATE_LOCATION="/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt"
+                icDataSourceType="PROVIDEDATADOCUMENT"
+                INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                IS_ATTACHMENT_ALLOWED="false"
+                IS_COMMENT_ALLOWED="true"
+                IS_NEXT_STEP_DATA_ALLOWED="true"
+                IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                IS_VIEW_ATTACHMENT_NOT_ALLOWED="false"
+                OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                PARTICIPANT="workflow-users"
+                PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                PROCESS_AUTO_ADVANCE="false"
+                PROCESS_PARTICIPANT_TYPE="dynamic"
+                PROVIDE_METADATA="true"
+                ROUTE_PROPERTYNAME="actionTakenByChair"
+                ROUTES="\{&quot;Route_Label&quot;:&quot;Send Back to Faculty&quot;,&quot;Route_Icon_Name&quot;:&quot;&quot;}"
+                SHOW_ACTION="true"
+                SHOW_ASSIGNEE="true"
+                SHOW_COMMENT="true"
+                SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                SHOW_RESET="false"
+                SHOW_SAVE="false"
+                SHOW_SUBMIT="true"
+                STATIC_ASSIGNEE="jluzzi"
+                SUBTYPE="forms:assigntask"
+                TASK_PRIORITY="MEDIUM"
+                TIMEOUT_HANDLER="[,]"
+                USER_METADATA_RESOURCE="[,]"
+                WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                workflowStage="[,]"/>
+        </node32>
+        <node33
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save After Chair Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="After Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node33>
+        <node34
+            jcr:primaryType="cq:WorkflowNode"
+            title="DB Save After Chair Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node34>
+        <node35
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node35>
+        <node36
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node36>
+        <node37
+            jcr:primaryType="cq:WorkflowNode"
+            description="A no operation process"
+            title="No Operation"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/libs/workflow/scripts/noop.ecma"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node37>
+        <node38
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Goto Step after Chair Rejection"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                expression="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;sendBackFlag&quot;,&quot;displayName&quot;:&quot;sendBackFlag&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/sendBackFlag/&quot;,&quot;name&quot;:&quot;sendBackFlag&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;IS_EMPTY&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:null}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                TARGET_NODE_ID="node16"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/after-the-fact-evaluation/jcr:content/flow/noopprocess"/>
+        </node38>
+        <node39
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node39>
+        <node40
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node40>
+        <node41
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Set Variable for Additional Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="\{&quot;variableName&quot;:&quot;StageIndicator&quot;,&quot;mappingType&quot;:&quot;LITERAL&quot;,&quot;mappingValue&quot;:&quot;ToEvalAdditionalReviewer&quot;}"/>
+        </node41>
+        <node42
+            jcr:primaryType="cq:WorkflowNode"
+            title="Set Variable for Additional Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.aem.web.models.workflow.SetValueinDataXml"
+                PROCESS_ARGS="afData/afBoundData/FacultyAssignedTimeAgreement/StageIndicator,ToEvalAdditionalReviewer"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node42>
+        <node43
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Hardcoded Email before Alternate Reviewer Step"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="\{&quot;variableName&quot;:&quot;AdditionalReviewerEmailId&quot;,&quot;mappingType&quot;:&quot;LITERAL&quot;,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;}"/>
+        </node43>
+        <node44
+            jcr:primaryType="cq:WorkflowNode"
+            description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+            title="Send Email to Additional Reviewer"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                bccAddressType="Variable"
+                bccAddressValue="BCCEmailAddress"
+                ccAddressType="Literal"
+                emailSubject="EmailSubject"
+                fromAddressType="Variable"
+                fromAddressValue="SenderEmail"
+                hiddenCheckbox="false"
+                hiddenIsFormsAsset="false"
+                Key="AdditionalReviewerName"
+                PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                PROCESS_AUTO_ADVANCE="true"
+                subjectType="Variable"
+                templatemetadatatype="Variable"
+                templatePath="/etc/notification/email/csuf/Faculty_Reassigned_Time_After_The_Fact/Faculty_Reassigned_Time_After_The_Fact_ToAdditionalReviewer.txt"
+                toAddressType="Variable"
+                toAddressValue="AdditionalReviewerEmailId"
+                Value="AdditionalReviewerName"/>
+        </node44>
+        <node45
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save Before Additional Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="Before Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node45>
+        <node46
+            jcr:primaryType="cq:WorkflowNode"
+            description="Create and assign a task based on an adaptive form, non-interactive PDF, or interactive communication"
+            title="Alternate Approver Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                AF_PATH="/content/dam/formsanddocuments/faculty-assigned-time-agreement/faculty-assigned-time-agreement"
+                ALLOW_OUT_OF_OFFICE="false"
+                allowExplicitSharing="false"
+                allowInboxSharing="false"
+                DELEGATE_TO="workflow-users"
+                DUEDATE_UNIT="OFF"
+                DUEDATE_VALUE="[,]"
+                DYNAMIC_ASSIGNEE="[com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser,com.thoughtfocus.aem.csu.core.participantchooser.FacultyReassignedTimePartcipantChooser]"
+                FORM_RESOLUTION="PATH"
+                FORM_TYPE="AF"
+                HISTORY_DOR="READONLY_AF"
+                HTML_EMAIL_TEMPLATE_LOCATION="/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt"
+                icDataSourceType="PROVIDEDATADOCUMENT"
+                INPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                INPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                IS_ATTACHMENT_ALLOWED="false"
+                IS_COMMENT_ALLOWED="true"
+                IS_NEXT_STEP_DATA_ALLOWED="true"
+                IS_PREVIOUS_STEP_DATA_ALLOWED="true"
+                IS_VIEW_ATTACHMENT_NOT_ALLOWED="false"
+                OUTPUT_COMBINED_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                OUTPUT_COMBINED_FORM_ATTACHMENTS="FOLDER_PAYLOAD:Attachments"
+                PARTICIPANT="workflow-users"
+                PROCESS="com.adobe.fd.workspace.step.service.AssignFormStep"
+                PROCESS_AUTO_ADVANCE="false"
+                PROCESS_PARTICIPANT_TYPE="dynamic"
+                PROVIDE_METADATA="true"
+                ROUTE_PROPERTYNAME="actionTakenByAdditionalReviewer"
+                ROUTES="\{&quot;Route_Label&quot;:&quot;Send Back to Faculty&quot;,&quot;Route_Icon_Name&quot;:&quot;&quot;}"
+                SHOW_ACTION="true"
+                SHOW_ASSIGNEE="true"
+                SHOW_COMMENT="true"
+                SHOW_DOCUMENT_OF_COMPLETED_TASK="true"
+                SHOW_PRE_STEP_COMMENT_ATTACHMENT="true"
+                SHOW_RESET="false"
+                SHOW_SAVE="false"
+                SHOW_SUBMIT="true"
+                SUBTYPE="forms:assigntask"
+                TASK_PRIORITY="MEDIUM"
+                TIMEOUT_HANDLER="[,]"
+                USER_METADATA_RESOURCE="[,]"
+                WORK_ITEM_TYPE="AF_ASSIGN_STEP"
+                workflowStage="[,]"/>
+        </node46>
+        <node47
+            jcr:primaryType="cq:WorkflowNode"
+            title="Workflow History Save After Additional Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementWFHistoryDB"
+                PROCESS_ARGS="After Assign Task"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node47>
+        <node48
+            jcr:primaryType="cq:WorkflowNode"
+            title="Saving Data into DB after additional Review"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.FacultyAssignedTimeAgreementDB"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node48>
+        <node49
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node49>
+        <node50
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node50>
+        <node51
+            jcr:primaryType="cq:WorkflowNode"
+            description="A no operation process"
+            title="No Operation"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/libs/workflow/scripts/noop.ecma"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node51>
+        <node52
+            jcr:primaryType="cq:WorkflowNode"
+            description="Goto Step"
+            title="Goto Step"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                expression="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;sendBackFlag&quot;,&quot;displayName&quot;:&quot;sendBackFlag&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/sendBackFlag/&quot;,&quot;name&quot;:&quot;sendBackFlag&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;IS_EMPTY&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:null}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+                PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                PROCESS_AUTO_ADVANCE="false"
+                TARGET_NODE_ID="node16"
+                TARGET_NODE_PATH="/conf/global/settings/workflow/models/after-the-fact-evaluation/jcr:content/flow/noopprocess"/>
+        </node52>
+        <node53
+            jcr:primaryType="cq:WorkflowNode"
+            description="A no operation process"
+            title="No Operation"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/libs/workflow/scripts/noop.ecma"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node53>
+        <node54
+            jcr:primaryType="cq:WorkflowNode"
+            description="Set value of variables"
+            title="Hardcoded Email"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.adobe.granite.workflow.core.process.SetVariableProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                variableMappings="[{&quot;variableName&quot;:&quot;InitiatorEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;FacultyEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;},{&quot;variableName&quot;:&quot;ChairDeptEmail&quot;\,&quot;mappingType&quot;:&quot;LITERAL&quot;\,&quot;mappingValue&quot;:&quot;shreyas.manjunatha@thoughtfocus.com&quot;}]"/>
+        </node54>
+        <node55
+            jcr:primaryType="cq:WorkflowNode"
+            description="Generate Document of Record"
+            title="Generate Document of Record"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                AF_PATH="/content/dam/formsanddocuments/faculty-assigned-time-agreement/faculty-assigned-time-agreement"
+                DOR_PATH="RELATIVE_PLOAD:Faculty_Assigned_Time_Agreement.pdf"
+                FORM_RESOLUTION="PATH"
+                INPUT_ATTACHMENT="FOLDER_PAYLOAD:Attachment"
+                INPUT_DATAXML="FOLDER_PAYLOAD:Data.xml"
+                LOCALE="en_US"
+                PROCESS="com.adobe.fd.workflow.dorGeneration.AFtoDORStep"
+                PROCESS_AUTO_ADVANCE="true"
+                WORK_ITEM_TYPE="AF_TO_DOR_STEP"/>
+        </node55>
+        <node56
+            jcr:primaryType="cq:WorkflowNode"
+            description="Use the email step to send an HTML email. For example, you can use the email step to send a document of record, adaptive form and interactive communication link, and a PDF document on completion of a workflow."
+            title="Send Final Email to Initiator"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                attachmentFileNameType="Literal"
+                attachmentName="Faculty_Assigned_Time_Agreement.pdf"
+                attachmentPathHiddenField="FOLDER_PAYLOAD:Faculty_Assigned_Time_Agreement.pdf"
+                bccAddressType="Variable"
+                bccAddressValue="BCCEmailAddress"
+                ccAddressType="Literal"
+                emailSubject="EmailSubject"
+                fromAddressType="Variable"
+                fromAddressValue="SenderEmail"
+                PROCESS="com.adobe.fd.workflow.email.SendEmailStep"
+                PROCESS_AUTO_ADVANCE="true"
+                subjectType="Variable"
+                templatePath="/etc/notification/email/csuf/Faculty_Reassigned_Time_After_The_Fact/Faculty_Reassigned_Time_After_The_Fact_Initiator_Final.txt"
+                toAddressType="[Variable,Variable,Variable]"
+                toAddressValue="[InitiatorEmail,FacultyEmail,ChairDeptEmail]"/>
+        </node56>
+        <node57
+            jcr:primaryType="cq:WorkflowNode"
+            title="Save DOR To Filenet"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.filenet.FacultyAssignedTimeAgreementDORFilenet"
+                PROCESS_ARGS="FATAAF"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node57>
+        <node58
+            jcr:primaryType="cq:WorkflowNode"
+            title="Save Workflow Instance History - End"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                PROCESS_ARGS="End of the Workflow Instance"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node58>
+        <node59
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node59>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule=""
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule=""
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule=""
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+        <node3_x0023_node4
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node3"
+            to="node4">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3_x0023_node4>
+        <node4_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;InitiatorFlag&quot;,&quot;displayName&quot;:&quot;InitiatorFlag&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/InitiatorFlag/&quot;,&quot;name&quot;:&quot;InitiatorFlag&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EQUALS_TO&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;STRING_LITERAL&quot;,&quot;value&quot;:&quot;true&quot;}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+            to="node6">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node6>
+        <node6_x0023_node7
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node6"
+            rule=""
+            to="node7">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6_x0023_node7>
+        <node7_x0023_node8
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node7"
+            rule=""
+            to="node8">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node7_x0023_node8>
+        <node8_x0023_node9
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node8"
+            rule=""
+            to="node9">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node8_x0023_node9>
+        <node9_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule=""
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node9_x0023_node10>
+        <node10_x0023_node11
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node10"
+            rule=""
+            to="node11">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10_x0023_node11>
+        <node11_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node11_x0023_node12>
+        <node12_x0023_node13
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node12"
+            rule=""
+            to="node13">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node12_x0023_node13>
+        <node13_x0023_node14
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node13"
+            rule=""
+            to="node14">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node13_x0023_node14>
+        <node14_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node14"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node14_x0023_node5>
+        <node4_x0023_node15
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;InitiatorFlag&quot;,&quot;displayName&quot;:&quot;InitiatorFlag&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/InitiatorFlag/&quot;,&quot;name&quot;:&quot;InitiatorFlag&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EQUALS_TO&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;STRING_LITERAL&quot;,&quot;value&quot;:&quot;false&quot;}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+            to="node15">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node15>
+        <node15_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node15"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node15_x0023_node5>
+        <node5_x0023_node16
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            rule=""
+            to="node16">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5_x0023_node16>
+        <node16_x0023_node17
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node16"
+            rule=""
+            to="node17">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node16_x0023_node17>
+        <node17_x0023_node18
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node17"
+            rule=""
+            to="node18">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node17_x0023_node18>
+        <node18_x0023_node19
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node18"
+            rule=""
+            to="node19">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node18_x0023_node19>
+        <node19_x0023_node20
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node19"
+            rule=""
+            to="node20">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node19_x0023_node20>
+        <node20_x0023_node21
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node20"
+            rule=""
+            to="node21">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node20_x0023_node21>
+        <node21_x0023_node22
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node21"
+            rule=""
+            to="node22">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node21_x0023_node22>
+        <node22_x0023_node23
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node22"
+            rule=""
+            to="node23">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node22_x0023_node23>
+        <node23_x0023_node24
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node23"
+            rule=""
+            to="node24">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node23_x0023_node24>
+        <node24_x0023_node25
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node24"
+            rule=""
+            to="node25">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node24_x0023_node25>
+        <node25_x0023_node26
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node25"
+            rule=""
+            to="node26">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node25_x0023_node26>
+        <node26_x0023_node27
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node26"
+            rule=""
+            to="node27">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node26_x0023_node27>
+        <node27_x0023_node28
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node27"
+            rule=""
+            to="node28">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node27_x0023_node28>
+        <node28_x0023_node29
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node28"
+            rule=""
+            to="node29">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node28_x0023_node29>
+        <node29_x0023_node30
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node29"
+            rule=""
+            to="node30">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node29_x0023_node30>
+        <node30_x0023_node31
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node30"
+            rule=""
+            to="node31">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node30_x0023_node31>
+        <node31_x0023_node32
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node31"
+            rule=""
+            to="node32">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node31_x0023_node32>
+        <node32_x0023_node33
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node32"
+            rule=""
+            to="node33">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node32_x0023_node33>
+        <node33_x0023_node34
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node33"
+            rule=""
+            to="node34">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node33_x0023_node34>
+        <node34_x0023_node35
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node34"
+            to="node35">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node34_x0023_node35>
+        <node35_x0023_node37
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node35"
+            rule="&#x9;function check() {&#xd;&#xa;    var adminAction = workflowData.getMetaDataMap().get(&quot;actionTakenByChair&quot;);&#xd;&#xa;&#x9;if (adminAction == &quot;Submit&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;&#x9;return false;&#xd;&#xa;&#x9;}&#xd;&#xa;&#x9;}"
+            to="node37">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node35_x0023_node37>
+        <node37_x0023_node36
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node37"
+            to="node36">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node37_x0023_node36>
+        <node35_x0023_node38
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node35"
+            rule="function check() {&#xd;&#xa;    var adminAction = workflowData.getMetaDataMap().get(&quot;actionTakenByChair&quot;);&#xd;&#xa;&#x9;if (adminAction == &quot;Send Back to Faculty&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;&#x9;return false;&#xd;&#xa;&#x9;}&#xd;&#xa;&#x9;}"
+            to="node38">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node35_x0023_node38>
+        <node38_x0023_node36
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node38"
+            to="node36">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node38_x0023_node36>
+        <node36_x0023_node39
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node36"
+            to="node39">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node36_x0023_node39>
+        <node39_x0023_node41
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node39"
+            rule="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;displayName&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/AdditionalReviewerUserId/&quot;,&quot;name&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;IS_NOT_EMPTY&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:null}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+            to="node41">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node39_x0023_node41>
+        <node41_x0023_node42
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node41"
+            rule=""
+            to="node42">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node41_x0023_node42>
+        <node42_x0023_node43
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node42"
+            rule=""
+            to="node43">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node42_x0023_node43>
+        <node43_x0023_node44
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node43"
+            rule=""
+            to="node44">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node43_x0023_node44>
+        <node44_x0023_node45
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node44"
+            rule=""
+            to="node45">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node44_x0023_node45>
+        <node45_x0023_node46
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node45"
+            rule=""
+            to="node46">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node45_x0023_node46>
+        <node46_x0023_node47
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node46"
+            rule=""
+            to="node47">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node46_x0023_node47>
+        <node47_x0023_node48
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node47"
+            rule=""
+            to="node48">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node47_x0023_node48>
+        <node48_x0023_node49
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node48"
+            to="node49">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node48_x0023_node49>
+        <node49_x0023_node51
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node49"
+            rule="function check() {&#xd;&#xa;    var adminAction = workflowData.getMetaDataMap().get(&quot;actionTakenByAdditionalReviewer&quot;);&#xd;&#xa;&#x9;if (adminAction == &quot;Submit&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;&#x9;return false;&#xd;&#xa;&#x9;}&#xd;&#xa;&#x9;}"
+            to="node51">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node49_x0023_node51>
+        <node51_x0023_node50
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node51"
+            to="node50">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node51_x0023_node50>
+        <node49_x0023_node52
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node49"
+            rule="function check() {&#xd;&#xa;    var adminAction = workflowData.getMetaDataMap().get(&quot;actionTakenByAdditionalReviewer&quot;);&#xd;&#xa;&#x9;if (adminAction == &quot;Send Back to Faculty&quot;) {&#xd;&#xa;        log.info(&quot;true&quot;);&#xd;&#xa;        return true;&#xd;&#xa;    }else{&#xd;&#xa;&#x9;return false;&#xd;&#xa;&#x9;}&#xd;&#xa;&#x9;}"
+            to="node52">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node49_x0023_node52>
+        <node52_x0023_node50
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node52"
+            to="node50">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node52_x0023_node50>
+        <node50_x0023_node40
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node50"
+            to="node40">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node50_x0023_node40>
+        <node39_x0023_node53
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node39"
+            rule="\{&quot;nodeName&quot;:&quot;ROOT&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;CONDITION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPARISON_EXPRESSION&quot;,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:{&quot;id&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;displayName&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;displayPath&quot;:&quot;workflow_variables/AdditionalReviewerUserId/&quot;,&quot;name&quot;:&quot;AdditionalReviewerUserId&quot;,&quot;parent&quot;:&quot;workflow_variables&quot;}}},{&quot;nodeName&quot;:&quot;OPERATOR&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;IS_EMPTY&quot;,&quot;value&quot;:null}},{&quot;nodeName&quot;:&quot;EXPRESSION&quot;,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;COMPONENT&quot;,&quot;value&quot;:null}}]},&quot;nested&quot;:false}}],&quot;isValid&quot;:true,&quot;enabled&quot;:true,&quot;version&quot;:1}"
+            to="node53">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node39_x0023_node53>
+        <node53_x0023_node40
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node53"
+            to="node40">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node53_x0023_node40>
+        <node40_x0023_node54
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node40"
+            rule=""
+            to="node54">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node40_x0023_node54>
+        <node54_x0023_node55
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node54"
+            rule=""
+            to="node55">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node54_x0023_node55>
+        <node55_x0023_node56
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node55"
+            rule=""
+            to="node56">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node55_x0023_node56>
+        <node56_x0023_node57
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node56"
+            rule=""
+            to="node57">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node56_x0023_node57>
+        <node57_x0023_node58
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node57"
+            rule=""
+            to="node58">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node57_x0023_node58>
+        <node58_x0023_node59
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node58"
+            to="node59">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node58_x0023_node59>
+    </transitions>
+</jcr:root>
