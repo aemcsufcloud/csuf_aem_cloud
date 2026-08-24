@@ -37,7 +37,9 @@ public class GetTaskDetailsFromProcessingInstanceServlet extends SlingSafeMethod
 		try {
 			String url = request.getParameter("url");
 			log.error("Pushpa="+url);
+			log.error("Pushpa test="+taskService.getTaskDetailsFromProcessingInstance(url));
 			out.write(taskService.getTaskDetailsFromProcessingInstance(url));
+			log.error("Pushpa="+taskService.getTaskDetailsFromProcessingInstance(url));
 		} catch (Exception e) {
 			log.error(Arrays.toString(e.getStackTrace()));
 		}
