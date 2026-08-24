@@ -81,6 +81,10 @@ public class InboxItemServiceImpl implements InboxItemService {
 	@Override
 	public JsonObject getInboxItemStepDetails(ResourceResolver resourceResolver, WorkflowSession wfSession,
 			String workItemId, String historyItemId) {
+		log.error("Mysore resourceResolver="+resourceResolver);
+		log.error("Mysore wfSession="+wfSession);
+		log.error("Mysore workItemId="+workItemId);
+		log.error("Mysore historyItemId="+historyItemId);
 		log.error("Pushpa inisde getInboxItemStepDetails="+workItemId);
 		try {
 			Session session = resourceResolver.adaptTo(Session.class);
