@@ -564,6 +564,7 @@ $(document).ready(function() {
             cache: false,
             dataType: "text",
             success: function(stepDetails) {
+				alert("stepDetails="+stepDetails);
                 if (stepDetails) {
                     stepDetails = JSON.parse(stepDetails);
                     //console.log("stepDetails : " + stepDetails);

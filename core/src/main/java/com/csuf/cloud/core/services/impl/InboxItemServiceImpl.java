@@ -81,15 +81,22 @@ public class InboxItemServiceImpl implements InboxItemService {
 	@Override
 	public JsonObject getInboxItemStepDetails(ResourceResolver resourceResolver, WorkflowSession wfSession,
 			String workItemId, String historyItemId) {
+		log.error("Pushpa inisde getInboxItemStepDetails");
 		try {
 			Session session = resourceResolver.adaptTo(Session.class);
 			JsonObject json = new JsonObject();
 			boolean isHistoryView = false, isCompleteView = false, isAssigneeAGroup = false, isDelegate = false;
 			WorkItem workItem = wfSession.getWorkItem(workItemId);
+			
+			log.error("Pushpa workItem="+workItem);
 
 			if (!StringUtils.isEmpty(historyItemId)) {
+				log.error("Pushpa historyItemId="+historyItemId);
+				
 				isHistoryView = true;
 			} else if (workItem != null) {
+				log.error("else condition Pushpa workItem="+workItem);
+				
 				if (workItem.getStatus().equals(Status.COMPLETE)) {
 					isCompleteView = true;
 
@@ -129,7 +136,7 @@ public class InboxItemServiceImpl implements InboxItemService {
 				default:
 					break;
 				}
-
+				
 				json.addProperty("formPath", formPath);
 				json.addProperty("workItemId", workItemId);
 				json.addProperty("isreadonlyform", isReadOnlyForm);
@@ -139,6 +146,8 @@ public class InboxItemServiceImpl implements InboxItemService {
 				json.addProperty("isCompleteView", isCompleteView);
 				json.addProperty("isHistoryView", isHistoryView);
 				json.addProperty("isDelegateView", isDelegate);
+				log.error(" Pushpa json="+json.toString());
+				
 				return json;
 			}
 		} catch (Exception e) {

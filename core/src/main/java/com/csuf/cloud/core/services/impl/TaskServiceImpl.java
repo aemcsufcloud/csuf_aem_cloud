@@ -1030,16 +1030,28 @@ public String getTaskDataOld(String workItemId) {
 	@Override
 	public String getTaskDetailsFromProcessingInstance(String url) throws IOException {
 		log.debug("enter getTaskDetailsFromProcessingInstance");
+		log.error("Pushpa getTaskDetailsFromProcessingInstance="+url);
 		HttpGet get = null;
 		CloseableHttpResponse response = null;
 		try (CloseableHttpClient httpclient = HttpClients.createDefault();) {
 			get = new HttpGet(processingConfig.processingUrl().concat(url));
+			
+			log.error("Pushpa get="+get);
+			
 			String auth = new StringBuffer(processingConfig.userName()).append(":")
 					.append(processingConfig.userSecurity()).toString();
+			log.error("Pushpa auth="+auth);
+			
 			byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII));
 			String authHeader = "Basic " + new String(encodedAuth);
+			
+			log.error("Pushpa authHeader="+authHeader);
+			
 			get.setHeader("AUTHORIZATION", authHeader);
 			response = httpclient.execute(get);
+			
+			log.error("Pushpa response="+response);
+			
 			if (null != response && response.getStatusLine().getStatusCode() == 200) {
 				return EntityUtils.toString(response.getEntity());
 			}
