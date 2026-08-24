@@ -1053,6 +1053,8 @@ public String getTaskDataOld(String workItemId) {
 			log.error("Pushpa response="+response);
 			
 			if (null != response && response.getStatusLine().getStatusCode() == 200) {
+				log.error("Anagha Inside Method="+response);
+				log.error("Anagha Inside Method="+response.getStatusLine().getStatusCode());
 				return EntityUtils.toString(response.getEntity());
 			}
 		} catch (IOException e) {
