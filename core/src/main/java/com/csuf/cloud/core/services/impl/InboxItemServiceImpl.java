@@ -86,9 +86,22 @@ public class InboxItemServiceImpl implements InboxItemService {
 		log.error("Mysore workItemId="+workItemId);
 		log.error("Mysore historyItemId="+historyItemId);
 		log.error("Pushpa inisde getInboxItemStepDetails="+workItemId);
+		
+		
+		
 		try {
 			Session session = resourceResolver.adaptTo(Session.class);
 			log.error("Pushpa session="+session);
+			
+			
+			// Diagnostic logs - added only for troubleshooting
+				log.error("===== WORKITEM DEBUG START =====");
+				log.error("Delhi WORKITEM ID = {}", workItemId);
+				log.error("Delhi JCR SESSION USER = {}", session != null ? session.getUserID() : "NULL");
+				log.error("Delhi NODE EXISTS = {}", session != null && session.nodeExists(workItemId));
+				log.error("Delhi WF SESSION = {}", wfSession);
+				log.error("===== WORKITEM DEBUG END =====");
+						
 			JsonObject json = new JsonObject();
 			boolean isHistoryView = false, isCompleteView = false, isAssigneeAGroup = false, isDelegate = false;
 			WorkItem workItem = wfSession.getWorkItem(workItemId);
