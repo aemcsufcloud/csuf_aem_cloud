@@ -1035,9 +1035,7 @@ public String getTaskDataOld(String workItemId) {
 		CloseableHttpResponse response = null;
 		try (CloseableHttpClient httpclient = HttpClients.createDefault();) {
 			get = new HttpGet(processingConfig.processingUrl().concat(url));
-			
 			log.error("Pushpa get="+get);
-			
 			String auth = new StringBuffer(processingConfig.userName()).append(":")
 					.append(processingConfig.userSecurity()).toString();
 			log.error("Pushpa auth="+auth);
