@@ -557,17 +557,24 @@ function getStudentData() {
 						//userId = 'juwairiahansari';
                         $.ajax({
 
-                            type: 'GET',
-
+                            /*type: 'GET',
                             url: "/bin/getCourseInfoSpringFallSessionForTST",
-
-
-
                             data: {
                                 userId: userId,
                                 term: term,
                                 typeOfWithdrawal: typeOfWithdrawal,
                                 typeOfForm:"regular"
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+					        type: 'GET',
+							data: {
+								path: "getCourseInfoSpringFallSessionForTST",
+								userId: "joelmoreno",
+								term: term,
+                                typeOfWithdrawal: typeOfWithdrawal,
+                                typeOfForm:"regular"
+								
                             },
 
                             dataType: 'json',
