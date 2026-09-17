@@ -3,6 +3,262 @@
  * @this currentComponent
  * @param {scope} scope in which code inside function will be executed.
  */
+ 
+ 
+ 
+function showErrorModal(errorHeading,errorMsg){
+
+		var modal= document.getElementById("errorPopup");
+
+    	var modalHeaderMsg = document.getElementById("modalText");
+    	modalHeaderMsg.innerHTML = "";
+    	modalHeaderMsg.innerHTML = errorHeading;
+
+
+		//Body
+		var para = document.getElementById("para");
+		para.innerHTML = "";
+		para.innerHTML = errorMsg;
+
+
+		var footerModal = document.getElementById("errorPopup-footer");
+		var okButton = document.createElement("input");
+		okButton.type = "button";
+		okButton.setAttribute("class", "okBtn");
+		//okButton.id = "okBtn";
+		okButton.value = "Ok";
+		okButton.onclick = function(event) {
+		modal.style.display = "none";                                  
+		};
+		footerModal.appendChild(okButton);
+		modal.style.display = "block";
+}
+
+function getEmailAddress(){
+    var sampleEmail = "swathi.kumari@thoughtfocus.com";
+    return sampleEmail;
+}
+
+(function(){
+
+function launchAIAssistantPopup(aiUrl){
+
+if(document.getElementById("aiAssistantPopup")) return;
+
+/* CSS */
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+.ai-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+
+/* THIS BLURS THE PAGE */
+backdrop-filter: blur(6px);
+background:rgba(0,0,0,0.25);
+
+z-index:99999;
+animation:fadeIn 0.4s ease;
+}
+
+.ai-popup-card{
+width:420px;
+padding:35px;
+border-radius:16px;
+text-align:center;
+
+background:white;
+color:#333;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.35);
+
+font-family:Segoe UI,sans-serif;
+
+animation:popupSlide 0.5s ease;
+
+position:relative;
+}
+
+/* AI icon */
+
+.ai-icon{
+font-size:48px;
+margin-bottom:10px;
+animation:aiPulse 2s infinite;
+}
+
+/* title */
+
+.ai-popup-card h2{
+margin:10px 0 15px;
+color:#00274C;
+}
+
+/* text */
+
+.ai-message{
+font-size:15px;
+line-height:1.5;
+}
+
+/* highlight */
+
+.ai-stats{
+margin-top:15px;
+color:#FF7900;
+font-weight:600;
+}
+
+.ai-stats span{
+display:block;
+font-size:13px;
+opacity:0.7;
+}
+
+/* primary button */
+
+.ai-btn-primary{
+display:block;
+margin-top:20px;
+padding:13px;
+border-radius:8px;
+
+text-decoration:none;
+font-weight:600;
+
+color:white;
+
+background:#FF7900;
+
+transition:all 0.25s ease;
+}
+
+.ai-btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(255,121,0,0.6);
+}
+
+/* secondary button */
+
+.ai-btn-secondary{
+margin-top:12px;
+background:none;
+border:none;
+color:#00274C;
+font-weight:600;
+cursor:pointer;
+}
+
+/* close icon */
+
+.ai-close{
+position:absolute;
+top:12px;
+right:16px;
+cursor:pointer;
+font-size:18px;
+color:#888;
+}
+
+.ai-close:hover{
+color:#000;
+}
+
+/* animations */
+
+@keyframes popupSlide{
+from{
+transform:translateY(30px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes aiPulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+`;
+
+document.head.appendChild(style);
+
+/* HTML */
+
+const popup=document.createElement("div");
+
+popup.id="aiAssistantPopup";
+popup.className="ai-overlay";
+
+popup.innerHTML=`
+
+<div class="ai-popup-card">
+
+<div class="ai-close">✕</div>
+
+<div class="ai-icon">🤖</div>
+
+<h2>Meet Your AI Form Assistant</h2>
+
+<p class="ai-message">
+<strong>Hey Titan! 👋</strong><br><br>
+Filling forms just got easier. I'm your new
+<b>AI assistant</b> and I can help you complete your
+<b>Student Course Withdrawal Form</b> in seconds.
+</p>
+
+<div class="ai-stats">
+⚡ Faster • Smart • Easy
+<span>Average completion time: 30 seconds</span>
+</div>
+
+<a class="ai-btn-primary" href="${aiUrl}">
+🚀 Try AI Assistant
+</a>
+
+<button class="ai-btn-secondary">
+Continue in AEM Form
+</button>
+
+</div>
+
+`;
+
+document.body.appendChild(popup);
+
+/* close logic */
+
+popup.querySelector(".ai-close").onclick=closePopup;
+popup.querySelector(".ai-btn-secondary").onclick=closePopup;
+
+function closePopup(){
+popup.remove();
+}
+
+}
+
+window.launchAIAssistantPopup=launchAIAssistantPopup;
+
+})();
+
+
 student_course_withdrawal_student_course_withdrawal.generated_guideRootPanel_init0 = function (scope) {
     with(this) {
         with(scope) {
@@ -553,7 +809,7 @@ function getStudentData() {
                         
                         var userId = userValue; 
                         var typeOfWithdrawal = typeOfForm.value;
-                        var term = "2263"; // changed from 2237 to 2243 on 01112024                  
+                        var term = "2267"; // changed from 2237 to 2243 on 01112024                  
 						//userId = 'juwairiahansari';
                         $.ajax({
 
@@ -862,7 +1118,7 @@ student_course_withdrawal_student_course_withdrawal.generated_typeOfForm_valueCo
                         var userId = userValue;
                       	//userId = "juwairiahansari";
                         var typeOfWithdrawal = typeOfForm.value;
-                        var term = "2263"; // changed from 2237 to 2243 on 01112024    
+                        var term = "2267"; // changed from 2237 to 2243 on 01112024    
                 
                         $.ajax({
 							
