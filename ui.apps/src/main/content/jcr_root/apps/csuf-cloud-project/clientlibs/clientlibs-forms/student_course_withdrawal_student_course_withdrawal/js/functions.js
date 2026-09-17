@@ -472,9 +472,13 @@ student_course_withdrawal_student_course_withdrawal.generated_studentUserid_init
  * @param {scope} scope in which code inside function will be executed.
  */
 student_course_withdrawal_student_course_withdrawal.generated_withdrawalInstructionButton_click0 = function (scope) {
+	alert("here");
     with(this) {
+		alert("here1");
         with(scope) {
+			alert("here2");
             if (studentAgreement.value === '' || studentAgreement.value === null) {
+				alert("here3");
     showErrorModal("Alert!","Please accept that you have read and understood the process of medical and non-medical withdrawal");
     this.visible = true;
     medInstructionsPanel.visible = true;
@@ -854,19 +858,26 @@ student_course_withdrawal_student_course_withdrawal.generated_typeOfForm_valueCo
                         var term = "2263"; // changed from 2237 to 2243 on 01112024    
                 
                         $.ajax({
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+					        type: 'GET',
+							data: {
+								path: "getCourseInfoSpringFallSessionForTST",
+								userId: "joelmoreno",
+								term: term,
+                                typeOfWithdrawal: typeOfWithdrawal,
+                                typeOfForm:"regular"
+								
+                            },
 
-                            type: 'GET',
-
-                            url: "/bin/getCourseInfoSpringFallSessionForTST",
-
-
+                            /*url: "/bin/getCourseInfoSpringFallSessionForTST",
 
                             data: {
                                 userId: userId,
                                 term: term,
                                 typeOfWithdrawal: typeOfWithdrawal,
                                 typeOfForm:"regular"
-                            },
+                            },*/
 
                             dataType: 'json',
 
