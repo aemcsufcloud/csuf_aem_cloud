@@ -57,51 +57,77 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
+		log.error("here");
 		Document doc = null;
 		InputStream is = null;
 		JsonObject json = null;
 		JsonArray jsArray = new JsonArray();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payload = workItem.getWorkflowData().getPayload().toString();
+		log.error("Coco payload="+payload);
 		String args = ((String) processArguments.get("PROCESS_ARGS", "string"));
+		log.error("Coco args="+args);
 		String[] itemsArray = args.split("=");
 		String wf_model = itemsArray[0];
 		String wf_title = itemsArray[1];
+		log.error("Coco wf_model="+wf_model);
+		log.error("Coco wf_title="+wf_title);
 		try {
 			is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payload, "Data.xml");
 			if (null != is) {
+				log.error("Coco inside Stream");
 				doc = XMLUtils.getDomDocument(is);
+				log.error("Coco doc");
 				String xml = XMLUtils.prettyPrintAsString(doc);
+				log.error("Coco xml");
 				doc = XMLUtils.parseXmlFile(xml);
+				log.error("Coco second doc");
 				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 				if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+					log.error("Coco inside afBoundDataElement");
 					String tableJsonData = XMLUtils.getChildNodeContent(afBoundDataElement, "LookupResult");
+					log.error("Coco inside tableJsonData="+tableJsonData.length());
 					JsonParser parser = new JsonParser();
 					if (StringUtils.isNotBlank(tableJsonData)) {
 						json = parser.parse(tableJsonData).getAsJsonObject();
 						log.info("json 1 {}", json);
+						log.error("json 1 {}", json);
 					} else {
 						throw new Exception("Error : LookupResult not found!");
 					}
 					WorkflowModel workModel = workflowSession.getModel(wf_model);
+					log.error("Coco workModel="+workModel);
 					try {
 						String selectCBVal = StringUtils.EMPTY;
 						String courseVal = StringUtils.EMPTY;
 						String classNum = StringUtils.EMPTY;
 						Element rowElement = XMLUtils.getChildNode(afBoundDataElement, "form1");
+						log.error("Coco rowElement="+rowElement);
 						for (int i = 0; i < XMLUtils.getElementLength(rowElement, "CourseRow"); i++) {
+							log.error("Coco for loop ="+i);
 							selectCBVal = XMLUtils.getChildNodeContentOfElement(rowElement, "SelectCB", i);
+							log.error("Coco selectCBVal ="+selectCBVal);
 							courseVal = XMLUtils.getChildNodeContentOfElement(rowElement, "CourseNo", i);
-							classNum = XMLUtils.getChildNodeContentOfElement(rowElement, "ScheduleNo", i);							
+							log.error("Coco courseVal ="+courseVal);
+							classNum = XMLUtils.getChildNodeContentOfElement(rowElement, "ScheduleNo", i);	
+							log.error("Coco classNum ="+classNum);
 							if (!courseVal.isEmpty() && selectCBVal.equals("Yes")) {
+								log.error("PushpaCoco courseVal ="+courseVal);
 								JsonArray params = json.getAsJsonArray("COURSES");
+								log.error("PushpaCoco params ="+params);
+								log.error("PushpaCoco params.isJsonNull() ="+!params.isJsonNull());
+								log.error("PushpaCoco params.isJsonArray() ="+params.isJsonArray());
 								if (null != params && !params.isJsonNull() && params.isJsonArray()) {
+									log.error("PushpaCoco params ="+params);
 									for (int n = 0; n < params.size(); n++) {
+										log.error("PushpaCoco n ="+n);
 										JsonElement jsonElement = params.get(n);
+										log.error("PushpaCoco jsonElement ="+jsonElement);
 										JsonObject obj = jsonElement.getAsJsonObject();
 										if ((obj.get("CRSE_NAME").getAsString().equals(courseVal))
 												&& (obj.get("CLASS_NBR").getAsString().equals(classNum))) {
 											jsArray.add(obj);
+											log.error("PushpaCoco jsArray ="+jsArray.size());
 										}
 									}
 								}
@@ -113,6 +139,8 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 						Session session = workflowSession.adaptTo(Session.class);
 						JsonArray attachmentArray = null;
 						String workflowInstanceId = workItem.getWorkflow().getId();
+						log.error("PushpaCoco workflowInstanceId ="+workflowInstanceId);
+						
 						if (StringUtils.isNotBlank(workflowInstanceId)) {
 							try {
 								attachmentArray = inboxService.getTaskAttachmentsFromWorkflowInstanceId(resolver,
@@ -128,12 +156,15 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 							}
 						}
 						for (int m = 0; m < jsArray.size(); m++) {
+							log.error("PushpaCoco missing ="+m);
 							XMLUtils.removeRecursively(doc, org.w3c.dom.Node.ELEMENT_NODE, "CourseRow");
 							XMLUtils.removeRecursively(doc, org.w3c.dom.Node.COMMENT_NODE, null);
 							doc.normalize();
 							JsonElement jsonElement = jsArray.get(m);
 							JsonObject jObj = jsonElement.getAsJsonObject();
 							String newPayloadPath = createNewPayloadPath(session, payload, doc, jObj);
+							log.error("PushpaCoco newPayloadPath ="+newPayloadPath);
+							
 							JsonObject newAttachmentJson = addAttachment(session, attachmentArray, newPayloadPath,
 									resolver);
 							log.info("Successfully added the file attachments to the newly created payload : {}",
@@ -163,6 +194,7 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 
 	private String createNewPayloadPath(Session session, String existingPayload, Document d, JsonObject json)
 			throws Exception {
+		log.error("Pushpa inside createNewPayloadPath");
 		String afPath = null;
 		int lastSlashIndex = existingPayload.lastIndexOf("/");
 		String trimmedPath = existingPayload.substring(0, lastSlashIndex + 1);
@@ -170,7 +202,7 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 		int payloadPathStringIndex = payloadPathString.lastIndexOf("_");
 		String randomString = CSUFUtils.generateRandomString(payloadPathStringIndex, ALLOWED_CHARS);
 		String newJCRPayloadPath = trimmedPath.concat(randomString);
-		log.debug("The new JCR Payload node path = {}", newJCRPayloadPath);
+		log.error("Pushpa The new JCR Payload node path = {}", newJCRPayloadPath);
 
 		try {
 			Element xmlRoot = d.getDocumentElement();
@@ -300,11 +332,13 @@ public class ProgramaticallyStartSCWWorkflowProcess implements WorkflowProcess {
 			if (null != afParentElement && afParentElement.hasChildNodes()) {
 				afPath = XMLUtils.getChildNodeContent(afParentElement, "afPath");
 				log.debug("afPath = {}", afPath);
+				log.debug("pushpa afPath = {}", afPath);
 			}
 			InputStream is = XMLUtils.getInputStreamFromXMLDocument(d);
 			boolean isNewPayloadJCRPathCreated = assetService.writeNtFileToPayloadPath(session, "Data.xml", afPath,
 					newJCRPayloadPath, is);
 			log.debug("new payload node got created with status = {}", isNewPayloadJCRPathCreated);
+			log.error("Pushpa new payload node got created with status = {}", isNewPayloadJCRPathCreated);
 			if (isNewPayloadJCRPathCreated) {
 				return newJCRPayloadPath;
 			}
