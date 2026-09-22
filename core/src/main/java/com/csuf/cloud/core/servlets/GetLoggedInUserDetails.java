@@ -8,6 +8,7 @@ import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
+
 import org.apache.jackrabbit.api.security.user.User;
 import org.apache.jackrabbit.api.security.user.UserManager;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -31,12 +32,11 @@ import org.slf4j.LoggerFactory;
  */
 
 @Component(service = Servlet.class, property = { Constants.SERVICE_DESCRIPTION + "=Loggedin User Servlet",
-		"sling.servlet.methods=" + HttpConstants.METHOD_GET, "sling.servlet.paths=" + "/bin/getLoggedUserDetails" })
+		"sling.servlet.methods=" + HttpConstants.METHOD_GET,
+		"sling.servlet.paths=" + "/bin/getLoggedUserDetails" })
 public class GetLoggedInUserDetails extends SlingSafeMethodsServlet {
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 	private static final long serialVersionUID = 1L;
-
-	ResourceResolver adminResolver = null;
 
 	@Override
 	protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse response)
@@ -50,7 +50,7 @@ public class GetLoggedInUserDetails extends SlingSafeMethodsServlet {
 		String username = null;
 		final UserManager userManager = resolver.adaptTo(UserManager.class);
 		User user = null;
-		LocalDate serverDate = LocalDate.now();  
+		LocalDate serverDate = LocalDate.now();
 		try {
 			user = (User) userManager.getAuthorizable(session.getUserID());
 			uid = session.getUserID();

@@ -29,8 +29,6 @@ public class GetLoggedInUserDetailsServlet extends SlingSafeMethodsServlet {
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 	private static final long serialVersionUID = 1L;
 
-	ResourceResolver reolver = null;
-
 	@Override
 	protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse response)
 			throws ServletException, IOException {
@@ -42,9 +40,9 @@ public class GetLoggedInUserDetailsServlet extends SlingSafeMethodsServlet {
 		String[] values;
 		String username = StringUtils.EMPTY;
 		final UserManager userManager = resolver.adaptTo(UserManager.class);
-		LocalDate serverDate = LocalDate.now(); 
+		LocalDate serverDate = LocalDate.now();
 		User user = null;
-		 
+
 		try {
 			user = (User) userManager.getAuthorizable(session.getUserID());
 			uid = session.getUserID();
@@ -91,7 +89,7 @@ public class GetLoggedInUserDetailsServlet extends SlingSafeMethodsServlet {
 				resolver.close();
 			}
 		}
-		
+
 	}
 
 }
