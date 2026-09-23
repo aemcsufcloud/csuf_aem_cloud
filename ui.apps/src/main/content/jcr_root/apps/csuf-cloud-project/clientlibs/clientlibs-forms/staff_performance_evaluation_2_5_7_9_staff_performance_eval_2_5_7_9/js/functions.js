@@ -2022,15 +2022,26 @@ if (StageIndicator.value === null) {
             var reviewPeriodTo = Copy_ReviewPeriodTo.value;
             var actionType = "SPE_2579_COPY_DATA";
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getEvaluationFormDataCHRSID",
                 data: {
                     chrsId: chrsidVal,
                     reviewPeriodFrom: reviewPeriodFrom,
                     reviewPeriodTo: reviewPeriodTo,
                     /*evalType: evalType,*/
-                    action: actionType
-                },
+                    /*action: actionType
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getEvaluationFormDataCHRSID",
+						chrsId: chrsidVal,
+						reviewPeriodFrom: reviewPeriodFrom,
+						reviewPeriodTo: reviewPeriodTo,
+						action: actionType
+					},
+							
                 dataType: 'json',
                 success: function(myresponse) {
 
@@ -2821,6 +2832,7 @@ $.ajax({
 						url: window.location.origin + "/bin/fullertonProxy",
 					        type: 'GET',
 							data: {
+								cwid: cwidVal,
 								path: "getEvaluationFormDataCHRSID",
 								userID: userID,
 								action : "SPE_2579_EMP_DETAILS"
@@ -3313,6 +3325,7 @@ $.ajax({
 						url: window.location.origin + "/bin/fullertonProxy",
 					        type: 'GET',
 							data: {
+								cwid: cwidVal,
 								path: "getEvaluationFormData",
 								userID: userID,
 								action : "SPE_2579_EMP_DETAILS"
@@ -3836,14 +3849,24 @@ staff_performance_evaluation_2_5_7_9_staff_performance_eval_2_5_7_9.generated_De
         var deptid = this.value;
 		var union_cd = CBID.value;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormDataCHRSID",
             data: {
                 deptID: deptid,
                 cwid: empId,
               	union_cd:union_cd,
               action:"SPE_MANAGER_DETAILS"
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormDataCHRSID",
+					deptID: deptid,
+					cwid: empId,
+					union_cd:union_cd,
+					 action:"SPE_MANAGER_DETAILS"
+				},
             dataType: 'json',
             success: function(myresponse) {
 

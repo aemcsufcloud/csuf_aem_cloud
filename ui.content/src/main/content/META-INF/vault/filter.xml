@@ -2,8 +2,18 @@
 <workspaceFilter version="1.0">
 	<!--<filter root="/conf/global/settings/workflow/models/Student-Course-Withdrawal" mode="replace"/>
 	<filter root="/var/workflow/models/Student-Course-Withdrawal" mode="replace"/>-->
-	<filter root="/conf/global/settings/workflow/models" mode="update"/>
-	<filter root="/var/workflow/models" mode="update"/>
+	<!--<filter root="/conf/global/settings/workflow/models" mode="update"/>
+	<filter root="/var/workflow/models" mode="update"/>-->
+	<filter root="/conf/global/settings/workflow/models" mode="update">
+		<exclude pattern="/conf/global/settings/workflow/models/Student-Course-Withdrawal(/.*)?"/>
+		<exclude pattern="/conf/global/settings/workflow/models/Student_Course_Withdrawal(/.*)?"/>
+	 </filter>
+	 
+	 <filter root="/var/workflow/models" mode="update">
+		<exclude pattern="/var/workflow/models/Student-Course-Withdrawal(/.*)?"/>
+		<exclude pattern="/var/workflow/models/Student_Course_Withdrawal(/.*)?"/>
+	 </filter>
+	 
     <filter root="/conf/csuf-cloud-project" mode="merge"/>
 	<filter root="/conf/global" mode="merge"/>
 	<filter root="/conf/csu" mode="merge"/>
