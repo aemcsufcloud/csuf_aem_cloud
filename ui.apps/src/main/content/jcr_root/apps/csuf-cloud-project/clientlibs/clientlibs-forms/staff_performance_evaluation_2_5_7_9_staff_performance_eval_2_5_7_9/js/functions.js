@@ -1322,15 +1322,25 @@ staff_performance_evaluation_2_5_7_9_staff_performance_eval_2_5_7_9.generated_Co
             var reviewPeriodTo = Copy_ReviewPeriodTo.value;
             var actionType = "SPE_2579_COPY_DATA";
             $.ajax({
-                type: 'GET',
+				url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getEvaluationFormData",
+						cwid: cwid,
+						reviewPeriodFrom: reviewPeriodFrom,
+						reviewPeriodTo: reviewPeriodTo,
+						action: actionType
+					},
+							
+                /*type: 'GET',
                 url: "/bin/getEvaluationFormData",
                 data: {
                     cwid: cwid,
                     reviewPeriodFrom: reviewPeriodFrom,
                     reviewPeriodTo: reviewPeriodTo,
                     /*evalType: evalType,*/
-                    action: actionType
-                },
+                    /*action: actionType
+                },*/
                 dataType: 'json',
                 success: function(myresponse) {
 
@@ -4171,16 +4181,23 @@ staff_performance_evaluation_2_5_7_9_staff_performance_eval_2_5_7_9.generated_di
   var divisionVal = this.value;
   
 $.ajax({
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getEvaluationFormData",
+			division: divisionVal,
+    			action:"HR_COO_DATA"
+			
+		},
 
-type: 'GET', 
-
-
+/*type: 'GET', 
 url:"/bin/getEvaluationFormData",
   data: {
                 division: divisionVal,
     			action:"HR_COO_DATA"
                 
-            },
+            },*/
 dataType: 'json',
 success: function(myresopnse){
   
