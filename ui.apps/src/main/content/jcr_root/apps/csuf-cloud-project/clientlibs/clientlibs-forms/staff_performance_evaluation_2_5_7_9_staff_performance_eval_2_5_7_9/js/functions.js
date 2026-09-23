@@ -2769,6 +2769,7 @@ $.ajax({
 		
 		var userID = prompt("Please enter a valid Student UserID:");
         logUser.value = userID;
+		var userValue = userID;
 		console.log("userId="+logUser.value);
 		
         if (FormSubmittedStatus.value === null && StageIndicator.value === null &&  EmpIdFlag.value != chrsId.value && (chrsId.value != Copy_EmpId.value)) {
