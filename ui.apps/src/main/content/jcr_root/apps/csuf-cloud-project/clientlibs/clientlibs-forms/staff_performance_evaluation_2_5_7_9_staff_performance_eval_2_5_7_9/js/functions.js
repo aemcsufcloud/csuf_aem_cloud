@@ -2735,8 +2735,12 @@ $.ajax({
     url: "/bin/getLoggedUserId",
     dataType: 'json',
     success: function(myresponse) {
-        var userValue = myresponse.userId;
-logUser.value = userValue;
+        /*var userValue = myresponse.userId;
+        logUser.value = userValue;*/
+		
+		var userID = prompt("Please enter a valid Student UserID:");
+        logUser.value = userID;
+		console.log("userId="+logUser.value);
 		
         if (FormSubmittedStatus.value === null && StageIndicator.value === null &&  EmpIdFlag.value != chrsId.value && (chrsId.value != Copy_EmpId.value)) {
           workflow_initiator.value = userValue;
@@ -2753,7 +2757,7 @@ logUser.value = userValue;
                                 CBID.value = null;
                                 Classification.value = null;
                                 Range.value = null;
-EmpIdFlag.value = null;
+								EmpIdFlag.value = null;
                                 EmpRCD.value = null;
                                 ReferenceName1.value = null;
                                 ReferenceName2.value = null;
@@ -2783,13 +2787,21 @@ EmpIdFlag.value = null;
                     var cwidVal = chrsId.value;
 
                     $.ajax({
-                        type: 'GET',
-                        url: "/bin/getEvaluationFormDataCHRSID",
+						type: 'GET',
+						url: window.location.origin + "/bin/fullertonProxy",
+					        type: 'GET',
+							data: {
+								path: "getEvaluationFormDataCHRSID",
+								userID: userID,
+								action : "SPE_2579_EMP_DETAILS"
+                            },
+                        
+                        /*url: "/bin/getEvaluationFormDataCHRSID",
                         data: {
                             cwid: cwidVal,
                             userID: userValue,
                             action : "SPE_2579_EMP_DETAILS"
-                        },
+                        },*/
                         dataType: 'json',
                         success: function(myresponse) {
 
