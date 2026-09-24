@@ -9200,13 +9200,22 @@ if (flag === 0) {
 
         var data = JSON.stringify(sheet);
         $.ajax({
-            type: 'GET',
+			url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "SAVE_EVAL_DATA",
+                jsonData: data,
+                cwid: EmpID.value
+					
+				},
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 action: "SAVE_EVAL_DATA",
                 jsonData: data,
                 cwid: EmpID.value
-            },
+            },*/
             dataType: 'json',
             success: function(response) {
                 console.log("Completed");
