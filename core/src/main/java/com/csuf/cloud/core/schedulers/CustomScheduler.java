@@ -122,7 +122,7 @@ public class CustomScheduler implements Runnable {
 
 	@Override
 	public void run() {
-		logger.debug("Inside CustomScheduler run Method");
+		logger.error("Inside CustomScheduler run Method");
 
 		WorkflowSession wfSession = null;
 		ResourceResolver resolver = null;
