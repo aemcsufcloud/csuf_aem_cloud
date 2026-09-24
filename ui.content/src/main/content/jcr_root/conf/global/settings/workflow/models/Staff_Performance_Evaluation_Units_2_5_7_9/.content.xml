@@ -28,7 +28,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.thoughtfocus.aem.csu.core.database.CSUFWorkflowInstanceHistoryDB"
+                    PROCESS="com.csuf.cloud.core.database.CSUFWorkflowInstanceHistoryDB"
                     PROCESS_ARGS="Start of the Workflow Instance"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_1497834091>
@@ -42,7 +42,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.csuf.database.CSUFSPE2579DB"
+                    PROCESS="com.csuf.cloud.core.database.CSUFSPE2579DB"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_854305721_co>
             <process_769047288_co_769684473
@@ -55,7 +55,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                     PROCESS_ARGS="updReviewCheck=false"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_769047288_co_769684473>
@@ -69,7 +69,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                     PROCESS_ARGS="initiator=afData/afBoundData/form1/initiator,empUserId=afData/afBoundData/form1/EmpUserID,managerUserId=afData/afBoundData/form1/ManagerUserID,reviewerUserId=afData/afBoundData/form1/HrCoordId,adminUID=afData/afBoundData/form1/AdminUserID,EvaluatorsName=afData/afBoundData/form1/EvaluatorName,managerEmail=afData/afBoundData/form1/ManagerEmailID,employeeEmail=afData/afBoundData/form1/EmpEmailID,adminEmail=afData/afBoundData/form1/AdminEmailID,StaffLastName=afData/afBoundData/form1/StaffLastName,StaffFirstName=afData/afBoundData/form1/StaffFirstName,AdminFullName=afData/afBoundData/form1/AdministratorsFullName,HrCooFullName=afData/afBoundData/form1/HrCooFullName,HrCooEmail=afData/afBoundData/form1/HrCoordEmailId,deptName=afData/afBoundData/form1/Department,empId=afData/afBoundData/form1/EmpID,toName=afData/afBoundData/form1/EmpName,deptId=afData/afBoundData/form1/Department_ID"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process>
@@ -83,7 +83,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                     PROCESS_ARGS="ratingGiven=afData/afBoundData/form1/OverallRating"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_596225335_co>
@@ -97,7 +97,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                     PROCESS_ARGS="HRDIEmail=csufaemform@gmail.com,fromAddress=hrevaluations@fullerton.edu,bccAddress=yjayaram@fullerton.edu,timeline=10W"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_769047288>
@@ -139,7 +139,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator,HRCOOComments=afData/afBoundData/form1/HRCoordinatorSignComment,UPDComments=afData/afBoundData/form1/UPDComment,sendBackStep=afData/afBoundData/form1/sendBackStep"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_667600248>
@@ -153,7 +153,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.thoughtfocus.aem.csu.core.workflow.SetMultipleValuesToMetadata"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMultipleValuesToMetadata"
                             PROCESS_ARGS="oldValuesOfFields=afData/afBoundData/form1/ReviewPeriodFrom,afData/afBoundData/form1/ReviewPeriodTo,afData/afUnboundData/data/averageRating,afData/afBoundData/form1/OverallRating,afData/afBoundData/form1/supportFactorComments1,afData/afBoundData/form1/supportFactorComments2,afData/afBoundData/form1/performanceGoalComment1,afData/afBoundData/form1/performanceGoalComment2,afData/afBoundData/form1/performanceGoalComment3,afData/afBoundData/form1/EvaluatorComment,afData/afBoundData/form1/EvaluationType,afData/afBoundData/form1/Staffposdesc,afData/afBoundData/form1/Quality,afData/afBoundData/form1/Quantity,afData/afBoundData/form1/OralComm,afData/afBoundData/form1/InterpersonalSkills,afData/afBoundData/form1/Initiative,afData/afBoundData/form1/Adaptability,afData/afBoundData/form1/JobKnowledge,afData/afBoundData/form1/DependReli,afData/afBoundData/form1/WrittenComm,afData/afBoundData/form1/ProbSolving,afData/afBoundData/form1/LeadingOthers,afData/afBoundData/form1/Accepting,afData/afBoundData/form1/Initiative,afData/afBoundData/form1/AddCriteria1,afData/afBoundData/form1/AddCriteria2,afData/afBoundData/form1/AthleticsEmp,afData/afBoundData/form1/quality1,afData/afBoundData/form1/quality2,afData/afBoundData/form1/quality3,afData/afBoundData/form1/quality4,afData/afBoundData/form1/quality5,afData/afBoundData/form1/Quantity1,afData/afBoundData/form1/Quantity2,afData/afBoundData/form1/Quantity3,afData/afBoundData/form1/Quantity4,afData/afBoundData/form1/Quantity5,afData/afBoundData/form1/OC1,afData/afBoundData/form1/OC2,afData/afBoundData/form1/OC3,afData/afBoundData/form1/OC4,afData/afBoundData/form1/OC5,afData/afBoundData/form1/IPSkill1,afData/afBoundData/form1/IPSkill2,afData/afBoundData/form1/IPSkill3,afData/afBoundData/form1/IPSkill4,afData/afBoundData/form1/IPSkill5,afData/afBoundData/form1/Initiative1,afData/afBoundData/form1/Initiative2,afData/afBoundData/form1/Initiative3,afData/afBoundData/form1/Initiative4,afData/afBoundData/form1/Initiative5,afData/afBoundData/form1/SC1,afData/afBoundData/form1/SC2,afData/afBoundData/form1/SC3,afData/afBoundData/form1/SC4,afData/afBoundData/form1/SC5,afData/afBoundData/form1/Adaptability1,afData/afBoundData/form1/Adaptability2,afData/afBoundData/form1/Adaptability3,afData/afBoundData/form1/Adaptability4,afData/afBoundData/form1/Adaptability5,afData/afBoundData/form1/JK1,afData/afBoundData/form1/JK2,afData/afBoundData/form1/JK3,afData/afBoundData/form1/JK4,afData/afBoundData/form1/JK5,afData/afBoundData/form1/DR1,afData/afBoundData/form1/DR2,afData/afBoundData/form1/DR3,afData/afBoundData/form1/DR4,afData/afBoundData/form1/DR5,afData/afBoundData/form1/WC1,afData/afBoundData/form1/WC2,afData/afBoundData/form1/WC3,afData/afBoundData/form1/WC4,afData/afBoundData/form1/WC5,afData/afBoundData/form1/ProbSol1,afData/afBoundData/form1/ProbSol2,afData/afBoundData/form1/ProbSol3,afData/afBoundData/form1/ProbSol4,afData/afBoundData/form1/ProbSol5,afData/afBoundData/form1/LeadOthers1,afData/afBoundData/form1/LeadOthers2,afData/afBoundData/form1/LeadOthers3,afData/afBoundData/form1/LeadOthers4,afData/afBoundData/form1/LeadOthers5,afData/afBoundData/form1/Accepting1,afData/afBoundData/form1/Accepting2,afData/afBoundData/form1/Accepting3,afData/afBoundData/form1/Accepting4,afData/afBoundData/form1/Accepting5,afData/afBoundData/form1/AddCriteriaImpToPos1,afData/afBoundData/form1/AddCriteriaImpToPos2,afData/afBoundData/form1/Additional1,afData/afBoundData/form1/AdditionalCriteria1,afData/afBoundData/form1/Additional2,afData/afBoundData/form1/AdditionalCriteria2,afData/afBoundData/form1/Additional3,afData/afBoundData/form1/AdditionalCriteria3,afData/afBoundData/form1/Additional4,afData/afBoundData/form1/AdditionalCriteria4,afData/afBoundData/form1/Additional5,afData/afBoundData/form1/AdditionalCriteria5,afData/afBoundData/form1/Additional6,afData/afBoundData/form1/AdditionalCriteria6,afData/afBoundData/form1/Additional7,afData/afBoundData/form1/AdditionalCriteria7,afData/afBoundData/form1/Additional8,afData/afBoundData/form1/AdditionalCriteria8,afData/afBoundData/form1/Additional9,afData/afBoundData/form1/AdditionalCriteria9,afData/afBoundData/form1/Additional10,afData/afBoundData/form1/AdditionalCriteria10,afData/afBoundData/form1/AthleticsImpToPos,afData/afBoundData/form1/AtDoesnotMeet,afData/afBoundData/form1/AtMeets"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_56790691>
@@ -286,7 +286,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="actionTakenByManagerOrInitiator=Send To Manager"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1885656404_c>
@@ -383,7 +383,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.thoughtfocus.aem.csu.core.workflow.SetMultipleValuesToMetadata"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMultipleValuesToMetadata"
                             PROCESS_ARGS="newValuesOfFields=afData/afBoundData/form1/ReviewPeriodFrom,afData/afBoundData/form1/ReviewPeriodTo,afData/afUnboundData/data/averageRating,afData/afBoundData/form1/OverallRating,afData/afBoundData/form1/supportFactorComments1,afData/afBoundData/form1/supportFactorComments2,afData/afBoundData/form1/performanceGoalComment1,afData/afBoundData/form1/performanceGoalComment2,afData/afBoundData/form1/performanceGoalComment3,afData/afBoundData/form1/EvaluatorComment,afData/afBoundData/form1/EvaluationType,afData/afBoundData/form1/Staffposdesc,afData/afBoundData/form1/Quality,afData/afBoundData/form1/Quantity,afData/afBoundData/form1/OralComm,afData/afBoundData/form1/InterpersonalSkills,afData/afBoundData/form1/Initiative,afData/afBoundData/form1/Adaptability,afData/afBoundData/form1/JobKnowledge,afData/afBoundData/form1/DependReli,afData/afBoundData/form1/WrittenComm,afData/afBoundData/form1/ProbSolving,afData/afBoundData/form1/LeadingOthers,afData/afBoundData/form1/Accepting,afData/afBoundData/form1/Initiative,afData/afBoundData/form1/AddCriteria1,afData/afBoundData/form1/AddCriteria2,afData/afBoundData/form1/AthleticsEmp,afData/afBoundData/form1/quality1,afData/afBoundData/form1/quality2,afData/afBoundData/form1/quality3,afData/afBoundData/form1/quality4,afData/afBoundData/form1/quality5,afData/afBoundData/form1/Quantity1,afData/afBoundData/form1/Quantity2,afData/afBoundData/form1/Quantity3,afData/afBoundData/form1/Quantity4,afData/afBoundData/form1/Quantity5,afData/afBoundData/form1/OC1,afData/afBoundData/form1/OC2,afData/afBoundData/form1/OC3,afData/afBoundData/form1/OC4,afData/afBoundData/form1/OC5,afData/afBoundData/form1/IPSkill1,afData/afBoundData/form1/IPSkill2,afData/afBoundData/form1/IPSkill3,afData/afBoundData/form1/IPSkill4,afData/afBoundData/form1/IPSkill5,afData/afBoundData/form1/Initiative1,afData/afBoundData/form1/Initiative2,afData/afBoundData/form1/Initiative3,afData/afBoundData/form1/Initiative4,afData/afBoundData/form1/Initiative5,afData/afBoundData/form1/SC1,afData/afBoundData/form1/SC2,afData/afBoundData/form1/SC3,afData/afBoundData/form1/SC4,afData/afBoundData/form1/SC5,afData/afBoundData/form1/Adaptability1,afData/afBoundData/form1/Adaptability2,afData/afBoundData/form1/Adaptability3,afData/afBoundData/form1/Adaptability4,afData/afBoundData/form1/Adaptability5,afData/afBoundData/form1/JK1,afData/afBoundData/form1/JK2,afData/afBoundData/form1/JK3,afData/afBoundData/form1/JK4,afData/afBoundData/form1/JK5,afData/afBoundData/form1/DR1,afData/afBoundData/form1/DR2,afData/afBoundData/form1/DR3,afData/afBoundData/form1/DR4,afData/afBoundData/form1/DR5,afData/afBoundData/form1/WC1,afData/afBoundData/form1/WC2,afData/afBoundData/form1/WC3,afData/afBoundData/form1/WC4,afData/afBoundData/form1/WC5,afData/afBoundData/form1/ProbSol1,afData/afBoundData/form1/ProbSol2,afData/afBoundData/form1/ProbSol3,afData/afBoundData/form1/ProbSol4,afData/afBoundData/form1/ProbSol5,afData/afBoundData/form1/LeadOthers1,afData/afBoundData/form1/LeadOthers2,afData/afBoundData/form1/LeadOthers3,afData/afBoundData/form1/LeadOthers4,afData/afBoundData/form1/LeadOthers5,afData/afBoundData/form1/Accepting1,afData/afBoundData/form1/Accepting2,afData/afBoundData/form1/Accepting3,afData/afBoundData/form1/Accepting4,afData/afBoundData/form1/Accepting5,afData/afBoundData/form1/AddCriteriaImpToPos1,afData/afBoundData/form1/AddCriteriaImpToPos2,afData/afBoundData/form1/Additional1,afData/afBoundData/form1/AdditionalCriteria1,afData/afBoundData/form1/Additional2,afData/afBoundData/form1/AdditionalCriteria2,afData/afBoundData/form1/Additional3,afData/afBoundData/form1/AdditionalCriteria3,afData/afBoundData/form1/Additional4,afData/afBoundData/form1/AdditionalCriteria4,afData/afBoundData/form1/Additional5,afData/afBoundData/form1/AdditionalCriteria5,afData/afBoundData/form1/Additional6,afData/afBoundData/form1/AdditionalCriteria6,afData/afBoundData/form1/Additional7,afData/afBoundData/form1/AdditionalCriteria7,afData/afBoundData/form1/Additional8,afData/afBoundData/form1/AdditionalCriteria8,afData/afBoundData/form1/Additional9,afData/afBoundData/form1/AdditionalCriteria9,afData/afBoundData/form1/Additional10,afData/afBoundData/form1/AdditionalCriteria10,afData/afBoundData/form1/AthleticsImpToPos,afData/afBoundData/form1/AtDoesnotMeet,afData/afBoundData/form1/AtMeets"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_56790691_cop>
@@ -425,7 +425,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator,checkEmpSign=afData/afUnboundData/data/EmpDidNotSignCB"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_1603438313_c>
@@ -565,7 +565,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="checkEmpSign=afData/afUnboundData/data/EmpDidNotSignCB"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_524812988_co>
@@ -607,7 +607,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_364656415>
@@ -732,7 +732,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="EmpCB=afData/afBoundData/form1/EmpCB,EmpCB_1=afData/afUnboundData/data/EmpCB_1"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_940170991_co>
@@ -777,7 +777,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_1685738012>
@@ -922,7 +922,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_1082208040>
@@ -1063,7 +1063,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_541474204>
@@ -1210,7 +1210,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_1685738012_c>
@@ -1353,7 +1353,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_586880853_co>
@@ -1508,7 +1508,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator,HRDIComments=afData/afBoundData/form1/HRDIComment"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_1824608121>
@@ -1746,7 +1746,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="actionTakenByManagerOrInitiator=Send To HR Coordinator"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1885656404>
@@ -1774,7 +1774,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_2121701837>
@@ -1906,7 +1906,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="actionTakenByUPD=Send To Dept Head"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1885656404_c>
@@ -1920,7 +1920,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="updReviewCheck=true"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1885656404_c_841800676>
@@ -1948,7 +1948,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_2121701837_c>
@@ -2172,7 +2172,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1242144212>
@@ -2186,7 +2186,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="path=/etc/notification/email/csuf/SPE_2_5_7_9/SPE_2_5_7_9_Employee.html,tlsRequired=false,toEmail=employeeEmail,bccEmail=bccAddress,fromEmail=hrevaluations@fullerton.edu,fromName=hrevaluations@fullerton.edu,dorRequired=false,subject=Staff Performance Evaluation Unit 2579 - Employee Review"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1001744136_c>
@@ -2213,7 +2213,7 @@
                         sling:resourceType="cq/workflow/components/model/process">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                            PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                             PROCESS_ARGS="actionTakenByEmployee=null"
                             PROCESS_AUTO_ADVANCE="true"/>
                     </process_1885656404_c>
@@ -2241,7 +2241,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                                    PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                                     PROCESS_ARGS="actionTakenByReviewer=Submit"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_1885656404_c>
@@ -2403,7 +2403,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_1603438313>
@@ -2543,7 +2543,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="checkEmpSign=afData/afUnboundData/data/EmpDidNotSignCB"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_524812988>
@@ -2585,7 +2585,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_364656415>
@@ -2710,7 +2710,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="EmpCB=afData/afBoundData/form1/EmpCB,EmpCB_1=afData/afUnboundData/data/EmpCB_1"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_940170991>
@@ -2755,7 +2755,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_1685738012>
@@ -2900,7 +2900,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_1082208040>
@@ -3041,7 +3041,7 @@
                                                 sling:resourceType="cq/workflow/components/model/process">
                                                 <metaData
                                                     jcr:primaryType="nt:unstructured"
-                                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                                     PROCESS_AUTO_ADVANCE="true"/>
                                             </process_541474204>
@@ -3188,7 +3188,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_1685738012_c>
@@ -3331,7 +3331,7 @@
                                 sling:resourceType="cq/workflow/components/model/process">
                                 <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                     PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator"
                                     PROCESS_AUTO_ADVANCE="true"/>
                             </process_586880853>
@@ -3486,7 +3486,7 @@
                                         sling:resourceType="cq/workflow/components/model/process">
                                         <metaData
                                             jcr:primaryType="nt:unstructured"
-                                            PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                                            PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                                             PROCESS_ARGS="stage=afData/afBoundData/form1/StageIndicator,HRDIComments=afData/afBoundData/form1/HRDIComment"
                                             PROCESS_AUTO_ADVANCE="true"/>
                                     </process_1824608121>
@@ -3749,7 +3749,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.csuf.database.CSUFSPE2579DB"
+                    PROCESS="com.csuf.cloud.core.database.CSUFSPE2579DB"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_854305721>
             <process_1497834091_c
@@ -3776,7 +3776,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.SetMetadataValue"
+                    PROCESS="com.csuf.cloud.core.workflow.SetMetadataValue"
                     PROCESS_ARGS="path=/etc/notification/email/csuf/SPE_2_5_7_9/SPE_2_5_7_9_Completed.html,tlsRequired=false,toAddress=employeeEmail,fromName=hrevaluations@fullerton.edu,dorRequired=true,dorFileName=Staff_Performance_Evaluation_2_5_7_9.pdf,formPath=/content/forms/af/staff-performance-evaluation-2-5-7-9/staff_performance_eval_2_5_7_9"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_769047288_co>
@@ -3790,7 +3790,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="com.aem.web.models.workflow.GetValueinDataXml"
+                    PROCESS="com.csuf.cloud.core.workflow.GetValueinDataXml"
                     PROCESS_ARGS="ccEmail=afData/afBoundData/form1/ManagerEmailID,emailSubject=afData/afBoundData/form1/EmailSubject"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process_1824608121_c>
