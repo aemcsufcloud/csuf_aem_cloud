@@ -147,7 +147,11 @@ window.onload = function execute() {
     var dateObject = new Date(dateString);
     var curyear = dateObject.getFullYear();
     var footerText = "© ".concat(curyear).concat(" CSUF | All rights reserved");
-    document.getElementById('FooterText').innerHTML = footerText;
+    //document.getElementById('FooterText').innerHTML = footerText;
+	var element = document.getElementById("FooterText");
+		if (element) {    
+		element.innerHTML = a;
+		}
 };
 
 function getDateforAdaptiveForm(){
