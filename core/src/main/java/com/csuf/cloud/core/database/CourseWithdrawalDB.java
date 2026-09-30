@@ -15,7 +15,13 @@ import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -40,106 +46,149 @@ import com.csuf.cloud.core.utils.CSUFUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Student Course Withdrawal DB",
-		Constants.SERVICE_VENDOR + "=Thoughtfocus", "process.label" + "=Course Withdrawal DB" })
+		Constants.SERVICE_VENDOR + "=Sparient", "process.label" + "=Course Withdrawal DB" })
 public class CourseWithdrawalDB implements WorkflowProcess {
 	int parentTable = 0;
 	private static final Logger log = LoggerFactory.getLogger(CourseWithdrawalDB.class);
 
-	@Reference
+	/*@Reference
 	private JDBCConnectionHelperService jdbcConnectionService;
 
 	@Reference
-	private GlobalConfigCSUFService globalConfigFilenetService;
+	private GlobalConfigCSUFService globalConfigFilenetService;*/
 
 	@Override
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
+		log.error("Little Database");
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
+		log.error("Little resolver="+resolver);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		JsonObject json = null;
 		Map<String, Object> dataMap = null;
 		Map<String, Object> dataMapCourseInfo = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
-			payloadPath = workItem.getWorkflowData().getPayload().toString();
-			if (conn != null) {
-				dataMap = new LinkedHashMap<>();
-				dataMapCourseInfo = new LinkedHashMap<>();
-				InputStream is = null;
-				is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
-				if (null != is) {
-					Document doc = XMLUtils.getDomDocument(is);
-					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
-					Element element = XMLUtils.getChildNode(afBoundDataElement, "form1");
-					if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
-						String tableJsonData = XMLUtils.getChildNodeContent(element, "LookupResult");
-						JsonParser parser = new JsonParser();
-						if (StringUtils.isNotBlank(tableJsonData)) {
-							json = parser.parse(tableJsonData).getAsJsonObject();
-						} else {
-							log.error("Error : tableJsonData not found!");
-						}
-						dataMap = addXMLParentNodesToMap(element, workItem);
-						for (int i = 0; i < XMLUtils.getElementLength(element, "CourseRow"); i++) {
-							if (XMLUtils.getChildNodeContentOfElement(element, "SelectCB", i).equalsIgnoreCase("Yes")) {
-								dataMapCourseInfo = addXMLChildNodesToMap(element, json, i);
-								if (parentTable == 0) {
-									insertSCWForm(conn, dataMap);
-								}
-								if (parentTable == 1) {
-									insertSCWCourseInfo(conn, dataMapCourseInfo);
-								}
+		// String dataSourceVal =
+		// globalConfigFilenetService.getAEMFormsDatabaseSource();
+		// try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
+		payloadPath = workItem.getWorkflowData().getPayload().toString();
+		String workflowInstanceID = workItem.getWorkflow().getId();
+		
+		log.error("Little workflowInstanceID="+workflowInstanceID);
+		// if (conn != null) {
+		dataMap = new LinkedHashMap<>();
+		dataMapCourseInfo = new LinkedHashMap<>();
+		InputStream is = null;
+		try {
+			is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
+		} catch (RepositoryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (null != is) {
+			log.error("Little inside stream");
+			Document doc = null;
+			try {
+				doc = XMLUtils.getDomDocument(is);
+				log.error("Little inside doc="+doc);
+				
+			} catch (SAXException  | IOException  | ParserConfigurationException e) {
+				e.printStackTrace();
+			} 
+			Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
+			Element element = XMLUtils.getChildNode(afBoundDataElement, "form1");
+			if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+				log.error("Little afBoundDataElement=");
+				
+				String tableJsonData = XMLUtils.getChildNodeContent(element, "LookupResult");
+				JsonParser parser = new JsonParser();
+				if (StringUtils.isNotBlank(tableJsonData)) {
+					json = parser.parse(tableJsonData).getAsJsonObject();
+					log.error("Little json");
+				} else {
+					log.error("Error : tableJsonData not found!");
+				}
+				dataMap = addXMLParentNodesToMap(element, workItem);
+				for (int i = 0; i < XMLUtils.getElementLength(element, "CourseRow"); i++) {
+					if (XMLUtils.getChildNodeContentOfElement(element, "SelectCB", i).equalsIgnoreCase("Yes")) {
+						dataMapCourseInfo = addXMLChildNodesToMap(element, json, i);
+						if (parentTable == 0) {
+							try {
+								log.error("Little before save");
+								insertSCWForm(workflowInstanceID, dataMap);
+							} catch (SQLException e) {
+								e.printStackTrace();
 							}
 						}
-					}
-				}
-			}
-		} catch (SQLException | RepositoryException | SAXException | IOException | ParserConfigurationException e) {
-			log.error("Exception = {}", Arrays.toString(e.getStackTrace()));
-		} finally {
-			parentTable = 0;
-		}
-	}
-
-	public void insertSCWForm(Connection conn, Map<String, Object> dataMap) throws SQLException {
-		if (conn != null) {
-			conn.setAutoCommit(false);
-			String tableName = "AEM_COURSE_WITHDRAWAL";
-			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
-			StringBuilder placeholders = new StringBuilder();
-			for (Iterator<String> iter = dataMap.keySet().iterator(); iter.hasNext();) {
-				sql.append(iter.next());
-				placeholders.append("?");
-				if (iter.hasNext()) {
-					sql.append(",");
-					placeholders.append(",");
-				}
-			}
-			sql.append(") VALUES (").append(placeholders).append(")");
-			try (PreparedStatement preparedStmt = conn.prepareStatement(sql.toString());) {
-				int i = 0;
-				for (Object value : dataMap.values()) {
-					if (value instanceof Date) {
-						preparedStmt.setDate(++i, (Date) value);
-					} else if (value instanceof Integer) {
-						preparedStmt.setInt(++i, (Integer) value);
-					} else {
-						if (value != "" && value != null) {
-							preparedStmt.setString(++i, value.toString());
-						} else {
-							preparedStmt.setString(++i, null);
+						if (parentTable == 1) {
+							//insertSCWCourseInfo(conn, dataMapCourseInfo);
 						}
 					}
 				}
-				int rowsAffected = preparedStmt.executeUpdate();
-				log.debug("insertSCWForm - Rows Affected : {}", rowsAffected);
-				conn.commit();
-				parentTable = 1;
-			} catch (SQLException e) {
-				log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
 			}
 		}
+		// }
+	} /*
+		 * catch (SQLException | RepositoryException | SAXException | IOException |
+		 * ParserConfigurationException e) { log.error("Exception = {}",
+		 * Arrays.toString(e.getStackTrace())); }
+		 */
+	/*
+	 * finally { parentTable = 0; } }
+	 */
+
+	public void insertSCWForm(String workflowInstanceID, Map<String, Object> dataMap) throws SQLException {
+		log.error("Inside insertSCWForm");
+		JSONObject json = new JSONObject();
+		json.put("DB_CONNECTION", "AEMDBDEV");
+		json.put("TABLE_NAME", "AEM_COURSE_WITHDRAWAL");
+		json.put("FORM_NAME", "Student Course withdrawal");
+		json.put("UNIQUE_FIELD", "");
+		json.put("UNIQUE_FIELD_COLUMN", "");
+		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+		json.put("DATA_MAP", dataMap);
+		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE,ISS_SIGN_DATE,ATHLETIC_SIGN_DATE");
+		// On-Prem
+		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
+		try {
+			CloseableHttpClient client = HttpClients.createDefault();
+			HttpPost post = new HttpPost(dbServiceUrl);
+			post.addHeader("Content-Type", "application/json");
+			post.setEntity(new StringEntity(json.toString()));
+
+			CloseableHttpResponse response = client.execute(post);
+			log.info("DB Service Response: =" + response.getStatusLine());
+			log.error("DB Service Response: =" + response.getStatusLine());
+			
+			client.close();
+			parentTable = 1;
+		} catch (IOException e) {
+			log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
+		}
+		/*
+		 * if (conn != null) { conn.setAutoCommit(false); String tableName =
+		 * "AEM_COURSE_WITHDRAWAL"; StringBuilder sql = new
+		 * StringBuilder("INSERT INTO  ").append(tableName).append(" ("); StringBuilder
+		 * placeholders = new StringBuilder(); for (Iterator<String> iter =
+		 * dataMap.keySet().iterator(); iter.hasNext();) { sql.append(iter.next());
+		 * placeholders.append("?"); if (iter.hasNext()) { sql.append(",");
+		 * placeholders.append(","); } }
+		 * sql.append(") VALUES (").append(placeholders).append(")"); try
+		 * (PreparedStatement preparedStmt = conn.prepareStatement(sql.toString());) {
+		 * int i = 0; for (Object value : dataMap.values()) { if (value instanceof Date)
+		 * { preparedStmt.setDate(++i, (Date) value); } else if (value instanceof
+		 * Integer) { preparedStmt.setInt(++i, (Integer) value); } else { if (value !=
+		 * "" && value != null) { preparedStmt.setString(++i, value.toString()); } else
+		 * { preparedStmt.setString(++i, null); } } } int rowsAffected =
+		 * preparedStmt.executeUpdate(); log.debug("insertSCWForm - Rows Affected : {}",
+		 * rowsAffected); conn.commit();
+		 */
+
 	}
+	/*
+	 * catch (SQLException e) {
+	 * log.error("SQLException From CourseWithdrawalDB Class : {}",
+	 * Arrays.toString(e.getStackTrace())); } } }
+	 */
 
 	private void insertSCWCourseInfo(Connection conn, Map<String, Object> dataMap) throws SQLException {
 		if (conn != null) {
