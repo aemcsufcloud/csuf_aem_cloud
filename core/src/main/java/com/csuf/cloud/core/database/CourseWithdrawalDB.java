@@ -147,6 +147,8 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 		json.put("DATA_MAP", dataMap);
 		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE,ISS_SIGN_DATE,ATHLETIC_SIGN_DATE");
+		log.error("Outside insertSCWForm json="+json.toString());
+		
 		// On-Prem
 		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		try {
@@ -156,6 +158,8 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 			post.setEntity(new StringEntity(json.toString()));
 
 			CloseableHttpResponse response = client.execute(post);
+			log.error("Outside response="+response.toString());
+			
 			log.info("DB Service Response: =" + response.getStatusLine());
 			log.error("DB Service Response: =" + response.getStatusLine());
 			
