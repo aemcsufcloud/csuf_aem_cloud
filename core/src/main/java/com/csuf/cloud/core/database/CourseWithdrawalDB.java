@@ -147,7 +147,7 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 		json.put("DATA_MAP", dataMap);
 		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE,ISS_SIGN_DATE,ATHLETIC_SIGN_DATE");
-		log.error("Outside insertSCWForm json="+json.toString());
+		log.error("Pushpa json="+json.toString());
 		
 		// On-Prem
 		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
