@@ -274,14 +274,13 @@ $(document).ready(function() {
     }
 
     $('#open-details').click(function() {
-		alert("here open details");
+		//alert("here open details");
         if (!isViewTaskDetailsAllowed) {
-			alert("isViewTaskDetailsAllowed detail="+isViewTaskDetailsAllowed);
+			//alert("isViewTaskDetailsAllowed detail="+isViewTaskDetailsAllowed);
             // show access-not-allowed screen
-            window.location = '/content/csu/us/en/access-denied.html?wcmmode=disabled';
+            //window.location = '/content/csu/us/en/access-denied.html?wcmmode=disabled';
+			 window.location = '/content/csu/us/en/access-denied.html';
         } else {
-			alert("else Cond");
-			alert(isViewTaskDetailsAllowed);
             //window.location = '/content/csu/us/en/task-details.html?wcmmode=disabled';
 			window.location = '/content/csu/us/en/task-details.html';
         }
