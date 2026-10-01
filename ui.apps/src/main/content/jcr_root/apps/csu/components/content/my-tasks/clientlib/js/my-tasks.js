@@ -281,8 +281,8 @@ $(document).ready(function() {
             //window.location = '/content/csu/us/en/access-denied.html?wcmmode=disabled';
 			window.location = '/content/csu/us/en/access-denied.html';
         } else {
-			alert("else Cond");
-			alert(isViewTaskDetailsAllowed);
+			/*alert("else Cond");
+			alert(isViewTaskDetailsAllowed);*/
             //window.location = '/content/csu/us/en/task-details.html?wcmmode=disabled';
 			window.location = '/content/csu/us/en/task-details.html';
         }

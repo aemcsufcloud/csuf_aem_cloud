@@ -205,7 +205,7 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("FORM_NAME", "Student Course withdrawal");
 		json.put("UNIQUE_FIELD", "");
 		json.put("UNIQUE_FIELD_COLUMN", "");
-		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+		json.put("WORKFLOW_INSTANCE_ID", "");
 		json.put("DATA_MAP", dataMap);
 		json.put("DATE_FIELDS", "");
 		log.error("Outside insertSCWForm json="+json.toString());

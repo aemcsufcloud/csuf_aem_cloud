@@ -175,8 +175,6 @@ function getLastActionAndCommentDetails() {
 }
 
 function isViewTaskDetailsAllowed() {
-	/*alert("VIEW_TASK_DETAILS_ALLOWED");*/
-	alert("AAA taskAssignee="+taskAssignee);
     var requestURL = '/bin/getInboxItemDetails?action=VIEW_TASK_DETAILS_ALLOWED&assignee=' + taskAssignee;
     $.ajax({
         type: "GET",
@@ -186,7 +184,7 @@ function isViewTaskDetailsAllowed() {
         cache: false,
         success: function (response) {
             if (response && response == 'true') {
-				alert("My Task="+response);
+				//alert("My Task="+response);
                 isAllowed = true;
             }
         }
