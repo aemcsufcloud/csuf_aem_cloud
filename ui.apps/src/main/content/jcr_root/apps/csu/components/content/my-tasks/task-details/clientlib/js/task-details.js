@@ -175,8 +175,7 @@ function getLastActionAndCommentDetails() {
 }
 
 function isViewTaskDetailsAllowed() {
-	/*alert("VIEW_TASK_DETAILS_ALLOWED");*/
-	alert("AAA taskAssignee="+taskAssignee);
+
     var requestURL = '/bin/getInboxItemDetails?action=VIEW_TASK_DETAILS_ALLOWED&assignee=' + taskAssignee;
     $.ajax({
         type: "GET",
@@ -186,7 +185,7 @@ function isViewTaskDetailsAllowed() {
         cache: false,
         success: function (response) {
             if (response && response == 'true') {
-				alert("My Task="+response);
+				
                 isAllowed = true;
             }
         }
@@ -206,7 +205,7 @@ $(document).ready(function () {
 
     isViewTaskDetailsAllowed();
     if (isAllowed == false) {
-		alert("isAllowed="+isAllowed);
+		//alert("isAllowed="+isAllowed);
         $("#modal-self-assign-action").modal("hide");
         alert("You do not have the permission to access this task.");
         //$("#modal-error-access-denied-action").modal("show");
