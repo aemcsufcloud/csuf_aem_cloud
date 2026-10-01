@@ -206,7 +206,7 @@ $(document).ready(function () {
 
     isViewTaskDetailsAllowed();
     if (isAllowed == false) {
-		alert("isAllowed="+isAllowed);
+		//alert("isAllowed="+isAllowed);
         $("#modal-self-assign-action").modal("hide");
         alert("You do not have the permission to access this task.");
         //$("#modal-error-access-denied-action").modal("show");
@@ -225,9 +225,9 @@ $(document).ready(function () {
 	
 	
 	if (currentUserId1 && taskAssignee && isAssigneeAGroup1 !== 'true') {
-		alert("TESTING="+currentUserId1);
+		//alert("TESTING="+currentUserId1);
 	    if (currentUserId1.trim().toLowerCase() !== taskAssignee.trim().toLowerCase()) {
-			alert("TESTING123 inside");
+			//alert("TESTING123 inside");
 	        $("#modal-self-assign-action").modal("hide");
 	        alert("You do not have the permission to access this task.");
 	        location.href = document.referrer;
