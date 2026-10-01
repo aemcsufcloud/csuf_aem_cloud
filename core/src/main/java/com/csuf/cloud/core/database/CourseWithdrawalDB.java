@@ -146,7 +146,7 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("UNIQUE_FIELD_COLUMN", "");
 		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 		json.put("DATA_MAP", dataMap);
-		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE,ISS_SIGN_DATE,ATHLETIC_SIGN_DATE");
+		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE");
 		log.error("Pushpa json="+json.toString());
 		
 		// On-Prem
