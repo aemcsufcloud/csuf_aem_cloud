@@ -1,0 +1,777 @@
+.rb {
+	width: 15px;
+}
+
+.modal {
+    width: 100% !important;
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 200px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+    width: 57%;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+@media (max-width : 767px){
+.modal-content {
+	width: 100%;
+    }
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+
+/* The Close Button */
+
+.modal-header .close {
+/*	margin-top: -28px;*/
+        margin-top: 0px;
+
+	margin-right: -10px;
+}
+
+.close {
+	color: grey;
+	float: right;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	/* background-color: #1557c1;*/
+	height: 35px;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	height: 50px;
+	padding: 2px 16px;
+	/* background-color: #1557c1;*/
+	color: white;
+	text-align: left;
+}
+
+th {
+	font-size: 15px;
+	background-color: #00203e;
+	color: white;
+	font-weight: bold;
+}
+
+td,
+tr {
+	border: solid 1px #9baecc;
+	font-size: 14px;
+	font-family: Helvetica;
+	/*background-color:#9baecc;*/
+	color: #070f1c;
+
+}
+
+table {
+	border: solid 1px #070f1c;
+	border-collapse: collapse;
+	padding: 2px 3px;
+	text-align: center;
+    width: 100%;
+}
+
+.okBtn {
+	position: absolute;
+	right: 0;
+	margin-right: 16px !important;
+	padding-right: 28px !important;
+	padding-left: 28px !important;
+}
+
+.okBtn:hover,
+.okBtn:focus {
+	background-color: #084B8A;
+}
+
+.cancelBtn {
+	position: absolute;
+	margin-left: 622px !important;
+}
+
+.cancelBtn:hover,
+.cancelBtn:focus {
+	background-color: #084B8A;
+}
+
+.modal-text {
+	font-size: 20px !important;
+	font-weight: bold;
+	font-family: Helvetica !importnat;
+	/*background-color:#9baecc;*/
+	color: #070f1c !important;
+}
+
+    .gif-modal{
+          width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    text-align: center;
+        }
+
+.gif-img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.alertBox
+{
+    z-index: 1;
+    padding-top: 200px;
+    right: 0;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+.customAlert {
+
+   width: 400px;
+    border: solid 1px grey;
+    height: auto;
+    border-radius: 5px;
+
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+   /* box-shadow: 4px 4px 4px grey;*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+  }
+
+@media(max-width: 767px) {
+  .customAlert {
+   width : auto;
+   border: solid 1px grey;
+   position: relative;
+   margin: auto;
+   height: auto;
+   text-align: center;
+   border-radius: 5px;
+   background-color: white;
+   padding: 0;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+}
+  
+.closebtn {
+
+   float: right;
+   cursor:pointer;
+   color: #fff;
+	border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #605F61;
+	font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;   
+}
+ 
+
+
+.closebtn:hover {
+  color: black;
+}
+.customtext{
+padding: 50px;
+}
+
+
+.afHeader .guidefield {
+    vertical-align: middle !important;
+}
+
+.guideimage {
+    width: 14rem;
+}
+ 
+.guideImage {
+    height: 3rem;
+    padding-top: 7px;
+    margin-left: 10%;
+    margin-top: 1%;
+	}
+
+@media (max-width: 767px){
+	#headerTextCareerDevelopmentPlan{
+		padding-left: 8px !important;
+    	position: fixed !important;
+    	font-size: 22px;
+}
+}
+
+.guideFieldError {
+padding-left:5px;
+padding-top:5px;
+color:#FF4136;
+}
+
+
+
+.error-modal-content {
+	position: relative;
+	background-color: #fefefe;
+    width: 43%;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+@media (max-width : 767px){
+.modal-content {
+	width: 100%;
+    }
+ .error-modal-content {
+        width: 100%;
+        }
+}
+
+
+/* for border for all panels */
+div#\#guideContainer-rootPanel-qualityquantityoralc___layoutPanelContainer {
+    border: solid #AAAAAA 1px;
+}
+
+.modal-header {
+    background-color: #00274c;
+}
+
+
+/* for Tabs at top */
+ul#guideContainer-rootPanel-qualityquantityoralc___guide-item-nav-container {
+    text-align: center;
+}
+
+
+input#button1 {
+    position: relative;
+    top: 5px
+}
+
+label.lb1 {
+    position: relative;
+    bottom: 7px;
+    left: 7px;
+}
+
+input#button2 {
+    position: relative;
+    top: 5px;
+}
+
+label.lb2 {
+    position: relative;
+    bottom: 8px;
+    left: 7px;
+}
+
+/* for seperator below header */
+div#guideContainer-rootPanel-panel-guideseparator___guide-item {
+    visibility: hidden;
+}
+
+/*---------------------- Action to Complete Start---------------------------*/
+
+/* Mail to*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guidetextdraw___guide-item {
+    width: 6%;
+    margin-top: -4px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guideradiobutton___guide-item {
+    width: 35%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guidetextbox___guide-item {
+    width: 31%;
+}
+/*Address listed below
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guidecheckbox___guide-item {
+    width: 24%;
+}
+
+
+/*Email
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guidecheckbox_920386___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1311623916-panel_1248767544-guidetextbox___guide-item {
+    width: 45%;
+}*/
+
+/*Registration Process*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1151240521___guide-item {
+    width: 23%;
+    margin-top: -4px;
+}
+/*Records process*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2099258113___guide-item {
+    width: 23%;
+    margin-top: -4px;
+}
+
+/*S2506 Pre Registration Verification */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_1164188296___guide-item {
+    width: 7%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw___guide-item {
+    width:42%
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823662___guide-item {
+    width: 10%;
+}
+
+/*S2506 Enrollment Verification*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_7697862___guide-item {
+    width: 7%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2092074694___guide-item {
+    width:42%
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420706___guide-item {
+    width: 10%;
+}
+
+/*S2504 Degree Verification*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_1228748530___guide-item {
+    width: 7%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2017649679___guide-item {
+    width: 42%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420___guide-item {
+    width: 10%;
+}
+
+/*S2506 Good Student Discount */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874___guide-item {
+    width: 7%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_115296705___guide-item {
+    width: 42%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_81943972___guide-item {
+    width: 10%;
+}
+
+/*S2506 Enrollment Verification fee */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_386703144___guide-item {
+    width: 7%;
+    margin-top: 3px;
+}
+
+
+/* Designated Previous Term */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1516181780___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_710005807___guide-item {
+    width: 21%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextbox_746293857___guide-item {
+    margin-right: 4.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1166254083___guide-item {
+    width: 10%;
+}
+
+/* Total History (Beginning Term and End Term) */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_151618___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1767043700___guide-item {
+    width: 11%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1585670740___guide-item {
+    width: 31.25%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_521734997___guide-item {
+    width: 10%;
+}
+
+/* Total History (All semesters attended)*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_151618_2139315083___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1840514278___guide-item {
+	width: 11.35%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2027956202___guide-item {
+    width: 31%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1816472629___guide-item {
+    width: 10%;
+}
+
+/*VOE or VNT or BOTH */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_151618_186725347___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_693896767___guide-item {
+    width: 42.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1453047347___guide-item {
+    width: 10%;
+}
+
+/*Military ID */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_753005077___guide-item {
+    margin-left: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_503670446___guide-item {
+    width: 18%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_753005077___guide-item {
+    width: 11%;
+    margin-top: 3px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_770996971___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextbox_611242300___guide-item {
+    width: 13%;
+    margin-right: 0.5%;
+}
+
+/*Never attended or applied */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_151618_193425628___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_509671996___guide-item {
+    width: 42.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_226686633___guide-item {
+    width: 10%;
+}
+
+/*Other */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_151618_1451206200___guide-item {
+    width: 7%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_223710626___guide-item {
+    width: 42.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_334332815___guide-item {
+    width: 10%;
+}
+/*Please specify term*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_569205369___guide-item {
+    margin-top: -3%;
+    margin-left: 31%;
+}
+/*Student must */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1527801475___guide-item {
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: 3%;
+}
+
+/*Student Signature*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_902390363-panel-guidetextbox___guide-item {
+    width: 41%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_902390363-panel-guidetextbox_479222824___guide-item {
+    width: 41%;
+}
+.guideTextDraw.headerText {
+    height: 70px;
+}
+
+/* Click here for sample*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1977393756___guide-item {
+    margin-top: -2%;
+    margin-left: 1.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_555154249___guide-item {
+    margin-top: -2%;
+    margin-left: 1.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_230497134___guide-item {
+    margin-top: -2%;
+    margin-left: 1.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1831513502___guide-item {
+    margin-top: -2%;
+    margin-left: 1.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1195273535___guide-item {
+    margin-top: -2%;
+    margin-left: 1.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1224900699___guide-item {
+    margin-top: -4%;
+    margin-left: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2099415001___guide-item {
+    margin-top: -2%;
+    margin-left: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1640648642___guide-item {
+    margin-top: -2%;
+    margin-left: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_230245236___guide-item {
+    margin-top: -2%;
+    margin-left: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_795728264___guide-item {
+    margin-top: -2%;
+    margin-left: 8%;
+    width: 25.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1830729409___guide-item {
+    margin-top: -2%;
+    margin-left: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1752070491___guide-item {
+    margin-top: -3%;
+    margin-left: 8%;
+}
+/*Term*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1151240521___guide-item {
+    width: 7%;
+}
+/*Delivered to*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_902390363-panel_2129643336-guidetextdraw_2042090664___guide-item {
+    width: 15%;
+    margin-right: -2%;
+    margin-top: -3px;
+}
+
+/* */
+/*VNT*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1416978746___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823_483458695___guide-item{
+	width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_175207___guide-item{
+	margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Current sem*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1364467902___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_1821443106___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Good Student*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_1376023010___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_136446___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_990802018___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Pre Reg verification*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_116418___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_197739___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Military ID*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1470548717___guide-item {
+    width: 37.65%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextbox_6112423___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_136446_330253402___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_2101766744___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Non-Attendance*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1019330747___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_136446_1452047867___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_183072___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Previous sem*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_2113563127___guide-item {
+    width: 37%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextbox_7462938___guide-item {
+    width: 10%;
+    margin-right: 5px;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823_1772384732___guide-item {
+    width: 10%;
+}
+/*Total History Verification*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_498756447___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823_2056042817___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_164064___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*VOE*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_462838323___guide-item{
+   width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823_571679031___guide-item{
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_230245___guide-item{
+	margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Other*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1157881259___guide-item{
+  width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_794823_1225438531___guide-item{
+   width: 10%;
+}
+/*Schedule to graduate*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_913119806___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1983005973___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_183151_1802395251___guide-item {
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Degree Verification*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_104190327___guide-item{
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1708460290___guide-item{
+  width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_183151___guide-item{
+	margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Early Degree*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_122874_1172647565___guide-item{
+ 	width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_1761631234___guide-item{
+ 	width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_183151_1255360602___guide-item{
+	margin-top: -2.7%;
+    margin-left: 1.5%;
+}
+/*Loan deferment */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidecheckbox_1134708166___guide-item {
+    width: 47.5%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_829420_609800349___guide-item {
+    width: 10%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_107145451-guidetextdraw_183151_1195190406___guide-item{
+    margin-top: -2.7%;
+    margin-left: 1.5%;
+}

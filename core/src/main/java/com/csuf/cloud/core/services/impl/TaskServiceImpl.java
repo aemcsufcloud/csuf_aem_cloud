@@ -844,7 +844,8 @@ public String getTaskDataOld(String workItemId) {
 		if (null != historyItemsList && !historyItemsList.isEmpty()) {
 			wfHistoryJson = new JsonArray();
 			workItemAction = "Application submission";
-			String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+			//String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+			String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html";
 			wfHistoryJson = CSUFUtils.modifyTaskHistory(wfHistoryJson, workItemId, workItemAction, "Start", initiator,
 					startDateStr, startDateStr, "Workflow started", null, viewDetailsLink, null, null);
 		}
@@ -882,7 +883,8 @@ public String getTaskDataOld(String workItemId) {
 						} catch (ArrayIndexOutOfBoundsException e) {
 							log.error(e.getMessage());
 						}
-						String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+						//String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+						String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html";
 						wfHistoryJson = CSUFUtils.modifyTaskHistory(wfHistoryJson, actualWorkItemId,
 								workItem.getNode().getTitle(), null, workItem.getCurrentAssignee(), startDateStr,
 								endDateStr, actionTaken, comment, viewDetailsLink, null, null);

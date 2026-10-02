@@ -9,12 +9,19 @@ vsp_cobra_vsp_cobra.generated_guideRootPanel_init0 = function (scope) {
             var userID = "rpurohit";
   
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCatastrophicLeaveRequest",
         data: {
             //cwid: cwid123,
             userID: userID
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCatastrophicLeaveRequest",
+			cwid: cwid123,
+            userID: userID
+		},
         dataType: 'json',
         success: function(myresopnse) {
             // debugger;
@@ -1341,12 +1348,19 @@ if(depName !== null){
   var gifModal = document.getElementById('gifModal');
    //gifModal.style.display = "block";   
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getVSPCobraNameLookup",
             data: {
                 cwid: cwid,
               	dependentName : depName
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getVSPCobraNameLookup",
+					cwid: cwid,
+					dependentName : depName
+				},
             dataType: 'json',
 
             success: function(myresopnse) {
@@ -1414,12 +1428,19 @@ if(depName !== null){
   var gifModal = document.getElementById('gifModal');
    //gifModal.style.display = "block";   
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getVSPCobraNameLookup",
             data: {
                 cwid: cwid,
               	dependentName : depName
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getVSPCobraNameLookup",
+				cwid: cwid,
+              	dependentName : depName
+			},
             dataType: 'json',
 
             success: function(myresopnse) {
@@ -1487,12 +1508,20 @@ if(depName !== null){
   var gifModal = document.getElementById('gifModal');
    //gifModal.style.display = "block";   
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getVSPCobraNameLookup",
             data: {
                 cwid: cwid,
               	dependentName : depName
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getVSPCobraNameLookup",
+				cwid: cwid,
+              	dependentName : depName
+			},
             dataType: 'json',
 
             success: function(myresopnse) {

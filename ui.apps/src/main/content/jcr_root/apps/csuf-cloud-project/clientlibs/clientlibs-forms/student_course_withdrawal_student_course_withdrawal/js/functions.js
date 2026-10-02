@@ -728,13 +728,10 @@ student_course_withdrawal_student_course_withdrawal.generated_studentUserid_init
  * @param {scope} scope in which code inside function will be executed.
  */
 student_course_withdrawal_student_course_withdrawal.generated_withdrawalInstructionButton_click0 = function (scope) {
-	alert("here");
     with(this) {
-		alert("here1");
         with(scope) {
-			alert("here2");
             if (studentAgreement.value === '' || studentAgreement.value === null) {
-				alert("here3");
+				
     showErrorModal("Alert!","Please accept that you have read and understood the process of medical and non-medical withdrawal");
     this.visible = true;
     medInstructionsPanel.visible = true;

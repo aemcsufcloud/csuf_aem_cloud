@@ -1,0 +1,501 @@
+
+
+.rb {
+	width: 15px;
+}
+
+.modal {
+    width: 100% !important;
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 200px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+    width: 57%;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+@media (max-width : 767px){
+.modal-content {
+	width: 100%;
+    }
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+
+/* The Close Button */
+
+.modal-header .close {
+	margin-top: -28px;
+	margin-right: -10px;
+}
+
+.close {
+	color: grey;
+	float: right;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	/* background-color: #1557c1;*/
+	height: 35px;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	height: 50px;
+	padding: 2px 16px;
+	/* background-color: #1557c1;*/
+	color: white;
+	text-align: left;
+}
+
+th {
+	font-size: 15px;
+	background-color: #00203e;
+	color: white;
+	font-weight: bold;
+}
+
+td,
+tr {
+	border: solid 1px #070f1c;
+	font-size: 14px;
+	font-family: Helvetica;
+	/*background-color:#9baecc;*/
+	color: #070f1c;
+}
+
+table {
+	border: solid 1px #070f1c;
+	border-collapse: collapse;
+	padding: 2px 3px;
+	text-align: center;
+    width: 100%;
+}
+
+.okBtn {
+	position: absolute;
+	right: 0;
+	margin-right: 16px !important;
+	padding-right: 28px !important;
+	padding-left: 28px !important;
+}
+
+.okBtn:hover,
+.okBtn:focus {
+	background-color: #084B8A;
+}
+
+.cancelBtn {
+	position: absolute;
+	margin-left: 622px !important;
+}
+
+.cancelBtn:hover,
+.cancelBtn:focus {
+	background-color: #084B8A;
+}
+
+.modal-text {
+	font-size: 20px !important;
+	font-weight: bold;
+	font-family: Helvetica !importnat;
+	/*background-color:#9baecc;*/
+	color: #070f1c !important;
+}
+
+    .gif-modal{
+          width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    text-align: center;
+        }
+
+.gif-img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.alertBox
+{
+    z-index: 1;
+    padding-top: 200px;
+    right: 0;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+.customAlert {
+
+   width: 400px;
+    border: solid 1px grey;
+    height: auto;
+    border-radius: 5px;
+
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+   /* box-shadow: 4px 4px 4px grey;*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+  }
+@media(max-width: 767px) {
+  .customAlert {
+   width : auto;
+   border: solid 1px grey;
+   position: relative;
+   margin: auto;
+   height: auto;
+   text-align: center;
+   border-radius: 5px;
+   background-color: white;
+   padding: 0;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+}
+  
+.closebtn {
+
+   float: right;
+   cursor:pointer;
+   color: #fff;
+	border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #605F61;
+	font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;   
+}
+ 
+
+
+.closebtn:hover {
+  color: black;
+}
+.customtext{
+padding: 50px;
+}
+
+
+.afHeader .guidefield {
+    vertical-align: middle !important;
+}
+
+.guideImage {
+    height: 3rem;
+    padding-top: 7px;
+    margin-left: 10%;
+    margin-top: 1%;
+	}
+    
+@media (max-width: 767px){
+	#headerTextCareerDevelopmentPlan{
+		padding-left: 8px !important;
+    	position: fixed !important;
+    	font-size: 22px;
+}
+}
+
+.guideFieldError {
+padding-left:5px;
+padding-top:5px;
+color:#FF4136;
+}
+
+
+
+.error-modal-content {
+	position: relative;
+	background-color: #fefefe;
+    width: 43%;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+.guideFieldError 
+{
+	padding-left:5px;
+	padding-top:5px;
+	color:#FF4136;
+}
+
+
+@media (max-width : 767px){
+	.modal-content 
+	{
+		width: 100%;
+	}
+	.error-modal-content 
+	{
+        width: 100%;
+    }
+}
+
+/* top padding*/
+
+form#guideContainerForm {
+    padding-top: 5%;
+}
+
+/* table */
+th#guideContainer-rootPanel-qualityquantityoralc-panel-table_1453752112-HeaderRow-tableItem___guide-item {
+    width: 21%;
+}
+
+/* Alert popup */
+.afHeader p {
+    margin: -7px;
+    padding: 0px;
+}
+
+
+.modal-header {
+    padding: 11px 16px;
+    height: 35px;
+    color: white;
+}
+
+/*Required Info Tab */
+/*Other TF*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-guidecheckbox_197631403___guide-item {
+    width: 20%;
+}
+/*1st YES NO CB*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_2129975226___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidetextdraw___guide-item {
+    width: 55%;
+    margin-top: -3px;
+}
+/* Yes/no cb */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_copy___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_212997___guide-item {
+    width: 8%;
+}
+/*CB 3*/
+
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_copy_c___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_212997_1851233636___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidetextdraw_1069043729___guide-item {
+    width: 55%;
+}
+
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidetextdraw_1421107983___guide-item {
+    width: 16%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidetextdraw_1297478628___guide-item {
+    margin-top: -23px;
+} 
+
+/*CB 4*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_copy_c_1919820833___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidecheckbox_212997_537775___guide-item {
+    width: 8%;
+}
+/*Vehicle Checkbox
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_1940733482___guide-item {
+    width: 24%;
+}*/
+
+
+/*Supervisor Panel*/
+
+/* SUpervisors Last Name*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel_copy_copy_copy-guidetextbox___guide-item {
+    width: 33%;
+}
+/*name,mail*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel_copy_copy_copy-guidetextbox_394009923___guide-item {
+    width: 40%;
+} 
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel_copy_copy_copy-guidetextdraw___guide-item {
+    width: 15%;
+}
+/* Supervisors Mail*/ 
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel_copy_copy_copy-supervisorsignature1___guide-item {
+    width: 33%;
+}
+/* Dept Name*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel_copy_copy_copy-deptname169467025523___guide-item {
+    width: 40%;
+}
+
+/*Start Date*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-startdate16946704231___guide-item {
+    width: 25%;
+} 
+/*End Date*/ 
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-enddate1694670426635___guide-item {
+    width: 25%;
+}
+/*Labroom*/ 
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-labroom1694670429626___guide-item {
+    width: 25%;
+}
+/*LabPhone*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-labphone169467043326___guide-item {
+    width: 25%;
+} 
+ /* What kind of vehicle*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_117674___guide-item {
+    width: 24%;
+}
+/*Vehicle DD*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidedropdownlist___guide-item {
+    width: 35%;
+}
+
+/*row 6 CheckBoxes*/
+
+/*anonymous none of the above*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_1013264534___guide-item {
+    margin-left: 25px;
+}
+/*NO Yes CB*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_107277___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_188486___guide-item {
+    width: 72%;
+}
+/*None of the above*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_971699154___guide-item {
+    margin-left: 25px;
+}
+/* No Yes CB2*/ 
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_copy___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_107277_2134035222___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_152245___guide-item {
+    margin-top: -3px;
+}
+/*If Yes Text */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_131515___guide-item {
+    margin-top: -27px;
+    margin-left: -5px;
+}
+/*Yes/No CB pass required */
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_copy_c___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidecheckbox_107277_1016483946___guide-item {
+    width: 8%;
+}
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_150932___guide-item {
+     margin-top: -3px;
+}
+
+/*other, please specify*/
+div#guideContainer-rootPanel-qualityquantityoralc-quality-guidecheckbox_197631403___guide-item {
+    width: 20%;
+}
+
+/* Dept Coordinator Last Name*/
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1826027791-panel-panel-guidetextbox___guide-item {
+    width: 36%;
+}
+
+div#guideContainer-rootPanel-qualityquantityoralc-panel_2036088890-quality-panel-guidetextdraw_1069043729___guide-item {
+    width: 56%;
+}
+
+div#guideContainer-rootPanel-qualityquantityoralc-panel_1992432908-panel-guidetextdraw_131515___guide-item {
+    margin-left: 17%;
+    margin-top: -3%;
+}

@@ -372,9 +372,17 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
             if(StageIndicator.value === null && formSavedStatus.value === null){
  
   $.ajax({
-type: 'GET', 
+/*type: 'GET', 
 url:"/bin/getEvaluationFormData",
-data: {action: "EMP_DETAILS"},
+data: {action: "EMP_DETAILS"},*/
+
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormData",
+		action: "EMP_DETAILS"
+	},
+	
 dataType: 'json',
  
 success: function(myresopnse){
@@ -2085,15 +2093,25 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
             var reviewPeriodTo = Copy_ReviewPeriodTo.value;
             var actionType = "SPE_UNIT1_COPY_DATA";
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getEvaluationFormData",
                 data: {
                     cwid: cwid,
                     reviewPeriodFrom: reviewPeriodFrom,
                     reviewPeriodTo: reviewPeriodTo,
                     /*evalType: evalType,*/
-                    action: actionType
-                },
+                    /*action: actionType
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					cwid: cwid,
+                    reviewPeriodFrom: reviewPeriodFrom,
+                    reviewPeriodTo: reviewPeriodTo,
+					action: actionType
+				},
+							
                 dataType: 'json',
                 success: function(myresponse) {
 
@@ -2642,13 +2660,24 @@ performanceGoalComment3.value = null;
 
 function getEmpEmail(cwid,userId){
   $.ajax({
-                        type: 'GET',
+                        /*type: 'GET',
                         url: "/bin/getEvaluationFormData",
-            data: {
-                cwid: cwid,
-                userID: userId,
-                action:"SPE_UNIT1_EMP_DETAILS"
-            },
+					data: {
+						cwid: cwid,
+						userID: userId,
+						action:"SPE_UNIT1_EMP_DETAILS"
+					},*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				cwid: cwid,
+				userID: userId,
+				action:"SPE_UNIT1_EMP_DETAILS"
+			},
+			
+			
                         dataType: 'json',
                         success: function(response) { 
                           
@@ -2805,15 +2834,26 @@ if (StageIndicator.value === null) {
             var reviewPeriodTo = Copy_ReviewPeriodTo.value;
             var actionType = "SPE_UNIT1_COPY_DATA";
             $.ajax({
-                type: 'GET',
+               /* type: 'GET',
                 url: "/bin/getEvaluationFormDataCHRSID",
                 data: {
                     chrsId: cwid,
                     reviewPeriodFrom: reviewPeriodFrom,
                     reviewPeriodTo: reviewPeriodTo,
+                    action: actionType
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormDataCHRSID",
+					chrsId: cwid,
+                    reviewPeriodFrom: reviewPeriodFrom,
+                    reviewPeriodTo: reviewPeriodTo,
                     /*evalType: evalType,*/
                     action: actionType
-                },
+				},
+	
                 dataType: 'json',
                 success: function(myresponse) {
 
@@ -3367,13 +3407,22 @@ performanceGoalComment3.value = null;
 
 function getEmpEmail(cwid,userId){
   $.ajax({
-                        type: 'GET',
-                        url: "/bin/getEvaluationFormData",
-            data: {
-                cwid: cwid,
-                userID: userId,
-                action:"SPE_UNIT1_EMP_DETAILS"
-            },
+			/*type: 'GET',
+			url: "/bin/getEvaluationFormData",
+			data: {
+				cwid: cwid,
+				userID: userId,
+				action:"SPE_UNIT1_EMP_DETAILS"
+			},*/
+
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				cwid: cwid,
+				userID: userId,
+				action:"SPE_UNIT1_EMP_DETAILS"
+			},
                         dataType: 'json',
                         success: function(response) { 
                           
@@ -3625,13 +3674,22 @@ logUser.value = userValue;
                     var chrsVal = chrsId.value;
 
                     $.ajax({
-                        type: 'GET',
+                        /*type: 'GET',
                         url: "/bin/getEvaluationFormDataCHRSID",
                         data: {
                             cwid: chrsVal,
                             userID: userValue,
                             action : "SPE_UNIT1_EMP_DETAILS"
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getEvaluationFormDataCHRSID",
+							 cwid: chrsVal,
+                            userID: userValue,
+                            action : "SPE_UNIT1_EMP_DETAILS"
+						},
                         dataType: 'json',
                         success: function(myresponse) {
 
@@ -4095,13 +4153,23 @@ logUser.value = userValue;
                     var cwidVal = EmpID.value;
 
                     $.ajax({
-                        type: 'GET',
+                        /*type: 'GET',
                         url: "/bin/getEvaluationFormData",
                         data: {
                             cwid: cwidVal,
                             userID: userValue,
                             action : "SPE_UNIT1_EMP_DETAILS"
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getEvaluationFormData",
+							cwid: cwidVal,
+                            userID: userValue,
+                            action : "SPE_UNIT1_EMP_DETAILS"
+						},
+	
                         dataType: 'json',
                         success: function(myresponse) {
 
@@ -4559,14 +4627,24 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
         var deptid = this.value;
 		var union_cd = CBID.value;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 deptID: deptid,
                 cwid: empId,
               	union_cd:union_cd,
               action:"SPE_MANAGER_DETAILS"
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				deptID: deptid,
+                cwid: empId,
+              	union_cd:union_cd,
+				action:"SPE_MANAGER_DETAILS"
+			},
             dataType: 'json',
             success: function(myresponse) {
 
@@ -4605,14 +4683,25 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
         var deptid = this.value;
 		var union_cd = CBID.value;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormDataCHRSID",
             data: {
                 deptID: deptid,
                 cwid: empId,
               	union_cd:union_cd,
               action:"SPE_MANAGER_DETAILS"
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormDataCHRSID",
+				deptID: deptid,
+                cwid: empId,
+              	union_cd:union_cd,
+				action:"SPE_MANAGER_DETAILS"
+			},
+	
             dataType: 'json',
             success: function(myresponse) {
 
@@ -4867,15 +4956,21 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
   
 $.ajax({
 
-type: 'GET', 
-
-
+/*type: 'GET', 
 url:"/bin/getEvaluationFormData",
   data: {
-                division: divisionVal,
-    			action:"HR_COO_DATA"
-                
-            },
+		division: divisionVal,
+		action:"HR_COO_DATA"
+		},*/
+		
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormData",
+		division: divisionVal,
+		action:"HR_COO_DATA"
+	},
+	
 dataType: 'json',
 success: function(myresopnse){
   
@@ -7591,12 +7686,19 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
 var instance = instanceId.value;
 $.ajax({
 
-    type: 'GET',
-
+    /*type: 'GET',
     url: "/bin/getSelfEvalSupDoc",
     data: {
         instanceId: instance
-    },
+    },*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getSelfEvalSupDoc",
+			instanceId: instance
+		},
+				
     success: function(myresopnse) {
       debugger;
         for(i=0;i<myresopnse.length;i++){
@@ -8126,11 +8228,17 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
         EvaluatorDate.enabled = false;
         
          $.ajax({
-
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -8208,10 +8316,16 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
             HRCoordinatorSignDate.enabled = false;
             $.ajax({
 
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -8340,11 +8454,17 @@ if (this.value == 1) {
         if (EmpDate.value === null) {
             EmpDate.enabled = false;
            $.ajax({
-
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -8447,10 +8567,17 @@ if (this.value == "1") {
             EmpDate.enabled = false;
            $.ajax({
 
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     //var userValue = myresopnse[0].EMP_NAME;
@@ -8599,11 +8726,18 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
             AdminDate.enabled = false;
             
           $.ajax({
-
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -8679,11 +8813,17 @@ staff_performance_evaluation_unit_1_staff_performance_evaluation_unit_1___physic
 
             HRDIDate.enabled = false;
              $.ajax({
-
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -9876,13 +10016,21 @@ if(flag === 0){
 
         var data = JSON.stringify(sheet);
         $.ajax({
-            type: 'GET',
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				action: "SAVE_EVAL_DATA",
+				jsonData: data,
+                cwid: EmpID.value
+			},
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 action: "SAVE_EVAL_DATA",
                 jsonData: data,
                 cwid: EmpID.value
-            },
+            },*/
             dataType: 'json',
             success: function(response) {
 			console.log("Completed");

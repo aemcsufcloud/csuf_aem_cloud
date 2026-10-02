@@ -91,6 +91,22 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_gui
         type: 'GET',
         url: "/bin/getLoggedInUserDetails",
         dataType: 'json',
+		
+		/*type: 'GET',
+			data: {
+				path: "getPilotSummerWorkSchedule",
+				action: "EMPLOYEE_CWID_LOOKUP",
+				cwid: cwid
+			},*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getPilotSummerWorkSchedule",
+				action: "EMPLOYEE_CWID_LOOKUP",
+				cwid: cwid
+			},
+			
         success: function(myresopnse) {
             var userValue = myresopnse.userId;
             workflow_initiator.value = userValue;
@@ -113,11 +129,18 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_gui
         with(scope) {
             if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getEvaluationFormData",
         data: {
             action: "EMP_DETAILS"
-        },
+        },*/
+		
+		type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				action: "EMP_DETAILS"
+			},
+
         dataType: 'json',
         success: function(myresopnse) {
             if (myresopnse.length == 1) {
@@ -177,12 +200,22 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Emp
     var cwid = "";
   var chrsID = this.value;
       $.ajax({
-        type: 'GET',
+		  
+		url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "chrsIDUpdateServlet",
+				action: "STUDENT_TIMESHEET_EMP_DETAILS_CHRSID",
+				chrsId: chrsID
+				
+			},
+
+        /*type: 'GET',
         url: "/bin/chrsIDUpdateServlet",
         data: {
             action: "STUDENT_TIMESHEET_EMP_DETAILS_CHRSID",
             chrsId: chrsID
-        },
+        },*/
         dataType: 'json',
         success: function(myresopnse) {
           if(myresopnse.length >= 1){
@@ -206,12 +239,19 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Emp
 
 function getData(cwid){
    $.ajax({
-        type: 'GET',
+       /* type: 'GET',
         url: "/bin/getPilotSummerWorkSchedule",
         data: {
             action: "EMPLOYEE_CWID_LOOKUP",
             cwid: cwid
-        },
+        },*/
+			type: 'GET',
+			data: {
+				path: "getPilotSummerWorkSchedule",
+				action: "EMPLOYEE_CWID_LOOKUP",
+				cwid: cwid
+			},
+			
         dataType: 'json',
         success: function(myresopnse) {
             var modal = document.getElementById('myModal');
@@ -473,12 +513,21 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Emp
     var cwid = this.value;
 
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getPilotSummerWorkSchedule",
         data: {
             action: "EMPLOYEE_CWID_LOOKUP_CHRSID_UPDATED",
             cwid: cwid
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getPilotSummerWorkSchedule",
+			action: "EMPLOYEE_CWID_LOOKUP_CHRSID_UPDATED",
+			cwid: cwid
+		},
+		
         dataType: 'json',
         success: function(myresopnseData) {
             var modal = document.getElementById('myModal');
@@ -1395,11 +1444,19 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Man
     if (this.value == 1) {
         var uservalue;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 action: "EMP_DETAILS"
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormData",
+				action: "EMP_DETAILS"
+			},
+			
             dataType: 'json',
             success: function(myresopnse) {
                 var userValue = myresopnse[0].EMP_NAME;
@@ -1475,11 +1532,19 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Emp
     if (this.value == 1) {
         var uservalue;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 action: "EMP_DETAILS"
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				division: getEvaluationFormData,
+                action: "EMP_DETAILS"
+			},
+			
             dataType: 'json',
             success: function(myresopnse) {
                 var userValue = myresopnse[0].EMP_NAME;
@@ -1541,12 +1606,19 @@ work_schedule_request_pilot_summer_9_80_work_schedule_request_form.generated_Emp
     if (this.value !== null) {
         var divisionVal = this.value;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getEvaluationFormData",
             data: {
                 division: divisionVal,
                 action: "HR_COO_DATA"
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				division: divisionVal,
+                action: "HR_COO_DATA"
+			},
+			
             dataType: 'json',
             success: function(myresopnse) {
                 HRCoordinatorUserId.value = myresopnse[0].USERID;

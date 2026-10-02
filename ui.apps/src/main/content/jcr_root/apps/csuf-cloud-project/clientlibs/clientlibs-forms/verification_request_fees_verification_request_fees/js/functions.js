@@ -56,12 +56,21 @@ if (StageIndicator.value === null) {
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getVerificationRequestData",
         data: {
             action: "VERIFICATION_USER_DETAILS",
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getVerificationRequestData",
+			action: "VERIFICATION_USER_DETAILS",
+			userID: userValue
+		},
+
         dataType: 'json',
         success: function(response) {
             if (response.length >= 1) {
