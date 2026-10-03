@@ -712,7 +712,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 	}
 
 	public void insertSPEData(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
-		log.error("Inside insertSCWForm");
+		log.error("Inside insertSPEData");
 		JSONObject json = new JSONObject();
 		json.put("DB_CONNECTION", "AEMDBDEV");
 		json.put("TABLE_NAME", "AEM_STAFF_PERF_EVAL_2579");
@@ -724,7 +724,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		//json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM,EMPSIGNDATE,HRDATE,ADMINSIGNDATE,EVALSIGNDATE");
 		json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM");
 
-		log.error("Outside insertSCWForm json=" + json.toString());
+		log.error("Outside insertSPEData json=" + json.toString());
 
 		// On-Prem
 		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
@@ -735,9 +735,9 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 			post.setEntity(new StringEntity(json.toString()));
 
 			CloseableHttpResponse response = client.execute(post);
-			log.error("Outside response=" + response.toString());
-			log.info("DB Service Response: =" + response.getStatusLine());
-			log.error("DB Service Response: =" + response.getStatusLine());
+			log.error("Outside response insertSPEData=" + response.toString());
+			log.info("DB Service Response insertSPEData: =" + response.getStatusLine());
+			log.error("DB Service Response insertSPEData: =" + response.getStatusLine());
 
 			client.close();
 		} catch (IOException e) {
