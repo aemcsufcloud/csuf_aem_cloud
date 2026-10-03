@@ -51,18 +51,18 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 	int parentTable = 0;
 	private static final Logger log = LoggerFactory.getLogger(CourseWithdrawalDB.class);
 
-	/*@Reference
-	private JDBCConnectionHelperService jdbcConnectionService;
-
-	@Reference
-	private GlobalConfigCSUFService globalConfigFilenetService;*/
+	/*
+	 * @Reference private JDBCConnectionHelperService jdbcConnectionService;
+	 * 
+	 * @Reference private GlobalConfigCSUFService globalConfigFilenetService;
+	 */
 
 	@Override
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		log.error("Little Database");
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
-		log.error("Little resolver="+resolver);
+		log.error("Little resolver=" + resolver);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		JsonObject json = null;
 		Map<String, Object> dataMap = null;
@@ -72,73 +72,68 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		// try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
 		payloadPath = workItem.getWorkflowData().getPayload().toString();
 		String workflowInstanceID = workItem.getWorkflow().getId();
-		
-		log.error("Little workflowInstanceID="+workflowInstanceID);
+
+		log.error("Little workflowInstanceID=" + workflowInstanceID);
 		// if (conn != null) {
 		dataMap = new LinkedHashMap<>();
 		dataMapCourseInfo = new LinkedHashMap<>();
 		InputStream is = null;
 		try {
 			is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
-		} catch (RepositoryException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if (null != is) {
-			log.error("Little inside stream");
-			Document doc = null;
-			try {
-				doc = XMLUtils.getDomDocument(is);
-				log.error("Little inside doc="+doc);
-				
-			} catch (SAXException  | IOException  | ParserConfigurationException e) {
-				e.printStackTrace();
-			} 
-			Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
-			Element element = XMLUtils.getChildNode(afBoundDataElement, "form1");
-			if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
-				log.error("Little afBoundDataElement=");
-				
-				String tableJsonData = XMLUtils.getChildNodeContent(element, "LookupResult");
-				JsonParser parser = new JsonParser();
-				if (StringUtils.isNotBlank(tableJsonData)) {
-					json = parser.parse(tableJsonData).getAsJsonObject();
-					log.error("Little json");
-				} else {
-					log.error("Error : tableJsonData not found!");
+
+			if (null != is) {
+				log.error("Little inside stream");
+				Document doc = null;
+				try {
+					doc = XMLUtils.getDomDocument(is);
+					log.error("Little inside doc=" + doc);
+
+				} catch (SAXException | IOException | ParserConfigurationException e) {
+					e.printStackTrace();
 				}
-				dataMap = addXMLParentNodesToMap(element, workItem);
-				for (int i = 0; i < XMLUtils.getElementLength(element, "CourseRow"); i++) {
-					if (XMLUtils.getChildNodeContentOfElement(element, "SelectCB", i).equalsIgnoreCase("Yes")) {
-						dataMapCourseInfo = addXMLChildNodesToMap(element, json, i);
-						if (parentTable == 0) {
-							try {
-								log.error("Little before save");
-								insertSCWForm(workflowInstanceID, dataMap);
-							} catch (SQLException e) {
-								e.printStackTrace();
+				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
+				Element element = XMLUtils.getChildNode(afBoundDataElement, "form1");
+				if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+					log.error("Little afBoundDataElement=");
+
+					String tableJsonData = XMLUtils.getChildNodeContent(element, "LookupResult");
+					JsonParser parser = new JsonParser();
+					if (StringUtils.isNotBlank(tableJsonData)) {
+						json = parser.parse(tableJsonData).getAsJsonObject();
+						log.error("Little json");
+					} else {
+						log.error("Error : tableJsonData not found!");
+					}
+					dataMap = addXMLParentNodesToMap(element, workItem);
+					for (int i = 0; i < XMLUtils.getElementLength(element, "CourseRow"); i++) {
+						if (XMLUtils.getChildNodeContentOfElement(element, "SelectCB", i).equalsIgnoreCase("Yes")) {
+							dataMapCourseInfo = addXMLChildNodesToMap(element, json, i);
+							if (parentTable == 0) {
+								try {
+									log.error("Little before save");
+									insertSCWForm(workflowInstanceID, dataMap);
+								} catch (SQLException e) {
+									e.printStackTrace();
+								}
 							}
-						}
-						if (parentTable == 1) {
-							try {
-								insertSCWCourseInfo(workflowInstanceID, dataMapCourseInfo);
-							} catch (SQLException e) {
-								e.printStackTrace();
+							if (parentTable == 1) {
+								try {
+									insertSCWCourseInfo(workflowInstanceID, dataMapCourseInfo);
+								} catch (SQLException e) {
+									e.printStackTrace();
+								}
 							}
 						}
 					}
 				}
 			}
+			// }
+		} catch (Exception e) {
+			log.error("Exception = {}", Arrays.toString(e.getStackTrace()));
+		} finally {
+			parentTable = 0;
 		}
-		// }
-	} /*
-		 * catch (SQLException | RepositoryException | SAXException | IOException |
-		 * ParserConfigurationException e) { log.error("Exception = {}",
-		 * Arrays.toString(e.getStackTrace())); }
-		 */
-	/*
-	 * finally { parentTable = 0; } }
-	 */
+	}
 
 	public void insertSCWForm(String workflowInstanceID, Map<String, Object> dataMap) throws SQLException {
 		log.error("Inside insertSCWForm");
@@ -151,8 +146,8 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 		json.put("DATA_MAP", dataMap);
 		json.put("DATE_FIELDS", "STUDENT_SIGN_DATE");
-		log.error("Outside insertSCWForm json="+json.toString());
-		
+		log.error("Outside insertSCWForm json=" + json.toString());
+
 		// On-Prem
 		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		try {
@@ -162,10 +157,10 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 			post.setEntity(new StringEntity(json.toString()));
 
 			CloseableHttpResponse response = client.execute(post);
-			log.error("Outside response="+response.toString()); 
+			log.error("Outside response=" + response.toString());
 			log.info("DB Service Response: =" + response.getStatusLine());
 			log.error("DB Service Response: =" + response.getStatusLine());
-			
+
 			client.close();
 			parentTable = 1;
 		} catch (IOException e) {
@@ -208,8 +203,8 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 		json.put("WORKFLOW_INSTANCE_ID", "");
 		json.put("DATA_MAP", dataMap);
 		json.put("DATE_FIELDS", "");
-		log.error("Outside insertSCWForm json="+json.toString());
-		
+		log.error("Outside insertSCWForm json=" + json.toString());
+
 		// On-Prem
 		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		try {
@@ -219,57 +214,43 @@ public class CourseWithdrawalDB implements WorkflowProcess {
 			post.setEntity(new StringEntity(json.toString()));
 
 			CloseableHttpResponse response = client.execute(post);
-			log.error("Outside response="+response.toString()); 
+			log.error("Outside response=" + response.toString());
 			log.info("DB Service Response: =" + response.getStatusLine());
 			log.error("DB Service Response: =" + response.getStatusLine());
-			
+
 			client.close();
 			parentTable = 1;
 		} catch (IOException e) {
 			log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
 		}
-				
-		
-		/*if (conn != null) {
-			conn.setAutoCommit(false);
 
-			String tableName = "AEM_SCW_COURSE_INFO";
-			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
-			StringBuilder placeholders = new StringBuilder();
-			for (Iterator<String> iter = dataMap.keySet().iterator(); iter.hasNext();) {
-				sql.append(iter.next());
-				placeholders.append("?");
-				if (iter.hasNext()) {
-					sql.append(",");
-					placeholders.append(",");
-				}
-			}
-			sql.append(") VALUES (").append(placeholders).append(")");
-
-			try (PreparedStatement preparedStmt = conn.prepareStatement(sql.toString());) {
-				int i = 0;
-
-				for (Object value : dataMap.values()) {
-					if (value instanceof Date) {
-						preparedStmt.setDate(++i, (Date) value);
-					} else if (value instanceof Integer) {
-						preparedStmt.setInt(++i, (Integer) value);
-					} else {
-						if (value != "" && value != null) {
-							preparedStmt.setString(++i, value.toString());
-						} else {
-							preparedStmt.setString(++i, null);
-						}
-					}
-				}
-				int rowsAffected = preparedStmt.executeUpdate();
-				log.debug("insertSCWCourseInfo - Rows Affected : {}", rowsAffected);
-				conn.commit();
-			} catch (SQLException e) {
-				log.error("Error Message : {}, SQLException: {}", e.getMessage(), Arrays.toString(e.getStackTrace()));
-			}*/
-		}
-	//}
+		/*
+		 * if (conn != null) { conn.setAutoCommit(false);
+		 * 
+		 * String tableName = "AEM_SCW_COURSE_INFO"; StringBuilder sql = new
+		 * StringBuilder("INSERT INTO  ").append(tableName).append(" ("); StringBuilder
+		 * placeholders = new StringBuilder(); for (Iterator<String> iter =
+		 * dataMap.keySet().iterator(); iter.hasNext();) { sql.append(iter.next());
+		 * placeholders.append("?"); if (iter.hasNext()) { sql.append(",");
+		 * placeholders.append(","); } }
+		 * sql.append(") VALUES (").append(placeholders).append(")");
+		 * 
+		 * try (PreparedStatement preparedStmt = conn.prepareStatement(sql.toString());)
+		 * { int i = 0;
+		 * 
+		 * for (Object value : dataMap.values()) { if (value instanceof Date) {
+		 * preparedStmt.setDate(++i, (Date) value); } else if (value instanceof Integer)
+		 * { preparedStmt.setInt(++i, (Integer) value); } else { if (value != "" &&
+		 * value != null) { preparedStmt.setString(++i, value.toString()); } else {
+		 * preparedStmt.setString(++i, null); } } } int rowsAffected =
+		 * preparedStmt.executeUpdate();
+		 * log.debug("insertSCWCourseInfo - Rows Affected : {}", rowsAffected);
+		 * conn.commit(); } catch (SQLException e) {
+		 * log.error("Error Message : {}, SQLException: {}", e.getMessage(),
+		 * Arrays.toString(e.getStackTrace())); }
+		 */
+	}
+	// }
 
 	private Map<String, Object> addXMLParentNodesToMap(Element eElement, WorkItem workItem) {
 		Map<String, Object> parentNodesMap = new LinkedHashMap<>();

@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 
@@ -18,8 +19,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -203,6 +210,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
+		String workflowInstanceID = workItem.getWorkflow().getId();
 		// Get the payload path and iterate the path to find Data.xml, Use
 		// Document
 		// factory to parse the xml and fetch the required values for the
@@ -470,7 +478,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 						reviewPeriodToObj = reviewPeriodToNew;
 					}
 					dataMap.put("REVIEWPERIODTO", reviewPeriodToObj);
-
+					
 					dataMap.put("QUALITY", qualityRB);
 					dataMap.put("QUALITY_RATING_1", quality1);
 					dataMap.put("QUALITY_RATING_2", quality2);
@@ -642,12 +650,14 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 						Date hrDateNew = Date.valueOf(hrDate);
 						hrDateObj = hrDateNew;
 					}
-
+					
 					dataMap.put("HRDATE", hrDateObj);
 					dataMap.put("HRCOMMENT", hrComments);
 					dataMap.put("HRINITIALS", initials);
 					dataMap.put("HROVERALLRATE", hrOverallRate);
 					log.error("Datamap Size=" + dataMap.size());
+					
+					insertSPEData(workflowInstanceID, dataMap);
 
 				} catch (SAXException e) {
 					log.error("SAXException=" + e.getMessage());
@@ -664,11 +674,12 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 
 			}
 		}
-		conn = getConnection();
+		/*conn = getConnection();
 		if (conn != null) {
 			log.error("Connection Successfull");
-			insertSPEData(conn, dataMap);
-		}
+			insertSPEData(workflowInstanceID, dataMap);
+		}*/
+	
 	}
 
 	@Reference
@@ -700,8 +711,41 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		return null;
 	}
 
-	public void insertSPEData(Connection conn, LinkedHashMap<String, Object> dataMap) {
-		PreparedStatement preparedStmt = null;
+	public void insertSPEData(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
+		log.error("Inside insertSCWForm");
+		JSONObject json = new JSONObject();
+		json.put("DB_CONNECTION", "AEMDBDEV");
+		json.put("TABLE_NAME", "AEM_STAFF_PERF_EVAL_2579");
+		json.put("FORM_NAME", "Staff Eval 2579");
+		json.put("UNIQUE_FIELD", "");
+		json.put("UNIQUE_FIELD_COLUMN", "");
+		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+		json.put("DATA_MAP", dataMap);
+		//json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM,EMPSIGNDATE,HRDATE,ADMINSIGNDATE,EVALSIGNDATE");
+		json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM");
+
+		log.error("Outside insertSCWForm json=" + json.toString());
+
+		// On-Prem
+		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
+		try {
+			CloseableHttpClient client = HttpClients.createDefault();
+			HttpPost post = new HttpPost(dbServiceUrl);
+			post.addHeader("Content-Type", "application/json");
+			post.setEntity(new StringEntity(json.toString()));
+
+			CloseableHttpResponse response = client.execute(post);
+			log.error("Outside response=" + response.toString());
+			log.info("DB Service Response: =" + response.getStatusLine());
+			log.error("DB Service Response: =" + response.getStatusLine());
+
+			client.close();
+		} catch (IOException e) {
+			log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
+		}
+		
+		
+		/*PreparedStatement preparedStmt = null;
 		if (conn != null) {
 			try {
 				conn.setAutoCommit(false);
@@ -765,6 +809,6 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 					}
 				}
 			}
-		}
+		}*/
 	}
 }

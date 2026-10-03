@@ -46,12 +46,20 @@ nacha_form_nacha_form.generated_guideRootPanel_init1 = function (scope) {
         with(scope) {
             if(StageIndicator.value == "ToFaxError" || StageIndicator.value == "ToFax"){
    $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getNACHAData",
         data: {
             action: "SFTP_LOG_LOOKUP",
             caseId: caseId.value
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getNACHAData",
+			action: "SFTP_LOG_LOOKUP",
+            caseId: caseId.value
+		},
         dataType: 'json',
         success: function(response) {
           SFTPActivityLog.value = response[0].LOG;
