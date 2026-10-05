@@ -262,7 +262,10 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 
 							org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
 							
-							//initials = eElement.getElementsByTagName("Initials").item(0).getTextContent();
+							firstName = eElement.getElementsByTagName("StaffFirstName").item(0).getTextContent();
+							lastName = eElement.getElementsByTagName("StaffLastName").item(0).getTextContent();
+							
+							/*initials = eElement.getElementsByTagName("Initials").item(0).getTextContent();
 							hrDate = eElement.getElementsByTagName("HrDate").item(0).getTextContent();
 							ratingPeriodFrom = eElement.getElementsByTagName("ReviewPeriodFrom").item(0)
 									.getTextContent();
@@ -439,7 +442,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 									.getTextContent();
 							hrCB = eElement.getElementsByTagName("HRCB").item(0).getTextContent();
 							hrComments = eElement.getElementsByTagName("HrComment").item(0).getTextContent();
-							hrOverallRate = eElement.getElementsByTagName("HrOverallRate").item(0).getTextContent();
+							hrOverallRate = eElement.getElementsByTagName("HrOverallRate").item(0).getTextContent();*/
 
 						}
 					}
@@ -450,7 +453,9 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 					}
 
 					dataMap = new LinkedHashMap<String, Object>();
-					dataMap.put("DRAFTDATE", draftDateGivenObj);
+					dataMap.put("FIRSTNAME", firstName);
+					dataMap.put("LASTNAME", lastName);
+					/*dataMap.put("DRAFTDATE", draftDateGivenObj);
 					dataMap.put("ATHLETICSEMP", athleticsEmp);
 					dataMap.put("STAFFPOSDESC", staffposdesc);
 					dataMap.put("EMPLID", empId);
@@ -655,7 +660,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 					dataMap.put("HRDATE", hrDateObj);
 					dataMap.put("HRCOMMENT", hrComments);
 					dataMap.put("HRINITIALS", initials);
-					dataMap.put("HROVERALLRATE", hrOverallRate);
+					dataMap.put("HROVERALLRATE", hrOverallRate);*/
 					log.error("Datamap Size=" + dataMap.size());
 					
 					insertSPEData(workflowInstanceID, dataMap);
@@ -712,7 +717,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		return null;
 	}
 
-	/*public void insertSPEData(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
+	public void insertSPEData(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
 		log.error("Inside insertSPEData");
 		JSONObject json = new JSONObject();
 		json.put("DB_CONNECTION", "AEMDBDEV");
@@ -723,7 +728,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 		json.put("DATA_MAP", dataMap);
 		//json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM,EMPSIGNDATE,HRDATE,ADMINSIGNDATE,EVALSIGNDATE");
-		json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM");
+		json.put("DATE_FIELDS", "");
 
 		log.error("Outside insertSPEData json=" + json.toString());
 
@@ -744,59 +749,72 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 		} catch (IOException e) {
 			log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
 		}
-	}*/
-	
-	public void insertSPEData(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
-
-	    log.error("Inside insertSPEData");
-
-	    JSONObject json = new JSONObject();
-
-	    json.put("DB_CONNECTION", "AEMDBDEV");
-
-	    json.put("TABLE_NAME", "AEM_STAFF_PERF_EVAL_2579");
-
-	    json.put("FORM_NAME", "Staff Eval 2579");
-
-	    json.put("UNIQUE_FIELD", "");
-
-	    json.put("UNIQUE_FIELD_COLUMN", "");
-
-	    json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
-
-	    json.put("DATA_MAP", dataMap);
-
-	    // json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM,EMPSIGNDATE,HRDATE,ADMINSIGNDATE,EVALSIGNDATE");
-
-	    json.put("DATE_FIELDS", "DRAFTDATE,REVIEWPERIODTO,REVIEWPERIODFROM");
-
-	    log.error("Outside insertSPEData json=" + json.toString());
-
-	    // On-Prem
-	    String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
-
-	    try (CloseableHttpClient client = HttpClients.createDefault()) {
-
-	        HttpPost post = new HttpPost(dbServiceUrl);
-
-	        post.addHeader("Content-Type", "application/json");
-
-	        post.setEntity(new StringEntity(json.toString()));
-
-	        try (CloseableHttpResponse response = client.execute(post)) {
-
-	            log.error("Outside response insertSPEData=" + response.toString());
-
-	            log.info("DB Service Response insertSPEData: =" + response.getStatusLine());
-
-	            log.error("DB Service Response insertSPEData: " + response.getStatusLine());
-
-	        }
-
-	    } catch (IOException e) {
-
-	        log.error("SQLException From CourseWithdrawalDB Class : {}", Arrays.toString(e.getStackTrace()));
-
-	    }
+		
+		
+		/*PreparedStatement preparedStmt = null;
+		if (conn != null) {
+			try {
+				conn.setAutoCommit(false);
+			} catch (SQLException e1) {
+				log.error("SQLException=" + e1.getMessage());
+				e1.printStackTrace();
+			}
+			String tableName = "AEM_STAFF_PERF_EVAL_2579";
+			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
+			StringBuilder placeholders = new StringBuilder();
+			for (Iterator<String> iter = dataMap.keySet().iterator(); iter.hasNext();) {
+				sql.append(iter.next());
+				placeholders.append("?");
+				if (iter.hasNext()) {
+					sql.append(",");
+					placeholders.append(",");
+				}
+			}
+			sql.append(") VALUES (").append(placeholders).append(")");
+			log.error("SQL=" + sql.toString());
+			try {
+				preparedStmt = conn.prepareStatement(sql.toString());
+			} catch (SQLException e1) {
+				log.error("SQLException=" + e1.getMessage());
+				e1.printStackTrace();
+			}
+			int i = 0;
+			log.info("Datamap values=" + dataMap.values());
+			for (Object value : dataMap.values()) {
+				try {
+					if (value instanceof Date) {
+						preparedStmt.setDate(++i, (Date) value);
+					} else if (value instanceof Integer) {
+						preparedStmt.setInt(++i, (Integer) value);
+					} else {
+						if (value != "" && value != null) {
+							preparedStmt.setString(++i, value.toString());
+						} else {
+							preparedStmt.setString(++i, null);
+						}
+					}
+				} catch (SQLException e) {
+					log.error("SQLException=" + e.getMessage());
+					e.printStackTrace();
+				}
+			}
+			try {
+				preparedStmt.execute();
+				conn.commit();
+			} catch (SQLException e1) {
+				log.error("SQLException=" + e1.getMessage());
+				e1.printStackTrace();
+			} finally {
+				if (preparedStmt != null) {
+					try {
+						preparedStmt.close();
+						conn.close();
+					} catch (SQLException e) {
+						log.error("SQLException=" + e.getMessage());
+						e.printStackTrace();
+					}
+				}
+			}
+		}*/
 	}
 }
