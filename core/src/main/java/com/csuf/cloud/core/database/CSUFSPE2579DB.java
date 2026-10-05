@@ -261,6 +261,7 @@ public class CSUFSPE2579DB implements WorkflowProcess {
 						if (nNode.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
 
 							org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
+							
 							//initials = eElement.getElementsByTagName("Initials").item(0).getTextContent();
 							hrDate = eElement.getElementsByTagName("HrDate").item(0).getTextContent();
 							ratingPeriodFrom = eElement.getElementsByTagName("ReviewPeriodFrom").item(0)
