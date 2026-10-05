@@ -551,7 +551,8 @@ public class CSUFUtils {
 				histroyWorkItemData.addProperty("endDate",
 						StringUtils.isNotBlank(endDateStr) ? endDateStr : StringUtils.EMPTY);
 
-				String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+				//String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+				String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html";
 				histroyWorkItemData.addProperty("viewDetailsLink",
 						(StringUtils.isNotBlank(viewDetailsLink)
 								&& ArgumentParser.showDocumentOfCompletedTasks(workItem)) ? viewDetailsLink
@@ -622,7 +623,8 @@ public class CSUFUtils {
 			String startDateStr = CSUFUtils.formatDate(startDate.getTime(), rb);
 			if (null != wfHistoryList && !wfHistoryList.isEmpty()) {
 				String workItemAction = "Application submission";
-				String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+				//String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html?wcmmode=disabled";
+				String viewDetailsLink = "/content/csu/us/en/task-details-readonly.html";
 				formsHistoryList = CSUFUtils.modifyTaskHistory(formsHistoryList, currentWorkItem.getId(),
 						workItemAction, "Start", initiator, startDateStr, startDateStr, "Workflow started", null,
 						viewDetailsLink, null, null);

@@ -353,7 +353,8 @@ $(document).ready(function() {
                 if (resp && resp == "success") {
                     $("#modal-self-assign-action").modal("hide");
                     $("#modal-select-delegatee-action").modal("hide");
-                    window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+                    //window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+					window.location = '/content/csu/us/en/my-tasks.html';
                 }
             },
             error: function(resp, xhr, error, errorThrown) {
@@ -435,7 +436,8 @@ $(document).ready(function() {
         $('.inbox').removeClass('action-show');
         $('div.card').removeClass('active');
         $(".chb").prop('checked', false);
-        window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+        //window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+		window.location = '/content/csu/us/en/my-tasks.html';
     };
 
     var frameURL = localStorage.getItem('selectedTaskURL');
