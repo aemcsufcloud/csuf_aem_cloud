@@ -32,6 +32,8 @@ public class ReadTxtProcess implements WorkflowProcess {
     @Override
     public void execute(WorkItem workItem, WorkflowSession wfSession, MetaDataMap args)
             throws WorkflowException {
+				
+		LOG.error("September ReadTxtProcess");
 
         WorkflowData data = workItem.getWorkflowData();
         if (!"JCR_PATH".equals(data.getPayloadType())) {
@@ -39,6 +41,8 @@ public class ReadTxtProcess implements WorkflowProcess {
         }
 
         String payloadPath = data.getPayload().toString();
+		LOG.error("September Processing payload: {}", payloadPath);
+
         LOG.info("Processing payload: {}", payloadPath);
 
         ResourceResolver resolver = wfSession.adaptTo(ResourceResolver.class);
@@ -53,6 +57,7 @@ public class ReadTxtProcess implements WorkflowProcess {
         }
 
         Rendition original = asset.getOriginal();
+		LOG.error("September original: {}", original);
         if (original == null) {
             throw new WorkflowException("No original rendition found for: " + payloadPath);
         }
@@ -66,9 +71,12 @@ public class ReadTxtProcess implements WorkflowProcess {
             while ((line = reader.readLine()) != null) {
                 lineNo++;
                 // ---- your existing business logic goes here ----
-                LOG.debug("Line {}: {}", lineNo, line);
+                LOG.error("September Line {}: {}", lineNo, line);
+				LOG.debug("Line {}: {}", lineNo, line);
             }
+			LOG.error("September Finished reading {} lines from {}", lineNo, payloadPath);
             LOG.info("Finished reading {} lines from {}", lineNo, payloadPath);
+			
 
         } catch (IOException e) {
             throw new WorkflowException("Failed to read file: " + payloadPath, e);
