@@ -97,7 +97,7 @@ public class TestNacha implements WorkflowProcess {
 		 */
 		String currentworkflowInstanceId = workItem.getWorkflow().getId();
 		JsonArray attachmentArray = new JsonArray();
-		log.debug("workflowInstanceId = " + currentworkflowInstanceId);
+		log.error("Pushpa workflowInstanceId = " + currentworkflowInstanceId);
 		try {
 			
 			 /*dbConn = jdbcConnectionService.getDocDBConnection(); 
@@ -110,21 +110,35 @@ public class TestNacha implements WorkflowProcess {
 			// CHANGED: read the DAM input asset/folder instead of the on-prem watched folder payload
 			// attachmentArray = getTaskAttachmentsFromWorkflowInstanceId(resolver, currentworkflowInstanceId);
 			attachmentArray = getAttachmentsFromInputFolder(resolver, currentworkflowInstanceId);
-			log.debug("attachmentArray = " + attachmentArray);
+			log.error("Pushpa attachmentArray = " + attachmentArray);
 			String caseId = getCaseId();
+			log.error("Pushpa caseId = " + caseId);
 			//String xmlData = getXml(caseId, dbConnFrmmgr);
-			String xmlData = getXml(caseId, null);
+			String xmlData = getXml(caseId);
+			
 			if (xmlData != null) {
+				log.error("Pushpa xmlData condition");
 				is = IOUtils.toInputStream(xmlData, StandardCharsets.UTF_8);
 				if (null != is) {
+					log.error("Pushpa inputstream condition");
 					doc = XMLUtils.getDomDocument(is);
 					String generatedPayloadPath = CSUFUtils.getRecentlyCreatedPayloadPath(resolver,
 							PAYLOAD_SERVER_PATH);
+					
+					log.error("Pushpa generatedPayloadPath="+generatedPayloadPath);
+					
 					String newPayloadPath = createNewPayloadPath(session, generatedPayloadPath, doc);
+					log.error("Pushpa newPayloadPath="+newPayloadPath);
+					
 					JsonObject newAttachmentJson = addAttachment(session, attachmentArray, newPayloadPath, resolver);
 					log.info("Successfully added the file attachments to the newly created payload : {}",
 							newAttachmentJson);
+					log.error("Pushpa Successfully added the file attachments to the newly created payload : {}",
+							newAttachmentJson);
+					
 					log.info("newPayloadPath {}", newPayloadPath);
+					log.error("Pushpa newPayloadPath {}", newPayloadPath);
+					
 					if (StringUtils.isNotBlank(newPayloadPath)) {
 						final Map<String, Object> workflowMetadata = new HashMap<>();
 						workflowMetadata.put("workflowTitle", WORKFLOW_MODEL_NAME);
@@ -132,6 +146,7 @@ public class TestNacha implements WorkflowProcess {
 						workflowMetadata.entrySet().stream().forEach(arg -> {
 							workflowMetadata.put(arg.getKey(), arg.getValue());
 							log.debug("workflowMetadata key : {}, value : {}", arg.getKey(), arg.getValue());
+							log.error("Pushpa workflowMetadata key : {}, value : {}", arg.getKey(), arg.getValue());
 						});
 						Workflow wf = wfSession.startWorkflow(workModel, wfData, workflowMetadata);
 						log.info("wf instance id : {}", wf.getId());
@@ -173,14 +188,19 @@ public class TestNacha implements WorkflowProcess {
 	 */
 	private JsonArray getAttachmentsFromInputFolder(ResourceResolver resourceResolver, String workflowInstanceId)
 			throws Exception {
+		log.error("Pushpa getAttachmentsFromInputFolder");
 		JsonArray formsJson = new JsonArray();
 		WorkflowSession wfSession = resourceResolver.adaptTo(WorkflowSession.class);
 		String payloadPath = wfSession.getWorkflow(workflowInstanceId).getWorkflowData().getPayload().toString();
 		log.debug("payloadPath inside getAttachmentsFromInputFolder method : {}", payloadPath);
+		log.error("Pushpa payloadPath inside getAttachmentsFromInputFolder method : {}", payloadPath);
+		
 		if (StringUtils.isBlank(payloadPath)) {
 			throw new Exception("payload path is empty inside getAttachmentsFromInputFolder method");
 		}
 		Resource payloadResource = resourceResolver.getResource(payloadPath);
+		log.error("Pushpa payloadResource : {}", payloadResource);
+		
 		if (payloadResource == null) {
 			throw new Exception("payload resource not found : " + payloadPath);
 		}
@@ -204,17 +224,23 @@ public class TestNacha implements WorkflowProcess {
 	 * NEW: adds a .txt DAM asset to the attachment list in the same {fileName, path} shape used before.
 	 */
 	private void addAssetToAttachmentJson(Asset asset, JsonArray formsJson) {
+		log.error("Pushpa addAssetToAttachmentJson");
+		
 		String fileName = asset.getName();
 		if (StringUtils.isBlank(fileName) || asset.getOriginal() == null) {
 			return;
 		}
 		String fileExtension = CSUFUtils.getFileExtension(fileName);
+		log.error("Pushpa fileExtension="+fileExtension);
+		
 		if (StringUtils.isNotBlank(fileExtension) && fileExtension.equalsIgnoreCase("txt")) {
 			JsonObject json = new JsonObject();
 			nachaFileName = fileName;
 			json.addProperty("fileName", fileName);
 			json.addProperty("path", asset.getOriginal().getPath());
 			formsJson.add(json);
+			log.error("Pushpa json="+json.toString());
+			
 			log.debug("Added DAM asset as attachment : {}", asset.getPath());
 		}
 	}
@@ -253,6 +279,7 @@ public class TestNacha implements WorkflowProcess {
 	}
 
 	private String createNewPayloadPath(Session session, String existingPayload, Document doc) throws Exception {
+		log.debug("Pushpa createNewPayloadPath");
 		ResourceResolver resourceResolver = null;
 		String afPath = null;
 		existingPayload = existingPayload.concat("/");
@@ -260,6 +287,9 @@ public class TestNacha implements WorkflowProcess {
 		String randomString = CSUFUtils.generateRandomString(26, ALLOWED_CHARS);
 		String newJCRPayloadPath = existingPayload.concat(randomString);
 		log.debug("The new JCR Payload node path = {}", newJCRPayloadPath);
+		log.error("Pushpa The new JCR Payload node path = {}", newJCRPayloadPath);
+
+		
 		try {
 			// Element xmlRoot = doc.getDocumentElement();
 			Element afParentElement = XMLUtils.getParentNode(doc, "afSubmissionInfo");
@@ -288,6 +318,8 @@ public class TestNacha implements WorkflowProcess {
 
 	private JsonObject addAttachment(Session session, JsonArray attachments, String newPayload,
 			ResourceResolver resolver) throws Exception {
+		log.debug("Pushpa addAttachment");
+		
 		int count = 0;
 		String attachmentFolder = "Attachments";
 		JsonObject resultObj = new JsonObject();
@@ -321,7 +353,7 @@ public class TestNacha implements WorkflowProcess {
 		return null;
 	}
 
-	private String getXml(String caseID, Connection dbConnFrmmgr) {
+	private String getXml(String caseID) {
 		try {
 			DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
