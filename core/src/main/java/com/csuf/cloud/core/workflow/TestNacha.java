@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
-import java.sql.Connection;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,6 +26,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -34,7 +34,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.sling.api.resource.Resource; // NEW
 import org.apache.sling.api.resource.ResourceResolver;
-import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -54,7 +53,6 @@ import com.adobe.granite.workflow.model.WorkflowModel;
 import com.csuf.cloud.core.services.AssetService;
 import com.csuf.cloud.core.services.GlobalConfigService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 import com.day.cq.dam.api.Asset; // NEW
 import com.day.cq.search.QueryBuilder;
@@ -492,32 +490,40 @@ public class TestNacha implements WorkflowProcess {
 		return null;
 	}
 
-	private JsonArray getNachaFileProperties(String fileTitle) throws IOException {
+	private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
 		log.error("Inside getNachaFileProperties");
 		
 	
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
+	    /*final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
+	    
+	   
 	    JSONObject json = new JSONObject();
 		JsonArray resultArray = new JsonArray();
 
-	    json.put("fileTitle", fileTitle);
-	    try (CloseableHttpClient client = HttpClients.createDefault()) {
-			HttpPost post = new HttpPost(dbServiceUrl);
-			// FIX: StringEntity with a Charset sends text/plain, and addHeader added a second Content-Type.
-			// Set the JSON content type on the entity instead.
-			log.error("Pushpa Json : {}", json.toString());
-			
-			post.setEntity(new StringEntity(json.toString(), ContentType.APPLICATION_JSON));
-			log.error("Pushpa post : {}", post.toString());
-			try (CloseableHttpResponse response = client.execute(post)) {
-				log.error("Pushpa Nacha Response: {}", response.getStatusLine());
-				BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8)); // FIX: explicit UTF-8
+	    json.put("nachaTitle", fileTitle);*/
+	    
+		JsonArray resultArray = new JsonArray();
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
+
+		// builds: https://myformstst.fullerton.edu/bin/getNachaDetails?nachaTitle=ACHDisb_20260903_213237
+		java.net.URI uri = new URIBuilder(dbServiceUrl)
+				.addParameter("nachaTitle", fileTitle)
+				.build();
+		log.debug("PushpaNacha request url : {}", uri);
+		
+		try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpGet get = new HttpGet(uri);
+			get.setHeader("Accept", "application/json");
+			try (CloseableHttpResponse response = client.execute(get)) {
+				log.debug("Nacha Response: {}", response.getStatusLine());
+				BufferedReader reader = new BufferedReader(
+						new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8));
 				StringBuilder sb = new StringBuilder();
 				String line;
 				while ((line = reader.readLine()) != null) {
 					sb.append(line);
 				}
-				log.error("Pushpa Nacha Response body : {}", sb); // FIX: log the body so a bad response is visible
+				log.debug("Nacha Response body : {}", sb);
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
 				return resultArray;
 			}
