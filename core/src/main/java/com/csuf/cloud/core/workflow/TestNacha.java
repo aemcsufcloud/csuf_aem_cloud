@@ -494,6 +494,8 @@ public class TestNacha implements WorkflowProcess {
 
 	private JsonArray getNachaFileProperties(String fileTitle) throws IOException {
 		log.error("Inside getNachaFileProperties");
+		
+	
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
 	    JSONObject json = new JSONObject();
 		JsonArray resultArray = new JsonArray();
