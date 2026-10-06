@@ -1,6 +1,7 @@
 package com.csuf.cloud.core.workflow;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
@@ -33,6 +34,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.sling.api.resource.Resource; // NEW
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -490,45 +492,33 @@ public class TestNacha implements WorkflowProcess {
 		return null;
 	}
 
-	private JsonArray getNachaFileProperties(String fileTitle) {
+	private JsonArray getNachaFileProperties(String fileTitle) throws IOException {
+		log.error("Inside getNachaFileProperties");
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
+	    JSONObject json = new JSONObject();
 		JsonArray resultArray = new JsonArray();
 
-		try {
-			String sqlQuery = "SELECT * FROM cmsrda.FUL_SF_FN_ACH WHERE LOWER(FILEREFNAME) = LOWER('<<FILE_TITLE>>')";
-			sqlQuery = sqlQuery.replace("<<FILE_TITLE>>", fileTitle); // FIX: literal replace, safe for $ and \ in file names
-			String lookupFields = "FILEREFNAME,BATCH_RUN_DATE,BATCH_SEQ_NBR,REFUND_AMT,REPORT_ID,REP_TITLE,PROCESSINSTANCE,DOC_TYPE,EFFDT";
-
-			final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaProperties";
-			JsonObject json = new JsonObject();
-			json.addProperty("sqlQuery", sqlQuery);
-			json.addProperty("lookupFields", lookupFields);
-
-			try (CloseableHttpClient client = HttpClients.createDefault()) {
-				HttpPost post = new HttpPost(dbServiceUrl);
-				// FIX: StringEntity with a Charset sends text/plain, and addHeader added a second Content-Type.
-				// Set the JSON content type on the entity instead.
-				log.error("Pushpa Json : {}", json.toString());
-				
-				post.setEntity(new StringEntity(json.toString(), ContentType.APPLICATION_JSON));
-				log.error("Pushpa post : {}", post.toString());
-				try (CloseableHttpResponse response = client.execute(post)) {
-					log.error("Pushpa Nacha Response: {}", response.getStatusLine());
-					BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8)); // FIX: explicit UTF-8
-					StringBuilder sb = new StringBuilder();
-					String line;
-					while ((line = reader.readLine()) != null) {
-						sb.append(line);
-					}
-					log.error("Pushpa Nacha Response body : {}", sb); // FIX: log the body so a bad response is visible
-					resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
-					return resultArray;
+	    json.put("fileTitle", fileTitle);
+	    try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpPost post = new HttpPost(dbServiceUrl);
+			// FIX: StringEntity with a Charset sends text/plain, and addHeader added a second Content-Type.
+			// Set the JSON content type on the entity instead.
+			log.error("Pushpa Json : {}", json.toString());
+			
+			post.setEntity(new StringEntity(json.toString(), ContentType.APPLICATION_JSON));
+			log.error("Pushpa post : {}", post.toString());
+			try (CloseableHttpResponse response = client.execute(post)) {
+				log.error("Pushpa Nacha Response: {}", response.getStatusLine());
+				BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8)); // FIX: explicit UTF-8
+				StringBuilder sb = new StringBuilder();
+				String line;
+				while ((line = reader.readLine()) != null) {
+					sb.append(line);
 				}
+				log.error("Pushpa Nacha Response body : {}", sb); // FIX: log the body so a bad response is visible
+				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
+				return resultArray;
 			}
-			//resultArray = DatabaseUtils.getDataFromDB(sqlQuery, lookupFields, dbConn);
-
-		} catch (Exception e) {
-			log.error("Error Fetching Nacha File Properties", e);
 		}
-		return null;
 	}
 }
