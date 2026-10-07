@@ -311,13 +311,9 @@ public class TestNacha implements WorkflowProcess {
 			log.error("Flower is = " + is.available());
 			
 			log.debug("Flower Session Value = " + session.isLive());
-			log.debug("Flower Session USer = " + session.getUserID());
-			
-			//log.error("Flower California Value live={}, user={}", session.isLive(),session.getUserID());
 			
 			boolean isNewPayloadJCRPathCreated = assetService.writeNtFileToPayloadPath(session, "Data.xml", afPath,
 					newJCRPayloadPath, is);
-			
 			
 			log.debug("new payload node got created with status = {}", isNewPayloadJCRPathCreated);
 			log.error("Flower new payload node got created with status = {}", isNewPayloadJCRPathCreated);
