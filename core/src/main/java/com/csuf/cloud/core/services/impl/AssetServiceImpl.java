@@ -61,14 +61,21 @@ public class AssetServiceImpl implements AssetService {
 	@Override
 	public boolean writeNtFileToPayloadPath(Session session, String ntFileNodeName, String afPath,
 			String ntFileNodeParentPath, InputStream data) {
+		log.error("California inside writeNtFileToPayloadPath");
 		Calendar cal = Calendar.getInstance();
 		try {
 			Node ntFileParentNode = JcrUtils.getOrCreateByPath(ntFileNodeParentPath, "sling:Folder", session);
+			log.error("California ntFileParentNode="+ntFileParentNode);
+			
 			ntFileParentNode.setProperty("CONTENT_TYPE", "XML");
 			ntFileParentNode.setProperty("FD_ASSET_PATH", afPath);
 			ntFileParentNode.setProperty("FD_ASSET_TYPE", "guide");
 			Node ntFileNode = ntFileParentNode.addNode(ntFileNodeName, NodeType.NT_FILE);
+			log.error("California ntFileNode="+ntFileNode);
+			
 			Node content = ntFileNode.addNode(Node.JCR_CONTENT, NodeType.NT_RESOURCE);
+			log.error("California content1="+content);
+			
 			cal.setTime(new Date());
 			Binary bin = content.getSession().getValueFactory().createBinary(data);
 			content.setProperty(Property.JCR_DATA, bin);
@@ -76,6 +83,8 @@ public class AssetServiceImpl implements AssetService {
 			content.setProperty(Property.JCR_LAST_MODIFIED_BY, session.getUserID());
 			content.setProperty(Property.JCR_MIMETYPE,
 					MimeTypes.getMimeType(ntFileNodeName, MimeTypes.APPLICATION_OCTET_STREAM));
+			log.error("California content2="+content);
+			
 			session.save();
 			return true;
 		} catch (Exception e) {

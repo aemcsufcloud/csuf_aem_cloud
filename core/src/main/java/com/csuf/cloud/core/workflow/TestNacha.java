@@ -110,10 +110,8 @@ public class TestNacha implements WorkflowProcess {
 			WorkflowModel workModel = workflowSession.getModel(WORKFLOW_MODEL_PATH);
 			// CHANGED: read the DAM input asset/folder instead of the on-prem watched folder payload
 			// attachmentArray = getTaskAttachmentsFromWorkflowInstanceId(resolver, currentworkflowInstanceId);
-			
-			log.error("Flower SessionTest Value live={}, user={}", session.isLive(),session.getUserID());
+	
 
-			
 			attachmentArray = getAttachmentsFromInputFolder(resolver, currentworkflowInstanceId);
 			log.error("Flower attachmentArray = " + attachmentArray);
 			String caseId = getCaseId();
@@ -312,7 +310,10 @@ public class TestNacha implements WorkflowProcess {
 			log.error("Flower newJCRPayloadPath = " + newJCRPayloadPath);
 			log.error("Flower is = " + is.available());
 			
-			log.error("Flower California Value live={}, user={}", session.isLive(),session.getUserID());
+			log.debug("Flower Session Value = " + session.isLive());
+			log.debug("Flower Session USer = " + session.getUserID());
+			
+			//log.error("Flower California Value live={}, user={}", session.isLive(),session.getUserID());
 			
 			boolean isNewPayloadJCRPathCreated = assetService.writeNtFileToPayloadPath(session, "Data.xml", afPath,
 					newJCRPayloadPath, is);
