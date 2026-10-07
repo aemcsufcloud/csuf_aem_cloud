@@ -110,6 +110,10 @@ public class TestNacha implements WorkflowProcess {
 			WorkflowModel workModel = workflowSession.getModel(WORKFLOW_MODEL_PATH);
 			// CHANGED: read the DAM input asset/folder instead of the on-prem watched folder payload
 			// attachmentArray = getTaskAttachmentsFromWorkflowInstanceId(resolver, currentworkflowInstanceId);
+			
+			log.error("SessionTest Value live={}, user={}", session.isLive(),session.getUserID());
+
+			
 			attachmentArray = getAttachmentsFromInputFolder(resolver, currentworkflowInstanceId);
 			log.error("Sparient attachmentArray = " + attachmentArray);
 			String caseId = getCaseId();
@@ -308,6 +312,7 @@ public class TestNacha implements WorkflowProcess {
 			log.error("Sparient newJCRPayloadPath = " + newJCRPayloadPath);
 			log.error("Sparient is = " + is.available());
 			
+			log.error("Sparient California Value live={}, user={}", session.isLive(),session.getUserID());
 			
 			boolean isNewPayloadJCRPathCreated = assetService.writeNtFileToPayloadPath(session, "Data.xml", afPath,
 					newJCRPayloadPath, is);
@@ -508,7 +513,7 @@ public class TestNacha implements WorkflowProcess {
 		return null;
 	}
 
-	private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
+	/*private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
 		log.error("Sparient Inside getNachaFileProperties");
 		JsonArray resultArray = new JsonArray();
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
@@ -532,6 +537,71 @@ public class TestNacha implements WorkflowProcess {
 				}
 				log.error("Sparient Nacha Response body : {}", sb);
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
+				return resultArray;
+			}
+		}
+	}*/
+	
+	
+	
+	private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
+		log.error("Sparient Inside getNachaFileProperties");
+		JsonArray resultArray = new JsonArray();
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
+
+		java.net.URI uri = new URIBuilder(dbServiceUrl)
+				.addParameter("nachaTitle", fileTitle)
+				.build();
+		log.debug("Sparient Nacha request url : {}", uri);
+
+		try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpGet get = new HttpGet(uri);
+			get.setHeader("Accept", "application/json");
+			try (CloseableHttpResponse response = client.execute(get)) {
+				log.error("Sparient Nacha Response: {}", response.getStatusLine());
+				BufferedReader reader = new BufferedReader(
+						new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8));
+				StringBuilder sb = new StringBuilder();
+				String line;
+				while ((line = reader.readLine()) != null) {
+					sb.append(line);
+				}
+				log.error("Sparient Nacha Response body : {}", sb);
+
+				int status = response.getStatusLine().getStatusCode();
+				if (status < 200 || status >= 300) {
+					log.error("Sparient Nacha service returned HTTP {} with body: {}", status, sb);
+					return resultArray; // empty array
+				}
+
+				JsonElement element = JsonParser.parseString(sb.toString());
+
+				// Case 1: the response is a double-encoded JSON string, e.g. "[{\"REFUND_AMT\":...}]"
+				if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isString()) {
+					String inner = element.getAsString().trim();
+					if (inner.startsWith("[") || inner.startsWith("{")) {
+						element = JsonParser.parseString(inner);
+					}
+				}
+
+				if (element.isJsonArray()) {
+					resultArray = element.getAsJsonArray();
+				} else if (element.isJsonObject()) {
+					JsonObject obj = element.getAsJsonObject();
+					// Case 2: the array is wrapped in an object, e.g. {"data":[...]}
+					JsonElement wrapped = obj.has("data") ? obj.get("data") : null;
+					if (wrapped != null && wrapped.isJsonArray()) {
+						resultArray = wrapped.getAsJsonArray();
+					} else {
+						// Case 3: a single record, or an error object
+						log.error("Sparient Nacha unexpected JSON object: {}", obj);
+						if (!obj.has("error")) {
+							resultArray.add(obj);
+						}
+					}
+				} else {
+					log.error("Sparient Nacha unexpected response (not JSON array/object): {}", sb);
+				}
 				return resultArray;
 			}
 		}
