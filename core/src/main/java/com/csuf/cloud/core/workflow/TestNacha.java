@@ -98,7 +98,7 @@ public class TestNacha implements WorkflowProcess {
 		 */
 		String currentworkflowInstanceId = workItem.getWorkflow().getId();
 		JsonArray attachmentArray = new JsonArray();
-		log.error("Sparient workflowInstanceId = " + currentworkflowInstanceId);
+		log.error("Flower workflowInstanceId = " + currentworkflowInstanceId);
 		try {
 			
 			 /*dbConn = jdbcConnectionService.getDocDBConnection(); 
@@ -111,40 +111,40 @@ public class TestNacha implements WorkflowProcess {
 			// CHANGED: read the DAM input asset/folder instead of the on-prem watched folder payload
 			// attachmentArray = getTaskAttachmentsFromWorkflowInstanceId(resolver, currentworkflowInstanceId);
 			
-			log.error("SessionTest Value live={}, user={}", session.isLive(),session.getUserID());
+			log.error("Flower SessionTest Value live={}, user={}", session.isLive(),session.getUserID());
 
 			
 			attachmentArray = getAttachmentsFromInputFolder(resolver, currentworkflowInstanceId);
-			log.error("Sparient attachmentArray = " + attachmentArray);
+			log.error("Flower attachmentArray = " + attachmentArray);
 			String caseId = getCaseId();
-			log.error("Sparient caseId = " + caseId);
+			log.error("Flower caseId = " + caseId);
 			//String xmlData = getXml(caseId, dbConnFrmmgr);
 			String xmlData = getXml(caseId);
 			
 			if (xmlData != null) {
-				log.error("Sparient xmlData condition");
+				log.error("Flower xmlData condition");
 				is = IOUtils.toInputStream(xmlData, StandardCharsets.UTF_8);
 				if (null != is) {
-					log.error("Sparient inputstream condition");
+					log.error("Flower inputstream condition");
 					doc = XMLUtils.getDomDocument(is);
 					String generatedPayloadPath = CSUFUtils.getRecentlyCreatedPayloadPath(resolver,
 							PAYLOAD_SERVER_PATH);
 					
-					log.error("Sparient generatedPayloadPath="+generatedPayloadPath);
-					log.error("Sparient generatedPayloadPath="+doc.hashCode());
-					log.error("Sparient session="+session);
+					log.error("Flower generatedPayloadPath="+generatedPayloadPath);
+					log.error("Flower generatedPayloadPath="+doc.hashCode());
+					log.error("Flower session="+session);
 					
 					String newPayloadPath = createNewPayloadPath(session, generatedPayloadPath, doc);
-					log.error("Sparient newPayloadPath="+newPayloadPath);
+					log.error("Flower newPayloadPath="+newPayloadPath);
 					
 					JsonObject newAttachmentJson = addAttachment(session, attachmentArray, newPayloadPath, resolver);
 					log.info("Successfully added the file attachments to the newly created payload : {}",
 							newAttachmentJson);
-					log.error("Sparient Successfully added the file attachments to the newly created payload : {}",
+					log.error("Flower Successfully added the file attachments to the newly created payload : {}",
 							newAttachmentJson);
 					
 					log.info("newPayloadPath {}", newPayloadPath);
-					log.error("Sparient newPayloadPath {}", newPayloadPath);
+					log.error("Flower newPayloadPath {}", newPayloadPath);
 					
 					if (StringUtils.isNotBlank(newPayloadPath)) {
 						final Map<String, Object> workflowMetadata = new HashMap<>();
@@ -153,7 +153,7 @@ public class TestNacha implements WorkflowProcess {
 						workflowMetadata.entrySet().stream().forEach(arg -> {
 							workflowMetadata.put(arg.getKey(), arg.getValue());
 							log.debug("workflowMetadata key : {}, value : {}", arg.getKey(), arg.getValue());
-							log.error("Sparient workflowMetadata key : {}, value : {}", arg.getKey(), arg.getValue());
+							log.error("Flower workflowMetadata key : {}, value : {}", arg.getKey(), arg.getValue());
 						});
 						Workflow wf = wfSession.startWorkflow(workModel, wfData, workflowMetadata);
 						log.info("wf instance id : {}", wf.getId());
@@ -195,18 +195,18 @@ public class TestNacha implements WorkflowProcess {
 	 */
 	private JsonArray getAttachmentsFromInputFolder(ResourceResolver resourceResolver, String workflowInstanceId)
 			throws Exception {
-		log.error("Sparient getAttachmentsFromInputFolder");
+		log.error("Flower getAttachmentsFromInputFolder");
 		JsonArray formsJson = new JsonArray();
 		WorkflowSession wfSession = resourceResolver.adaptTo(WorkflowSession.class);
 		String payloadPath = wfSession.getWorkflow(workflowInstanceId).getWorkflowData().getPayload().toString();
 		log.debug("payloadPath inside getAttachmentsFromInputFolder method : {}", payloadPath);
-		log.error("Sparient payloadPath inside getAttachmentsFromInputFolder method : {}", payloadPath);
+		log.error("Flower payloadPath inside getAttachmentsFromInputFolder method : {}", payloadPath);
 		
 		if (StringUtils.isBlank(payloadPath)) {
 			throw new Exception("payload path is empty inside getAttachmentsFromInputFolder method");
 		}
 		Resource payloadResource = resourceResolver.getResource(payloadPath);
-		log.error("Sparient payloadResource : {}", payloadResource);
+		log.error("Flower payloadResource : {}", payloadResource);
 		
 		if (payloadResource == null) {
 			throw new Exception("payload resource not found : " + payloadPath);
@@ -231,14 +231,14 @@ public class TestNacha implements WorkflowProcess {
 	 * NEW: adds a .txt DAM asset to the attachment list in the same {fileName, path} shape used before.
 	 */
 	private void addAssetToAttachmentJson(Asset asset, JsonArray formsJson) {
-		log.error("Sparient addAssetToAttachmentJson");
+		log.error("Flower addAssetToAttachmentJson");
 		
 		String fileName = asset.getName();
 		if (StringUtils.isBlank(fileName) || asset.getOriginal() == null) {
 			return;
 		}
 		String fileExtension = CSUFUtils.getFileExtension(fileName);
-		log.error("Sparient fileExtension="+fileExtension);
+		log.error("Flower fileExtension="+fileExtension);
 		
 		if (StringUtils.isNotBlank(fileExtension) && fileExtension.equalsIgnoreCase("txt")) {
 			JsonObject json = new JsonObject();
@@ -246,7 +246,7 @@ public class TestNacha implements WorkflowProcess {
 			json.addProperty("fileName", fileName);
 			json.addProperty("path", asset.getOriginal().getPath());
 			formsJson.add(json);
-			log.error("Sparient json="+json.toString());
+			log.error("Flower json="+json.toString());
 			
 			log.debug("Added DAM asset as attachment : {}", asset.getPath());
 		}
@@ -286,7 +286,7 @@ public class TestNacha implements WorkflowProcess {
 	}
 
 	private String createNewPayloadPath(Session session, String existingPayload, Document doc) throws Exception {
-		log.debug("Sparient createNewPayloadPath");
+		log.debug("Flower createNewPayloadPath");
 		ResourceResolver resourceResolver = null;
 		String afPath = null;
 		existingPayload = existingPayload.concat("/");
@@ -294,7 +294,7 @@ public class TestNacha implements WorkflowProcess {
 		String randomString = CSUFUtils.generateRandomString(26, ALLOWED_CHARS);
 		String newJCRPayloadPath = existingPayload.concat(randomString);
 		log.debug("The new JCR Payload node path = {}", newJCRPayloadPath);
-		log.error("Sparient The new JCR Payload node path = {}", newJCRPayloadPath);
+		log.error("Flower The new JCR Payload node path = {}", newJCRPayloadPath);
 
 		
 		try {
@@ -304,22 +304,22 @@ public class TestNacha implements WorkflowProcess {
 			if (null != afParentElement && afParentElement.hasChildNodes()) {
 				afPath = XMLUtils.getChildNodeContent(afParentElement, "afPath");
 				log.debug("afPath = {}", afPath);
-				log.error("Sparient afPath = {}", afPath);
+				log.error("Flower afPath = {}", afPath);
 			}
 			InputStream is = XMLUtils.getInputStreamFromXMLDocument(doc);
 			log.debug("Session Value = " + session);
-			log.error("Sparient Session Value = " + session);
-			log.error("Sparient newJCRPayloadPath = " + newJCRPayloadPath);
-			log.error("Sparient is = " + is.available());
+			log.error("Flower Session Value = " + session);
+			log.error("Flower newJCRPayloadPath = " + newJCRPayloadPath);
+			log.error("Flower is = " + is.available());
 			
-			log.error("Sparient California Value live={}, user={}", session.isLive(),session.getUserID());
+			log.error("Flower California Value live={}, user={}", session.isLive(),session.getUserID());
 			
 			boolean isNewPayloadJCRPathCreated = assetService.writeNtFileToPayloadPath(session, "Data.xml", afPath,
 					newJCRPayloadPath, is);
 			
 			
 			log.debug("new payload node got created with status = {}", isNewPayloadJCRPathCreated);
-			log.error("Sparient new payload node got created with status = {}", isNewPayloadJCRPathCreated);
+			log.error("Flower new payload node got created with status = {}", isNewPayloadJCRPathCreated);
 
 			if (isNewPayloadJCRPathCreated) {
 				return newJCRPayloadPath;
@@ -336,7 +336,7 @@ public class TestNacha implements WorkflowProcess {
 
 	private JsonObject addAttachment(Session session, JsonArray attachments, String newPayload,
 			ResourceResolver resolver) throws Exception {
-		log.debug("Sparient addAttachment");
+		log.debug("Flower addAttachment");
 		
 		int count = 0;
 		String attachmentFolder = "Attachments";
@@ -373,7 +373,7 @@ public class TestNacha implements WorkflowProcess {
 
 	private String getXml(String caseID) {
 		try {
-			log.error("Sparient getXml method");
+			log.error("Flower getXml method");
 			DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
 			Document document = documentBuilder.newDocument();
@@ -394,7 +394,7 @@ public class TestNacha implements WorkflowProcess {
 			attr2.setValue("http://www.w3.org/2001/XMLSchema-instance");
 			parentElements.setAttributeNode(attr2);
 			
-			log.error("Sparient getXml method2");
+			log.error("Flower getXml method2");
 			
 			afBoundData.appendChild(parentElements);
 			parentElements.appendChild(document.createElement("ReviewerComments"));
@@ -425,7 +425,7 @@ public class TestNacha implements WorkflowProcess {
 			parentElements.appendChild(nachaFileNameElement);
 			String nachaFileTitle = nachaFileName.substring(0, nachaFileName.length() - 4);
 			JsonArray nachaFilePropertiesArray = getNachaFileProperties(nachaFileTitle);
-			log.error("Sparient nachaFilePropertiesArray="+nachaFilePropertiesArray);
+			log.error("Flower nachaFilePropertiesArray="+nachaFilePropertiesArray);
 			
 			if (nachaFilePropertiesArray != null && nachaFilePropertiesArray.size() != 0) {
 				JsonObject nachaFilePropertiesObject = nachaFilePropertiesArray.get(0).getAsJsonObject();
@@ -514,20 +514,20 @@ public class TestNacha implements WorkflowProcess {
 	}
 
 	/*private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
-		log.error("Sparient Inside getNachaFileProperties");
+		log.error("Flower Inside getNachaFileProperties");
 		JsonArray resultArray = new JsonArray();
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
 
 		java.net.URI uri = new URIBuilder(dbServiceUrl)
 				.addParameter("nachaTitle", fileTitle)
 				.build();
-		log.debug("Sparient Nacha request url : {}", uri);
+		log.debug("Flower Nacha request url : {}", uri);
 		
 		try (CloseableHttpClient client = HttpClients.createDefault()) {
 			HttpGet get = new HttpGet(uri);
 			get.setHeader("Accept", "application/json");
 			try (CloseableHttpResponse response = client.execute(get)) {
-				log.error("Sparient Nacha Response: {}", response.getStatusLine());
+				log.error("Flower Nacha Response: {}", response.getStatusLine());
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8));
 				StringBuilder sb = new StringBuilder();
@@ -535,7 +535,7 @@ public class TestNacha implements WorkflowProcess {
 				while ((line = reader.readLine()) != null) {
 					sb.append(line);
 				}
-				log.error("Sparient Nacha Response body : {}", sb);
+				log.error("Flower Nacha Response body : {}", sb);
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
 				return resultArray;
 			}
@@ -545,20 +545,20 @@ public class TestNacha implements WorkflowProcess {
 	
 	
 	private JsonArray getNachaFileProperties(String fileTitle) throws IOException, URISyntaxException {
-		log.error("Sparient Inside getNachaFileProperties");
+		log.error("Flower Inside getNachaFileProperties");
 		JsonArray resultArray = new JsonArray();
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getNachaDetails";
 
 		java.net.URI uri = new URIBuilder(dbServiceUrl)
 				.addParameter("nachaTitle", fileTitle)
 				.build();
-		log.debug("Sparient Nacha request url : {}", uri);
+		log.debug("Flower Nacha request url : {}", uri);
 
 		try (CloseableHttpClient client = HttpClients.createDefault()) {
 			HttpGet get = new HttpGet(uri);
 			get.setHeader("Accept", "application/json");
 			try (CloseableHttpResponse response = client.execute(get)) {
-				log.error("Sparient Nacha Response: {}", response.getStatusLine());
+				log.error("Flower Nacha Response: {}", response.getStatusLine());
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8));
 				StringBuilder sb = new StringBuilder();
@@ -566,11 +566,11 @@ public class TestNacha implements WorkflowProcess {
 				while ((line = reader.readLine()) != null) {
 					sb.append(line);
 				}
-				log.error("Sparient Nacha Response body : {}", sb);
+				log.error("Flower Nacha Response body : {}", sb);
 
 				int status = response.getStatusLine().getStatusCode();
 				if (status < 200 || status >= 300) {
-					log.error("Sparient Nacha service returned HTTP {} with body: {}", status, sb);
+					log.error("Flower Nacha service returned HTTP {} with body: {}", status, sb);
 					return resultArray; // empty array
 				}
 
@@ -594,13 +594,13 @@ public class TestNacha implements WorkflowProcess {
 						resultArray = wrapped.getAsJsonArray();
 					} else {
 						// Case 3: a single record, or an error object
-						log.error("Sparient Nacha unexpected JSON object: {}", obj);
+						log.error("Flower Nacha unexpected JSON object: {}", obj);
 						if (!obj.has("error")) {
 							resultArray.add(obj);
 						}
 					}
 				} else {
-					log.error("Sparient Nacha unexpected response (not JSON array/object): {}", sb);
+					log.error("Flower Nacha unexpected response (not JSON array/object): {}", sb);
 				}
 				return resultArray;
 			}
