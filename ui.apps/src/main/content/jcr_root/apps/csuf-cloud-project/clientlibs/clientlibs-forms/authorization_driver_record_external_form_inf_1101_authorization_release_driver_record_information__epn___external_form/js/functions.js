@@ -181,8 +181,15 @@ authorization_driver_record_external_form_inf_1101_authorization_release_driver_
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+	
         dataType: 'json',
         success: function(myresponse) {
             CaseId.value = myresponse.CASEID;
@@ -236,11 +243,19 @@ if (StageIndicator.value === null || StageIndicator.value === "ToInitiator") {
 
         if (this.value !== "Please select the county" && this.value !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/authorizationServlet",
                 data: {
                     action: "COUNTY_DETAILS"
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "authorizationServlet",
+					action: "COUNTY_DETAILS"
+				},
+	
                 dataType: 'json',
                 success: function (myresponse) {
                   
@@ -364,12 +379,20 @@ authorization_driver_record_external_form_inf_1101_authorization_release_driver_
 if (StageIndicator.value === null) {
     if (this.value && this.value !== "Please select the county") {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/authorizationServlet",
             data: {
                 action: "CITY_DETAILS",
                 county: this.value // county selected
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "authorizationServlet",
+				 action: "CITY_DETAILS",
+                county: this.value
+			},
+	
             dataType: 'json',
             success: function (myresponse) {
                 
@@ -455,12 +478,19 @@ if(StageIndicator.value === "ToUPDOne") {
 
         if (this.value !== "Please select the county" && this.value !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/authorizationServlet",
                 data: {
                     action: "COUNTY_DETAILS"
                     // deptName: this.value (commented out)
-                },
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "authorizationServlet",
+					action: "COUNTY_DETAILS"
+				},
+	
                 dataType: 'json',
                 success: function (myresponse) {
                    
@@ -537,12 +567,19 @@ authorization_driver_record_external_form_inf_1101_authorization_release_driver_
             if(StageIndicator.value === "ToUPDOne") {
     if (this.value !=="" && this.value !== "Please select the county") {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/authorizationServlet",
             data: {
                 action: "CITY_DETAILS",
                 county: this.value // selected county
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "authorizationServlet",
+				action: "CITY_DETAILS",
+                county: this.value
+			},
             dataType: 'json',
             success: function (myresponse) {
                 if (myresponse && myresponse.length > 0) {

@@ -19,12 +19,20 @@ $.ajax({
         //LogUser.value = userValue;
 
         $.ajax({
-            type: 'GET',
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "careerDevelopmentPlanUserLookUp",
+				userID: userValue
+			},
+	
+            /*type: 'GET',
             url: "/bin/careerDevelopmentPlanUserLookUp",
 
             data: {
                 userID: userValue
-            },
+            },*/
             dataType: 'json',
 
             success: function(myresponse) {
@@ -50,15 +58,23 @@ $.ajax({
                     var empIdVal = emplID.value;
                     $.ajax({
 
-                        type: 'GET',
-
+                        /*type: 'GET',
                         url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
-
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+							cwid: empIdVal,
+							union_cd: cbidVal
+						},
+								
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserId.value = managerDetails[0].MANAGER_EMP_USERID;
@@ -177,15 +193,22 @@ $.ajax({
                             var empIdVal = emplID.value;
                             $.ajax({
 
-                                type: 'GET',
-
+                                /*type: 'GET',
                                 url: "/bin/getManagerDetails",
                                 data: {
                                     deptid: deptIdVal,
                                     cwid: empIdVal,
                                     union_cd: cbidVal
-
-                                },
+                                },*/
+								url: window.location.origin + "/bin/fullertonProxy",
+								type: 'GET',
+								data: {
+									path: "getManagerDetails",
+									deptid: deptIdVal,
+                                    cwid: empIdVal,
+                                    union_cd: cbidVal
+								},
+	
                                 dataType: 'json',
                                 success: function(managerDetails) {
                                     ManagerUserId.value = managerDetails[0].MANAGER_EMP_USERID;
@@ -291,12 +314,21 @@ $.ajax({
         //LogUser.value = userValue;
 
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/chrsIDUpdateServlet",
             data: {
                 action: "Career_Dev_Plan_CHRSID",
                 userId: userValue
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "chrsIDUpdateServlet",
+				action: "Career_Dev_Plan_CHRSID",
+                userId: userValue
+			},
+	
             dataType: 'json',
 
             success: function(myresponse) {
@@ -325,15 +357,22 @@ $.ajax({
                     var empIdVal = emplID.value;
                     $.ajax({
 
-                        type: 'GET',
-
+                        /*type: 'GET',
                         url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
-
-                        },
+                        },*/
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+                            cwid: empIdVal,
+                            union_cd: cbidVal
+						},
+	
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserId.value = managerDetails[0].MANAGER_EMP_USERID;
@@ -460,16 +499,23 @@ $.ajax({
                             var deptIdVal = departmentID.value;
                             var empIdVal = emplID.value;
                             $.ajax({
-
-                                type: 'GET',
-
+                                /*type: 'GET',
                                 url: "/bin/getManagerDetails",
                                 data: {
                                     deptid: deptIdVal,
                                     cwid: empIdVal,
                                     union_cd: cbidVal
-
-                                },
+                                },*/
+								
+								url: window.location.origin + "/bin/fullertonProxy",
+								type: 'GET',
+								data: {
+									path: "getManagerDetails",
+									deptid: deptIdVal,
+                                    cwid: empIdVal,
+                                    union_cd: cbidVal
+								},
+	
                                 dataType: 'json',
                                 success: function(managerDetails) {
                                     ManagerUserId.value = managerDetails[0].MANAGER_EMP_USERID;
@@ -811,8 +857,8 @@ if(this.value == 1){
            $.ajax({
 
                 type: 'GET',
-
                 url: "/bin/getLoggedInUserDetailsFromDB",
+
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].FULL_NAME;

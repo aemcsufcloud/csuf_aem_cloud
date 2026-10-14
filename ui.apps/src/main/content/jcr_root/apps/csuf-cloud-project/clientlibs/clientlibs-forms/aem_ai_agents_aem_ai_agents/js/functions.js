@@ -93,14 +93,20 @@ debugger;
 		if((this.value !== "Select Department") && (this.value !== null)){
            $.ajax({
 
-                type: 'GET', 
-
+                /*type: 'GET', 
                 url:"/bin/getFormListData",
-
-               data:  {           
-                 action: "AI_FORM_LIST",
-                deptName: this.value
-                  },
+				data:  {           
+					action: "AI_FORM_LIST",
+					deptName: this.value
+                 },*/
+				 
+				 url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getFormListData",
+						action: "AI_FORM_LIST",
+						deptName: this.value
+					},
 
                 dataType: 'json',
 
@@ -293,14 +299,25 @@ function validateSubmitclick() {
   var fList = FormsList.value;
    var wfStep = Workflow_Step_List.value;
   $.ajax({
-    type: 'POST',
+    /*type: 'POST',
     url: "/bin/getAIAgentSubmit",
     data: {
         action: "AI_AGENT_DATA",
         deptN: deptName, 
         formN: fList, 
         wfStepN: wfStep
-    },
+    },*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'POST',
+	data: {
+		path: "getAIAgentSubmit",
+		action: "AI_AGENT_DATA",
+        deptN: deptName, 
+        formN: fList, 
+        wfStepN: wfStep
+	},
+	
     dataType: 'json',
     success: function(myresponse) {
       guideBridge.submit();

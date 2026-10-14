@@ -157,8 +157,15 @@ authorization_university_business_external_form_authorization_drive_vehicle_univ
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+	
         dataType: 'json',
         success: function(myresponse) {
             CaseId.value = myresponse.CASEID;
@@ -265,12 +272,20 @@ if (StageIndicator.value === null) {
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getVolunteerData",
             data: {
                 action: "VOLUNTEER_SUPERVISOR_SEARCH",
                 lastName: this.value
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getVolunteerData",
+				action: "VOLUNTEER_SUPERVISOR_SEARCH",
+                lastName: this.value
+			},
+	
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -331,12 +346,20 @@ if (StageIndicator.value === null)   {
    SupervisorSearchEmailId.value = "csufaemform@gmail.com";
     if(this.value !== null){
       $.ajax({
-        	type: 'GET',
+        	/*type: 'GET',
        		url: "/bin/getVolunteerData",
         data: { 
         	action: "DEPARTMENT_DETAILS",
         	userID: approverUserId 
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getVolunteerData",
+			action: "DEPARTMENT_DETAILS",
+			userID: approverUserId 
+		},
+	
         dataType: 'json', 
         success: function(response) { 
           debugger;
@@ -796,11 +819,18 @@ if (this.value == 1) {
 
         // Second AJAX call to get job title/description
         $.ajax({
-          type: 'GET',
+          /*type: 'GET',
           url: "/bin/getEvaluationFormDataCHRSID",
           data: {
             action: "EMP_DETAILS"
-          },
+          },*/
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormDataCHRSID",
+				action: "EMP_DETAILS"
+			},
+	
           dataType: 'json',
           success: function(myresopnse) {
 

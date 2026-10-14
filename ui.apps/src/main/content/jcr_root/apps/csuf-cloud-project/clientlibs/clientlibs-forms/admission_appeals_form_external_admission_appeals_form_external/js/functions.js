@@ -33,9 +33,14 @@ admission_appeals_form_external_admission_appeals_form_external.generated_CaseId
             this.enabled = false;
 if(StageIndicator.value === null){
     $.ajax({
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getCaseID"
+	},
 
-      type: 'GET', 
-      url:"/bin/getCaseID",
+      /*type: 'GET', 
+      url:"/bin/getCaseID",*/
       dataType: 'json',
 
       success: function(myresponse){            

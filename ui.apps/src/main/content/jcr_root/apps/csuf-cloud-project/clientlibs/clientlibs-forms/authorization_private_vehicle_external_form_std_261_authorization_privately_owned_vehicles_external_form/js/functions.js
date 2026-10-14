@@ -164,7 +164,12 @@ authorization_private_vehicle_external_form_std_261_authorization_privately_owne
 if (StageIndicator.value === null) {
     $.ajax({
         type: 'GET',
-        url: "/bin/getCaseID",
+        /*url: "/bin/getCaseID",*/
+		 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(myresponse) {
             CaseId.value = myresponse.CASEID;

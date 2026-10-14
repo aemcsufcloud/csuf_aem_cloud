@@ -50,12 +50,19 @@ appeal_of_a_declined_fee_waiver_request_appeal_of_a_declined_fee_waiver_request.
 
 function getFeeWaiverHolderDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getAppealofaDeclinedFeeWaiverRequestData",
         data: {
             action: "FEE_WAIVER_HOLDER_USER_ID_LOOKUP",
             userid: userValue
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getAppealofaDeclinedFeeWaiverRequestData",
+			action: "FEE_WAIVER_HOLDER_USER_ID_LOOKUP",
+            userid: userValue
+		},
         dataType: 'json',
         success: function(response) {
             if (response.length >= 1) {
@@ -86,12 +93,20 @@ function getFeeWaiverHolderDetails(userValue) {
 
 function getFacultyOrStaffStatus(cwid) {
     $.ajax({
-        type: 'GET',
+       /* type: 'GET',
         url: "/bin/getFinancialARFData",
         data: {
             cwid: cwid,
             action: "FS_EMP_DATA"
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFinancialARFData",
+			cwid: cwid,
+            action: "FS_EMP_DATA"
+		},
         dataType: 'json',
         success: function(response) {
             if (response.length >= 1) {
@@ -123,8 +138,14 @@ appeal_of_a_declined_fee_waiver_request_appeal_of_a_declined_fee_waiver_request.
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(myresponse) {
             caseId.value = myresponse.CASEID;

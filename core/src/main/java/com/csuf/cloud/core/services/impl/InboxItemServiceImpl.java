@@ -389,15 +389,20 @@ public class InboxItemServiceImpl implements InboxItemService {
 				Authorizable workItemAssignee = userManager.getAuthorizable(assignee);
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
 				Group adminGroup = (Group) userManager.getAuthorizable("administrators");
+				log.debug("Test adminGroup : - " + adminGroup);
+				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
 						|| currentUserId.equals(assignee)) {
-					log.debug(currentUserId + " user is either an admin or the task assignee");
+					log.debug("Testing Users"+ currentUserId + " user is either an admin or the task assignee");
 					return true;
 				}
 				if (null != workItemAssignee && workItemAssignee.isGroup()) {
 					Group group = (Group) workItemAssignee;
 					// log.debug("work Item is assigned to group " + group.getID());
 					if ((null != adminGroup && adminGroup.isMember(group)) || group.isMember(currentUser)) {
+						
+						log.debug("Test adminGroup123 : - " + adminGroup);
+						
 						// log.debug(currentUserId + " user is member of assigned group " +
 						// group.getID());
 						return true;

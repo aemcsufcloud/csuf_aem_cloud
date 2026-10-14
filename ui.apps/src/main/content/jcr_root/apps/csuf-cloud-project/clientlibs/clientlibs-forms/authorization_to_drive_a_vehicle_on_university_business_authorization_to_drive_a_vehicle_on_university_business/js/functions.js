@@ -19,9 +19,15 @@ authorization_to_drive_a_vehicle_on_university_business_authorization_to_drive_a
 				var userValue = myresponse.userId;
 				workflow_initiator.value = userValue;
                   $.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getEvaluationFormDataCHRSID",
 					data: {
+						action: "EMP_DETAILS"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getEvaluationFormDataCHRSID",
 						action: "EMP_DETAILS"
 					},
 					dataType: 'json',
@@ -352,12 +358,19 @@ if (StageIndicator.value === null) {
       var cwidValue = CWID.value;
       if (cwidValue !== null) {
         $.ajax({          
-          type: 'GET',
+          /*type: 'GET',
           url: "/bin/getFinancialARFData",
           data: {
             cwid: cwidValue,
             action: "FS_EMP_DATA"
-          },
+          },*/
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFinancialARFData",
+				action: "FS_EMP_DATA"
+			},
+		
           dataType: 'json',
           success: function(myresponse) {
             var empPosition = myresponse[0].POSITION;
@@ -409,8 +422,14 @@ authorization_to_drive_a_vehicle_on_university_business_authorization_to_drive_a
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+	
         dataType: 'json',
         success: function(myresponse) {
             CaseId.value = myresponse.CASEID;
@@ -471,12 +490,18 @@ authorization_to_drive_a_vehicle_on_university_business_authorization_to_drive_a
   if (cwidValue !== null) {
   
     $.ajax({
-      type: 'GET',
+      /*type: 'GET',
       url: "/bin/getFinancialARFData",
       data: {
         cwid: cwidValue,
         action: "FS_EMP_DATA"
-      },
+      },*/
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFinancialARFData",
+			action: "FS_EMP_DATA"
+		},
       dataType: 'json',
       success: function(myresponse) {
       
@@ -1015,11 +1040,19 @@ if (this.value == 1) {
 
         // Second AJAX call to get job title/description
         $.ajax({
-          type: 'GET',
+          /*type: 'GET',
           url: "/bin/getEvaluationFormDataCHRSID",
           data: {
             action: "EMP_DETAILS"
-          },
+          },*/
+		  
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getEvaluationFormDataCHRSID",
+				action: "EMP_DETAILS"
+			},
+	
           dataType: 'json',
           success: function(myresopnse) {
 
@@ -1180,14 +1213,23 @@ var cwid1 = EmplId.value;
 var dept1 = DeptId.value;
 var union = unionCD.value;
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getEvaluationFormDataCHRSID",
     data: {
         action: "SPE_MANAGER_DETAILS",
         cwid: cwid1,
         deptID: dept1,
         union_cd: union
-    },
+    },*/
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormDataCHRSID",
+		 action: "SPE_MANAGER_DETAILS",
+        cwid: cwid1,
+        deptID: dept1,
+        union_cd: union
+	},
     dataType: 'json',
     success: function(myresopnse) {
  

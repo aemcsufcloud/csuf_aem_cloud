@@ -24,11 +24,18 @@ if (StageIndicator.value === null) {
             //CWID.value = userValue;
            // alert('userID: ' + userID);
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAdmissionAppealData",
                 data: {
                     student_userid: userID,
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAdmissionAppealData",
+					student_userid: userID
+				},
                 dataType: 'json',
 
                 success: function(myresopnse) {
@@ -166,13 +173,21 @@ function getMultipleTermData(resultData) {
                 if (resultData[n].ACAD_CAREER == "UGRD") {
                     if (resultData[n].PROG_ACTION == "DENY" || resultData[n].PROG_ACTION == "WAPP") {
                         $.ajax({
-                            type: 'GET',
+                            /*type: 'GET',
                             url: "/bin/admissionAppealsExtServlet",
                             data: {
                                 cwid: resultData[n].CWID,
                                 term: (resultData[n].ADMIT_TERM_DESCR).trim(),
                                 action: "APPEALS_SUBMISSION_DATA"
-                            },
+                            },*/
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "admissionAppealsExtServlet",
+								cwid: resultData[n].CWID,
+                                term: (resultData[n].ADMIT_TERM_DESCR).trim(),
+                                action: "APPEALS_SUBMISSION_DATA"
+							},
                             dataType: 'json',
 
                             success: function(result) {
@@ -379,11 +394,18 @@ admissions_appeal_external_form_admissions_appeal_external_form.generated_CWID_v
 if (StageIndicator.value === null) {
    //	alert('cwid : ' + this.value);
         $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAdmissionAppealCWIDData",
                 data: {
                     student_userid: this.value,
-                },
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAdmissionAppealCWIDData",
+					student_userid: this.value
+				},
+	
                 dataType: 'json',
 
                 success: function(myresopnse) {
@@ -520,13 +542,23 @@ function getMultipleTermData(resultData) {
                 if (resultData[n].ACAD_CAREER == "UGRD") {
                     if (resultData[n].PROG_ACTION == "DENY" || resultData[n].PROG_ACTION == "WAPP") {
                         $.ajax({
-                            type: 'GET',
+                            /*type: 'GET',
                             url: "/bin/admissionAppealsExtServlet",
                             data: {
                                 cwid: resultData[n].CWID,
                                 term: (resultData[n].ADMIT_TERM_DESCR).trim(),
                                 action: "APPEALS_SUBMISSION_DATA"
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "admissionAppealsExtServlet",
+								cwid: resultData[n].CWID,
+                                term: (resultData[n].ADMIT_TERM_DESCR).trim(),
+                                action: "APPEALS_SUBMISSION_DATA"
+							},
+				
                             dataType: 'json',
 
                             success: function(result) {

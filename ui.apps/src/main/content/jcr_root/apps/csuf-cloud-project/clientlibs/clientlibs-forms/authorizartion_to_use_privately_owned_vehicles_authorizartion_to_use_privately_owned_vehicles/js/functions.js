@@ -27,11 +27,19 @@ if ((StageIndicator.value === null)){
 						action: "EMP_DETAILS"
 					},*/
                $.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getEvaluationFormDataCHRSID",
 					data: {
 						action: "EMP_DETAILS"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getEvaluationFormDataCHRSID",
+						action: "EMP_DETAILS"
 					},
+	
 					dataType: 'json',
 					success: function(myresopnse) {
 
@@ -402,8 +410,13 @@ authorizartion_to_use_privately_owned_vehicles_authorizartion_to_use_privately_o
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(myresponse) {
             CaseId.value = myresponse.CASEID;
@@ -865,14 +878,24 @@ var dept1 = DeptID.value;
 var union = unionCD.value;
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getEvaluationFormDataCHRSID",
     data: {
         action: "SPE_MANAGER_DETAILS",
         cwid: cwid1,
         deptID: dept1,
         union_cd: union
-    },
+    },*/
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormDataCHRSID",
+		action: "SPE_MANAGER_DETAILS",
+        cwid: cwid1,
+        deptID: dept1,
+        union_cd: union
+	},
+	
     dataType: 'json',
     success: function(myresopnse) {
   
@@ -965,13 +988,22 @@ if( (StageIndicator.value === null) || (StageIndicator.value === "ToInitiator"))
                     var cwid = CWID.value;
 
                     $.ajax({
-                        type: 'GET',
+                        /*type: 'GET',
 
                         url: "/bin/getSubstituteFacultyData",
                         data: {
                             action: "SUB_FACULTY_CWID_LOOKUP",
                             cwid: cwid
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getSubstituteFacultyData",
+							action: "SUB_FACULTY_CWID_LOOKUP",
+                            cwid: cwid
+						},
+	
 
                         dataType: 'json',
                         success: function(myresopnse) {

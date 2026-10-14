@@ -44,11 +44,17 @@ appeals_form_appeals.generated_guideRootPanel_init1 = function (scope) {
             workflow_initiator.value = userValue;
             StudentUserId.value = userValue;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAppealData",
                 data: {
                     student_userid: userID,
-                },
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAppealData",
+					 student_userid: userID
+				},
                 dataType: 'json',
 
                 success: function(myresopnse) {
@@ -79,13 +85,21 @@ function getData(resultSet) {
         if (resultSet[0].PROG_ACTION == "DENY" || resultSet[0].PROG_ACTION == "WAPP" || resultSet[0].PROG_ACTION == "WADM") {
             // /*
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/appealsServlet",
                 data: {
                     cwid: resultSet[0].CWID,
                     term: (resultSet[0].ADMIT_TERM_DESCR).trim(),
                     action: "APPEALS_SUBMISSION_DATA"
-                },
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "appealsServlet",
+					cwid: resultSet[0].CWID,
+                    term: (resultSet[0].ADMIT_TERM_DESCR).trim(),
+                    action: "APPEALS_SUBMISSION_DATA"
+				},
                 dataType: 'json',
 
                 success: function(result) {
@@ -233,13 +247,23 @@ function getMultipleTermData(resultData) {
                 if (resultData[n].ACAD_CAREER == "UGRD") {
                     if (resultData[n].PROG_ACTION == "DENY" || resultData[n].PROG_ACTION == "WAPP" || resultData[n].PROG_ACTION == "WADM") {
                         $.ajax({
-                            type: 'GET',
+                            /*type: 'GET',
                             url: "/bin/appealsServlet",
                             data: {
                                 cwid: resultData[n].CWID,
                                 term: (resultData[n].ADMIT_TERM_DESCR).trim(),
                                 action: "APPEALS_SUBMISSION_DATA"
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "appealsServlet",
+								cwid: resultData[n].CWID,
+                                term: (resultData[n].ADMIT_TERM_DESCR).trim(),
+                                action: "APPEALS_SUBMISSION_DATA"
+							},
+	
                             dataType: 'json',
 
                             success: function(result) {
@@ -367,8 +391,14 @@ appeals_form_appeals.generated_CaseId_init0 = function (scope) {
 if(StageIndicator.value === null){
     $.ajax({
 
-      type: 'GET', 
-      url:"/bin/getCaseID",
+      /*type: 'GET', 
+      url:"/bin/getCaseID",*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
       dataType: 'json',
 
       success: function(myresponse){            

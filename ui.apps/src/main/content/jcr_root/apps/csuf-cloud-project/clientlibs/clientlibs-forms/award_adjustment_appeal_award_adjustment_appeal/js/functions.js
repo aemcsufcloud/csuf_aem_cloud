@@ -32,14 +32,22 @@ award_adjustment_appeal_award_adjustment_appeal.generated_guideRootPanel_init0 =
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+       /* type: 'GET',
        // url: "/bin/getStudentPeronalInformationWithUserID",
        url: "/bin/getCitizenShipData",
 
         data: {
             action:"CV_USER_DETAILS",
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action:"CV_USER_DETAILS",
+            userID: userValue
+		},
 
         dataType: 'json',
         success: function(response) {
@@ -74,12 +82,20 @@ function getStudentDetails(userValue) {
 
 function getStudentAidYearDetails(CWID) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: CWID
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: CWID
+		},
+	
         dataType: 'json',
         success: function(response) {
             if (response.length > 0) {
@@ -343,7 +359,7 @@ var formCodeColumnName = "FORM_CODE";
 var faDecision = "1";
 if (StageIndicator.value === null) {
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/getCitizenShipData",
 		data: {
 			action: 'CV_DUPLICATE_CHECK_DETAILS',
@@ -353,7 +369,21 @@ if (StageIndicator.value === null) {
           formCodeColumnName:formCodeColumnName,
           formCode: formCodeVal,
           faDecision: faDecision
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action: 'CV_DUPLICATE_CHECK_DETAILS',
+			cwid: cwid.value,
+          faDecisionColumnName:financialAidDecisionColumnName,
+          tableName: tableName,
+          formCodeColumnName:formCodeColumnName,
+          formCode: formCodeVal,
+          faDecision: faDecision
+		},
+	
 		dataType: 'json',
 		success: function(myresponse) {
           if(myresponse.length >=1){
@@ -438,14 +468,22 @@ award_adjustment_appeal_award_adjustment_appeal.generated_guideRootPanel_init2 =
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         // url: "/bin/getStudentPeronalInformationWithUserID",
         url: "/bin/getCitizenShipData",
 
         data: {
             action: "CV_USER_DETAILS",
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action: "CV_USER_DETAILS",
+            userID: userValue
+		},
 
         dataType: 'json',
         success: function(response) {
@@ -479,12 +517,20 @@ function getStudentDetails(userValue) {
 
 function getStudentAidYearDetails(CWID) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: CWID
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: CWID
+		},
         dataType: 'json',
         success: function(response) {
             if (response.length > 0) {
@@ -724,7 +770,7 @@ function checkforDuplicateSubmissions(formCodeVal, financialAidYearVal) {
     var faDecision = "1";
     if (StageIndicator.value === null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getCitizenShipData",
             data: {
                 action: 'CV_UPDATED_DUPLICATE_CHECK',
@@ -736,7 +782,21 @@ function checkforDuplicateSubmissions(formCodeVal, financialAidYearVal) {
                 faDecision: faDecision,
                 financialAidYear: financialAidYearVal,
                 financialAidYearColumn: financialAidYearColumnName
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getCitizenShipData",
+				action: 'CV_UPDATED_DUPLICATE_CHECK',
+                cwid: cwid.value,
+                faDecisionColumnName: financialAidDecisionColumnName,
+                tableName: tableName,
+                formCodeColumnName: formCodeColumnName,
+                formCode: formCodeVal,
+                faDecision: faDecision,
+                financialAidYear: financialAidYearVal,
+                financialAidYearColumn: financialAidYearColumnName
+			},
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length >= 1) {
@@ -785,8 +845,21 @@ award_adjustment_appeal_award_adjustment_appeal.generated_caseId_init0 = functio
             if(StageIndicator.value === null){
 $.ajax({
 
-type: 'GET',
-url:"/bin/getCaseID",
+/*type: 'GET',
+url:"/bin/getCaseID",*/
+
+url: window.location.origin + "/bin/fullertonProxy",
+	/*type: 'GET',
+	data: {
+		path: "getCaseID"		
+	},*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getCaseID"
+	},
+	
 dataType: 'json',
 
 success: function(myresponse){

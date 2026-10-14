@@ -125,11 +125,19 @@ if (StageIndicator.value === null){
 				workflow_initiator.value = userValue;
 
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getEvaluationFormData",
 					data: {
 						action: "EMP_DETAILS"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getEvaluationFormData",
+						action: "EMP_DETAILS"
 					},
+				
 					dataType: 'json',
 					success: function(myresopnse) {
 
@@ -399,12 +407,20 @@ function getAddminData(division){
 	gifModal.style.display = "block";
 
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/propertyManagementServlet",
 
 		data: {
 			action: 'DEPT_ADMIN_DATA', 
           division: division
+		},*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "propertyManagementServlet",
+			action: 'DEPT_ADMIN_DATA', 
+			division: division
 		},
 
 		dataType: 'json',
@@ -437,8 +453,14 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
             if(StageIndicator.value === null){
 $.ajax({
 
-type: 'GET',
-url:"/bin/getCaseID",
+/*type: 'GET',
+url:"/bin/getCaseID",*/
+url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getCaseID"
+	},
+	
 dataType: 'json',
 
 success: function(myresponse){
@@ -506,12 +528,20 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
 
         $.ajax({
 
-            type: 'GET',
+            /*type: 'GET',
             url: '/bin/getSubstituteFacultyData',
             data: {
                 action: "SUB_FACULTY_CWID_LOOKUP",
                 cwid: userValue
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getSubstituteFacultyData",
+				action: "SUB_FACULTY_CWID_LOOKUP",
+                cwid: userValue
+			},
             dataType: 'json',
 
             success: function(myresponse) {
@@ -665,16 +695,21 @@ function getAddminData(division){
 	gifModal.style.display = "block";
 
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/propertyManagementServlet",
-
 		data: {
-			action: 'DEPT_ADMIN_DATA', 
+		  action: 'DEPT_ADMIN_DATA', 
           division: division
+		},*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "propertyManagementServlet",
+			action: 'DEPT_ADMIN_DATA', 
+			division: division
 		},
-
 		dataType: 'json',
-
 		success: function(myresponse) {
 			if (myresponse.length >= 1) {
 				var progarray = [];
@@ -750,12 +785,20 @@ function getAddminData(division){
 	gifModal.style.display = "block";
 
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/propertyManagementServlet",
 
 		data: {
 			action: 'DEPT_ADMIN_DATA', 
           division: division
+		},*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "propertyManagementServlet",
+			action: 'DEPT_ADMIN_DATA', 
+            division: division
 		},
 
 		dataType: 'json',
@@ -808,12 +851,20 @@ function getAddminData(division){
 	gifModal.style.display = "block";
 
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/propertyManagementServlet",
 
 		data: {
 			action: 'DEPT_ADMIN_DATA', 
           division: division
+		},*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "propertyManagementServlet",
+			action: 'DEPT_ADMIN_DATA', 
+            division: division
 		},
 
 		dataType: 'json',
@@ -1004,12 +1055,20 @@ var tagNo = PropertyTN.value;
 
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/propertyManagementServlet",
     data: {
         action: "ASSET_DETAILS",
         tagNumber: tagNo
-    },
+    },*/
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "propertyManagementServlet",
+		action: "ASSET_DETAILS",
+        tagNumber: tagNo
+	},
+	
     dataType: 'json',
     success: function(response) {
 
@@ -1027,12 +1086,21 @@ $.ajax({
         } else if (response.length === 0 || (AssetDescription.value === "")) {
 debugger;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAssetManagementPropertyAssetData",
                 data: {
                     action: "ASSET_API_LOOKUP",
                     assetId: tagNo
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAssetManagementPropertyAssetData",
+					action: "ASSET_API_LOOKUP",
+                    assetId: tagNo
+				},
+				
                 dataType: 'json',
                 success: function(myresponse) {
 
@@ -1128,9 +1196,15 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
         if (EmpSign.value === null) {           
             InitiatorDate.enabled = false;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -1188,9 +1262,16 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
         if (RequestorSignDate.value === null) {           
             RequestorSignDate.enabled = false;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -1248,9 +1329,17 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
         if (DeptHeadSignDate.value === null) {           
             DeptHeadSignDate.enabled = false;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -1323,9 +1412,16 @@ asset_management_lost_or_stolen_property_form_lost_or_stolen_property_form.gener
         if (OfficeDate.value === null) {           
             OfficeDate.enabled = false;
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
