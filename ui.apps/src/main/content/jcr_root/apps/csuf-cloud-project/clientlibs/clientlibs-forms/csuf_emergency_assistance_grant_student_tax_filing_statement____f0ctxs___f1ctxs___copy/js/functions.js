@@ -157,8 +157,15 @@ function loggedInDetails(){
 function caseID() {
     $.ajax({
 
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+
         dataType: 'json',
         success: function(response) {
             caseId.value = response.CASEID;
@@ -171,12 +178,19 @@ function caseID() {
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getStudentPeronalInformationWithUserID",
 
         data: {
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getStudentPeronalInformationWithUserID",
+			userID: userValue
+		},
 
         dataType: 'json',
         success: function(response) {
@@ -213,12 +227,21 @@ function getStudentAidYearDetails(studentCWID) {
 
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: studentCWID
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: studentCWID
+		},
+	
         dataType: 'json',
         success: function(response) {
 			

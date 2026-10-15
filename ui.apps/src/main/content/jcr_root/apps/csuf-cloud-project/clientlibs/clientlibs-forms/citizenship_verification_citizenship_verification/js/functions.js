@@ -67,9 +67,13 @@ function loggedInDetails() {
 
 function caseID() {
     $.ajax({
-
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(response) {
             caseId.value = response.CASEID;
@@ -82,14 +86,21 @@ function caseID() {
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCitizenShipData",
 
         data: {
            userID: userValue,
+           action:"CV_USER_DETAILS"
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			userID: userValue,
             action:"CV_USER_DETAILS"
-        },
-
+		},
         dataType: 'json',
         success: function(response) {
 
@@ -125,12 +136,21 @@ function getStudentAidYearDetails(studentCWID) {
 
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: studentCWID
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: studentCWID
+		},
+	
         dataType: 'json',
         success: function(response) {
 
@@ -300,7 +320,7 @@ var formCodeColumnName = "FINANCIAL_AID_YEAR";
 var faDecision = "Approved";
 if (StageIndicator.value === null) {
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/getCitizenShipData",
 		data: {
 			action: 'CV_DUPLICATE_CHECK_DETAILS',
@@ -310,7 +330,21 @@ if (StageIndicator.value === null) {
           formCodeColumnName:formCodeColumnName,
           formCode: formCodeVal,
           faDecision: faDecision
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action: 'CV_DUPLICATE_CHECK_DETAILS',
+			cwid: cwid.value,
+          faDecisionColumnName:financialAidDecisionColumnName,
+          tableName: tableName,
+          formCodeColumnName:formCodeColumnName,
+          formCode: formCodeVal,
+          faDecision: faDecision
+		},
+	
 		dataType: 'json',
 		success: function(myresponse) {
    
@@ -373,8 +407,13 @@ function loggedInDetails() {
 function caseID() {
     $.ajax({
 
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(response) {
             caseId.value = response.CASEID;
@@ -387,13 +426,20 @@ function caseID() {
 debugger;
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCitizenShipData",
-
         data: {
            userID: userValue,
+           action:"CV_USER_DETAILS"
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			userID: userValue,
             action:"CV_USER_DETAILS"
-        },
+		},
 
         dataType: 'json',
         success: function(response) {
@@ -431,12 +477,21 @@ function getStudentAidYearDetails(studentCWID) {
 
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: studentCWID
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: studentCWID
+		},
+		
         dataType: 'json',
         success: function(response) {
 debugger;
@@ -607,17 +662,30 @@ var formCodeColumnName = "FINANCIAL_AID_YEAR";
 var faDecision = "Approved";
 if (StageIndicator.value === null) {
 	$.ajax({
-		type: 'GET',
+		/*type: 'GET',
 		url: "/bin/getCitizenShipData",
 		data: {
 			action: 'CV_DUPLICATE_CHECK_DETAILS',
 			cwid: cwid.value,
-          faDecisionColumnName:financialAidDecisionColumnName,
-          tableName: tableName,
-          formCodeColumnName:formCodeColumnName,
-          formCode: formCodeVal,
-          faDecision: faDecision
-        },
+			 faDecisionColumnName:financialAidDecisionColumnName,
+			  tableName: tableName,
+			  formCodeColumnName:formCodeColumnName,
+			  formCode: formCodeVal,
+			  faDecision: faDecision
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action: 'CV_DUPLICATE_CHECK_DETAILS',
+			cwid: cwid.value,
+			faDecisionColumnName:financialAidDecisionColumnName,
+			tableName: tableName,
+			formCodeColumnName:formCodeColumnName,
+			formCode: formCodeVal,
+			faDecision: faDecision
+		},
 		dataType: 'json',
 		success: function(myresponse) {
    

@@ -29,12 +29,21 @@ if (StageIndicator.value === null) {
 //debugger;
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getUniversityWithdrawalData",
         data: {
             action: "UNIVERSITY_WITHDRAWAL_DETAILS",
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getUniversityWithdrawalData",
+			action: "UNIVERSITY_WITHDRAWAL_DETAILS",
+            userID: userValue
+		},
+	
         dataType: 'json',
         success: function(response) {
   //        debugger;
@@ -115,13 +124,22 @@ challenge_by_examination_challenge_by_examination.generated_guideRootPanel_init1
                       
                         $.ajax({
 
-                            type: 'GET',
+                            /*type: 'GET',
                             url: "/bin/getChallengeByExamination",
                             data: {
                                 userId: userId,
                                 term: term,
                               	tblName: tblName
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "getChallengeByExamination",
+								userId: userId,
+                                term: term,
+                              	tblName: tblName
+							},
 
                             dataType: 'json',
 
@@ -304,8 +322,15 @@ challenge_by_examination_challenge_by_examination.generated_CaseID_init0 = funct
 if(StageIndicator.value === null){
     $.ajax({
 
-      type: 'GET', 
-      url:"/bin/getCaseID",
+      /*type: 'GET', 
+      url:"/bin/getCaseID",*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+		
       dataType: 'json',
 
       success: function(myresponse){            

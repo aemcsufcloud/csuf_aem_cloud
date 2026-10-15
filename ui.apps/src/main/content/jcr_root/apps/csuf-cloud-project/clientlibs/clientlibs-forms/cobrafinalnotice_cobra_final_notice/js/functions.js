@@ -35,14 +35,19 @@ gifModal.style.display = "block";
       //alert("Reset Clicked");
         $.ajax({
 
-           type: 'GET',
-
+           /*type: 'GET',
                 url: "/bin/getCobraEmpLookup",
-
 
               data:  {
                      cwid: EmpId
-              },
+              },*/
+			  
+			  url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getCobraEmpLookup",
+					 cwid: EmpId
+				},
 
               dataType: 'JSON',
 
@@ -419,14 +424,19 @@ if(this.value !== null){
 
       $.ajax({
 
-         type: 'GET',
-
+         /*type: 'GET',
               url: "/bin/getCobraBenefitLookup",    
-
             data:  {
                    cwid: EmpId
-            },
+            },*/
 
+		url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getCobraBenefitLookup",
+				cwid: EmpId
+			},
+	
             dataType: 'JSON',
 
           success: function(myresponse) {       
@@ -1775,7 +1785,7 @@ cobrafinalnotice_cobra_final_notice.generated_DependentName1_valueCommit0 = func
 if(this.value !== null){
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
 
         url: "/bin/getCobraDependentNameLookup",
 
@@ -1783,7 +1793,15 @@ if(this.value !== null){
 
             cwid: emplID,
             dependentName: this.value      
-        },  
+        },  */
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCobraDependentNameLookup",
+			cwid: emplID,
+            dependentName: this.value
+		},
 
         datatype: 'JSON',
 
@@ -1866,7 +1884,7 @@ cobrafinalnotice_cobra_final_notice.generated_DependentName2_valueCommit0 = func
 if(this.value !== null){
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
 
         url: "/bin/getCobraDependentNameLookup",
 
@@ -1874,7 +1892,15 @@ if(this.value !== null){
 
             cwid: emplID,
             dependentName: this.value      
-        },  
+        },  */
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCobraDependentNameLookup",
+			cwid: emplID,
+				dependentName: this.value
+		},
 
         datatype: 'JSON',
 
@@ -1957,15 +1983,20 @@ cobrafinalnotice_cobra_final_notice.generated_DependentName3_valueCommit0 = func
 if(this.value !== null){
     $.ajax({
 
-        type: 'GET',
-
+        /*type: 'GET',
         url: "/bin/getCobraDependentNameLookup",
-
         data:	{
-
             cwid: emplID,
             dependentName: this.value      
-        },  
+        },  */
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCobraDependentNameLookup",
+			 cwid: emplID,
+            dependentName: this.value
+	},
 
         datatype: 'JSON',
 
@@ -2050,15 +2081,20 @@ if(this.value !== null){
 
     $.ajax({
 
-        type: 'GET',
-
+        /*type: 'GET',
         url: "/bin/getCobraDependentNameLookup",
-
-        data:	{
-
+        data:	
             cwid: emplID,
             dependentName: this.value      
-        },  
+        }, */
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCobraDependentNameLookup",
+			cwid: emplID,
+            dependentName: this.value 
+		},
 
         datatype: 'JSON',
 
@@ -2142,15 +2178,20 @@ cobrafinalnotice_cobra_final_notice.generated_DependentName5_valueCommit0 = func
 if(this.value !== null){
     $.ajax({
 
-        type: 'GET',
-
+        /*type: 'GET',
         url: "/bin/getCobraDependentNameLookup",
-
         data:	{
-
             cwid: emplID,
             dependentName: this.value      
-        },  
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCobraDependentNameLookup",
+			cwid: emplID,
+            dependentName: this.value
+		},
 
         datatype: 'JSON',
 

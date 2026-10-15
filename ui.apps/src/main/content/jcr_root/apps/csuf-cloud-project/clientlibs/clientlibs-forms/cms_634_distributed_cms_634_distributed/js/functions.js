@@ -24,12 +24,18 @@ var userValue=myresponse.userId;
 LogUser.value = userValue;
  // userValue ='jluzzi';
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCMS634UserLookup",
         data: {
-            
             userId: userValue
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCMS634UserLookup",
+			userId: userValue
+		},
+						
         dataType: 'json',
         success: function(myresopnse) {
             
@@ -63,15 +69,22 @@ LogUser.value = userValue;
                
                     $.ajax({
 
-                        type: 'GET',
-
+                        /*type: 'GET',
                         url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
-
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+                            cwid: empIdVal,
+                            union_cd: cbidVal
+						},
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserID.value = managerDetails[0].MANAGER_EMP_USERID; //MANAGER_EMP_USERID
@@ -214,15 +227,23 @@ LogUser.value = userValue;
                
                     $.ajax({
 
-                        type: 'GET',
-
+                        /*type: 'GET',
                         url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
-
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+                            cwid: empIdVal,
+                            union_cd: cbidVal
+						},
+			
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserID.value = managerDetails[0].MANAGER_EMP_USERID; //MANAGER_EMP_USERID
@@ -322,14 +343,25 @@ if (this.value !== null) {
         TimekeeperName.value = "";
   		
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
+			
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {
@@ -351,14 +383,25 @@ if (this.value !== null) {
         AuthApproverEmailId.value = "";
         AuthApproverName.value = "";
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
+			
             dataType: 'json',
             success: function(myresponse) {
 
@@ -514,13 +557,21 @@ var userValue = LogUser.value;
 var gifModal = document.getElementById('gifModal');
 gifModal.style.display = "block";
 $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCMS634EmpLookup",
         data: {
-            
             userId: userValue,
 			empId : empId
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCMS634EmpLookup",
+			userId: userValue,
+			empId : empId
+		},
+						
         dataType: 'json',
         success: function(myresopnse) {
             
@@ -554,15 +605,23 @@ $.ajax({
                
                     $.ajax({
 
-                        type: 'GET',
-
+                        /*type: 'GET',
                         url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
-
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+                            cwid: empIdVal,
+                            union_cd: cbidVal
+						},
+						
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserID.value = managerDetails[0].MANAGER_EMP_USERID; //MANAGER_EMP_USERID
@@ -707,13 +766,22 @@ $.ajax({
 
                         type: 'GET',
 
-                        url: "/bin/getManagerDetails",
+                        /*url: "/bin/getManagerDetails",
                         data: {
                             deptid: deptIdVal,
                             cwid: empIdVal,
                             union_cd: cbidVal
 
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getManagerDetails",
+							deptid: deptIdVal,
+                            cwid: empIdVal,
+                            union_cd: cbidVal
+						},
                         dataType: 'json',
                         success: function(managerDetails) {
                             ManagerUserID.value = managerDetails[0].MANAGER_EMP_USERID; //MANAGER_EMP_USERID
@@ -806,14 +874,25 @@ if (this.value !== null) {
         TimekeeperName.value = "";
   		
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
+		
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {
@@ -835,14 +914,24 @@ if (this.value !== null) {
         AuthApproverEmailId.value = "";
         AuthApproverName.value = "";
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
             dataType: 'json',
             success: function(myresponse) {
 

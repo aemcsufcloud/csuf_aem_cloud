@@ -43,8 +43,15 @@ caseID();
 function caseID() {
     $.ajax({
 
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+	
         dataType: 'json',
         success: function(response) {
             caseId.value = response.CASEID;

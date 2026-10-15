@@ -139,11 +139,18 @@ change_of_catalog_year_change_of_catalog_year.generated_guideRootPanel_init1 = f
           form_initiator.value = userValue;
          if((userID.toLowerCase().substring(0, 3) !== "zz-")){
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAdvisorData",
                 data: {
                     userID: userID,
-                },
+                },*/
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAdvisorData",
+					userID: userID
+				},
+	
                 dataType: 'json',
 
                 success: function(myresopnse) {
@@ -226,11 +233,18 @@ function getData(){
           form_initiator.value = userValue;
          if((userID.toLowerCase().substring(0, 3) !== "zz-")){
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getAdvisorData",
                 data: {
                     userID: userID,
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAdvisorData",
+					userID: userID
+				},
                 dataType: 'json',
 
                 success: function(myresopnse) {
@@ -283,8 +297,15 @@ change_of_catalog_year_change_of_catalog_year.generated_CaseId_init0 = function 
 if(StageIndicator.value === null){
     $.ajax({
 
-      type: 'GET', 
-      url:"/bin/getCaseID",
+      /*type: 'GET', 
+      url:"/bin/getCaseID",*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+				
       dataType: 'json',
 
       success: function(myresponse){            
@@ -326,11 +347,19 @@ change_of_catalog_year_change_of_catalog_year.generated_CWID_valueCommit0 = func
           gifModal.style.display = "none";
         } else if (StudentFlag.value === "true") {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getCatalogYearUserLookUp",
                 data: {
                     cwid: cwid,
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getCatalogYearUserLookUp",
+					cwid: cwid
+				},
+	
                 dataType: 'json',
 
                 success: function(myresopnse) {

@@ -183,10 +183,19 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_guideRootP
      
             $.ajax({
 
-                type: 'GET',
+                /*type: 'GET',
 
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+			
                 dataType: 'json',
                 success: function(myresopnse) {
                    
@@ -217,8 +226,14 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_caseId_ini
             if(StageIndicator.value === null){
 $.ajax({
 
+/*type: 'GET',
+url:"/bin/getCaseID",*/
+
+url: window.location.origin + "/bin/fullertonProxy",
 type: 'GET',
-url:"/bin/getCaseID",
+data: {
+	path: "getCaseID"
+},
 dataType: 'json',
 
 success: function(myresponse){
@@ -503,12 +518,21 @@ if (StageIndicator.value === null) {
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_SEARCH_APPROVER",
+                lastName: this.value
+			},
+			
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -561,12 +585,20 @@ if (StageIndicator.value === null)   {
       SupervisorName.value = approverName;
         //BudgetAnalystName_1.value = approverName;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_APPROVER_EMPID",
                 approverName: approverName
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_APPROVER_EMPID",
+                approverName: approverName
+			},
+	
             dataType: 'json',
             success: function(myresopnse) {
                 if (myresopnse[0].EMPLID !== null) {
@@ -590,12 +622,20 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === null) {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+                    approverEmplID: approverEmplId
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -760,10 +800,16 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_RiskCB_val
             RiskDate.enabled = false;
             $.ajax({
 
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -838,10 +884,17 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_DeanCB_val
             DeanDate2.enabled = false;
             $.ajax({
 
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -928,10 +981,17 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_ChairCB_va
             Chair1Date.enabled = false;
             $.ajax({
 
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -1005,11 +1065,17 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_DeptCooCB_
 
             DeptCoDate3.enabled = false;
             $.ajax({
-
-                type: 'GET',
-
+                /*type: 'GET',
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+			
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;
@@ -1143,12 +1209,21 @@ if (StageIndicator.value === "ToDepartmentCoordinator") {
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_SEARCH_APPROVER",
+				lastName: this.value
+			},
+				
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -1225,12 +1300,20 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === "ToDepartmentCoordinator") {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+					approverEmplID: approverEmplId
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -1275,12 +1358,21 @@ if (StageIndicator.value === "ToDepartmentCoordinator") {
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "chrsIDUpdateServlet",
+				action: "STUDENT_TIMESHEET_EMP_DETAILS_CHRSID",
+				chrsId: chrsID
+			},
+	
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -1328,12 +1420,21 @@ if (StageIndicator.value === "ToDepartmentCoordinator")   {
         DeanSearchName.value = approverName;
         //BudgetAnalystName_1.value = approverName;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_APPROVER_EMPID",
                 approverName: approverName
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_APPROVER_EMPID",
+				approverName: approverName
+			},
+	
             dataType: 'json',
             success: function(myresopnse) {
                 if (myresopnse[0].EMPLID !== null) {
@@ -1357,12 +1458,21 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === "ToDepartmentCoordinator") {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path:"getFAERData",
+					action:"FAER_APPROVER_DETAILS",
+                    approverEmplID: approverEmplId
+				},
+
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -1398,13 +1508,20 @@ csuf_volunteer_form_anonymous_csuf_volunteer_form_anonymous.generated_Supervisor
             SupervisorDate.enabled = false;
             $.ajax({
 
-                type: 'GET',
+                /*type: 'GET',
 
                 url:"/bin/getEvaluationFormData",
 				data: {
                   action: "EMP_DETAILS"
-                  
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+	
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME; 
@@ -1476,13 +1593,23 @@ if (StageIndicator.value === "ToSupervisor") {
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getVolunteerData",
             data: {
                 action: "VOLUNTEER_SEARCH_APPROVER",
                 lastName: this.value, 
                 DivisionId : DivisionId.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getVolunteerData",
+				action: "VOLUNTEER_SEARCH_APPROVER",
+                lastName: this.value, 
+                DivisionId : DivisionId.value
+			},
+	
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -1530,12 +1657,21 @@ if (StageIndicator.value === "ToSupervisor")   {
         DeptCoSearchName.value = approverName;
         //BudgetAnalystName_1.value = approverName;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_APPROVER_EMPID",
                 approverName: approverName
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_APPROVER_EMPID",
+                approverName: approverName
+			},
+	
             dataType: 'json',
             success: function(myresopnse) {
                 if (myresopnse[0].EMPLID !== null) {
@@ -1559,12 +1695,21 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === "ToSupervisor") {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+                    approverEmplID: approverEmplId
+				},
+	
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -1601,10 +1746,18 @@ if (this.value == 1) {
             ApprovalDate1.enabled = false;
             $.ajax({
 
-                type: 'GET',
+                /*type: 'GET',
 
                 url:"/bin/getEvaluationFormData",
-				data: {action: "EMP_DETAILS"},
+				data: {action: "EMP_DETAILS"},*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getEvaluationFormData",
+					action: "EMP_DETAILS"
+				},
+	
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].EMP_NAME;

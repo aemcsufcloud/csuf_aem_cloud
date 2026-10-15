@@ -150,12 +150,21 @@ classCodeVal = classCodeVal.substring(0,4);
  if(StageIndicator.value === null && ClassCodeDraft.value !== classCodeVal){   
    if(classCodeVal !== null && cwid !== null){
      $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getConfirmationTicket",
             data: {
                 cwid: cwid,
               	classCode : classCodeVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getConfirmationTicket",
+				cwid: cwid,
+              	classCode : classCodeVal
+			},
+	
             dataType: 'json',
 
             success: function(myresopnse) {
@@ -341,13 +350,21 @@ classCodeVal = classCodeVal.substring(0,4);
 function getDivisionData(deptId,cwid){
 if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getDivisionData",
             data: {
                 deptId: deptId,
               	cwid: cwid
-               
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDivisionData",
+				deptId: deptId,
+              	cwid: cwid
+			},
+	
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {
@@ -384,12 +401,21 @@ classCodeVal = classCodeVal.substring(0,4);
    if(classCodeVal !== null){
      
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getConfirmationTicket",
             data: {
                 cwid: cwid,
               	classCode : classCodeVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getConfirmationTicket",
+				cwid: cwid,
+              	classCode : classCodeVal
+			},
+	
             dataType: 'json',
 
             success: function(myresopnse) {
@@ -582,14 +608,25 @@ if (this.value !== null) {
         TimekeeperName.value = "";
   		
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
+			
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {
@@ -610,13 +647,21 @@ if (this.value !== null) {
 function getDivisionData(deptId,cwid){
 if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getDivisionData",
             data: {
                 deptId: deptId,
               	cwid: cwid
-               
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDivisionData",
+				deptId: deptId,
+              	cwid: cwid
+			},
+	
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {
@@ -804,14 +849,25 @@ if (this.value !== null) {
         TimekeeperName.value = "";
   		
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTimekeeperData",
             data: {
                 deptId: deptId,
               	division : division,
                 agencyUnit: agencyUnit,
 				fieldVal:fieldVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTimekeeperData",
+				deptId: deptId,
+              	division : division,
+                agencyUnit: agencyUnit,
+				fieldVal:fieldVal
+			},
+	
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length === 1) {

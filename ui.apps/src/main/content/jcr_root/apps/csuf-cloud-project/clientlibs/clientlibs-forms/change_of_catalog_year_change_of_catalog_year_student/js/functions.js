@@ -74,11 +74,19 @@ change_of_catalog_year_change_of_catalog_year_student.generated_guideRootPanel_i
             gifModal.style.display = "block";
             if (userValue !== "") {
                 $.ajax({
-                    type: 'GET',
+                    /*type: 'GET',
                     url: "/bin/getCatalogYearStudentData",
                     data: {
                         userId: userValue,
-                    },
+                    },*/
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getCatalogYearStudentData",
+						 userId: userValue
+					},
+	
                     dataType: 'json',
 
                     success: function(myresopnse) {
@@ -278,11 +286,19 @@ function getData(){
             gifModal.style.display = "block";
             if (userValue !== "") {
                 $.ajax({
-                    type: 'GET',
+                    /*type: 'GET',
                     url: "/bin/getCatalogYearStudentData",
                     data: {
                         userId: userValue,
-                    },
+                    },*/
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getCatalogYearStudentData",
+						userId: userValue
+					},
+	
                     dataType: 'json',
 
                     success: function(myresopnse) {
@@ -455,8 +471,15 @@ change_of_catalog_year_change_of_catalog_year_student.generated_CaseId_init0 = f
 if(StageIndicator.value === null){
     $.ajax({
 
-      type: 'GET', 
-      url:"/bin/getCaseID",
+      /*type: 'GET', 
+      url:"/bin/getCaseID",*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+	
       dataType: 'json',
 
       success: function(myresponse){            
