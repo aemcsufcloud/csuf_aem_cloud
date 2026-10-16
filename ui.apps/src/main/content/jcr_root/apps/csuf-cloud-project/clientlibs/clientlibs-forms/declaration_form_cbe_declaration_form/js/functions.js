@@ -39,13 +39,24 @@ if (StageIndicator.value === null) {
 function getAdvisorDetails(empUserId){
   	 $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getDeclarationDetails",
        	data: {
           	action: 'ADVISOR_DETAILS', 
           	empUserID: empUserId, 
           	deptID: 10073
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getDeclarationDetails",
+			action: 'ADVISOR_DETAILS', 
+          	empUserID: empUserId, 
+          	deptID: 10073
+		},
+		
+		
         dataType: 'json',
         success: function(response) {
           	
@@ -120,8 +131,15 @@ declaration_form_cbe_declaration_form.generated_guideRootPanel_init2 = function 
 if(StageIndicator.value === null){
     $.ajax({
 
-      type: 'GET',
-      url:"/bin/getCaseID",
+      /*type: 'GET',
+      url:"/bin/getCaseID",*/
+	  
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
+			
       dataType: 'json',
       
       success: function(myresponse){               
@@ -199,15 +217,21 @@ declaration_form_cbe_declaration_form.generated_cwid_valueCommit0 = function (sc
 
         $.ajax({
 
-            type: 'GET',
-
+            /*type: 'GET',
             url: "/bin/getDeclarationDetails",
-
             data: {
                 action: 'STUDENT_DETAILS',
                 cwid: cwidVal
                 //acadPlan: acadPlanVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDeclarationDetails",
+				action: 'STUDENT_DETAILS',
+                cwid: cwidVal
+			},
 
             dataType: 'json',
 
@@ -274,11 +298,17 @@ function getAllMajorList () {
 
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getAllMajors",
         data: {
             //AcadProg: 'UGD'         		 
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getAllMajors"
+		},
 
         dataType: 'json',
 
@@ -301,14 +331,22 @@ function getCourseDetails(userId){
                        
                         $.ajax({
 
-                            type: 'GET',
+                            /*type: 'GET',
 
                             url: "/bin/getDeclarationDetails",
 
                             data: {
                                 action: "COURSE_DETAILS",
                                 userId: userId
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "getDeclarationDetails",
+								action: "COURSE_DETAILS",
+                                userId: userId
+							},
 
                             dataType: 'json',
 
@@ -382,13 +420,20 @@ declaration_form_cbe_declaration_form.generated_cwid_valueCommit1 = function (sc
         //var acadPlanVal = "'42PBUSUND','42PINBUND','42PECNUND'";
         var userIDVal;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getDeclarationDetails",
             data: {
                 action: 'STUDENT_DETAILS',
                 cwid: cwidVal
                 //acadPlan: acadPlanVal
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDeclarationDetails",
+				action: 'STUDENT_DETAILS',
+                cwid: cwidVal
+			},
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length >= 1) {
@@ -554,11 +599,18 @@ declaration_form_cbe_declaration_form.generated_cwid_valueCommit1 = function (sc
 function getAllMajorList() {
     var allMajorArray = [];
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getAllMajors",
+		
         data: {
             //AcadProg: 'UGD'         		 
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getAllMajors"
+		},
         dataType: 'json',
         success: function(myresponse) {
             if (myresponse.length >= 1) {
@@ -576,12 +628,20 @@ function getCourseDetails(userId) {
     var gifModal = document.getElementById('gifModal');
     // userId ="jennaslee";
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getDeclarationDetails",
         data: {
             action: "COURSE_DETAILS",
             userId: userId
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDeclarationDetails",
+				action: "COURSE_DETAILS",
+				userId: userId
+			},
         dataType: 'json',
         success: function(myresponse) {
 
@@ -750,11 +810,18 @@ declaration_form_cbe_declaration_form.generated_NewMajor_valueCommit0 = function
 
         $.ajax({
 
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getAllMajorsCode",
             data: {
                 TrnscrDescr: program
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getAllMajorsCode",
+				TrnscrDescr: program
+			},
 
             dataType: 'json',
             success: function(myresponse) {

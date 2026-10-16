@@ -60,12 +60,22 @@ success: function(myresopnse){
       LogUser.value = userValue;
 
   $.ajax({
-type: 'GET', 
+/*type: 'GET', 
 url:"/bin/checkTheUserIsAnAuthorizableMember",
 data: {
 userId: userValue,
   groupId : "Fee-Waiver-Reviewers"
- },
+ },*/
+ 
+ 
+ url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "checkTheUserIsAnAuthorizableMember",
+		userId: userValue,
+		groupId : "Fee-Waiver-Reviewers"
+	},
+			
 dataType: 'json',
 success: function(userDetails){
   status = userDetails.Result;
@@ -84,14 +94,23 @@ success: function(userDetails){
         chrsID.enabled = false;
         }
           $.ajax({
-                  type: 'GET',
+                  /*type: 'GET',
                  // url: "/bin/getDependentFeeWaiverUserLookUp",
                   url: "/bin/chrsIDUpdateServlet",
 
                   data: {
                     action:"Dependent_Application_User_CHRSID",
                       userId: userValue
-                  },
+                  },*/
+				  
+				  url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "chrsIDUpdateServlet",
+		 action:"Dependent_Application_User_CHRSID",
+                      userId: userValue
+	},
+	
                   dataType: 'json',
 
                   success: function(myresponse) {
@@ -2199,7 +2218,7 @@ gifModal.style.display = "block";
 
 $.ajax({
 
-   type: 'GET',
+   /*type: 'GET',
 
       	url: "/bin/getDependentFeeWaiverApplicantLookUp",
       
@@ -2207,7 +2226,15 @@ $.ajax({
       data:  {
         	 cwid: EmpId,
         	 applicantFirstName: applicantName
-      },
+      },*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getDependentFeeWaiverApplicantLookUp",
+		cwid: EmpId,
+		applicantFirstName: applicantName
+	},
       
       dataType: 'JSON',
 
@@ -2275,7 +2302,7 @@ dependent_fee_waiver_dependent_fee_waiver_application.generated_applicantFirstNa
 debugger;
     $.ajax({
 
-        type: 'GET',
+        /*type: 'GET',
 
         url: "/bin/getDependentFeeWaiverApplicantLookUp",
 
@@ -2283,7 +2310,16 @@ debugger;
         data: {
             cwid: EmpId,
             applicantFirstName: applicantName
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getDependentFeeWaiverApplicantLookUp",
+			cwid: EmpId,
+            applicantFirstName: applicantName
+		},
+	
 
         dataType: 'JSON',
 
@@ -2546,15 +2582,24 @@ dependent_fee_waiver_dependent_fee_waiver_application.generated_dependentAddress
       
         $.ajax({
 
-           type: 'GET',
+          /* type: 'GET',
 
               	url: "/bin/getDependentFeeWaiverApplicantLookUp",             
               
               data:  {
                 	 cwid: EmpId,
                 	 applicantFirstName: applicantName
-              },
+              },*/
               
+			  
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDependentFeeWaiverApplicantLookUp",
+				cwid: EmpId,
+                	 applicantFirstName: applicantName
+			},
+	
               dataType: 'JSON',
 
             success: function(myresponse) {

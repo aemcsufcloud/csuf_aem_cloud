@@ -51,8 +51,8 @@
                <a class="nav-link" id="pills-campusforms-tab" href="${userMenu.domain}/content/csu/us/en/home.html" role="tab">home</a>
             </li>
             <li class="nav-divider"></li>
-            <li class="nav-item">
-               <a class="nav-link" id="pills-formscatalogue-tab"  href="${userMenu.domain}/content/csu/us/en/forms-catalog0.html" role="tab">my forms</a>
+            <li class="nav-item" data-sly-test="${userMenu.userName != 'anonymous'}">
+               <a class="nav-link" id="pills-formscatalogue-tab" href="${userMenu.domain}/content/csu/us/en/forms-catalog0.html" role="tab">my forms</a>
             </li>
             <li class="nav-divider"></li>
             <li class="nav-item" data-sly-test="${userMenu.userName != 'anonymous'}">
@@ -194,7 +194,7 @@
                   <li class="nav-item" data-sly-test="${userMenu.isFERPViewer}">
                      <a class="nav-link nav-dropdown-link" id="pills-ferpreport-tab" href="${userMenu.domain}/content/csu/us/en/faculty-early-retirement-program-request-form-.html" role="tab">Faculty Early Retirement Program Request Form </a>
                   </li>
-						
+
     			  <li class="nav-item" data-sly-test="${userMenu.isPRTBViewer}">
                       <a class="nav-link nav-dropdown-link" id="pills-prtbreport-tab" href="${userMenu.domain}/content/csu/us/en/pre-retirement-time-base-request.html" role="tab">Pre Retirement Time Base Request</a>
                   </li>
@@ -207,7 +207,7 @@
 	 			  <li class="nav-item" data-sly-test="${userMenu.isSFSDViewer}">
 						<a class="nav-link nav-dropdown-link" id="pills-sfsdreport-tab" href="${userMenu.domain}/content/csu/us/en/substitute-faculty-appointment-form-for-short-duration-form.html" role="tab">Substitute Faculty Appointment Form for Short Duration Form </a>
                   </li>
-	
+
 				 <li class="nav-item" data-sly-test="${userMenu.isPS980Viewer}">
 						<a class="nav-link nav-dropdown-link" id="pills-tbps980Report-tab" href="${userMenu.domain}/content/csu/us/en/pilot-summer-9-80-work-schedule-request-report.html" role="tab">Summer Work Schedule Request Form </a>
                 </li> 
@@ -459,41 +459,51 @@
                     <li class="nav-item" data-sly-test="${userMenu.isVendorFeeWaiverReductionFormViewer}">
 							<a class="nav-link nav-dropdown-link" id="pills-vendorFeeWaiverReductionFormReport-tab" href="${userMenu.domain}/content/csu/us/en/vendor-fee-waiver-reduction-form.html" role="tab">Vendor Fee Waiver / Reduction Form</a>
 					</li>
+                    <li class="nav-item" data-sly-test="${userMenu.isChallengeByExaminationFormViewer}">
+							<a class="nav-link nav-dropdown-link" id="pills-challengeByExaminationFormReport-tab" href="${userMenu.domain}/content/csu/us/en/challenge-by-examination.html" role="tab">Challenge By Examination</a>
+					</li>
+                    <li class="nav-item" data-sly-test="${userMenu.isScheduleChangeFormViewer}">
+							<a class="nav-link nav-dropdown-link" id="pills-scheduleChangeFormreport-tab" href="${userMenu.domain}/content/csu/us/en/schedule-change-form.html" role="tab">Schedule Change Form (SCF)</a>
+					</li>
+                    <li class="nav-item" data-sly-test="${userMenu.isBlendedMajorSwitchFormViewer}">
+							<a class="nav-link nav-dropdown-link" id="pills-blendedMajorSwitchFormInfoReport-tab" href="${userMenu.domain}/content/csu/us/en/blended-program-major-switch.html" role="tab">Blended Program Major Switch</a>
+					</li>
+
+
+
                </ul>
             </li>
 
             <!-- Admin menu -->
                 <li class="nav-divider"></li>
-                <!-- <li class="nav-item dropdown" data-sly-test="${userMenu.isAdmin}">-->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" data-sly-test="${userMenu.isAdmin}">
                     <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Administration</a>
                     <ul class="dropdown-menu dropdown-nav-menu">
-                        <!-- <li class="nav-item dropdown-nav-item" data-sly-test="${userMenu.isAdmin}"> -->
-                         <li class="nav-item dropdown-nav-item">
-                        
+                        <li class="nav-item dropdown-nav-item" data-sly-test="${userMenu.isAdmin}">
                             <a class="nav-link nav-dropdown-link" id="pills-sysconfig-tab" href="${userMenu.domain}/content/csu/us/configure-system-maintenence.html" role="tab">System Configuration</a>
                             </li>
-                           <!-- <li class="nav-item" data-sly-test="${userMenu.isAdmin}">-->
-                            <li class="nav-item">
+                            <li class="nav-item" data-sly-test="${userMenu.isAdmin}">
                                 <a class="nav-link nav-dropdown-link" id="pills-sysdowntime-tab" href="${userMenu.domain}/content/csu/us/scheduled-system-maintenance.html" role="tab">System Downtime</a>
                                 </li>
-                            <!-- <li class="nav-item" data-sly-test="${userMenu.isAdmin}">-->
-                             <li class="nav-item">
+                            <li class="nav-item" data-sly-test="${userMenu.isAdmin}">
                             <a class="nav-link nav-dropdown-link" id="pills-workflow-administration-tab" href="${userMenu.domain}/content/csu/us/en/workflow-administration.html" role="tab">Workflow Administration</a>
                     		</li>
-                             <!-- <li class="nav-item" data-sly-test="${userMenu.isAdmin}">-->
-                             <li class="nav-item">
+                             <li class="nav-item" data-sly-test="${userMenu.isAdmin}">
                             <a class="nav-link nav-dropdown-link" id="pills-workflow-delegation-tab" href="${userMenu.domain}/content/csu/us/en/workitem-delegation.html" role="tab">Workflow Delegation</a>
                         	</li>
 
-                            <!-- <li class="nav-item" data-sly-test="${userMenu.isAdmin}">-->
-                            <li class="nav-item">
+                            <li class="nav-item" data-sly-test="${userMenu.isAdmin}">
                                 <a class="nav-link nav-dropdown-link" id="pills-workflow-bulk-approval-tab" href="${userMenu.domain}/content/csu/us/en/bulk-approval.html" role="tab">Bulk Approval</a>
                              </li>
                           </ul>
                        </li>
-                            <li class="nav-item" data-sly-test="${userMenu.isFaculty}">
-                            <a class="nav-link" id="pills-aiassistant" href="${userMenu.domain}/content/csu/us/en/tuffyassist.html" role="tab">Tuffy Assist (Beta)</a>
+                            <li class="nav-item">
+							<!--<li class="nav-item" data-sly-test="${userMenu.isFaculty}">-->
+                            <a class="nav-link" id="pills-aiassistant" href="${userMenu.domain}/content/csu/us/en/tuffyassist.html" role="tab">Tuffy Assist</a>
+                            </li>
+							<li class="nav-item">
+                             <!--<li class="nav-item" data-sly-test="${userMenu.isFaculty}">-->
+                            <a class="nav-link" id="pills-aiformsagent" href="${userMenu.domain}/content/csu/us/en/home.html" role="tab">TITAN SMART FORMS</a>
                             </li>
                             <li class="nav-divider"></li>
  								<li class="nav-item" data-sly-test="${userMenu.userName == 'anonymous'}">
@@ -588,7 +598,8 @@ window.addEventListener('load', function() {
     YanaChatbotClient.initialize({
         /**  baseURL: "https://aem-webapp.dgakkw86mya8i.amplifyapp.com/", **/
           /**  baseURL: "https://ask-aem.dgakkw86mya8i.amplifyapp.com/ask?cb=ask_KU&lang=EN&cb=ask_KU&cb=ask_KU",**/
-             baseURL: "https://ask-aem.dgakkw86mya8i.amplifyapp.com/",
+            // baseURL: "https://ask-aem.dgakkw86mya8i.amplifyapp.com/", //actual URL changed 2/26/2026
+             baseURL: "https://aem-webappservice.prod.ituffyimpl.com/",
         /** optional configuration **/
 
         /** setting the border of the chatbot **/
@@ -627,7 +638,9 @@ window.addEventListener('load', function() {
                 icon_height: '40px',
                 frame_border: '6px solid #E2E6EA',*/
                 icon_border_radius: "50%",
-                icon_image_url: 'url("https://files-cms.s3.us-east-2.amazonaws.com/ituffy-demo/ituffy-demo-logo.png")'
+                //icon_image_url: 'url("https://files-cms.s3.us-east-2.amazonaws.com/ituffy-demo/ituffy-demo-logo.png")'
+                //icon_image_url: 'url("https://files-cms.vector.yanaimpl.com/ituffy/ituffy-logo.png")'
+                 icon_image_url: 'url("https://assets.ituffyimpl.com/ituffy-demo/ituffy-logo.png")'
 },
 
         /** Show top tooltip on hover of chat icon **/
@@ -650,6 +663,7 @@ window.addEventListener('message', function(message) {
             });
         }
     });
+
 </script>
 </div>
 </header>

@@ -89,14 +89,19 @@ dental_plan_enrollment_dental_plan_enrollment.generated_socialSecNo_valueCommit0
 
     $.ajax({
 
-       type: 'GET',
+			/*type: 'GET',
 
-            url: "/bin/dentalPlanSSNLookUp",
-
-
+           url: "/bin/dentalPlanSSNLookUp",
           data:  {
                  ssn: EmpSSN
-          },
+          },*/
+		  
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "dentalPlanSSNLookUp",
+				ssn: EmpSSN
+			},
 
           dataType: 'JSON',
 

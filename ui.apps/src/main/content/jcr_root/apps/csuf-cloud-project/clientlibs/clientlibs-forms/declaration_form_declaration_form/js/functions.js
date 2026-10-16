@@ -720,13 +720,22 @@ declaration_form_declaration_form.generated_guideRootPanel_init1 = function (sco
 
                 $.ajax({
 
-                    type: 'GET',
+                    /*type: 'GET',
 
                     url: "/bin/getStudentPeronalInformationWithUserID",
 
                     data: {
                         userID: userValue
-                    },
+                    },*/
+					
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getStudentPeronalInformationWithUserID",
+						userID: userValue
+					},
+								
 
                     dataType: 'json',
 
@@ -784,13 +793,20 @@ declaration_form_declaration_form.generated_guideRootPanel_init1 = function (sco
 
                         $.ajax({
 
-                            type: 'GET',
+                            /*type: 'GET',
 
                             url: "/bin/getCurrentMajor",
 
                             data: {
                                 userID: HiddenUserID.value
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+								type: 'GET',
+								data: {
+									path: "getCurrentMajor",
+									userID: HiddenUserID.value
+								},
 
                             dataType: 'json',
 
@@ -806,14 +822,21 @@ declaration_form_declaration_form.generated_guideRootPanel_init1 = function (sco
 
                                 $.ajax({
 
-                                    type: 'GET',
+                                    /*type: 'GET',
 
                                     url: "/bin/getCurrentAdditionalMajor",
 
                                     data: {
                                         userID: HiddenUserID.value
 
-                                    },
+                                    },*/
+									
+									url: window.location.origin + "/bin/fullertonProxy",
+									type: 'GET',
+									data: {
+										path: "getCurrentAdditionalMajor",
+										userID: HiddenUserID.value
+									},
 
                                     dataType: 'json',
 
@@ -3451,13 +3474,20 @@ declaration_form_declaration_form.generated_DeclareCertificate_valueCommit0 = fu
 		var that = this;
         $.ajax({
 
-            type: 'GET', 
+            /*type: 'GET', 
 
             url:"/bin/getAllCertificatesCode",
 
            data:  {                     
                      TrnscrDescr: descr
-              },
+              },*/
+			  
+			   url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getAllCertificatesCode",
+					TrnscrDescr: descr
+				},
 
             dataType: 'json',
 
@@ -3496,14 +3526,20 @@ declaration_form_declaration_form.generated_DeclareCertificate_valueCommit0 = fu
 					
 				$.ajax({
 
-					type: 'GET', 
+					/*type: 'GET', 
 
 					url:"/bin/getChairDetails",
 
 				    data:  {                     
 							 Program: descr
-					  },
+					  },*/
 
+				 url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "getChairDetails",
+								Program: descr
+							},
 					dataType: 'json',
 
 					success: function(myresponse){
@@ -3566,13 +3602,21 @@ declaration_form_declaration_form.generated_DropCertificateCHK_valueCommit0 = fu
 
         $.ajax({
 
-            type: 'GET', 
+            /*type: 'GET', 
 
             url:"/bin/getCurrentCertificate",
 
            data:  {
                      userID: userId                     
-              },
+              },*/
+			  
+			  
+		  url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getCurrentCertificate",
+					userID: userId
+				},
 
             dataType: 'json',
 
@@ -3646,13 +3690,21 @@ declaration_form_declaration_form.generated_DropCertificate_valueCommit0 = funct
 
               $.ajax({
 
-                  type: 'GET', 
+                  /*type: 'GET', 
 
                   url:"/bin/getAllCertificatesCode",
 
                  data:  {                     
                            Descr: descr
-                    },
+                    },*/
+					
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "getAllCertificatesCode",
+						Descr: descr
+					},
 
                   dataType: 'json',
 
@@ -3666,13 +3718,20 @@ declaration_form_declaration_form.generated_DropCertificate_valueCommit0 = funct
 
                       $.ajax({
 
-                          type: 'GET', 
+                          /*type: 'GET', 
 
                           url:"/bin/getChairDetails",
 
                          data:  {                     
                                    Program: descr
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "getChairDetails",
+								Program: descr
+							},
 
                           dataType: 'json',
 

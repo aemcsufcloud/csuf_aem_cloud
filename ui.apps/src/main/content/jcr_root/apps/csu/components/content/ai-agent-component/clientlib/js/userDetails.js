@@ -8,7 +8,8 @@ function getUserDetails() {
     const userDetails = {
   name: nameVal,
   email: "",
-  userId: userIdVal,
+  //userId: userIdVal,
+  userId: "yjayaram@fullerton.edu",
 };
   return userDetails;
 }

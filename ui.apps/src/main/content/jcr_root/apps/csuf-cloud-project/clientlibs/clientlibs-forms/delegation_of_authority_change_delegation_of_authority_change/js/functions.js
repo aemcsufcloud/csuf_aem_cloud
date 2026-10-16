@@ -1702,8 +1702,17 @@ if(stage_indicator.value === null && formSavedStatus.value != "1"){
 
 	$.ajax({
 
-		type: 'GET', 
-		url:"/bin/getAllLoggedInUserDetailsLookup",
+		/*type: 'GET', 
+		url:"/bin/getAllLoggedInUserDetailsLookup",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getAllLoggedInUserDetailsLookup",
+			action: "STUDENT_TIMESHEET_EMP_DETAILS_CHRSID",
+			chrsId: chrsID
+		},
+	
 		dataType: 'json',
 		success: function(myresponse){
 			if(myresponse.length > 0){
@@ -2356,14 +2365,20 @@ if(stage_indicator.value === null){
 
 				$.ajax({
 
-				  type: 'GET', 
+				  /*type: 'GET', 
 
 				  url:"/bin/getDepartmentIDList", 
 
 				  data: {
 						deptID: deptValue
-				  },
+				  },*/
 
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getDepartmentIDList",
+					deptID: deptValue
+				},
 				  dataType: 'json',
 
 				  success: function(myresponse){               
@@ -2378,13 +2393,20 @@ if(stage_indicator.value === null){
 
 									$.ajax({
 
-										  type: 'GET', 
+										  /*type: 'GET', 
 										  url:"/bin/getDepartmentHeadDetailsLookUp",
 										  data: {
 												deptID: actualDeptIDValueForAddNames,
 												unionCD: 'M80'
-										  },
-
+										  },*/
+										  
+										  url: window.location.origin + "/bin/fullertonProxy",
+											type: 'GET',
+											data: {
+												path: "getDepartmentHeadDetailsLookUp",
+												deptID: actualDeptIDValueForAddNames,
+												unionCD: 'M80'
+											},
 										  dataType: 'json',
 
 										  success: function(myresponse){
@@ -2448,12 +2470,20 @@ if(stage_indicator.value === null){
 function getDepartmentHeadDetailsWithDivisionCode(divisionCode){
 	
 	$.ajax({
-			  type: 'GET', 
+			  /*type: 'GET', 
 			  url:"/bin/getDepartmentHeadDetailsLookUp",
 			  data: {
 					divisonCode: divisionCode,
 					unionCD: 'M80'
-			  },
+			  },*/
+			  
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDepartmentHeadDetailsLookUp",
+				divisonCode: divisionCode,
+				unionCD: 'M80'
+			},
 
 			  dataType: 'json',
 
@@ -2522,7 +2552,7 @@ if((stage_indicator.value === null)){
 
 		$.ajax({
 
-		  type: 'GET',
+		  /*type: 'GET',
 		  
 		  url:"/bin/getDeleteColumnNamesList",
 		  
@@ -2533,7 +2563,19 @@ if((stage_indicator.value === null)){
 				departmentID: actualDeptIDValueForDeleteNames,
 				csuUnit: actualAgencyUnitValueForDeleteNames,
 				deleteFlag: 'N'
-		  }, 
+		  }, */
+		  
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDeleteColumnNamesList",
+				divisionCode: hidden_division_code.value, 
+				collegeCode: hidden_college_code.value,
+				//departmentID: hidden_department_ID.value, 
+				departmentID: actualDeptIDValueForDeleteNames,
+				csuUnit: actualAgencyUnitValueForDeleteNames,
+				deleteFlag: 'N'
+			},
 		  
 		  dataType: 'json',
 
@@ -2908,11 +2950,19 @@ delegation_of_authority_change_delegation_of_authority_change.generated_add_clic
 
 		$.ajax({
 
-			type: 'GET', 
+			/*type: 'GET', 
 			url:"/bin/getDepartmentIDList",
 			data: {
 				  collegeCode: actualCollegeCodeValue,
 				  divisionCode: actualDivisionCodeValue
+			},*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDepartmentIDList",
+				collegeCode: actualCollegeCodeValue,
+				 divisionCode: actualDivisionCodeValue
 			},
 			dataType: 'json',
 
@@ -3036,6 +3086,13 @@ if(stage_indicator.value === null){
 					unionCD: 'M80'
 				  },
 
+			url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getDepartmentHeadDetailsLookUp",
+					deptID: actualDeptIDValueForAddNames,
+					unionCD: 'M80'
+				},
 				  dataType: 'json',
 
 				  success: function(myresponse){
@@ -3081,12 +3138,20 @@ if(stage_indicator.value === null){
 function getDepartmentHeadDetailsWithDivisionCode(divisionCode){
 	
 	$.ajax({
-			  type: 'GET', 
+			  /*type: 'GET', 
 			  url:"/bin/getDepartmentHeadDetailsLookUp",
 			  data: {
 					divisonCode: divisionCode,
 					unionCD: 'M80'
-			  },
+			  },*/
+			  
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDepartmentHeadDetailsLookUp",
+				divisonCode: divisionCode,
+				unionCD: 'M80'
+			},
 
 			  dataType: 'json',
 
@@ -3140,7 +3205,7 @@ function getDeleteNames(){
 
 		$.ajax({
 
-		  type: 'GET',
+		 /* type: 'GET',
 		  
 		  url:"/bin/getDeleteColumnNamesList",
 		  
@@ -3151,7 +3216,19 @@ function getDeleteNames(){
 				departmentID: actualDeptIDValueForDeleteNames,
 				csuUnit: actualAgencyUnitValueForDeleteNames,
 				deleteFlag: 'N'
-		  }, 
+		  }, */
+		  
+		  url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getDeleteColumnNamesList",
+				divisionCode: hidden_division_code.value, 
+				collegeCode: hidden_college_code.value,
+				//departmentID: hidden_department_ID.value, 
+				departmentID: actualDeptIDValueForDeleteNames,
+				csuUnit: actualAgencyUnitValueForDeleteNames,
+				deleteFlag: 'N'
+			},
 		  
 		  dataType: 'json',
 
@@ -3579,13 +3656,21 @@ function getCollegeList(){
 
 	$.ajax({
 
-		type: 'GET', 
+		/*type: 'GET', 
 
 		url:"/bin/getCollegeList",
 
 		data: {
 			  cwid: userCWID,
 			  divisionCode: fullDivisionValue
+		},*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCollegeList",
+			cwid: userCWID,
+			divisionCode: fullDivisionValue
 		},
 
 		dataType: 'json',

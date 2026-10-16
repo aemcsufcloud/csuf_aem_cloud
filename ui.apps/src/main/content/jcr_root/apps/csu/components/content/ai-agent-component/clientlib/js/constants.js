@@ -6,9 +6,9 @@
 
 //const BASE_URL = "http://10.70.115.43/api"
 
-//const BASE_URL = "https://qi7wakg7kl.execute-api.us-west-2.amazonaws.com/api"; //prod end point
+const BASE_URL = "https://qi7wakg7kl.execute-api.us-west-2.amazonaws.com/api"; //prod end point
 
-const BASE_URL = 'http://44.230.67.255:8083/api'; //new test endpoint - 9/12
+//const BASE_URL = 'http://44.230.67.255:8083/api'; //new test endpoint - 9/12
 
 const files = [
   "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf",

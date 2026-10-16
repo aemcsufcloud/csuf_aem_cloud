@@ -161,12 +161,21 @@ alert("error block=" + error);
 function getLoggedInUserType(userValue){
   debugger;
   $.ajax({
-type: 'GET',
+/*type: 'GET',
 url: "/bin/getDroneFlightRequestData",
 data: {
 action: "DRONE_FLIGHT_USER_DETAILS",
 userID: userValue
+},*/
+
+url: window.location.origin + "/bin/fullertonProxy",
+type: 'GET',
+data: {
+	path: "getDroneFlightRequestData",
+	action: "DRONE_FLIGHT_USER_DETAILS",
+userID: userValue
 },
+
 dataType: 'json',
 success: function(myresopnse) {
   debugger;
@@ -388,12 +397,21 @@ gifModal.style.display = "block";
 var cwid = this.value; 
 
 $.ajax({
-type: 'GET',
+/*type: 'GET',
 url: "/bin/getSubstituteFacultyData",
 data: {
 action: "SUB_FACULTY_CWID_LOOKUP",
 cwid: cwid
+},*/
+
+url: window.location.origin + "/bin/fullertonProxy",
+type: 'GET',
+data: {
+	path: "getSubstituteFacultyData",
+	action: "SUB_FACULTY_CWID_LOOKUP",
+	cwid: cwid
 },
+	
 dataType: 'json',
 success: function(myresopnse) {
 
