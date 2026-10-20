@@ -24,9 +24,17 @@ if(StageIndicator.value === null){
              
 
 				$.ajax({
-				 type: 'GET',
+				 /*type: 'GET',
 						url: "/bin/getFARData",
-						data: {action: "FAR_USER_DATA",userID:userValue},
+						data: {action: "FAR_USER_DATA",userID:userValue},*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getFARData",
+							action: "FAR_USER_DATA",
+							userID: userValue
+						},
 						dataType: 'json',
 						success: function(myresopnse) {
 						  
@@ -529,10 +537,19 @@ logUser.value = userValue;
 
   $.ajax({
 
-  type: 'GET',
+  /*type: 'GET',
 
   url: "/bin/getEvaluationFormData",
-    data : {action : "EMP_DETAILS"},
+    data : {action : "EMP_DETAILS"},*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormData",
+		action: "EMP_DETAILS"
+	},
+			
+			
   dataType: 'json',
   success: function(myresopnse) {
     var preByValue = myresopnse[0].EMP_NAME;
@@ -603,15 +620,20 @@ if (StageIndicator.value === null) {
         var gifModal = document.getElementById('gifModal');
         gifModal.style.display = "block";
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/chrsIDUpdateServlet",
             data: {
-
                 action: "EMP_DETAILS_CSU_CHRS_ID",
-
                 chrsId: chrsid
-
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "chrsIDUpdateServlet",
+				action: "EMP_DETAILS_CSU_CHRS_ID",
+				chrsId: chrsid
+			},
             dataType: 'json',
             success: function(myresopnse) {
                 debugger;
@@ -791,12 +813,22 @@ if (StageIndicator.value === null && formSavedStatus.value != "1") {
   if (posNo !== null) {
 
     $.ajax({
-      type: 'GET',
+      /*type: 'GET',
       url: "/bin/getSubstituteFacultyData",
       data: {
         action: "SUB_FACULTY_POSITION_LOOKUP",
         position_nbr: posNo
-      },
+      },*/
+	  
+	  url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getSubstituteFacultyData",
+		action: "SUB_FACULTY_POSITION_LOOKUP",
+        position_nbr: posNo
+	},
+	
+	
       dataType: 'json',
       success: function (response) {
 
@@ -845,13 +877,24 @@ function getJobCode(){
   var depID = DeptId.value;
 
   $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFARData",
     data: {
       cwid: cwid,
       depID: depID,
       action: "FULL_COLLEGE_DATA"
-    },
+    },*/
+
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		cwid: cwid,
+		  depID: depID,
+		  action: "FULL_COLLEGE_DATA"
+	},
+			
     dataType: 'json',
     success: function (myresponse) {
 
@@ -950,12 +993,21 @@ faculty_action_request_faculty_action_request.generated_EnterLastNameText_valueC
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_SEARCH_APPROVER",
+				lastName: this.value
+			},
+				
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -1036,12 +1088,21 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === null || StageIndicator.value=="ToRequestor")  {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+					approverEmplID: approverEmplId
+				},
+	
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -1112,13 +1173,23 @@ faculty_action_request_faculty_action_request.generated_Division_valueCommit0 = 
             if (StageIndicator.value === null || StageIndicator.value == "ToRequestor") {
 
   $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
     data: {
       action: "FAER_DEAN_DATA",
       division: Division.value,
       union_cd: "M80"
-    },
+    },*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFARData",
+	 action: "FAER_DEAN_DATA",
+      division: Division.value,
+      union_cd: "M80"
+	},
+	
     dataType: 'json',
 
     success: function (DeanDeatils) {
@@ -1201,13 +1272,23 @@ faculty_action_request_faculty_action_request.generated_DeptId_valueCommit0 = fu
   var depID = DeptId.value;
 
   $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFARData",
     data: {
       cwid: cwid,
       depID: depID,
       action: "FULL_COLLEGE_DATA"
-    },
+    },*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFARData",
+		cwid: cwid,
+		depID: depID,
+		action: "FULL_COLLEGE_DATA"
+	},
+						
     dataType: 'json',
     success: function (myresponse) {
 
@@ -1332,8 +1413,17 @@ faculty_action_request_faculty_action_request.generated_NewDeptID_valueCommit0 =
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
   $.ajax({
 				 type: 'GET',
-						url: "/bin/getFARData",
-						data: {action: "FAR_CHAIR_DEAN_DATA",depID:depIDVal},
+						/*url: "/bin/getFARData",
+						data: {action: "FAR_CHAIR_DEAN_DATA",depID:depIDVal},*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getFARData",
+							action: "FAR_CHAIR_DEAN_DATA",
+							depID:depIDVal
+						},
+						
 						dataType: 'json',
 						success: function(myresopnse) {
                           if(myresopnse.length !== 0){

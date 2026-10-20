@@ -34,12 +34,21 @@ if (StageIndicator.value === null) {
 
 function getStudentDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getCitizenShipData",
         data: {
             action: "CV_USER_DETAILS",
             userID: userValue
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCitizenShipData",
+			action: "CV_USER_DETAILS",
+            userID: userValue
+		},
+				
         dataType: 'json',
         success: function(response) {
             if (response.length >= 1) {
@@ -70,12 +79,21 @@ function getStudentDetails(userValue) {
 
 function getStudentAidYearDetails(studentCWID) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTaxFilingStatementDetails",
         data: {
             action: 'STUDENT_DETAILS',
             cwid: studentCWID
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTaxFilingStatementDetails",
+			action: 'STUDENT_DETAILS',
+            cwid: studentCWID
+		},
+			
         dataType: 'json',
         success: function(response) {
             if (response.length > 0) {
@@ -245,7 +263,7 @@ function checkforDuplicateSubmissions(formCodeVal) {
     var faDecision = "1";
     if (StageIndicator.value === null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getCitizenShipData",
             data: {
                 action: 'CV_DUPLICATE_CHECK_DETAILS',
@@ -255,7 +273,20 @@ function checkforDuplicateSubmissions(formCodeVal) {
                 formCodeColumnName: formCodeColumnName,
                 formCode: formCodeVal,
                 faDecision: faDecision
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getCitizenShipData",
+				action: 'CV_DUPLICATE_CHECK_DETAILS',
+                cwid: cwid.value,
+                faDecisionColumnName: financialAidDecisionColumnName,
+                tableName: tableName,
+                formCodeColumnName: formCodeColumnName,
+                formCode: formCodeVal,
+                faDecision: faDecision
+			},
+	
             dataType: 'json',
             success: function(myresponse) {
                 if (myresponse.length >= 1) {
@@ -588,8 +619,15 @@ f1auct_unit_cap_appeal_unit_cap_appeal.generated_caseId_init0 = function (scope)
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getCaseID"
+			},
+			
         dataType: 'json',
         success: function(myresponse) {
             caseId.value = myresponse.CASEID;
@@ -737,12 +775,20 @@ f1auct_unit_cap_appeal_unit_cap_appeal.generated_textbox1658833379799_valueCommi
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_SEARCH_APPROVER",
+                lastName: this.value
+			},
+	
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -789,12 +835,20 @@ f1auct_unit_cap_appeal_unit_cap_appeal.generated_AcademicDepartmentDropDown_valu
         AcademicDepartmentReviewerName.value = approverName;
         //BudgetAnalystName_1.value = approverName;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_APPROVER_EMPID",
                 approverName: approverName
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_APPROVER_EMPID",
+                approverName: approverName
+			},
             dataType: 'json',
             success: function(myresopnse) {
                 if (myresopnse[0].EMPLID !== null) {
@@ -818,12 +872,21 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === null) {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+                    approverEmplID: approverEmplId
+				},
+			
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {
@@ -856,12 +919,21 @@ f1auct_unit_cap_appeal_unit_cap_appeal.generated_textbox_11821518121658833672145
     var appResult = [];
     if (this.value !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_SEARCH_APPROVER",
                 lastName: this.value
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_SEARCH_APPROVER",
+                lastName: this.value
+			},
+	
             dataType: 'json',
             success: function(fundApproverResult) {
                 if (fundApproverResult.length !== 0) {
@@ -907,12 +979,20 @@ f1auct_unit_cap_appeal_unit_cap_appeal.generated_AcademicAdvisiongOfficeDropDown
         AcademicAdvisingOfficeReviewerName.value = approverName;
         //BudgetAnalystName_1.value = approverName;
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getFAERData",
             data: {
                 action: "FAER_APPROVER_EMPID",
                 approverName: approverName
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getFAERData",
+				action: "FAER_APPROVER_EMPID",
+                approverName: approverName
+			},
             dataType: 'json',
             success: function(myresopnse) {
                 if (myresopnse[0].EMPLID !== null) {
@@ -936,12 +1016,21 @@ function getEmployeeDetails(approverEmplId) {
     if (StageIndicator.value === null) {
         if (approverEmplId !== null) {
             $.ajax({
-                type: 'GET',
+                /*type: 'GET',
                 url: "/bin/getFAERData",
                 data: {
                     action: "FAER_APPROVER_DETAILS",
                     approverEmplID: approverEmplId
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getFAERData",
+					action: "FAER_APPROVER_DETAILS",
+                    approverEmplID: approverEmplId
+				},
+	
                 dataType: 'json',
                 success: function(myresopnse) {
                     if (myresopnse.length !== 0) {

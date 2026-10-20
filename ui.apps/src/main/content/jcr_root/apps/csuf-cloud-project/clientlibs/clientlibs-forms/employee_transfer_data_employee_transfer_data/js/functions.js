@@ -148,11 +148,19 @@ if (this.value !== null) {
   }
     var enteredSsn = this.value;
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getEmpTransferData",
         data: {
             ssn: enteredSsn
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getEmpTransferData",
+			ssn: enteredSsn
+		},
+	
         dataType: 'json',
         success: function(myresponse) {
             // debugger;

@@ -26,14 +26,21 @@ if(StageIndicator.value === null){
       workflow_initiator.value = userID;
 
 			$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/chrsIDUpdateServlet",
-				  
 					data: {
                         action: "PAY_PLAN_1012_1112_LOOKUP",
 						userId: userID
-						
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxy",
+					type: 'GET',
+					data: {
+						path: "chrsIDUpdateServlet",
+						action: "PAY_PLAN_1012_1112_LOOKUP",
+						userId: userID
 					},
+									
 					dataType: 'json',
 				
 					success: function(myresponse) {
@@ -67,13 +74,23 @@ if(StageIndicator.value === null){
                                 var union_cd = cbid.value;
                               
                                 $.ajax({
-                                    type: 'GET',
+                                    /*type: 'GET',
                                     url: "/bin/getManagerDetails",
                                     data: {
                                         deptid: dept_id,
                                         cwid: employeeId,
                                         union_cd: union_cd
-                                    },
+                                    },*/
+									
+									url: window.location.origin + "/bin/fullertonProxy",
+									type: 'GET',
+									data: {
+										path: "getManagerDetails",
+										deptid: dept_id,
+                                        cwid: employeeId,
+                                        union_cd: union_cd
+									},
+										
                                     dataType: 'json',
                                     success: function(myresponse) {
 
@@ -222,13 +239,23 @@ if(StageIndicator.value === null){
 							  
                              
 									$.ajax({
-										type: 'GET',
+										/*type: 'GET',
 										url: "/bin/getManagerDetails",
 										data: {
 												deptid: deptIdVal,
 												cwid: empIdVal,
 												union_cd: cbidVal
+										},*/
+										
+										url: window.location.origin + "/bin/fullertonProxy",
+										type: 'GET',
+										data: {
+											path: "getManagerDetails",
+											deptid: deptIdVal,
+											cwid: empIdVal,
+											union_cd: cbidVal
 										},
+	
 										dataType: 'json',
 										success: function(myresponse) {
 
@@ -1503,13 +1530,13 @@ else{
   
   /*
   var testEmail = "yjayaram@fullerton.edu";
-  //var testEmail = "pushpa.kawadi@thoughtfocus.com";
+  var testEmail = "pushpa.kawadi@sparient.com";
   empEmailId.value = testEmail;
   managerEmailId.value = testEmail;
   */
   
-  var testEmail = "soumya.ravindra@thoughtfocus.com";
-  //var testEmail = "shreyas.manjunatha@thoughtfocus.com";
+  var testEmail = "pushpa.kawadi@sparient.com";
+  
   empEmailId.value = testEmail;
   managerEmailId.value = testEmail;
   

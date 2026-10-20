@@ -25,10 +25,17 @@ logUser.value = userValue;
 
   $.ajax({
 
-  type: 'GET',
-
+  /*type: 'GET',
   url: "/bin/getEvaluationFormData",
-    data : {action : "EMP_DETAILS"},
+    data : {action : "EMP_DETAILS"},*/
+	
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getEvaluationFormData",
+		action: "EMP_DETAILS"
+	},
+	
   dataType: 'json',
   success: function(myresopnse) {
     var preByValue = myresopnse[0].EMP_NAME;
@@ -44,10 +51,18 @@ logUser.value = userValue;
   
   $.ajax({
 
-     type: 'GET',
-
+     /*type: 'GET',
      url:"/bin/getFAERData",
-     data: {action: "FAER_USER_DIV_DATA",userID:userValue},
+     data: {action: "FAER_USER_DIV_DATA",userID:userValue},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFAERData",
+			action: "FAER_USER_DIV_DATA",
+			userID:userValue
+		},
+		
      dataType: 'json',
      success: function(myresopnse) {
        Division.value = myresopnse[0].DIVSION;
@@ -55,9 +70,19 @@ logUser.value = userValue;
         if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},
+	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFAERData",
+			action: "FAER_DEAN_DATA",
+			division:Division.value,
+			union_cd:"M80"
+		},
+		
     dataType: 'json',
 
     success: function(DeanDeatils) {
@@ -109,9 +134,16 @@ alert("error block="+error);
 
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor" && FundSourceData.value === null){
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_FUND_SOURCE_DETA"},
+	 data: {action: "FAER_FUND_SOURCE_DETA"},*/
+	 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFAERData",
+			action: "FAER_FUND_SOURCE_DETA"
+		},
+		
     dataType: 'json',
 
     success: function(fundPrgResult) {
@@ -714,9 +746,18 @@ if(StageIndicator.value === null){
 	gifModal.style.display = "block";
  
    $.ajax({
- 	type: 'GET',
+ 	/*type: 'GET',
 	 url:"/bin/chrsIDUpdateServlet",
-     data: {action: "FAER_CWID_CHRS_DATA",chrsId:chrsId},
+     data: {action: "FAER_CWID_CHRS_DATA",chrsId:chrsId},*/
+	 
+	  url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "chrsIDUpdateServlet",
+			action: "FAER_CWID_CHRS_DATA",
+			chrsId:chrsId
+		},
+		
      dataType: 'json',
      success: function(myresopnse) {
        
@@ -778,9 +819,18 @@ if(StageIndicator.value === null){
    var gifModal = document.getElementById('gifModal');
 	gifModal.style.display = "block";
    $.ajax({
- 	type: 'GET',
+ 	/*type: 'GET',
 	 url:"/bin/getFAERData",
-     data: {action: "FAER_CWID_DATA",cwid:empId},
+     data: {action: "FAER_CWID_DATA",cwid:empId},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFAERData",
+			action: "FAER_CWID_DATA",
+			cwid:empId
+		},
+		
      dataType: 'json',
      success: function(myresopnse) {
        if (myresopnse.length !== 0) {
@@ -827,9 +877,19 @@ if(StageIndicator.value === null){
    var gifModal = document.getElementById('gifModal');
 	gifModal.style.display = "block";
    $.ajax({
- 	type: 'GET',
+ 	/*type: 'GET',
 	 url:"/bin/getFAERData",
-     data: {action: "FAER_POSITION_DATA",posNo:posNo,division:divisionVal},
+     data: {action: "FAER_POSITION_DATA",posNo:posNo,division:divisionVal},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getFAERData",
+			action: "FAER_POSITION_DATA",
+			posNo:posNo,
+			division:divisionVal
+		},
+	
      dataType: 'json',
      success: function(myresopnse) {
        if (myresopnse.length === 1) {
@@ -912,9 +972,18 @@ faculty_additional_employment_request_faculty_additional_employment_request.gene
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
  if(approverEmplID !== null || approverEmplID !== ""){
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},
+	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},*/
+	 
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_APPROVER_DETAILS",
+		approverEmplID:approverEmplID
+	},
+	
     dataType: 'json',
 	success: function(myresopnse) {
        ApproverUserID0.value = myresopnse[0].EMP_USERID;
@@ -947,9 +1016,18 @@ if(StageIndicator.value === null || StageIndicator.value == "ToRequestor" ){
 
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},
+	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_APPROVER_DETAILS",
+		approverEmplID:approverEmplID
+	},
+	
     dataType: 'json',
 	success: function(myresopnse) {
        ApproverUserID1.value = myresopnse[0].EMP_USERID;
@@ -980,9 +1058,18 @@ faculty_additional_employment_request_faculty_additional_employment_request.gene
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
    if(ApproverEmpID2.value !== null){
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},
+	 data: {action: "FAER_APPROVER_DETAILS",approverEmplID:approverEmplID},*/
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_APPROVER_DETAILS",
+		approverEmplID:approverEmplID
+	},
+	
     dataType: 'json',
 	success: function(myresopnse) {
        ApproverUserID2.value = myresopnse[0].EMP_USERID;
@@ -1311,6 +1398,15 @@ $.ajax({
     type: 'GET',
     url: "/bin/getFAERData",
 	 data: {action: "FAER_SEARCH_APPROVER",lastName:FundDetails.instanceManager.instances[instanceIndex].SearchLastName.value},
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_SEARCH_APPROVER",
+		lastName:FundDetails.instanceManager.instances[instanceIndex].SearchLastName.value
+	},
+	
     dataType: 'json',
 
     success: function(fundApproverResult) {
@@ -1363,9 +1459,18 @@ var approverName = FundApproverName.value;
 approverName = approverName.substr(0,approverName.indexOf(' - '));
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_APPROVER_EMPID",approverName:approverName},
+	 data: {action: "FAER_APPROVER_EMPID",approverName:approverName},*/
+	 
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_APPROVER_EMPID",
+		approverName:approverName
+	},
+	
     dataType: 'json',
 	success: function(myresopnse) {
       if(indexVal === 0){
@@ -1549,9 +1654,19 @@ faculty_additional_employment_request_faculty_additional_employment_request.gene
 if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},
+	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},*/
+	 
+	 
+	 url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_DEAN_DATA",
+		division:Division.value,
+		union_cd:"M80"
+	},
     dataType: 'json',
 
     success: function(DeanDeatils) {
@@ -1596,9 +1711,19 @@ faculty_additional_employment_request_faculty_additional_employment_request.gene
             if(StageIndicator.value == "ToRequestor"){
 
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},
+	 data: {action: "FAER_DEAN_DATA",division:Division.value,union_cd:"M80"},*/
+	 
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_DEAN_DATA",
+		division:Division.value,
+		union_cd:"M80"
+	},
+	
     dataType: 'json',
 
     success: function(DeanDeatils) {
@@ -1746,9 +1871,18 @@ if(StageIndicator.value === null || StageIndicator.value == "ToRequestor"){
 var appResult = [];
 if(BudgetAnalystLastName.value !== null){
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_SEARCH_APPROVER",lastName:BudgetAnalystLastName.value},
+	 data: {action: "FAER_SEARCH_APPROVER",lastName:BudgetAnalystLastName.value},*/
+	 
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_SEARCH_APPROVER",
+		lastName:BudgetAnalystLastName.value
+	},
+	
     dataType: 'json',
 
     success: function(fundApproverResult) {
@@ -1813,9 +1947,19 @@ if(approverName != "Select Optional Reviewer" && approverName !== ""){
 approverName = approverName.substr(0,approverName.indexOf(' - '));
 BudgetAnalystName_1.value = approverName;
 $.ajax({
-    type: 'GET',
+    /*type: 'GET',
     url: "/bin/getFAERData",
-	 data: {action: "FAER_APPROVER_EMPID",approverName:approverName},
+	 data: {action: "FAER_APPROVER_EMPID",approverName:approverName},*/
+	 
+	 
+	url: window.location.origin + "/bin/fullertonProxy",
+	type: 'GET',
+	data: {
+		path: "getFAERData",
+		action: "FAER_APPROVER_EMPID",
+		approverName:approverName
+	},
+	
     dataType: 'json',
 	success: function(myresopnse) {     
          if(myresopnse[0].EMPLID !== null){

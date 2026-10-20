@@ -1290,14 +1290,23 @@ if (StageIndicator.value === null) {
                                                             var union_cd = bargainingUnit.value;
                                                            
                                                             $.ajax({
-                                                                type: 'GET',
+                                                                /*type: 'GET',
                                                                 url: "/bin/getStaffManagerAdminDetailsLookup",
                                                                 data: {
                                                                     deptid: deptid,
                                                                    cwid: employeeId,
-                                                                  
                                                                     union_cd: union_cd
-                                                                },
+                                                                },*/
+																
+																url: window.location.origin + "/bin/fullertonProxy",
+																type: 'GET',
+																data: {
+																	path: "getStaffManagerAdminDetailsLookup",
+																	deptid: deptid,
+                                                                    cwid: employeeId,
+                                                                    union_cd: union_cd
+																},
+	
                                                                 dataType: 'json',
                                                                 success: function(myresponse) {
 
@@ -1461,12 +1470,21 @@ if (StageIndicator.value === null) {
 
                     if (empId.value !== null) {
                         $.ajax({
-                            type: 'GET',
+                            /*type: 'GET',
                             url: "/bin/checkTheUserIsAnAuthorizableMember",
                             data: {
                                 userId: LogUser.value,
                                 groupId: "Fee-Waiver-Reviewers"
-                            },
+                            },*/
+							
+							url: window.location.origin + "/bin/fullertonProxy",
+							type: 'GET',
+							data: {
+								path: "checkTheUserIsAnAuthorizableMember",
+								userId: LogUser.value,
+                                groupId: "Fee-Waiver-Reviewers"
+							},
+											
                             dataType: 'json',
                             success: function(userDetails) {
                                 status = userDetails.Result;
@@ -1490,14 +1508,18 @@ if (StageIndicator.value === null) {
 
                                         $.ajax({
 
-                                            type: 'GET',
-
+                                            /*type: 'GET',
                                             url: "/bin/getFeeWaiverEmpLookUp",
-
-
                                             data: {
                                                 cwid: EmpId
-                                            },
+                                            },*/
+											
+											url: window.location.origin + "/bin/fullertonProxy",
+											type: 'GET',
+											data: {
+												path: "getFeeWaiverEmpLookUp",
+												cwid: EmpId
+											},
 
                                             dataType: 'JSON',
 
@@ -1566,13 +1588,23 @@ if (StageIndicator.value === null) {
                                                     var union_cd = bargainingUnit.value;
                                                    
                                                     $.ajax({
-                                                        type: 'GET',
+                                                        /*type: 'GET',
                                                         url: "/bin/getStaffManagerAdminDetailsLookup",
                                                         data: {
                                                             deptid: deptid,
                                                             cwid: employeeId,
                                                             union_cd: union_cd
-                                                        },
+                                                        },*/
+														
+														url: window.location.origin + "/bin/fullertonProxy",
+														type: 'GET',
+														data: {
+															path: "getStaffManagerAdminDetailsLookup",
+															deptid: deptid,
+															cwid: employeeId,
+															union_cd: union_cd
+														},
+																
                                                         dataType: 'json',
                                                         success: function(myresponse) {
 
@@ -1790,13 +1822,23 @@ if (StageIndicator.value === null) {
                                                             var union_cd = bargainingUnit.value;
                                                            
                                                             $.ajax({
-                                                                type: 'GET',
+                                                                /*type: 'GET',
                                                                 url: "/bin/getStaffManagerAdminDetailsLookup",
                                                                 data: {
                                                                     deptid: deptid,
                                                                     cwid: employeeId,
                                                                     union_cd: union_cd
-                                                                },
+                                                                },*/
+																
+																url: window.location.origin + "/bin/fullertonProxy",
+																type: 'GET',
+																data: {
+																	path: "getStaffManagerAdminDetailsLookup",
+																	deptid: deptid,
+                                                                    cwid: employeeId,
+                                                                    union_cd: union_cd
+																},
+								
                                                                 dataType: 'json',
                                                                 success: function(myresponse) {
 
@@ -3330,9 +3372,17 @@ employee_fee_waiver_employee_fee_waiver_application.generated_deptId_valueCommit
   debugger;
   var dept_id = deptId.value;
   $.ajax({
-                                type: 'GET',
+                                /*type: 'GET',
                                 url: "/bin/getChairDeanInfo",
-								data:{dept_id:dept_id},
+								data:{dept_id:dept_id},*/
+								
+								url: window.location.origin + "/bin/fullertonProxy",
+								type: 'GET',
+								data: {
+									path: "getChairDeanInfo",
+									dept_id:dept_id
+								},
+				
                                 dataType: 'json',
 
                                 success: function(chairInfoResult) {
@@ -3366,12 +3416,20 @@ employee_fee_waiver_employee_fee_waiver_application.generated_ChairUserId_valueC
   var val2 = this.value;
    $.ajax({
 
-                type: 'GET',
+                /*type: 'GET',
 
                 url: "/bin/getUserNameFromDB",
-     data: {
+				data: {
                     userID: val2
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getUserNameFromDB",
+					userID: val2
+				},
+				
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].FULL_NAME;                    
@@ -3397,12 +3455,19 @@ employee_fee_waiver_employee_fee_waiver_application.generated_ManagerUserID_valu
   var val1 = this.value;
    $.ajax({
 
-                type: 'GET',
+                /*type: 'GET',
 
                 url: "/bin/getUserNameFromDB",
-     data: {
+				data: {
                     userID: val1
-                },
+                },*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "getUserNameFromDB",
+					userID: val1
+				},
                 dataType: 'json',
                 success: function(myresopnse) {
                     var userValue = myresopnse[0].FULL_NAME;                    
