@@ -656,7 +656,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					data: {depID:DeptID.value,
 					  action: "CS_DEPT"},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -723,8 +723,8 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 			function enableSignaturesBasedOnTheStage() {
 				if(StageIndicator.value === null || StageIndicator.value == "ToRequestor") {
 					InitiatorCB.mandatory = true;
-					InitiatorName.mandatory = true;
-					InitiatorDate.mandatory = true;
+					/*InitiatorName.mandatory = true;
+					InitiatorDate.mandatory = true;*/
 				} else {
 					InitiatorCB.mandatory = false;
 					InitiatorName.mandatory = false;
@@ -819,7 +819,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					url:"/bin/getEvaluationFormData",
 					data: {action: "EMP_DETAILS"},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getEvaluationFormData",
@@ -1002,6 +1002,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					dataType: 'json',
 					success: function(myresponse) {
 						var userValue = myresponse.userId;
+						var userValue = "nvadlakunta";
 						//logUser.value = userValue;
 						workflow_initiator.value = userValue;
 						var cwidValue = CWID.value;
@@ -1035,7 +1036,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 									},*/
 
 
-									url: window.location.origin + "/bin/fullertonProxy",
+									url: window.location.origin + "/bin/fullertonProxyCampusARF",
 									type: 'GET',
 									data: {
 										path: "getFinancialARFData",
@@ -1355,7 +1356,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action: "CS_DEPT"},*/
 
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -1454,7 +1455,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 						/*type: 'GET',
 						url:"/bin/getCaseID",*/
 
-						url: window.location.origin + "/bin/fullertonProxy",
+						url: window.location.origin + "/bin/fullertonProxyCampusARF",
 						type: 'GET',
 						data: {
 							path: "getCaseID"
@@ -1753,7 +1754,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -1897,7 +1898,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2031,7 +2032,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2174,7 +2175,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2344,7 +2345,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2508,7 +2509,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2644,7 +2645,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2808,7 +2809,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -2942,7 +2943,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3104,7 +3105,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3237,7 +3238,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3400,7 +3401,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3533,7 +3534,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3696,7 +3697,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3830,7 +3831,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -3975,7 +3976,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					},*/
 
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4076,7 +4077,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4303,7 +4304,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4507,7 +4508,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4642,7 +4643,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4805,7 +4806,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -4970,7 +4971,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5134,7 +5135,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5267,7 +5268,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5410,7 +5411,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5604,7 +5605,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5737,7 +5738,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -5901,7 +5902,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6064,7 +6065,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6228,7 +6229,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6390,7 +6391,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6554,7 +6555,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					},*/
 
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6716,7 +6717,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6861,7 +6862,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					},*/
 
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -6961,7 +6962,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7094,7 +7095,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7258,7 +7259,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7391,7 +7392,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7553,7 +7554,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7686,7 +7687,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7830,7 +7831,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -7983,7 +7984,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8115,7 +8116,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8279,7 +8280,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8413,7 +8414,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8578,7 +8579,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8713,7 +8714,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -8877,7 +8878,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9012,7 +9013,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9177,7 +9178,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9311,7 +9312,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9454,7 +9455,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9607,7 +9608,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9740,7 +9741,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    status: "Yes",
 					    action: "ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -9901,7 +9902,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  status:"Yes",
 					  action:"ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10033,7 +10034,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10198,7 +10199,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10332,7 +10333,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    status: "Yes",
 					    action: "ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10497,7 +10498,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10631,7 +10632,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10812,7 +10813,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -10947,7 +10948,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11111,7 +11112,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11243,7 +11244,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    status: "Yes",
 					    action: "ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11407,7 +11408,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  action:"ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11540,7 +11541,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    status: "Yes",
 					    action: "ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11704,7 +11705,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					  status:"Yes",
 					  action:"ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11839,7 +11840,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    status: "Yes",
 					    action: "ARF_ROLE"
 					},*/
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -11995,14 +11996,24 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "Extended Ed",
 						section: "Exd_SFS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "Extended Ed",
+						section: "Exd_SFS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -12119,14 +12130,25 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 
 				$.ajax({
 
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "Extended Ed",
 						section: "Exd_SFS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "Extended Ed",
+						section: "Exd_SFS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(myresponse) {
@@ -12327,14 +12349,25 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "Extended Ed",
 						section: "Exd_MQ",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "Extended Ed",
+						section: "Exd_MQ",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -12451,14 +12484,25 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 
 				$.ajax({
 
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "Extended Ed",
 						section: "Exd_MQ",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "Extended Ed",
+						section: "Exd_MQ",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(myresponse) {
@@ -12583,14 +12627,24 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_Role",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_Role",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -12770,14 +12824,24 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_AS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_AS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -12894,14 +12958,24 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 
 				$.ajax({
 
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_AS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_AS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(myresponse) {
@@ -13049,14 +13123,24 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_SFS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_SFS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -13173,14 +13257,25 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 
 				$.ajax({
 
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_SFS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_SFS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(myresponse) {
@@ -13328,14 +13423,26 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 		with(scope) {
 			if(StageIndicator.value === null || StageIndicator.value == "ToManager" || StageIndicator.value == "ToRequestor" || StageIndicator.value == "ToSecurityAdminFromTrainer" || StageIndicator.value == "ToSecurityAdminFromCISO" || StageIndicator.value == "ToSecurityAdminFromISO" || StageIndicator.value == "ToDynamicRole") {
 				$.ajax({
-					type: 'GET',
+					/*type: 'GET',
 					url: "/bin/getFinancialARFData",
 					data: {
 						dept: "International Programs",
 						section: "IP_RS",
 						status: "Yes",
 						action: "ARF_ROLE"
+					},*/
+					
+					
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
+					type: 'GET',
+					data: {
+						path: "getFinancialARFData",
+						dept: "International Programs",
+						section: "IP_RS",
+						status: "Yes",
+						action: "ARF_ROLE"
 					},
+					
 					dataType: 'json',
 
 					success: function(deptResultSet) {
@@ -13495,7 +13602,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 					    action: "ARF_ROLE"
 					},*/
 
-					url: window.location.origin + "/bin/fullertonProxy",
+					url: window.location.origin + "/bin/fullertonProxyCampusARF",
 					type: 'GET',
 					data: {
 						path: "getFinancialARFData",
@@ -14258,12 +14365,16 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 				if(this.value == "1") {
 
 					if(InitiatorName.value === null) {
+								
 
-						$.ajax({
-
+						/*$.ajax({
+							url: window.location.origin + "/bin/fullertonProxy",
 							type: 'GET',
-
-							url: "/bin/getLoggedInUserDetailsFromDB",
+							data: {
+								path: "getLoggedInUserDetailsFromDB",
+								
+							},
+					
 							dataType: 'json',
 							success: function(myresopnse) {
 								var userValue = myresopnse[0].FULL_NAME;
@@ -14274,7 +14385,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 							error: function(error) {
 								alert("error block=" + error);
 							}
-						});
+						});*/
 
 						// FacultyName.enabled = false;
 
@@ -14487,7 +14598,7 @@ campus_solution_access_request_form_campus_solution_access_request_form.generate
 
 			EmployeeEmail.value = "shreyas.manjunatha@thoughtfocus.com";
 			ManagerEmail.value = "shreyas.manjunatha@thoughtfocus.com";
-			//InitiatorEmail.value = "shreyas.manjunatha@thoughtfocus.com";
+			InitiatorEmail.value = "shreyas.manjunatha@thoughtfocus.com";
 
 
 			if(CWID.value !== null) {

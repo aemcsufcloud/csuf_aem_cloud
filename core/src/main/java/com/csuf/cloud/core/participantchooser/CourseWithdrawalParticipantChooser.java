@@ -34,16 +34,16 @@ public class CourseWithdrawalParticipantChooser implements ParticipantStepChoose
 
 			if (stage.equalsIgnoreCase("ToInstructor")) {
 				if (metaDataMap.containsKey("InstructorUserId")) {
-					//participant = metaDataMap.get("InstructorUserId").toString();
-					participant = "michellemurillo"; //Commment this and uncomment above line
+					participant = metaDataMap.get("InstructorUserId").toString();
+					//participant = "michellemurillo"; //Commment this and uncomment above line
 				} else {
 					logger.error("InstructorUserId value is not set in metadataMap");
 					participant = fallBackUserService.fallbackUserId();
 				}
 			} else if (stage.equalsIgnoreCase("ToChair")) {
 				if (metaDataMap.containsKey("ChairUserId")) {
-					//participant = metaDataMap.get("ChairUserId").toString();
-					participant = "nvadlakunta@fullerton.edu";//Commment this and uncomment above line
+					participant = metaDataMap.get("ChairUserId").toString();
+					//participant = "nvadlakunta@fullerton.edu";//Commment this and uncomment above line
 				} else {
 					logger.error("ChairUserId value is not set in metadataMap");
 					participant = fallBackUserService.fallbackUserId();
