@@ -11,6 +11,7 @@ var showReset1 = localStorage.getItem('showReset');
 var showSubmit1 = localStorage.getItem('showSubmit');
 var showSave1 = localStorage.getItem('showSave');
 var routesData1 = localStorage.getItem('routesData');
+alert("routesData1="+routesData1);
 
 var currentUserId1 = $(".cls-current-user-id").text();
 /*var lastActionTaken1 = localStorage.getItem('lastActionTaken');
@@ -41,6 +42,8 @@ if (showSave1 == "false") {
 }
 
 if (routesData1 != null && routesData1 != "undefined") {
+	alert("inside routesData1="+routesData1);
+
     routesData1 = routesData1.split(",");
     for (i in routesData1) {
         if (routesData1[i]) {
@@ -61,8 +64,8 @@ function showLeftSection(x) {
 }
 
 function isUploadTaskAttachmentAllowed() {
-	/*alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
-	alert(itemId);*/
+	alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
+	alert(itemId);
 $(".cls-task-attachments").css('display', 'none');
 var requestURL = '/bin/getInboxItemDetails?action=UPLOAD_TASK_ATTACHMENTS_ALLOWED&workItemId=' + encodeURIComponent(itemId);
 $.ajax({
@@ -85,8 +88,8 @@ $(".cls-task-attachments").css('display', 'none');
 }
 
 function getTaskAttachments() {
-	/*alert("TASK_ATTACHMENTS");
-    alert("workItemId : " + itemId);*/
+	alert("TASK_ATTACHMENTS");
+    alert("workItemId : " + itemId);
     $("#attachments-table").find("tr:gt(0)").remove();
     var requestURL = '/bin/getInboxItemDetails?action=TASK_ATTACHMENTS&workItemId=' + encodeURIComponent(itemId);
 	console.log("requestURL : " + requestURL);
@@ -122,6 +125,7 @@ function getTaskAttachments() {
 
 function getWorkflowHistory() {
     //console.log("workItemId : " + itemId);
+	alert("workItemId : " + itemId);
 	
     $("#tb-workflow-history").find("tr:gt(0)").remove();
     var requestURL = '/bin/manageTask?action=WORKITEM_HISTORY&workItemId=' + encodeURIComponent(itemId);
@@ -153,8 +157,8 @@ function getWorkflowHistory() {
 }
 
 function getLastActionAndCommentDetails() {
-	/*alert("PREVIOUS_STEP_DATA");
-	alert(itemId);*/
+	alert("PREVIOUS_STEP_DATA");
+	alert(itemId);
     var requestURL = '/bin/getInboxItemDetails?action=PREVIOUS_STEP_DATA&workItemId=' + encodeURIComponent(itemId);
     $.ajax({
         type: "GET",
