@@ -88,8 +88,8 @@ $(".cls-task-attachments").css('display', 'none');
 }
 
 function getTaskAttachments() {
-	alert("TASK_ATTACHMENTS");
-    alert("workItemId : " + itemId);
+	/*alert("TASK_ATTACHMENTS");
+    alert("workItemId : " + itemId);*/
     $("#attachments-table").find("tr:gt(0)").remove();
     var requestURL = '/bin/getInboxItemDetails?action=TASK_ATTACHMENTS&workItemId=' + encodeURIComponent(itemId);
 	console.log("requestURL : " + requestURL);
@@ -125,7 +125,7 @@ function getTaskAttachments() {
 
 function getWorkflowHistory() {
     //console.log("workItemId : " + itemId);
-	alert("workItemId : " + itemId);
+	//alert("workItemId : " + itemId);
 	
     $("#tb-workflow-history").find("tr:gt(0)").remove();
     var requestURL = '/bin/manageTask?action=WORKITEM_HISTORY&workItemId=' + encodeURIComponent(itemId);
@@ -157,8 +157,8 @@ function getWorkflowHistory() {
 }
 
 function getLastActionAndCommentDetails() {
-	alert("PREVIOUS_STEP_DATA");
-	alert(itemId);
+	/*alert("PREVIOUS_STEP_DATA");
+	alert(itemId);*/
     var requestURL = '/bin/getInboxItemDetails?action=PREVIOUS_STEP_DATA&workItemId=' + encodeURIComponent(itemId);
     $.ajax({
         type: "GET",
