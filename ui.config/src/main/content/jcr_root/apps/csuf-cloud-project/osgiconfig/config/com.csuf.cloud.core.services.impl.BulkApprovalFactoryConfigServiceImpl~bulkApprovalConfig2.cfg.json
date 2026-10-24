@@ -1,0 +1,17 @@
+{
+  "uniqueIdentifier": "bulkApprovalConfig2",
+  "taskTitle": "CISO Review",
+  "workflowModel": "Finance System Access Request Form",
+  "xmlFieldsToUpdate": [
+    "CISOCOB~checkbox",
+    "CISOSignature~textfield",
+    "CISODate~date",
+    "CISOComments~textarea"
+  ],
+  "actionToBeTaken": "Approve",
+  "getRoutes": [
+    "Save WF History In DB After CISO Review"
+  ],
+  "xmlElement": "FinancialARF",
+  "actionMetadataField": "actionTakenByCISO"
+}

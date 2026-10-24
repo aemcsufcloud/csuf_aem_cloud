@@ -88,6 +88,7 @@ public class ManageWorkflowInstancesServlet extends SlingSafeMethodsServlet {
 				out.print(
 						workflowService.getAllSubmissionData(req, workflowSession, workflowFilterVO, session, userId));
 			} else if (action.equalsIgnoreCase(ActionType.GET_WORKFLOW_INSTANCES_DATA_FOR_BULK_APPROVAL.name())) {
+				log.error("Missing");			
 				out.print(workflowService.getAllActiveWorkitemDataForBulkApproval(req, workflowSession, workflowFilterVO, session,
 						userId));
 			}

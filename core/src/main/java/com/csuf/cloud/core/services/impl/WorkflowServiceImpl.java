@@ -750,19 +750,32 @@ public class WorkflowServiceImpl implements WorkflowService {
 	public JsonArray getAllActiveWorkitemDataForBulkApproval(SlingHttpServletRequest request,
 			WorkflowSession workflowSession, WorkflowFilterVO workflowFilterVO, Session session, String userid)
 			throws WorkflowException, ParseException {
+		log.error("Missing getAllActiveWorkitemDataForBulkApproval");
 		JsonArray responseJson = new JsonArray();
 		JsonArray wfModelJson = new JsonArray();
 		Set<String> wfModels = new TreeSet<>();
 		String[] states = { "RUNNING" };
 		Workflow[] workflows = workflowSession.getWorkflows(states);
+		log.error("Missing workflows="+workflows);
+
 		String[] workflowArray = wfConfig.groupWFList();
+		log.error("Missing workflowArray="+workflowArray.length);
+
 		ResourceResolver resolver = request.getResourceResolver();
-		log.debug("userid=" + userid);
+		log.debug("userid resolver=" + resolver);
 		try {
 			for (Workflow wfInstance : workflows) {
+				log.debug("missing wfInstance=" + wfInstance);
+				
 				if (null != wfInstance && StringUtils.isNotBlank(wfInstance.getId()) && !userid.equals("anonymous")) {
+					log.debug("missing wfInstance inside =" + wfInstance);
+
 					String title = wfInstance.getWorkflowData().getMetaDataMap().get("workflowTitle", String.class);
+					log.debug("missing title=" + title);
+
 					List<WorkItem> workitems = wfInstance.getWorkItems();
+					log.debug("missing workitems=" + workitems);
+
 					for (WorkItem wItem : workitems) {
 						log.info("wItemid=" + wItem.getId());
 						log.info("wItem type=" + wItem.getItemSubType());
