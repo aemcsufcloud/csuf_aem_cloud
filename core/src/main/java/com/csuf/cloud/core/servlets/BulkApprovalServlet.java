@@ -109,16 +109,21 @@ public class BulkApprovalServlet extends SlingAllMethodsServlet {
 		Session session = resolver.adaptTo(Session.class);
 		WorkflowSession wfSession = resolver.adaptTo(WorkflowSession.class);
 		if (StringUtils.isNotBlank(actionType) && actionType.equalsIgnoreCase(ActionType.COMPLETE_TASK.name())) {
-
+			log.info("Pushpa actionType= " + actionType);
 			try {
 				WorkflowVO workflowVO = new WorkflowVO();
 				workflowVO.setGraniteWorkflowSession(wfSession);
 				workflowVO.setAdminSession(session);
 				for (int i = 0; i < witemArray.length; i++) {
-					log.debug("witemArray[i] = " + witemArray[i]);
+					log.info("Pushpa witemArray[i] = " + witemArray[i]);
 					WorkItem currentWorkItem = wfSession.getWorkItem(witemArray[i]);
+					log.info("Pushpa currentWorkItem = " + currentWorkItem);
+					
 					configMap.forEach((bulkApprovalConfigIdentifier, bulkApprovalConfig) -> {
 						if (StringUtils.isNotBlank(bulkApprovalConfigIdentifier)) {
+							
+							log.info("Pushpa inside If condition");
+							
 							String titleFromConfig = bulkApprovalConfig.workflowModel();
 							String titleFromMetadata = currentWorkItem.getWorkflow().getWorkflowModel().getTitle();
 							String wItemTitleFromConfig = bulkApprovalConfig.taskTitle();
@@ -139,13 +144,14 @@ public class BulkApprovalServlet extends SlingAllMethodsServlet {
 									log.error(Arrays.toString(e.getStackTrace()));
 								}
 							}
-							log.debug("titleFromConfig.equals(titleFromMetadata) = "
+							log.info("titleFromConfig.equals(titleFromMetadata) = "
 									+ titleFromConfig.equals(titleFromMetadata));
-							log.debug("wItemTitleFromConfig.equals(wItemTitleFromMetadata) = "
+							log.info("wItemTitleFromConfig.equals(wItemTitleFromMetadata) = "
 									+ wItemTitleFromConfig.equals(wItemTitleFromMetadata));
 
 							if (titleFromConfig.equals(titleFromMetadata)
 									&& wItemTitleFromConfig.equals(wItemTitleFromMetadata)) {
+								log.info("Inside Title");
 								workflowVO.setWorkItem(currentWorkItem);
 								workflowVO.setRoutes(bulkApprovalConfig.getRoutes());
 								workflowVO.setXmlFields(dataFields);
@@ -201,13 +207,22 @@ public class BulkApprovalServlet extends SlingAllMethodsServlet {
 		try {
 			WorkflowSession graniteWorkflowSession = workflowVO.getGraniteWorkflowSession();
 			WorkItem item = workflowVO.getWorkItem();
+			
+			log.info("School Workitem begin time inside completeDeadlinedTask method : {}", item.getProgressBeginTime());
+
 
 			if (log.isDebugEnabled())
 				log.debug("Workitem begin time inside completeDeadlinedTask method : {}", item.getProgressBeginTime());
 			List<Route> routes = graniteWorkflowSession.getRoutes(item, false);
+			
+			log.info("School routes :::: {}", routes);
+			
 			List<String> configuredRoutes = workflowVO.getRoutes();
 			if (null != routes && !routes.isEmpty()) {
 				for (Route route : routes) {
+					log.info("School route :::: {}", route);
+
+					
 					if (log.isDebugEnabled())
 						log.debug("Available route for the workitem :::: {}", route.getName());
 					for (String configuredRoute : configuredRoutes) {
@@ -234,7 +249,7 @@ public class BulkApprovalServlet extends SlingAllMethodsServlet {
 									Iterator<?> keys = dataFieldsArray.getJSONObject(j).keys();
 									String key = (String) keys.next();
 									if (null != dataFieldsArray.getJSONObject(j).get(key) && null != key) {
-										log.debug("payload node length = {}",
+										log.info("payload node length = {}",
 												XMLUtils.getElementLength(xmlElement, key));
 										if (XMLUtils.getElementLength(xmlElement, key) > 0) {
 											XMLUtils.removeChildNode(doc, xmlElement, key);
@@ -260,9 +275,8 @@ public class BulkApprovalServlet extends SlingAllMethodsServlet {
 								MetaDataMap map = item.getWorkflow().getWorkflowData().getMetaDataMap();
 								map.put(workflowVO.getMetadataField(), workflowVO.getActionToBeTaken());
 								graniteWorkflowSession.complete(item, route);
-								log.info("workitem :::::: ".concat(item.getId())
+								log.info("school workitem :::::: ".concat(item.getId())
 										.concat(" ::::: successfully advanced to next step in the workflow"));
-
 								return true;
 							}
 						}
