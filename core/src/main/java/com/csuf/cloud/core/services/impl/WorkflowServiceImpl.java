@@ -797,11 +797,16 @@ public class WorkflowServiceImpl implements WorkflowService {
 									if (StringUtils.containsIgnoreCase(title, bulkApprovalConfig.workflowModel())) {
 										String workItemTitle = ArgumentParser.getWorkitemTitle(wItem);
 
-										if (userid.equals("admin")
-												&& workItemTitle.equals(bulkApprovalConfig.taskTitle())) {
+										//if (userid.equals("admin") && workItemTitle.equals(bulkApprovalConfig.taskTitle())) {
+											if (workItemTitle.equals(bulkApprovalConfig.taskTitle())) {
+												log.info("Anagha Inside the workitem");
+												
 											MetaDataMap metadataMap = wfInstance.getWorkflowData().getMetaDataMap();
 											String specialReviewFlag = metadataMap.get("SpecialReview", String.class);
 											if(specialReviewFlag == null || !specialReviewFlag.equals("1")) {
+												
+											log.info("Anagha spl flag");
+												
 											wfModels.add(title);
 											String payload = null;
 											String payloadLink = null;
@@ -810,6 +815,8 @@ public class WorkflowServiceImpl implements WorkflowService {
 											String initiator = wfInstance.getInitiator();
 											if (data.getMetaDataMap().containsKey("userId")) {
 												String launcherUser = data.getMetaDataMap().get("userId", String.class);
+												log.info("Anagha here1");
+												
 												if (initiator != null && !initiator.equals(launcherUser)) {
 													initiator += " (" + launcherUser + ")";
 												}
@@ -819,14 +826,20 @@ public class WorkflowServiceImpl implements WorkflowService {
 															|| data.getPayloadType().equals("URL"))) {
 												// use the payload as specified in the workflow instance
 												payload = (String) data.getPayload();
+												
+												
 											} else {
 												if (data.getPayload() != null) {
 													payload = data.getPayload().toString();
 												}
 											}
+											
+											
 											String taskDescription = null;
 											String fullName = null;
 											if (StringUtils.isNotBlank(payload)) {
+												log.info("Anagha here2");
+												
 												try {
 													InputStream is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver,
 															payload, "Data.xml");
@@ -841,11 +854,16 @@ public class WorkflowServiceImpl implements WorkflowService {
 												}
 											}
 											fullName = getName(workflowArray, taskDescription, title);
+											log.info("Anagha fullName="+fullName);
+											
 											String startTimeString = StringUtils.EMPTY;
 											JsonObject stepStartTimeJson = new JsonObject();
 											try {
 												if (StringUtils.containsIgnoreCase(initiator,
 														workflowFilterVO.getInitiator())) {
+													
+													log.info("Anagha California");
+													
 													Date startTime = wfInstance.getTimeStarted();
 													Date workflowFilterStartTime = new SimpleDateFormat(
 															START_DATE_FORMAT).parse(workflowFilterVO.getStartTime());
