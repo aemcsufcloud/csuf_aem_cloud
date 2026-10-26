@@ -756,7 +756,7 @@ public class WorkflowServiceImpl implements WorkflowService {
 		Set<String> wfModels = new TreeSet<>();
 		String[] states = { "RUNNING" };
 		Workflow[] workflows = workflowSession.getWorkflows(states);
-		log.error("Missing workflows="+workflows);
+		log.error("Pushpa workflows="+workflows.length);
 
 		String[] workflowArray = wfConfig.groupWFList();
 		log.error("Missing workflowArray="+workflowArray.length);
@@ -779,9 +779,18 @@ public class WorkflowServiceImpl implements WorkflowService {
 					for (WorkItem wItem : workitems) {
 						log.info("wItemid=" + wItem.getId());
 						log.info("wItem type=" + wItem.getItemSubType());
+						log.info("AnaghaLittleFlower1=" + wItem.getItemSubType());
+						log.info("AnaghaLittleFlower2=" + wItem.getItemSubType().equalsIgnoreCase(ASSIGN_TASK_STEP));
+						log.info("AnaghaLittleFlower3 configMap: {}", configMap);
+						
+						
 							if (null != wItem.getItemSubType()
 								&& wItem.getItemSubType().equalsIgnoreCase(ASSIGN_TASK_STEP)) {
 							configMap.forEach((bulkApprovalConfigIdentifier, bulkApprovalConfig) -> {
+								
+								log.info("bulkApprovalConfigIdentifier: {}", bulkApprovalConfigIdentifier);
+						        log.info("bulkApprovalConfig: {}", bulkApprovalConfig);
+						        
 								if (StringUtils.isNotBlank(bulkApprovalConfigIdentifier)) {
 									// Map<String, Object> jobProperties = new HashMap<String, Object>();
 									log.info("Matching the criteria=" + (userid.equals("admin")));
