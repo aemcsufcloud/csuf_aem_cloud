@@ -34,8 +34,9 @@ public class DelegateWorkItemOnProcessingInstanceServlet extends SlingSafeMethod
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-		try {			
+		try {	
 			String url = request.getParameter("url");
+			log.error("Bank DoGet url="+url);
 			out.print(taskService.getTaskDetailsFromProcessingInstance(url));
 		} catch (Exception e) {
 			log.error(Arrays.toString(e.getStackTrace()));

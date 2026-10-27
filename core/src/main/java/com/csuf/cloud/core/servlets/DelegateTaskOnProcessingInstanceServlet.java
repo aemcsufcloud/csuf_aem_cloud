@@ -86,6 +86,7 @@ public class DelegateTaskOnProcessingInstanceServlet extends SlingAllMethodsServ
 			try (CloseableHttpClient client = HttpClients.createDefault();) {
 				httpPost = new HttpPost(processingInstanceConfigService.processingUrl().concat(DELEGATE_TASK_URL));
 				String loginTokenJson = inboxService.getResponseFromProcessingInstance(CSRF_TOKEN_URL);
+				log.error("bank loginTokenJson="+loginTokenJson);
 
 				if (StringUtils.isNotBlank(loginTokenJson)) {
 					JsonParser parser = new JsonParser();
@@ -96,6 +97,10 @@ public class DelegateTaskOnProcessingInstanceServlet extends SlingAllMethodsServ
 
 				String auth = new StringBuffer(processingInstanceConfigService.userName()).append(":")
 						.append(processingInstanceConfigService.userSecurity()).toString();
+				
+				log.error("bank auth delegate ="+auth);
+
+				
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII));
 				String authHeader = "Basic " + new String(encodedAuth);
 				httpPost.addHeader("Authorization", authHeader);

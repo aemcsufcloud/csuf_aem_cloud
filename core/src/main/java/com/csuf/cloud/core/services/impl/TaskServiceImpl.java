@@ -1038,12 +1038,20 @@ public String getTaskDataOld(String workItemId) {
 			get = new HttpGet(processingConfig.processingUrl().concat(url));
 			String auth = new StringBuffer(processingConfig.userName()).append(":")
 					.append(processingConfig.userSecurity()).toString();
+			log.error("Bank auth="+auth);
 			
 			byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII));
 			String authHeader = "Basic " + new String(encodedAuth);
+			
+			log.error("Bank authHeader="+authHeader);
+			
 			get.setHeader("AUTHORIZATION", authHeader);
 			response = httpclient.execute(get);
+			log.error("Bank response="+response.toString());
+			
 			if (null != response && response.getStatusLine().getStatusCode() == 200) {
+				log.error("Bank Inside response="+response.toString());
+
 				return EntityUtils.toString(response.getEntity());
 			}
 		} catch (IOException e) {

@@ -83,9 +83,14 @@ public class DelegateWorkitemsServlet extends SlingAllMethodsServlet {
 		if (params.containsKey("wId")) {
 			wItem = params.get("wId")[0].toString();
 		}
+		log.error("bank wItem="+wItem);
+
+		
 		if (params.containsKey("user")) {
 			delegatee = params.get("user")[0].toString();
 		}
+		log.error("bank delegatee="+delegatee);
+		
 		if (params.containsKey("email")) {
 			email = params.get("email")[0].toString();
 		}
