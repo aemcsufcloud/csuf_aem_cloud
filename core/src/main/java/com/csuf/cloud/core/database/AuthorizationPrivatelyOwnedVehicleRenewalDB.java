@@ -8,21 +8,23 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.lang.String;
-import org.w3c.dom.Element;
-import java.lang.String;
-import java.sql.Connection;
+
 import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import com.adobe.granite.workflow.WorkflowException;
@@ -31,13 +33,13 @@ import com.adobe.granite.workflow.exec.Route;
 import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
-import com.google.gson.JsonArray;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
+import com.google.gson.JsonArray;
 
 @Component(property = { "service.description=Authorization Privately Owned Vehicle Renewal DB",
 		"service.vendor=ThoughtFocus", "process.label=AuthorizationPrivatelyOwnedVehicleRenewalDB" })
@@ -64,9 +66,10 @@ public class AuthorizationPrivatelyOwnedVehicleRenewalDB implements WorkflowProc
 		String caseid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -171,7 +174,7 @@ public class AuthorizationPrivatelyOwnedVehicleRenewalDB implements WorkflowProc
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseid, "CaseId", workflowInstanceID, tableName);
@@ -182,7 +185,30 @@ public class AuthorizationPrivatelyOwnedVehicleRenewalDB implements WorkflowProc
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
-				}
+				}*/
+				
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", caseid);
+				json.put("UNIQUE_FIELD_COLUMN", "CaseId");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "DRIVER_RENEWAL_SIGN_DATE,APPROVING_RENEWAL_SIGN_DATE");
+
+				log.error("Testing: =" + json.toString());
+
+				String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());

@@ -13,6 +13,11 @@ import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,7 +40,6 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=AT Guidelines DB Save", "service.vendor=ThoughtFocus",
@@ -59,12 +63,13 @@ public class ATGuidelinesDB implements WorkflowProcess {
 		String detailsTableName = "AEM_AT_GUIDE_LAUNCH_DETAILS";
 		String dataTableName = "AEM_AT_GUIDELINES_LAUNCH_DATA";
 		String formName = "Faculty Assigned Time Agreement [AT Guidelines]";
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		String assignee = "";
 		String uid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -189,7 +194,7 @@ public class ATGuidelinesDB implements WorkflowProcess {
 								dataMap.put("LAST_STEP", saveHistoryBackRoute);
 								if (dataMap.get("LAST_STEP").equals("Dean Review")) {
 									dataMap.put("WORKFLOW_STATUS", "COMPLETED");
-									saveATInitialData(conn, atData, uid, dataTableName, formName);
+									saveATInitialData(workflowInstanceID, atData, uid, dataTableName, formName);
 								} else {
 									dataMap.put("WORKFLOW_STATUS", "RUNNING");
 								}
@@ -203,7 +208,7 @@ public class ATGuidelinesDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, uid, "UNIQUE_ID", workflowInstanceID,
@@ -215,7 +220,30 @@ public class ATGuidelinesDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, detailsTableName, formName);
 					}
-				}
+				}*/
+
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", detailsTableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", uid);
+				json.put("UNIQUE_FIELD_COLUMN", "UNIQUE_ID");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "INITIATOR_SIGN_DATE,CHAIR_SIGN_DATE,DEAN_SIGN_DATE");
+
+				log.error("Testing: =" + json.toString());
+
+				String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -241,7 +269,9 @@ public class ATGuidelinesDB implements WorkflowProcess {
 
 	}
 
-	public void saveATInitialData(Connection conn, String atData, String uid, String tableName, String formName) {
+	public void saveATInitialData(String workflowInstanceID, String atData, String uid, String tableName,
+			String formName) {
+		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		try {
 			LinkedHashMap<String, Object> dataMapInfo = null;
 			JSONArray jsonArray = new JSONArray(atData);
@@ -263,15 +293,26 @@ public class ATGuidelinesDB implements WorkflowProcess {
 				dataMapInfo.put("DEPT_CHAIR_EMAIL", objects.get("DEPT_CHAIR_EMAIL").toString());
 				dataMapInfo.put("UNIQUE_ID", uid);
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					log.error("Connection Successfull");
-					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
-				} else {
-					log.error("Connection Unsuccessfull");
-				}
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", "");
+				json.put("UNIQUE_FIELD_COLUMN", "");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+				json.put("DATA_MAP", dataMapInfo);
+				json.put("DATE_FIELDS", "");
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
 			}
-		} catch (JSONException e) {
+		} catch (JSONException | IOException e) {
 			e.printStackTrace();
 		}
 	}
