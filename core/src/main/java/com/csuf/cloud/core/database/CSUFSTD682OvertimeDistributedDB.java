@@ -185,6 +185,9 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 
 							if (nNode.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
 								org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
+								
+								log.error("Pushpa Sparient");
+								
 
 								emplId = eElement.getElementsByTagName("empl_Id").item(0).getTextContent();
 
@@ -215,8 +218,9 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 										.getTextContent();
 								date1 = eElement.getElementsByTagName("date1").item(0).getTextContent();
 								
-								
-								/*reasonForExtraHours = eElement.getElementsByTagName("reason_for_extra_hours").item(0)
+								log.error("Pushpa Sparient 2");
+
+								reasonForExtraHours = eElement.getElementsByTagName("reason_for_extra_hours").item(0)
 										.getTextContent();
 								totalHoursAuthorized1 = eElement.getElementsByTagName("total_hours_authorized1").item(0)
 										.getTextContent();
@@ -238,6 +242,10 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 										.getTextContent();
 								total_hours_authorized = eElement.getElementsByTagName("total_hours_authorized").item(0)
 										.getTextContent();
+								
+								log.error("Pushpa Sparient 3");
+
+								
 								compensationTimeOff1 = eElement.getElementsByTagName("compensation_timeOff1").item(0)
 										.getTextContent();
 								compensationTimeOff2 = eElement.getElementsByTagName("compensation_timeOff2").item(0)
@@ -275,9 +283,12 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 								extraHoursWorked9 = eElement.getElementsByTagName("extra_hours_worked9").item(0)
 										.getTextContent();
 								totalExtraHoursWorked = eElement.getElementsByTagName("total_extra_hours_worked")
-										.item(0).getTextContent();*/
+										.item(0).getTextContent();
+								
+								log.error("Pushpa Sparient 4");
 
-								/*to1 = eElement.getElementsByTagName("to1").item(0).getTextContent();
+
+								to1 = eElement.getElementsByTagName("to1").item(0).getTextContent();
 								to2 = eElement.getElementsByTagName("to2").item(0).getTextContent();
 								to3 = eElement.getElementsByTagName("to3").item(0).getTextContent();
 								to4 = eElement.getElementsByTagName("to4").item(0).getTextContent();
@@ -313,6 +324,10 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 								studentComment = eElement.getElementsByTagName("student_comment").item(0)
 										.getTextContent();
 
+								log.error("Pushpa Here");
+								log.error("Pushpa Sparient 5");
+
+								
 								timeKeeperApproval = eElement.getElementsByTagName("time_keeper_approval").item(0)
 										.getTextContent();
 								timeKeeperSignature = eElement.getElementsByTagName("time_keeper_signature").item(0)
@@ -328,8 +343,11 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 										.getTextContent();
 								managerDate = eElement.getElementsByTagName("manager_date").item(0).getTextContent();
 								managerComment = eElement.getElementsByTagName("manager_comment").item(0)
-										.getTextContent();*/
-								dataMapTest = new LinkedHashMap<String, Object>();
+										.getTextContent();
+								
+								log.error("Pushpa Sparient 6");
+								
+								/*dataMapTest = new LinkedHashMap<String, Object>();
 								
 								dataMapTest.put("EMPL_ID", emplId);
 								dataMapTest.put("EMPL_RCD", emplRcd);
@@ -350,9 +368,9 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 									Date date1New = Date.valueOf(date1);
 									date1Obj = date1New;
 								}
-								dataMapTest.put("DATE1", date1Obj);
+								dataMapTest.put("DATE1", date1Obj);*/
 								
-								/*dataMapFormInfo = new LinkedHashMap<String, Object>();
+								dataMapFormInfo = new LinkedHashMap<String, Object>();
 								dataMapFormInfo.put("CASE_ID", "");
 								dataMapFormInfo.put("EMPL_ID", emplId);
 								dataMapFormInfo.put("EMPL_RCD", emplRcd);
@@ -367,9 +385,9 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 								dataMapFormInfo.put("PAY_PRD_YEAR", payPeriodYear);
 								dataMapFormInfo.put("RESN_EXTRA_HRS", reasonForExtraHours);
 								
-								dataMapTest.put("EMPL_ID", "100030476");
-								dataMapTest.put("EMPL_RCD", "1");
-								dataMapTest.put("CHRS_ID", "899752547");
+								/*dataMapTest.put("EMPL_ID", emplId);
+								dataMapTest.put("EMPL_RCD", emplRcd);
+								dataMapTest.put("CHRS_ID", chrsId);*/
 								
 								dataMapFormInfo.put("TOTAL_HRS_AUTH1", totalHoursAuthorized1);
 								dataMapFormInfo.put("TOTAL_HRS_AUTH2", totalHoursAuthorized2);
@@ -514,7 +532,7 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 								}
 								dataMapFormInfo.put("MNGR_DATE", managerDateObj);
 								dataMapFormInfo.put("MNGR_COMNT", managerComment);
-								dataMapFormInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);*/
+								dataMapFormInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 								
 							//	dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);
 								/*String resultData = dbUtil.getSPEEvalData(conn, emplId, "EMPL_ID", workflowInstanceID, tableName);
@@ -541,8 +559,12 @@ public class CSUFSTD682OvertimeDistributedDB implements WorkflowProcess {
 									json.put("UNIQUE_FIELD", emplId);
 									json.put("UNIQUE_FIELD_COLUMN","EMPL_ID");
 									json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
-									json.put("DATA_MAP", dataMapTest);
-									json.put("DATE_FIELDS", "DATE1");
+									//json.put("DATA_MAP", dataMapTest);
+									json.put("DATA_MAP", dataMapFormInfo);
+									json.put("DATE_FIELDS", "DATE1,DATE2,DATE3,DATE4,DATE5,DATE6,DATE7,DATE8,DATE9,STDNT_DATE,TIME_KEPR_DATE,MNGR_DATE");
+									
+									log.error("Pushpa: =" +json.toString());
+									
 									//On-Prem
 									String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 
