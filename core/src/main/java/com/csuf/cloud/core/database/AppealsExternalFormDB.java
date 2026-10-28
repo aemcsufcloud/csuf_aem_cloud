@@ -7,31 +7,30 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
-import java.util.List;
-import java.lang.String;
-import org.w3c.dom.Element;
-import java.lang.String;
-import java.sql.Connection;
+
 import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.workflow.exec.Route;
 import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
-import com.google.gson.JsonArray;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
@@ -59,6 +58,7 @@ public class AppealsExternalFormDB implements WorkflowProcess {
 		Connection conn = null;
 		String tableName = "AEM_APPEALS_EXTERNAL_FORM";
 		String formName = "Admissions Appeal External Form";
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		String caseId = "";
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
@@ -202,7 +202,7 @@ public class AppealsExternalFormDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, tableName);
@@ -213,7 +213,32 @@ public class AppealsExternalFormDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
-				}
+				}*/
+				
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", caseId);
+				json.put("UNIQUE_FIELD_COLUMN", "CASEID");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "STUDENT_SIGNDATE");
+
+				log.error("Testing: =" + json.toString());
+
+				String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
+
+				
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
