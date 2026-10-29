@@ -1,0 +1,251 @@
+package com.csuf.cloud.core.database;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import javax.jcr.Node;
+import javax.jcr.PathNotFoundException;
+import javax.jcr.RepositoryException;
+import javax.jcr.ValueFormatException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import com.adobe.granite.workflow.WorkflowException;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.exec.WorkflowProcess;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.csuf.cloud.core.services.GlobalConfigCSUFService;
+import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.DatabaseUtils;
+
+@Component(property = { Constants.SERVICE_DESCRIPTION + "=Vision LIFE-LTD Enrollment Save in DB",
+		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=VisionLifeLtdEnrollmentSave" })
+public class CSUFVisionLifeLtdEnrollmentDB implements WorkflowProcess {
+
+	private static final Logger log = LoggerFactory.getLogger(CSUFVisionLifeLtdEnrollmentDB.class);
+
+	@Reference
+	private GlobalConfigCSUFService globalConfigFilenetService;
+
+	@Reference
+	private JDBCConnectionHelperService jdbcConnectionService;
+
+	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
+			throws WorkflowException {
+		Connection conn = null;
+
+		String tableName = "AEM_VISION_LIFE_LTD_ENROLLMENT";
+		String formName = "Vision Life LTD Enrollment";
+
+		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
+		String payloadPath = workItem.getWorkflowData().getPayload().toString();
+		Document doc = null;
+		InputStream is = null;
+
+		String ssn = "";
+		String firstName = "";
+		String middleName = "";
+		String lastName = "";
+		String cbid = "";
+		String agencyCode = "";
+		String unitCode = "";
+		String classCode = "";
+		String serialCode = "";
+		String new1Check = "";
+		String delete1Check = "";
+		String month1 = "";
+		String year1 = "";
+		String new2Check = "";
+		String delete2Check = "";
+		String month2 = "";
+		String year2 = "";
+		String lifeCode = "";
+		String new3Check = "";
+		String delete3Check = "";
+		String month3 = "";
+		String year3 = "";
+		String ltdCode = "";
+		String new4Check = "";
+		String delete4Check = "";
+		String month4 = "";
+		String year4 = "";
+		String remarks = "";
+		String formCompletedBy = "";
+		String authorizedSign = "";
+		String campusName = "";
+		String telephoneNumber = "";
+		String dateInitiated = "";
+		String workflowInstance = "";
+		LinkedHashMap<String, Object> dataMap = null;
+		Resource xmlNode = resolver.getResource(payloadPath);
+		Iterator<Resource> xmlFiles = xmlNode.listChildren();
+		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		DatabaseUtils dbUtil = new DatabaseUtils();
+		if (conn != null) {
+			while (xmlFiles.hasNext()) {
+				Resource attachmentXml = xmlFiles.next();
+				workflowInstance = workItem.getWorkflow().getId();
+				String filePath = attachmentXml.getPath();
+				if (filePath.contains("Data.xml")) {
+					filePath = attachmentXml.getPath().concat("/jcr:content");
+					
+					Node subNode = resolver.getResource(filePath).adaptTo(Node.class);
+					try {
+						is = subNode.getProperty("jcr:data").getBinary().getStream();
+					} catch (ValueFormatException e2) {
+						log.error("ValueFormatException from CSUFVisionLifeLtdEnrollmentDB="
+								+ Arrays.toString(e2.getStackTrace()));
+					} catch (PathNotFoundException e2) {
+						log.error("PathNotFoundException from CSUFVisionLifeLtdEnrollmentDB="
+								+ Arrays.toString(e2.getStackTrace()));
+					} catch (RepositoryException e2) {
+						log.error("RepositoryException from CSUFVisionLifeLtdEnrollmentDB="
+								+ Arrays.toString(e2.getStackTrace()));
+					}
+
+					try {
+						DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+						DocumentBuilder dBuilder = null;
+						try {
+							dBuilder = dbFactory.newDocumentBuilder();
+						} catch (ParserConfigurationException e1) {
+							log.error("ParserConfigurationException from CSUFVisionLifeLtdEnrollmentDB="
+									+ Arrays.toString(e1.getStackTrace()));
+						}
+						try {
+							doc = dBuilder.parse(is);
+						} catch (IOException e1) {
+							log.error("IOException from CSUFVisionLifeLtdEnrollmentDB="
+									+ Arrays.toString(e1.getStackTrace()));
+						}
+						org.w3c.dom.NodeList nList = doc.getElementsByTagName("afBoundData");
+						for (int temp = 0; temp < nList.getLength(); temp++) {
+							org.w3c.dom.Node nNode = nList.item(temp);
+
+							if (nNode.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
+
+								org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
+								ssn = eElement.getElementsByTagName("ssn").item(0).getTextContent();
+								firstName = eElement.getElementsByTagName("first_Name").item(0).getTextContent();
+								middleName = eElement.getElementsByTagName("middle_Name").item(0).getTextContent();
+								lastName = eElement.getElementsByTagName("last_Name").item(0).getTextContent();
+								cbid = eElement.getElementsByTagName("cbid").item(0).getTextContent();
+								agencyCode = eElement.getElementsByTagName("agency").item(0).getTextContent();
+								unitCode = eElement.getElementsByTagName("unit").item(0).getTextContent();
+								classCode = eElement.getElementsByTagName("classCode").item(0).getTextContent();
+								serialCode = eElement.getElementsByTagName("serial").item(0).getTextContent();
+								new1Check = eElement.getElementsByTagName("new1").item(0).getTextContent();
+								delete1Check = eElement.getElementsByTagName("delete1").item(0).getTextContent();
+								month1 = eElement.getElementsByTagName("month1").item(0).getTextContent();
+								year1 = eElement.getElementsByTagName("year1").item(0).getTextContent();
+								new2Check = eElement.getElementsByTagName("new2").item(0).getTextContent();
+								delete2Check = eElement.getElementsByTagName("delete2").item(0).getTextContent();
+								month2 = eElement.getElementsByTagName("month2").item(0).getTextContent();
+								year2 = eElement.getElementsByTagName("year2").item(0).getTextContent();
+								lifeCode = eElement.getElementsByTagName("lifeCode").item(0).getTextContent();
+								new3Check = eElement.getElementsByTagName("new3").item(0).getTextContent();
+								delete3Check = eElement.getElementsByTagName("delete3").item(0).getTextContent();
+								month3 = eElement.getElementsByTagName("month3").item(0).getTextContent();
+								year3 = eElement.getElementsByTagName("year3").item(0).getTextContent();
+								ltdCode = eElement.getElementsByTagName("ltdCode").item(0).getTextContent();
+								new4Check = eElement.getElementsByTagName("new4").item(0).getTextContent();
+								delete4Check = eElement.getElementsByTagName("delete4").item(0).getTextContent();
+								month4 = eElement.getElementsByTagName("month4").item(0).getTextContent();
+								year4 = eElement.getElementsByTagName("year4").item(0).getTextContent();
+								remarks = eElement.getElementsByTagName("remarks").item(0).getTextContent();
+								formCompletedBy = eElement.getElementsByTagName("form_Completed_By").item(0)
+										.getTextContent();
+								authorizedSign = eElement.getElementsByTagName("authorized_Sign").item(0)
+										.getTextContent();
+								campusName = eElement.getElementsByTagName("campus_Name").item(0).getTextContent();
+								telephoneNumber = eElement.getElementsByTagName("telephone_Number").item(0)
+										.getTextContent();
+								dateInitiated = eElement.getElementsByTagName("date_Initiated").item(0)
+										.getTextContent();
+							}
+						}
+
+						dataMap = new LinkedHashMap<String, Object>();
+						dataMap.put("SSN", ssn);
+						dataMap.put("FIRST_NAME", firstName);
+						dataMap.put("LAST_NAME", lastName);
+						dataMap.put("MIDDLE_NAME", middleName);
+						dataMap.put("CBID", cbid);
+						dataMap.put("AGENCY", agencyCode);
+						dataMap.put("UNIT", unitCode);
+						dataMap.put("CLASSCODE", classCode);
+						dataMap.put("SERIAL", serialCode);
+						dataMap.put("NEW1", new1Check);
+						dataMap.put("DELETE1", delete1Check);
+						dataMap.put("MONTH1", month1);
+						dataMap.put("YEAR1", year1);
+						dataMap.put("NEW2", new2Check);
+						dataMap.put("DELETE2", delete2Check);
+						dataMap.put("MONTH2", month2);
+						dataMap.put("YEAR2", year2);
+						dataMap.put("NEW3", new3Check);
+						dataMap.put("DELETE3", delete3Check);
+						dataMap.put("MONTH3", month3);
+						dataMap.put("YEAR3", year3);
+						dataMap.put("NEW4", new4Check);
+						dataMap.put("DELETE4", delete4Check);
+						dataMap.put("MONTH4", month4);
+						dataMap.put("YEAR4", year4);
+						dataMap.put("LIFECODE", lifeCode);
+						dataMap.put("LTDCODE", ltdCode);
+						dataMap.put("REMARKS", remarks);
+						dataMap.put("FORM_COMPLETED_BY", formCompletedBy);
+						dataMap.put("AUTHORIZED_SIGN", authorizedSign);
+						dataMap.put("CAMPUS_NAME", campusName);
+						dataMap.put("TELEPHONE_NUMBER", telephoneNumber);
+						Object dateInitiatedObj = null;
+						if (dateInitiated != null && dateInitiated != "") {
+							Date dateInitiatedNew = Date.valueOf(dateInitiated);
+							dateInitiatedObj = dateInitiatedNew;
+						}
+						dataMap.put("DATE_INITIATED", dateInitiatedObj);
+						dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstance);
+
+						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+
+					} catch (SAXException e) {
+						log.error("SAXException from CSUFVisionLifeLtdEnrollmentDB="
+								+ Arrays.toString(e.getStackTrace()));
+					} finally {
+						if (null != is)
+							try {
+								is.close();
+							} catch (IOException e) {
+								log.error("IOException from CSUFVisionLifeLtdEnrollmentDB="
+										+ Arrays.toString(e.getStackTrace()));
+							}
+						if (conn != null) {
+							try {
+								conn.close();
+							} catch (SQLException e) {
+								log.error("SQLException from CSUFVisionLifeLtdEnrollmentDB="
+										+ Arrays.toString(e.getStackTrace()));
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
