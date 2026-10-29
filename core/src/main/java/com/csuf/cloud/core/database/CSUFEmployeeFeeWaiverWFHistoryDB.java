@@ -1,0 +1,312 @@
+package com.csuf.cloud.core.database;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.PathNotFoundException;
+import javax.jcr.RepositoryException;
+import javax.jcr.ValueFormatException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
+
+import com.adobe.granite.workflow.WorkflowException;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.exec.WorkflowProcess;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.csuf.cloud.core.services.GlobalConfigCSUFService;
+import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.XMLUtils;
+
+@Component(property = { Constants.SERVICE_DESCRIPTION + "=Save Employee Fee Waiver History",
+		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=Employee Fee Waiver WF History" })
+public class CSUFEmployeeFeeWaiverWFHistoryDB implements WorkflowProcess {
+
+	private static final Logger log = LoggerFactory.getLogger(CSUFEmployeeFeeWaiverWFHistoryDB.class);
+
+	@Reference
+	private GlobalConfigCSUFService globalConfigCSUFService;
+
+	@Reference
+	private JDBCConnectionHelperService jdbcConnectionService;
+
+	@Override
+	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
+			throws WorkflowException {
+		Connection conn = null;
+
+		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
+		String payloadPath = workItem.getWorkflowData().getPayload().toString();
+
+		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+
+		String paramsValue = ((String) processArguments.get("PROCESS_ARGS", "string")).toString();
+		LinkedHashMap<String, Object> dataMap = null;
+
+		Document doc = null;
+		InputStream is = null;
+
+		String workflowModelName = "";
+		String cwid = null;
+		String stepResponse = "";
+		String stepType = "";
+		String stepName = "";
+		String assignee = "";
+		String caseId = "";
+		String comments = "";
+		Timestamp stepCompleteTime = null;
+		Timestamp wfCompleteTime = null;
+
+		Resource xmlNode = resolver.getResource(payloadPath);
+		Iterator<Resource> xmlFiles = xmlNode.listChildren();
+
+		String wfInstanceID = workItem.getWorkflow().getId();
+		workflowModelName = workItem.getWorkflow().getWorkflowModel().getId();
+		String workflowID = workItem.getId();
+
+		String wId = workflowID.replace("VolatileWorkItem_", "/workItems/");
+		String workItemID = "";
+		log.info("Workflow item Id==" + wId);
+		if (paramsValue.equalsIgnoreCase("Before Assign Task")) {
+			log.info("param1 before step=" + paramsValue);
+			String firstStr = wId.substring(0, wId.indexOf('_'));
+			String secString = wId.substring(wId.indexOf('_') + 1, wId.length());
+			String t1 = firstStr.replaceAll("[^0-9]+", "");
+			int a1 = Integer.parseInt(t1);
+			a1++; // Process step is one step behind the Assign task, so
+					// increment it.
+			firstStr = firstStr.replaceAll(t1, String.valueOf(a1));
+			workItemID = wfInstanceID.concat(firstStr).concat("_").concat(secString);
+			log.info("Final workItemID ==" + workItemID);
+		}
+
+		if (paramsValue.equalsIgnoreCase("After Assign Task")) {
+			log.info("param1 after step=" + paramsValue);
+			String firstStr = wId.substring(0, wId.indexOf('_'));
+			String secString = wId.substring(wId.indexOf('_') + 1, wId.length());
+			String t1 = firstStr.replaceAll("[^0-9]+", "");
+			int a1 = Integer.parseInt(t1);
+			a1--;// Process step is one step ahead the Assign task, so decrement
+					// it.
+			firstStr = firstStr.replaceAll(t1, String.valueOf(a1));
+			workItemID = wfInstanceID.concat(firstStr).concat("_").concat(secString);
+		}
+
+		while (xmlFiles.hasNext()) {
+
+			String contentPath = workItem.getContentPath();
+			Timestamp workflowStartTime = new java.sql.Timestamp(workItem.getTimeStarted().getTime());
+			Timestamp stepStartTime = new java.sql.Timestamp(System.currentTimeMillis());
+			Resource attachmentXml = xmlFiles.next();
+			// log.info("xmlFiles inside ");
+			String filePath = attachmentXml.getPath();
+			String workflowInitiator = "";
+			payloadPath = workItem.getWorkflowData().getPayload().toString();
+			if (StringUtils.isNotBlank(payloadPath)) {
+				try {
+					InputStream inputStream = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath,
+							"Data.xml");
+
+					if (null != inputStream) {
+						Document document = XMLUtils.getDomDocument(inputStream);
+
+						Element afBoundDataElement = XMLUtils.getParentNode(document, "afBoundData");
+						if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+							cwid = XMLUtils.getChildNodeContent(afBoundDataElement, "empId");
+						}
+
+						Element afBoundUnBoundDataElement = XMLUtils.getParentNode(document, "afUnboundData");
+						if (null != afBoundUnBoundDataElement && afBoundUnBoundDataElement.hasChildNodes()) {
+							workflowInitiator = XMLUtils.getChildNodeContent(afBoundUnBoundDataElement,
+									"workflow_initiator");
+						}
+					}
+				} catch (SAXException | IOException | ParserConfigurationException | RepositoryException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+			if (filePath.contains("Data.xml")) {
+				filePath = attachmentXml.getPath().concat("/jcr:content");
+				Node subNode = resolver.getResource(filePath).adaptTo(Node.class);
+
+				try {
+					is = subNode.getProperty("jcr:data").getBinary().getStream();
+				} catch (ValueFormatException e2) {
+					log.error("Exception1=" + e2.getMessage());
+					e2.printStackTrace();
+				} catch (PathNotFoundException e2) {
+					log.error("Exception2=" + e2.getMessage());
+					e2.printStackTrace();
+				} catch (RepositoryException e2) {
+					log.error("Exception3=" + e2.getMessage());
+					e2.printStackTrace();
+				}
+
+				try {
+					DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+					DocumentBuilder dBuilder = null;
+					try {
+						dBuilder = dbFactory.newDocumentBuilder();
+					} catch (ParserConfigurationException e1) {
+						log.info("ParserConfigurationException=" + e1);
+						e1.printStackTrace();
+					}
+					try {
+						doc = dBuilder.parse(is);
+					} catch (IOException e1) {
+						log.info("IOException=" + e1);
+						e1.printStackTrace();
+					}
+
+					org.w3c.dom.NodeList nList = doc.getElementsByTagName("afBoundData");
+					for (int temp = 0; temp < nList.getLength(); temp++) {
+						org.w3c.dom.Node nNode = nList.item(temp);
+						if (nNode.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
+							org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
+
+							String stage = eElement.getElementsByTagName("StageIndicator").item(0).getTextContent();
+
+							if (stage.equals("ToChair")) {
+								for (Map.Entry<String, Object> entry : workItem.getWorkflowData().getMetaDataMap()
+										.entrySet()) {
+									if (entry.getKey().matches("chairUserId")) {
+										assignee = entry.getValue().toString();
+									}
+								}
+								stepName = "Department Chair";
+								stepResponse = "Submit";
+								comments = eElement.getElementsByTagName("chairComments").item(0).getTextContent();
+							}
+
+							if (stage.equals("ToDean")) {
+								for (Map.Entry<String, Object> entry : workItem.getWorkflowData().getMetaDataMap()
+										.entrySet()) {
+
+									if (entry.getKey().matches("deanUserId")) {
+										assignee = entry.getValue().toString();
+									}
+
+								}
+								stepName = "Dean Review";
+								stepResponse = "Submit";
+								comments = eElement.getElementsByTagName("deanComments").item(0).getTextContent();
+							}
+
+							if (stage.equals("ToSupervisor")) {
+								for (Map.Entry<String, Object> entry : workItem.getWorkflowData().getMetaDataMap()
+										.entrySet()) {
+
+									if (entry.getKey().matches("supervisoruserId")) {
+										assignee = entry.getValue().toString();
+									}
+
+								}
+								stepName = "Supervisor Review";
+								stepResponse = "Submit";
+								comments = eElement.getElementsByTagName("supervisorComments").item(0).getTextContent();
+							}
+
+							if (stage.equals("ToAdmin")) {
+								for (Map.Entry<String, Object> entry : workItem.getWorkflowData().getMetaDataMap()
+										.entrySet()) {
+
+									if (entry.getKey().matches("adminUserId")) {
+										assignee = entry.getValue().toString();
+									}
+
+								}
+								stepName = "Admin Review";
+								stepResponse = "Submit";
+								comments = eElement.getElementsByTagName("adminComments").item(0).getTextContent();
+							}
+
+							if (stage.equals("ToHR")) {
+								assignee = "HRIE/Total-Wellness-Reviewers";
+								stepName = "HRIE/Total Wellness Review";
+								stepResponse = "Submit";
+								comments = eElement.getElementsByTagName("hrComments").item(0).getTextContent();
+							}
+
+						}
+					}
+
+				} catch (SAXException e) {
+					e.printStackTrace();
+				} finally {
+					try {
+						is.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+
+				}
+
+				if (paramsValue.equalsIgnoreCase("Before Assign Task")) {
+					stepType = "STEPSTART";
+					stepCompleteTime = null;
+					workflowStartTime = null;
+					wfCompleteTime = null;
+				}
+
+				if (paramsValue.equalsIgnoreCase("After Assign Task")) {
+					stepType = "STEPEND";
+					stepCompleteTime = new java.sql.Timestamp(System.currentTimeMillis());
+					workflowStartTime = null;
+					wfCompleteTime = new java.sql.Timestamp(System.currentTimeMillis());
+					stepStartTime = null;
+				}
+
+				dataMap = new LinkedHashMap<String, Object>();
+				dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
+				dataMap.put("WORKITEM_ID", workItemID);
+				dataMap.put("WORKFLOW_PAYLOAD", contentPath);
+				dataMap.put("WORKFLOW_MODEL_NAME", workflowModelName);
+				dataMap.put("CASE_ID", caseId);
+				dataMap.put("CWID", cwid);
+				dataMap.put("STEP_START_TIME", stepStartTime);
+				dataMap.put("WORKFLOW_INITIATOR", workflowInitiator);
+				dataMap.put("ASSIGNEE", assignee);
+				dataMap.put("STEP_COMPLETE_TIME", stepCompleteTime);
+				dataMap.put("STEP_TYPE", stepType);
+				dataMap.put("STEP_RESPONSE", stepResponse);
+				dataMap.put("STEP_NAME", stepName);
+				dataMap.put("COMMENTS", comments);
+				if (conn != null) {
+					log.info("Connection Successfull");
+					DatabaseUtils.insertWFHistory(conn, dataMap);
+				}
+			}
+
+		}
+
+	}
+
+}
