@@ -35,7 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=University Key Control DB Save", "service.vendor=ThoughtFocus",
@@ -75,7 +75,7 @@ public class CSUFUniversityKeyControlDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		LinkedHashMap<String, Object> dataMapTable = null;
 		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		connection = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*connection = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payLoadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = wfSession.adaptTo(ResourceResolver.class);
@@ -181,18 +181,12 @@ public class CSUFUniversityKeyControlDB implements WorkflowProcess {
 								dataMap.put("LAST_STEP_ASSIGNEE", assignee);
 								dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-								DatabaseUtils dbUtil = new DatabaseUtils();
-								
-								if (connection != null) {
-									String resultData = dbUtil.getSPEEvalData(connection, campusid, "CAMPUS_ID",
-											workflowInstanceID, tableName);
-									if (resultData != null && !resultData.equals("")) {
-										dbUtil.deleteSPEEvalData(connection, campusid, "CAMPUS_ID", workflowInstanceID,
-												tableName);
-										dbUtil.insertFormData(connection, dataMap, tableName, formName);
-									} else {
-										dbUtil.insertFormData(connection, dataMap, tableName, formName);
-									}	
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, campusid, "CAMPUS_ID",
+											workflowInstanceID, dataMap,
+											"APPLICANT_SIGN_DATE,APPROVER_SIGN_DATE,KEY_MANAGEMENT_SIGN_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
 								}
 
 								for (int j = 0; j < element.getElementsByTagName("Row1").getLength(); j++) {
@@ -257,18 +251,11 @@ public class CSUFUniversityKeyControlDB implements WorkflowProcess {
 									dataMapTable.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
 									if (!hook.isEmpty()) {
-										if (connection != null) {
-											String resultData = dbUtil.getUniversityKeyData(connection, caseid, room,
-													"CASE_ID", "ROOM", workflowInstanceID, childTableName);	
-											if (resultData != null && !resultData.equals("")) {
-												dbUtil.deleteKeyData(connection, caseid, room, "CASE_ID", "ROOM",
-														workflowInstanceID, childTableName);
-												dbUtil.insertFormData(connection, dataMapTable, childTableName,
-														formName);
-											} else {
-												dbUtil.insertFormData(connection, dataMapTable, childTableName,
-														formName);
-											}
+										try {
+											CloudDbSaveUtil.saveFormData(childTableName, formName, "", "",
+													workflowInstanceID, dataMapTable, "ISSUED_DATE,RETURN_DATE");
+										} catch (IOException ioException) {
+											ioException.printStackTrace();
 										}
 									}
 								}

@@ -35,7 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=Return University Key Control DB Save", "service.vendor=ThoughtFocus",
@@ -77,7 +77,7 @@ public class CSUFReturnUniversityKeyControlDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		LinkedHashMap<String, Object> dataMapTable = null;
 		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		connection = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*connection = jdbcConnectionService.getDBConn(dataSourceVal);*/
 	    String payLoadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = wfSession.adaptTo(ResourceResolver.class);
 		String workFlowInstanceID = workItem.getWorkflow().getId();
@@ -100,8 +100,6 @@ public class CSUFReturnUniversityKeyControlDB implements WorkflowProcess {
 								
 								campusid = element.getElementsByTagName("CampusID").item(0).getTextContent();						
 			
-								DatabaseUtils dbUtil = new DatabaseUtils();
-
 								for (int j = 0; j < element.getElementsByTagName("Row1").getLength(); j++) {
 									for (int k = 0; k < element.getElementsByTagName("Row1").item(j)
 											.getChildNodes().getLength(); k++) {
@@ -169,18 +167,12 @@ public class CSUFReturnUniversityKeyControlDB implements WorkflowProcess {
 									dataMapTable.put("WORKFLOW_INSTANCE_ID", workflowInstanceIdFromXMl);
 									dataMapTable.put("RETURN_WF_INSTANCE_ID", workFlowInstanceID);
 									if (!hook.isEmpty()) {
-										if (connection != null) {
-											String resultData = dbUtil.getUniversityKeyData(connection, caseid, room,
-													"CASE_ID", "ROOM", workflowInstanceIdFromXMl, childTableName);
-											if (resultData != null && !resultData.equals("")) {
-												dbUtil.deleteKeyData(connection, caseid, room, "CASE_ID", "ROOM",
-														workflowInstanceIdFromXMl, childTableName);
-												dbUtil.insertFormData(connection, dataMapTable, childTableName,
-														formName);
-											} else {
-												dbUtil.insertFormData(connection, dataMapTable, childTableName,
-														formName);
-											}
+										try {
+											CloudDbSaveUtil.saveFormData(childTableName, formName, caseid, "CASE_ID",
+													workflowInstanceIdFromXMl, dataMapTable,
+													"ISSUED_DATE,RETURN_DATE");
+										} catch (IOException ioException) {
+											ioException.printStackTrace();
 										}
 									}
 								}

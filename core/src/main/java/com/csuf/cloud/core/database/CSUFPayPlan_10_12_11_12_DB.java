@@ -29,7 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=10 12 11 12 Pay Plan DB",
@@ -60,16 +60,12 @@ public class CSUFPayPlan_10_12_11_12_DB implements WorkflowProcess {
 			if (null != is) {
 				Document doc = XMLUtils.getDomDocument(is);
 
-				DatabaseUtils dbUtil = new DatabaseUtils();
-
 				LinkedHashMap<String, Object> dataMapEmpInfo = null;
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-				if (conn != null) {
-
-					String workflowInstanceID = workItem.getWorkflow().getId();
+				String workflowInstanceID = workItem.getWorkflow().getId();
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
 					if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
@@ -269,9 +265,14 @@ public class CSUFPayPlan_10_12_11_12_DB implements WorkflowProcess {
 						dataMapEmpInfo.put("HR_COMMENT", hrComments);
 						dataMapEmpInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-						dbUtil.insertFormData(conn, dataMapEmpInfo, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstanceID,
+									"WORKFLOW_INSTANCE_ID", workflowInstanceID, dataMapEmpInfo,
+									"EFFECTIVE_DATE,DATE_DISCUSSED,START_DATE,EMP_DATE,MANAGER_DATE,HR_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
-				}
 			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error("ParserConfigurationException From CSUFPayPlan_10_12_11_12_DB Class"

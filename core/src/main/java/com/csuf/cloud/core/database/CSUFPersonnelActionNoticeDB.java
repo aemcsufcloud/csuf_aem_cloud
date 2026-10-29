@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Personnel Notice DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=PersonnelActionNoticeDB" })
@@ -50,7 +50,6 @@ public class CSUFPersonnelActionNoticeDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_PERSONNEL_ACTION_NOTICE";
 		String formName = "Personnel Action Notice";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -142,8 +141,8 @@ public class CSUFPersonnelActionNoticeDB implements WorkflowProcess {
 		String payrollName = "";
 		String payrollDate = "";
 		
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		LinkedHashMap<String, Object> dataMap = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
@@ -434,8 +433,12 @@ public class CSUFPersonnelActionNoticeDB implements WorkflowProcess {
 					dataMap.put("PAYROLL_COMMENTS", payrollComments);
 					dataMap.put("PAYROLL_NAME", payrollName);
 					dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
-					if (conn != null) {
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+					try {
+						CloudDbSaveUtil.saveFormData(tableName, formName, wfInstanceID, "WORKFLOW_INSTANCE_ID",
+								wfInstanceID, dataMap,
+								"EFFECTIVE_DATE_ACTION,ENDING_DATE,NEW_ENDING_DATE,CURRENT_PROB_END_DATE,NEW_PROB_END_DATE,HR_DATE,PAYROLL_DATE");
+					} catch (IOException ioException) {
+						ioException.printStackTrace();
 					}
 				} catch (SAXException e) {
 					log.error("SAXException from CSUFPersonnelActionNoticeDB=" + Arrays.toString(e.getStackTrace()));

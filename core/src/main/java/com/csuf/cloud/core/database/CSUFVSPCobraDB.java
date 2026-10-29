@@ -21,7 +21,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF Sample DB", "service.vendor=ThoughtFocus",
@@ -103,8 +103,9 @@ public class CSUFVSPCobraDB implements WorkflowProcess {
 		String benefitsSignDate = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		String workflowInstanceID = workItem.getWorkflow().getId();
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -367,9 +368,11 @@ public class CSUFVSPCobraDB implements WorkflowProcess {
 
 				}
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, ssn, "SSN", workflowInstanceID, dataMap,
+							"DATE_QUALIFING_EVENT,DATE_COVERAGE_BEGINS,BIRTH_DATE,DEP_FAMILY_BIRTHDATE1,COBRA_SIGN_DATE,BENEFITS_REP_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {

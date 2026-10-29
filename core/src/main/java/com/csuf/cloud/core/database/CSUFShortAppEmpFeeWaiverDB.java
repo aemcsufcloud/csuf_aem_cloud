@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Short Emp Fee Waiver DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFShortAppEmpFeeWaiverDB" })
@@ -49,7 +49,6 @@ public class CSUFShortAppEmpFeeWaiverDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_SHORT_EMP_FEE_WAIVER_FORM";
 		String formName = "Short Application Employee Fee Waiver";
 
@@ -100,12 +99,11 @@ public class CSUFShortAppEmpFeeWaiverDB implements WorkflowProcess {
 		String hrComment = "";
 		LinkedHashMap<String, Object> dataMap = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		String wfInstanceID = workItem.getWorkflow().getId();
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
 
@@ -264,7 +262,12 @@ public class CSUFShortAppEmpFeeWaiverDB implements WorkflowProcess {
 						dataMap.put("ADMISSION_OFFICE_RECOMMEND", admissionRecommend);
 						dataMap.put("ADMISSION_OFFICE_COMMENT", admissionComment);
 						dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, wfInstanceID, "WORKFLOW_INSTANCE_ID",
+									wfInstanceID, dataMap, "HR_DATE,EMPLOYEE_DATE,END_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 
 					} catch (SAXException e) {
 						log.error("SAXException from CSUFShortAppEmpFeeWaiverDB=" + Arrays.toString(e.getStackTrace()));
@@ -291,7 +294,6 @@ public class CSUFShortAppEmpFeeWaiverDB implements WorkflowProcess {
 
 				}
 			}
-		}
 
 	}
 

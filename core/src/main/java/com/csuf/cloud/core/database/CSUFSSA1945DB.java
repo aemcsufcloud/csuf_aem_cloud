@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=SSA 1945 Save in DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=SSA1945Save" })
@@ -49,7 +49,6 @@ public class CSUFSSA1945DB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_SSA_1945";
 		String formName = "SSA 1945";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -71,10 +70,9 @@ public class CSUFSSA1945DB implements WorkflowProcess {
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				workflowInstance = workItem.getWorkflow().getId();
 				String filePath = attachmentXml.getPath();
@@ -142,7 +140,12 @@ public class CSUFSSA1945DB implements WorkflowProcess {
 						dataMap.put("EMP_ID_NO", empId);
 						dataMap.put("CAMPUS_NAME", campusName);
 						dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstance);
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstance,
+									"WORKFLOW_INSTANCE_ID", workflowInstance, dataMap, "EMP_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					} catch (SAXException e) {
 						log.error("SAXException from CSUFSSA1945DB=" + Arrays.toString(e.getStackTrace()));
 					} finally {
@@ -166,6 +169,5 @@ public class CSUFSSA1945DB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 }

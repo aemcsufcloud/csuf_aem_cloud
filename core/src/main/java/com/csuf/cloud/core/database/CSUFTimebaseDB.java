@@ -23,7 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF Sample DB", "service.vendor=ThoughtFocus",
@@ -92,7 +92,7 @@ public class CSUFTimebaseDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 
 		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -262,9 +262,12 @@ public class CSUFTimebaseDB implements WorkflowProcess {
 
 				}
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstanceID, "WORKFLOW_INSTANCE_ID",
+							workflowInstanceID, dataMap,
+							"DATE_INITIATED,EFFECTIVE_DATE,END_DATE,SUPERVISOR_DATE,HR_DIV_COO_DATE,HR_DATE,PAYROLL_DATE,ADMIN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {

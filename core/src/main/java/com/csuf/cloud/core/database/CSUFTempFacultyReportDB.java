@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Temp Faculty Report DB",
@@ -56,7 +56,6 @@ public class CSUFTempFacultyReportDB implements WorkflowProcess {
 
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -100,11 +99,9 @@ public class CSUFTempFacultyReportDB implements WorkflowProcess {
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
 		log.info("DataSourceVal==========" + dataSourceVal);
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("Connection==========" + conn);
+		/*conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -306,8 +303,13 @@ public class CSUFTempFacultyReportDB implements WorkflowProcess {
 									dataMapEmpInfo.put("PAYROLL_COMMENTS", payrollComments);
 									dataMapEmpInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-									dbUtil.insertFormData(conn, dataMapEmpInfo, "AEM_TEMP_FACULTY_REPORT",
-											"Temp Faculty Report");
+									try {
+										CloudDbSaveUtil.saveFormData("AEM_TEMP_FACULTY_REPORT", "Temp Faculty Report",
+												"", "", workflowInstanceID, dataMapEmpInfo,
+												"FROM_DT,THROUGH_DT,START_DATE,DEPT_COO_SIGN_DATE,DEAN_SIGN_DATE,PAYROLL_SIGN_DATE");
+									} catch (IOException ioException) {
+										ioException.printStackTrace();
+									}
 								}
 							}
 						}
@@ -334,7 +336,6 @@ public class CSUFTempFacultyReportDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 }

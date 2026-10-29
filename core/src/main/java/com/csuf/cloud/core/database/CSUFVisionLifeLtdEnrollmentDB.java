@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Vision LIFE-LTD Enrollment Save in DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=VisionLifeLtdEnrollmentSave" })
@@ -95,10 +95,8 @@ public class CSUFVisionLifeLtdEnrollmentDB implements WorkflowProcess {
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		DatabaseUtils dbUtil = new DatabaseUtils();
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		/*conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				workflowInstance = workItem.getWorkflow().getId();
 				String filePath = attachmentXml.getPath();
@@ -222,7 +220,13 @@ public class CSUFVisionLifeLtdEnrollmentDB implements WorkflowProcess {
 						dataMap.put("DATE_INITIATED", dateInitiatedObj);
 						dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstance);
 
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstance,
+									"WORKFLOW_INSTANCE_ID", workflowInstance, dataMap,
+									"DATE_INITIATED");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 
 					} catch (SAXException e) {
 						log.error("SAXException from CSUFVisionLifeLtdEnrollmentDB="
@@ -246,6 +250,5 @@ public class CSUFVisionLifeLtdEnrollmentDB implements WorkflowProcess {
 					}
 				}
 			}
-		}
 	}
 }
