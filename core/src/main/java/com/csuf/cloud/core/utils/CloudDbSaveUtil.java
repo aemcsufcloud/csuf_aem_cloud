@@ -36,13 +36,14 @@ public final class CloudDbSaveUtil {
 
 		log.error("Testing: =" + json.toString());
 
-		CloseableHttpClient client = HttpClients.createDefault();
-		HttpPost post = new HttpPost(DB_SERVICE_URL);
-		post.addHeader("Content-Type", "application/json");
-		post.setEntity(new StringEntity(json.toString()));
+		try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpPost post = new HttpPost(DB_SERVICE_URL);
+			post.addHeader("Content-Type", "application/json");
+			post.setEntity(new StringEntity(json.toString()));
 
-		CloseableHttpResponse response = client.execute(post);
-		log.info("DB Service Response: =" + response.getStatusLine());
-		client.close();
+			try (CloseableHttpResponse response = client.execute(post)) {
+				log.info("DB Service Response: =" + response.getStatusLine());
+			}
+		}
 	}
 }
