@@ -34,6 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF New Position Staff DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFNewPositionStaffDB" })
@@ -172,13 +173,10 @@ public class CSUFNewPositionStaffDB implements WorkflowProcess {
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		// conn = jdbcConnectionService.getAemDEVDBConnection();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		log.info("DataSourceVal==========" + dataSourceVal);
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("Connection==========" + conn);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				// log.info("xmlFiles inside ");
@@ -790,7 +788,13 @@ public class CSUFNewPositionStaffDB implements WorkflowProcess {
 
 								dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-								insertNewPositionStaffFormData(conn, dataMap);
+								try {
+									CloudDbSaveUtil.saveFormData("AEM_NEW_POSITION_STAFF", "New Position Staff",
+											workflowInstanceID, "WORKFLOW_INSTANCE_ID", workflowInstanceID, dataMap,
+											"DATE_INITIATED,INCUMBENT_DATE,MANAGER_SUPERVISOR_DATE,DEPT_HEAD_DATE,ADMIN_DATE,HR_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 							}
 						}
 
@@ -803,15 +807,11 @@ public class CSUFNewPositionStaffDB implements WorkflowProcess {
 					}
 				}
 			}
-		}
 	}
 
 	/**
-	 * 
-	 * @param conn
-	 * @param dataMap
+	 * @deprecated unused; cloud save is used from execute()
 	 */
-
 	public void insertNewPositionStaffFormData(Connection conn, LinkedHashMap<String, Object> dataMap) {
 		PreparedStatement preparedStmt = null;
 		log.error("Inside INSERT FORM DATA Method");

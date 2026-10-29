@@ -30,7 +30,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Grade Change DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFGradeChangeDBNew" })
@@ -53,7 +53,6 @@ public class CSUFGradeChangeDB implements WorkflowProcess {
 
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -101,13 +100,10 @@ public class CSUFGradeChangeDB implements WorkflowProcess {
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		// conn = jdbcConnectionService.getAemDEVDBConnection();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		log.info("DataSourceVal==========" + dataSourceVal);
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("Connection==========" + conn);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				// log.info("xmlFiles inside ");
@@ -329,15 +325,25 @@ public class CSUFGradeChangeDB implements WorkflowProcess {
 										dataMapStudentInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
 										if (parentTable == 0) {
-											int parentVal = dbUtil.insertGCFormData(conn, dataMapFormInfo, parentTable);
-											parentTable = parentVal;
-
+											try {
+												CloudDbSaveUtil.saveFormData("AEM_AR_GRADE_CHANGE_FORM", "Grade Change",
+														caseID, "CASE_ID", workflowInstanceID, dataMapFormInfo,
+														"TODAYS_DATE,INST_SIGN_DATE,CHAIR_SIGN_DATE,DEAN_SIGN_DATE");
+												parentTable = 1;
+											} catch (IOException ioException) {
+												ioException.printStackTrace();
+											}
 										}
 
 										if (parentTable == 1) {
 											log.info("ParentTable========" + parentTable);
-											dbUtil.insertFormData(conn, dataMapStudentInfo, "AEM_AR_GC_STUDENT_INFO",
-													"Grade Change");
+											try {
+												CloudDbSaveUtil.saveFormData("AEM_AR_GC_STUDENT_INFO", "Grade Change",
+														"", "", workflowInstanceID, dataMapStudentInfo,
+														"TODAYS_DATE,RP_WORK_COMPLETED");
+											} catch (IOException ioException) {
+												ioException.printStackTrace();
+											}
 										}
 										// break;
 									}
@@ -366,15 +372,11 @@ public class CSUFGradeChangeDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 	/**
-	 * 
-	 * @param conn
-	 * @param dataMap
+	 * @deprecated unused; cloud save is used from execute()
 	 */
-
 	public void insertGCStudentData(Connection conn, LinkedHashMap<String, Object> dataMap) {
 		PreparedStatement preparedStmt = null;
 		log.info("insertGCStudentData=" + dataMap);

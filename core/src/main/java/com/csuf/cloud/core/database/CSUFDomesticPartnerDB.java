@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Domestic Partner Save in DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=DomesticPartnerSave" })
@@ -52,7 +52,6 @@ public class CSUFDomesticPartnerDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_DOMESTIC_PARTNER_DPND_CERT";
 		String formName = "Domestic Partner Dependent Certification";
 
@@ -82,10 +81,9 @@ public class CSUFDomesticPartnerDB implements WorkflowProcess {
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				workflowInstance = workItem.getWorkflow().getId();
 				String filePath = attachmentXml.getPath();
@@ -189,7 +187,12 @@ public class CSUFDomesticPartnerDB implements WorkflowProcess {
 
 						dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstance);
 
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstance, "WORKFLOW_INSTANCE_ID",
+									workflowInstance, dataMap, "DATE_INITIATED,DATE_APPROVED");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 
 					} catch (SAXException e) {
 						log.error("SAXException in finally block CSUFDomesticPartnerDB="
@@ -214,7 +217,6 @@ public class CSUFDomesticPartnerDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 }

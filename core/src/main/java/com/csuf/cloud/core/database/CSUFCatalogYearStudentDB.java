@@ -17,8 +17,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -55,7 +61,7 @@ public class CSUFCatalogYearStudentDB implements WorkflowProcess {
 		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_CATALOG_YEAR_STUDENT";
 		String formName = "Change of catalog year student";
-
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		Document doc = null;
@@ -104,9 +110,9 @@ public class CSUFCatalogYearStudentDB implements WorkflowProcess {
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		if (conn != null) {
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		//if (conn != null) {
 			while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				workflowInstance = workItem.getWorkflow().getId();
@@ -276,10 +282,34 @@ public class CSUFCatalogYearStudentDB implements WorkflowProcess {
 						dataMap.put("CASE_ID", caseId);
 						dataMap.put("STUDENT_USERID", StudentUserID);
 						
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						//dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						
+						JSONObject json = new JSONObject();
+						json.put("DB_CONNECTION", "AEMDBDEV");
+						json.put("TABLE_NAME", tableName);
+						json.put("FORM_NAME", formName);
+						json.put("UNIQUE_FIELD", cwid);
+						json.put("UNIQUE_FIELD_COLUMN", "CWID");
+						json.put("WORKFLOW_INSTANCE_ID", workflowInstance);
+						json.put("DATA_MAP", dataMap);
+						json.put("DATE_FIELDS", "TODAY_DATE,APPLICANT_SIGNATURE_DATE,GRAD_EVAL_DATE,RECORDS_DATE");
 
-					} catch (SAXException e) {
-						log.error("SAXException in finally block CSUFCatalogYearStudentDB="
+						log.error("Testing: =" + json.toString());
+
+						String dbServiceUrl = url;
+
+						CloseableHttpClient client = HttpClients.createDefault();
+						HttpPost post = new HttpPost(dbServiceUrl);
+						post.addHeader("Content-Type", "application/json");
+						post.setEntity(new StringEntity(json.toString()));
+
+						CloseableHttpResponse response = client.execute(post);
+						log.info("DB Service Response: =" + response.getStatusLine());
+						client.close();
+						
+
+					} catch (Exception e) {
+						log.error("Exception in finally block CSUFCatalogYearStudentDB="
 								+ Arrays.toString(e.getStackTrace()));
 					} finally {
 						try {
@@ -301,7 +331,7 @@ public class CSUFCatalogYearStudentDB implements WorkflowProcess {
 
 				}
 			}
-		}
+		//}
 	}
 
 }

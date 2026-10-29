@@ -21,7 +21,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF Sample DB", "service.vendor=ThoughtFocus",
@@ -125,8 +125,9 @@ public class CSUFLayoffChecklistDB implements WorkflowProcess {
 
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		String workflowInstanceID = workItem.getWorkflow().getId();
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -424,9 +425,11 @@ public class CSUFLayoffChecklistDB implements WorkflowProcess {
 
 				}
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, emplID, "EMPID", workflowInstanceID, dataMap,
+							"DATE_INITIATED,EFFECTIVE_DATE,DATE_OF_LETTER,REQUEST_DATE,RETREAT_EFF_DATE,STATUS_EFF_DATE1,STATUS_EFF_DATE2,STATUS_EFF_DATE3,RESCISSION_DATE_LAYOFF_LETTER,EXTENSION_DATE_ASSIGNMENT1,EXTENSION_DATE_ASSIGNMENT2,RE_EMP_EFF_DATE1,RE_EMP_EFF_DATE2");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {

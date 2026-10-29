@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Miscellaneous Payroll Request DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=MiscPayrollRequestDB" })
@@ -56,7 +56,6 @@ public class CSUFMiscPayrollRequestDB implements WorkflowProcess {
 		String formName = "Miscellaneous Payroll Request";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String departmentId = "";
@@ -98,12 +97,10 @@ public class CSUFMiscPayrollRequestDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapEmpInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		log.info("DataSourceVal in CSUFMiscPayrollRequestDB==" + dataSourceVal);
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -258,7 +255,13 @@ public class CSUFMiscPayrollRequestDB implements WorkflowProcess {
 										dataMapEmpInfo.put("MANAGER_DATE", managerDateObj);
 										dataMapEmpInfo.put("MANAGER_COMMENTS", managerComment);
 										dataMapEmpInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
-										dbUtil.insertFormData(conn, dataMapEmpInfo, tableName, formName);
+										try {
+											CloudDbSaveUtil.saveFormData(tableName, formName, "", "",
+													workflowInstanceID, dataMapEmpInfo,
+													"AUTH_DATE,PAYROLL_DATE,MANAGER_DATE");
+										} catch (IOException ioException) {
+											ioException.printStackTrace();
+										}
 
 									}
 								}
@@ -290,7 +293,6 @@ public class CSUFMiscPayrollRequestDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 }

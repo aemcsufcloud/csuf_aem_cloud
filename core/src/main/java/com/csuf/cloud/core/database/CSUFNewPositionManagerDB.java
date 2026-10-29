@@ -21,7 +21,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF Sample DB", "service.vendor=ThoughtFocus",
@@ -161,8 +161,8 @@ public class CSUFNewPositionManagerDB implements WorkflowProcess {
 
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String workflowInstanceID = workItem.getWorkflow().getId();
 
@@ -737,9 +737,12 @@ public class CSUFNewPositionManagerDB implements WorkflowProcess {
 					dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 				}
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, workflowInstanceID, "WORKFLOW_INSTANCE_ID",
+							workflowInstanceID, dataMap,
+							"DATE_INITIATED,INCUMBENT_DATE,DEPT_HIRING_MANG_DATE,DEPT_HEAD_DATE,APP_ADMIN_DATE,VP_DATE,HR_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {

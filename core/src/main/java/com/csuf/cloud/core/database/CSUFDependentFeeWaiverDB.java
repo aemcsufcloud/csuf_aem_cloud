@@ -32,7 +32,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Dependent Fee Waiver Save in DB",
@@ -51,7 +51,6 @@ public class CSUFDependentFeeWaiverDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_DEPENDENT_FEE_WAIVER";
 		String formName = "Dependent Fee Waiver";
 
@@ -122,11 +121,10 @@ public class CSUFDependentFeeWaiverDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 
 		Resource xmlNode = resolver.getResource(payloadPath);
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
 
@@ -322,7 +320,13 @@ public class CSUFDependentFeeWaiverDB implements WorkflowProcess {
 						dataMap.put("EMP_CB", empCB);
 						dataMap.put("HR_CB", hrCB);
 						dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, wfInstanceID, "WORKFLOW_INSTANCE_ID",
+									wfInstanceID, dataMap,
+									"APPLICANT_DATE_OF_BIRTH,HR_DATE,EMPLOYEE_DATE,END_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 
 					} catch (SAXException e) {
 						log.error("SAXException from CSUFDependentFeeWaiverDB=" + Arrays.toString(e.getStackTrace()));
@@ -349,7 +353,6 @@ public class CSUFDependentFeeWaiverDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 }

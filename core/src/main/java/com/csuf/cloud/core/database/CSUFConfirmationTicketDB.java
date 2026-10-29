@@ -8,7 +8,13 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -42,6 +48,7 @@ public class CSUFConfirmationTicketDB implements WorkflowProcess {
 		Connection conn = null;
 		String tableName = "AEM_CONFIRMATION_TICKET";
 		String formName = "Confirmation Ticket";
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		LinkedHashMap<String, Object> dataMap = null;
 		String fwsAllocation = "";
 		String awardYear = "";
@@ -181,7 +188,7 @@ public class CSUFConfirmationTicketDB implements WorkflowProcess {
 								.valueOf(appointmentEndDate);
 						appointmentEndDateObj = appointmentEndDateNew;
 					}
-
+					
 					dataMap.put("APPOINTMENT_END_DATE", appointmentEndDateObj);
 					dataMap.put("LAST_NAME", lastName);
 					dataMap.put("MIDDLE_NAME", middleName);
@@ -232,10 +239,33 @@ public class CSUFConfirmationTicketDB implements WorkflowProcess {
 					dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
 				}
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					dbUtil.insertFormData(conn, dataMap, tableName, formName);
-				}
+				}*/
+				
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", cwid);
+				json.put("UNIQUE_FIELD_COLUMN", "CWID");
+				json.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "EFFECTIVE_DATE,CURRENT_DATE,AUTH_DEPT_DATE,FINANCIAL_DATE,PAYROLL_DATE");
+
+				log.error("Testing: =" + json.toString());
+
+				String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
 
 			} catch (Exception e) {
 				log.error(Arrays.toString(e.getStackTrace()));

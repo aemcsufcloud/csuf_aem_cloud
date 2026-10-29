@@ -13,7 +13,13 @@ import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -31,7 +37,6 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF Emergency Assistance Grant DB", "service.vendor=ThoughtFocus",
@@ -54,11 +59,12 @@ public class CSUFEmergencyAssistanceGrantDB implements WorkflowProcess {
 		Connection conn = null;
 		String tableName = "AEM_EMERGENCY_ASSISTANCE_GRANT";
 		String formName = "CSUF Emergency Assistance Grant";
+		String url = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -126,8 +132,33 @@ public class CSUFEmergencyAssistanceGrantDB implements WorkflowProcess {
 					}
 				}*/
 
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", cwid);
+				json.put("UNIQUE_FIELD_COLUMN", "CWID");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "STUDENT_SIGNATURE_DATE");
+
+				log.error("Testing: =" + json.toString());
+
+				String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
+
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
+			} catch (Exception e1) {
+				e1.printStackTrace();
 			} finally {
 				if (null != is)
 					try {

@@ -36,6 +36,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.day.commons.datasource.poolservice.DataSourcePool;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.impl.JDBCConnectionHelperServiceImpl;
@@ -196,11 +197,9 @@ public class CSUFEmpTransferDataDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapPayrollDeductionInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("conn= " + conn);
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				// log.info("xmlFiles inside ");
@@ -647,12 +646,12 @@ public class CSUFEmpTransferDataDB implements WorkflowProcess {
 										dataMapPayrollDeductionInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 										
 										if (empTransferParentTable == 0) {
-											insertTransferDataForm(conn, dataMapFormInfo);
+											insertTransferDataForm(workflowInstanceID, dataMapFormInfo);
 
 										}
 
 										if (empTransferParentTable == 1) {
-											insertEmpTransferPayrollDeduction(conn, dataMapPayrollDeductionInfo);
+											insertEmpTransferPayrollDeduction(workflowInstanceID, dataMapPayrollDeductionInfo);
 
 										}
 										break;
@@ -689,169 +688,27 @@ public class CSUFEmpTransferDataDB implements WorkflowProcess {
 				}
 			}
 
+	}
+
+	public void insertTransferDataForm(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
+		log.error("Data map=" + dataMap);
+		try {
+			CloudDbSaveUtil.saveFormData("AEM_EMP_TRANSFER_DATA", "Employee Transfer Data", workflowInstanceID,
+					"WORKFLOW_INSTANCE_ID", workflowInstanceID, dataMap, "EMP_BIRTH_DATE,APPOINTMENT_DATE,SEPERATION_DATE");
+			empTransferParentTable = 1;
+			log.error("empTransferParentTable=" + empTransferParentTable);
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
 		}
 	}
 
-	public void insertTransferDataForm(Connection conn, LinkedHashMap<String, Object> dataMap) {
-		PreparedStatement preparedStmt = null;
+	public void insertEmpTransferPayrollDeduction(String workflowInstanceID, LinkedHashMap<String, Object> dataMap) {
 		log.error("Data map=" + dataMap);
-		if (conn != null) {
-			try {
-				conn.setAutoCommit(false);
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			}
-			String tableName = "AEM_EMP_TRANSFER_DATA";
-			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
-			StringBuilder placeholders = new StringBuilder();
-			for (Iterator<String> iter = dataMap.keySet().iterator(); iter.hasNext();) {
-				sql.append(iter.next());
-				placeholders.append("?");
-				if (iter.hasNext()) {
-					sql.append(",");
-					placeholders.append(",");
-				}
-			}
-			sql.append(") VALUES (").append(placeholders).append(")");
-			log.error("SQL=" + sql.toString());
-			try {
-				preparedStmt = conn.prepareStatement(sql.toString());
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			}
-			int i = 0;
-			log.info("Datamap values=" + dataMap.values());
-			for (Object value : dataMap.values()) {
-				try {
-					if (value instanceof Date) {
-						preparedStmt.setDate(++i, (Date) value);
-					} else if (value instanceof Integer) {
-						preparedStmt.setInt(++i, (Integer) value);
-					} else {
-						if (value != "" && value != null) {
-							preparedStmt.setString(++i, value.toString());
-						} else {
-							preparedStmt.setString(++i, null);
-						}
-					}
-				} catch (SQLException e) {
-					log.error("SQLException=" +  Arrays.toString(e.getStackTrace()));
-					e.printStackTrace();
-				}
-			}
-			try {
-				log.error("Before Emp Transfer Data");
-				preparedStmt.execute();
-				conn.commit();
-				empTransferParentTable = 1;
-				log.error("empTransferParentTable=" + empTransferParentTable);
-				log.error("After Emp transfer data");
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			} finally {
-				if (preparedStmt != null) {
-					try {
-						preparedStmt.close();
-						log.info("preparedstmt closed");
-						// conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException=" +  Arrays.toString(e.getStackTrace()));
-						e.printStackTrace();
-					}
-				}
-			}
-		}
-	}
-
-	public void insertEmpTransferPayrollDeduction(Connection conn, LinkedHashMap<String, Object> dataMap) {
-		PreparedStatement preparedStmt = null;
-		log.error("Data map=" + dataMap);
-		if (conn != null) {
-			try {
-				conn.setAutoCommit(false);
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			} catch (Exception e) {
-				log.error("Exception=" +  Arrays.toString(e.getStackTrace()));
-				e.printStackTrace();
-			}
-			String tableName = "AEM_EMP_TRAN_PAYROLL_DEDUCTION";
-			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
-			StringBuilder placeholders = new StringBuilder();
-			for (Iterator<String> iter = dataMap.keySet().iterator(); iter.hasNext();) {
-				sql.append(iter.next());
-				placeholders.append("?");
-				if (iter.hasNext()) {
-					sql.append(",");
-					placeholders.append(",");
-				}
-			}
-			sql.append(") VALUES (").append(placeholders).append(")");
-			log.error("SQL=" + sql.toString());
-			try {
-				preparedStmt = conn.prepareStatement(sql.toString());
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			} catch (Exception e) {
-				log.error("Exception=" +  Arrays.toString(e.getStackTrace()));
-				e.printStackTrace();
-			}
-			int i = 0;
-			log.info("Datamap values=" + dataMap.values());
-			try {
-				for (Object value : dataMap.values()) {
-					if (value instanceof Date) {
-						preparedStmt.setDate(++i, (Date) value);
-					} else if (value instanceof Integer) {
-						preparedStmt.setInt(++i, (Integer) value);
-					} else {
-						if (value != "" && value != null) {
-							preparedStmt.setString(++i, value.toString());
-						} else {
-							preparedStmt.setString(++i, null);
-						}
-					}
-				}
-			} catch (SQLException e) {
-				log.error("SQLException=" +  Arrays.toString(e.getStackTrace()));
-				e.printStackTrace();
-			} catch (Exception e) {
-				log.error("Exception4");
-				log.error("Exception=" +  Arrays.toString(e.getStackTrace()));
-				e.printStackTrace();
-			}
-			try {
-				log.error("Before Prepared stmt emp transfer payroll deduction");
-				preparedStmt.execute();
-				conn.commit();
-				log.error("After Prepared stmt emp transfer payroll deduction");
-			} catch (SQLException e1) {
-				log.error("SQLException=" +  Arrays.toString(e1.getStackTrace()));
-				e1.printStackTrace();
-			} catch (Exception e) {
-				log.error("Exception5");
-				log.error("Exception=" +  Arrays.toString(e.getStackTrace()));
-				e.printStackTrace();
-			} finally {
-				if (preparedStmt != null) {
-					try {
-						preparedStmt.close();
-						// conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException=" +  Arrays.toString(e.getStackTrace()));
-						e.printStackTrace();
-					} catch (Exception e) {
-						log.error("Exception7");
-						log.error("Exception=" +  Arrays.toString(e.getStackTrace()));
-						e.printStackTrace();
-					}
-				}
-			}
+		try {
+			CloudDbSaveUtil.saveFormData("AEM_EMP_TRAN_PAYROLL_DEDUCTION", "Employee Transfer Data", "", "",
+					workflowInstanceID, dataMap, "");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
 		}
 	}
 

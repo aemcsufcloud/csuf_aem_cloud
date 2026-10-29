@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Hourly INT Timesheet DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFHourlyINTTimesheetDB" })
@@ -52,7 +52,6 @@ public class CSUFHourlyINTTimesheetDB implements WorkflowProcess {
 
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -101,13 +100,10 @@ public class CSUFHourlyINTTimesheetDB implements WorkflowProcess {
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		// conn = jdbcConnectionService.getAemDEVDBConnection();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		log.info("DataSourceVal==========" + dataSourceVal);
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("Connection==========" + conn);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -290,9 +286,13 @@ public class CSUFHourlyINTTimesheetDB implements WorkflowProcess {
 										dataMapEmpInfo.put("TOTAL_SICK_HRS", totalSickHrs);
 										dataMapEmpInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-										dbUtil.insertFormData(conn, dataMapEmpInfo, "AEM_HOURLY_INT_TIMESHEET",
-												"Hourly INT");
-										
+										try {
+											CloudDbSaveUtil.saveFormData("AEM_HOURLY_INT_TIMESHEET", "Hourly INT", "",
+													"", workflowInstanceID, dataMapEmpInfo, "");
+										} catch (IOException ioException) {
+											ioException.printStackTrace();
+										}
+
 										log.info("dataMapEmpInfo=" + dataMapEmpInfo);
 
 									}
@@ -323,7 +323,6 @@ public class CSUFHourlyINTTimesheetDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 
 }

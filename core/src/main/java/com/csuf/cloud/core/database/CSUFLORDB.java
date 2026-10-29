@@ -23,7 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { "service.description=CSUF LOR DB", "service.vendor=ThoughtFocus", "process.label=CSUFLORDB" })
@@ -57,8 +57,8 @@ public class CSUFLORDB implements WorkflowProcess {
 		String workflowInstanceID = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -112,9 +112,11 @@ public class CSUFLORDB implements WorkflowProcess {
 
 				}
 
-				if (conn != null) {
-					DatabaseUtils dbUtil = new DatabaseUtils();
-					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"DUE_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {

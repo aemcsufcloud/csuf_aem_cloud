@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Leave Of Absence DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFLeaveOfAbsenceDB" })
@@ -56,7 +56,6 @@ public class CSUFLeaveOfAbsenceDB implements WorkflowProcess {
 		String formName = "Leave Of Absence";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -125,11 +124,10 @@ public class CSUFLeaveOfAbsenceDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapFormInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -438,7 +436,13 @@ public class CSUFLeaveOfAbsenceDB implements WorkflowProcess {
 								dataMapFormInfo.put("TYPE_OF_REQUEST", typeOfRequest);
 								dataMapFormInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-								dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "CASE_ID",
+											workflowInstanceID, dataMapFormInfo,
+											"INITIATED_DATE,STUDENT_SIGN_DATE,ASC_DATE,INTERNATIONAL_ACTION_DATE,GRAD_STUDIES_DEPT_DATE,RECORDS_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 
 							}
 						}
@@ -472,6 +476,5 @@ public class CSUFLeaveOfAbsenceDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 }

@@ -31,7 +31,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Initial Cobra Save in DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=InitialCobraDB" })
@@ -49,7 +49,6 @@ public class CSUFInitialCobraDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 		Connection conn = null;
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		String tableName = "AEM_INITIAL_COBRA";
 		String formName = "Initial Cobra";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -67,10 +66,9 @@ public class CSUFInitialCobraDB implements WorkflowProcess {
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
 		String wfInstanceID = workItem.getWorkflow().getId();
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
 
@@ -126,7 +124,12 @@ public class CSUFInitialCobraDB implements WorkflowProcess {
 						dataMap.put("FIRST_NAME", firstName);
 						dataMap.put("LAST_NAME", lastName);
 						dataMap.put("PARTNER_NAME", partnerName);
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, emplID, "EMPL_ID", wfInstanceID, dataMap,
+									"DATE_INITIATED");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					} catch (SAXException e) {
 						log.error("SAXException in CSUFInitialCobraDB=" + Arrays.toString(e.getStackTrace()));
 					} catch (Exception e) {
@@ -149,7 +152,6 @@ public class CSUFInitialCobraDB implements WorkflowProcess {
 					}
 				}
 			}
-		}
 	}
 
 }

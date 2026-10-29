@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Major/Minor Change DB",
 		Constants.SERVICE_VENDOR + "=Adobe Systems", "process.label" + "=CSUFMajorMinorChangeDB" })
@@ -56,7 +56,6 @@ public class CSUFMajorMinorChangeDB implements WorkflowProcess {
 		String formName = "Major_Minor Change";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -185,11 +184,10 @@ public class CSUFMajorMinorChangeDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapFormInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -797,7 +795,13 @@ public class CSUFMajorMinorChangeDB implements WorkflowProcess {
 								dataMapFormInfo.put("DROP_CERT_RECORDS_BY", dropCertificateRecordsBy);
 								dataMapFormInfo.put("DROP_CERT_RECORDS_COMMENT", dropCertificateRecordsComment);
 
-								dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "CASE_ID",
+											workflowInstanceID, dataMapFormInfo,
+											"STUDENT_DATE,DEPT_NEW_MAJOR_DATE,DEPT_SECOND_MAJOR_DATE,DROP_MAJOR_RECORDS_DATE,MAJOR_RECORDS_DATE,ADD_MAJOR_RECORDS_DATE,FIRST_MINOR_DATE,SECOND_MINOR_DATE,MINOR_RECORDS_DATE,DROP_MINOR_RECORDS_DATE,CERT_DATE,CERT_RECORDS_DATE,DROP_CERTI_RECORDS_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 							}
 						}
 
@@ -827,6 +831,5 @@ public class CSUFMajorMinorChangeDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 }

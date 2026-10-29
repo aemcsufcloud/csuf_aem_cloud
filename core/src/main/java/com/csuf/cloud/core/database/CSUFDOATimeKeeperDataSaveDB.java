@@ -31,6 +31,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFConstantsUtils;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -101,9 +102,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 
 				conn = jdbcConnectionService.getDocDBConnection();
 
-				if (conn != null) {
-
-					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
+				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 					// Element rowElement = XMLUtils.getChildNode(afBoundDataElement, "Row1");
 					NodeList nodeList = afBoundDataElement.getElementsByTagName("Row1");
 					log.info("Number Of Rows are= " + nodeList.getLength());
@@ -153,7 +152,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_primary_timekeeper_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 							}
 
 							alternateTimeKeeperDelete = XMLUtils.getChildNodeContent(afBoundDataElement,
@@ -181,7 +180,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_alternate_timekeeper_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 							}
 
 							approvingOfficialTimeKeeperDelete = XMLUtils.getChildNodeContent(afBoundDataElement,
@@ -210,7 +209,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_official_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -242,7 +241,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_primary_student_timekeeper_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 							}
 
 							alternateStudentDelete = XMLUtils.getChildNodeContent(afBoundDataElement,
@@ -270,7 +269,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_alternate_student_timekeeper_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 							}
 
 							approvingOfficialCDDelete = XMLUtils.getChildNodeContent(afBoundDataElement,
@@ -298,7 +297,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_official_cd_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -333,7 +332,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_primary_warrant_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -369,7 +368,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_alternate_warrant_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -403,7 +402,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_primary_cms_student_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -437,7 +436,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 										"hidden_alternate_cms_student_approver_email");
 
 								insertData(employeeID, fieldValue, departmentId, collegeID, divisionID, employeeName,
-										agencyVal, unitVal, userID, userEmailAddress, effectiveDate, conn);
+										agencyVal, unitVal, userID, userEmailAddress, effectiveDate);
 
 								/*
 								 * contentForDB = insertData(employeeID, fieldValue, departmentId, collegeID,
@@ -449,7 +448,6 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 						}
 					}
 				}
-			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 
 			log.error("Error in CSUFDelegationOfAuthorityTimeKeeperDataSaveDB= " + Arrays.toString(e.getStackTrace()));
@@ -469,7 +467,7 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 
 	public LinkedHashMap<String, Object> insertData(String employeeID, String fieldValue, String departmentId,
 			String collegeID, String divisionID, String employeeName, String agencyVal, String unitVal, String userID,
-			String userEmailAddress, String effectiveDate, Connection conn) {
+			String userEmailAddress, String effectiveDate) {
 
 		String tableName = "DOA_TIMEKEEPER_DATA";
 		String formName = "Delegation of Authority Change";
@@ -496,7 +494,11 @@ public class CSUFDOATimeKeeperDataSaveDB implements WorkflowProcess {
 		}
 		timeKeeperDataInfo.put("EFFECTIVE_DATE", effectiveDateObj);
 
-		dbUtil.insertFormData(conn, timeKeeperDataInfo, tableName, formName);
+		try {
+			CloudDbSaveUtil.saveFormData(tableName, formName, "", "", "", timeKeeperDataInfo, "EFFECTIVE_DATE");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
 
 		return timeKeeperDataInfo;
 	}

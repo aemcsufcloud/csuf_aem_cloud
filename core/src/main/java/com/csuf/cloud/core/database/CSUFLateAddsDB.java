@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
-import com.csuf.cloud.core.utils.DatabaseUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Late Adds DB", Constants.SERVICE_VENDOR + "=Adobe Systems",
 		"process.label" + "=CSUFLateAddsDB" })
@@ -56,7 +56,6 @@ public class CSUFLateAddsDB implements WorkflowProcess {
 		String formName = "Late Adds";
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		DatabaseUtils dbUtil = new DatabaseUtils();
 		Document doc = null;
 		InputStream is = null;
 		String workflowInstanceID = "";
@@ -156,11 +155,10 @@ public class CSUFLateAddsDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapFormInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
-			while (xmlFiles.hasNext()) {
+		while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -601,7 +599,13 @@ public class CSUFLateAddsDB implements WorkflowProcess {
 								dataMapFormInfo.put("LATE_ADDS_DECISION", lateAddsDecision);
 								dataMapFormInfo.put("EIP_FLAG", eipFlag);
 
-								dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "CASE_ID",
+											workflowInstanceID, dataMapFormInfo,
+											"EXPECTED_DATE_OF_GRADUATION,INITIATED_DATE,MINIORSHORT_COURSE_DATE,COURSE_START_DATE,EIP_STUDENT_DATE,STUDENT_SIGNATURE_DATE,INST_SIGNATURE_DATE,DEPT_CHAIR_DATE,ASSOC_DEAN_SIGNATURE_DATE,EIP_GROUP_SIGNATURE_DATE,RECORDS_SIGNATURE_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 
 							}
 						}
@@ -636,6 +640,5 @@ public class CSUFLateAddsDB implements WorkflowProcess {
 
 				}
 			}
-		}
 	}
 }
