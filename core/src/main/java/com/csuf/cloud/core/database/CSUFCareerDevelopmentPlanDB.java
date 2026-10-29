@@ -8,7 +8,13 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -42,6 +48,7 @@ public class CSUFCareerDevelopmentPlanDB implements WorkflowProcess {
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
 
+		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		Connection conn = null;
 		String tableName = "AEM_CAREER_DEVELOPMENT_PLAN";
 		String formName = "Career Development Plan";
@@ -81,8 +88,8 @@ public class CSUFCareerDevelopmentPlanDB implements WorkflowProcess {
 		String workflowInstance = "";
 		LinkedHashMap<String, Object> dataMap = null;
 		workflowInstance = workItem.getWorkflow().getId();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		if (StringUtils.isNotBlank(payloadPath)) {
 			try {
@@ -195,11 +202,35 @@ public class CSUFCareerDevelopmentPlanDB implements WorkflowProcess {
 					dataMap.put("ANALYST_DATE", analystDateObj);
 					dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstance);
 				}
+				
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					dbUtil.insertFormData(conn, dataMap, tableName, formName);
-				}
+				}*/
+				
+				JSONObject json = new JSONObject();
+				json.put("DB_CONNECTION", "AEMDBDEV");
+				json.put("TABLE_NAME", tableName);
+				json.put("FORM_NAME", formName);
+				json.put("UNIQUE_FIELD", empID);
+				json.put("UNIQUE_FIELD_COLUMN", "EMP_ID");
+				json.put("WORKFLOW_INSTANCE_ID", workflowInstance);
+				json.put("DATA_MAP", dataMap);
+				json.put("DATE_FIELDS", "EMPLOYEE_DATE,ANALYST_DATE,SUPERVISOR_DATE,DISCUSSED_DATE,DATE_INITIATED");
+
+				log.error("Testing: =" + json.toString());
+
+				//String dbServiceUrl = url;
+
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost post = new HttpPost(dbServiceUrl);
+				post.addHeader("Content-Type", "application/json");
+				post.setEntity(new StringEntity(json.toString()));
+
+				CloseableHttpResponse response = client.execute(post);
+				log.info("DB Service Response: =" + response.getStatusLine());
+				client.close();
 
 			} catch (Exception e) {
 				log.error(Arrays.toString(e.getStackTrace()));

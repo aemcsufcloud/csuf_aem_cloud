@@ -15,8 +15,15 @@ import javax.jcr.ValueFormatException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -51,6 +58,7 @@ public class CSUFCataLeaveDonationDB implements WorkflowProcess {
 			throws WorkflowException {
 		Connection conn = null;
 		DatabaseUtils dbUtil = new DatabaseUtils();
+		String dbServiceUrl = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
 		String tableName = "catastrophic_leave_donation";
 		String formName = "Catastrophic Leave Donation";
 
@@ -82,11 +90,11 @@ public class CSUFCataLeaveDonationDB implements WorkflowProcess {
 
 		LinkedHashMap<String, Object> dataMap = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String wfInstanceID = workItem.getWorkflow().getId();
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		if (conn != null) {
+		//if (conn != null) {
 			while (xmlFiles.hasNext()) {
 				Resource attachmentXml = xmlFiles.next();
 				String filePath = attachmentXml.getPath();
@@ -193,7 +201,32 @@ public class CSUFCataLeaveDonationDB implements WorkflowProcess {
 						dataMap.put("PAYROLL_DATE", payrollDateObj);
 						dataMap.put("CBID", cbid);
 						dataMap.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
-						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						//dbUtil.insertFormData(conn, dataMap, tableName, formName);
+						
+						JSONObject json = new JSONObject();
+						json.put("DB_CONNECTION", "AEMDBDEV");
+						json.put("TABLE_NAME", tableName);
+						json.put("FORM_NAME", formName);
+						json.put("UNIQUE_FIELD", emplId);
+						json.put("UNIQUE_FIELD_COLUMN", "EmplID");
+						json.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
+						json.put("DATA_MAP", dataMap);
+						json.put("DATE_FIELDS", "DONATION_DATE,EMPLOYEE_DATE,PAYROLL_DATE");
+
+						log.error("Testing: =" + json.toString());
+
+						//String dbServiceUrl = url;
+
+						CloseableHttpClient client = HttpClients.createDefault();
+						HttpPost post = new HttpPost(dbServiceUrl);
+						post.addHeader("Content-Type", "application/json");
+						post.setEntity(new StringEntity(json.toString()));
+
+						CloseableHttpResponse response = client.execute(post);
+						log.info("DB Service Response: =" + response.getStatusLine());
+						client.close();
+
+						
 					} catch (SAXException e) {
 						log.error("SAXException from CSUFCataLeaveDonationDB=" + Arrays.toString(e.getStackTrace()));
 					} catch (Exception e) {
@@ -218,6 +251,6 @@ public class CSUFCataLeaveDonationDB implements WorkflowProcess {
 
 				}
 			}
-		}
+		//}
 	}
 }
