@@ -23,6 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -99,9 +100,7 @@ public class MppPerfEvalDB implements WorkflowProcess {
 		String hrCooCB = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		workflowInstanceId = workItem.getWorkflow().getId();
@@ -279,7 +278,7 @@ public class MppPerfEvalDB implements WorkflowProcess {
 					dataMap.put("WORKFLOW_INSTANCE_ID", workflowInstanceId);
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getEvalData(conn, empId, workflowInstanceId, tableName);
@@ -293,6 +292,12 @@ public class MppPerfEvalDB implements WorkflowProcess {
 						log.error("Insert Data");
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, empId, "EMPID", workflowInstanceId, dataMap,
+							"REVIEWPERIODFROM,REVIEWPERIODTO,EVALUATORDATE,ADMINDATE,HRCOODATE,EMPDATE,HRDATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {
@@ -304,13 +309,7 @@ public class MppPerfEvalDB implements WorkflowProcess {
 					} catch (IOException e) {
 						log.error("IOException in MPPPerfEvalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
-					try {
-						conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException in MPPPerfEvalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
-					}
-				}
+				/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 			}
 
 		}

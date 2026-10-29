@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -59,9 +60,7 @@ public class FacultyStaffTravelProposalDB implements WorkflowProcess {
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String workflowInstanceID = workItem.getWorkflow().getId();
@@ -231,7 +230,7 @@ public class FacultyStaffTravelProposalDB implements WorkflowProcess {
 						}				
 
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, cwid, "CWID", workflowInstanceID, tableName);
@@ -242,6 +241,12 @@ public class FacultyStaffTravelProposalDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,FROM_DATE,TO_DATE,INITIATOR_SIGN_DATE,PRODUCTION_SIGN_DATE,CHAIR_SIGN_DATE,DEAN_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -256,14 +261,7 @@ public class FacultyStaffTravelProposalDB implements WorkflowProcess {
 						log.debug("IOException in FacultyStaffTravelProposalDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
-					try {
-						conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException in FacultyStaffTravelProposalDB Finally Block="
-								+ Arrays.toString(e.getStackTrace()));
-					}
-				}
+				/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 			}
 		}
 	}

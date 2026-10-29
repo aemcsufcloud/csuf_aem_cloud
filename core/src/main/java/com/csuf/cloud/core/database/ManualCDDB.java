@@ -30,6 +30,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,10 +66,9 @@ public class ManualCDDB implements WorkflowProcess {
 				LinkedHashMap<String, Object> dataMapEmpInfo1 = null;
 				LinkedHashMap<String, Object> dataMapEmpInfo2 = null;
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					String workflowInstanceID = workItem.getWorkflow().getId();
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
@@ -173,23 +173,30 @@ public class ManualCDDB implements WorkflowProcess {
 								dataMapEmpInfo2.put("SALARY_RATE", payrollOfRate);
 								dataMapEmpInfo2.put("SALARY_GROSS", payrollGross);
 
-								dbUtil.insertFormData(conn, dataMapEmpInfo2, tableName2, formName);
+								/*dbUtil.insertFormData(conn, dataMapEmpInfo2, tableName2, formName);*/
+								try {
+									CloudDbSaveUtil.saveFormData(tableName2, formName, "", "", workflowInstanceID,
+											dataMapEmpInfo2, "");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 							}
 						}
-						dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName1, formName);
+						/*dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName1, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(tableName1, formName, workflowInstanceID,
+									"WORKFLOW_INSTANCE_ID", workflowInstanceID, dataMapEmpInfo1,
+									"AUTH_DATE,PAYROLL_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
-				}
+				/*}*/
 			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()));
 		} finally {
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQLException in ManualCDDB Finally Block=" + Arrays.toString(e.getStackTrace()));
-				}
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 }

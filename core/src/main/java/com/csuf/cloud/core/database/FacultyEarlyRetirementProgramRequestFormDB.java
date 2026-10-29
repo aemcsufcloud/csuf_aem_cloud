@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -59,9 +60,7 @@ public class FacultyEarlyRetirementProgramRequestFormDB implements WorkflowProce
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String workflowInstanceID = workItem.getWorkflow().getId();
@@ -278,6 +277,13 @@ public class FacultyEarlyRetirementProgramRequestFormDB implements WorkflowProce
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
 				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID",
+							workflowInstanceID, dataMap,
+							"FACULTY_MEM_DATE,CHAIR_DATE,DEAN_DATE,VPAA_DATE,DEPT_COO_DATE,AHR_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -290,14 +296,7 @@ public class FacultyEarlyRetirementProgramRequestFormDB implements WorkflowProce
 								+ Arrays.toString(e.getStackTrace()));
 					}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQLException in FacultyEarlyRetirementProgramRequestFormDB Finally Block="
-							+ Arrays.toString(e.getStackTrace()));
-				}
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 
 		}
 

@@ -36,6 +36,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,9 +66,7 @@ public class DesignationUniversityCashCollectionDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String workflowInstanceID = workItem.getWorkflow().getId();
@@ -387,7 +386,7 @@ public class DesignationUniversityCashCollectionDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseid, "CASEID", workflowInstanceID, tableName);
@@ -398,6 +397,12 @@ public class DesignationUniversityCashCollectionDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, caseid, "CASEID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,RESPONSIBLEMANAGER_SIGNDATE,CASHHANDLERONE_SIGNDATE,CASHHANDLERTWO_SIGNDATE,DIRECTOR_SIGNDATE,CONTROLLER_SIGNDATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -412,14 +417,7 @@ public class DesignationUniversityCashCollectionDB implements WorkflowProcess {
 						log.debug("IOException in DesignationUniversityCashCollectionDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
-					try {
-						conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException in DesignationUniversityCashCollectionDB Finally Block="
-								+ Arrays.toString(e.getStackTrace()));
-					}
-				}
+				/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 			}
 
 		}

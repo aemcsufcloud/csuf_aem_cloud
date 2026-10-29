@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -51,36 +52,43 @@ public class FacultyActionRequestDB implements WorkflowProcess {
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		Map<String, Object> dataMap = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String workflowInstanceID = workItem.getWorkflow().getId();
-		try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
+		try {
 			payloadPath = workItem.getWorkflowData().getPayload().toString();
-			if (conn != null) {
-				dataMap = new LinkedHashMap<>();
-				InputStream is = null;
-				is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
-				if (null != is) {
-					Document doc = XMLUtils.getDomDocument(is);
-					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
-					Element element = XMLUtils.getChildNode(afBoundDataElement, "FARF");
-					if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
-						dataMap = addXMLParentNodesToMap(element, workflowInstanceID);
-						String emplid = XMLUtils.getChildNodeContent(element, "CWID");
-						DatabaseUtils dbUtil = new DatabaseUtils();
-						String resultData = dbUtil.getFormData(conn, emplid, "EMPLID", workflowInstanceID, tableName);
-						if (resultData != null && !resultData.equals("")) {
-							dbUtil.deleteSPEEvalData(conn, emplid, "EMPLID", workflowInstanceID, tableName);
-							dbUtil.insertFormData(conn, dataMap, tableName, formName);
-						} else {
-							dbUtil.insertFormData(conn, dataMap, tableName, formName);
-						}
-
+			/*if (conn != null) {*/
+			dataMap = new LinkedHashMap<>();
+			InputStream is = null;
+			is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
+			if (null != is) {
+				Document doc = XMLUtils.getDomDocument(is);
+				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
+				Element element = XMLUtils.getChildNode(afBoundDataElement, "FARF");
+				if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+					dataMap = addXMLParentNodesToMap(element, workflowInstanceID);
+					String emplid = XMLUtils.getChildNodeContent(element, "CWID");
+					/*DatabaseUtils dbUtil = new DatabaseUtils();
+					String resultData = dbUtil.getFormData(conn, emplid, "EMPLID", workflowInstanceID, tableName);
+					if (resultData != null && !resultData.equals("")) {
+						dbUtil.deleteSPEEvalData(conn, emplid, "EMPLID", workflowInstanceID, tableName);
+						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+					} else {
+						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+					}*/
+					try {
+						CloudDbSaveUtil.saveFormData(tableName, formName, emplid, "EMPLID", workflowInstanceID,
+								(LinkedHashMap<String, Object>) dataMap,
+								"FORMER_TERMINATION_DATE,OLD_APPT_END_DATE,OLD_TRAN_DATE,NEW_EFFECTIVE_DATE,NEW_TRAN_DATE,NEW_APPT_END_DATE,PREPARED_DATE,CHAIR_DATE,DEAN_DATE,HRDI_DATE,PAYROLL_DATE,OPTIONAL_REVIEWER_DATE");
+					} catch (IOException ioException) {
+						ioException.printStackTrace();
 					}
 				}
 			}
-		} catch (SQLException | RepositoryException | SAXException | IOException | ParserConfigurationException e) {
+			/*}*/
+		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error("Exception = {}", Arrays.toString(e.getStackTrace()));
-		} 
+		}
 	}
 
 	public void insertFAERForm(Connection conn, Map<String, Object> faerDataMap) throws SQLException {

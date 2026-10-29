@@ -32,6 +32,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Faculty Additional Employment DB",
@@ -53,44 +54,56 @@ public class FacultyAdditionalEmploymentDB implements WorkflowProcess {
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		Map<String, Object> dataMap = null;
 		Map<String, Object> dataMapFundInfo = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		String formName = "Faculty Additional Employment";
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String workflowInstanceID = workItem.getWorkflow().getId();
-		try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
+		try {
 			payloadPath = workItem.getWorkflowData().getPayload().toString();
-			if (conn != null) {
-				dataMap = new LinkedHashMap<>();
-				dataMapFundInfo = new LinkedHashMap<>();
-				InputStream is = null;
-				is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
-				if (null != is) {
-					Document doc = XMLUtils.getDomDocument(is);
-					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
-					Element element = XMLUtils.getChildNode(afBoundDataElement, "FAER");
-					if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
-						dataMap = addXMLParentNodesToMap(element, workflowInstanceID);
-						for (int i = 0; i < XMLUtils.getElementLength(element, "FundDetails"); i++) {
-							dataMapFundInfo = addXMLChildNodesToMap(element, i, workflowInstanceID);
-							if (parentTable == 0) {
-								insertFAERForm(conn, dataMap);
-							}
-							if (parentTable == 1) {
-								insertFAERFundDetails(conn, dataMapFundInfo);
-							}
+			/*if (conn != null) {*/
+			dataMap = new LinkedHashMap<>();
+			dataMapFundInfo = new LinkedHashMap<>();
+			InputStream is = null;
+			is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
+			if (null != is) {
+				Document doc = XMLUtils.getDomDocument(is);
+				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
+				Element element = XMLUtils.getChildNode(afBoundDataElement, "FAER");
+				if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
+					dataMap = addXMLParentNodesToMap(element, workflowInstanceID);
+					for (int i = 0; i < XMLUtils.getElementLength(element, "FundDetails"); i++) {
+						dataMapFundInfo = addXMLChildNodesToMap(element, i, workflowInstanceID);
+						if (parentTable == 0) {
+							insertFAERForm(null, dataMap, formName, workflowInstanceID);
+						}
+						if (parentTable == 1) {
+							insertFAERFundDetails(null, dataMapFundInfo, formName, workflowInstanceID);
 						}
 					}
 				}
 			}
-		} catch (SQLException | RepositoryException | SAXException | IOException | ParserConfigurationException e) {
+			/*}*/
+		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error("Exception = {}", Arrays.toString(e.getStackTrace()));
 		} finally {
 			parentTable = 0;
 		}
 	}
 
-	public void insertFAERForm(Connection conn, Map<String, Object> faerDataMap) throws SQLException {
-		if (conn != null) {
+	public void insertFAERForm(Connection conn, Map<String, Object> faerDataMap, String formName,
+			String workflowInstanceID) {
+		String tableName = "AEM_FAER_FORM";
+		String cwid = faerDataMap.get("CWID") != null ? faerDataMap.get("CWID").toString() : "";
+		try {
+			CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID,
+					(LinkedHashMap<String, Object>) faerDataMap,
+					"START_DT,END_DT,FACULTY_SIGNED_DT,DEAN_SIGNED_DT,FUND_SIGNED_DT1,FUND_SIGNED_DT2,FUND_SIGNED_DT3,HR_SIGNED_DT,BUDGET_ANALYST_SIGNED_DATE");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+		parentTable = 1;
+		/*if (conn != null) {
 			conn.setAutoCommit(false);
-			String tableName = "AEM_FAER_FORM";
 			StringBuilder sql = new StringBuilder("INSERT INTO  ").append(tableName).append(" (");
 			StringBuilder placeholders = new StringBuilder();
 			for (Iterator<String> iter = faerDataMap.keySet().iterator(); iter.hasNext();) {
@@ -124,11 +137,19 @@ public class FacultyAdditionalEmploymentDB implements WorkflowProcess {
 			} catch (SQLException e) {
 				log.error("SQLException From FAERDB Class : {}", Arrays.toString(e.getStackTrace()));
 			}
-		}
+		}*/
 	}
 
-	private void insertFAERFundDetails(Connection conn, Map<String, Object> faerFundDataMap) throws SQLException {
-		if (conn != null) {
+	private void insertFAERFundDetails(Connection conn, Map<String, Object> faerFundDataMap, String formName,
+			String workflowInstanceID) {
+		String tableName = "AEM_FAER_FUND_SOURCE_DETAILS";
+		try {
+			CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceID,
+					(LinkedHashMap<String, Object>) faerFundDataMap, "");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+		/*if (conn != null) {
 			conn.setAutoCommit(false);
 
 			String tableName = "AEM_FAER_FUND_SOURCE_DETAILS";
@@ -165,7 +186,7 @@ public class FacultyAdditionalEmploymentDB implements WorkflowProcess {
 			} catch (SQLException e) {
 				log.error("Error Message : {}, SQLException: {}", e.getMessage(), Arrays.toString(e.getStackTrace()));
 			}
-		}
+		}*/
 	}
 
 	private Map<String, Object> addXMLParentNodesToMap(Element eElement, String workflowInstanceID) {

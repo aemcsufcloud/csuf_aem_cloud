@@ -33,6 +33,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=CSUF Faculty Spl Consultant DB",
@@ -101,12 +102,12 @@ public class FacultySplConsultantStipendDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapEmpInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
 		log.info("DataSourceVal==========" + dataSourceVal);
 		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		log.info("Connection==========" + conn);
+		log.info("Connection==========" + conn);*/
 
-		if (conn != null) {
+		/*if (conn != null) {*/
 			while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
@@ -279,13 +280,20 @@ public class FacultySplConsultantStipendDB implements WorkflowProcess {
 										dataMapEmpInfo.put("MANAGER_DATE", managerDateObj);
 										dataMapEmpInfo.put("MANAGER_COMMENTS", managerComment);
 										dataMapEmpInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
-										dbUtil.insertFormData(conn, dataMapEmpInfo, tableName, formName);
-									
+										/*dbUtil.insertFormData(conn, dataMapEmpInfo, tableName, formName);*/
+										try {
+											CloudDbSaveUtil.saveFormData(tableName, formName, empId, "EmpId",
+													workflowInstanceID, dataMapEmpInfo,
+													"AUTH_DATE,OPTIONAL_REVIEWER_DATE,PAYROLL_DATE,MANAGER_DATE");
+										} catch (IOException ioException) {
+											ioException.printStackTrace();
+										}
+
 									}
 								}
 							}
 						}
-						if (conn != null) {
+						/*if (conn != null) {
 							DatabaseUtils dbUtil1 = new DatabaseUtils();
 							log.error("Connection Successfull");
 							String resultData = dbUtil1.getSPEEvalData(conn, empId, "EmpId", workflowInstanceID, tableName);
@@ -295,7 +303,7 @@ public class FacultySplConsultantStipendDB implements WorkflowProcess {
 							} else {						
 								dbUtil1.insertFormData(conn, dataMapEmpInfo, tableName, formName);
 							}
-						}
+						}*/
 
 
 						
@@ -310,11 +318,9 @@ public class FacultySplConsultantStipendDB implements WorkflowProcess {
 					finally {
 						try {
 							is.close();
-							conn.close();
+							/*conn.close();*/
 						} catch (IOException e) {
 							log.error("IOException=" + e.getMessage());
-							e.printStackTrace();
-						} catch (SQLException e) {
 							e.printStackTrace();
 						}
 
@@ -322,7 +328,7 @@ public class FacultySplConsultantStipendDB implements WorkflowProcess {
 
 				}
 			}
-		}
+		/*}*/
 	}
 
 }

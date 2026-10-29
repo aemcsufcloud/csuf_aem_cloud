@@ -29,6 +29,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -56,9 +57,7 @@ public class FinanceDOAAccessRequestDB implements WorkflowProcess {
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String workflowInstanceID = workItem.getWorkflow().getId();
@@ -282,6 +281,13 @@ public class FinanceDOAAccessRequestDB implements WorkflowProcess {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
 				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "EMPLID",
+							workflowInstanceID, dataMap,
+							"TEMP_END_DATE,DOA_TEMP_END_DATE,INITIATOR_DATE,EMPLOYEE_DATE,ADMIN_DATE,FISCAL_MANG_DATE,FS_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -294,14 +300,7 @@ public class FinanceDOAAccessRequestDB implements WorkflowProcess {
 								+ Arrays.toString(e.getStackTrace()));
 					}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQLException in FinanceDOAAccessRequestDB Finally Block="
-							+ Arrays.toString(e.getStackTrace()));
-				}
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 
 		}
 

@@ -35,6 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -88,10 +89,9 @@ public class NewAssetAcquisitionDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -209,10 +209,16 @@ public class NewAssetAcquisitionDB implements WorkflowProcess {
 
 						log.info("dataMapInfo= {}", dataMapInfo);
 
-						dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(parentTableName, formName, caseId, "CASEID",
+									workflowInstanceID, dataMapInfo, "INTIATOR_SIGN_DATE,ASSET_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
 				}
-			}
+			/*}*/
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
@@ -234,14 +240,7 @@ public class NewAssetAcquisitionDB implements WorkflowProcess {
 					log.error("IO Exception in NewAssetAcquisitionDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQL Exception in NewAssetAcquisitionDB " + Arrays.toString(e.getStackTrace()));
-				}
-
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 
@@ -316,7 +315,13 @@ public class NewAssetAcquisitionDB implements WorkflowProcess {
 
 			memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
+			/*dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, memberDataMapInfo,
+						"PURCHASE_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		}
 

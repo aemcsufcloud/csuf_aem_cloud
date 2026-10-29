@@ -32,6 +32,7 @@ import com.google.gson.JsonArray;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -70,9 +71,7 @@ public class ImmigrationCitizenshipVerificationDB implements WorkflowProcess {
 			String workflowInstanceID = workItem.getWorkflow().getId();
 			if (null != is) {
 				Document doc = XMLUtils.getDomDocument(is);
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 				Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
 				if (null != afBoundDataElement && afBoundDataElement.hasChildNodes()) {
@@ -237,6 +236,13 @@ public class ImmigrationCitizenshipVerificationDB implements WorkflowProcess {
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				}
 			}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID",
+							workflowInstanceID, dataMapInfo,
+							"STUDENT_SIGN_DATE,FIN_AID_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()));
@@ -249,14 +255,7 @@ public class ImmigrationCitizenshipVerificationDB implements WorkflowProcess {
 					log.error("IO Exception in ImmigrationCitizenshipVerificationDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQL Exception in ImmigrationCitizenshipVerificationDB " + Arrays.toString(e.getStackTrace()));
-				}
-
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 }

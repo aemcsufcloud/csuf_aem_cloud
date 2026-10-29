@@ -23,6 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -66,9 +67,7 @@ public class MPPSelfEvalDB implements WorkflowProcess {
 		String workflowInstanceId = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		workflowInstanceId = workItem.getWorkflow().getId();
@@ -139,9 +138,15 @@ public class MPPSelfEvalDB implements WorkflowProcess {
 
 				}
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					dbUtil.insertFormData(conn, dataMap, tableName, formName);
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, empId, "EMPID", workflowInstanceId, dataMap,
+							"REVIEW_PERIOD_FROM,REVIEW_PERIOD_TO,EVALUATOR_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (Exception e) {
@@ -154,13 +159,7 @@ public class MPPSelfEvalDB implements WorkflowProcess {
 						log.error("IOException in MPPSelfEvalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
 
-				if (conn != null) {
-					try {
-						conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException in MPPSelfEvalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
-					}
-				}
+				/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 			}
 
 		}

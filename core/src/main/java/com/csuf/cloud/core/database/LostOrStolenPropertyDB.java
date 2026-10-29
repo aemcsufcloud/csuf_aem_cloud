@@ -35,6 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -85,10 +86,9 @@ public class LostOrStolenPropertyDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -235,10 +235,17 @@ public class LostOrStolenPropertyDB implements WorkflowProcess {
 						dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 						log.info("dataMapInfo= {}", dataMapInfo);
 
-						dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(parentTableName, formName, caseId, "CASEID",
+									workflowInstanceID, dataMapInfo,
+									"TODAYS_DATE,INTIATOR_SIGN_DATE,DEPT_HEAD_SIGN_DATE,ASSET_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
 				}
-			}
+			/*}*/
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
@@ -260,14 +267,7 @@ public class LostOrStolenPropertyDB implements WorkflowProcess {
 					log.error("IO Exception in LostOrStolenPropertyDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQL Exception in LostOrStolenPropertyDB " + Arrays.toString(e.getStackTrace()));
-				}
-
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 
@@ -325,7 +325,13 @@ public class LostOrStolenPropertyDB implements WorkflowProcess {
 
 			memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
+			/*dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, memberDataMapInfo,
+						"DATE_ASSET");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		}
 

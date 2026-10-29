@@ -32,6 +32,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Dock Notice DB", Constants.SERVICE_VENDOR + "=Adobe Systems",
 		"process.label" + "=CSUFDockNoticeDB" })
@@ -87,9 +88,9 @@ public class DockNoticeDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapAbsentInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-		if (conn != null) {
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+		/*if (conn != null) {*/
 			while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
@@ -252,23 +253,33 @@ public class DockNoticeDB implements WorkflowProcess {
 							parentTable = 0;
 							log.info("Resetting parentTable in finally block==" + parentTable);
 							is.close();
-							conn.close();
+							/*conn.close();*/
 						} catch (IOException e) {
 							log.error("IOException From DockNoticeDB Class" + Arrays.toString(e.getStackTrace()));
-						} catch (SQLException e) {
-							log.error("SQLException From DockNoticeDB Class" + Arrays.toString(e.getStackTrace()));
 						}
 
 					}
 
 				}
 			}
-		}
+		/*}*/
 	}
 
 	public void insertDockForm(Connection conn, LinkedHashMap<String, Object> dataMap) {
+		String formName = "Dock Notice";
+		String emplId = dataMap.get("EMPL_ID") != null ? dataMap.get("EMPL_ID").toString() : "";
+		String workflowInstanceID = dataMap.get("WORKFLOW_INSTANCE_ID") != null
+				? dataMap.get("WORKFLOW_INSTANCE_ID").toString()
+				: "";
+		try {
+			CloudDbSaveUtil.saveFormData("AEM_DOCK_NOTICE_FORM", formName, emplId, "EMPL_ID", workflowInstanceID,
+					dataMap, "DOCK_DATE,SUPERVISOR_DATE,PAYROLL_DATE");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+		parentTable = 1;
 		PreparedStatement preparedStmt = null;
-		if (conn != null) {
+		/*if (conn != null) {
 			try {
 				conn.setAutoCommit(false);
 			} catch (SQLException e1) {
@@ -329,12 +340,22 @@ public class DockNoticeDB implements WorkflowProcess {
 					}
 				}
 			}
-		}
+		}*/
 	}
 
 	public void insertDockAbsentForm(Connection conn, LinkedHashMap<String, Object> dataMap) {
+		String formName = "Dock Notice";
+		String workflowInstanceID = dataMap.get("WORKFLOW_INSTANCE_ID") != null
+				? dataMap.get("WORKFLOW_INSTANCE_ID").toString()
+				: "";
+		try {
+			CloudDbSaveUtil.saveFormData("AEM_DOCK_NOTICE_ABSENT_INFO", formName, "", "", workflowInstanceID, dataMap,
+					"ABSENT_DATE");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
 		PreparedStatement preparedStmt = null;
-		if (conn != null) {
+		/*if (conn != null) {
 			try {
 				conn.setAutoCommit(false);
 			} catch (SQLException e1) {
@@ -410,7 +431,7 @@ public class DockNoticeDB implements WorkflowProcess {
 					}
 				}
 			}
-		}
+		}*/
 	}
 
 }

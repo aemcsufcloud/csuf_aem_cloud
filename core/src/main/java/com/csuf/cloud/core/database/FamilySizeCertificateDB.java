@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -66,10 +67,9 @@ public class FamilySizeCertificateDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -144,10 +144,16 @@ public class FamilySizeCertificateDB implements WorkflowProcess {
 						familyMembersDetails(formName, requestType, afBoundDataElement, childTableName, caseId,
 								workflowInstanceID, cwid, conn); // Method to insert the data from the Grid
 
-						dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(parentTableName, formName, cwid, "CWID", workflowInstanceID,
+									dataMapInfo, "STUDENT_SIGN_DATE,FIN_AID_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
 				}
-			}
+			/*}*/
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
@@ -171,15 +177,7 @@ public class FamilySizeCertificateDB implements WorkflowProcess {
 							"IO Exception in FamilySizeCertificateDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error(
-							"SQL Exception in FamilySizeCertificateDB " + Arrays.toString(e.getStackTrace()));
-				}
-
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 
@@ -321,7 +319,13 @@ public class FamilySizeCertificateDB implements WorkflowProcess {
 					log.info("memberDataMapInfo= {}", memberDataMapInfo);
 				}
 
-				dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
+				/*dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);*/
+				try {
+					CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID,
+							memberDataMapInfo, "STUDENT_DOB,MEMBER_DOB");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 			}
 		}
 		/*if (conn != null) {

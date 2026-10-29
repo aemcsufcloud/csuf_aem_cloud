@@ -35,6 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -88,10 +89,9 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 				String dataXML = XMLUtils.prettyPrintAsString(doc);
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -277,12 +277,19 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 						dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
 						log.info("dataMapInfo= {}", dataMapInfo);
-						dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(parentTableName, formName, caseId, "CASEID",
+									workflowInstanceID, dataMapInfo,
+									"TODAYS_DATE,B_RETURN_DATE,INITIATOR_SIGN_DATE,DEPT_HEAD_SIGN_DATE,ASSET_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 
 					}
 				}
-			}
-			if (conn != null) {
+			/*}*/
+			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
 				String resultData = dbUtil.getSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, parentTableName);
@@ -294,7 +301,7 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 					log.info("Successfully deleted SPEEvalData for 2nd caseId: {} and workflowInstanceID: {}", caseId,
 							workflowInstanceID);
 				}
-			}
+			}*/
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()));
 		} catch (Exception e) {
@@ -308,14 +315,7 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 					log.error("IO Exception in OffCampusAgreementUseDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					log.error("SQL Exception in OffCampusAgreementUseDB " + Arrays.toString(e.getStackTrace()));
-				}
-
-			}
+			/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 		}
 	}
 
@@ -359,7 +359,13 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 
 			memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, memberDataMapInfo, childTableNameOne, formName);
+			/*dbUtil.insertFormData(conn, memberDataMapInfo, childTableNameOne, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(childTableNameOne, formName, "", "", workflowInstanceID,
+						memberDataMapInfo, "TODAYS_DATE,EXPECTED_RETURN_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		}
 
@@ -416,7 +422,13 @@ public class OffCampusAgreementUseDB implements WorkflowProcess {
 
 			memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, memberDataMapInfo, childTableNameTwo, formName);
+			/*dbUtil.insertFormData(conn, memberDataMapInfo, childTableNameTwo, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(childTableNameTwo, formName, "", "", workflowInstanceID,
+						memberDataMapInfo, "DATE_RETURNED,EQUIP_BORROWED_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		}
 

@@ -35,6 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 import com.csuf.cloud.core.vo.EmailServiceVO;
@@ -74,9 +75,7 @@ public class FacultyAssignedTimeAgreementBatchLaunchDB implements WorkflowProces
 		String detailsTableName = "AEM_AT_BATCH_LAUNCH_DETAILS";
 		String formName = "Faculty Assigned Time Agreement [AT Guidelines] Batch Launch";
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String workflowInstanceID = workItem.getWorkflow().getId();
@@ -99,7 +98,7 @@ public class FacultyAssignedTimeAgreementBatchLaunchDB implements WorkflowProces
 								log.debug("index=" + temp);
 
 								if (params.equalsIgnoreCase("BatchLaunchData")) {
-									saveBatchLaunchData(formName, conn, tableName, eElement);
+									saveBatchLaunchData(formName, conn, tableName, eElement, workflowInstanceID);
 								} else if (params.equalsIgnoreCase("BatchLaunchDetails")) {
 									saveBatchLaunchDetails(formName, conn, detailsTableName, eElement, dataXML,
 											payloadPath, workflowInstanceID);
@@ -123,20 +122,14 @@ public class FacultyAssignedTimeAgreementBatchLaunchDB implements WorkflowProces
 						log.debug("IOException in FacultyAssignedTimeAgreementDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
-					try {
-						conn.close();
-					} catch (SQLException e) {
-						log.error("SQLException in FacultyAssignedTimeAgreementDB Finally Block="
-								+ Arrays.toString(e.getStackTrace()));
-					}
-				}
+				/*if (conn != null) { try { conn.close(); } catch (SQLException e) { } }*/
 			}
 
 		}
 	}
 
-	public void saveBatchLaunchData(String formName, Connection conn, String tableName, Element eElement) {
+	public void saveBatchLaunchData(String formName, Connection conn, String tableName, Element eElement,
+			String workflowInstanceID) {
 		try {
 			LinkedHashMap<String, Object> dataMapInfo = null;
 			String cwid = "";
@@ -233,13 +226,19 @@ public class FacultyAssignedTimeAgreementBatchLaunchDB implements WorkflowProces
 				dataMapInfo.put("ALTERNATE_APPROVER_NAME", alternateApproverName);
 				dataMapInfo.put("ALTERNATE_APPROVER_DEPT", alternateApproverDept);
 				dataMapInfo.put("ALTERNATE_APPROVER_EMAIL", alternateApproverEmail);
+				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				} else {
 					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMapInfo, "");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}
@@ -273,12 +272,21 @@ public class FacultyAssignedTimeAgreementBatchLaunchDB implements WorkflowProces
 		dataMapInfo.put("PAYLOAD_PATH", payload);
 		dataMapInfo.put("WORKFLOW_INSTANCE_ID", wid);
 
-		if (conn != null) {
+		/*if (conn != null) {
 			DatabaseUtils dbUtil = new DatabaseUtils();
 			log.error("Connection Successfull");
 			dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 		} else {
 			log.error("Connection Unsuccessfull");
+		}*/
+		String initiatorCwid = dataMapInfo.get("INITIATOR_CWID") != null
+				? dataMapInfo.get("INITIATOR_CWID").toString()
+				: "";
+		try {
+			CloudDbSaveUtil.saveFormData(tableName, formName, initiatorCwid, "INITIATOR_CWID", wid, dataMapInfo,
+					"INITIATED_DATE");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
 		}
 
 	}
