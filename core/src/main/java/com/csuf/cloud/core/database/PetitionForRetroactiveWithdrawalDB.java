@@ -34,6 +34,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,8 +66,8 @@ public class PetitionForRetroactiveWithdrawalDB implements WorkflowProcess {
 		boolean dependentDetailsCalled = false;
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -394,7 +395,7 @@ public class PetitionForRetroactiveWithdrawalDB implements WorkflowProcess {
 
 				}
 				log.debug("dependentDetailsCalled : {}", dependentDetailsCalled);
-				if (!dependentDetailsCalled && conn != null) {
+				/*if (!dependentDetailsCalled && conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, cwid, "CWID", workflowInstanceID, tableName);
@@ -404,6 +405,15 @@ public class PetitionForRetroactiveWithdrawalDB implements WorkflowProcess {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
+					}
+				}*/
+
+				if (!dependentDetailsCalled) {
+					try {
+						CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+								"INITIATED_DATE,STUDENT_SIGNATURE_DATE,PETITION_INITIAL_SIGN_DATE,MEDICAL_SIGNATURE_DATE,PETITION_CO_SIGNATURE_DATE,RECORDS_SIGNATURE_DATE,AVP_SIGNATURE_DATE");
+					} catch (IOException ioException) {
+						ioException.printStackTrace();
 					}
 				}
 
@@ -419,14 +429,14 @@ public class PetitionForRetroactiveWithdrawalDB implements WorkflowProcess {
 						log.debug("IOException in PetitionForRetroactiveWithdrawalDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in PetitionForRetroactiveWithdrawalDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}
@@ -615,6 +625,11 @@ public class PetitionForRetroactiveWithdrawalDB implements WorkflowProcess {
 				dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
 			}
 		}*/
+		try {
+			CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, memberDataMapInfo, "");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
 	}
 
 }

@@ -36,6 +36,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -66,8 +67,8 @@ public class PropertySurveyDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -284,7 +285,7 @@ public class PropertySurveyDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, tableName);
@@ -295,6 +296,13 @@ public class PropertySurveyDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "CASEID", workflowInstanceID, dataMap,
+							"INTIATOR_SIGN_DATE,ASSET_COORDINATOR_SIGN_DATE,ADMIN_APPROVER_SIGN_DATE,ASSET_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -309,14 +317,14 @@ public class PropertySurveyDB implements WorkflowProcess {
 						log.debug("IOException in PositionActionFormDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in PositionActionFormDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}
@@ -339,10 +347,10 @@ public class PropertySurveyDB implements WorkflowProcess {
 			String unlockedRBDec = "";
 			DatabaseUtils dbUtils = new DatabaseUtils();
 
-			String resultData = dbUtils.getSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, tableName);
+			/*String resultData = dbUtils.getSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, tableName);
 			if (resultData != null && !resultData.equals("")) {
 				dbUtils.deleteSPEEvalData(conn, caseId, "CASEID", workflowInstanceID, tableName);
-			}
+			}*/
 
 			for (int j = 0; j < eElement.getElementsByTagName("Row1").getLength(); j++) {
 
@@ -415,12 +423,17 @@ public class PropertySurveyDB implements WorkflowProcess {
 				dataMapInfo.put("EQUIPMENT_UNLOCKED", unlockedRBDec);
 				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				} else {
 					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceID, dataMapInfo, "");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}

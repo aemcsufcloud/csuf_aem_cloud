@@ -39,6 +39,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -76,8 +77,8 @@ public class PETDB implements WorkflowProcess {
 
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		connection = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		connection = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payLoadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = wfSession.adaptTo(ResourceResolver.class);
@@ -239,7 +240,7 @@ public class PETDB implements WorkflowProcess {
 
 								DatabaseUtils dbUtil = new DatabaseUtils();
 
-								if (connection != null) {
+								/*if (connection != null) {
 									String resultData = dbUtil.getSPEEvalData(connection, fiscalYr, "FISCAL_YR",
 											workflowInstanceID, tableName);
 									if (resultData != null && !resultData.equals("")) {
@@ -249,6 +250,14 @@ public class PETDB implements WorkflowProcess {
 									} else {
 										dbUtil.insertFormData(connection, dataMap, tableName, formName);
 									}
+								}*/
+
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, fiscalYr, "FISCAL_YR",
+											workflowInstanceID, dataMap,
+											"INITIATOR_SUBMITTED_DATE,TO_DEPT_APPROVER_SIGN_DATE,PROCESS_DATE,JOURNAL_DATE,INITIATED_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
 								}
 
 								logger.debug("Length= " + element.getElementsByTagName("Row1").getLength());
@@ -273,12 +282,12 @@ public class PETDB implements WorkflowProcess {
 						logger.debug("IOException in PETDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
 			}
-			if (connection != null) {
+			/*if (connection != null) {
 				try {
 					connection.close();
 				} catch (SQLException e) {
 				}
-			}
+			}*/
 		}
 	}
 
@@ -474,8 +483,14 @@ public class PETDB implements WorkflowProcess {
 			dataMapTable.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
 			if (!employeeName.isEmpty()) {
-				if (connection != null) {
+				/*if (connection != null) {
 					dbUtil.insertFormData(connection, dataMapTable, childTableName, formName);
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, dataMapTable,
+							"");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 			}
 		}

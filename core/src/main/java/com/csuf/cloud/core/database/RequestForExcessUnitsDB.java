@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -70,10 +71,10 @@ public class RequestForExcessUnitsDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-				if (conn != null) {
+				/*if (conn != null) {*/
 
 					String workflowInstanceID = workItem.getWorkflow().getId();
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
@@ -86,18 +87,18 @@ public class RequestForExcessUnitsDB implements WorkflowProcess {
 								workflowInstanceID, dbUtil);
 					}
 
-				}
+				/*}*/
 			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
 		} finally {
-			if (conn != null) {
+			/*if (conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
 					log.error("SQLException in SPE2579DB Finally Block=" + Arrays.toString(e.getStackTrace()));
 				}
-			}
+			}*/
 		}
 	}
 
@@ -224,7 +225,13 @@ public class RequestForExcessUnitsDB implements WorkflowProcess {
 			dataMapEmpInfo1.put("CHAIR_USERID", chairUserId);
 			dataMapEmpInfo1.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName, formName);
+			/*dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(tableName, formName, caseID, "CASE_ID", workflowInstanceID, dataMapEmpInfo1,
+						"STUDENT_SIGN_DATE,ADVISOR_SIGN_DATE,ARSC_SIGN_DATE,CHAIR_SIGN_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 		}
 	}
 
@@ -342,7 +349,13 @@ public class RequestForExcessUnitsDB implements WorkflowProcess {
 			dataMapEmpInfo1.put("ARSC_COMMENTS", arscComment);
 			dataMapEmpInfo1.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName, formName);
+			/*dbUtil.insertFormData(conn, dataMapEmpInfo1, tableName, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(tableName, formName, caseID, "CASE_ID", workflowInstanceID, dataMapEmpInfo1,
+						"STUDENT_SIGN_DATE,AVISOR_SIGN_DATE,CHAIR_SIGN_DATE,ARSC_SIGN_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 		}
 	}
 }

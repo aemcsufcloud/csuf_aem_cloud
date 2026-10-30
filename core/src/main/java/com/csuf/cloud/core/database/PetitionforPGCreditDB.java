@@ -33,6 +33,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,8 +66,8 @@ public class PetitionforPGCreditDB implements WorkflowProcess {
 
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -225,7 +226,7 @@ public class PetitionforPGCreditDB implements WorkflowProcess {
 						}
 					}
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, cwid, "CWID", workflowInstanceID, tableName);
@@ -236,6 +237,13 @@ public class PetitionforPGCreditDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,GRADUATION_DATE,STUDENT_SIGN_DATE,GRAD_UNIT_EVALUATOR_SIGN_DATE,PETITION_COORDINATOR_SIGN_DATE,RECORDS_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -250,14 +258,14 @@ public class PetitionforPGCreditDB implements WorkflowProcess {
 						log.debug("IOException in PetitionforPGCreditDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in PetitionforPGCreditDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 		}
 	}
@@ -305,12 +313,17 @@ public class PetitionforPGCreditDB implements WorkflowProcess {
 				dataMapInfo.put("VERIFICATION", verification);
 				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceId);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				} else {
 					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceId, dataMapInfo, "");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 			}
 

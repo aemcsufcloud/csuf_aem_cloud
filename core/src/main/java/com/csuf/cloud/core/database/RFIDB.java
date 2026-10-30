@@ -36,6 +36,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,8 +66,8 @@ public class RFIDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -304,7 +305,7 @@ public class RFIDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseid, "CASEID", workflowInstanceID, tableName);
@@ -315,6 +316,13 @@ public class RFIDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, caseid, "CASEID", workflowInstanceID, dataMap,
+							"REQUEST_DATE,REQUESTOR_SIGNDATE,APPROVER_SIGNDATE,ASFR_SIGNDATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -328,13 +336,13 @@ public class RFIDB implements WorkflowProcess {
 					} catch (IOException e) {
 						log.debug("IOException in RFIDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in RFIDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}
@@ -355,10 +363,10 @@ public class RFIDB implements WorkflowProcess {
 			String poNumber = "";
 			DatabaseUtils dbUtils = new DatabaseUtils();
 
-			String resultData = dbUtils.getSPEEvalData(conn, caseid, "CASEID", workflowInstanceId, tableName);
+			/*String resultData = dbUtils.getSPEEvalData(conn, caseid, "CASEID", workflowInstanceId, tableName);
 			if (resultData != null && !resultData.equals("")) {
 				dbUtils.deleteSPEEvalData(conn, caseid, "CASEID", workflowInstanceId, tableName);
-			}
+			}*/
 
 			for (int j = 0; j < eElement.getElementsByTagName("Row1").getLength(); j++) {
 
@@ -410,12 +418,17 @@ public class RFIDB implements WorkflowProcess {
 				dataMapInfo.put("PO_NUMBER", poNumber);
 				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceId);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				} else {
 					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceId, dataMapInfo, "");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}

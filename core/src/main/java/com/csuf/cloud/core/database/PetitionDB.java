@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -62,10 +63,10 @@ public class PetitionDB implements WorkflowProcess {
 
 				LinkedHashMap<String, Object> dataMapEmpInfo1 = null;
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-				if (conn != null) {
+				/*if (conn != null) {*/
 
 					String workflowInstanceID = workItem.getWorkflow().getId();
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
@@ -232,9 +233,16 @@ public class PetitionDB implements WorkflowProcess {
 
 						savePetitionFormData(afBoundDataElement, petitionType, conn, formName, caseID,
 								workflowInstanceID, dbUtil);
-						dbUtil.insertFormData(conn, dataMapEmpInfo1, petitionParentTable, formName);
+						/*dbUtil.insertFormData(conn, dataMapEmpInfo1, petitionParentTable, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(petitionParentTable, formName, caseID, "CASE_ID",
+									workflowInstanceID, dataMapEmpInfo1,
+									"STUDENT_DATE,STUDENT_SIGN_DATE,INST_SIGN_DATE,GRADUATE_STUDIES_SIGN_DATE,EVALUATOR_SIGN_DATE,EIP_SIGN_DATE,PETITION_COORDINATOR_SIGN_DATE,RECORDS_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
-				}
+				/*}*/
 			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -296,7 +304,12 @@ public class PetitionDB implements WorkflowProcess {
 			dataMapEmpInfo2.put("SEC_QUESTION1_COMMENT", secontion2Comment);
 			dataMapEmpInfo2.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionATable, formName);
+			/*dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionATable, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(petitionATable, formName, "", "", workflowInstanceID, dataMapEmpInfo2, "");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 		} else if (petitionType.equals("2")) {
 
 			String underGradTermTaken = XMLUtils.getChildNodeContent(afBoundDataElement, "petitionB_underGrad_term");
@@ -342,7 +355,13 @@ public class PetitionDB implements WorkflowProcess {
 					dataMapEmpInfo2.put("UNDERGRAD_COMMENT", underGradComment);
 					dataMapEmpInfo2.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-					dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionBTable, formName);
+					/*dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionBTable, formName);*/
+					try {
+						CloudDbSaveUtil.saveFormData(petitionBTable, formName, "", "", workflowInstanceID,
+								dataMapEmpInfo2, "");
+					} catch (IOException ioException) {
+						ioException.printStackTrace();
+					}
 				}
 
 			} else if (StringUtils.isNotBlank(gradeTermTaken)) {
@@ -368,7 +387,13 @@ public class PetitionDB implements WorkflowProcess {
 					dataMapEmpInfo2.put("GRAD_COMMENT", gradeComment);
 					dataMapEmpInfo2.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-					dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionBTable, formName);
+					/*dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionBTable, formName);*/
+					try {
+						CloudDbSaveUtil.saveFormData(petitionBTable, formName, "", "", workflowInstanceID,
+								dataMapEmpInfo2, "");
+					} catch (IOException ioException) {
+						ioException.printStackTrace();
+					}
 				}
 			}
 		} else if (petitionType.equals("3")) {
@@ -398,7 +423,12 @@ public class PetitionDB implements WorkflowProcess {
 			dataMapEmpInfo2.put("PETITION_C_REASON", petitionCReason);
 			dataMapEmpInfo2.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-			dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionCTable, formName);
+			/*dbUtil.insertFormData(conn, dataMapEmpInfo2, petitionCTable, formName);*/
+			try {
+				CloudDbSaveUtil.saveFormData(petitionCTable, formName, "", "", workflowInstanceID, dataMapEmpInfo2, "");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 		}
 	}
 }

@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -60,8 +61,8 @@ public class RequestForTimeConflictApprovalDB implements WorkflowProcess{
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -217,6 +218,13 @@ public class RequestForTimeConflictApprovalDB implements WorkflowProcess{
 					}
 				}*/
 
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,STUDENT_SIGNATURE_DATE,RC_INSTRUCTOR_SIGN_DATE,TCC_INSTRUCTOR_SIGN_DATE,ARSC_SIGN_DATE,ENROLLMENT_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
+
 			}  catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
 			}finally {
@@ -226,13 +234,13 @@ public class RequestForTimeConflictApprovalDB implements WorkflowProcess{
 					} catch (IOException e) {
 						log.debug("IOException in RequestForTimeConflictApprovalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in RequestForTimeConflictApprovalDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}

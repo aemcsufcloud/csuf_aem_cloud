@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -62,8 +63,8 @@ public class PositionActionFormDB implements WorkflowProcess{
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -254,7 +255,7 @@ public class PositionActionFormDB implements WorkflowProcess{
 					}				
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseId, "FORM_ID", workflowInstanceID, tableName);
@@ -265,6 +266,13 @@ public class PositionActionFormDB implements WorkflowProcess{
 					} else {						
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "FORM_ID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,EFFECTIVE_DATE,APPROP_REQUESTOR_SIGN_DATE,APPROP_APPROVER_SIGN_DATE,ACADEMIC_AFFAIRS_SIGN_DATE,POSITION_MGMT_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}  catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
@@ -278,13 +286,13 @@ public class PositionActionFormDB implements WorkflowProcess{
 					} catch (IOException e) {
 						log.debug("IOException in PositionActionFormDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+				/*if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in PositionActionFormDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 			
 
@@ -305,10 +313,10 @@ public class PositionActionFormDB implements WorkflowProcess{
 			String percentageDistr = "";
 			DatabaseUtils dbUtils = new DatabaseUtils();
 			
-			String resultData = dbUtils.getSPEEvalData(conn, formId, "FORM_ID", workflowInstanceId, tableName);
+			/*String resultData = dbUtils.getSPEEvalData(conn, formId, "FORM_ID", workflowInstanceId, tableName);
 			if (resultData != null && !resultData.equals("")) {
 				dbUtils.deleteSPEEvalData(conn, formId, "FORM_ID", workflowInstanceId, tableName);
-			}
+			}*/
 
 			for (int j = 0; j < eElement.getElementsByTagName("TTwoROne").getLength(); j++) {
 
@@ -353,12 +361,17 @@ public class PositionActionFormDB implements WorkflowProcess{
 				dataMapInfo.put("FORM_ID", formId);
 				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceId);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				} else {
 					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceId, dataMapInfo, "");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}

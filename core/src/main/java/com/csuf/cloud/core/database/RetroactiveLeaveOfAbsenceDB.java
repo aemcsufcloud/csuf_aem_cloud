@@ -34,6 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Retroactive Leave Of Absence DB",
@@ -125,10 +126,10 @@ public class RetroactiveLeaveOfAbsenceDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMapFormInfo = null;
 		Resource xmlNode = resolver.getResource(payloadPath);
 		Iterator<Resource> xmlFiles = xmlNode.listChildren();
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-		if (conn != null) {
+		/*if (conn != null) {*/
 			while (xmlFiles.hasNext()) {
 				workflowInstanceID = workItem.getWorkflow().getId();
 				Resource attachmentXml = xmlFiles.next();
@@ -439,7 +440,14 @@ public class RetroactiveLeaveOfAbsenceDB implements WorkflowProcess {
 								dataMapFormInfo.put("TYPE_OF_REQUEST", typeOfRequest);
 								dataMapFormInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 
-								dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);
+								/*dbUtil.insertFormData(conn, dataMapFormInfo, tableName, formName);*/
+								try {
+									CloudDbSaveUtil.saveFormData(tableName, formName, caseId, "CASE_ID",
+											workflowInstanceID, dataMapFormInfo,
+											"INITIATED_DATE,STUDENT_SIGN_DATE,ASC_DATE,INTERNATIONAL_ACTION_DATE,GRAD_STUDIES_DEPT_DATE,RECORDS_DATE");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 
 							}
 						}
@@ -460,7 +468,7 @@ public class RetroactiveLeaveOfAbsenceDB implements WorkflowProcess {
 										+ Arrays.toString(e.getStackTrace()));
 							}
 						}
-						if (conn != null) {
+						/*if (conn != null) {
 							try {
 								conn.close();
 							} catch (SQLException e) {
@@ -468,11 +476,11 @@ public class RetroactiveLeaveOfAbsenceDB implements WorkflowProcess {
 										+ Arrays.toString(e.getStackTrace()));
 							}
 
-						}
+						}*/
 					}
 
 				}
 			}
-		}
+		/*}*/
 	}
 }
