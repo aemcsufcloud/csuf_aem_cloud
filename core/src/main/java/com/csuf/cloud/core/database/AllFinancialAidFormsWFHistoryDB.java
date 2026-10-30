@@ -2,8 +2,6 @@ package com.csuf.cloud.core.database;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -15,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -27,10 +24,8 @@ import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
-import com.csuf.cloud.core.services.GlobalConfigCSUFService;
-import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.CSUFUtils;
-import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
 @Component(property = { Constants.SERVICE_DESCRIPTION + "=Save All Financial Aid Forms Workflow Step History",
@@ -40,21 +35,10 @@ public class AllFinancialAidFormsWFHistoryDB implements WorkflowProcess {
 
 	private static final Logger logger = LoggerFactory.getLogger(AllFinancialAidFormsWFHistoryDB.class);
 
-	@Reference
-	private GlobalConfigCSUFService globalConfigCSUFService;
-
-	@Reference
-	private JDBCConnectionHelperService jdbcConnectionService;
-
 	@Override
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
 			throws WorkflowException {
-		Connection conn = null;
-
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
-
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
 
 		String paramsValue = processArguments.get("PROCESS_ARGS", "string").toString();
 		logger.debug("paramsnew=======" + paramsValue);
@@ -176,9 +160,14 @@ public class AllFinancialAidFormsWFHistoryDB implements WorkflowProcess {
 					dataMap.put("STEP_RESPONSE", stepResponse);
 					dataMap.put("STEP_NAME", stepName);
 					dataMap.put("COMMENTS", comments);
-					if (conn != null) {
+					/*if (conn != null) {
 						logger.info("Connection Successfull");
 						DatabaseUtils.insertWFHistory(conn, dataMap);
+					}*/
+					try {
+						CloudDbSaveUtil.saveWorkflowHistory(paramsValue, dataMap);
+					} catch (IOException ioException) {
+						logger.error("IOException saving WF history: " + ioException.getMessage());
 					}
 				}
 			}

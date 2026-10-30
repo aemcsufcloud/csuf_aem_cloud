@@ -20,14 +20,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
-import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
@@ -41,6 +35,7 @@ import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.CSUFUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -258,42 +253,13 @@ public class CSUFSTD682OvertimeDistributedWFHistoryDB implements WorkflowProcess
 				dataMap.put("COMMENTS", comments);
 				
 				log.info("Vista  dataMap="+dataMap.size());
-				
-				JSONObject json = new JSONObject();
-				/*json.put("cwid", cwid);
-				json.put("workflowInstanceID", workflowInstanceID);
-				json.put("tableName", tableName);
-				json.put("formName", formName);
-				json.put("dataMap", dataMap);*/
-				
-				json.put("DB_CONNECTION", "AEMDBDEV");
-				json.put("TABLE_NAME", "AEM_WORKFLOW_HISTORY");
-				json.put("PROCESS_STEP_VAL", processStepValue);
-				//json.put("FORM_NAME", "STD 682 Overtime Distributed");
-				//json.put("UNIQUE_FIELD", "100030476");
-				//json.put("UNIQUE_FIELD_COLUMN","EMPL_ID");
-				//json.put("WORKFLOW_INSTANCE_ID", wfInstanceID);
-				//json.put("WORKITEM_ID", workItemID);
-				json.put("DATA_MAP", dataMap);
-				//json.put("DATE_FIELDS", "DATE1");
-				
-				String dbServiceUrl = "https://myformstst.fullerton.edu/bin/WFHistorySave";
+
 				try {
-				CloseableHttpClient client = HttpClients.createDefault();
-				HttpPost post = new HttpPost(dbServiceUrl);
-				post.addHeader("Content-Type", "application/json");
-				post.setEntity(new StringEntity(json.toString()));
-
-				CloseableHttpResponse response = client.execute(post);
-				log.info("DB Service Response: =" + response.getStatusLine());
-				
-				client.close();
-
-				
-			}catch (Exception e) {
-				log.error("Exception from CSUFSTD682OvertimeDistributedWFHistoryDB="
-						+ Arrays.toString(e.getStackTrace()) + "Error Message=", e.getMessage());
-			}
+					CloudDbSaveUtil.saveWorkflowHistory(processStepValue, dataMap);
+				} catch (IOException e) {
+					log.error("Exception from CSUFSTD682OvertimeDistributedWFHistoryDB="
+							+ Arrays.toString(e.getStackTrace()) + "Error Message=", e.getMessage());
+				}
 			}
 		}
 

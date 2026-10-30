@@ -17,7 +17,9 @@ public final class CloudDbSaveUtil {
 	private static final Logger log = LoggerFactory.getLogger(CloudDbSaveUtil.class);
 
 	public static final String DB_SERVICE_URL = "https://myformstst.fullerton.edu/bin/dbSaveforCloud";
+	public static final String WF_HISTORY_SERVICE_URL = "https://myformstst.fullerton.edu/bin/WFHistorySave";
 	public static final String DB_CONNECTION = "AEMDBDEV";
+	public static final String WF_HISTORY_TABLE = "AEM_WORKFLOW_HISTORY";
 
 	private CloudDbSaveUtil() {
 	}
@@ -43,6 +45,32 @@ public final class CloudDbSaveUtil {
 
 			try (CloseableHttpResponse response = client.execute(post)) {
 				log.info("DB Service Response: =" + response.getStatusLine());
+			}
+		}
+	}
+
+	/**
+	 * Persists workflow step history via cloud servlet (same contract as
+	 * CSUFSTD682OvertimeDistributedWFHistoryDB). {@code processStepVal} is typically
+	 * {@code Before Assign Task} or {@code After Assign Task} from PROCESS_ARGS.
+	 */
+	public static void saveWorkflowHistory(String processStepVal, LinkedHashMap<String, Object> dataMap)
+			throws IOException {
+		JSONObject json = new JSONObject();
+		json.put("DB_CONNECTION", DB_CONNECTION);
+		json.put("TABLE_NAME", WF_HISTORY_TABLE);
+		json.put("PROCESS_STEP_VAL", processStepVal != null ? processStepVal : "");
+		json.put("DATA_MAP", dataMap);
+
+		log.info("WF History payload size=" + (dataMap != null ? dataMap.size() : 0));
+
+		try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpPost post = new HttpPost(WF_HISTORY_SERVICE_URL);
+			post.addHeader("Content-Type", "application/json");
+			post.setEntity(new StringEntity(json.toString()));
+
+			try (CloseableHttpResponse response = client.execute(post)) {
+				log.info("WF History Service Response: =" + response.getStatusLine());
 			}
 		}
 	}
