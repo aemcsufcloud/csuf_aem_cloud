@@ -30,6 +30,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -241,12 +242,18 @@ public class SaveWorkflowHistory implements WorkflowProcess {
 		dataMap.put("STEP_RESPONSE", stepResponse);
 		dataMap.put("STEP_NAME", stepName);
 		dataMap.put("COMMENTS", comments);
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
 		conn = jdbcConnectionService.getDBConn(dataSourceVal);
 		if (conn != null) {
 			log.info("Connection Successfull");
 			DatabaseUtils.insertWFHistory(conn, dataMap);
-		}		
+		}*/
+		try {
+			CloudDbSaveUtil.saveFormData("AEM_WORKFLOW_HISTORY", "Workflow History", "", "", workflowInstance, dataMap,
+					"STEP_START_TIME,STEP_COMPLETE_TIME");
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
 	}
 
 }

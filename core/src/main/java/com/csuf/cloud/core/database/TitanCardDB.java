@@ -33,6 +33,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -66,8 +67,8 @@ public class TitanCardDB implements WorkflowProcess{
 		String lastName = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -198,7 +199,7 @@ public class TitanCardDB implements WorkflowProcess{
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, cwid, "CWID", workflowInstanceID, tableName);
@@ -209,7 +210,14 @@ public class TitanCardDB implements WorkflowProcess{
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,RUSH_DATE,INVOICE_DATE,INVOICE_DUE_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -222,14 +230,14 @@ public class TitanCardDB implements WorkflowProcess{
 					} catch (IOException e) {
 						log.debug("IOException in TitanCardDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error(
 								"SQLException in TitanCardDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}
@@ -290,7 +298,7 @@ public class TitanCardDB implements WorkflowProcess{
 				dataMapInfo.put("NUM_DATA", number1099);
 				dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceId);
 
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					if(description.isBlank() && invoiceNumber.isBlank() && project.isBlank() && objectCode.isBlank() && amount.isBlank() && number1099.isBlank()) {
@@ -298,8 +306,12 @@ public class TitanCardDB implements WorkflowProcess{
 					}else {
 						dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 					}
-				} else {
-					log.error("Connection Unsuccessfull");
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, "", "", workflowInstanceId, dataMapInfo,
+							"");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
 
 			}

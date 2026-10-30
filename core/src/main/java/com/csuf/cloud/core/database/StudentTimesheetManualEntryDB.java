@@ -23,6 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -94,11 +95,11 @@ public class StudentTimesheetManualEntryDB implements WorkflowProcess {
 		String payrollDate = "";
 
 		LinkedHashMap<String, Object> dataMapEmpInfo = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		workflowInstanceID = workItem.getWorkflow().getId();
 
-		if (conn != null) {
+		/*if (conn != null) {*/
 			if (StringUtils.isNotBlank(payloadPath)) {
 				try {
 					is = CSUFUtils.getDataXMLStreamFromPayloadPath(resolver, payloadPath, "Data.xml");
@@ -254,7 +255,13 @@ public class StudentTimesheetManualEntryDB implements WorkflowProcess {
 									dataMapEmpInfo.put("SAT_WEEK_DAY".concat(indexVal), satWeekDay);
 									
 								}
-								dbUtil.insertFormData(conn, dataMapEmpInfo, "AEM_STUDENT_TIMESHEET_MANUAL", "Student Timesheet Manual Entry");
+								try {
+									CloudDbSaveUtil.saveFormData("AEM_STUDENT_TIMESHEET_MANUAL",
+											"Student Timesheet Manual Entry", "", "", workflowInstanceID, dataMapEmpInfo,
+											"");
+								} catch (IOException ioException) {
+									ioException.printStackTrace();
+								}
 							}
 
 						}
@@ -271,18 +278,18 @@ public class StudentTimesheetManualEntryDB implements WorkflowProcess {
 							log.error("IOException From StudentTimesheetManualEntryDB Class"
 									+ Arrays.toString(e.getStackTrace()) + "Error Message" + e.getMessage());
 						}
-					if (conn != null) {
+/*					if (conn != null) {
 						try {
 							conn.close();
 						} catch (SQLException e) {
 							log.error("SQLException From StudentTimesheetManualEntryDB Class"
 									+ Arrays.toString(e.getStackTrace()) + "Error Message" + e.getMessage());
 						}
-					}
+					}*/
 				}
 
 			}
-		}
+		/*}*/
 	}
 
 }

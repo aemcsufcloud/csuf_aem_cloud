@@ -23,6 +23,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -205,8 +206,8 @@ public class SPE2579DB implements WorkflowProcess {
 		String division_name = "";
 		String hrCoo_name = "";
 		LinkedHashMap<String, Object> dataMap = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String workflowInstanceId = workItem.getWorkflow().getId();
 		if (StringUtils.isNotBlank(payloadPath)) {
 			try {
@@ -630,7 +631,7 @@ public class SPE2579DB implements WorkflowProcess {
 					dataMap.put("HRCOO_NAME", hrCoo_name);
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, empId,"EMPLID", workflowInstanceId, tableName);
@@ -640,7 +641,14 @@ public class SPE2579DB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, empId, "EMPLID", workflowInstanceId, dataMap,
+							"DRAFT_DT,REVIEWPERIOD_FROM,REVIEWPERIOD_TO,EVAL_SIGNED_DATE,EMP_SIGNED_DATE,ADMIN_SIGNED_DATE,HRCOO_SIGNED_DATE,HR_SIGNED_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (Exception e) {
 				log.error("Exception in SPE2579DB=" + Arrays.toString(e.getStackTrace()));
@@ -652,13 +660,13 @@ public class SPE2579DB implements WorkflowProcess {
 						log.error(
 								"IOException in SPE2579DB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in SPE2579DB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 			
 

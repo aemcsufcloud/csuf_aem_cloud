@@ -28,6 +28,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -71,10 +72,9 @@ public class TaxFilingStatementDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -419,10 +419,16 @@ public class TaxFilingStatementDB implements WorkflowProcess {
 
 						log.debug("dataMapInfo of TaxFilingStatementDB= {}", dataMapInfo);
 
-						dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID,
+									dataMapInfo, "STUDENT_SIGN_DATE,FIN_AID_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
 				}
-			}
+			/*}*/
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
@@ -446,7 +452,7 @@ public class TaxFilingStatementDB implements WorkflowProcess {
 							"IO Exception in TaxFilingStatementDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
+/*			if (conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
@@ -454,7 +460,7 @@ public class TaxFilingStatementDB implements WorkflowProcess {
 							"SQL Exception in TaxFilingStatementDB " + Arrays.toString(e.getStackTrace()));
 				}
 
-			}
+			}*/
 		}
 	}
 }

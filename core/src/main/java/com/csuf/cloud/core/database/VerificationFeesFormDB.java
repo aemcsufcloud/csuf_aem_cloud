@@ -35,6 +35,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -74,10 +75,10 @@ public class VerificationFeesFormDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
-				if (conn != null) {
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -339,7 +340,7 @@ public class VerificationFeesFormDB implements WorkflowProcess {
 						dataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 						log.info("dataMapInfo= {}", dataMapInfo);
 					}
-				}
+				/*}*/
 			}
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
@@ -352,6 +353,12 @@ public class VerificationFeesFormDB implements WorkflowProcess {
 					dbUtil.insertFormData(conn, dataMapInfo, tableName, formName);
 				}
 			}*/
+			try {
+				CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMapInfo,
+						"DOB,INTIATOR_SIGN_DATE,VERIFICATION_SIGN_DATE");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 		} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 			log.error(Arrays.toString(e.getStackTrace()));
 		} finally {
@@ -362,14 +369,14 @@ public class VerificationFeesFormDB implements WorkflowProcess {
 					log.error("IO Exception in VehicleReleaseFormDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
+			/*if (conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
 					log.error("SQL Exception in VehicleReleaseFormDB " + Arrays.toString(e.getStackTrace()));
 				}
 
-			}
+			}*/
 		}
 	}
 

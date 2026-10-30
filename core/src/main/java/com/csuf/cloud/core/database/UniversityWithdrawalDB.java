@@ -36,6 +36,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -65,8 +66,8 @@ public class UniversityWithdrawalDB implements WorkflowProcess {
 		LinkedHashMap<String, Object> dataMap = null;
 		MetaDataMap metaDataMapVal = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -210,7 +211,7 @@ public class UniversityWithdrawalDB implements WorkflowProcess {
 					}
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, caseid, "CaseId", workflowInstanceID, tableName);
@@ -221,7 +222,14 @@ public class UniversityWithdrawalDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, caseid, "CaseId", workflowInstanceID, dataMap,
+							"STUDENT_SIGNDATE,REGISTRATIONUNIT_SIGNDATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -235,14 +243,14 @@ public class UniversityWithdrawalDB implements WorkflowProcess {
 						log.debug("IOException in UniversityWithdrawalDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in UniversityWithdrawalDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}

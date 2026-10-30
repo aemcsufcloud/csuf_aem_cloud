@@ -25,6 +25,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -106,8 +107,8 @@ public class SPEUnit4DB implements WorkflowProcess {
 		String hrCooLname = "";
 		String hrCoo_name = "";
 		LinkedHashMap<String, Object> dataMap = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String workflowInstanceId = workItem.getWorkflow().getId();
 		if (StringUtils.isNotBlank(payloadPath)) {
 			try {
@@ -287,7 +288,7 @@ public class SPEUnit4DB implements WorkflowProcess {
 					dataMap.put("DIVISION_NAME", division_name);
 					dataMap.put("HRCOO_NAME", hrCoo_name);
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					String resultData = dbUtil.getSPEEvalData(conn, empId,"EMPL_ID", workflowInstanceId, tableName);
 					if (resultData != null && !resultData.equals("")) {
@@ -296,7 +297,14 @@ public class SPEUnit4DB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, empId, "EMPL_ID", workflowInstanceId, dataMap,
+							"RATE_PERIOD_FROM,RATE_PERIOD_TO,DRAFT_DATE,EVAL_SIGN_DATE,HR_COORD_DATE,EMP_SIGN_DATE,ADMIN_DATE,HR_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (Exception e) {
 				log.error("Exception in SPEUnit4DB=" + Arrays.toString(e.getStackTrace()));
@@ -307,13 +315,13 @@ public class SPEUnit4DB implements WorkflowProcess {
 					} catch (IOException e) {
 						log.error("IOException in SPEUnit4DB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in SPEUnit4DB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 			
 		}

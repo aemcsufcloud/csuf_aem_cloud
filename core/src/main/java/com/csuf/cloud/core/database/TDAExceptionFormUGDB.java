@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -60,8 +61,8 @@ public class TDAExceptionFormUGDB implements WorkflowProcess {
 		String assignee = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -208,7 +209,7 @@ public class TDAExceptionFormUGDB implements WorkflowProcess {
 						}
 					}
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, cwid, "CWID", workflowInstanceID, tableName);
@@ -219,7 +220,14 @@ public class TDAExceptionFormUGDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATOR_SIGN_DATE,GRAD_REVIEWER_SIGN_DATE,ATCE_REVIEWER_SIGN_DATE,TDA_REVIEWER_SIGN_DATE,DEAN_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -233,14 +241,14 @@ public class TDAExceptionFormUGDB implements WorkflowProcess {
 						log.debug("IOException in TDAExceptionFormUGDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in TDAExceptionFormUGDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 		}
 	}

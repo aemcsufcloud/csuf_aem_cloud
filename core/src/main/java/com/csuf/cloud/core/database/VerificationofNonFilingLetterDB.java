@@ -32,6 +32,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -61,8 +62,8 @@ public class VerificationofNonFilingLetterDB implements WorkflowProcess{
 		String caseid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -182,6 +183,13 @@ public class VerificationofNonFilingLetterDB implements WorkflowProcess{
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
 				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,STUDENT_SIGN_DATE,FINANCIAL_AID_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
+
 
 			}  catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -192,13 +200,13 @@ public class VerificationofNonFilingLetterDB implements WorkflowProcess{
 					} catch (IOException e) {
 						log.debug("IOException in VerificationofNonFilingLetterDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in VerificationofNonFilingLetterDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 			
 

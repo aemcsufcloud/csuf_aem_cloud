@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -73,10 +74,9 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 
 				DatabaseUtils dbUtil = new DatabaseUtils();
 
-				String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-				conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
-				if (conn != null) {
+				/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+				conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
+				/*if (conn != null) {*/
 
 					Element afBoundDataElement = XMLUtils.getParentNode(doc, "afBoundData");
 
@@ -151,10 +151,16 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 						familyMembersDetails(formName, requestType, finanicialAidSign, afBoundDataElement, childTableName, caseId,
 								workflowInstanceID, cwid, conn); // Method to insert the data from the Grid
 
-						dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);
+						/*dbUtil.insertFormData(conn, dataMapInfo, parentTableName, formName);*/
+						try {
+							CloudDbSaveUtil.saveFormData(parentTableName, formName, cwid, "CWID", workflowInstanceID,
+									dataMapInfo, "STUDENT_SIGN_DATE,FIN_AID_SIGN_DATE");
+						} catch (IOException ioException) {
+							ioException.printStackTrace();
+						}
 					}
 				}
-			}
+			/*}*/
 			/*if (conn != null) {
 				DatabaseUtils dbUtil = new DatabaseUtils();
 				log.error("Connection Successfull");
@@ -178,7 +184,7 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 							"IO Exception in StudentFamilySizeCertificateDB " + Arrays.toString(e.getStackTrace()));
 				}
 			}
-			if (conn != null) {
+/*			if (conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
@@ -186,7 +192,7 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 							"SQL Exception in StudentFamilySizeCertificateDB " + Arrays.toString(e.getStackTrace()));
 				}
 
-			}
+			}*/
 		}
 	}
 
@@ -256,7 +262,12 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 				memberDataMapInfo.put("ENROLLED_UNITS", units);
 				memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 				
-				dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID,
+							memberDataMapInfo, "DOB");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 
 			}
 			
@@ -288,7 +299,12 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 			studentDataMapInfo.put("ENROLLED_UNITS", studentEnrolledInMoreThanSizUnits);
 			studentDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 			
-			dbUtil.insertFormData(conn, studentDataMapInfo, childTableName, formName);	
+			try {
+				CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, studentDataMapInfo,
+						"DOB");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		} else if ((requestType.equals("FAFSA")) && (financialAidSign.isEmpty())) {
 			// memberDataMapInfo = new LinkedHashMap<String, Object>();
@@ -340,7 +356,12 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 				memberDataMapInfo.put("ENROLLED_UNITS", units);
 				memberDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 				
-				dbUtil.insertFormData(conn, memberDataMapInfo, childTableName, formName);
+				try {
+					CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID,
+							memberDataMapInfo, "DOB");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
 
 			}
 			
@@ -371,7 +392,12 @@ public class StudentFamilySizeCertificateDB implements WorkflowProcess {
 			studentDataMapInfo.put("ENROLLED_UNITS", studentEnrolledInMoreThanSizUnits);
 			studentDataMapInfo.put("WORKFLOW_INSTANCE_ID", workflowInstanceID);
 			
-			dbUtil.insertFormData(conn, studentDataMapInfo, childTableName, formName);		
+			try {
+				CloudDbSaveUtil.saveFormData(childTableName, formName, "", "", workflowInstanceID, studentDataMapInfo,
+						"DOB");
+			} catch (IOException ioException) {
+				ioException.printStackTrace();
+			}
 
 		}
 	}

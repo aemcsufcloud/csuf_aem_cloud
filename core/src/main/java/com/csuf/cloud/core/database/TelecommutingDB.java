@@ -28,6 +28,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -124,8 +125,8 @@ public class TelecommutingDB implements WorkflowProcess {
 		String divisionApproverComments = "";
 		String workflowInstance = workItem.getWorkflow().getId();
 		LinkedHashMap<String, Object> dataMap = null;
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String workflowInstanceId = workItem.getWorkflow().getId();
 		MetaDataMap metaDataMap = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
 		if (StringUtils.isNotBlank(payloadPath)) {
@@ -368,7 +369,7 @@ public class TelecommutingDB implements WorkflowProcess {
 					dataMap.put("DIVISION_APP_COMMENTS", divisionApproverComments);
 
 				}
-				if (conn != null) {
+				/*if (conn != null) {
 					DatabaseUtils dbUtil = new DatabaseUtils();
 					log.error("Connection Successfull");
 					String resultData = dbUtil.getSPEEvalData(conn, emplid, "EMPLID", workflowInstanceId, tableName);
@@ -378,7 +379,14 @@ public class TelecommutingDB implements WorkflowProcess {
 					} else {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
+				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, emplid, "EMPLID", workflowInstanceId, dataMap,
+							"ST_DT,END_DT,EMPSIGNDATE,ADMINSIGNDATE,HRDISIGNDATE,TELECOMMUTERSIGNDATE,AVPSIGNDATE,DIVISION_APP_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
 				}
+
 
 			} catch (Exception e) {
 				log.error("Exception in TelecommutingDB=" + Arrays.toString(e.getStackTrace()));
@@ -389,13 +397,13 @@ public class TelecommutingDB implements WorkflowProcess {
 					} catch (IOException e) {
 						log.error("IOException in TelecommutingDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in TelecommutingDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 			
 

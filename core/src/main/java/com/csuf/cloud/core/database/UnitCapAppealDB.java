@@ -31,6 +31,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.XMLUtils;
 import com.google.gson.JsonArray;
 
@@ -59,8 +60,8 @@ public class UnitCapAppealDB implements WorkflowProcess {
 		String caseid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigFilenetService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -312,6 +313,13 @@ public class UnitCapAppealDB implements WorkflowProcess {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
 				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"INITIATED_DATE,STUDENT_SIGN_DATE,ACADEMIC_DEPARTMENT_SIGN_DATE,ACADEMIC_ADVISING_SIGN_DATE,FINANCIAL_AID_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
+
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -322,14 +330,14 @@ public class UnitCapAppealDB implements WorkflowProcess {
 					} catch (IOException e) {
 						log.debug("IOException in UnitCapAppealDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error(
 								"SQLException in UnitCapAppealDB Finally Block=" + Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}

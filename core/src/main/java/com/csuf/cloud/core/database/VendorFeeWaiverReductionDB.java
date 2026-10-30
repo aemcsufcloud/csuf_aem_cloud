@@ -28,6 +28,7 @@ import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
 import com.csuf.cloud.core.services.TaskService;
 import com.csuf.cloud.core.utils.CSUFUtils;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -54,8 +55,8 @@ public class VendorFeeWaiverReductionDB implements WorkflowProcess {
 		String cwid = "";
 		LinkedHashMap<String, Object> dataMap = null;
 
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
@@ -141,6 +142,13 @@ public class VendorFeeWaiverReductionDB implements WorkflowProcess {
 						dbUtil.insertFormData(conn, dataMap, tableName, formName);
 					}
 				}*/
+				try {
+					CloudDbSaveUtil.saveFormData(tableName, formName, cwid, "CWID", workflowInstanceID, dataMap,
+							"EVENT_DATE,INITIATOR_DATE,FACILITIES_OFFICER_SIGN_DATE");
+				} catch (IOException ioException) {
+					ioException.printStackTrace();
+				}
+
 
 			} catch (RepositoryException | SAXException | IOException | ParserConfigurationException e) {
 				log.debug(Arrays.toString(e.getStackTrace()) + "Message-----" + e.getMessage());
@@ -152,14 +160,14 @@ public class VendorFeeWaiverReductionDB implements WorkflowProcess {
 						log.debug("IOException in CSUFEmergencyAssistanceGrantDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				if (conn != null) {
+/*				if (conn != null) {
 					try {
 						conn.close();
 					} catch (SQLException e) {
 						log.error("SQLException in CSUFEmergencyAssistanceGrantDB Finally Block="
 								+ Arrays.toString(e.getStackTrace()));
 					}
-				}
+				}*/
 			}
 
 		}
