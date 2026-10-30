@@ -38,6 +38,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.CSUFUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
 
@@ -61,9 +62,8 @@ public class CSUFNewPositionDescriptionManagerWFHistoryDB implements WorkflowPro
 		ResourceResolver resolver = workflowSession.adaptTo(ResourceResolver.class);
 		String payloadPath = workItem.getWorkflowData().getPayload().toString();
 
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
-		conn = jdbcConnectionService.getDBConn(dataSourceVal);
-
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();*/
+		/*conn = jdbcConnectionService.getDBConn(dataSourceVal);*/
 		String paramsValue = ((String) processArguments.get("PROCESS_ARGS", "string")).toString();
 		LinkedHashMap<String, Object> dataMap = null;
 
@@ -285,9 +285,14 @@ public class CSUFNewPositionDescriptionManagerWFHistoryDB implements WorkflowPro
 				dataMap.put("STEP_RESPONSE", stepResponse);
 				dataMap.put("STEP_NAME", stepName);
 				dataMap.put("COMMENTS", comments);
-				if (conn != null) {
+				/*if (conn != null) {
 					log.info("Connection Successfull");
 					insertWFHistory(conn, dataMap);
+				}*/
+				try {
+					CloudDbSaveUtil.saveWorkflowHistory(paramsValue, dataMap);
+				} catch (IOException ioException) {
+					log.error("IOException saving WF history: " + ioException.getMessage());
 				}
 			}
 

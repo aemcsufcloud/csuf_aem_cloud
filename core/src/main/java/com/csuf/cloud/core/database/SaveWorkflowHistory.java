@@ -249,10 +249,9 @@ public class SaveWorkflowHistory implements WorkflowProcess {
 			DatabaseUtils.insertWFHistory(conn, dataMap);
 		}*/
 		try {
-			CloudDbSaveUtil.saveFormData("AEM_WORKFLOW_HISTORY", "Workflow History", "", "", workflowInstance, dataMap,
-					"STEP_START_TIME,STEP_COMPLETE_TIME");
+			CloudDbSaveUtil.saveWorkflowHistory(param1, dataMap);
 		} catch (IOException ioException) {
-			ioException.printStackTrace();
+			log.error("IOException saving WF history: " + ioException.getMessage());
 		}
 	}
 

@@ -29,6 +29,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
+import com.csuf.cloud.core.utils.CloudDbSaveUtil;
 import com.csuf.cloud.core.utils.CSUFUtils;
 import com.csuf.cloud.core.utils.DatabaseUtils;
 import com.csuf.cloud.core.utils.XMLUtils;
@@ -160,7 +161,7 @@ public class VerificationRequestFeeFormWFHistoryDB implements WorkflowProcess {
 		dataMap.put("STEP_RESPONSE", stepResponse);
 		dataMap.put("STEP_NAME", stepName);
 		dataMap.put("COMMENTS", comments);
-		String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
+		/*String dataSourceVal = globalConfigCSUFService.getAEMFormsDatabaseSource();
 		try (Connection conn = jdbcConnectionService.getDBConn(dataSourceVal);) {
 			if (conn != null) {
 				log.info("Connection Successfull");
@@ -169,6 +170,11 @@ public class VerificationRequestFeeFormWFHistoryDB implements WorkflowProcess {
 			}
 		} catch (SQLException e) {
 			log.error(Arrays.toString(e.getStackTrace()));
+		}*/
+		try {
+			CloudDbSaveUtil.saveWorkflowHistory(paramsValue, dataMap);
+		} catch (IOException ioException) {
+			log.error("IOException saving WF history: " + ioException.getMessage());
 		}
 	}
 }
