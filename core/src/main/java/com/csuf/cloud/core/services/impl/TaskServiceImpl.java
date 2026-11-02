@@ -233,6 +233,9 @@ public class TaskServiceImpl implements TaskService {
 	    payload.put("showSubmit", showSubmitButton);
 	    payload.put("showSave", showSaveButton);
 	    payload.put("showReset", showResetButton);
+	    payload.put("show_submit", showSubmitButton);
+	    payload.put("show_save", showSaveButton);
+	    payload.put("show_reset", showResetButton);
 	    
 	    log.debug("saveTask 5="+payload.toString());
 	    
@@ -1038,12 +1041,20 @@ public String getTaskDataOld(String workItemId) {
 			get = new HttpGet(processingConfig.processingUrl().concat(url));
 			String auth = new StringBuffer(processingConfig.userName()).append(":")
 					.append(processingConfig.userSecurity()).toString();
+			log.error("Bank auth="+auth);
 			
 			byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII));
 			String authHeader = "Basic " + new String(encodedAuth);
+			
+			log.error("Bank authHeader="+authHeader);
+			
 			get.setHeader("AUTHORIZATION", authHeader);
 			response = httpclient.execute(get);
+			log.error("Bank response="+response.toString());
+			
 			if (null != response && response.getStatusLine().getStatusCode() == 200) {
+				log.error("Bank Inside response="+response.toString());
+
 				return EntityUtils.toString(response.getEntity());
 			}
 		} catch (IOException e) {
@@ -1170,6 +1181,7 @@ public String getTaskDataOld(String workItemId) {
 
 	private void applyWorkItemActionFlags(JsonObject jsonObj, JsonObject dbObj, WorkflowSession wfSession) {
 		String workItemId = getSafe(dbObj, "workitem_id");
+		boolean flagsFromWorkItem = false;
 		if (wfSession != null && StringUtils.isNotBlank(workItemId)) {
 			try {
 				WorkItem item = wfSession.getWorkItem(workItemId);
@@ -1181,15 +1193,23 @@ public String getTaskDataOld(String workItemId) {
 					if (StringUtils.isNotBlank(routes)) {
 						jsonObj.addProperty("routes_data", routes);
 					}
-					return;
+					flagsFromWorkItem = true;
 				}
 			} catch (Exception e) {
 				log.warn("Unable to read SHOW_* flags from work item {}", workItemId, e);
 			}
 		}
-		jsonObj.addProperty("show_submit", normalizeFlag(dbObj, "show_submit", "showSubmit"));
-		jsonObj.addProperty("show_save", normalizeFlag(dbObj, "show_save", "showSave"));
-		jsonObj.addProperty("show_reset", normalizeFlag(dbObj, "show_reset", "showReset"));
+		if (!flagsFromWorkItem) {
+			jsonObj.addProperty("show_submit", normalizeFlag(dbObj, "show_submit", "showSubmit"));
+			jsonObj.addProperty("show_save", normalizeFlag(dbObj, "show_save", "showSave"));
+			jsonObj.addProperty("show_reset", normalizeFlag(dbObj, "show_reset", "showReset"));
+		}
+		String routesData = jsonObj.has("routes_data") && !jsonObj.get("routes_data").isJsonNull()
+				? jsonObj.get("routes_data").getAsString()
+				: "";
+		if (StringUtils.isNotBlank(routesData)) {
+			jsonObj.addProperty("show_submit", "false");
+		}
 	}
 
 	private String normalizeFlag(JsonObject obj, String... keys) {
@@ -1222,7 +1242,18 @@ public String getTaskDataOld(String workItemId) {
 	}
 
 	private String getSafe(JsonObject obj, String key) {
-		return obj.has(key) && !obj.get(key).isJsonNull() ? obj.get(key).getAsString() : "";
+		if (obj == null || !obj.has(key) || obj.get(key).isJsonNull()) {
+			return "";
+		}
+		JsonElement el = obj.get(key);
+		try {
+			if (el.isJsonPrimitive()) {
+				return el.getAsString();
+			}
+			return el.toString();
+		} catch (Exception e) {
+			return "";
+		}
 	}
 
 	private String bool(JsonObject obj, String key) {
