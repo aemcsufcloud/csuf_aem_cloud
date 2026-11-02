@@ -26,18 +26,21 @@ var startDate = localStorage.getItem('startDate');
 var isAllowed = false;
 
 
-debugger;
-//show-hide action buttons on task details page        
-if (showReset1 == "false") {
-    $(".cls-action-menu-reset").css('display', 'none');
+function isActionFlagTrue(value) {
+    return String(value).toLowerCase() === "true";
 }
 
-if (showSubmit1 == "false") {
-    $(".cls-action-menu-submit").css('display', 'none');
+//show-hide action buttons on task details page
+if (!isActionFlagTrue(showReset1)) {
+    $(".cls-action-menu-reset").closest("li").css('display', 'none');
 }
 
-if (showSave1 == "false") {
-    $(".cls-action-menu-save").css('display', 'none');
+if (!isActionFlagTrue(showSubmit1)) {
+    $(".cls-action-menu-submit[data-type='Submit']").closest("li").css('display', 'none');
+}
+
+if (!isActionFlagTrue(showSave1)) {
+    $(".cls-action-menu-save").closest("li").css('display', 'none');
 }
 
 if (routesData1 != null && routesData1 != "undefined") {
@@ -61,8 +64,8 @@ function showLeftSection(x) {
 }
 
 function isUploadTaskAttachmentAllowed() {
-	/*alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
-	alert(itemId);*/
+	alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
+	alert(itemId);
 $(".cls-task-attachments").css('display', 'none');
 var requestURL = '/bin/getInboxItemDetails?action=UPLOAD_TASK_ATTACHMENTS_ALLOWED&workItemId=' + encodeURIComponent(itemId);
 $.ajax({
@@ -122,6 +125,7 @@ function getTaskAttachments() {
 
 function getWorkflowHistory() {
     //console.log("workItemId : " + itemId);
+	//alert("workItemId : " + itemId);
 	
     $("#tb-workflow-history").find("tr:gt(0)").remove();
     var requestURL = '/bin/manageTask?action=WORKITEM_HISTORY&workItemId=' + encodeURIComponent(itemId);
@@ -175,7 +179,6 @@ function getLastActionAndCommentDetails() {
 }
 
 function isViewTaskDetailsAllowed() {
-
     var requestURL = '/bin/getInboxItemDetails?action=VIEW_TASK_DETAILS_ALLOWED&assignee=' + taskAssignee;
     $.ajax({
         type: "GET",
@@ -185,7 +188,7 @@ function isViewTaskDetailsAllowed() {
         cache: false,
         success: function (response) {
             if (response && response == 'true') {
-				
+				//alert("My Task="+response);
                 isAllowed = true;
             }
         }

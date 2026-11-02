@@ -213,10 +213,11 @@ $(document).ready(function() {
         isViewTaskDetailsAllowed = $(".chb:checked").closest(".clickable-row").data("isviewtaskdetailsallowed");
         isAssigneeAGroup = $(".chb:checked").closest(".clickable-row").data("isassigneeagroup");
         currentUserId = $(".chb:checked").closest(".clickable-row").data("currentuserid");
-        routesData = $(".chb:checked").closest(".clickable-row").data("routesdata");
-        showSubmit = $(".chb:checked").closest(".clickable-row").data("showsubmit");
-        showSave = $(".chb:checked").closest(".clickable-row").data("showsave");
-        showReset = $(".chb:checked").closest(".clickable-row").data("showreset");
+        var selectedRow = $(".chb:checked").closest(".clickable-row");
+        routesData = selectedRow.attr("data-routesdata");
+        showSubmit = String(selectedRow.attr("data-showsubmit")).toLowerCase() === "true" ? "true" : "false";
+        showSave = String(selectedRow.attr("data-showsave")).toLowerCase() === "true" ? "true" : "false";
+        showReset = String(selectedRow.attr("data-showreset")).toLowerCase() === "true" ? "true" : "false";
         //lastActionTaken = $(".chb:checked").closest(".clickable-row").data("lastactiontaken");
         //lastActionComment = $(".chb:checked").closest(".clickable-row").data("lastactioncomment");        
         console.log(workItemId);
@@ -279,8 +280,10 @@ $(document).ready(function() {
 			//alert("isViewTaskDetailsAllowed detail="+isViewTaskDetailsAllowed);
             // show access-not-allowed screen
             //window.location = '/content/csu/us/en/access-denied.html?wcmmode=disabled';
-			 window.location = '/content/csu/us/en/access-denied.html';
+			window.location = '/content/csu/us/en/access-denied.html';
         } else {
+			/*alert("else Cond");
+			alert(isViewTaskDetailsAllowed);*/
             //window.location = '/content/csu/us/en/task-details.html?wcmmode=disabled';
 			window.location = '/content/csu/us/en/task-details.html';
         }
@@ -351,7 +354,8 @@ $(document).ready(function() {
                 if (resp && resp == "success") {
                     $("#modal-self-assign-action").modal("hide");
                     $("#modal-select-delegatee-action").modal("hide");
-                    window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+                    //window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+					window.location = '/content/csu/us/en/my-tasks.html';
                 }
             },
             error: function(resp, xhr, error, errorThrown) {
@@ -433,7 +437,8 @@ $(document).ready(function() {
         $('.inbox').removeClass('action-show');
         $('div.card').removeClass('active');
         $(".chb").prop('checked', false);
-        window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+        //window.location = '/content/csu/us/en/my-tasks.html?wcmmode=disabled';
+		window.location = '/content/csu/us/en/my-tasks.html';
     };
 
     var frameURL = localStorage.getItem('selectedTaskURL');
@@ -563,6 +568,7 @@ $(document).ready(function() {
             cache: false,
             dataType: "text",
             success: function(stepDetails) {
+				alert("stepDetails="+stepDetails);
                 if (stepDetails) {
                     stepDetails = JSON.parse(stepDetails);
                     //console.log("stepDetails : " + stepDetails);
