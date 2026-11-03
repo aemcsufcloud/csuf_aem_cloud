@@ -1148,15 +1148,15 @@ public String getTaskDataOld(String workItemId) {
 
 				// ----- Flags -----
 				if (!processingConfig.dbType().equalsIgnoreCase("ORACLE")) {
-					//jsonObj.addProperty("show_submit", getSafe(obj, "show_submit"));
-					jsonObj.addProperty("show_submit", true);
+					jsonObj.addProperty("show_submit", getSafe(obj, "show_submit"));
+					//jsonObj.addProperty("show_submit", true);
 					jsonObj.addProperty("show_save", getSafe(obj, "show_save"));
 					jsonObj.addProperty("show_reset", getSafe(obj, "show_reset"));
 					jsonObj.addProperty("show_action_taken", getSafe(obj, "show_action_taken"));
 					jsonObj.addProperty("show_comment", getSafe(obj, "show_comment"));
 				} else {
-					//jsonObj.addProperty("show_submit", bool(obj, "show_submit"));
-					jsonObj.addProperty("show_submit", true);
+					jsonObj.addProperty("show_submit", bool(obj, "show_submit"));
+					//jsonObj.addProperty("show_submit", true);
 					jsonObj.addProperty("show_save", bool(obj, "show_save"));
 					jsonObj.addProperty("show_reset", bool(obj, "show_reset"));
 					jsonObj.addProperty("show_action_taken", bool(obj, "show_action_taken"));
