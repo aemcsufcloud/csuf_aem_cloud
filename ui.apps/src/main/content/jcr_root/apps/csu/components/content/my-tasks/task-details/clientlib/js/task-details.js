@@ -11,6 +11,7 @@ var showReset1 = localStorage.getItem('showReset');
 var showSubmit1 = localStorage.getItem('showSubmit');
 var showSave1 = localStorage.getItem('showSave');
 var routesData1 = localStorage.getItem('routesData');
+alert("routesData1="+routesData1);
 
 var currentUserId1 = $(".cls-current-user-id").text();
 /*var lastActionTaken1 = localStorage.getItem('lastActionTaken');
@@ -26,12 +27,30 @@ var startDate = localStorage.getItem('startDate');
 var isAllowed = false;
 
 
-function isActionFlagTrue(value) {
-    return String(value).toLowerCase() === "true";
+debugger;
+//show-hide action buttons on task details page        
+if (showReset1 == "false") {
+    $(".cls-action-menu-reset").css('display', 'none');
 }
 
-function hasRouteActions(value) {
-    return value != null && value !== "undefined" && String(value).replace(/,/g, "").trim() !== "";
+if (showSubmit1 == "false") {
+    $(".cls-action-menu-submit").css('display', 'none');
+}
+
+if (showSave1 == "false") {
+    $(".cls-action-menu-save").css('display', 'none');
+}
+
+if (routesData1 != null && routesData1 != "undefined") {
+	alert("inside routesData1="+routesData1);
+
+    routesData1 = routesData1.split(",");
+    for (i in routesData1) {
+        if (routesData1[i]) {
+            $(".cls-action-menu-task-details").prepend($("<li></li>").addClass("action-items-menus task-detail-action-item-detail")
+                .html("<a class='cls-action-menu-submit' href='#' data-toggle='modal' data-type='" + routesData1[i] + "'><i class='fas fa-paper-plane fa-icon'></i><span class='action-item-text-detail'>&nbsp;" + routesData1[i] + "</span></a>"));
+        }
+    }
 }
 
 function isEmpty(value) {
@@ -90,8 +109,8 @@ function getTaskAttachments() {
 					//alert("jsonData : " + jsonData);
                     var row = $("<tr/>");
                     $("#attachments-table").append(row);
-                    row.append($("<td class='left-menu-text'>" + jsonData.fileName + "<\/td>"));
-                    row.append($("<td style='text-align:center'><a class='action-icn' href='/bin/getTaskAttachmentFromProcessingInstance?assetPath=" + encodeURIComponent(jsonData.path) + "'><i class='fas fa-eye' tool-tip-toggle='tooltip-icon' data-original-title='View Supporting Document'><\/i><\/a><\/td>"));
+                    row.append($("<td class='left-menu-text'>" + jsonData.fileName + "</td>"));
+                    row.append($("<td style='text-align:center'><a class='action-icn' href='/bin/getTaskAttachmentFromProcessingInstance?assetPath=" + encodeURIComponent(jsonData.path) + "'><i class='fas fa-eye' tool-tip-toggle='tooltip-icon' data-original-title='View Supporting Document'></i></a>"));
 					//var test ="/bin/getTaskAttachmentFromProcessingInstance?assetPath=" + encodeURIComponent(jsonData.path);
                   /*  row.append($("<td style='text-align:center'><a class='action-icn' href='/bin/viewTaskAttachment?assetPath=" + encodeURIComponent(jsonData.path) + "' target='_blank'><i class='fas fa-eye' tool-tip-toggle='tooltip-icon' data-original-title='View Supporting Document'></i></a></td>"));*/
 				  console.log("jsonData.path : " + jsonData.path);
@@ -123,14 +142,14 @@ function getWorkflowHistory() {
                     var jsonData = wfHistoryArray[i];
                     var row = $("<tr class='table-row'/>");
                     $("#tb-workflow-history").append(row);
-                    row.append($("<td class='wf-history-task-title'>" + jsonData.taskTitle + "<\/td>"));
-                    row.append($("<td>" + jsonData.stage + "<\/td>"));
-                    row.append($("<td><img class='header-user-img' src='/content/dam/csu/generic_user.png' alt='Person Profile Icon'>&nbsp;&nbsp;" + jsonData.taskAssignee + "<\/td>"));
-                    row.append($("<td>" + jsonData.startDate + "<\/td>"));
-                    row.append($("<td>" + jsonData.endDate + "<\/td>"));
-                    row.append($("<td>" + jsonData.action + "<\/td>"));
-                    row.append($("<td>" + ((jsonData.comment != null && jsonData.comment != "undefined") ? jsonData.comment : '') + "<\/td>"));
-                    row.append($("<td><a class='view-task-details-link' data-title='" + jsonData.taskTitle + "' data-id='" + jsonData.actualWorkItemId + "' data-historyitemid='" + jsonData.historyWorkItemId + "' data-initialsubmission='" + jsonData.isInitialSubmission + "' data-historysubmission='" + jsonData.isHistorySubmission + "' href='" + jsonData.viewDetailsLink + "' target='_blank'>" + (jsonData.viewDetailsLink ? "View Details" : "") + "<\/a><\/td>"));
+                    row.append($("<td class='wf-history-task-title'>" + jsonData.taskTitle + "</td>"));
+                    row.append($("<td>" + jsonData.stage + "</td>"));
+                    row.append($("<td><img class='header-user-img' src='/content/dam/csu/generic_user.png' alt='Person Profile Icon'>&nbsp;&nbsp;" + jsonData.taskAssignee + "</td>"));
+                    row.append($("<td>" + jsonData.startDate + "</td>"));
+                    row.append($("<td>" + jsonData.endDate + "</td>"));
+                    row.append($("<td>" + jsonData.action + "</td>"));
+                    row.append($("<td>" + ((jsonData.comment != null && jsonData.comment != "undefined") ? jsonData.comment : '') + "</td>"));
+                    row.append($("<td><a class='view-task-details-link' data-title='" + jsonData.taskTitle + "' data-id='" + jsonData.actualWorkItemId + "' data-historyitemid='" + jsonData.historyWorkItemId + "' data-initialsubmission='" + jsonData.isInitialSubmission + " 'data-historysubmission='" + jsonData.isHistorySubmission + "' href='" + jsonData.viewDetailsLink + "' target='_blank'>" + (jsonData.viewDetailsLink ? 'View Details' : '') + "</a></td>"));
                 }
             }
         }
@@ -177,28 +196,6 @@ function isViewTaskDetailsAllowed() {
 }
 
 $(document).ready(function () {
-
-    if (!isActionFlagTrue(showReset1)) {
-        $(".cls-action-menu-reset").closest("li").hide();
-    }
-
-    if (!isActionFlagTrue(showSubmit1) || hasRouteActions(routesData1)) {
-        $("a.cls-action-menu-submit[data-type='Submit']").closest("li").hide();
-    }
-
-    if (!isActionFlagTrue(showSave1)) {
-        $(".cls-action-menu-save").closest("li").hide();
-    }
-
-    if (routesData1 != null && routesData1 != "undefined") {
-        var routeLabels = String(routesData1).split(",");
-        for (var r = 0; r < routeLabels.length; r++) {
-            if (routeLabels[r]) {
-                $(".cls-action-menu-task-details").prepend($("<li></li>").addClass("action-items-menus task-detail-action-item-detail")
-                    .html("<a class='cls-action-menu-submit' href='#' data-toggle='modal' data-type='" + routeLabels[r] + "'><i class='fas fa-paper-plane fa-icon'></i><span class='action-item-text-detail'>&nbsp;" + routeLabels[r] + "</span></a>"));
-            }
-        }
-    }
 
     getLastActionAndCommentDetails();
 

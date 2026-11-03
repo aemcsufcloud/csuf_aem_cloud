@@ -233,9 +233,6 @@ public class TaskServiceImpl implements TaskService {
 	    payload.put("showSubmit", showSubmitButton);
 	    payload.put("showSave", showSaveButton);
 	    payload.put("showReset", showResetButton);
-	    payload.put("show_submit", showSubmitButton);
-	    payload.put("show_save", showSaveButton);
-	    payload.put("show_reset", showResetButton);
 	    
 	    log.debug("saveTask 5="+payload.toString());
 	    
@@ -1093,13 +1090,7 @@ public String getTaskDataOld(String workItemId) {
 			return jsonArray; // return empty array
 		}
 		log.info("After DB fetch (before parsing tasks): {}", LocalTime.now());
-		ResourceResolver workflowResolver = null;
-		WorkflowSession wfSession = null;
 		try {
-			workflowResolver = globalConfigService.getResourceResolver();
-			if (workflowResolver != null) {
-				wfSession = workflowResolver.adaptTo(WorkflowSession.class);
-			}
 			for (JsonElement element : resultArray) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
@@ -1155,105 +1146,35 @@ public String getTaskDataOld(String workItemId) {
 				// Routes
 				jsonObj.addProperty("routes_data", getSafe(obj, "routes_data"));
 
+				// ----- Flags -----
 				if (!processingConfig.dbType().equalsIgnoreCase("ORACLE")) {
+					//jsonObj.addProperty("show_submit", getSafe(obj, "show_submit"));
+					jsonObj.addProperty("show_submit", true);
+					jsonObj.addProperty("show_save", getSafe(obj, "show_save"));
+					jsonObj.addProperty("show_reset", getSafe(obj, "show_reset"));
 					jsonObj.addProperty("show_action_taken", getSafe(obj, "show_action_taken"));
 					jsonObj.addProperty("show_comment", getSafe(obj, "show_comment"));
 				} else {
+					//jsonObj.addProperty("show_submit", bool(obj, "show_submit"));
+					jsonObj.addProperty("show_submit", true);
+					jsonObj.addProperty("show_save", bool(obj, "show_save"));
+					jsonObj.addProperty("show_reset", bool(obj, "show_reset"));
 					jsonObj.addProperty("show_action_taken", bool(obj, "show_action_taken"));
 					jsonObj.addProperty("show_comment", bool(obj, "show_comment"));
 				}
-
-				applyWorkItemActionFlags(jsonObj, obj, wfSession);
 				
 				jsonArray.add(jsonObj);
 			}
 
 		} catch (Exception e) {
 			log.error("Error processing JSON: {}", e.getMessage(), e);
-		} finally {
-			if (workflowResolver != null && workflowResolver.isLive()) {
-				workflowResolver.close();
-			}
 		}
 
 		return jsonArray;
 	}
 
-	private void applyWorkItemActionFlags(JsonObject jsonObj, JsonObject dbObj, WorkflowSession wfSession) {
-		String workItemId = getSafe(dbObj, "workitem_id");
-		boolean flagsFromWorkItem = false;
-		if (wfSession != null && StringUtils.isNotBlank(workItemId)) {
-			try {
-				WorkItem item = wfSession.getWorkItem(workItemId);
-				if (item != null && item.getNode() != null) {
-					jsonObj.addProperty("show_submit", String.valueOf(ArgumentParser.showSubmit(item)));
-					jsonObj.addProperty("show_save", String.valueOf(ArgumentParser.showSave(item)));
-					jsonObj.addProperty("show_reset", String.valueOf(ArgumentParser.showReset(item)));
-					String routes = ArgumentParser.getRoutes(item);
-					if (StringUtils.isNotBlank(routes)) {
-						jsonObj.addProperty("routes_data", routes);
-					}
-					flagsFromWorkItem = true;
-				}
-			} catch (Exception e) {
-				log.warn("Unable to read SHOW_* flags from work item {}", workItemId, e);
-			}
-		}
-		if (!flagsFromWorkItem) {
-			jsonObj.addProperty("show_submit", normalizeFlag(dbObj, "show_submit", "showSubmit"));
-			jsonObj.addProperty("show_save", normalizeFlag(dbObj, "show_save", "showSave"));
-			jsonObj.addProperty("show_reset", normalizeFlag(dbObj, "show_reset", "showReset"));
-		}
-		String routesData = jsonObj.has("routes_data") && !jsonObj.get("routes_data").isJsonNull()
-				? jsonObj.get("routes_data").getAsString()
-				: "";
-		if (StringUtils.isNotBlank(routesData)) {
-			jsonObj.addProperty("show_submit", "false");
-		}
-	}
-
-	private String normalizeFlag(JsonObject obj, String... keys) {
-		for (String key : keys) {
-			if (!obj.has(key) || obj.get(key).isJsonNull()) {
-				continue;
-			}
-			JsonElement el = obj.get(key);
-			String raw;
-			try {
-				if (el.isJsonPrimitive() && el.getAsJsonPrimitive().isBoolean()) {
-					raw = Boolean.toString(el.getAsBoolean());
-				} else {
-					raw = el.getAsString();
-				}
-			} catch (Exception e) {
-				continue;
-			}
-			if (StringUtils.isBlank(raw)) {
-				continue;
-			}
-			if ("true".equalsIgnoreCase(raw) || "Y".equalsIgnoreCase(raw) || "1".equals(raw)) {
-				return "true";
-			}
-			if ("false".equalsIgnoreCase(raw) || "N".equalsIgnoreCase(raw) || "0".equals(raw)) {
-				return "false";
-			}
-		}
-		return "false";
-	}
-
 	private String getSafe(JsonObject obj, String key) {
-		if (obj == null || !obj.has(key) || obj.get(key).isJsonNull()) {
-			return "";
-		}
-		JsonElement el = obj.get(key);
-		try {
-			if (el.isJsonPrimitive()) {
-				return el.getAsString();
-			}
-			return el.toString();
-		} catch (Exception e) {
-			return "";
-		}
+		return obj.has(key) && !obj.get(key).isJsonNull() ? obj.get(key).getAsString() : "";
 	}
 
 	private String bool(JsonObject obj, String key) {

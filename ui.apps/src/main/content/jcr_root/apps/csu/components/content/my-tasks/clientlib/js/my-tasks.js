@@ -213,11 +213,10 @@ $(document).ready(function() {
         isViewTaskDetailsAllowed = $(".chb:checked").closest(".clickable-row").data("isviewtaskdetailsallowed");
         isAssigneeAGroup = $(".chb:checked").closest(".clickable-row").data("isassigneeagroup");
         currentUserId = $(".chb:checked").closest(".clickable-row").data("currentuserid");
-        var selectedRow = $(".chb:checked").closest(".clickable-row");
-        routesData = selectedRow.attr("data-routesdata");
-        showSubmit = String(selectedRow.attr("data-showsubmit")).toLowerCase() === "true" ? "true" : "false";
-        showSave = String(selectedRow.attr("data-showsave")).toLowerCase() === "true" ? "true" : "false";
-        showReset = String(selectedRow.attr("data-showreset")).toLowerCase() === "true" ? "true" : "false";
+        routesData = $(".chb:checked").closest(".clickable-row").data("routesdata");
+        showSubmit = $(".chb:checked").closest(".clickable-row").data("showsubmit");
+        showSave = $(".chb:checked").closest(".clickable-row").data("showsave");
+        showReset = $(".chb:checked").closest(".clickable-row").data("showreset");
         //lastActionTaken = $(".chb:checked").closest(".clickable-row").data("lastactiontaken");
         //lastActionComment = $(".chb:checked").closest(".clickable-row").data("lastactioncomment");        
         console.log(workItemId);
