@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
-
 import javax.jcr.RepositoryException;
 import javax.xml.parsers.ParserConfigurationException;
 
