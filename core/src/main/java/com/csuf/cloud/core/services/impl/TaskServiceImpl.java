@@ -1069,14 +1069,20 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public JsonArray getAllTasks(Session currentUserSession) {
+		log.error("Testing getAllTasks");
 		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getMyTasksData";
 		JsonArray resultArray = new JsonArray();
 		JsonArray jsonArray = new JsonArray();
+		log.error("Testing getAllTasks1");
+
 		try (CloseableHttpClient client = HttpClients.createDefault()) {
 			HttpPost post = new HttpPost(dbServiceUrl);
+			log.error("Testing dbServiceUrl="+dbServiceUrl);
+			
 			post.addHeader("Content-Type", "application/json");
 			try (CloseableHttpResponse response = client.execute(post)) {
-				log.debug("GetAllTasks Response: {}", response.getStatusLine());
+				log.error("Pushpa GetAllTasks Response: {}", response.getStatusLine());
+				
 				BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 				StringBuilder sb = new StringBuilder();
 				String line;
@@ -1084,18 +1090,23 @@ public String getTaskDataOld(String workItemId) {
 					sb.append(line);
 				}
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
+				log.error("pushpa resultarray: {}", resultArray.size());
+
 			}
 		} catch (Exception e) {
 			log.error("Error calling DB service: {}", e.getMessage(), e);
 			return jsonArray; // return empty array
 		}
 		log.info("After DB fetch (before parsing tasks): {}", LocalTime.now());
-		log.info("resultarray: {}", resultArray.size());
 		try {
 			for (JsonElement element : resultArray) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
+				log.info("Pushpa assignee=" +assignee);
+				log.info("Pushpa currentUserSession=" +currentUserSession);
+
+
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
 				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				/*if (!isViewTaskAllowed) 
