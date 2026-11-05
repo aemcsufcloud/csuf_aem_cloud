@@ -1090,7 +1090,7 @@ public String getTaskDataOld(String workItemId) {
 			return jsonArray; // return empty array
 		}
 		log.info("After DB fetch (before parsing tasks): {}", LocalTime.now());
-		log.info("After DB fetch (before parsing tasks): {}", resultArray.size());
+		log.info("resultarray: {}", resultArray.size());
 		try {
 			for (JsonElement element : resultArray) {
 				JsonObject obj = element.getAsJsonObject();
