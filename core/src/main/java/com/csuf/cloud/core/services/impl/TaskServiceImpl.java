@@ -1102,17 +1102,17 @@ public String getTaskDataOld(String workItemId) {
 					continue;*/
 				
 				JsonObject jsonObj = new JsonObject();
-				jsonObj.addProperty("isViewTaskAllowed", "true");
+				//jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
 				jsonObj.addProperty("isCurrentUserAdmin", "false");
 				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");
 
 				// ----- AEM Permission Block -----
-				/*jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
+				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
 				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				
-				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
+				/*jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				log.info("Test1=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				
 				jsonObj.addProperty("isViewTaskDetailsAllowed",
