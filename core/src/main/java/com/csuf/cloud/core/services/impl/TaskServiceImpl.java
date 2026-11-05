@@ -1096,18 +1096,18 @@ public String getTaskDataOld(String workItemId) {
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				/*if (!isViewTaskAllowed) {
+				if (!isViewTaskAllowed) {
 					continue;
-				}*/
+				}
 				JsonObject jsonObj = new JsonObject();
-				jsonObj.addProperty("isViewTaskAllowed", "true");
+				/*jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
 				jsonObj.addProperty("isCurrentUserAdmin", "false");
-				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");
+				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");*/
 
 				// ----- AEM Permission Block -----
-				/*jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
+				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
 				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				log.info("Test1=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				
@@ -1115,7 +1115,7 @@ public String getTaskDataOld(String workItemId) {
 						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
 				jsonObj.addProperty("isCurrentUserAdmin", inboxService.isCurrentUserAdmin(currentUserSession));
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
-				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));*/
+				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
@@ -1148,6 +1148,9 @@ public String getTaskDataOld(String workItemId) {
 
 				// ----- Flags -----
 				if (!processingConfig.dbType().equalsIgnoreCase("ORACLE")) {
+					/*log.error("Sparient here1");
+					log.error("Sparient show_submit1="+bool(obj, "show_submit"));*/
+					
 					jsonObj.addProperty("show_submit", getSafe(obj, "show_submit"));
 					//jsonObj.addProperty("show_submit", true);
 					jsonObj.addProperty("show_save", getSafe(obj, "show_save"));
@@ -1155,6 +1158,9 @@ public String getTaskDataOld(String workItemId) {
 					jsonObj.addProperty("show_action_taken", getSafe(obj, "show_action_taken"));
 					jsonObj.addProperty("show_comment", getSafe(obj, "show_comment"));
 				} else {
+					/*log.error("Sparient here");
+					log.error("Sparient show_submit="+bool(obj, "show_submit"));*/
+					
 					jsonObj.addProperty("show_submit", bool(obj, "show_submit"));
 					//jsonObj.addProperty("show_submit", true);
 					jsonObj.addProperty("show_save", bool(obj, "show_save"));
