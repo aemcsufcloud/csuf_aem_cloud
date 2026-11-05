@@ -1098,18 +1098,18 @@ public String getTaskDataOld(String workItemId) {
 				String assignee = getSafe(obj, "assignee");
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
 				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
-				if (!isViewTaskAllowed) 
-					continue;
+				/*if (!isViewTaskAllowed) 
+					continue;*/
 				
 				JsonObject jsonObj = new JsonObject();
-				/*jsonObj.addProperty("isViewTaskAllowed", "true");
+				jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
 				jsonObj.addProperty("isCurrentUserAdmin", "false");
-				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");*/
+				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");
 
 				// ----- AEM Permission Block -----
-				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
+				/*jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
 				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				
 				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
@@ -1119,7 +1119,7 @@ public String getTaskDataOld(String workItemId) {
 						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
 				jsonObj.addProperty("isCurrentUserAdmin", inboxService.isCurrentUserAdmin(currentUserSession));
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
-				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));
+				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));*/
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
