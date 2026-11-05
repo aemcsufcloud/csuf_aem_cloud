@@ -354,14 +354,22 @@ public class InboxItemServiceImpl implements InboxItemService {
 
 	@Override
 	public boolean isViewInboxTaskAllowed(Session currentUserSession, String assignee) throws Exception {
+		log.info("Pushpa isViewTaskAllowed method=");
 		try {
 			String currentUserId = currentUserSession.getUserID();
+			log.info("Pushpa isViewTaskAllowed currentUserId="+currentUserId);
 			log.debug(" currentUserId : - " + currentUserId);
 			if ((currentUserSession instanceof JackrabbitSession)) {
+				log.info("Pushpa inside currentUserSession");
+				
 				UserManager userManager = ((JackrabbitSession) currentUserSession).getUserManager();
 				Authorizable workItemAssignee = userManager.getAuthorizable(assignee);
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
+				log.info("Pushpa inside currentUser="+currentUser);
+				
 				Group adminGroup = (Group) userManager.getAuthorizable("administrators");
+				log.info("Pushpa inside adminGroup="+adminGroup);
+				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
 						|| currentUserId.equals(assignee)) {
 					log.debug(currentUserId + " user is either an admin or the task assignee");

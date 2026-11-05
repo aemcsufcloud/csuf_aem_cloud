@@ -1090,15 +1090,17 @@ public String getTaskDataOld(String workItemId) {
 			return jsonArray; // return empty array
 		}
 		log.info("After DB fetch (before parsing tasks): {}", LocalTime.now());
+		log.info("After DB fetch (before parsing tasks): {}", resultArray.size());
 		try {
 			for (JsonElement element : resultArray) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				if (!isViewTaskAllowed) {
+				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				if (!isViewTaskAllowed) 
 					continue;
-				}
+				
 				JsonObject jsonObj = new JsonObject();
 				/*jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
@@ -1108,6 +1110,8 @@ public String getTaskDataOld(String workItemId) {
 
 				// ----- AEM Permission Block -----
 				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
+				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				
 				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				log.info("Test1=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				
