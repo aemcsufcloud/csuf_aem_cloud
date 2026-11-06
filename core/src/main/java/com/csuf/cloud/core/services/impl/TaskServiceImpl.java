@@ -1069,19 +1069,18 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public JsonArray getAllTasks(Session currentUserSession) {
-		log.error("Sparient Testing getAllTasks");
+		//log.error("Sparient Testing getAllTasks");
 		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getMyTasksData";
 		JsonArray resultArray = new JsonArray();
 		JsonArray jsonArray = new JsonArray();
-		log.error("Sparient Testing getAllTasks1");
+		//log.error("Sparient Testing getAllTasks1");
 
 		try (CloseableHttpClient client = HttpClients.createDefault()) {
 			HttpPost post = new HttpPost(dbServiceUrl);
-			log.error("Sparient Testing dbServiceUrl="+dbServiceUrl);
+			//log.error("Sparient Testing dbServiceUrl="+dbServiceUrl);
 			
 			post.addHeader("Content-Type", "application/json");
 			try (CloseableHttpResponse response = client.execute(post)) {
-				log.error("Sparient Pushpa GetAllTasks Response: {}", response.getStatusLine());
 				
 				BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 				StringBuilder sb = new StringBuilder();
@@ -1090,7 +1089,6 @@ public String getTaskDataOld(String workItemId) {
 					sb.append(line);
 				}
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
-				log.error("Sparient pushpa resultarray: {}", resultArray.size());
 
 			}
 		} catch (Exception e) {
@@ -1103,16 +1101,23 @@ public String getTaskDataOld(String workItemId) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
-				log.error("Sparient Pushpa assignee=" +assignee);
-				log.error("Sparient Pushpa currentUserSession=" +currentUserSession);
+				log.error("Home assignee=" +assignee);
+				log.error("Home currentUserSession=" +currentUserSession);
+				
+				JsonObject jsonObj = new JsonObject();
+				jsonObj.addProperty("isViewTaskDetailsAllowed",
+						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
+				
+				log.info("Home isViewTaskDetailsAllowed=" +inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
+				
 
 
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				log.error("Sparient Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				log.error("Home isViewTaskAllowed=" +isViewTaskAllowed);
 				if (!isViewTaskAllowed) 
 					continue;
 				
-				JsonObject jsonObj = new JsonObject();
+				//JsonObject jsonObj = new JsonObject();
 				/*jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
@@ -1121,10 +1126,9 @@ public String getTaskDataOld(String workItemId) {
 
 				// ----- AEM Permission Block -----
 				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
-				log.info("Sparient Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				
 				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
-				log.info("Sparient isAssigneeAGroup=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
+				log.info("Home isAssigneeAGroup=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				
 				jsonObj.addProperty("isViewTaskDetailsAllowed",
 						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));

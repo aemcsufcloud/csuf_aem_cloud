@@ -297,7 +297,6 @@ public class InboxItemServiceImpl implements InboxItemService {
 				    log.error("Rancho Inside Loop");
 				    return true;
 				}
-
 				/*if (currentUserId.equalsIgnoreCase(assignee)) {
 					return true;
 				}*/
@@ -357,34 +356,28 @@ public class InboxItemServiceImpl implements InboxItemService {
 		log.error("Sparient Pushpa isViewTaskAllowed method=");
 		try {
 			String currentUserId = currentUserSession.getUserID();
-			log.error("Sparient Pushpa isViewTaskAllowed currentUserId="+currentUserId);
-			log.error(" currentUserId : - " + currentUserId);
+			
 			if ((currentUserSession instanceof JackrabbitSession)) {
-				log.error("Sparient Pushpa inside currentUserSession");
 				
 				UserManager userManager = ((JackrabbitSession) currentUserSession).getUserManager();
 				Authorizable workItemAssignee = userManager.getAuthorizable(assignee);
-				log.error("Pushpa workItemAssignee="+workItemAssignee);
-
 				
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
-				log.error("Sparient Pushpa inside currentUser="+currentUser);
+				//log.error("Sparient Pushpa inside currentUser="+currentUser);
 				
 				Group adminGroup = (Group) userManager.getAuthorizable("administrators");
-				log.error("Sparient Pushpa inside adminGroup="+adminGroup);
-				
-
+				/*log.error("Sparient Pushpa inside adminGroup="+adminGroup);
 				log.error("Sparient Anagha1 : - " + adminGroup);
 				log.error("Sparient Anagha2 : - " + adminGroup.isMember(currentUser));
 				log.error("Sparient Anagha3 : - " + currentUserId.equalsIgnoreCase("admin"));
-				log.error("Sparient Anagha4 : - " + currentUserId.equalsIgnoreCase(assignee));
+				log.error("Sparient Anagha4 : - " + currentUserId.equalsIgnoreCase(assignee));*/
 				
 				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
 						|| currentUserId.equalsIgnoreCase(assignee)) {
 					log.error("Inside condition anagha little flower 1");
 					
-					log.debug(currentUserId + " user is either an admin or the task assignee");
+					log.error(currentUserId + " user is either an admin or the task assignee");
 					return true;
 				}
 				if (null != workItemAssignee && workItemAssignee.isGroup()) {
