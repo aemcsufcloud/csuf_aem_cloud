@@ -1103,14 +1103,14 @@ public String getTaskDataOld(String workItemId) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
-				log.info("Pushpa assignee=" +assignee);
-				log.info("Pushpa currentUserSession=" +currentUserSession);
+				log.error("Pushpa assignee=" +assignee);
+				log.error("Pushpa currentUserSession=" +currentUserSession);
 
 
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
-				/*if (!isViewTaskAllowed) 
-					continue;*/
+				log.error("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				if (!isViewTaskAllowed) 
+					continue;
 				
 				JsonObject jsonObj = new JsonObject();
 				//jsonObj.addProperty("isViewTaskAllowed", "true");

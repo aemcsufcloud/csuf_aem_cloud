@@ -354,24 +354,36 @@ public class InboxItemServiceImpl implements InboxItemService {
 
 	@Override
 	public boolean isViewInboxTaskAllowed(Session currentUserSession, String assignee) throws Exception {
-		log.info("Pushpa isViewTaskAllowed method=");
+		log.error("Pushpa isViewTaskAllowed method=");
 		try {
 			String currentUserId = currentUserSession.getUserID();
-			log.info("Pushpa isViewTaskAllowed currentUserId="+currentUserId);
-			log.debug(" currentUserId : - " + currentUserId);
+			log.error("Pushpa isViewTaskAllowed currentUserId="+currentUserId);
+			log.error(" currentUserId : - " + currentUserId);
 			if ((currentUserSession instanceof JackrabbitSession)) {
-				log.info("Pushpa inside currentUserSession");
+				log.error("Pushpa inside currentUserSession");
 				
 				UserManager userManager = ((JackrabbitSession) currentUserSession).getUserManager();
 				Authorizable workItemAssignee = userManager.getAuthorizable(assignee);
+				log.error("Pushpa workItemAssignee="+workItemAssignee);
+
+				
 				Authorizable currentUser = userManager.getAuthorizable(currentUserId);
-				log.info("Pushpa inside currentUser="+currentUser);
+				log.error("Pushpa inside currentUser="+currentUser);
 				
 				Group adminGroup = (Group) userManager.getAuthorizable("administrators");
-				log.info("Pushpa inside adminGroup="+adminGroup);
+				log.error("Pushpa inside adminGroup="+adminGroup);
+				
+
+				log.error("Anagha1 : - " + adminGroup);
+				log.error("Anagha2 : - " + adminGroup.isMember(currentUser));
+				log.error("Anagha3 : - " + currentUserId.equalsIgnoreCase("admin"));
+				log.error("Anagha4 : - " + currentUserId.equals(assignee));
+				
 				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
 						|| currentUserId.equals(assignee)) {
+					log.error("Inside condition anagha little flower 1");
+					
 					log.debug(currentUserId + " user is either an admin or the task assignee");
 					return true;
 				}
