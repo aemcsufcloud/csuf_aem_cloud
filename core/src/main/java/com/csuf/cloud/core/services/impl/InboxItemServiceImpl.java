@@ -377,11 +377,11 @@ public class InboxItemServiceImpl implements InboxItemService {
 				log.error("Sparient Anagha1 : - " + adminGroup);
 				log.error("Sparient Anagha2 : - " + adminGroup.isMember(currentUser));
 				log.error("Sparient Anagha3 : - " + currentUserId.equalsIgnoreCase("admin"));
-				log.error("Sparient Anagha4 : - " + currentUserId.equals(assignee));
+				log.error("Sparient Anagha4 : - " + currentUserId.equalsIgnoreCase(assignee));
 				
 				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
-						|| currentUserId.equals(assignee)) {
+						|| currentUserId.equalsIgnoreCase(assignee)) {
 					log.error("Inside condition anagha little flower 1");
 					
 					log.debug(currentUserId + " user is either an admin or the task assignee");
