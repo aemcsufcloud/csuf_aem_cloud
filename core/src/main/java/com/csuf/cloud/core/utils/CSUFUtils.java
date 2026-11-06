@@ -341,8 +341,10 @@ public class CSUFUtils {
 	}
 
 	public static boolean isAuthorizableAGroup(Session currentUserSession, String authorizableId) {
+		log.error("Sparient isAuthorizableAGroup");
 		try {
 			if ((currentUserSession instanceof JackrabbitSession)) {
+				log.error("Sparient inside condition");
 				UserManager userManager = ((JackrabbitSession) currentUserSession).getUserManager();
 				Authorizable authorizable = userManager.getAuthorizable(authorizableId);
 				if (authorizable != null) {

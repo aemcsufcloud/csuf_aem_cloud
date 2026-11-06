@@ -1069,19 +1069,19 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public JsonArray getAllTasks(Session currentUserSession) {
-		log.error("Testing getAllTasks");
+		log.error("Sparient Testing getAllTasks");
 		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getMyTasksData";
 		JsonArray resultArray = new JsonArray();
 		JsonArray jsonArray = new JsonArray();
-		log.error("Testing getAllTasks1");
+		log.error("Sparient Testing getAllTasks1");
 
 		try (CloseableHttpClient client = HttpClients.createDefault()) {
 			HttpPost post = new HttpPost(dbServiceUrl);
-			log.error("Testing dbServiceUrl="+dbServiceUrl);
+			log.error("Sparient Testing dbServiceUrl="+dbServiceUrl);
 			
 			post.addHeader("Content-Type", "application/json");
 			try (CloseableHttpResponse response = client.execute(post)) {
-				log.error("Pushpa GetAllTasks Response: {}", response.getStatusLine());
+				log.error("Sparient Pushpa GetAllTasks Response: {}", response.getStatusLine());
 				
 				BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 				StringBuilder sb = new StringBuilder();
@@ -1090,7 +1090,7 @@ public String getTaskDataOld(String workItemId) {
 					sb.append(line);
 				}
 				resultArray = JsonParser.parseString(sb.toString()).getAsJsonArray();
-				log.error("pushpa resultarray: {}", resultArray.size());
+				log.error("Sparient pushpa resultarray: {}", resultArray.size());
 
 			}
 		} catch (Exception e) {
@@ -1103,34 +1103,40 @@ public String getTaskDataOld(String workItemId) {
 				JsonObject obj = element.getAsJsonObject();
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
-				log.error("Pushpa assignee=" +assignee);
-				log.error("Pushpa currentUserSession=" +currentUserSession);
+				log.error("Sparient Pushpa assignee=" +assignee);
+				log.error("Sparient Pushpa currentUserSession=" +currentUserSession);
 
 
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				log.error("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				log.error("Sparient Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				if (!isViewTaskAllowed) 
 					continue;
 				
 				JsonObject jsonObj = new JsonObject();
-				//jsonObj.addProperty("isViewTaskAllowed", "true");
+				/*jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
 				jsonObj.addProperty("isCurrentUserAdmin", "false");
-				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");
+				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");*/
 
 				// ----- AEM Permission Block -----
 				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
-				log.info("Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
+				log.info("Sparient Pushpa isViewTaskAllowed=" +isViewTaskAllowed);
 				
-				/*jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
-				log.info("Test1=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
+				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
+				log.info("Sparient isAssigneeAGroup=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				
 				jsonObj.addProperty("isViewTaskDetailsAllowed",
 						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
+				log.info("Sparient isViewTaskDetailsAllowed=" +inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
+				
 				jsonObj.addProperty("isCurrentUserAdmin", inboxService.isCurrentUserAdmin(currentUserSession));
+				log.info("Sparient isCurrentUserAdmin=" +inboxService.isCurrentUserAdmin(currentUserSession));
+				
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
-				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));*/
+				log.info("Sparient currentUserId=" +inboxService.getCurrentUserId(currentUserSession));
+				
+				log.info("Sparient Chaitanya=" +jsonObj.toString());
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
