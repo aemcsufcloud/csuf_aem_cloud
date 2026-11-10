@@ -64,8 +64,8 @@ function showLeftSection(x) {
 }
 
 function isUploadTaskAttachmentAllowed() {
-	alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
-	alert(itemId);
+	/*alert("UPLOAD_TASK_ATTACHMENTS_ALLOWED");
+	alert(itemId);*/
 $(".cls-task-attachments").css('display', 'none');
 var requestURL = '/bin/getInboxItemDetails?action=UPLOAD_TASK_ATTACHMENTS_ALLOWED&workItemId=' + encodeURIComponent(itemId);
 $.ajax({
@@ -179,7 +179,9 @@ function getLastActionAndCommentDetails() {
 }
 
 function isViewTaskDetailsAllowed() {
+	alert("isViewTaskDetailsAllowed method");
     var requestURL = '/bin/getInboxItemDetails?action=VIEW_TASK_DETAILS_ALLOWED&assignee=' + taskAssignee;
+	alert("requestURL method="+requestURL);
     $.ajax({
         type: "GET",
         contentType: "application/text; charset=utf-8",
@@ -227,9 +229,11 @@ $(document).ready(function () {
 	
 	
 	if (currentUserId1 && taskAssignee && isAssigneeAGroup1 !== 'true') {
-		//alert("TESTING="+currentUserId1);
+		alert("TESTING="+currentUserId1);
+		alert("taskAssignee="+taskAssignee);
+		alert("isAssigneeAGroup1="+isAssigneeAGroup1);
 	    if (currentUserId1.trim().toLowerCase() !== taskAssignee.trim().toLowerCase()) {
-			//alert("TESTING123 inside");
+			alert("TESTING123 inside");
 	        $("#modal-self-assign-action").modal("hide");
 	        alert("You do not have the permission to access this task.");
 	        location.href = document.referrer;
