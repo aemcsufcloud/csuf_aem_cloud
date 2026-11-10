@@ -4,6 +4,12 @@ var inboxUILink = "/content/csu/us/en/task-details.html",
     selectedFormRoute, guideBridge = null,
     xmlData = null,
     isCurrentUserAdmin, isViewTaskDetailsAllowed, isAssigneeAGroup, currentUserId, routesData, showSubmit, showSave, showReset, lastActionTaken, lastActionComment;
+	
+$(document).on('click', '.clickable-row', function () {
+var value = $(this).attr('data-isviewtaskdetailsallowed');
+console.log("isViewTaskDetailsAllowed:", value);
+alert("isViewTaskDetailsAllowed="+isViewTaskDetailsAllowed);
+});
 
 $(document).ready(function() {
     debugger;
@@ -209,6 +215,7 @@ $(document).ready(function() {
 
     function processCheckedTaskRow() {
         workItemId = $(".chb:checked").closest(".clickable-row").data("id");
+		alert("workItemId="+$(".chb:checked").closest(".clickable-row").data("id"));
         isCurrentUserAdmin = $(".chb:checked").closest(".clickable-row").data("iscurrentuseradmin");
         isViewTaskDetailsAllowed = $(".chb:checked").closest(".clickable-row").data("isviewtaskdetailsallowed");
         isAssigneeAGroup = $(".chb:checked").closest(".clickable-row").data("isassigneeagroup");
@@ -247,10 +254,11 @@ $(document).ready(function() {
         localStorage.setItem('workflow', workflow);
         localStorage.setItem('status', status);
         localStorage.setItem('startDate', startDate);
+		
 
 		alert("isViewTaskDetailsAllowed="+isViewTaskDetailsAllowed);
 		alert("currentUserId="+currentUserId);
-		alert("currentUserId="+currentUserId);
+		alert("isViewTaskDetailsAllowed checkbox ="+$(".chb:checked").closest(".clickable-row").data("isviewtaskdetailsallowed"));
 
 
         if (!isCurrentUserAdmin) {

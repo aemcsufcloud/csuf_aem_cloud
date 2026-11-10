@@ -11,7 +11,7 @@ var showReset1 = localStorage.getItem('showReset');
 var showSubmit1 = localStorage.getItem('showSubmit');
 var showSave1 = localStorage.getItem('showSave');
 var routesData1 = localStorage.getItem('routesData');
-alert("routesData1="+routesData1);
+//alert("routesData1="+routesData1);
 
 var currentUserId1 = $(".cls-current-user-id").text();
 /*var lastActionTaken1 = localStorage.getItem('lastActionTaken');
@@ -297,6 +297,7 @@ $(document).ready(function () {
     })
 
     if (isViewTaskDetailsAllowed1 == "true" && isAssigneeAGroup1 == 'true') {
+		alert("isViewTaskDetailsAllowed1="+isViewTaskDetailsAllowed1);
         $("#modal-self-assign-action").modal("show");
     }
 

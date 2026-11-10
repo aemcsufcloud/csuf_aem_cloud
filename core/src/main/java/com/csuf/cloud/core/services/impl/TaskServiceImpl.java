@@ -1140,7 +1140,7 @@ public String getTaskDataOld(String workItemId) {
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
 				log.info("Sparient currentUserId=" +inboxService.getCurrentUserId(currentUserSession));
 				
-				log.info("Sparient Chaitanya=" +jsonObj.toString());
+				//log.info("Sparient Chaitanya=" +jsonObj.toString());
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
@@ -1195,6 +1195,9 @@ public String getTaskDataOld(String workItemId) {
 				}
 				
 				jsonArray.add(jsonObj);
+				
+				log.info("Hello Test=" +jsonObj.toString());
+
 			}
 
 		} catch (Exception e) {
