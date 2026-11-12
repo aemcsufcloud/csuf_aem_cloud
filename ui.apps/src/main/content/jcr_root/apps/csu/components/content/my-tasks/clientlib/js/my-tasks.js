@@ -285,7 +285,7 @@ $(document).ready(function() {
     }
 
     $('#open-details').click(function() {
-		alert("here open details");
+		alert("here open details="+isViewTaskDetailsAllowed);
         if (!isViewTaskDetailsAllowed) {
 			alert("isViewTaskDetailsAllowed detail="+isViewTaskDetailsAllowed);
             // show access-not-allowed screen
