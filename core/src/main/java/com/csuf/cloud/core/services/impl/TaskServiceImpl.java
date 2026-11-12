@@ -1125,22 +1125,30 @@ public String getTaskDataOld(String workItemId) {
 				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");*/
 
 				// ----- AEM Permission Block -----
-				jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
-				
+				/*jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
 				jsonObj.addProperty("isAssigneeAGroup", CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
 				log.info("Home isAssigneeAGroup=" +CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee));
-				
 				jsonObj.addProperty("isViewTaskDetailsAllowed",
 						inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
 				log.info("Sparient isViewTaskDetailsAllowed=" +inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee));
-				
 				jsonObj.addProperty("isCurrentUserAdmin", inboxService.isCurrentUserAdmin(currentUserSession));
 				log.info("Sparient isCurrentUserAdmin=" +inboxService.isCurrentUserAdmin(currentUserSession));
-				
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
-				log.info("Sparient currentUserId=" +inboxService.getCurrentUserId(currentUserSession));
+				log.info("Sparient currentUserId=" +inboxService.getCurrentUserId(currentUserSession));*/
 				
-				//log.info("Sparient Chaitanya=" +jsonObj.toString());
+				
+				boolean isAssigneeAGroup = CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee);
+				boolean isViewTaskDetailsAllowed = inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee);
+				boolean isCurrentUserAdmin = inboxService.isCurrentUserAdmin(currentUserSession);
+				String currentUserId = inboxService.getCurrentUserId(currentUserSession);
+				jsonObj.addProperty("isViewTaskAllowed", String.valueOf(isViewTaskAllowed));
+				jsonObj.addProperty("isAssigneeAGroup", String.valueOf(isAssigneeAGroup));
+				jsonObj.addProperty("isViewTaskDetailsAllowed", String.valueOf(isViewTaskDetailsAllowed));
+				jsonObj.addProperty("isCurrentUserAdmin", String.valueOf(isCurrentUserAdmin));
+				jsonObj.addProperty("currentUserId", currentUserId);
+				
+				
+				log.info("Sparient Testing=" +jsonObj.toString());
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
