@@ -46,6 +46,7 @@ import com.adobe.granite.workflow.exec.HistoryItem;
 import com.adobe.granite.workflow.exec.Status;
 import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.Workflow;
+import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 import com.csuf.cloud.core.services.GlobalConfigService;
 import com.csuf.cloud.core.services.InboxItemService;
 import com.csuf.cloud.core.services.JDBCConnectionHelperService;
@@ -88,6 +89,9 @@ public class TaskServiceImpl implements TaskService {
 
 	@Reference
 	private ProcessingInstanceConfigService processingConfig;
+	
+	@Reference
+	private GlobalConfigCSUFService globalConfigCSUFService;
 
 	@Override
 	public String saveTask(WorkItem item, ResourceResolver resolver, Session session) throws Exception {
@@ -187,6 +191,9 @@ public class TaskServiceImpl implements TaskService {
 		String endDateString = (null != endDate ? convertDate(endDate) : null);
 		String statement = StringUtils.EMPTY;
 		log.debug("inside saveTask 4");
+		
+		String dbValue = globalConfigCSUFService.getDBSchema();
+		log.error("Apartment DB value="+dbValue);
 		
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils";
 	    

@@ -183,4 +183,7 @@ public @interface GlobalConfigAEMCSU {
 	
 	@AttributeDefinition(name = "Major Minor PeopleSoft API Username and Password", description = "Key in Major Minor PeopleSoft API Username and Password in the following format UserName:Password", type = AttributeType.STRING, defaultValue = "UserName:Password")
     String major_minor_ps_api_username_and_password();
+	
+	@AttributeDefinition(name = "DB Schema", description = "DB Schema", type = AttributeType.STRING, defaultValue = "AEMCLDEV")
+	String db_schema();
 }

@@ -118,4 +118,6 @@ public interface GlobalConfigCSUFService {
 	
 	String getMajorMinorPSAPIUsernameandPassword();
 	
+	String getDBSchema();
+	
 }

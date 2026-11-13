@@ -34,10 +34,7 @@ public class ProcessingInstanceConfigServiceImpl implements ProcessingInstanceCo
 	@Override
 	public String processingUrl() {
 		String pURL = config.processingUrl();
-		log.error("Skywalk URL: " + pURL);
-        System.out.println("Pushpa URL: " + pURL);
-
-        
+		log.error("Test ENV URL: " + pURL);
 		return config.processingUrl();
 	}
 

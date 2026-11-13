@@ -354,4 +354,10 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 	public String getMajorMinorPSAPIUsernameandPassword() {
 		return configNew.major_minor_ps_api_username_and_password();
 	}
+	
+	public String getDBSchema() {
+		String dbURL = configNew.db_schema();
+		log.error("Skywalk dbURL: " + dbURL);
+		return configNew.db_schema();
+	}
 }
