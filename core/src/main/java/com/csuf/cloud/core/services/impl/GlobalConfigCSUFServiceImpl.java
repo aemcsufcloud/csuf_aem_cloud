@@ -36,6 +36,7 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 
 	@Activate
 	public void activate(GlobalConfigAEMCSU configNew) {
+		log.error("GlobalConfig activated, db_schema={}", configNew.db_schema());
 		this.configNew = configNew;
 	}
 

@@ -157,10 +157,10 @@ public class GlobalConfigServiceImpl implements GlobalConfigService {
 		return null;
 	}
 
-//	@Override
-//	public String getGradeChangeFilenetURL() {	
-//		log.error(" Pushpa Grade Change Filenet Value="+configNew.grade_Change_Filenet_URL());
-//		return configNew.grade_Change_Filenet_URL();
-//	}
+	/*@Override
+	public String getGradeChangeFilenetURL() {	
+		log.error(" Pushpa Grade Change Filenet Value="+configNew.grade_Change_Filenet_URL());
+		return configNew.grade_Change_Filenet_URL();
+	}*/
 
 }
