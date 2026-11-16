@@ -36,7 +36,7 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 
 	@Activate
 	public void activate(GlobalConfigAEMCSU configNew) {
-		log.error("GlobalConfig activated, db_schema={}", configNew.db_schema());
+		//.error("GlobalConfig activated, db_schema={}", configNew.db_schema());
 		this.configNew = configNew;
 	}
 
@@ -356,9 +356,10 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 		return configNew.major_minor_ps_api_username_and_password();
 	}
 	
+	@Override
 	public String getDBSchema() {
-		String dbURL = configNew.db_schema();
-		log.error("Skywalk dbURL: " + dbURL);
-		return configNew.db_schema();
+		String dbURL = configNew.dbSchema();
+		log.error("Pushpa=" + dbURL);
+		return configNew.dbSchema();
 	}
 }
