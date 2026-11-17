@@ -392,7 +392,7 @@ public class InboxItemServiceImpl implements InboxItemService {
 				log.debug("Test adminGroup : - " + adminGroup);
 				
 				if ((null != adminGroup && adminGroup.isMember(currentUser)) || currentUserId.equalsIgnoreCase("admin")
-						|| currentUserId.equals(assignee)) {
+						|| currentUserId.equalsIgnoreCase(assignee)) {
 					log.debug("Testing Users"+ currentUserId + " user is either an admin or the task assignee");
 					return true;
 				}

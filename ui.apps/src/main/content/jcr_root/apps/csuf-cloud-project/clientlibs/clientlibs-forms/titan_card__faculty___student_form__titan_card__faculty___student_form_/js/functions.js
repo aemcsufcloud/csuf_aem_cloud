@@ -137,7 +137,7 @@ if (StageIndicator.value === null) {
         dataType: 'json',
         success: function(response) {
             var userValue = response.userId;
-           //userValue = "nvadlakunta";
+            userValue = "nvadlakunta";
             workflow_initiator.value = userValue;
            checkIfUserBelongsToGroup(userValue);
         },
@@ -150,12 +150,22 @@ if (StageIndicator.value === null) {
 function checkIfUserBelongsToGroup(userValue){
    $.ajax({
       type: 'GET',
-                url: "/bin/checkTheUserIsAnAuthorizableMember",
+                /*url: "/bin/checkTheUserIsAnAuthorizableMember",
                 data: {
                     userId: userValue,
                     groupId: "Titan-Card-Staff-Reviewers"
                 },
-                dataType: 'json',
+                dataType: 'json',*/
+				
+				url: window.location.origin + "/bin/fullertonProxy",
+				type: 'GET',
+				data: {
+					path: "checkTheUserIsAnAuthorizableMember",
+					userId: userValue,
+                    groupId: "Titan-Card-Staff-Reviewers"
+				},
+				dataType: 'json',
+					
                 success: function(response) {
                   var status = response.Result;
                   if (status === true) {
@@ -170,12 +180,20 @@ function checkIfUserBelongsToGroup(userValue){
 debugger;
 function getInitiatorDetails(userValue) {
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTitanCardData",
         data: {
             action: "STAFF_DETAILS",
             userID: userValue
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTitanCardData",
+			action: "STAFF_DETAILS",
+            userID: userValue
+		},
+					
         dataType: 'json',
         success: function(response) {
           debugger;
@@ -211,8 +229,14 @@ titan_card__faculty___student_form__titan_card__faculty___student_form_.generate
             this.enabled = false;
 if (StageIndicator.value === null) {
     $.ajax({
-        type: 'GET',
-        url: "/bin/getCaseID",
+        /*type: 'GET',
+        url: "/bin/getCaseID",*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getCaseID"
+		},
         dataType: 'json',
         success: function(myresponse) {
             caseId.value = myresponse.CASEID;
@@ -249,12 +273,20 @@ if (StageIndicator.value === null) {
 function getStudentDetails(cwidVal) {
   var result = "";
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTitanCardData",
         data: {
             action: "STUDENT_DETAILS_CWID_LOOKUP",
             cwid: cwidVal
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTitanCardData",
+			action: "STUDENT_DETAILS_CWID_LOOKUP",
+            cwid: cwidVal
+		},
         dataType: 'json',
         success: function(response) {
             debugger;
@@ -288,12 +320,22 @@ function getStudentDetails(cwidVal) {
 function getFacultyDetails(cwidVal) {
   var result = "";
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTitanCardData",
         data: {
             action: "STAFF_DETAILS_CWID_LOOKUP",
             cwid: cwidVal
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTitanCardData",
+			action: "STAFF_DETAILS_CWID_LOOKUP",
+            cwid: cwidVal
+		},
+        dataType: 'json',
+		
         dataType: 'json',
         success: function(response) {
             debugger;
@@ -344,12 +386,19 @@ if (StageIndicator.value === null) {
   
 
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTitanCardData",
         data: {
             action: "STAFF_DETAILS_CWID_LOOKUP",
             cwid: cwidVal
-        },
+        },*/
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTitanCardData",
+			action: "STAFF_DETAILS_CWID_LOOKUP",
+            cwid: cwidVal
+		},
         dataType: 'json',
         success: function(response) {
             debugger;
@@ -382,12 +431,21 @@ if (StageIndicator.value === null) {
 
  if(facultyCheck == "NoFacultyData" || facultyCheck === ""){
     $.ajax({
-        type: 'GET',
+        /*type: 'GET',
         url: "/bin/getTitanCardData",
         data: {
             action: "STUDENT_DETAILS_CWID_LOOKUP",
             cwid: cwidVal
-        },
+        },*/
+		
+		url: window.location.origin + "/bin/fullertonProxy",
+		type: 'GET',
+		data: {
+			path: "getTitanCardData",
+			action: "STUDENT_DETAILS_CWID_LOOKUP",
+            cwid: cwidVal
+		},
+		
         dataType: 'json',
         success: function(response) {
             debugger;
@@ -449,12 +507,21 @@ if (StageIndicator.value === null) {
   }
     if (cwidVal !== null) {
         $.ajax({
-            type: 'GET',
+            /*type: 'GET',
             url: "/bin/getTitanCardData",
             data: {
                 action: "STAFF_DETAILS_CWID_LOOKUP",
                 cwid: cwidVal
-            },
+            },*/
+			
+			url: window.location.origin + "/bin/fullertonProxy",
+			type: 'GET',
+			data: {
+				path: "getTitanCardData",
+				action: "STUDENT_DETAILS_CWID_LOOKUP",
+				cwid: cwidVal
+			},
+		
             dataType: 'json',
             success: function(response) {
                 debugger;
@@ -479,12 +546,21 @@ if (StageIndicator.value === null) {
                 }
                 } else {
                     $.ajax({
-                        type: 'GET',
+                        /*type: 'GET',
                         url: "/bin/getTitanCardData",
                         data: {
                             action: "STUDENT_DETAILS_CWID_LOOKUP",
                             cwid: cwidVal
-                        },
+                        },*/
+						
+						url: window.location.origin + "/bin/fullertonProxy",
+						type: 'GET',
+						data: {
+							path: "getTitanCardData",
+							action: "STUDENT_DETAILS_CWID_LOOKUP",
+                            cwid: cwidVal
+						},
+			
                         dataType: 'json',
                         success: function(response) {
                             debugger;
@@ -509,13 +585,13 @@ if (StageIndicator.value === null) {
                                }
                             } else {
                                 LastName.value = "";
-                    FirstName.value = "";
-                    Street.value = "";
-                    City.value = "";
-                    State.value = "";
-                    ZipCode.value = "";
-                    PhoneNumber.value = "";
-                    Email.value = "";
+								FirstName.value = "";
+								Street.value = "";
+								City.value = "";
+								State.value = "";
+								ZipCode.value = "";
+								PhoneNumber.value = "";
+								Email.value = "";
                                 showErrorModal("Alert!", "No matching records found");
                             }
                         },

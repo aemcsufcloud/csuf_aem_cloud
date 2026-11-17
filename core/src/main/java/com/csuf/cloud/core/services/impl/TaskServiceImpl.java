@@ -1096,15 +1096,15 @@ public String getTaskDataOld(String workItemId) {
 				// Validate assignee
 				String assignee = getSafe(obj, "assignee");
 				boolean isViewTaskAllowed = inboxService.isViewInboxTaskAllowed(currentUserSession, assignee);
-				/*if (!isViewTaskAllowed) {
+				if (!isViewTaskAllowed) 
 					continue;
-				}*/
+				
 				JsonObject jsonObj = new JsonObject();
-				jsonObj.addProperty("isViewTaskAllowed", "true");
+				/*jsonObj.addProperty("isViewTaskAllowed", "true");
 				jsonObj.addProperty("isAssigneeAGroup", "false");
 				jsonObj.addProperty("isViewTaskDetailsAllowed", "true");
 				jsonObj.addProperty("isCurrentUserAdmin", "false");
-				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");
+				jsonObj.addProperty("currentUserId", "yjayaram@fullerton.edu");*/
 
 				// ----- AEM Permission Block -----
 				/*jsonObj.addProperty("isViewTaskAllowed", isViewTaskAllowed);
@@ -1116,6 +1116,19 @@ public String getTaskDataOld(String workItemId) {
 				jsonObj.addProperty("isCurrentUserAdmin", inboxService.isCurrentUserAdmin(currentUserSession));
 				jsonObj.addProperty("currentUserId", inboxService.getCurrentUserId(currentUserSession));
 				log.info("Test2=" +inboxService.getCurrentUserId(currentUserSession));*/
+				
+				//New Code
+				boolean isAssigneeAGroup = CSUFUtils.isAuthorizableAGroup(currentUserSession, assignee);
+				boolean isViewTaskDetailsAllowed = inboxService.isViewTaskDetailsAllowed(currentUserSession, assignee);
+				boolean isCurrentUserAdmin = inboxService.isCurrentUserAdmin(currentUserSession);
+				String currentUserId = inboxService.getCurrentUserId(currentUserSession);
+				jsonObj.addProperty("isViewTaskAllowed", String.valueOf(isViewTaskAllowed));
+				jsonObj.addProperty("isAssigneeAGroup", String.valueOf(isAssigneeAGroup));
+				jsonObj.addProperty("isViewTaskDetailsAllowed", String.valueOf(isViewTaskDetailsAllowed));
+				jsonObj.addProperty("isCurrentUserAdmin", String.valueOf(isCurrentUserAdmin));
+				jsonObj.addProperty("currentUserId", currentUserId);
+				
+				//End new code
 
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
