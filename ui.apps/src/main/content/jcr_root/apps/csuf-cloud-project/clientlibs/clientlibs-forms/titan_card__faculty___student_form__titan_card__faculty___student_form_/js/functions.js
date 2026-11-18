@@ -171,7 +171,7 @@ function checkIfUserBelongsToGroup(userValue){
                   if (status === true) {
                      getInitiatorDetails(userValue);
                     } else {
-                      submit1607673526985.enabled = false;
+                      //submit1607673526985.enabled = false;
                       showErrorModal("Alert!", "Only Titan Card Staff can launch the form");
                     }
                 }
@@ -1552,7 +1552,10 @@ function getPdf() {
  * @param {scope} scope in which code inside function will be executed.
  */
 titan_card__faculty___student_form__titan_card__faculty___student_form_.generated_submit1607673526985_click0 = function (scope) {
+    alert("here");
     with(this) {
+            alert("here1");
+
         with(scope) {
             if(StageIndicator.value === null){
   aftiaDescCWID.value = FirstName.value+" "+LastName.value+" "+Cwid.value;
@@ -1569,7 +1572,8 @@ if(Email.value != ConfirmEmail.value){
 }else if(CurrentFundsOnAccount.value === null){
   showErrorModal("Alert!", "Please fill current funds on account field");
   guideBridge.setFocus("guide[0].guide1[0].guideRootPanel[0].ParentPanel[0].ReimburseCloseTitanTenderPanel[0].CurrentFundsOnAccount[0]");
-} //else if((FinalCheckTotal.value === null) || (FinalCheckTotal.value <= 0)){
+}
+   //else if((FinalCheckTotal.value === null) || (FinalCheckTotal.value <= 0)){
  // showErrorModal("Alert!", "Accounts closed will be charged $5 or 6% of the account balance, whichever is greater. Our records show that you have $5 or less on your TitanCard. Therefore, we won’t be able to process your request due to not having enough funds on your TitanCard. We recommend using the funds at the different locations on campus that accept TitanTender. For more information on where the TitanCard can be used, please visit our website at https://www.fullerton.edu/it/titancard/");
 //} 
 else{
