@@ -553,8 +553,9 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	public boolean updateTaskStatus(String workItemId, String taskStatus, boolean isUpdateTaskStartDate) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 	    boolean data = false;
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/updateTaskStatus";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/updateTaskStatus"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 	    json.put("taskStatus", taskStatus);
@@ -581,8 +582,9 @@ public class TaskServiceImpl implements TaskService {
 
 	@Override
 	public boolean updateTaskAssignee(String workItemId, String assignee) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 	    boolean data = false;
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/UpdateTaskAssignee";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/UpdateTaskAssignee"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 	    json.put("assignee", assignee);
@@ -640,8 +642,9 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public String getTaskData(String workItemId) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 		String data ="";
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskDetailsServlet";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskDetailsServlet"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 		try {
@@ -688,10 +691,10 @@ public String getTaskDataOld(String workItemId) {
 	
 	@Override
 	public String getWorkflowInstanceId(String workItemId) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 		
 		String workflowInstanceId ="";
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/WorkflowInstanceID";
-	    
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/WorkflowInstanceID"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 		
@@ -740,8 +743,9 @@ public String getTaskDataOld(String workItemId) {
 
 
 	private String getCurrentTaskAction(String workItemId) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 		String current_task_action ="";
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/CurrentTaskAction";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/CurrentTaskAction"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 		try {
@@ -787,8 +791,9 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public String getAfPath(String workItemId) {
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 		String afPath = "";
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/AFPathServlet";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/AFPathServlet"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 		try {
@@ -926,8 +931,9 @@ public String getTaskDataOld(String workItemId) {
 	@Override
 	public String getTaskAssignee(String workItemId) {
 		log.debug("Inside getTaskAssignee");
+		String dbSchema = globalConfigCSUFService.getDBSchema();
 		String assignee = "";
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskAssignee";
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskAssignee"+"?dbSchema="+dbSchema;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
 		try {
@@ -1080,7 +1086,8 @@ public String getTaskDataOld(String workItemId) {
 	@Override
 	public JsonArray getAllTasks(Session currentUserSession) {
 		//log.error("Sparient Testing getAllTasks");
-		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getMyTasksData";
+		String dbSchema = globalConfigCSUFService.getDBSchema();
+		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/getMyTasksData"+"?dbSchema="+dbSchema;
 		JsonArray resultArray = new JsonArray();
 		JsonArray jsonArray = new JsonArray();
 		//log.error("Sparient Testing getAllTasks1");
@@ -1238,7 +1245,8 @@ public String getTaskDataOld(String workItemId) {
 		if (StringUtils.isBlank(workItemId)) {
 	        return false;
 	    }
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskServletNew";
+		String dbSchema = globalConfigCSUFService.getDBSchema();
+	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskServletNew"+"?dbSchema="+dbSchema;
 	    boolean taskExists = false;
 	    JSONObject json = new JSONObject();
 	    json.put("workItemId", workItemId);
