@@ -192,10 +192,13 @@ public class TaskServiceImpl implements TaskService {
 		String statement = StringUtils.EMPTY;
 		log.debug("inside saveTask 4");
 		
-		String dbValue = globalConfigCSUFService.getDBSchema();
-		log.error("Apartment DB value="+dbValue);
+		String dbSchema = globalConfigCSUFService.getDBSchema();
+		log.error("Apartment dbSchema DB value="+dbSchema);
 		
-	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils";
+	    //final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils";
+		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils"+"?dbSchema="+dbSchema;
+		
+		//final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/TaskServletNew" + "?environment=" + environment;
 	    
 	    JSONObject payload = new JSONObject();
 		
