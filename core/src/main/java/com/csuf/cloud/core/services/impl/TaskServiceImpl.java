@@ -1211,7 +1211,6 @@ public String getTaskDataOld(String workItemId) {
 				jsonObj.addProperty("currentUserId", currentUserId);
 				
 				//End new code
-
 				// ----- Standard Fields -----
 				jsonObj.addProperty("task_title", obj.get("task_title").getAsString());
 				jsonObj.addProperty("priority", getSafe(obj, "priority"));
