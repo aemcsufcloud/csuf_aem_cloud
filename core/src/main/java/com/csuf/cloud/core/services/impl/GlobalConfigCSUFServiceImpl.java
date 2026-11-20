@@ -354,4 +354,11 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 	public String getMajorMinorPSAPIUsernameandPassword() {
 		return configNew.major_minor_ps_api_username_and_password();
 	}
+	
+	@Override
+	public String getDBSchema() {
+		String dbURL = configNew.dbSchema();
+		log.error("Pushpa=" + dbURL);
+		return configNew.dbSchema();
+	}
 }

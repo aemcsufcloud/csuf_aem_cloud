@@ -20,9 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
-
 import javax.jcr.Session;
-
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -40,7 +38,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.HistoryItem;
 import com.adobe.granite.workflow.exec.Status;
@@ -59,6 +56,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.csuf.cloud.core.services.GlobalConfigCSUFService;
 
 
 @Component(service = TaskService.class, immediate = true, property = {
@@ -88,6 +86,9 @@ public class TaskServiceImpl implements TaskService {
 
 	@Reference
 	private ProcessingInstanceConfigService processingConfig;
+	
+	@Reference
+	private GlobalConfigCSUFService globalConfigCSUFService;
 
 	@Override
 	public String saveTask(WorkItem item, ResourceResolver resolver, Session session) throws Exception {
@@ -188,7 +189,12 @@ public class TaskServiceImpl implements TaskService {
 		String statement = StringUtils.EMPTY;
 		log.debug("inside saveTask 4");
 		
+		String dbSchema = globalConfigCSUFService.getDBSchema();
+		log.error("Dummy dbSchema DB value="+dbSchema);
+		
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils";
+		//final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils"+"?dbSchema="+dbSchema;
+		
 	    
 	    JSONObject payload = new JSONObject();
 		
