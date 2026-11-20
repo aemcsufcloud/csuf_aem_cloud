@@ -974,10 +974,33 @@ public String getTaskDataOld(String workItemId) {
 		}
 		return false;
 	}
-
-	@Override
+	
 	public boolean updateWorkflowInstanceStatus(String workflowInstanceId, String status) {
-		/*try (Connection connection = jdbcService.getInboxDBConnection();) {
+		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/UpdateWFInstanceStatus";
+		boolean rowAffected = false;
+	    JSONObject json = new JSONObject();
+	    json.put("status", status);
+		json.put("workflowInstanceId", workflowInstanceId);
+		try {
+		CloseableHttpClient client = HttpClients.createDefault();
+		HttpPost post = new HttpPost(dbServiceUrl);
+		post.addHeader("Content-Type", "application/json");
+		post.setEntity(new StringEntity(json.toString()));
+		CloseableHttpResponse response = client.execute(post);
+		String responseStr = EntityUtils.toString(response.getEntity()).trim();
+		rowAffected = Boolean.parseBoolean(responseStr);
+		
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	    return rowAffected;
+	}
+
+	/*@Override
+	public boolean updateWorkflowInstanceStatus(String workflowInstanceId, String status) {
+		try (Connection connection = jdbcService.getInboxDBConnection();) {
 			connection.setAutoCommit(false);
 
 			String updateWorkflowStmt = "update task_details set workflow_status = ? where workflow_instance_id = ?";
@@ -1002,11 +1025,34 @@ public String getTaskDataOld(String workItemId) {
 		} catch (SQLException e2) {
 			log.error(Arrays.toString(e2.getStackTrace()));
 		}
-		return false;*/
-		return true;
+		return false;
+	}*/
+	
+	@Override
+	public boolean updateTaskDescription(String workflowInstanceId, String taskDescription) {
+		final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/UpdateTaskDesc";
+		boolean rowAffected = false;
+	    JSONObject json = new JSONObject();
+	    json.put("taskDescription", taskDescription);
+		json.put("workflowInstanceId", workflowInstanceId);
+		try {
+		CloseableHttpClient client = HttpClients.createDefault();
+		HttpPost post = new HttpPost(dbServiceUrl);
+		post.addHeader("Content-Type", "application/json");
+		post.setEntity(new StringEntity(json.toString()));
+		CloseableHttpResponse response = client.execute(post);
+		String responseStr = EntityUtils.toString(response.getEntity()).trim();
+		rowAffected = Boolean.parseBoolean(responseStr);
+		
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	    return rowAffected;
 	}
 
-	@Override
+	/*@Override
 	public boolean updateTaskDescription(String workflowInstanceId, String taskDescription) {
 		try (Connection connection = jdbcService.getInboxDBConnection();) {
 			connection.setAutoCommit(false);
@@ -1034,7 +1080,7 @@ public String getTaskDataOld(String workItemId) {
 			log.error(Arrays.toString(e2.getStackTrace()));
 		}
 		return false;
-	}
+	}*/
 
 	@Override
 	public String getTaskDetailsFromProcessingInstance(String url) throws IOException {
