@@ -358,7 +358,7 @@ public class GlobalConfigCSUFServiceImpl implements GlobalConfigCSUFService {
 	@Override
 	public String getDBSchema() {
 		String dbURL = configNew.dbSchema();
-		log.error("Pushpa=" + dbURL);
+		log.error("Anagha DB URL=" + dbURL);
 		return configNew.dbSchema();
 	}
 }

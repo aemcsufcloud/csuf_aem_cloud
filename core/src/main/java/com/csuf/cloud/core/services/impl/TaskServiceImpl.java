@@ -190,7 +190,7 @@ public class TaskServiceImpl implements TaskService {
 		log.debug("inside saveTask 4");
 		
 		String dbSchema = globalConfigCSUFService.getDBSchema();
-		log.error("Dummy dbSchema DB value="+dbSchema);
+		log.error("Pushpa dbSchema DB value="+dbSchema);
 		
 	    final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils";
 		//final String dbServiceUrl = "https://myformstst.fullerton.edu/bin/saveTaskDeatils"+"?dbSchema="+dbSchema;
