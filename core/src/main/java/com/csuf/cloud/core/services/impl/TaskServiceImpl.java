@@ -977,7 +977,7 @@ public String getTaskDataOld(String workItemId) {
 
 	@Override
 	public boolean updateWorkflowInstanceStatus(String workflowInstanceId, String status) {
-		try (Connection connection = jdbcService.getInboxDBConnection();) {
+		/*try (Connection connection = jdbcService.getInboxDBConnection();) {
 			connection.setAutoCommit(false);
 
 			String updateWorkflowStmt = "update task_details set workflow_status = ? where workflow_instance_id = ?";
@@ -1002,7 +1002,8 @@ public String getTaskDataOld(String workItemId) {
 		} catch (SQLException e2) {
 			log.error(Arrays.toString(e2.getStackTrace()));
 		}
-		return false;
+		return false;*/
+		return true;
 	}
 
 	@Override
