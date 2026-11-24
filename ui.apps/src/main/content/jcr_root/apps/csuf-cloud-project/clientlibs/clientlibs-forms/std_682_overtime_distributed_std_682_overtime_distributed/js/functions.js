@@ -11,7 +11,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
      debugger;
     with(this) {
         with(scope) {
-              //alert(StageIndicator.value);
+              alert(StageIndicator.value);
 			  /*alert('before STD Servlet unique method')
 			  $.ajax({
 			      type: 'GET',
@@ -45,12 +45,13 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
 			  });
 			  alert('after STD Servlet unique method')*/
             var gifModal = document.getElementById('gifModal');
+			alert("Pushpa="+StageIndicator.value);
             if (StageIndicator.value === null) {
                 TimeKeeperSignaturePanel.visible = false;
                 ManagerSignaturePanel.visible = false;
                 ApprovingOfficialPanel.visible = false;
             } else if (StageIndicator.value == "ToTimeKeeper") {
-				//alert("Inside Timekeeper="+StageIndicator.value);
+				alert("Inside Timekeeper="+StageIndicator.value);
                 gifModal.style.display = "none";
                 StudentInformationPanel.enabled = false;
                 WorkingHoursInformationPanel.enabled = false;
@@ -110,6 +111,7 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_guideRootPan
         with(scope) {
 
             if (StageIndicator.value === null && formSavedStatus.value != "1") {
+				alert("Testing="+StageIndicator.value);
 
                 $.ajax({
                     type: 'GET',
@@ -1843,7 +1845,9 @@ std_682_overtime_distributed_std_682_overtime_distributed.generated_saveguidedra
  * @param {scope} scope in which code inside function will be executed.
  */
 std_682_overtime_distributed_std_682_overtime_distributed.generated_submit1589890835750_click0 = function(scope) {
-    //alert("submit");
+    alert("submit");
+	alert("submit="+StageIndicator.value);
+
     with(this) {
         with(scope) {
     //alert("submit inside func");
